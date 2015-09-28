@@ -40,25 +40,28 @@ metadata:
 #  last_modified: true
 ---
 
-(English) Requires MailBeez V2.6
+Ab MailBeez V2.6
 
-MailBeez Analytics allows you to track:
+MailBeez Analytics ermöglicht es folgende Ereignisse aufzuzeichnen:
 
-Opening of Emails (Html with loaded images)  
- Click on Links  
- Purchases following click on email links.
+- Öffnen von E-Mails (anhand Tracking-Image)  
+- Welche Links innerhalb der E-Mail geklickt wurden
+- Shop-Umsätze die aufgrund von E-Mail Links erzeugt wurden.
 
-The Openrates are measured using following techniques:  
- the loading of a tracker images (pix) is logged  
- the click on a link is also counting for an opened email
+Ob E-Mails geöffnet / gelesen wurden wird anhand folgender Methoden festgestellt:  
+- Das Tracking-Image (pix) ist geladen worden  
+- Es wurde auf einen Link innerhalb der E-Mail geklickt
 
-the tracker images uses a high-performance call to minimize server load: each opening is logged into a log-file. With every run of MailHive the server handler is importing the log file into the MailBeez Tracking Database. Afterwards the log file is deleted.
+Das Tracking-Image nutz eine sehr performate Aufrufmethode um die Server Last zu reduzieren: Jeder Aufruf wird innerhalb einer Log-Datei gespeichert. Mit jedem Aufruf von MailHive wird diese Log-Datei in die Mailbeez Tracking-Datenbank importiert. Danach wird die Log-Datei vom Server gelöscht.
 
+--- old start - Einbau Anleitung (evtl. veraltet) ? ---
 In  
  ‘includes/application\_top.php’  
  add following code at the end for the closing ?>
 
 // MailBeez Click and Order tracker  
  require(DIR\_FS\_CATALOG . ‘mailhive/includes/clicktracker.php’);
+--- old end ---
 
-Note: open / clicks on copy-to emails are not counted as these emails are separate emails with a different message-id. so only open / click actions of the real recipients are counted.
+Hinweis: 
+Das Öffnen von E-Mail und Klicken von Links bei weitergeleiteten E-Mails oder weiteren Empfängern (CC, BCC) wird nicht aufgezeichnet, da diese E-Mails eine andere Message-ID haben. Nur E-Mails an den echten Empfänger werden ausgewertet.
