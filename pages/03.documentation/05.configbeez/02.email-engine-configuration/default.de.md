@@ -40,21 +40,21 @@ metadata:
 #  last_modified: true
 ---
 
-(English) Requires MailBeez V2.6
+Ab MailBeez V2.6
 
-With MailBeez V2.6 you are able to choose if you would like to use the Email-Engine of the underlying store system or MailBeez own email engine.
+Ab MailBeez V2.6 können Sie wählen wie Mailbeez E-Mails versenden soll. Über die E-Mail funktionen des Shopsystems oder über das Mailbeez eigene E-Mail System.
 
-Pro:  
- - enables bounce handling (requires addtional configuration)  
- - full control on email content and layout  
+Vorteile:  
+ - ermöglicht Rückläufer E-Mails automatisch zu verarbeiten (benötigt weitere Konfigurationen)  
+ - Volle Kontrolle über E-mail Inhalte und Design  
  - DKIM Support (PHP5)  
- - option to send only in TXT format
+ - Möglichkeit E-Mail nur im TXT Format zu schicken
 
-Cons:  
- - additional configuration efforts
+Nachteile:  
+ - Einige weitere Einstelllungen sind nötig
 
-Gmail:  
- smtp.gmail.com  
+Wenn Sie Gmail nutzen verwenden Sie bitte:  
+ SMTP Server: smtp.gmail.com  
  Auth: true  
  security: ssl  
  Port: 465
