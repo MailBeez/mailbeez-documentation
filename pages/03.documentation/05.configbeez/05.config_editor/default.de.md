@@ -36,21 +36,21 @@ metadata:
 #  last_modified: true
 ---
 
-Das Module "Visueller Editor" wird als Bestand-Teil verschiedener Module, z.B. dem Newsletter-Modul und der Vorlagen-Verwaltung geliefert.
+Das Module "Visueller Editor" wird als Bestandteil verschiedener Module, z.B. dem Newsletter-Modul und der Vorlagen-Verwaltung mitgeliefert.
 
 Es bietet folgende Konfigurations-Möglichkeiten:
 
 ## Ausgangsverzeichnis für Bilderverwaltung
 
-relativ zum Shop-Root - leer: Alle Unterverzeichnis im Shop sind zugänglich
+relativ zum Shop-Hauptverzeichnis - leer: Alle Unterverzeichnis im Shop sind zugänglich
 
-Hier kann ein zum Shop-Hauptverzeichnis relative Pfad angegeben werden. Der Bild-Browser wird dann ausgehenden von diesem Verzeichnis geöffnet
+Hier kann ein zum Shop-Hauptverzeichnis relative Pfad angegeben werden. Der Bild-Browser wird dann ausgehenden von diesem Verzeichnis geöffnet.
 
 - - - - - -
 
-Als Unterstützung für die Bearbeitung von responsive Emails kann der Editor in verschiedene Breiten geschaltet werden.
+Als Unterstützung für die Bearbeitung von responsive E-Mails kann der Editor in verschiedene Breiten eingerichtet werden.
 
-Bitte diese Angabe nur ändern wenn wirklich erforderlich
+Bitte diese Angabe nur ändern wenn dies wirklich erforderlich ist
 
 ## Mobil-Editor Breite 1
 
