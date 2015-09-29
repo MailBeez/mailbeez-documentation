@@ -40,15 +40,15 @@ metadata:
 #  last_modified: true
 ---
 
+##Mögliche E-Mail Versand Methoden für MailBeez
 
-
-1. **Shop (Standard)**: Email-Funktion des Shop-Systems
+1. **Shop (Standard)**: E-Mail-Funktion des Shop-Systems
 1. **Newsletter2Go (empfohlen)**: Versand über die zertifizierten Server von Newsletter2Go
 1. **PHPMailer 5.2.1**: Ein beliebiger SMTP Server
 
 ###Shop (Standard)
 
-Als Standard-Einstellung nutzt MailBeez die Email Funktion des Shop Systems. Somit wird die ggf. im Shop System konfigurierbare Methode zum Email Versand genutzt.
+Als Standard-Einstellung nutzt MailBeez die E-Mail Funktion des Shop-Systems. Somit wird die ggf. im Shop-System konfigurierbare Methode zum E-Mail Versand genutzt.
  
 | Vorteile                               | Nachteile 
 |----------------------------------------|----------------------------------------------
@@ -59,22 +59,22 @@ Als Standard-Einstellung nutzt MailBeez die Email Funktion des Shop Systems. Som
 
 
 ###Newsletter2Go (empfohlen)
-Newsletter2Go ist ein in Berlin ansässiger Anbieter für den Versand von Emails mit einer Zustellrate von 99,5% dank zertifizierter Server:
+Newsletter2Go ist ein in Berlin ansässiger Anbieter für den Versand von E-Mails mit einer Zustellrate von 99,5% dank zertifizierter Mail-Server:
 
 Newsletter2Go schreibt:
 
->Versenden Sie über eines der besten Versandsysteme weltweit. Eine Versandgeschwindigkeit von 3 Millionen Emails in der Stunde pro Kunde erfüllt jeden Anspruch. **Newsletter2Go sorgt dafür, dass Ihre Emails nicht von Spam-Filtern geprüft, sondern direkt an die Empfänger zugestellt werden**.
+>Versenden Sie über eines der besten Versandsysteme weltweit. Eine Versandgeschwindigkeit von 3 Millionen E-Mails in der Stunde pro Kunde erfüllt jeden Anspruch. **Newsletter2Go sorgt dafür, dass Ihre E-Mails nicht von Spam-Filtern geprüft, sondern direkt an die Empfänger zugestellt werden**.
 
  
 | Vorteile                                                   | Nachteile 
 |------------------------------------------------------------|----------------------------------------------
 | Versand über zertifizierte Server mit 99,5% Zustellrate    | SPF Konfiguration sinnvoll
-| Whitelisting für 2,4 Milliarden Emails                     | zusätzliche Kosten, welche aber durch verbesserte Zustell-Raten gedeckt werden sollten     
+| Whitelisting für 2,4 Milliarden E-Mails                    | zusätzliche Kosten, welche aber durch verbesserte Zustell-Raten gedeckt werden sollten     
 | Kein Problem mit Spam-Listen, Blacklist etc.               |  |
-| 1000 Email gratis pro Monat                                |  |
+| 1000 E-Mails gratis pro Monat                              |  |
 
 
->>>>>> Im MailBeez System können Sie sich direkt bei Newsletter2Go registrieren. Dabei wird die Integration automatisch konfiguriert und nach Freischaltung Ihres Kontos können Sie sofort MailBeez über die Server von Newsletter2Go versenden lassen.
+>>>>>> Im MailBeez System können Sie sich direkt bei Newsletter2Go registrieren. Dabei wird die Integration automatisch konfiguriert und nach Freischaltung Ihres Kontos können Sie sofort MailBeez E-Mails über die Server von Newsletter2Go versenden lassen.
 
 
 ###PHPMailer 5.2.1
