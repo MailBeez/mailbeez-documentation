@@ -41,9 +41,9 @@ MailBeez Premium Modules erfordern ein gültiges Zertifikat. Dieses Zertifikat i
 
 Im Bestell-Ablauf ist die Shop-Domain einzugeben.
 
-Damit wir ein gültiges Zertifikat generieren können, ist die Eingabe der genauen Server-Domain wichtig!
+Damit wir ein gültiges Zertifikat generieren können, ist die Eingabe der genauen Shop-Domain wichtig!
 
-Die genaue Server-Domain ist schnell zu finden unter:
+Die genaue Shop-Domain ist schnell zu finden unter:
 
 > MailBeez > Über MailBeez
 
@@ -59,4 +59,4 @@ Bitte die genaue (siehe oben) Shop-Domain des Test-Servers im Bestell-Ablauf ein
 
 Zertifkate für Test-Server werden manuell nach Prüfung erstellt und typisch innerhalb von 24 Stunden per Email geschickt.
 
-Fall es keinen Test-Server gibt, bitte leer lassen
+Fall es keinen Test-Server gibt, bitte dieses Feld einfach leer lassen
