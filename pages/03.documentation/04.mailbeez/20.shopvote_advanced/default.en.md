@@ -32,7 +32,7 @@ module:
     cert: 'true'
     price: '99 EUR'
     title_en: 'ShopVote.de Advanced'
-    teaser_en: 'Advanced Features: Delay for international orders, multiple Order status, recognition of regular customers'
+    teaser_en: 'Advanced Features: Delay for international orders, multiple order status, recognition of regular customers'
     title_de: 'ShopVote.de Profi'
     teaser_de: 'Profi-Features: Verzögerung für internationale Bestellungen, Stammkunden-Erkennung und mehr'
     author: MailBeez.com
@@ -42,23 +42,23 @@ metadata:
     author: admin
 ---
 
-**Get most out of your ShopVote.de Subscription**
+**Get the most out of your ShopVote.de subscription**
 
-## Advanced Features
+## Advanced features
 
-this advanced module gives you a couple of settings to streamline and improve your process of inviting customers to give a rating on ShopVote.de:
+This advanced module gives you a couple of settings to streamline and improve the process of inviting your customers to provide a rating on ShopVote.de:
 
-## multiple order status
+## Multiple order status
 
-Do you have different order status marking orders as shipped! No problem, just check all orders status you want the module to react on
+Do you use different order status? No problem, you decide which order status you want the module to react on.
 
-## recognition of regular customers
+## Recognition of regular customers
 
-Don't want to bother your regular customers with an Email to rate on ShopVote.de? Simply define a delay (e.g. 120 days) between to invites and your are done. The module will check when the last invite was sent and decides whether to wait or to send a new rating invite.
+Don't want to bother your regular customers with an invite to rate on Trustpilot? Simply define a delay (e.g. 120 days) between two invites and you're done. The module will check when the last invite was sent and decide whether to wait or to send a new invite.
 
-## responsive email template
+## Responsive email template
 
-the emails are shown perfectly also on mobile deviced
+The invitation emails are shown perfectly on any device.. including mobile phones.
 
 
 <!--
