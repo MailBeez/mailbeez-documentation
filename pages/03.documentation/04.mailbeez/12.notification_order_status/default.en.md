@@ -42,11 +42,11 @@ metadata:
     author: admin
 ---
 
-This handy module sends a custom notification email to the customer once an order is set to one ore more configured order status.
+This handy module sends a custom email notification to a customer once an order is set to one or more configured order status.
 
-Optionally you can configure the module to change the order status to a new status. The order comment, order status name and order status date can be inserted into the email using a template variable.
+Optionally, you can configure the module to change the order status to a new status. The order comment, order status name, and order status date can be inserted into the email using a template variable.
 
-The notification email is sent the next time MailBeez sends out emails - it is recommended to set up a cronjob running every minute to reduce the time delay between setting the order status and sending out the notification email. The MailBeez Support is happy to help you in case you have some questions.
+The notification email is sent out at the next batch MailBeez email send - it is recommended to set up a cronjob running every minute to reduce the time delay between setting the order status and sending out the notification email. The MailBeez Support is happy to help you in case you have some questions.
 
 Scenarios where this module can be applied:
 
@@ -54,13 +54,26 @@ Scenarios where this module can be applied:
 - you would like to replace the default order status update email with a custom designed email
 - you would like to automatise processes depending on the order status
 
+**Template Variables**
+
+
+| Template Variable  | Output                                  |
+|--------------------|-----------------------------------------|
+| {$status_date}     | formated order status date              |
+| {$status_date_raw} | raw order status date                   |
+| {$status_id}       | status id                               |
+| {$status_name}     | order status name                       |
+| {$comments}        | comments                                |
+
+
+**Custom Email Message**
+
+You can build your custom messages depending on the order status using some [smarty.net code](http://www.smarty.net/docs/en/language.function.if.tpl)
+
+    {if $status_id == 3}
+       Your order is shipped
+    {/if}
+
+
+
 [plugin:content-inject](/content_blocks/pro_responsive_template)
-
-
-<!--
-**template variables**
-
- Template VariableOutput{$status\_date}formated order status date{$status\_date\_raw}  
-{$ORDER\_STATUS\_DATE}raw order status date{$status\_id}status id{$status\_name}  
-{$ORDER\_STATUS}order status name{$comments}comments
--->
