@@ -63,10 +63,13 @@ Zur Installation von MailBeez bitte zunächst das passende Integrations-Paket do
 
 Folgende Dateien von Modified-Shop wurden geringfügig angepasst:
 
-    /admin/includes/column_left.php         // Menue-Punkt
     /products_reviews_write.php             // Auto-login für Produktbewertungen
     /inc/csrf_token.inc.php                 // Integration mit CSFR-Schutz
     /inc/xtc_update_whos_online.inc.php     // Ausschluss von mailhive.php Aufrufen
+    
+Die Integrations-Pakete vor V2.0.3.0 erfordern eine kleine Anpassung an:
+
+    /admin/includes/column_left.php         // Menue-Punkt - nur vor V2.0.3.0
 
 
 Dann in der Modified-Shop `Administration > Partner Module > MailBeez` die Integration aktivieren und die Installation vom MailBeez System durchführen.
