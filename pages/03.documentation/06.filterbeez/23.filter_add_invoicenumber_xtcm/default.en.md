@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: '[Zen Cart] Check Customer Authorization'
+title: '[Modified] New Invoicenumber'
 slug: filter_add_invoicenumber_xtcm
 date: 19-06-2017
 published: true
