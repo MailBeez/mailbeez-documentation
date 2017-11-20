@@ -75,3 +75,20 @@ Depending on the email volume, the archive can achieve a size of several GBs des
 In order not to add load to the shop database, a separate database can be configured for the email archive. The steps are quite simple: first, create a new database in the server administration, then configure the access data for this database in the module. In case of connection problems, the module will help you with the appropriate hints.
 
 Since the email archive data are non-critical data, a backup can be omitted. However, the automatic clean-up function should be activated in order to avoid an uncontrolled increase in the database size.
+
+
+## Configure your own archive URL
+
+You can define a short URL to your email archive: Please provide the complete URL e.g. "http://mystore.com/m/", the message-id will be added to that url.
+Then you need to configure a rewrite rule in your htaccess file, which rewrites the given URL  URL into the real URL "http://mystore.com/mailhive.php?m=service_handler_email_archive&ma=show&mp=<message-id>":
+
+
+```htaccess
+    // URL rewrite option
+    // e.g. when url is set to <shop>/m/
+    // add this rewrite rule to htaccess
+
+    RewriteEngine on
+    RewriteRule   ^m/([a-z0-9]+)/(.*)$   mailhive.php?m=service_handler_email_archive&ma=show&mp=$1&$2
+
+```

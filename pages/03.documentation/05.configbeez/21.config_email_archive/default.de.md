@@ -79,3 +79,18 @@ Je nach Versende-Volumen kann das Archiv trotzt automatisierter Aufräum-Funktio
 Um die Shop-Datenbank nicht zu belasten, kann eine eigene Datenbank für das Email-Archiv konfiguriert werden. Die Schritte hierzu sind recht einfach: Zunächst in der Server-Administration eine neue Datenbank anlegen, dann die Zugangsdaten dieser Datenbank im Modul konfigurieren - fertig. Bei Verbindungsproblemen hilft das Modul mit entsprechenden Hinweisen weiter.
 
 Da es sich bei den Email-Archiv-Daten um nicht kritische Daten handelt, kann auf ein Backup verzichtet werden. Es sollte aber dennoch die automatische Aufräum-Funktion aktiviert werden, um ein unkontrolliertes Anwachsen der Datenbankgrösse zu vermeiden.
+
+## Konfiguration einer eigenen URL
+Sie können eine kurze URL zum Email-Archiv einrichten, bitte geben Sie die komplette URL an wie z.B. "http://mystore.com/m/". Die message-id wird an diese URL angehängt.
+Es ist erforderlich, dass Sie eine Rewrite-Regel in der htaccess anlegen, welche die angegebene URL in die URL "http://mystore.com/mailhive.php?m=service_handler_email_archive&ma=show&mp=<message-id>" umschreibt.
+
+
+```htaccess
+    // URL rewrite option
+    // e.g. when url is set to <shop>/m/
+    // add this rewrite rule to htaccess
+
+    RewriteEngine on
+    RewriteRule   ^m/([a-z0-9]+)/(.*)$   mailhive.php?m=service_handler_email_archive&ma=show&mp=$1&$2
+
+```

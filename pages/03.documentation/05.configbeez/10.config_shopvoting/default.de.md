@@ -46,6 +46,10 @@ Für den professionellen Einsatz empfiehlt sich das Modul [Bitte zur Shopbewertu
 
 Das Shopbewertungs-Modul ist bereits Bestandteil vom MailBeez Grundsystem. Sie brauchen lediglich eine Anpassung vornehmen, um die Bewertungs-Box in den Shop einzubinden. Weitere Informationen finden Sie in der [Integrations-Anleitung](http://www.web4design.de/module_infos/deutsch/shopbewertungen/index.php) von Web4dDesign.
 
+
+>>>>>> So einfach können Sie [Shopbewertungen in den Fussbereich von Gambio einbinden](https://www.gambio.de/forum/threads/shopbewertung-einbinden.28543/)
+
+
 ## Kundenmeinungen - selbst verwaltet
 
 Mit dieser Erweiterung bieten Sie Ihren Kunden die Möglichkeit, Ihren Shop zu Bewerten.
