@@ -27,10 +27,9 @@ metadata:
 ---
 
 [TOC]
-
 ## Welcome to Guide to Getting Started!
 
-##### More Revenue – Less Work
+##### More Revenue - Less Work
 
 MailBeez gives you and your online business the tools to create personalized and fully automated email campaigns, right from your store’s existing administration interface.
 
@@ -39,6 +38,7 @@ MailBeez gives you and your online business the tools to create personalized and
 MailBeez is designed for easy installation, configuration and rock-solid operation. It works with read-only access to your existing shopping cart's database tables and also maintains its own database tables for things like remembering which customer has already received a certain email.
 
 **Not yet installed?** If you have not yet done so, please [install the MailBeez System.](/documentation/installation)
+
 
  
 ## Step 1: Learn All About MailBeez
@@ -120,6 +120,7 @@ When MailBeez is first installed, there won’t be a pie chart displayed by this
 
 ## Step 2: Send Your First Test Email
 From the MailBeez admin panel:
+
 1. Click on the MailBeez Modules tab > Birthday Greetings
 2. Click on the “Install” button
 1. This will bring up the Birthday Greetings module configuration panel.
@@ -143,7 +144,7 @@ The MailBeez email template system is designed to let you control everything abo
 
 Whether you are using MailBeez free email templates or MailBeez premium email templates, the email template system is structured to use global templates that affect all emails, as well as sub-templates which are specific to each MailBeez module. Some of the customizations you make will be on a global scale whilst others are made on a per-module basis.
 
-#### Try a Global Customization – Change the Email Header Image
+#### Try a Global Customization - Change the Email Header Image
 
 
 >>>>>>[plugin:content-inject](/content_blocks/pro_template_manager)
@@ -174,7 +175,7 @@ No doubt you will want to replace the template email header with an email header
 
 >>>Remember: Changes in files having a filename starting with `default_` will be lost with the next update as these files are overwritten
 
-#### Try a Per-Module Customization – Change the Module Graphic
+#### Try a Per-Module Customization - Change the Module Graphic
 
 >>>>>>[plugin:content-inject](/content_blocks/pro_template_manager)
 

@@ -97,7 +97,6 @@ Wenn Sie mit der Konfiguration fertig sind, klicken Sie den “Speichern” Butt
 
 Dies 5 Buttons erlauben es, das Modul zu testen und auszuführen:
 
-[![](http://localhost/wordpress_mailbeez_EOL/wp-content/themes/awake/lib/scripts/timthumb/thumb.php?src=http://localhost/wordpress_mailbeez_EOL/wp-content/themes/awake/images/assets/invalid_image.png&w=175&h=184&zc=1&q=100 "Function Buttons")](http:///www.mailbeez.de/images/doc/common_images/function_buttons.png "Function Buttons")![](http://localhost/wordpress_mailbeez_EOL/wp-content/themes/awake/images/shortcodes/image_shadow.png)
 
 **Email Templates – “HTML” Button**  
  Mit Hilfe dieses Buttons kann die Vorlage der Email im HTML Format angesehen werden. Hilfreich für eine schnelle Prüfung, auch bei manuellen Anpassungen ohne Vorlagen Verwaltung kann hier schnell das Ergebnis eingesehen werden.
