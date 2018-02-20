@@ -48,8 +48,6 @@ metadata:
 
 This highly useful eCommerce email add-on gives you the tools to automatically email customers who created an account, but did not purchase from your store, at the same time offering them a personalized discount coupon to tempt them into making their first purchase.
 
-![](http://www.mailbeez.com/wp-content/uploads/2011/10/nopurchase_module.png "nopurchase_module")
-
 **Top features of No Purchase Advanced**
 
 - Finds and emails customers who set up an account but never placed an order

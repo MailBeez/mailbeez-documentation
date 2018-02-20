@@ -29,7 +29,7 @@ In diesem Tutorial lernen Sie, wie Sie selbst ein Anmelde-Formular erstellen kö
 
 
 >>>>>**Vorbemerkung**  
- In absehbarer Zeit (Stand Oktober 2016) wird das MailBeez System um `SiteBeez` erweitert. Mit Hilfe von SiteBeez können intelligent Email-Adressen von Besuchern und Kunden erfasst werden.
+ In absehbarer Zeit (Stand Frühjahr 2018) wird das MailBeez System um `SiteBeez` erweitert. Mit Hilfe von SiteBeez können intelligent Email-Adressen von Besuchern und Kunden erfasst werden.
 
 
 ## Vorab-Überlegungen
@@ -78,7 +78,7 @@ Sie können das Anmelde-Formular mit Hilfe von CSS nach Ihren Wünschen gestalte
 
 ## JavaScript Code zur AJAX-Anbindung an die MailBeez Newsletter API
 
-Um das Formular zum Leben zu erwecken, ist noch etwa JavaScript /jQuery Code erforderlich, dieser Code muss auf der Seite des obigen HTML-Codes eingefügt werden. In unserem Bespiel ist MailBeez auf `www.shop.de/mailhive` installiert. Diese Url muss natürlich auf die URL des "echten" Shops angepasst werden. Am besten sollte `https` zum Einsatz kommen.
+Um das Formular zum Leben zu erwecken, ist noch etwa JavaScript /jQuery Code erforderlich, dieser Code muss auf der Seite des obigen HTML-Codes eingefügt werden. In unserem Bespiel ist MailBeez auf `www.shop.de/mailhive` installiert. Diese Url muss natürlich auf die URL des "echten" Shops angepasst werden. Am besten sollte `https:// []() ` oder Alternativ nur `//` zum Einsatz kommen.
 
 Der API-Aufruf ist dokumentiert auf der Seite [MailBeez Newsletter API](/dokumentation/configbeez/config_api/mb_newsletter_api).
 

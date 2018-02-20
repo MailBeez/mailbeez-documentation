@@ -55,8 +55,6 @@ metadata:
 
 Dieses Modul gibt Ihnen ein automatisierbares Werkzeug, um neue Kunden mit Kunden-Konto aber bisher ohne Kauf zu kontaktieren. In der Kontakt-Abfolge ist es möglich, personalisierte zeitlich begrenzte Gutschein zu versenden um den Kunden den Schritt zur ersten Bestellung einfacher zu machen.
 
-![](http://www.mailbeez.com/wp-content/uploads/2011/10/nopurchase_module.png "nopurchase_module")
-
 **Die wichtigsten Funktionen**
 
 - Findet und kontaktiert Kunden, welche ein Konto angeleget aber bisher nicht bestellt haben
