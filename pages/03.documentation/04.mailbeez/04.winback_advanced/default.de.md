@@ -63,6 +63,10 @@ Neue Kunden zu bekommen ist eine tolle Sache – es ist das Ergebnis langer und 
 
 Um die ehemals guten Kunden nicht aus dem Auge zu verlieren, hat MailBeez ein mächtiges, voll automatisiertes Modul “Kundenrückgewinnung Profi” entwickelt. Dieses Modul ist ein Werkzeug, um Ihren Onlineshop den bestehenden Kunden, welche z.B. seit 6 Monaten (einstellbar) keine Bestellung abgegeben haben, wieder ins Gedächtnis zu rufen und gleichzeitig eine erneute Bestellung mit einem personalisierten Gutschein einfacher zu machen.
 
+
+>>>>>>Für ein optimales Zusammenspiel mit dem Modul [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) wird standardmässig auf einen leeren Warenkorb geprüft (konfigurierbar) - befinden sich Produkte im Warenkorb des Kunden, wird keine Kundenrückgewinnungs-Email versendet.
+
+
 **Personalisierte Gutscheine für jeden Kunden**
 
 Wenn Sie einen inaktiven Alt-Kunden kontaktieren, kann ein Gutschein Wunder bewirken! Stellen Sie sich vor, Ihr letzter Einkauf bei einem Geschäft liegt schon längere Zeit zurück, wäre ein “Wir begrüssen Sie gerne bald wieder” Gutschein nicht eine nette Geste? Und – wen verwunderts – Ihre Kunden denken wahrscheinlich genaus so.
@@ -75,6 +79,10 @@ Mit dem Modul “Kundenrückgewinnung Profi” können Sie nicht nur einmalige p
 - Mehrstufiger Ablauf mit konfigurierbaren Intervallen und Gutscheinen
 - Locken Sie alte Kunden mit personalisierten Gutscheinen, welche z.B. mit jedem Schritt mehr Anreiz bieten kann.
 - Auflistung der zuletzt gekauften Produkt, um Ihren Shop wieder in Erinnerung zu rufen.
+
+
+
+
 
 [plugin:content-inject](/content_blocks/pro_responsive_template)
 

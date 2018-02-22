@@ -56,6 +56,9 @@ Getting new customers is great, and seeing all your hard work pay off when an or
 
 In order to prevent formerly good customers from falling through the cracks of your marketing strategy, Mailbeez has developed a deceptively powerful, fully automated module called Winback Advanced, which gives you the tools to email old customers who haven’t placed an order for a pre-determined time span (set in the admin area), both reminding them of your presence, and enticing them back with personalised offers.
 
+>>>>>>For best operations in combination with [Abandoned Cart Advanced](/documentation/mailbeez/abandoned_cart_advanced) this module checks for empty carts (configurable) to avoid contacting customers with open carts.
+
+
 **A personalized coupon for every customer**
 
 When you contact an inactive customer, it is wise to give them an additional incentive to return. Just imagine if you hadn’t been to a store in several months, you might expect a coupon just to sweeten the return, and that funnily enough, is exactly what your customer’s will expect.

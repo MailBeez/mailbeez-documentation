@@ -60,9 +60,14 @@ It’s a well known business fact that 80% of your business will come from just 
 Sending an offer out to a customer who’s last order is still not despatched would not be a great idea. To avoid this situation, the Reorder Advanced can be quickly configured to fire off the email campaign only to orders that match a certain order status rule; like ‘despatched’ for example.
 
 
+>>>>>>For best operations in combination with [Abandoned Cart Advanced](/documentation/mailbeez/abandoned_cart_advanced) this module checks for empty carts (configurable) to avoid contacting customers with open carts.
+
+
 **Personalized coupons to prevent code sharing **
 
 [plugin:content-inject](/content_blocks/pro_coupon)
+
+[plugin:content-inject](/content_blocks/pro_common_advantage)
 
 [plugin:content-inject](/content_blocks/pro_responsive_template)
 

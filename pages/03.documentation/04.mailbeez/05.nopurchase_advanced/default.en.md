@@ -48,6 +48,10 @@ metadata:
 
 This highly useful eCommerce email add-on gives you the tools to automatically email customers who created an account, but did not purchase from your store, at the same time offering them a personalized discount coupon to tempt them into making their first purchase.
 
+
+Check out [Abandoned Cart Advanced](/documentation/mailbeez/abandoned_cart_advanced) how to follow up on open carts of existing customers having ordered before.
+
+
 **Top features of No Purchase Advanced**
 
 - Finds and emails customers who set up an account but never placed an order
@@ -56,16 +60,16 @@ This highly useful eCommerce email add-on gives you the tools to automatically e
 - Entice non buying customers with a personalized offer coupon that can be set to increase in value in line with the multi step email process.
 - Configurable to check for items in the customer’s shopping cart, allowing you to choose whether this group of customers will receive a coupon or not
 
-[plugin:content-inject](/content_blocks/pro_responsive_template)
 
 #### Take a look at some more great features below – click to open!
 
-**Powerful campaigns to make customers place their first order**.  
+**Powerful campaigns to make customers place their first order**.
 
 [plugin:content-inject](/content_blocks/pro_coupon)
 
 [plugin:content-inject](/content_blocks/pro_common_advantage)
 
+[plugin:content-inject](/content_blocks/pro_responsive_template)
 
 #### See the results
 

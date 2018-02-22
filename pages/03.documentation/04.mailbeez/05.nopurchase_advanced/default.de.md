@@ -53,7 +53,9 @@ metadata:
 
 >>>>Diese Emails halten nicht die Ausnahme-Regeln des Verbotes von Email-Werbung ein, da noch kein Kauf getätigt worden ist - bitte selbst abwägen, ob dieses Modul zum Einsatz kommen soll.
 
-Dieses Modul gibt Ihnen ein automatisierbares Werkzeug, um neue Kunden mit Kunden-Konto aber bisher ohne Kauf zu kontaktieren. In der Kontakt-Abfolge ist es möglich, personalisierte zeitlich begrenzte Gutschein zu versenden um den Kunden den Schritt zur ersten Bestellung einfacher zu machen.
+Dieses Modul gibt Ihnen ein automatisierbares Werkzeug, um neue Kunden **mit Kunden-Konto aber bisher ohne Kauf** zu kontaktieren. In der Kontakt-Abfolge ist es möglich, personalisierte zeitlich begrenzte Gutschein zu versenden um den Kunden den Schritt zur ersten Bestellung einfacher zu machen.
+
+Bestehende Kunden mit zumindest einem Kauf und offenen Warenkörben können mit dem Modul [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) kontaktiert werden.
 
 **Die wichtigsten Funktionen**
 
@@ -64,7 +66,6 @@ Dieses Modul gibt Ihnen ein automatisierbares Werkzeug, um neue Kunden mit Kunde
 - Optional können Sie prüfen, ob der Kunde Produkte im Warenkorb hat und nur Kunde mit leerem Warenkorb kontaktieren.
 
 
-[plugin:content-inject](/content_blocks/pro_responsive_template)
 
 
 #### Weitere Starke Vorteile
@@ -75,6 +76,7 @@ Dieses Modul gibt Ihnen ein automatisierbares Werkzeug, um neue Kunden mit Kunde
 
 [plugin:content-inject](/content_blocks/pro_common_advantage)
 
+[plugin:content-inject](/content_blocks/pro_responsive_template)
 
 #### Ergebnisse beobachten und Optimieren
 

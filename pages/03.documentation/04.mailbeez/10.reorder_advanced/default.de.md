@@ -62,9 +62,15 @@ Gelegentliche Aufmerksamkeiten in Form eines Gutscheines ist eine schöne Art un
 
 Es wäre nicht sehr intelligent Gutscheine ein Kunden zu verschicken, der Bestellung aufgrund Verzögerungen noch nicht in den Versand gegangen ist. Um diese Situation zu vermeiden, arbeitet das Modul nur auf Bestellungen einen bestimmten Bestell-Status haben – es können beliebig vielen Bestellstatus aktiviert werden.
 
+
+>>>>>>Für ein optimales Zusammenspiel mit dem Modul [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) wird standardmässig auf einen leeren Warenkorb geprüft (konfigurierbar) - befinden sich Produkte im Warenkorb des Kunden, wird keine Wiederbestell-Email versendet.
+
+
 **Personalisierte Gutscheine**
 
 [plugin:content-inject](/content_blocks/pro_coupon)
+
+[plugin:content-inject](/content_blocks/pro_common_advantage)
 
 [plugin:content-inject](/content_blocks/pro_responsive_template)
 
