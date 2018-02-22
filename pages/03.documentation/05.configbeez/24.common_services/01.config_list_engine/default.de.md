@@ -48,6 +48,6 @@ metadata:
 ## Darstellung von Produkten in Emails
 
 Dieses Untermodul ist für die Generierung von Produkt-Grids verantwortlich.  
- Hier können Sie die Anzahl an Spalten und Produkten gesamt konfiguriere. 
+ Hier können Sie die Anzahl an Spalten und Produkten gesamt konfigurieren.
 
 **Hinweis**: die verwendete Listen-Vorlage muss diese Einstellungen unterstützen.

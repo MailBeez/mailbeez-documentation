@@ -20,7 +20,7 @@ taxonomy:
         - coupon
 module:
     mc_ready: true
-    code: nopurchase_advanced
+    code: abandoned_cart_advanced
     category:
         - mailbeez
     compatiblity:

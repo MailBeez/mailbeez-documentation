@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Verlassene Warenkörbe Profi
+title: 'Verlassene Warenkörbe Profi'
 slug: abandoned_cart_advanced
 date: 20-02-2018
 published: true
@@ -17,14 +17,14 @@ taxonomy:
     tag: [pro,coupon]
 module:
     mc_ready: false
-    code: 'abandoned_cart_advanced'
+    code: abandoned_cart_advanced
     category: [mailbeez]
     compatiblity: [comp_cre,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio]
     thumbnail: ''
     pro: 'pro'
     cert: 'true'
     price: '179 EUR'
-    title_de: 'Verlassene Warenkörbe - Profi'
+    title_de: 'Verlassene Warenkoerbe - Profi'
     teaser_de: ''
     author: 'MailBeez.com'
 # added collection selector
