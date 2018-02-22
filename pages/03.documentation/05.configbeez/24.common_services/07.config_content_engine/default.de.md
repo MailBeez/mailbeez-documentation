@@ -30,11 +30,11 @@ metadata:
 
 ---
 
-Im visuellen Editor können Sie schnell und einfach Personalisierte Produkt-Empfehlungen in jede MailBeez Email einfügen.
+Im visuellen Editor können Sie schnell und einfach regelbasierte **personalisierte Produkt-Empfehlungen** in jede MailBeez Email einfügen.
 
-Hierzu das Inhalts-Element "Live Content" wählen und dann wie gewünscht konfigurieren
+Hierzu das Inhalts-Element `Live Content` wählen und dann wie gewünscht konfigurieren:
 
-#### Katalog-basierte Produkt-Empfehlung
+#### Katalog-basierte Produkt-Empfehlungen
 
 **Neue Produkte**  
  Zeigt die konfigurierte Anzahl an neuen Produkte an, sortiert nach Datum
@@ -67,7 +67,7 @@ Je nach gewählter Quelle stehen weitere Konfigurations-Möglichkeiten zur Verf�
 
 
 #### Keine doppelten Produkte
-Sie können gerne mehrere Inhalts-Elemente vom Typ "Live Content" einfügen - mit der Option "**Bereits gezeigte Produkte ausschliessen**" können Sie sicher sein, dass keine doppelten Produkte erscheinen, falls z.B. eine Neuheit auch gleichzeigtig ein Sonderangebot ist und sowohl "Live Content" vom Typ "Neue Produkte" als auch "Sonderangebote" eingefügt wurden.
+Sie können gerne mehrere Inhalts-Elemente vom Typ `Live Content` einfügen - mit der Option "**Bereits gezeigte Produkte ausschliessen**" können Sie sicher sein, dass keine doppelten Produkte erscheinen, falls z.B. eine Neuheit auch gleichzeigtig ein Sonderangebot ist und sowohl `Live Content` vom Typ "Neue Produkte" als auch "Sonderangebote" eingefügt wurden.
 
 
 #### FSK18- und Gruppen-Check

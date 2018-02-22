@@ -44,7 +44,7 @@ metadata:
     author: admin
 ---
 
-Target **abandoned carts** for existing customers - effective and fully automatized
+Target **abandoned carts** for existing customers - effective and fully automatized embedded into the MailBeez Marketing strategy.
 
 New customer, which signed up, but never order can be followed up with [No Purchase Advanced](/documentation/mailbeez/nopurchase_advanced).
 

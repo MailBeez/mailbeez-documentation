@@ -30,9 +30,9 @@ metadata:
 
 ---
 
-Adds personalised product recommendations to any MailBeez Email.
+Adds rulebased **personalised product recommendations** to any MailBeez Email.
 
-When editing an email template just add the content element "Live Content" and configure the settings to add product recommendations.
+When editing an email template just add the content element `Live Content` and configure the settings to add product recommendations.
 
 
 #### Catalog-based product recommendations 
@@ -66,7 +66,7 @@ Depending on the select source you will find a number of configurations.
 
 
 #### Unique products only
-You can add multiple content elements of type "Live Content" - just active the option "**Exclude already shown products**" to make sure only unique products are shown, e.g. in case a product is both new and a specials products and you have added both "Live Content" of type "New Products" and "Specials Products"
+You can add multiple content elements of type `Live Content` - just active the option "**Exclude already shown products**" to make sure only unique products are shown, e.g. in case a product is both new and a specials products and you have added both `Live Content` of type "New Products" and "Specials Products"
 
 #### FSK18- and Group-Check
 The store systems **Modified-Shop** and **Gambio** allow to tag products with "FSK18" and "group" permissions. By default the content engine will respect these settings to make sure only appropriate products are recommended. If you like you can deactivate this setting.

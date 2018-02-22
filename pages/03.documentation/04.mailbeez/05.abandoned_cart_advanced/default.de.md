@@ -46,7 +46,7 @@ metadata:
 ---
 
 
-Dieses Modul hilft Ihnen, effektiv und automatisiert **Warenkorbabbrüche von bestehenden Kunden** zu reduzieren:
+Dieses Modul hilft Ihnen, effektiv und automatisiert **Warenkorbabbrüche von bestehenden Kunden** zu reduzieren - eingebettet in Ihre MailBeez Marketing Strategie!
 
 Neukunden, welche sich zwar registriert aber noch keine Bestellung getätigt haben, können mit [Kunden ohne Kauf Profi](/dokumentation/mailbeez/nopurchase_advanced) kontaktiert werden.
 
