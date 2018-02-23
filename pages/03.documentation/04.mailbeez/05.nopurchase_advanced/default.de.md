@@ -55,7 +55,7 @@ metadata:
 
 Dieses Modul gibt Ihnen ein automatisierbares Werkzeug, um neue Kunden **mit Kunden-Konto aber bisher ohne Kauf** zu kontaktieren. In der Kontakt-Abfolge ist es möglich, personalisierte zeitlich begrenzte Gutschein zu versenden um den Kunden den Schritt zur ersten Bestellung einfacher zu machen.
 
-Bestehende Kunden mit zumindest einem Kauf und offenen Warenkörben können mit dem Modul [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) kontaktiert werden.
+Bestehende Kunden mit zumindest einem Kauf (konfigurierbar - siehe Profi-Tipp) und offenen Warenkörben können mit dem Modul [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) kontaktiert werden.
 
 **Die wichtigsten Funktionen**
 
@@ -65,6 +65,9 @@ Bestehende Kunden mit zumindest einem Kauf und offenen Warenkörben können mit 
 - Bieten Sie den potentiellen Kunden mit jedem Schritt einen höherwertigeren Gutschein.
 - Optional können Sie prüfen, ob der Kunde Produkte im Warenkorb hat und nur Kunde mit leerem Warenkorb kontaktieren.
 
+>>>>>>In Kombination mit [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) besteht die Möglichkeit, zwischen **Kunden ohne Kauf und leerem Warenkorb** und **Kunden ohne Kauf aber mit Produkten im Warenkorb** zu unterscheiden und somit verschiedene Emails und verschiedene Gutschein-Codes zu senden.  
+ Hierzu die Option `Auf leeren Warenkorb prüfen?` aktivieren und im Modul [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) die Option `Auf vorherige Bestellungen prüfen?` deaktivieren.  
+  Das Modul "Kunden ohne Kauf Profi" wird dann nur potenzielle Neukunden mit leerem Warenkorb erreichen, während [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) alle Kunden (mit oder ohne vorheriger Bestellung) mit Produktem im Warenkorb kontaktiert.
 
 
 

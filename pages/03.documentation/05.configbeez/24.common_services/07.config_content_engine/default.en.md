@@ -34,6 +34,7 @@ Adds rulebased **personalised product recommendations** to any MailBeez Email.
 
 When editing an email template just add the content element `Live Content` and configure the settings to add product recommendations.
 
+![](Screen_config.en.png)
 
 #### Catalog-based product recommendations 
 

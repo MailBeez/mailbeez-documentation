@@ -32,7 +32,10 @@ metadata:
 
 Im visuellen Editor können Sie schnell und einfach regelbasierte **personalisierte Produkt-Empfehlungen** in jede MailBeez Email einfügen.
 
-Hierzu das Inhalts-Element `Live Content` wählen und dann wie gewünscht konfigurieren:
+Hierzu das Inhalts-Element `Live Content` wählen und dann wie gewünscht konfigurieren.
+
+
+![](Screen_config.de.png)
 
 #### Katalog-basierte Produkt-Empfehlungen
 

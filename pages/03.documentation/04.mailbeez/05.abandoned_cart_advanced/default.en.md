@@ -61,6 +61,12 @@ With a configurable sequence of emails you can reminder you existing customers o
 >>>>>>The modules [Winback Advanced](/documentation/mailbeez/winback_advanced) and [Reorder Advanced](/documentation/mailbeez/reorder_advanced) check for empty carts (configurable) to avoid overlapping campaigns: Customers with products in their carts will not receive these types of emails.
 
 
+&nbsp;
+
+>>>>>>Together with [No Purchase Advanced](/documentation/mailbeez/nopurchase_advanced) you can distinguish between **customers w/o purchase and empty cart** and **customer w/o purchase but items in cart**. To achieve this please deactivate the option `Check for previous Orders` and in [No Purchase Advanced](/documentation/mailbeez/nopurchase_advanced) activate the option `Check For Empty Customer Basket`.  
+ With these settings the module [No Purchase Advanced](/documentation/mailbeez/nopurchase_advanced) will only target potential customers with empty cart, while "Abandoned Cart Advanced" will follow up on any customer with products in cart.
+
+
 #### Take a look at some more great features
 
 **Powerful campaigns to convert abandoned carts**.
