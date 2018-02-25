@@ -67,7 +67,7 @@ Bestehende Kunden mit zumindest einem Kauf (konfigurierbar - siehe Profi-Tipp) u
 
 >>>>>>In Kombination mit [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) besteht die Möglichkeit, zwischen **Kunden ohne Kauf und leerem Warenkorb** und **Kunden ohne Kauf aber mit Produkten im Warenkorb** zu unterscheiden und somit verschiedene Emails und verschiedene Gutschein-Codes zu senden.  
  Hierzu die Option `Auf leeren Warenkorb prüfen?` aktivieren und im Modul [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) die Option `Auf vorherige Bestellungen prüfen?` deaktivieren.  
-  Das Modul "Kunden ohne Kauf Profi" wird dann nur potenzielle Neukunden mit leerem Warenkorb erreichen, während [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) alle Kunden (mit oder ohne vorheriger Bestellung) mit Produktem im Warenkorb kontaktiert.
+  Das Modul "Kunden ohne Kauf Profi" wird dann nur potenzielle Neukunden mit leerem Warenkorb erreichen, während [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) alle Kunden (mit oder ohne vorheriger Bestellung) mit Produkten im Warenkorb kontaktiert.
 
 
 

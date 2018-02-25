@@ -67,7 +67,7 @@ Mit Hilfe einer konfigurierbaren Abfolge von Erinnerungs-E-Mails wird der Kunden
 
 &nbsp;
 >>>>>>In Kombination mit [Kunden ohne Kauf Profi](/dokumentation/mailbeez/nopurchase_advanced) besteht die Möglichkeit, zwischen Kunden ohne Kauf mit leerem Warenkorb und Kunden ohne Kauf aber mit Produkten im Warenkorb zu unterscheiden und somit verschiedene Emails und verschiedene Gutschein-Codes zu senden.  
- Hierzu die Option die Option `Auf vorherige Bestellungen prüfen?` deaktivieren und in [Kunden ohne Kauf Profi](/dokumentation/mailbeez/nopurchase_advanced) die Option `Auf leeren Warenkorb prüfen?` aktivieren. Das Modul [Kunden ohne Kauf Profi](/dokumentation/mailbeez/nopurchase_advanced) wird dann nur potenzielle Neukunden mit leerem Warenkorb erreichen, während "Verlassene Warenkörbe Profi" alle Kunden (mit oder ohne vorheriger Bestellung) mit Produktem im Warenkorb kontaktiert.
+ Hierzu die Option `Auf vorherige Bestellungen prüfen?` deaktivieren und in [Kunden ohne Kauf Profi](/dokumentation/mailbeez/nopurchase_advanced) die Option `Auf leeren Warenkorb prüfen?` aktivieren. Das Modul [Kunden ohne Kauf Profi](/dokumentation/mailbeez/nopurchase_advanced) wird dann nur potenzielle Neukunden mit leerem Warenkorb erreichen, während "Verlassene Warenkörbe Profi" alle Kunden (mit oder ohne vorheriger Bestellung) mit Produkten im Warenkorb kontaktiert.
 
 
 

@@ -74,6 +74,6 @@ Sie können gerne mehrere Inhalts-Elemente vom Typ `Live Content` einfügen - mi
 
 
 #### FSK18- und Gruppen-Check
-In den Shop-Systemen **Modified-Shop** und **Gambio** können Produkte mit FSK18- und Gruppen-Berechtigungen versehen werden. Standardmässig berücksichtig der Inhalts-Generator diese Berechtigungen, so dass nur für den Kunden passende Produkte vorgeschlagen werden. Optional kann dieser Check deaktiviert werden. In anderen Shopsystem steht diese Konfigurationsmöglichkeit nicht zur Verfügung.
+In den Shop-Systemen **Modified-Shop** und **Gambio** können Produkte mit FSK18- und Gruppen-Berechtigungen versehen werden. Standardmässig berücksichtigt der Inhalts-Generator diese Berechtigungen, so dass nur für den Kunden passende Produkte vorgeschlagen werden. Optional kann dieser Check deaktiviert werden. In anderen Shopsystem steht diese Konfigurationsmöglichkeit nicht zur Verfügung.
 
 
