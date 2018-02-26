@@ -3,7 +3,9 @@ title: Profilierungs-System
 slug: config_profiling_engine
 routes:
     default: /dokumentation/configbeez/config_profiling_engine
-        
+    aliases:
+        -   /documentation/configbeez/config_profiling_engine
+
 published: true
 template: docs
 visible: true

@@ -39,6 +39,9 @@ Hierzu das Inhalts-Element `Live Content` wählen und dann wie gewünscht konfig
 
 #### Katalog-basierte Produkt-Empfehlungen
 
+**Top Produkte**  
+ Hiermit werden die im Shop als "Top" Produkte markierten Artikel aufgelistet
+
 **Neue Produkte**  
  Zeigt die konfigurierte Anzahl an neuen Produkte an, sortiert nach Datum
 

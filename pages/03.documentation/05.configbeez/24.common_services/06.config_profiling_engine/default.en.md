@@ -3,7 +3,6 @@ title: Profiling Engine
 slug: config_profiling_engine
 routes:
     default: /documentation/configbeez/config_profiling_engine
-        
 published: true
 template: docs
 visible: true

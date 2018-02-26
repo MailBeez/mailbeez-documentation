@@ -62,6 +62,6 @@ Diese kostenlose Version des Modules zur Kundenrückgewinnung hat natürlich nic
 **Einfach zu installieren und konfigurieren**
 
 Das Modul “Kundenrückgewinnung einfach” ist – wie alle MailBeez Module – sehr einfach zu installieren und konfigurieren. Einfach mit FTP die Modul-Dateien übertragen, dann steht das neue Modul in der MailBeez Administration zur Konfiguration bereit.  
- Die Email Vorlagen sind wie gewohnt in .tpl Dateien definiert und können dort bearbeitet werden – für den Profi-Einsatz empfiehlt sich natürlich die Erweiterung “[Vorlagen Manager](/kocumentation/configbeez/config_tmplmngr)“.
+ Die Email Vorlagen sind wie gewohnt in .tpl Dateien definiert und können dort bearbeitet werden – für den Profi-Einsatz empfiehlt sich natürlich die Erweiterung “[Vorlagen Manager](/dokumentation/configbeez/config_tmplmngr)“.
 
 Die beste Kunden-Rückgewinnungs Resultate liefert das Modul [Kundenrückgewinnung Profi mit Gutscheinen](/documentation/mailbeez/winback_advanced/ "Kundenrückgewinnung Profi") als Bestandteil der Profi-Tarife.

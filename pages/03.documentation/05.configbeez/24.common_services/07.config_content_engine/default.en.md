@@ -38,11 +38,14 @@ When editing an email template just add the content element `Live Content` and c
 
 #### Catalog-based product recommendations 
 
+**Featured Products**  
+ Shows the products marked as "featured"
+
 **New Products**  
- Show the configured number of new product items, sorted by date
+ Shows the configured number of new product items, sorted by date
 
 **Specials Products**  
- Show the configured number of special product items, sorted by date
+ Shows the configured number of special product items, sorted by date
 
 
 #### Product recommendations by purchased products
