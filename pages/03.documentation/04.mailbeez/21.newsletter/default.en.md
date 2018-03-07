@@ -111,8 +111,23 @@ The powerful segmentation rules allow you to create a virtually endless number o
 
 ### Features
 
-**Lists**
+**Unified Contact Management for customers and prospects**
 
+- Target customers and prospects individually
+- Automatic handling of customer and prospects contacts
+- Prospects are moved to customers once they sign up
+
+
+
+**Topics**
+
+- Manage unlimited Topic Areas
+- configure Topic Areas as public/private
+- Topic Areas can be assigned through the subscription form / API
+- Customers can manage public Topic Areas, just place a link with href="`[[$config_url]]`"
+
+
+**Lists**
 - create, edit and delete lists for recipients
 - unlimited number of lists
 - segmentation of lists
@@ -120,12 +135,17 @@ The powerful segmentation rules allow you to create a virtually endless number o
 
 **Segmentation features**
 
+Customers
 - geographic: country, state, zip-code
 - customer: gender, customer since min/max days, customer groups: requires [Customer Group-Filter](/documentation/mailbeez/filter_check_group/)
 - products: purchased / must not have purchased (whitelist/blacklist)
 - categories: purchased / must not have purchased (whitelist/blacklist)
 - orders: max. number of orders, last order before / after date
 - configure countries to ignore customer subscription status for
+- Topic Areas
+
+Prospects
+- Topic Areas
 
 **Campaigns**
 
@@ -151,6 +171,9 @@ The powerful segmentation rules allow you to create a virtually endless number o
 
 - fully integrated with MailBeez Analytics and Google Analytics
 - analyse open, click, order
+
+
+
 
 ### Sending process
 

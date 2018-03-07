@@ -121,7 +121,7 @@ Die freie Kombinierbarkeit der Segmentierungsregeln eröffnen eine Vielzahl von 
 - unbegrenzte Anzahl an Themenbereichen
 - öffentlich und nicht-öffentliche Themenbereiche
 - automatische Zuordnung von Themenbereichen über die Anmeldeformular-API
-- Empfänger können die Zuordnung zu öffentlichen Themenbereichen selbst konfigurieren, 
+- Empfänger können die Zuordnung zu öffentlichen Themenbereichen selbst konfigurieren, hierzu eine Link mit `[[$config_url]]` als href einfügen
 
 
 **Listen**
@@ -179,7 +179,7 @@ Interessenten
 
 - [MailBeez Newsletter API](/dokumentation/configbeez/config_api/mb_newsletter_api).
 - [Tutorial: Erstellen eines Newsletter Anmeldeformulars](/dokumentation/tutorials/erstellen-eines-newsletter-anmeldeformulars).
--
+
 
 
 
