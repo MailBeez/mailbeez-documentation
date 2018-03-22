@@ -75,6 +75,7 @@ Sie können aus der folgenden Auswahl von Quelle wählen, nach welchen Kriterien
  Zeigt Produkte, welche von anderen Kunden gekauft wurden, welche ebenfalls die Produkte im Warenkorb gekauft haben.
 
 
+>>>>> **Zen-Cart**: XSell basierte Quellen sind nur verfügbar, wenn das addon [Cross Sell Advanced](https://www.zen-cart.com/downloads.php?do=file&id=400) installiert ist
 
 
 #### Keine doppelten Produkte

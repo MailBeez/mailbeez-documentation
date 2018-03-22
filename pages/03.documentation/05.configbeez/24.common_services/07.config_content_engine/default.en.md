@@ -75,6 +75,8 @@ Depending on the selected content source you will find a number of configuration
  Shows also purchased products based on products in cart
 
 
+>>>>> **Zen-Cart:** XSell bases sources will only be available with the installed addon [Cross Sell Advanced](https://www.zen-cart.com/downloads.php?do=file&id=400)
+
 
 #### Unique products only
 You can add multiple content elements of type `Live Content` - just active the option "**Exclude already shown products**" to make sure only unique products are shown, e.g. in case a product is both new and a specials products and you have added both `Live Content` of type "New Products" and "Specials Products"
