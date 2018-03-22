@@ -37,6 +37,12 @@ Hierzu das Inhalts-Element `Live Content` wählen und dann wie gewünscht konfig
 
 ![](Screen_config.de.png)
 
+Sie können aus der folgenden Auswahl von Quelle wählen, nach welchen Kriterien die Produkt-Empfehlungen zusammengestellt werden.Je nach gewählter Quelle stehen weitere Konfigurations-Möglichkeiten zur Verfügung.
+
+>>>>>>Für Empfehlungen basierend auf Bestellungen (z.B. "ebenfalls gekaufte Produkte") bitte den relevanten Bestell-Status konfigurieren, sowie den Zeitrahmen der für die Zusammenstellung der Empfehlung relevanten Bestellungen. Hierdurch können Sie konfigurieren, wie **saisonales Kaufverhalten** die Empfehlungen beeinflusst.
+
+
+
 #### Katalog-basierte Produkt-Empfehlungen
 
 **Top Produkte**  
@@ -69,7 +75,6 @@ Hierzu das Inhalts-Element `Live Content` wählen und dann wie gewünscht konfig
  Zeigt Produkte, welche von anderen Kunden gekauft wurden, welche ebenfalls die Produkte im Warenkorb gekauft haben.
 
 
-Je nach gewählter Quelle stehen weitere Konfigurations-Möglichkeiten zur Verfügung, diese sollten sich selbst erklären.
 
 
 #### Keine doppelten Produkte

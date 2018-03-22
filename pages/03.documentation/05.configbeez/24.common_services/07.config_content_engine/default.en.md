@@ -36,6 +36,14 @@ When editing an email template just add the content element `Live Content` and c
 
 ![](Screen_config.en.png)
 
+
+You can select from the following choice of content sources which define how recommendations are retrieved.
+Depending on the selected content source you will find a number of configuration options.
+
+>>>>>>For order related recommendations (e.g. "also purchased") please configure the relevant order status and the timeframe of the orders to use for retrieving recommendations. This allows you to configure how fast the **seasonal buying behaviour** influences the recommendations.
+
+
+
 #### Catalog-based product recommendations 
 
 **Featured Products**  
@@ -66,7 +74,6 @@ When editing an email template just add the content element `Live Content` and c
 **Also purchased products by products in cart**  
  Shows also purchased products based on products in cart
 
-Depending on the select source you will find a number of configurations.
 
 
 #### Unique products only
