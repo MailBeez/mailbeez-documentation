@@ -42,8 +42,6 @@ Depending on the selected content source you will find a number of configuration
 
 >>>>>>For order related recommendations (e.g. "also purchased") please configure the relevant order status and the timeframe of the orders to use for retrieving recommendations. This allows you to configure how fast the **seasonal buying behaviour** influences the recommendations.
 
-
-
 #### Catalog-based product recommendations 
 
 **Featured Products**  
