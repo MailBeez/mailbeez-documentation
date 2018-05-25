@@ -45,4 +45,4 @@ This extension for the [BeezDesk Customer-Insight](/documentation/configbeez/con
 ![Screen_gdpr_export.de.png](Screen_gdpr_export.de.png)
 
 
-The GDPR Export Framework is extensible so a programmer can easily integrate data form an external system into the export (details will follow).
+The GDPR Export Framework is extensible so a programmer can easily integrate data from an external system into the export (details will follow).
