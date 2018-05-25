@@ -47,6 +47,10 @@ metadata:
 
 The GDPR Consent module allows you to comply with requirements for custom consents, which might be necessary in some regions.
 
+
+All consent activites of customers are logged. The log-data can be accessed using the [GDPR Export System](/documentation/configbeez/config_gdpr_export).
+
+
 ## Configuration of GDPR consent types
 
 In `MailBeez > Configuration > GDPR Consent` you can edit the types of GDPR consents. By default you will find a consent for Store ratings and a consent for product ratings.

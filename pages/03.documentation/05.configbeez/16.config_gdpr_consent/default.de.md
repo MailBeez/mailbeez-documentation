@@ -46,6 +46,8 @@ metadata:
 Mit dieser Erweiterung können Sie flexible Ihre eigenen Anforderungen an die Einholung und Verwendung von DSGVO Einwilligungen umsetzen. Welche Einwilligungen Sie für erforderlich halten, hängt von der Interpretation der Gesetzgebung ab.
 
 
+Alle Einwilligungs-Aktionen des Kunden werden protokolliert und können über das [DSGVO Export System](/dokumentation/configbeez/config_gdpr_export) belegt werden.
+
 ## Konfiguration der DSGVO Einwilligungen
 
 Unter `MailBeez > Konfiguration > DSGVO Einwilligung` können Sie die Arten der Einwilligungen bearbeiten - standardmässig finden Sie dort bereits eine Einwilligung für Shop-Bewertungen und eine Einwilligung für Produkt-Bewertungen.
@@ -81,6 +83,7 @@ Die Abfrage wird nur eingebunden, falls der Kunde noch nicht alle Einwilligungen
 Mit Klick auf den Button öffnet sich der Konfigurations-Dialog
 
 ![Screen_gambio_configuration.de.png](Screen_gambio_configuration.de.png)
+
 
 
 #### Anpassung der Abfrage-Integration
