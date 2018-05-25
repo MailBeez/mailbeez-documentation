@@ -67,6 +67,10 @@ In `MailBeez > Filter & Helpers > GDPR Consent Check` you can configure for each
 
 The order confirmation page is a great place to ask the customer for consent to follow up. You can place a button there, which links to the consent confirmation page.
 
+The following screenshot shows an example who to integrate the configuration page using an iframe into a lightbox popup:
+
+![Screen_gambio_configuration.en.png](Screen_gambio_configuration.en.png)
+
 The following code example shows how to generate the URL to the configuration page
 
     include_once(<YOUR_PATH> . 'mailhive/configbeez/config_gdpr_consent/includes/inc.gdpr_consent.php');
