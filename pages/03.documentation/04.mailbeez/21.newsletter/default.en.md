@@ -132,6 +132,7 @@ The powerful segmentation rules allow you to create a virtually endless number o
 - unlimited number of lists
 - segmentation of lists
 - test of segmentation
+- export lists e.g.e for [Facebook Custom Audiences](/blog/mailbeez-facebook-custom-audience)
 
 **Segmentation features**
 
@@ -205,6 +206,35 @@ Depending on your mailserver you can increase the sending throughput or you can 
 
 Thanks to throttling and limiting the number of emails sent per run (chunk size), you can stay within the limits given by your hosting service or email server. Also, this helps to reduce the risk of getting flagged as a spam sender.
 
+
+### Customize the export
+
+By default the list export contains following columns:
+
+    'id', 'email','firstname', 'lastname', 'blocked'
+
+To extend these columns place a php file e.g. `my_nl_export.php` in `mailhive/common/local/` with following functions - you just need to implement the functions to add the required information for each recipient.
+
+
+```php
+<?php
+
+function mh_nl_export_addon_fields()
+{
+    // define columns
+    return array('gender', 'zipcode');
+}
+
+
+function mh_nl_export_addon_content($recipient_id)
+{
+    // retrieve data by columns
+    return array("g_$recipient_id", "z_$recipient_id");
+}
+```
+
+
+
 ### Recommended modules
 
 For best operations we recommend following modules, which will enhance the MailBeez platform. So all other MailBeez modules will be enhanced.
@@ -222,6 +252,6 @@ To create and send responsive Emails you need to install the Responsive Template
 - additional Email-templates
 - additional content templates
 - Insert MailBeez Template-Tags with buttons (currently only firstname & lastname)
-- automatically create product content blocks
-- personalised contents
-- Support for "prospect": Visitors can sign-up for the newsletter. Once they convert into a customer the system will recognise it. That allows to sent different newsletters to prospects and customers.
+- DONE: automatically create product content blocks
+- DONE: personalised contents
+- DONE: Support for "prospect": Visitors can sign-up for the newsletter. Once they convert into a customer the system will recognise it. That allows to sent different newsletters to prospects and customers.

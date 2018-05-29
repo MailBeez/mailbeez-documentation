@@ -131,6 +131,7 @@ Die freie Kombinierbarkeit der Segmentierungsregeln eröffnen eine Vielzahl von 
 - Liste-Quellen: Shop-Kunden mit Abo, Alle Shop-Kunden, Interessenten
 - Segmentierung der Listen nach folgend aufgeführten Kriterien
 - Testen von Segmentierungen
+- Export von Listen z.B. für FaceBook Custom Audience Ads (mehr dazu: [Facebook Custom Audiences mit MailBeez erstellen](/blog/mailbeez-facebook-custom-audience) )
 
 
 **Segmentierungs-Möglichkeiten**
@@ -177,8 +178,9 @@ Interessenten
 
 **Weitere Informationen finden Sie auf**
 
-- [MailBeez Newsletter API](/dokumentation/configbeez/config_api/mb_newsletter_api).
-- [Tutorial: Erstellen eines Newsletter Anmeldeformulars](/dokumentation/tutorials/erstellen-eines-newsletter-anmeldeformulars).
+- [MailBeez Newsletter API](/dokumentation/configbeez/config_api/mb_newsletter_api)
+- [Tutorial: Erstellen eines Newsletter Anmeldeformulars](/dokumentation/tutorials/erstellen-eines-newsletter-anmeldeformulars)
+- [Facebook Custom Audiences mit MailBeez erstellen](/blog/mailbeez-facebook-custom-audience)
 
 
 
@@ -215,6 +217,37 @@ Durch die Drosselung und die Begrenzung der Anzahl mit Hilfe der Stapel-Grösse 
 
 
 
+### Anpassung des Export-Formats
+
+Standardmässig enthält der CSV Export der Listen folgende Spalten:
+
+    'id', 'email','firstname', 'lastname', 'blocked'
+
+Zur Erweiterung des CSV Exports bitte in `mailhive/common/local/` eine Datei, z.B. `my_nl_export.php` mit folgenden Funktionen anlegen - und natürlich die Funktionen nach den eigenen Anforderungen implementieren
+
+
+```php
+<?php
+
+function mh_nl_export_addon_fields()
+{
+    // define columns
+    return array('gender', 'zipcode');
+}
+
+
+function mh_nl_export_addon_content($recipient_id)
+{
+    // retrieve data by columns
+    return array("g_$recipient_id", "z_$recipient_id");
+}
+```
+
+
+
+
+
+
 ### Empfohlene Module
 
 Folgende Module bieten relevante Funktionen zur Optimierung des Newsletter-Versandes:
@@ -230,5 +263,5 @@ Folgende Module bieten relevante Funktionen zur Optimierung des Newsletter-Versa
 - weitere Email-Vorlagen
 - weitere Inhaltsbereichs-Vorlagen
 - MailBeez Template-Tags per Button einfügen (aktuell nur für firstname & lastname)
-- automatische Erstellung von Produktdarstellungen
-- personalisierte Inhalte
+- DONE: automatische Erstellung von Produktdarstellungen
+- DONE: personalisierte Inhalte
