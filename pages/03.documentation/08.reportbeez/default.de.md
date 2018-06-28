@@ -1,8 +1,8 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Filter & Hilfsmodule
-slug: filterbeez
-# menu: FilterBeez
+title: Berichte
+slug: reportbeez
+# menu: ReportBeez
 date: 17-02-2011
 published: true
 publish_date: 17-02-2011
@@ -35,7 +35,8 @@ metadata:
 #  cache_enable: false
 #  last_modified: true
 ---
-### Abschnitt 4
-# Filter- & Hilfsmodule
+### Abschnitt 6
 
-Die Filter- & Hilfsmodule erweitern das MailBeez System mit grundlegenden Funktionen zur Generierung von Inhalten und Steuerung des Versende-Prozesses
+# Berichte
+
+Der Tab "Berichte" gruppiert verschiedene Berichts-Module

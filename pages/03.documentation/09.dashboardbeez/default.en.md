@@ -1,8 +1,8 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Reports
-slug: reportbeez
-# menu: ReportBeez
+title: Dashboard Modules
+slug: dashboardbeez
+# menu: DashboardBeez
 date: 17-02-2011
 published: true
 publish_date: 17-02-2011
@@ -35,8 +35,9 @@ metadata:
 #  cache_enable: false
 #  last_modified: true
 ---
-### Chapter 5
 
-# Reports
+### Chapter 7
 
-the tab "reports" is grouping - well - report modules
+# Dashboard modules
+
+Configure your personal MailBeez dashboard to have the most relevant data at your fingertips!

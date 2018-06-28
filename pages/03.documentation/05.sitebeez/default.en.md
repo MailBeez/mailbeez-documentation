@@ -1,14 +1,11 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Dashboard Module
-slug: dashboardbeez
-# menu: DashboardBeez
-date: 17-02-2011
+title: SiteBeez Modules
+slug: sitebeez
+date: 28-06-2018
 published: true
-publish_date: 17-02-2011
-# unpublish_date: 17-02-2011
+publish_date: 28-06-2018
 template: chapter
-# theme: false
 visible: true
 summary:
     enabled: true
@@ -36,9 +33,8 @@ metadata:
 #  last_modified: true
 ---
 
-### Abschnitt 6
+### Chapter 3
 
-# Dashboard Module
+# SiteBeez Modules
 
-Mit diesen Modulen können Sie Ihr persönliches MailBeez Dashboard zusammenstellen, um die für Sie relevanten Daten einsehen zu können.
-
+The SiteBeez modules allow you to enrich the user experience of your store and - depending on the type of module - virtually any of your other websites with intercations and personalized content.

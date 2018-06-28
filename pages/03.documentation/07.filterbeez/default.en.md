@@ -1,12 +1,14 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Tutorials
-slug: tutorials
-# menu: Tutorials
-date: 10-11-2010
+title: Filter & Helpers
+slug: filterbeez
+# menu: FilterBeez
+date: 17-02-2011
 published: true
-publish_date: 10-11-2010
+publish_date: 17-02-2011
+# unpublish_date: 17-02-2011
 template: chapter
+# theme: false
 visible: true
 summary:
     enabled: true
@@ -33,10 +35,8 @@ metadata:
 #  cache_enable: false
 #  last_modified: true
 ---
-### Chapter 9
 
-# Tutorials
+### Chapter 5
+# Filter & Helpers
 
-Learn how to configure and customize your MailBeez system
-
-Please make sure you have read the [Basics](/documentation/basics) chapter and there the [Guide to Getting Started](/documentation/basics/guide-to-getting-started)!
+Filter & Helpers are extending the MailBeez System with common features to improve or controll the process of generating content and sending emails.

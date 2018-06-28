@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Berichte
+title: Reports
 slug: reportbeez
 # menu: ReportBeez
 date: 17-02-2011
@@ -35,8 +35,8 @@ metadata:
 #  cache_enable: false
 #  last_modified: true
 ---
-### Abschnitt 5
+### Chapter 6
 
-# Berichte
+# Reports
 
-Der Tab "Berichte" gruppiert verschiedene Berichts-Module
+the tab "reports" is grouping - well - report modules

@@ -1,8 +1,8 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Filter & Helpers
-slug: filterbeez
-# menu: FilterBeez
+title: Konfiguration
+slug: configbeez
+# menu: ConfigBeez
 date: 17-02-2011
 published: true
 publish_date: 17-02-2011
@@ -35,8 +35,8 @@ metadata:
 #  cache_enable: false
 #  last_modified: true
 ---
+### Abschnitt 4
+# Konfigurations-Module
 
-### Chapter 4
-# Filter & Helpers
+Lernen Sie hier, wie Sie mit Hilfe der Konfigurations-Module die Funktion Ihres MailBeez Systemes anpassen oder sogar erweitern können.
 
-Filter & Helpers are extending the MailBeez System with common features to improve or controll the process of generating content and sending emails.

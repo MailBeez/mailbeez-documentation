@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Dashboard Modules
+title: Dashboard Module
 slug: dashboardbeez
 # menu: DashboardBeez
 date: 17-02-2011
@@ -36,8 +36,9 @@ metadata:
 #  last_modified: true
 ---
 
-### Chapter 6
+### Abschnitt 7
 
-# Dashboard modules
+# Dashboard Module
 
-Configure your personal MailBeez dashboard to have the most relevant data at your fingertips!
+Mit diesen Modulen können Sie Ihr persönliches MailBeez Dashboard zusammenstellen, um die für Sie relevanten Daten einsehen zu können.
+

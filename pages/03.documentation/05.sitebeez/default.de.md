@@ -1,14 +1,11 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Konfiguration
-slug: configbeez
-# menu: ConfigBeez
-date: 17-02-2011
+title: SiteBeez Module
+slug: sitebeez
+date: 28-06-2018
 published: true
-publish_date: 17-02-2011
-# unpublish_date: 17-02-2011
+publish_date: 28-06-2018
 template: chapter
-# theme: false
 visible: true
 summary:
     enabled: true
@@ -35,8 +32,9 @@ metadata:
 #  cache_enable: false
 #  last_modified: true
 ---
-### Abschnitt 3
-# Konfigurations-Module
 
-Lernen Sie hier, wie Sie mit Hilfe der Konfigurations-Module die Funktion Ihres MailBeez Systemes anpassen oder sogar erweitern können.
+### Abschnitt 3
+# SiteBeez Module
+
+Mit den SiteBeez Modulen können Sie Ihren Shop aber auch - je nach Modul - andere Webseiten mit Interaktionen und personalisierten Inhalten anreichern.
 
