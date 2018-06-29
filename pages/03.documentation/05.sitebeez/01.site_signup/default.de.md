@@ -55,7 +55,7 @@ Mit Klick auf den Button öffnet sich das responsive Anmelde-Formular und führt
 
 ![Registrierungs-Dialog](Screen_signup.de.png)
 
-Nach einmaligen Öffnen des Dialoges bleibt der Button weiterhin - aber weniger interessant - sichtbar:
+Nach einmaligem Öffnen des Dialoges bleibt der Button weiterhin - aber weniger interessant - sichtbar:
 
 ![Nach Klick](_widget_displayed.png)
 

@@ -43,7 +43,7 @@ metadata:
 ---
 
 
-Mit dieser Erweiterung können Sie flexible Ihre eigenen Anforderungen an die Einholung und Verwendung von DSGVO Einwilligungen umsetzen. Welche Einwilligungen Sie für erforderlich halten, hängt von der Interpretation der Gesetzgebung ab.
+Mit dieser Erweiterung können Sie flexibel Ihre eigenen Anforderungen an die Einholung und Verwendung von DSGVO Einwilligungen umsetzen. Welche Einwilligungen Sie für erforderlich halten, hängt von der Interpretation der Gesetzgebung ab.
 
 
 Alle Einwilligungs-Aktionen des Kunden werden protokolliert und können über das [DSGVO Export System](/dokumentation/configbeez/config_gdpr_export) belegt werden.
