@@ -16,7 +16,6 @@ taxonomy:
     migration_status: done
     category: [docs]
     tag: []
-# added collection selector
 
 author:
     name: admin

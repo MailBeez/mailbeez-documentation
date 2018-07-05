@@ -1,7 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: Tutorials
-slug: tutorials
+slug: old-tutorials
 # menu: Tutorials
 date: 10-11-2010
 published: false
