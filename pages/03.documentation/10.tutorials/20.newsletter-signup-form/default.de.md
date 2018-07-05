@@ -16,6 +16,9 @@ taxonomy:
     tag: [pro]
 ---
 
+>>>**Vorbemerkung**  
+ Mit Hilfe des [SiteBeez Newsletter Anmelde-Widget](/dokumentation/sitebeez/site_signup) können Sie ohne weitere Entwicklung nach einfacher Integration von etwas JavaScript Code intelligent Email-Adressen von Besuchern und Kunden erfassen.
+
 [TOC]
 
 >>>>>**Voraussetzung**  
@@ -27,9 +30,6 @@ taxonomy:
 MailBeez unterstützt mit dem Modul [MailBeez Newsletter Profi ab Version 3.72](/dokumentation/mailbeez/newsletter) vollständig den Prozess der Erfassung von Interessenten-Emails in konfigurierbaren Themen-Gruppen. Aber auch bestehende Kunden können sich für den Newsletter und auch Themenbereich registrieren. Die API erkennt selbständig, ob eine Email-Adresse zu einem bestehenden Kunden gehört oder ob diese einen neuen Interessenten darstellt.
 In diesem Tutorial lernen Sie, wie Sie selbst ein Anmelde-Formular erstellen können. Dieses Formlar kann sowohl im Shop aber auch auf jeder anderen Webseite eingefügt werden.
 
-
->>>>>**Vorbemerkung**  
- In absehbarer Zeit (Stand Frühjahr 2018) wird das MailBeez System um `SiteBeez` erweitert. Mit Hilfe von SiteBeez können intelligent Email-Adressen von Besuchern und Kunden erfasst werden.
 
 
 ## Vorab-Überlegungen
