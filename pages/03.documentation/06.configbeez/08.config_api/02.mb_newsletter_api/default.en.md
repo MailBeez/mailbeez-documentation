@@ -32,13 +32,14 @@ POST `http://<myshop.com>/mailhive.php/api/public/v1.0/newsletter/add/`
 
 #### Optional Parameters
 
-| Parameter    	| Type 	| Description                            	                                |
-|--------------	|------	|----------------------------------------	                                |
-| firstname 	| text  | Firstname (ignored for customers), default -1	                            |
-| lastname 	    | text  | Lastname (ignored for customers), default -1                              |
-| gender   	    | text  | gender (ignored for customers)           	                                |
-| language_id   | int 	| language-id                            	                                |
-| topic_ids     | int / list 	| single or multiple (separated by ,) id of topics to subscribe for |
+| Parameter   | Type       | Description                                                       |
+|:------------|:-----------|:------------------------------------------------------------------|
+| firstname   | text       | Firstname (ignored for customers), default -1                     |
+| lastname    | text       | Lastname (ignored for customers), default -1                      |
+| gender      | text       | gender (ignored for customers)                                    |
+| language_id | int        | language-id                                                       |
+| topic_ids   | int / list | single or multiple (separated by ,) id of topics to subscribe for |
+| consent     | boolean    | set true for consent given (assumed true if parameter is missing) |
 
 
 
@@ -51,6 +52,10 @@ The API-Call returns a `JSON-Array` with following values:
 **invalid Email Address**  
 `{"error":"invalid_email"}`  
 The Email-Address seems to be invalid
+
+**missing consent**  
+`{"error":"consent"}`  
+Consent is not given, only appears when parameter `consent` is set
 
 **Email-Adress exists**  
 `{"error":"duplicate"}`  
