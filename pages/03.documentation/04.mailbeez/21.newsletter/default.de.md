@@ -89,7 +89,6 @@ Die freie Kombinierbarkeit der Segmentierungsregeln eröffnen eine Vielzahl von 
 - Segmentierung: Kunden, welche Produkt X gekauft habe + Umgehung des Newsletter-Abo
 
 
-
 **Einmalige Weihnachtsgeschäfts-Kunden vom letzten Jahr**
 
 - Segmentierung: 1 Kauf im Zeitraum 1. Oktober 2012 bis 31. Dezember 2012
@@ -110,6 +109,7 @@ Die freie Kombinierbarkeit der Segmentierungsregeln eröffnen eine Vielzahl von 
 
 **Vereinheitlichte Kontakte: Kunden und Interessenten**
 
+- Erfassung von Kunden-Optin oder Interessenten Kontakte über [SiteBeez Newsletter Anmeldung](/dokumentation/sitebeez/site_signup)
 - Saubere Unterscheidung zwischen Kunde und Interessent
 - Erkennung, ob eine Email-Adresse zu einem Kunden oder Interessenten gehört
 - vollständige Unterstützung bei Konvertierung von Interessent zu Kunde
@@ -146,6 +146,7 @@ Kunden
 - Themenbereiche
 
 Interessenten
+
 - Themenbereiche
 
 **Kampagnen**
@@ -178,6 +179,7 @@ Interessenten
 
 **Weitere Informationen finden Sie auf**
 
+- [SiteBeez Newsletter Anmeldung](/dokumentation/sitebeez/site_signup)
 - [MailBeez Newsletter API](/dokumentation/configbeez/config_api/mb_newsletter_api)
 - [Tutorial: Erstellen eines Newsletter Anmeldeformulars](/dokumentation/tutorials/erstellen-eines-newsletter-anmeldeformulars)
 - [Facebook Custom Audiences mit MailBeez erstellen](/blog/mailbeez-facebook-custom-audience)

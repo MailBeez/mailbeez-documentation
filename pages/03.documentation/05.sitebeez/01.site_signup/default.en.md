@@ -90,3 +90,14 @@ and insert an element with `data-sitebeez-trigger="custom_code"` in the html cod
     <div data-sitebeez-trigger="custom_code">my custom button</div>
 
 Click on this element to open the registration dialog. Please customize the html code to match your needs.
+
+
+## Open Sign-Up form through URL
+
+You can access the sign-up form directly through following URL:
+
+    <server-url>mailhive.php?m=mb_newsletter&ma=signup
+
+You can prefill an email address by adding the parameter `email` like in the following example:
+
+    <server-url>mailhive.php?m=mb_newsletter&ma=signup&email=test@test.com

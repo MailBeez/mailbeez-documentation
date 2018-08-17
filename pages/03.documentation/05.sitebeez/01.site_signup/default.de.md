@@ -87,3 +87,14 @@ und im html Code der Seite ein Element mit `data-sitebeez-trigger="custom_code"`
 
 Mit Klick auf dieses Element öffnet sich dann der Registrierungs-Dialog. Der Html-Code kann nach eigenem Ermessen angepasst werden.
 
+
+## Anmelde-Formular direkt öffnen
+
+
+Das Anmelde-Formular kann über folgende URL direkt geöffnet werden:
+
+    <server-url>mailhive.php?m=mb_newsletter&ma=signup
+
+Um eine Email-Adresse zu übergeben, diese als Parameter `email` wie folgt an die URL hängen:
+
+    <server-url>mailhive.php?m=mb_newsletter&ma=signup&email=test@test.com

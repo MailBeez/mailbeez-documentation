@@ -113,6 +113,7 @@ The powerful segmentation rules allow you to create a virtually endless number o
 
 **Unified Contact Management for customers and prospects**
 
+- Capture customer opt-ins and prospect contacts with [SiteBeez Newsletter Registration](/documentation/sitebeez/site_signup)
 - Target customers and prospects individually
 - Automatic handling of customer and prospects contacts
 - Prospects are moved to customers once they sign up
@@ -146,6 +147,7 @@ Customers
 - Topic Areas
 
 Prospects
+
 - Topic Areas
 
 **Campaigns**
@@ -173,8 +175,9 @@ Prospects
 - fully integrated with MailBeez Analytics and Google Analytics
 - analyse open, click, order
 
-
-
+**More Information**
+- [SiteBeez Newsletter Registration](/documentation/sitebeez/site_signup)
+- [MailBeez Newsletter API](/documentation/configbeez/config_api/mb_newsletter_api)
 
 ### Sending process
 
