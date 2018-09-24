@@ -55,7 +55,7 @@ eine Email gilt als geöffnet, wenn eines der folgenden Ereignisse eintrifft:
 - Tätigung eines Kaufes unter Nutzung des in der Email enthaltenen Gutschein-Codes
 
 
-Das Lade des Tracking-Pixels verwendet einen Hoch-Performanten Aufruf, um die Server-Last zu minimieren: Jeder Pixel-Aufruf wird in einer Log-Datei protokolliert. Bei jeder Ausführung von MailBeez wird die Log-Datei in die MailBeez Analytics Datenbank importiert und die Log-Datei wird gelöscht. Hierdurch kann eine zeitliche Verzögerung zwischen dem eigentlichen Öffnen der Email und der Aktualisierung der Öffnungsraten entstehen.
+Das Laden des Tracking-Pixels verwendet einen hoch performanten Aufruf, um die Server-Last zu minimieren: Jeder Pixel-Aufruf wird in einer Log-Datei protokolliert. Bei jeder Ausführung von MailBeez wird die Log-Datei in die MailBeez Analytics Datenbank importiert und die Log-Datei wird gelöscht. Hierdurch kann eine zeitliche Verzögerung zwischen dem eigentlichen Öffnen der Email und der Aktualisierung der Öffnungsraten entstehen.
 
 
 ### Klickraten
