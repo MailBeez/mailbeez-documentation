@@ -54,6 +54,9 @@ Using the matching integration pack MailBeez will integrate itself seamlessly in
 ####Modified-Shop V2.0.3.0
 <http://mailbeez-support.com/cloudfiles/modified-shop_2.0.3.0-r10907-delta.zip> 
 
+#### Modified-Shop V2.0.4.2
+<http://mailbeez-support.com/cloudfiles/modified-shop_2.0.4.2-r11374-delta.zip>
+
 
 ##Installation
 >>>>> In case you renamed the `/admin` directory, please move the files from `admin/` into the renamed directory

@@ -55,6 +55,9 @@ Mit dem passenden Integrations-Paket fügt sich das MailBeez System unter Nutzun
 ####Modified-Shop V2.0.3.0
 <http://mailbeez-support.com/cloudfiles/modified-shop_2.0.3.0-r10907-delta.zip> 
 
+#### Modified-Shop V2.0.4.2
+<http://mailbeez-support.com/cloudfiles/modified-shop_2.0.4.2-r11374-delta.zip>
+
 
 ##Installation
 >>>>> Falls das `/admin` Verzeichnis umbenannt worden ist, die Dateien aus `admin/` in das umbenannte Verzeichnis verschieben
