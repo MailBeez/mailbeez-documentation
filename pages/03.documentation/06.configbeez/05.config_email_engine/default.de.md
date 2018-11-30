@@ -46,7 +46,7 @@ MailBeez gibt Ihnen volle Freiheit zu wählen, wie Sie die Emails versenden woll
 ##Mögliche E-Mail Versand Methoden für MailBeez
 
 1. **Shop (Standard)**: Email-Funktion des Shop-Systems
-1. **Newsletter2Go (empfohlen)**: Versand über die zertifizierten Server von Newsletter2Go
+1. **Newsletter2Go**: Versand über die zertifizierten Server von Newsletter2Go
 1. **SMTP**: Ein beliebiger SMTP Server
 
 ###Shop (Standard)
@@ -61,7 +61,7 @@ Als Standard-Einstellung nutzt MailBeez die Email Funktion des Shop Systems. Som
 
 
 
-###Newsletter2Go (empfohlen)
+###Newsletter2Go
 Newsletter2Go ist ein in Berlin ansässiger Anbieter für den Versand von Emails **mit einer Zustellrate von 99,5%** dank zertifizierter Server:
 
 Newsletter2Go schreibt:
@@ -75,12 +75,11 @@ Newsletter2Go schreibt:
 | Whitelisting für 2,4 Milliarden Emails                     | zusätzliche Kosten, welche aber **durch verbesserte Zustell-Raten gedeckt werden** sollten     
 | Keine Drosselung erforderlich                              |  |
 | Kein Problem mit Spam-Listen, Blacklist etc.               |  |
-| 1000 Email gratis pro Monat                                |  |
 
 
 [Tutorial zur Einrichtung](/dokumentation/tutorials/newsletter2go-integration-mailbeez)
 
->>>>>> Im MailBeez System können Sie sich direkt bei Newsletter2Go registrieren. Dabei wird die Integration automatisch konfiguriert und nach Freischaltung Ihres Kontos können Sie sofort MailBeez über die Server von Newsletter2Go versenden lassen.
+>>>>>> Im MailBeez System können Sie sich direkt bei Newsletter2Go registrieren. Dabei wird die Integration automatisch konfiguriert und nach Freischaltung Ihres Kontos und Buchung des Standard-Tarifs können Sie sofort MailBeez über die Server von Newsletter2Go versenden lassen.
 
 
 ### SMTP

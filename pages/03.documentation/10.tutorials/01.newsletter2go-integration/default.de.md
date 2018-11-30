@@ -122,13 +122,12 @@ Bitte der Anleitung zur [Installation von MailBeez auf osCommerce 2.2](/dokument
 [/ui-accordion]
 
 ### 2. Verbindung herstellen
-Im MailBeez System unter `MailBeez > Konfiguration > Email System` den Button zur Verbindung mit Newsletter2Go anklicken.
+Im MailBeez System unter `MailBeez > Konfiguration > Email System` den Button zur Verbindung mit Newsletter2Go (mindestens Standard-Tarif) anklicken.
 
 Falls Sie bereits ein Konto bei Newsletter2Go haben, bitte einloggen und den Zugriff zulassen.
 
-Falls Sie noch nicht Newsletter2Go nutzen, bitte in dem Dialog die Registrierung vornehmen.
+Falls Sie noch nicht Newsletter2Go nutzen, bitte in dem Dialog die Registrierung vornehmen und den Standard-Tarif buchen.
 
->>>>> Stand April 2017: Falls Sie den Fehler `Bad Request (field entrypoint must not be empty)` erhalten, bitte das Fenster schliessen und nochmals im MailBeez-System den Button zur Verbindung mit Newsletter2Go anklicken
 
 ### 3. Fertig
 
