@@ -74,7 +74,7 @@ depending on your version you can either use the admin plugin or manually add th
 since oscommerce 2.3.3 a plugin system for adding admin entries is available. For this version please copy
 
 ```bash
-extra_files/extras_osc_233x/admin/includes/boxes/customers/mailbeez.php
+extra_files/extras_osc_233x/admin/includes/boxes/customers_mailbeez.php
 ```
 
 into your oscommerce system:

@@ -71,7 +71,7 @@ Je nach osCommerce Version können Sie entweder das Admin Plugin nutzen oder den
 Seit osCommerce 2.3.3 gibt es ein Plugin-System zum Hinzufügen von Admin Menü-Einträgen. Kopieren Sie hierzu
 
 ```bash
-extra_files/extras_osc_233x/admin/includes/boxes/customers/mailbeez.php
+extra_files/extras_osc_233x/admin/includes/boxes/customers_mailbeez.php
 ```
 
 in das osCommerce System:
