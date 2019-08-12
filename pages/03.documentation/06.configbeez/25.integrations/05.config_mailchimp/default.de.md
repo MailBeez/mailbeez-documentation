@@ -55,6 +55,8 @@ metadata:
 #  last_modified: true
 ---
 
+>>>> **Veraltet**
+>>>> Aufgrund grundlegender Änderungen in der MailChimp API wird nur die alte Version der MailChimp API unterstützt.
 
 ##Die MailBeez für MailChimp Integration
 <div style="float:right;margin-top: -48px !important" markdown="1">

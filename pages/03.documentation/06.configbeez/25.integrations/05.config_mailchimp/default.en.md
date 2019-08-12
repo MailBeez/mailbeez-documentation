@@ -43,6 +43,9 @@ metadata:
     author: admin
 ---
 
+>>>> **Deprecated**
+>>>> Due to breaking changes in MailChimp API only the MailChimp legacy API is supported
+
 ##The MailBeez for MailChimp Connector
 <div style="float:right;margin-top: -48px !important" markdown="1">
 ![](mc_connector_badge.png?resize=380,328)
