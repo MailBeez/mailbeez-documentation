@@ -3,7 +3,10 @@
 title: Shopauskunft.de Profi
 slug: shopauskunft_advanced
 # menu: Shopauskunft.de Profi
+date:  02-11-2015
 published: true
+publish_date:  02-11-2015
+# unpublish_date: 15-04-2015
 template: docs
 # theme: false
 visible: true
