@@ -54,6 +54,8 @@ Optional kann das Modul nach Versand den Bestell-Status auf einen neuen, wählba
 
 Die Benachrichtigungs-Emails wird beim nächsten Durchlauf von MailBeez versendet. Um den Zeitversatz zwischen Setzen des Bestell-Status und Versand der Email gering zu halten, empfehlen wir mit Hilfe eines Cronjobs MailBeez z.B. minütlich auszuführen. Der MailBeez Support hilft bei Fragen hierzu.
 
+In Gambio können die Tracking-Links zur Paketverfolgung eingefügt werden.
+
 Anwendungsbeispiele:
 
 - Eine externe Software zur Bestellbearbeitung setzt den Bestellstatus, jedoch ohne eine Benachrichtung zu versenden
@@ -65,11 +67,13 @@ Anwendungsbeispiele:
 
 | Vorlage-Variable   | Ausgabe                                 |
 |--------------------|-----------------------------------------|
-| {$status_date}     | formatiertes Datum des Bestell-Status   |
-| {$status_date_raw} | unformatiertes Datum des Bestell-Status |
-| {$status_id}       | Bestell-Status-ID                       |
-| {$status_name}     | Bestell-Status-Name                     |
-| {$comments}        | Kommentar                               |
+| [[$status_date]]     | formatiertes Datum des Bestell-Status   |
+| [[$status_date_raw]] | unformatiertes Datum des Bestell-Status |
+| [[$status_id]]       | Bestell-Status-ID                       |
+| [[$status_name]]     | Bestell-Status-Name                     |
+| [[$comments]]        | Kommentar                               |
+| [[$tracking]]        | Gambio: Formatierte Liste der Links     |
+| [[trackingData]]     | Gambio: Daten-Array für eigene Smarty Templates ['url', 'service', 'code'] |
 
 **Beispiel für status-abhängigen Email-Text**
 

@@ -49,6 +49,8 @@ Optionally, you can configure the module to change the order status to a new sta
 
 The notification email is sent out at the next batch MailBeez email send - it is recommended to set up a cronjob running every minute to reduce the time delay between setting the order status and sending out the notification email. The MailBeez Support is happy to help you in case you have some questions.
 
+On Gambio you can insert links for parcel tracking.
+
 Scenarios where this module can be applied:
 
 - an external order management solution updates the order status, but does not sent any notification email
@@ -60,12 +62,13 @@ Scenarios where this module can be applied:
 
 | Template Variable  | Output                                  |
 |--------------------|-----------------------------------------|
-| {$status_date}     | formated order status date              |
-| {$status_date_raw} | raw order status date                   |
-| {$status_id}       | status id                               |
-| {$status_name}     | order status name                       |
-| {$comments}        | comments                                |
-
+| [[$status_date]]     | formated order status date              |
+| [[$status_date_raw]] | raw order status date                   |
+| [[$status_id]]       | status id                               |
+| [[$status_name]]     | order status name                       |
+| [[$comments]]        | comments                                |
+| [[$tracking]]        | Gambio: formated list of tracking links     |
+| [[trackingData]]     | Gambio: data array for building custom template ['url', 'service', 'code'] |
 
 **Custom Email Message**
 
