@@ -54,8 +54,11 @@ Using the matching integration pack MailBeez will integrate itself seamlessly in
 ####Modified-Shop V2.0.3.0
 <http://mailbeez-support.com/cloudfiles/modified-shop_2.0.3.0-r10907-delta.zip> 
 
-#### Modified-Shop V2.0.4.2 + V2.0.5
+#### Modified-Shop V2.0.4.2
 <http://mailbeez-support.com/cloudfiles/modified-shop_2.0.4.2-r11374-delta.zip>
+
+#### Modified-Shop V2.0.5
+<http://mailbeez-support.com/cloudfiles/modified-shop_2.0.5.0-r12487-delta.zip>
 
 
 ##Installation
