@@ -139,7 +139,7 @@ The powerful segmentation rules allow you to create a virtually endless number o
 
 Customers
 - geographic: country, state, zip-code
-- customer: gender, customer since min/max days, customer groups: requires [Customer Group-Filter](/documentation/mailbeez/filter_check_group/)
+- customer: gender, customer since min/max days, customer groups: requires [Customer Group-Filter](/documentation/filterbeez/filter_check_group/)
 - products: purchased / must not have purchased (whitelist/blacklist)
 - categories: purchased / must not have purchased (whitelist/blacklist)
 - orders: max. number of orders, last order before / after date
@@ -242,9 +242,9 @@ function mh_nl_export_addon_content($recipient_id)
 
 For best operations we recommend following modules, which will enhance the MailBeez platform. So all other MailBeez modules will be enhanced.
 
-- [Simple Throttling](/documentation/mailbeez/filter_do_throttling_simple)
+- [Simple Throttling](/documentation/filterbeez/filter_do_throttling_simple)
 - [BounceHive Bounce Handling](/documentation/configbeez/config_bouncehive_advanced)
-- [Customer Group-Filter](/documentation/mailbeez/filter_check_group/)
+- [Customer Group-Filter](/documentation/filterbeez/filter_check_group/)
 
 To create and send responsive Emails you need to install the Responsive Template Manager:
 

@@ -385,7 +385,7 @@ The remaining configuration options are all additional configuration modules whi
 
 This configuration module puts an end to all that by automatically managing your bounced emails. If an email bounces, Bounce Handling will mark the customer accordingly and avoid sending out additional emails.
 
-**[Email Throttling](/documentation/mailbeez/filter_do_throttling_simple/)**  
+**[Email Throttling](/documentation/filterbeez/filter_do_throttling_simple/)**
  MailBeez Simple Throttling module is a simple, yet highly useful filter that allows you to configure the hourly rate and total number of emails that MailBeez sends out.
 
 Once you start firing off a lot of emails, it’s a good idea to consider working with email throttling. Whether your store runs on a limited data plan involving hourly email restrictions, or you simply want to make sure that your site is still responsive to visitors even whilst the server fires off emails behind the scenes, email throttling is key, and the Mailbeez Simple Throttling module is the tool to use to achieve it.

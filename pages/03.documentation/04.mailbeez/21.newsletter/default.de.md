@@ -254,9 +254,9 @@ function mh_nl_export_addon_content($recipient_id)
 
 Folgende Module bieten relevante Funktionen zur Optimierung des Newsletter-Versandes:
 
-- [Einfache Drosselung](/dokumentation/mailbeez/filter_do_throttling_simple) 
+- [Einfache Drosselung](/dokumentation/filterbeez/filter_do_throttling_simple)
 - [Bouncehive Rückläufer-Verarbeitung](/dokumentation/configbeez/config_bouncehive_advanced)
-- [Kundengruppen-Filter](/dokumentation/mailbeez/filter_check_group)
+- [Kundengruppen-Filter](/dokumentation/filterbeez/filter_check_group)
 
 
 ### geplante Weiterentwicklungen

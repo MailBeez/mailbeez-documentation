@@ -266,7 +266,7 @@ Die weiteren Einstellungen sind optional und stehen nach der Installation von Pr
 
 Diese Modul automatisiert die Verarbeitung von Email Rückläufern. Diese Rückläufer werden eingelesen, analysiert und die dazugehörigen Email-Adressen markiert. Dadurch wird der weitere Versand von Emails an diese ungültigen Adresse unterbunden.
 
-**[Emailversand drosseln](/dokumentation/mailbeez/filter_do_throttling_simple/)**  
+**[Emailversand drosseln](/dokumentation/filterbeez/filter_do_throttling_simple/)**
  Dieses Modul erlaubt es, die Versandrate zu kontrollieren, um ggf. Limits des Hosters einzuhalten.
 
 **[MailBeez automatisch ausführen](/dokumentation/configbeez/config_cron_simple/)**  
