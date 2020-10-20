@@ -73,6 +73,41 @@ The integration code can be found under `MailBeez > Configuration > SiteBeez` - 
 In Gambio the code can be inserted under `Shop Settings > SEO > Trackingcode`.
 
 
+### CSS 
+
+With some CSS code you can customize the position and design of the button. You need to add some CSS code to your store template.
+
+Gambio allows you to insert some custom CSS code using the Style Editor. Please open `Darstellung > Template Einstellunge > Style Edit "Theme bearbeiten"` and click on the extended menu icon:
+
+![CSS bearbeiten](_gx_css_edit.png)
+
+With choosing the option to edit CSS code you can insert your custom code.
+
+Following some basic examples
+
+
+**Position**
+
+Plase Button left
+
+    div.stbz_container {
+        left: 100px !important;
+        bottom: 100px !important;    
+    }
+
+**Button color - not clicked**
+
+    .stbz_button {
+        background-color: #ff0000 !important;
+    }
+
+    
+**Button color - clicked**
+
+    .stbz_button.stbz_displayed {
+            background-color: #c0c0c0 !important;
+    }
+
 
 ## Custom Button
 

@@ -67,6 +67,7 @@ Anwendungsbeispiele:
 
 | Vorlage-Variable   | Ausgabe                                 |
 |--------------------|-----------------------------------------|
+| [[$order_date]]      | formatiertes Datum der Bestellung   |
 | [[$status_date]]     | formatiertes Datum des Bestell-Status   |
 | [[$status_date_raw]] | unformatiertes Datum des Bestell-Status |
 | [[$status_id]]       | Bestell-Status-ID                       |
