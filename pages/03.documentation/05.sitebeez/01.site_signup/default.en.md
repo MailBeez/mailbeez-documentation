@@ -92,6 +92,7 @@ Plase Button left
 
     div.stbz_container {
         left: 100px !important;
+        right: inherit !important;
         bottom: 100px !important;    
     }
 

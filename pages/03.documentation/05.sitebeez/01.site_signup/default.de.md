@@ -89,6 +89,7 @@ Mit folgendem CSS Code kann der Button unten links angezeigt werden.
 
     div.stbz_container {
         left: 100px !important;
+        right: inherit !important;
         bottom: 100px !important;    
     }
 
