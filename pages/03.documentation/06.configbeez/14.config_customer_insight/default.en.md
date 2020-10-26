@@ -66,8 +66,13 @@ Additional installation-instructions:
 
 open
 
+up to Zencart 1.5.6
  
 `(shop)/<admin-dir>/index.php`
+
+for Zencart 1.5.7+
+
+`(shop)/<admin-dir>/home.php`
 
 
 insert above the closing HTML Tag `</body>` following code:

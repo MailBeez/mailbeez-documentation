@@ -100,8 +100,14 @@ define('MH_DIR_FS_CATALOG', (substr(DIR_FS_CATALOG, -1) != '/') ? DIR_FS_CATALOG
 
 öffne
 
+bis Zencart 1.5.6
  
 `(shop)/<admin-dir>/index.php`
+
+ab Zencart 1.5.7
+
+`(shop)/<admin-dir>/home.php`
+
 
 
 vor dem schliessenden HTML Tag `</body>` folgenden Code einfügen:
