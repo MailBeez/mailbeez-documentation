@@ -1,8 +1,8 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Schritt 3: Einstellen & Zurücklehnen
+title: "Schritt 3: Einstellen & Zurücklehnen"
 slug: step-3-set-forget
-# menu: Schritt 3: Einstellen & Zurücklehnen
+# menu: "Schritt 3: Einstellen & Zurücklehnen"
 date: 27-05-2010
 published: true
 publish_date: 27-05-2010

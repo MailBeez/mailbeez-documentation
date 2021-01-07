@@ -31,6 +31,7 @@ module:
         - comp_xtc
         - comp_xtcm2        
         - comp_gambio
+        - comp_saas
     thumbnail: 'http://www.mailbeez.com/wp-content/uploads/downloads/thumbnails/2011/08/icon_321.png'
     pro: pro
     cert: 'true'

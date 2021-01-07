@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Numinix Store Credit: Display Balance
+title: "Numinix Store Credit: Display Balance"
 slug: filter_add_numinix_sc_balance
 # menu: Numinix Store Credit: Display Balance
 date: 14-10-2011

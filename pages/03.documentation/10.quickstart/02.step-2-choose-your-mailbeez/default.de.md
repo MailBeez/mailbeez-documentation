@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Schritt 2:  Wähle die MailBeez Module
+title: "Schritt 2:  Wähle die MailBeez Module"
 slug: step-2-choose-your-mailbeez
 # menu: Schritt 2:  Wähle die MailBeez Module
 date: 27-05-2010

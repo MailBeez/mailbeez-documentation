@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Service: Interner Abgleich der Newsletter-Abo Informationen
+title: "Service: Interner Abgleich der Newsletter-Abo Informationen"
 slug: service_sync_newsletter_xtc
 # menu: Service: Interner Abgleich der Newsletter-Abo Informationen
 date: 05-03-2014

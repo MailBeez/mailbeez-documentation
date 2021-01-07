@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Service: Block-All Handler
+title: "Service: Block-All Handler"
 slug: service_handler_block_all
 # menu: Service: Block-All Handler
 date: 16-10-2012

@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Step 2: Choose your MailBeez
+title: "Step 2: Choose your MailBeez"
 slug: step-2-choose-your-mailbeez
 # menu: Step 2: Choose your MailBeez
 date: 27-05-2010

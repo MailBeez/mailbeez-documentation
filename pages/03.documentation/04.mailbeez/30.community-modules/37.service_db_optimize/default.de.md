@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Service: Datenbank Optimierung
+title: "Service: Datenbank Optimierung"
 slug: service_db_optimize
 routes:
     default: /dokumentation/mailbeez/service_db_optimize

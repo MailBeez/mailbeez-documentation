@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Service-Modul: Repariere Bestell-Datenbank
+title: "Service-Modul: Repariere Bestell-Datenbank"
 slug: service_db_repair_order
 # menu: Service-Modul: Repariere Bestell-Datenbank
 date: 07-02-2013

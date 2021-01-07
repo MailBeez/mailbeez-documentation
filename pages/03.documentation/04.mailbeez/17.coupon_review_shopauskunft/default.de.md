@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Shopauskunft: Gutschein für Bewertungen
+title: "Shopauskunft: Gutschein für Bewertungen"
 slug: coupon_review_shopauskunft
 # menu: Shopauskunft: Gutschein für Bewertungen
 date: 08-02-2012

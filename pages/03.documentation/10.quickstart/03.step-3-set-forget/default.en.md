@@ -1,8 +1,8 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Step 3: Set & Forget
+title: "Step 3: Set & Forget"
 slug: step-3-set-forget
-# menu: Step 3: Set & Forget
+# menu: "Step 3: Set & Forget"
 date: 27-05-2010
 published: true
 publish_date: 27-05-2010

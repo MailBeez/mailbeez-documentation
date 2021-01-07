@@ -32,6 +32,7 @@ module:
         - comp_xtc
         - comp_xtcm2
         - comp_gambio
+        - comp_saas
     mc_ready: true        
     thumbnail: 'http://www.mailbeez.com/wp-content/uploads/downloads/thumbnails/2011/09/icon_32.png'
     pro: pro

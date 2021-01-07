@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Service: Sync internal newsletter subscription information
+title: "Service: Sync internal newsletter subscription information"
 slug: service_sync_newsletter_xtc
 # menu: Service: Sync internal newsletter subscription information
 date: 05-03-2014

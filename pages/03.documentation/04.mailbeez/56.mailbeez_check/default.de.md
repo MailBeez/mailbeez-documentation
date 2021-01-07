@@ -15,7 +15,7 @@ summary:
     format: short
     size: 128
 taxonomy:
-    migration_status: done: [docs]
+    migration_status: "done: [docs]"
     tag: [core,depreciated]
 module:
     code: 'mailbeez_check'

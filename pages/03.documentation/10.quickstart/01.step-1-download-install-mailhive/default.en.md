@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Step 1: Download &amp; Install MailHive
+title: "Step 1: Download &amp; Install MailHive"
 slug: step-1-download-install-mailhive
 # menu: Step 1: Download &amp; Install MailHive
 date: 27-05-2010

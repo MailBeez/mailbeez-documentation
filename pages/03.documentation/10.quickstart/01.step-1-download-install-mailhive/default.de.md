@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Schritt 1: MailBeez downloaden & installieren
+title: "Schritt 1: MailBeez downloaden & installieren"
 slug: step-1-download-install-mailhive
 # menu: Schritt 1: MailBeez downloaden & installieren
 date: 27-05-2010

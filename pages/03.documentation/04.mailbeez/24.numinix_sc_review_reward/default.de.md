@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Numinix Store Credit: Review Rewards
+title: "Numinix Store Credit: Review Rewards"
 slug: numinix_sc_review_reward
 routes:
     aliases:

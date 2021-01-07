@@ -19,7 +19,7 @@ taxonomy:
 module:
     code: 'site_signup'
     category: [sitebeez]
-    compatiblity: [comp_osc,comp_cre,comp_digi,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio]
+    compatiblity: [comp_osc,comp_cre,comp_digi,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio,comp_saas]
     pro: 'pro'
 
 # added collection selector
