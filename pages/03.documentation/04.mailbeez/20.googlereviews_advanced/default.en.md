@@ -1,9 +1,9 @@
 ---
-title: 'ShopVote.de Advanced'
-slug: shopvote_advanced
-date:  02-11-2015
+title: 'Google Reviews Advanced'
+slug: googlereviews_advanced
+date:  18-03-2021
 published: true
-publish_date: 02-11-2015
+publish_date: 18-03-2021
 template: docs
 visible: true
 summary:
@@ -17,7 +17,7 @@ taxonomy:
     tag:
         - pro
 module:
-    code: shopvote_advanced
+    code: googlereviews_advanced
     category:
         - mailbeez
     compatiblity:
@@ -33,9 +33,9 @@ module:
     pro: pro
     cert: 'true'
     price: '99 EUR'
-    title_en: 'ShopVote.de Advanced'
+    title_en: 'Google Reviews Advanced'
     teaser_en: 'Advanced Features: Delay for international orders, multiple Order status, recognition of regular customers'
-    title_de: 'ShopVote.de Profi'
+    title_de: 'Google Bewertungen Profi'
     teaser_de: 'Profi-Features: Verzögerung für internationale Bestellungen, Stammkunden-Erkennung und mehr'
     author: MailBeez.com
 author:
@@ -44,11 +44,14 @@ metadata:
     author: admin
 ---
 
-**Get most out of your ShopVote.de Subscription**
+**Get real reviews on Google - automatically**
+
+Precondition: You must have a confirmed "Google My Business" account. There you can find your short URL for customer reviews. Read more on https://support.google.com/business/answer/7035772?hl=en
+
 
 ## Advanced Features
 
-this advanced module gives you a couple of settings to streamline and improve your process of inviting customers to give a rating on ShopVote.de:
+this advanced module gives you a couple of settings to streamline and improve your process of inviting customers to give a rating on Google:
 
 ## multiple order status
 
@@ -62,16 +65,9 @@ The module automatically applies this delay to all orders which are shipped to a
 
 ## recognition of regular customers
 
-Don't want to bother your regular customers with an Email to rate on ShopVote.de? Simply define a delay (e.g. 120 days) between to invites and your are done. The module will check when the last invite was sent and decides whether to wait or to send a new rating invite.
+Don't want to bother your regular customers with an Email to rate on Googlereviews.de? Simply define a delay (e.g. 120 days) between to invites and your are done. The module will check when the last invite was sent and decides whether to wait or to send a new rating invite.
 
 ## responsive email template
 
 the emails are shown perfectly also on mobile deviced
 
-
-<!--
-
-### Want to integrated your valuable ratings with your Store and Email Marketing?
-
-Using the [ShopVote.de Integration Suite](/documentation/configbeez/config_shopvote_rss_importer/) you can easily integrate your ShopVote.de-Ratings with your Store - in a way that makes this "unique fresh content" visible to search engines - and your MailBeez generated Email Marketing emails!
--->
