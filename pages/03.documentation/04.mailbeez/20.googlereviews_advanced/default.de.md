@@ -52,7 +52,7 @@ metadata:
 
 **So bekommen Sie automatisch echte Bewertungen auf google**
 
-Voraussetzung: Sie müssen über einen bestätigen Eintrag bei "Google My Business" verfügen, dann können Sie dort Ihre Kurz-URL für Kundenrezensionen finden. Mehr dazu auf https://support.google.com/business/answer/7035772?hl=de
+Voraussetzung: Sie müssen über einen bestätigen Eintrag bei "Google My Business" verfügen, dann können Sie dort Ihre Kurz-URL für Kundenrezensionen finden. Mehr dazu auf <https://support.google.com/business/answer/7035772?hl=de>
 
 
 ## Profi-Funktionen

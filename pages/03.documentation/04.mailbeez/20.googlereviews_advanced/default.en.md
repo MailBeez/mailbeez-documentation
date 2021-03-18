@@ -46,7 +46,7 @@ metadata:
 
 **Get real reviews on Google - automatically**
 
-Precondition: You must have a confirmed "Google My Business" account. There you can find your short URL for customer reviews. Read more on https://support.google.com/business/answer/7035772?hl=en
+Precondition: You must have a confirmed "Google My Business" account. There you can find your short URL for customer reviews. Read more on <https://support.google.com/business/answer/7035772?hl=en>
 
 
 ## Advanced Features
