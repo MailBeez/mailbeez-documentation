@@ -73,8 +73,9 @@ Anwendungsbeispiele:
 | [[$status_id]]       | Bestell-Status-ID                       |
 | [[$status_name]]     | Bestell-Status-Name                     |
 | [[$comments]]        | Kommentar                               |
+| [[$orders_data]]     | Array mit allen Spalten aus Tabelle orders, z.B. [[$orders_data.delivery_city]] |
 | [[$tracking]]        | Gambio: Formatierte Liste der Links     |
-| [[trackingData]]     | Gambio: Daten-Array für eigene Smarty Templates ['url', 'service', 'code'] |
+| [[$trackingData]]     | Gambio: Daten-Array für eigene Smarty Templates ['url', 'service', 'code'] |
 
 **Beispiel für status-abhängigen Email-Text**
 

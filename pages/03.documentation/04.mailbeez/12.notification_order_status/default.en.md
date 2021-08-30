@@ -68,6 +68,7 @@ Scenarios where this module can be applied:
 | [[$status_id]]       | status id                               |
 | [[$status_name]]     | order status name                       |
 | [[$comments]]        | comments                                |
+| [[$orders_data]]     | Array with all columns from table orders, e.g. [[$orders_data.delivery_city]]  |
 | [[$tracking]]        | Gambio: formated list of tracking links     |
 | [[trackingData]]     | Gambio: data array for building custom template ['url', 'service', 'code'] |
 
