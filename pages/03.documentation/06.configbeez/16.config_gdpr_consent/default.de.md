@@ -66,7 +66,7 @@ Unter `MailBeez > Filter & Hilfsmodule > DSGVO Einwilligungs-Prüfung` können S
 #### Installation des Overloads
 Die Integration zur Abfrage von Einwilligungen in die Checkout-Success Seite erfolgt mittels Update-sicherem Overload.
 
-Bitte die [Overload Datei downloaden](http://mailbeez-support.com/cloudfiles/integrations/GDPR/gambio/MailBeezGdprConsentCheckoutSuccessExtender.txt), die Endung von `.txt` nach `.php` ändern und im Gambio System per FTP unter
+Bitte die [Overload Datei downloaden](https://mailbeez-support.com/cloudfiles/integrations/GDPR/gambio/MailBeezGdprConsentCheckoutSuccessExtender.txt), die Endung von `.txt` nach `.php` ändern und im Gambio System per FTP unter
 
     /system/overloads/CheckoutSuccessExtenderComponent/MailBeezGdprConsentCheckoutSuccessExtender.php
 
