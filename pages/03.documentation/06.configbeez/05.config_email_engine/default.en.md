@@ -46,7 +46,7 @@ You can choose, which delivery engine MailBeez should use to send out the genera
 
 
 1. **Shop (default)**: Email-Function of your Shop-System
-1. **Newsletter2Go (recommended)**: Email delivery through the certified Servers of Newsletter2Go
+1. **Mailbeez.Email (recommended)**: Email delivery through MailBeez.Email Servers
 1. **SMTP**: any SMTP Server
 
 ###Shop (default)
@@ -61,24 +61,19 @@ With the default setting MailBeez is utilizing the email function of your shop s
 
 
 
-###Newsletter2Go (recommended)
-Newsletter2Go located in Germany, Berlin acchieves delivery rates of up to 99,5% thanks to their certified servers:
+###MailBeez.Email (recommended)
+All MailBeez User are eligible to sent their Emails through MailBeez.Email servers (at addtional costs)
 
-Newsletter2Go says:
-
-> Get the highest delivery rates thanks to whitelisting. **With Newsletter2Go you can bypass spam filters thanks to our certificates**.
 
  
 | Advantage                                                   | Disadvantage 
 |-------------------------------------------------------------|----------------------------------------------
-| bypass spam filters thanks to server certificates           | SPF configuration recommended
-| Whitelisting of 2,4 Billion Email addresses                 | additional costs, **should be covered by increased delivery rates**    
+| bypass spam filters thanks to server certificates           | SPF and DKIM configuration required - we are happy to assist!
+| Whitelisting all relevante recipients                       | additional costs, **typically covered by increased delivery rates**    
 | No throttling required                                      |  |
 | You don't have to worry about blacklists, spam ratings etc. |  |
-| 1000 free emails each month                                 |  |
 
 
->>>>>> Within the MailBeez System you can directly register at Newsletter2Go. This will automatically set up the integration for you. After approval of your account you are ready to let MailBeez send its emails through the certified servers of Newsletter2Go.
 
 ### SMTP
 

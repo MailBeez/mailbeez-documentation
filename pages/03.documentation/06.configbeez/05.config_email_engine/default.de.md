@@ -46,7 +46,7 @@ MailBeez gibt Ihnen volle Freiheit zu wählen, wie Sie die Emails versenden woll
 ##Mögliche E-Mail Versand Methoden für MailBeez
 
 1. **Shop (Standard)**: Email-Funktion des Shop-Systems
-1. **Newsletter2Go**: Versand über die zertifizierten Server von Newsletter2Go
+1. **MailBeez.Email**: Versand mit höchsten Zustellraten über MailBeez Email Server
 1. **SMTP**: Ein beliebiger SMTP Server
 
 ###Shop (Standard)
@@ -57,30 +57,22 @@ Als Standard-Einstellung nutzt MailBeez die Email Funktion des Shop Systems. Som
 |----------------------------------------|----------------------------------------------
 | keine Konfiguration erforderlich       | ggf. Versende-Limit des Mail-Servers     
 | keine zusätzlichen Kosten              | Risiko eines Spam-Ratings auf dem Mail-Server         
-|                                        | Zustellraten sind vom Mail-Server abhängig, typisch unter 50%         
+|                                        | Zustellraten sind vom Mail-Server abhängig, häufig unter 50%         
 
 
 
-###Newsletter2Go
-Newsletter2Go ist ein in Berlin ansässiger Anbieter für den Versand von Emails **mit einer Zustellrate von 99,5%** dank zertifizierter Server:
-
-Newsletter2Go schreibt:
-
->Versenden Sie über eines der besten Versandsysteme weltweit. Eine Versandgeschwindigkeit von 3 Millionen Emails in der Stunde pro Kunde erfüllt jeden Anspruch. **Newsletter2Go sorgt dafür, dass Ihre Emails nicht von Spam-Filtern geprüft, sondern direkt an die Empfänger zugestellt werden**.
+###MailBeez.Email (empfohlen)
+Mit MailBeez.Email können wir allen MailBeez Usern den zuverlässigen Versand von MailBeez Emails anbieten
 
  
-| Vorteile                                                   | Nachteile 
-|------------------------------------------------------------|----------------------------------------------
-| Versand über zertifizierte Server mit 99,5% Zustellrate    | SPF Konfiguration sinnvoll
-| Whitelisting für 2,4 Milliarden Emails                     | zusätzliche Kosten, welche aber **durch verbesserte Zustell-Raten gedeckt werden** sollten     
-| Keine Drosselung erforderlich                              |  |
-| Kein Problem mit Spam-Listen, Blacklist etc.               |  |
+| Vorteile                                     | Nachteile 
+|----------------------------------------------|----------------------------------------------
+| Versand mit höchsten Zustellraten            | SPF und DKIM DNS-Konfiguration erforderlich - wir helfen natürlich!
+| Whitelisting bei allen gängigen Empfängern   | zusätzliche Kosten, welche aber typisch **durch verbesserte Zustell-Raten gedeckt werden**     
+| Keine Drosselung erforderlich                |  |
+| Kein Problem mit Spam-Listen, Blacklist etc. |  |
 
-
-[Tutorial zur Einrichtung](/dokumentation/tutorials/newsletter2go-integration-mailbeez)
-
->>>>>> Im MailBeez System können Sie sich direkt bei Newsletter2Go registrieren. Dabei wird die Integration automatisch konfiguriert und nach Freischaltung Ihres Kontos und Buchung des Standard-Tarifs können Sie sofort MailBeez über die Server von Newsletter2Go versenden lassen.
-
+    
 
 ### SMTP
 
