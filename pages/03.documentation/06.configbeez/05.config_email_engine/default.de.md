@@ -41,6 +41,13 @@ metadata:
 #  last_modified: true
 ---
 
+>>>> **Warum kommen Emails beim Empfänger an und warum nicht?**  
+>>>>Viele Email-Empfängerserver - besonders zu erwähnen sind Gmail, Yahoo, Web.de, GMX, AOL, Outlook.com - erwarten bei einem höheren Volumen an Emails wie z.B. beim Versand von Newslettern einen expliziten Whitelisting Eintrag.   
+>>>>Diesen Eintrag können ausschließlich ausgewiesene Email-Versand-Anbieter beziehen und dann dem Versender entsprechende Authentifizierungsmaßnahmen wie DKIM, SPF Verfügung stellen. Nur hierdurch wird es den Mailservern der Empfängers möglich, herauszufinden, ob es sich um "legale" Emails handelt.
+
+Beim Versand über die Mailserver des Hosters werden somit häufig Emails abgelehnt, da die verwendeten Mailserver keine ausgewiesenen Newsletter Server sind.
+
+
 MailBeez gibt Ihnen volle Freiheit zu wählen, wie Sie die Emails versenden wollen:
 
 ##Mögliche E-Mail Versand Methoden für MailBeez
@@ -48,6 +55,9 @@ MailBeez gibt Ihnen volle Freiheit zu wählen, wie Sie die Emails versenden woll
 1. **Shop (Standard)**: Email-Funktion des Shop-Systems
 1. **MailBeez.Email**: Versand mit höchsten Zustellraten über MailBeez Email Server
 1. **SMTP**: Ein beliebiger SMTP Server
+
+
+
 
 ###Shop (Standard)
 
@@ -86,17 +96,6 @@ Mit dieser Option können Sie MailBeez für den Versand über einen beliebigen S
 
 
 
-Einstellungen für die Verwendung eines Gmail Email-Servers:
-```bash
- smtp.gmail.com  
- Auth: true  
- security: ssl  
- Port: 465
-```
-
-
-
-
 ### Fehler beim Email-Versand <a id="error"></a>
 
 Falls der Versand einer Email über SMTP aus verschiedensten Gründen im Email-Server fehl schlägt, wird diese Email im System mit der `message_id=-1` protokolliert. 
@@ -113,3 +112,13 @@ Die betroffenen Einträge werden im System markiert, so dass diese Emails nicht 
 
 
 >>>>>>Sollten häufig Fehler beim Versand auftreten, so prüfen Sie bitte die Konfiguration des verwendeten SMTP-Servers. Einige SMTP-Server können z.B. so konfiguriert sein, dass nur bestimmte Absender-Domains zugelassen werden. Bei abweichenden Absender-Domains verweigert der SMTP-Server dann den Versand mit einer Fehlersituation. 
+ 
+ 
+
+Einstellungen für die Verwendung eines Gmail Email-Servers:
+```bash
+ smtp.gmail.com  
+ Auth: true  
+ security: ssl  
+ Port: 465
+```
