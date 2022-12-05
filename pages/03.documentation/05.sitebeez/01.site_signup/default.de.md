@@ -133,3 +133,9 @@ Das Anmelde-Formular kann über folgende URL direkt geöffnet werden:
 Um eine Email-Adresse zu übergeben, diese als Parameter `email` wie folgt an die URL hängen:
 
     <server-url>mailhive.php?m=mb_newsletter&ma=signup&email=test@test.com
+
+Es können auch eine oder mehrere Ids von zuvor angelegten Themenbereichen übergeben werden, so dass die Email-Adresse automatisch den Themenbereich zugeordnet werden können:
+
+    <server-url>mailhive.php?m=mb_newsletter&ma=signup&email=test@test.com&topics=3,9
+
+Ein typischer Anwendungsfall: Nach Registrierung wird dem Empfänger ein bestimmter Inhalt per Email geschickt. Hierzu in der Liste nach dem gewünschten Themenbereich segmentieren.

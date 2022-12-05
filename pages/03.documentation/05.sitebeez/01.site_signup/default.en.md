@@ -137,3 +137,8 @@ You can access the sign-up form directly through following URL:
 You can prefill an email address by adding the parameter `email` like in the following example:
 
     <server-url>mailhive.php?m=mb_newsletter&ma=signup&email=test@test.com
+
+You can set one or more topics, the new contact will automatically get assigned to these.
+
+    <server-url>mailhive.php?m=mb_newsletter&ma=signup&email=test@test.com&topics=3,9
+
