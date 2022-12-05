@@ -75,12 +75,14 @@ Als Standard-Einstellung nutzt MailBeez die Email Funktion des Shop Systems. Som
 Mit MailBeez.Email können wir allen MailBeez Usern den zuverlässigen Versand von MailBeez Emails anbieten
 
  
-| Vorteile                                     | Nachteile 
-|----------------------------------------------|----------------------------------------------
-| Versand mit höchsten Zustellraten            | SPF und DKIM DNS-Konfiguration erforderlich - wir helfen natürlich!
-| Whitelisting bei allen gängigen Empfängern   | zusätzliche Kosten, welche aber typisch **durch verbesserte Zustell-Raten gedeckt werden**     
-| Keine Drosselung erforderlich                |  |
-| Kein Problem mit Spam-Listen, Blacklist etc. |  |
+| Vorteile                                                           | Nachteile 
+|--------------------------------------------------------------------|----------------------------------------------
+| Versand mit höchsten Zustellraten                                  | SPF und DKIM DNS-Konfiguration erforderlich - wir helfen natürlich!
+| Whitelisting bei allen gängigen Empfängern                         | zusätzliche Kosten, welche aber typisch **durch verbesserte Zustell-Raten gedeckt werden**     
+| Aktives Monitoring und Management zur Optimierung der Zustellraten |  |
+| Automatische Verarbeitung von Bounces                              |  |
+| Keine Drosselung erforderlich                                      |  |
+| Kein Problem mit Spam-Listen, Blacklist etc.                       |  |
 
     
 
