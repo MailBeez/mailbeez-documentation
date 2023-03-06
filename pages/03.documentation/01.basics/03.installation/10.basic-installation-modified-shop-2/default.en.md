@@ -67,7 +67,7 @@ Using the matching integration pack MailBeez will integrate itself seamlessly in
 <https://mailbeez-support.com/cloudfiles/modified-shop_2.0.7.0-r14473-delta.zip>
 
 #### Modified-Shop V2.0.7.2+ PHP8.1
-<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.7.2-r14622-delta>
+<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.7.2-r14622-delta.zip>
 
 
 ##Installation
