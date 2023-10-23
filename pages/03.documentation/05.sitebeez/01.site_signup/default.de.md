@@ -70,7 +70,7 @@ Den Integrations-Code finden Sie unter `MailBeez > Konfiguration > SiteBeez` - d
 In Gambio kann der Code unter `Shopeinstellungen > SEO > Trackingcode` eingefügt werden - es folgt eine Plugin-basierte Integration.
 
 
-### CSS 
+### CSS
 
 Die Position und Darstellung des Buttons kann über CSS anpasst werden. Der CSS Code muss in das Template des Shops eingefügt werden.
 
@@ -90,7 +90,7 @@ Mit folgendem CSS Code kann der Button unten links angezeigt werden.
     div.stbz_container {
         left: 100px !important;
         right: inherit !important;
-        bottom: 100px !important;    
+        bottom: 100px !important;
     }
 
 **Farbe des Buttons - noch nicht geklickt**
@@ -99,7 +99,7 @@ Mit folgendem CSS Code kann der Button unten links angezeigt werden.
         background-color: #ff0000 !important;
     }
 
-    
+
 **Farbe des Buttons - geklickt**
 
     .stbz_button.stbz_displayed {
@@ -139,3 +139,44 @@ Es können auch eine oder mehrere Ids von zuvor angelegten Themenbereichen über
     <server-url>mailhive.php?m=mb_newsletter&ma=signup&email=test@test.com&topics=3,9
 
 Ein typischer Anwendungsfall: Nach Registrierung wird dem Empfänger ein bestimmter Inhalt per Email geschickt. Hierzu in der Liste nach dem gewünschten Themenbereich segmentieren.
+
+
+## Anpassungen
+
+>>>>> Dies ist aktuell nicht in der GambioCloud möglich.
+
+
+Folgende Schritte gelten für alle Dialoge unterhalb
+
+`ext/mailhive/mailbeez/mb_newsletter/views`
+
+
+### Anpassung der Dialoge
+
+Alle Dialoge sind als Views in Smarty Templates hinterlegt, zur Anpassung des Anmelde-Dialogs die Datei
+
+`ext/mailhive/mailbeez/mb_newsletter/views/signup/templates/default_signup.tpl.html`
+
+nach
+
+`ext/mailhive/mailbeez/mb_newsletter/views/signup/templates/signup.tpl.html` (also ohne "default_")
+
+kopieren und anpassen.
+
+
+### Anpassung der Text-Elemente und Übersetzungen
+
+in den Dialogen wird über die Zeile
+
+`{config_load file="$language.conf" section="signup"}`
+
+die jeweils passende Sprach-Datei aus
+
+`ext/mailhive/mailbeez/mb_newsletter/views/signup/languages/`
+
+geladen.
+
+Mit einer Änderung auf `{config_load file="$language.myconf" section="signup"}` (also `myconf` statt `conf`)
+
+wird eine eigene Sprachdatei wie `german.myconf` geladen.
+
