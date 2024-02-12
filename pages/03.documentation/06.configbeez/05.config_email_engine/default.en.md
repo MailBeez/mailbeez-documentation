@@ -53,11 +53,11 @@ You can choose, which delivery engine MailBeez should use to send out the genera
 
 With the default setting MailBeez is utilizing the email function of your shop system to send out emails.
 
-| Advantage                              | Disadvantage 
+| Advantage                              | Disadvantage
 |----------------------------------------|----------------------------------------------
-| no configuration necessary             | check for email limit of your mail server     
-| no additional costs                    | risk of spam rating on your mail server         
-|                                        | delivery rates are depending on your mail server, typically less than 50%         
+| no configuration necessary             | check for email limit of your mail server
+| no additional costs                    | risk of spam rating on your mail server
+|                                        | delivery rates are depending on your mail server, typically less than 50%
 
 
 
@@ -65,13 +65,15 @@ With the default setting MailBeez is utilizing the email function of your shop s
 All MailBeez User are eligible to sent their Emails through MailBeez.Email servers (at addtional costs)
 
 
- 
-| Advantage                                                   | Disadvantage 
+
+| Advantage                                                   | Disadvantage
 |-------------------------------------------------------------|----------------------------------------------
 | bypass spam filters thanks to server certificates           | SPF and DKIM configuration required - we are happy to assist!
-| Whitelisting all relevante recipients                       | additional costs, **typically covered by increased delivery rates**    
+| Whitelisting all relevante recipients                       | additional costs, **typically covered by increased delivery rates**
 | No throttling required                                      |  |
 | You don't have to worry about blacklists, spam ratings etc. |  |
+| Gmail compliant DMAR authentication                         |  |
+| Gmail compliant header                                      |  |
 
 
 
@@ -79,19 +81,19 @@ All MailBeez User are eligible to sent their Emails through MailBeez.Email serve
 
 This option allows you to configure any SMTP server.
 
-| Advantage                                    | Disadvantage 
+| Advantage                                    | Disadvantage
 |---------------------------------------------|----------------------------------------------
 | any STMP server can be configured           | configuration efforts
-| support for  DKIM                      | risk of spam rating on your mail server    
+| support for  DKIM                      | risk of spam rating on your mail server
 | no additional costs                   | delivery rates are depending on your mail server, typically less than 50%  |
-
+| Gmail compliant header                                      |  |
 
 
 Settings for using Gmail Email-Servers:
 ```bash
- smtp.gmail.com  
- Auth: true  
- security: ssl  
+ smtp.gmail.com
+ Auth: true
+ security: ssl
  Port: 465
 ```
 
@@ -100,7 +102,7 @@ Settings for using Gmail Email-Servers:
 
 ### Error Sending Emails <a id="error"></a>
 
-In case the SMTP server throws an error when trying to send an email, this email will be marked with `message_id=-1`. 
+In case the SMTP server throws an error when trying to send an email, this email will be marked with `message_id=-1`.
 
 The system status overview will tell you, how many errors have occurred.
 

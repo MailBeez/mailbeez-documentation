@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: modified-shop 2.x
+title: modified-shop 2.x/3.x
 slug: basic-installation-modified-shop-2
 date: 12-09-2010
 published: true
@@ -38,22 +38,28 @@ metadata:
 
 ##Integrations-Pakete
 
-Mit dem passenden Integrations-Paket fügt sich das MailBeez System unter Nutzung des Autoinclude Modulsystems nahtlos in Ihr Modified-Shop 2.0 ein.
+Mit dem passenden Integrations-Paket fügt sich das MailBeez System unter Nutzung des Autoinclude Modulsystems nahtlos in Ihr Modified-Shop 2.0/3.0 ein.
 
+### Modified-Shop V3
+####Modified-Shop V3.0.2 PHP8.2
+<https://mailbeez-support.com/cloudfiles/modified-shop_3.0.2-r15701_delta.zip>
+
+
+### Modified-Shop V2
 ####Modified-Shop V2.0.0
-<https://mailbeez-support.com/cloudfiles/modified-shop-2.00r6510-delta.zip> 
+<https://mailbeez-support.com/cloudfiles/modified-shop-2.00r6510-delta.zip>
 
 ####Modified-Shop V2.0.1
-<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.1.0-r10403-delta.zip> 
+<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.1.0-r10403-delta.zip>
 
 ####Modified-Shop V2.0.2.1
-<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.2.1-r10607-delta.zip> 
+<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.2.1-r10607-delta.zip>
 
 ####Modified-Shop V2.0.2.2
-<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.2.2-r10690-delta.zip> 
+<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.2.2-r10690-delta.zip>
 
 ####Modified-Shop V2.0.3.0
-<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.3.0-r10907-delta.zip> 
+<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.3.0-r10907-delta.zip>
 
 #### Modified-Shop V2.0.4.2
 <https://mailbeez-support.com/cloudfiles/modified-shop_2.0.4.2-r11374-delta.zip>
@@ -80,7 +86,7 @@ Folgende Dateien von Modified-Shop wurden geringfügig angepasst:
     /products_reviews_write.php             // Auto-login für Produktbewertungen
     /inc/csrf_token.inc.php                 // Integration mit CSFR-Schutz
     /inc/xtc_update_whos_online.inc.php     // Ausschluss von mailhive.php Aufrufen
-    
+
 Die Integrations-Pakete vor V2.0.3.0 erfordern eine kleine Anpassung an:
 
     /admin/includes/column_left.php         // Menue-Punkt - nur vor V2.0.3.0
