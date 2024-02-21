@@ -70,17 +70,17 @@ For these simple reasons, thousands of companies and brands around the world now
 You love the way MailBeez automates your eCommerce email marketing, but you also like to use MailChimp for occasional newsletters, and dig the way it makes designing emails so simple, **removes any potential for email blacklisting**, and importantly makes sure each email presents itself perfectly in your customer’s inbox. Combine these two things and you have our new MailChimp Connector – MailBeez intelligence, MailChimp design and sending security.
 
 
->>>>>MailChimp is great, but the system comes with a number of headaches like limited number of personalization content fields.  
- Unless you really like to use MailChimp **we recommend** to [configure Newsletter2Go as your Email-Engine](/documentation/configbeez/config_email_engine). You will acchieve comparable delivery-rates but without any limitations.
+>>>>>MailChimp is great, but the system comes with a number of headaches like limited number of personalization content fields.
+ Unless you really like to use MailChimp **we recommend** to [configure MailBeez.Email as your Email-Engine](/documentation/configbeez/config_email_engine). You will acchieve comparable delivery-rates but without any limitations.
 
 ##Advantages
 
-**DELIVERY!** Improve your delivery-rate by using MailChimps Email System  
- **STAY IN SYNC!** on both sidestrue 2-way synchronisation keeps information up-to-date  
+**DELIVERY!** Improve your delivery-rate by using MailChimps Email System
+ **STAY IN SYNC!** on both sidestrue 2-way synchronisation keeps information up-to-date
  **AUTOMATIC!** No extra efforts once set up and configured the integration will run on autopilot
 
-Developed in close cooperation with MailChimp: reviewed and approved!  
- New: Works also with lists larger than 15.000 subscribers thanks to fast delta-sync  
+Developed in close cooperation with MailChimp: reviewed and approved!
+ New: Works also with lists larger than 15.000 subscribers thanks to fast delta-sync
  Easy installation: Wizard based, with simulation capabilities
 
 
@@ -96,5 +96,4 @@ The MailChimp Integration works with all MailChimp-ready MailBeez Premium Module
     </li>
     {% endfor %}
 </ul>
-        
-       
+

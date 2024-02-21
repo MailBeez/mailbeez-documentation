@@ -63,7 +63,7 @@ metadata:
 ![](mc_connector_badge.png?resize=380,328)
 </div>
 
-Wollen Sie MailBeez nutzen, aber die intelligent personalisierten Emails über Ihren MailChimp account versenden?  
+Wollen Sie MailBeez nutzen, aber die intelligent personalisierten Emails über Ihren MailChimp account versenden?
  Mit unserer offizielle MailChimp Integration ist dies möglich. (Die Integration wurde in enger Zusammenarbeit mit MailChimp entwickelt)
 
 
@@ -73,7 +73,7 @@ Wenn Sie ein zu MailBeez kompatibles Shop-System nutzen, aber noch nicht wissen,
 
 **Hmm, klingt gut, und MailChimp?**
 
-Falls Sie es noch nicht wissen: MailChimp ist ein hervorragendes Newsletter-System, mit dem Sie schnell und einfach gelungene Newsletter erstellen und versenden können. Die zertifizierten Server sorgen dafür, dass die Newsletter auch in die Inbox der Empfänger landen.  
+Falls Sie es noch nicht wissen: MailChimp ist ein hervorragendes Newsletter-System, mit dem Sie schnell und einfach gelungene Newsletter erstellen und versenden können. Die zertifizierten Server sorgen dafür, dass die Newsletter auch in die Inbox der Empfänger landen.
  Aus diesem einfachen Grund verlassen sich tausende von Unternehmen weltweit auf das MailChimp System, um ihre Newsletter zu versenden.
 
 
@@ -81,17 +81,17 @@ Falls Sie es noch nicht wissen: MailChimp ist ein hervorragendes Newsletter-Syst
 
 Sie wollen die intelligente, integrierte Personalisierung von MailBeez nutzen, aber sich auf die Versende-Qualität von MailChip verlassen? Dann ist diese Integration genau die richtige Lösung: MailBeez generiert - MailChmip versendet.
 
->>>>>MailChimp ist toll, aber das System bereitet einige Kopfschmerzen z.B. aufgrund der begrenzten Anzahl von Personalisierungs-Feldern.  
- Wenn Sie nicht unbedingt über MailChimp versenden wollen, dann empfehlen wir, [Newsletter2Go als Email-System](/dokumentation/configbeez/config_email_engine) zu konfigurieren. Sie werden vergleichbare Zustellraten erreichen, aber ohne die Begrenzungen von MailChimp.
+>>>>>MailChimp ist toll, aber das System bereitet einige Kopfschmerzen z.B. aufgrund der begrenzten Anzahl von Personalisierungs-Feldern.
+ Wenn Sie nicht unbedingt über MailChimp versenden wollen, dann empfehlen wir, [MailBeez.Email](/dokumentation/configbeez/config_email_engine) zu konfigurieren. Sie werden vergleichbare Zustellraten erreichen, aber ohne die Begrenzungen von MailChimp.
 
 ##Vorteile
 
-**ZUSTELLRATEN!** optimieren Sie die Zustellraten durch den Versand über die Server von MailChimp  
- **DATEN-ABGLEICH!** durch eine echte 2-Wege Synkronisierung werden die Subscriber-Daten von MailChimp und vom Shop abgeglichen  
+**ZUSTELLRATEN!** optimieren Sie die Zustellraten durch den Versand über die Server von MailChimp
+ **DATEN-ABGLEICH!** durch eine echte 2-Wege Synkronisierung werden die Subscriber-Daten von MailChimp und vom Shop abgeglichen
  **AUTOMATISCH!** volle Automatisierung sobald das System eingerichtet und auf Auto-Pilot gesetzt ist.
- 
-Enwickelt in enger Zusammenarbeit mit MailChimp: geprüft und abgenommen!  
- Neu: auch Listen mit über 15.000 Subscribern können Dank schneller Delta-Technik abgeglichen werden   
+
+Enwickelt in enger Zusammenarbeit mit MailChimp: geprüft und abgenommen!
+ Neu: auch Listen mit über 15.000 Subscribern können Dank schneller Delta-Technik abgeglichen werden
  Einfache Installation: Dank Assistent und Simulations-Unterstützung
 
 
