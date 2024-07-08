@@ -45,6 +45,8 @@ Die mit <b class='label label-integrated'></b> markierten Shop-Systeme haben **M
 Falls Ihr Shop-System nicht aufgeführt ist, aber auf osCommerce basiert, werden Sie die besten Chancen mit der Grund Installation für osCommerce haben.
 
 
->>>>> **NEU: [MailBeez.io](https://www.mailbeez.io)   - MailBeez als Cloud-Service**  
- Für Shopware [weiter lesen](https://www.mailbeez.io/de/shopware)  
- API-Lösung [weiter lesen](https://www.mailbeez.io/de/api)  
+>>>>> **NEU: [MailBeez.io](https://www.mailbeez.io)   - MailBeez als Cloud-Service**
+ Für Shopware 5/6 [weiter lesen](https://www.mailbeez.io/de/shopware)
+ Für JTL 5 [weiter lesen](https://www.mailbeez.io/de/jtl-shop)
+ Für Oxid eSales [weiter lesen](https://www.mailbeez.io/de/OXID-eSales)
+ API-Lösung [weiter lesen](https://www.mailbeez.io/de/api)

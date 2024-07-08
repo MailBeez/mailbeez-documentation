@@ -54,14 +54,14 @@ You need to be able to upload new files to your TrueLoaded shopping cart system 
 [plugin:content-inject](/content_blocks/download_installer)
 
 
-In the mailbeez_installer-v3.xx fileset, navigate to catalog > admin, then copy the following file to your TrueLoaded admin-directory.
+In the mailbeez_installer-v4.xx fileset, navigate to catalog > admin, then copy the following file to your TrueLoaded admin-directory.
 
 ```bash
 mailbeez.php
 ```
 
 
-In the mailbeez_installer-v3.xx fileset, navigate to the catalog folder, then copy the following file and folder to your Trueloaded root directory (where your index.php is located).
+In the mailbeez_installer-v4.xx fileset, navigate to the catalog folder, then copy the following file and folder to your Trueloaded root directory (where your index.php is located).
 
 ```bash
 mailhive (folder)
@@ -94,7 +94,7 @@ add a new line with the following text:
  tep_admin_files_boxes('mailbeez.php', 'MailBeez') .
  // - mailbeez
 ```
- 
+
 
 this will add the menu-entry “MailBeez” to your Tools-Box.
 

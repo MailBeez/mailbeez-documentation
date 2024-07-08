@@ -40,9 +40,6 @@ metadata:
 #  last_modified: true
 ---
 
->>>>> BETA: Die vorliegende Version ist eine erste BETA Ausgabe, wurde aber mit grosser Sorgfalt entwickelt und getestet. Es fehlen noch wichtige Funktionen wie z.B. die Design-Anpassung und Bearbeitung der Texte.
-
-
 Mit dem Newsletter Widget können Sie Email-Adressen von Interessenten, aber auch Einwilligungen von bereits bestehenden Kunden erfassen.
 
 Das Widget ist nahtlos mit dem [MailBeez Newsletter Modul](/dokumentation/mailbeez/newsletter) integriert, so dass Sie dort die Emails zum Doppel-Optin und Willkommens-Email - ggf. mit Gutschein - bearbeiten können. Falls die entsprechenden Untermodule nicht angezeigt werden, bitte in der Konfiguration des MailBeez Newsletter Modules die Option `Optin / Bestätigungs-Module aktivieren` auf `True` setzen.
@@ -67,14 +64,14 @@ Die Integration erfolgt über asynchronen, leichtgewichtigen JavaScript-Code und
 
 Den Integrations-Code finden Sie unter `MailBeez > Konfiguration > SiteBeez` - dort den Code kopieren und im Zielsystem einfügen.
 
-In Gambio kann der Code unter `Shopeinstellungen > SEO > Trackingcode` eingefügt werden - es folgt eine Plugin-basierte Integration.
+In Gambio kann der Code unter `Shopeinstellungen > SEO > Trackingcode > Tracking-Code (Body)` eingefügt werden - danach den Seiten-Cache leeren.
 
 
 ### CSS
 
 Die Position und Darstellung des Buttons kann über CSS anpasst werden. Der CSS Code muss in das Template des Shops eingefügt werden.
 
-In Gambio kann der CSS Code über den Style Editor eingefügt werden. Hierzu `Darstellung > Template Einstellunge > Style Edit "Theme bearbeiten"` aufrufen und dann oben rechts das erweiterte Menü anlicken:
+In Gambio kann der CSS Code über den Style Editor eingefügt werden. Hierzu `Darstellung > Template Einstellungen > Style Edit "Theme bearbeiten"` aufrufen und dann oben rechts das erweiterte Menü anlicken:
 
 ![CSS bearbeiten](_gx_css_edit.png)
 
@@ -108,7 +105,7 @@ Mit folgendem CSS Code kann der Button unten links angezeigt werden.
 
 ## Eigener Button
 
-In der vorliegenden Beta-Version steht der gezeigte Button im Gambio-Design zur Verfügung:
+In der Standard-Konfiguration wird der Button im Gambio-Design eingebunden:
 
      var w = "button_float";
 

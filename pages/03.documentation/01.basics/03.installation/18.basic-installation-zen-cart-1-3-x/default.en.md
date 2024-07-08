@@ -52,7 +52,7 @@ MailBeez maintains its own tables – the shopping cart's existing tables remain
 [plugin:content-inject](/content_blocks/download_installer)
 
 
-In the mailbeez_installer-v3.xx fileset, navigate to catalog > admin, then copy the following file to your Zen-Cart admin-directory.
+In the mailbeez_installer-v4.xx fileset, navigate to catalog > admin, then copy the following file to your Zen-Cart admin-directory.
 
 ```bash
  mailbeez.php
@@ -60,7 +60,7 @@ In the mailbeez_installer-v3.xx fileset, navigate to catalog > admin, then copy 
 ```
 
 
-In the mailbeez_installer-v3.xx fileset, navigate to the catalog folder, then copy the following file and folder to your root Zen Cart directory (where your index.php is located).
+In the mailbeez_installer-v4.xx fileset, navigate to the catalog folder, then copy the following file and folder to your root Zen Cart directory (where your index.php is located).
 
 ```bash
 mailhive (folder)
@@ -68,7 +68,7 @@ mailhive.php
 
 ```
 
-In the mailbeez_installer-v3.xx fileset, navigate to **extras\_zencart > zencart\_1.3.x > admin**, then copy/merge its contents into your Zen Cart admin-directory.
+In the mailbeez_installer-v4.xx fileset, navigate to **extras\_zencart > zencart\_1.3.x > admin**, then copy/merge its contents into your Zen Cart admin-directory.
 
 
 ## Step 2 – install MailBeez
@@ -84,7 +84,7 @@ Please add following condition
 
     # Don't rewrite MailBeez directory
     RewriteCond %{REQUEST_URI} !^/mailhive [NC]
-       
+
 as a new line above
 
     # Handle all other URIs using Zen Cart (its index.php)
@@ -105,7 +105,7 @@ If would like MailBeez to use its own template system to generate MailBeez email
 
 `$email_html = zen_build_html_email_from_template($module, $block);`
 
-1. And change it as described on:  
+1. And change it as described on:
 <http://www.zen-cart.com/showthread.php?158085-Mailbeez-After-Sales-Modules&p=1170912#post1170912>
 
 This code change tells Zen Cart to check if the content contains a valid html tag, and if not, applies the Zen Cart template system.

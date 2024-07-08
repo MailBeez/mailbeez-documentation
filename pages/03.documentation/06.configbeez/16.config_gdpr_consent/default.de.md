@@ -61,6 +61,10 @@ Unter `MailBeez > Filter & Hilfsmodule > DSGVO Einwilligungs-Prüfung` können S
 
 ## Integration der Abfrage zur Einwilligung
 
+### Gambio GX4
+
+In Gambio GX4 ist die Abfrage bereits vorintegriert.
+
 ### Gambio GX3
 
 #### Installation des Overloads
@@ -125,7 +129,7 @@ Sie können mit Hilfe des Platzhalters
 der URL zur Konfigurations-Seite kann wie folgt personalisiert im PHP Code generiert werden:
 
     include_once(<YOUR_PATH> . 'mailhive/configbeez/config_gdpr_consent/includes/inc.gdpr_consent.php');
-    
+
     $template_cfg = 'myPage'; // /mailhive/configbeez/config_gdpr_consent/views/consent/templates/myPage.tpl.html
     $tmpl_vars = array('mySetting' => 'Hey'); // can be used as {$mySetting} in myPage
     $set_consent_type_id = 1; // with visiting the url this consent is automatically given and stored - use with care!

@@ -20,7 +20,7 @@ taxonomy:
 
 ---
 
-Angeregt durch eine [Facebook-Diskussion](https://www.facebook.com/groups/gambioshop/posts/6397830620281588/?comment_id=6411061695625147&notif_id=1678870748497288&notif_t=group_comment_reply) hier eine kurze Beschreibung, wie Shopbetreiber die Bitte um Bewertung und damit Bewertungs-Ergebnisse optimieren können.  
+Angeregt durch eine [Facebook-Diskussion](https://www.facebook.com/groups/gambioshop/posts/6397830620281588/?comment_id=6411061695625147&notif_id=1678870748497288&notif_t=group_comment_reply) hier eine kurze Beschreibung, wie Shopbetreiber die Bitte um Bewertung und damit Bewertungs-Ergebnisse optimieren können.
  Dieser Ablauf lässt sich auf Shop- und Produkt-Bewertungen übertragen.
 
 
@@ -33,13 +33,14 @@ Mit dem Modul [DSGVO Einwilligung](/dokumentation/configbeez/config_gdpr_consent
 #### 2. Automatisierte Mail mit Bitte um Bewertung
 
 In Abhängigkeit vom Bestell-Status - somit volle Kontrolle, wann die Email versendet wird - und der konfigurierten Einwilligung kann MailBeez automatisiert z.B. 5 Tage nach Status "versendet" eine Mail mit Bitte um Bewertung bitten.
-MailBeez hat bereits eine Auswahl an Automatisierungs-Modulen für die gängigsten [Shopbewertungs-Portale](/uber/integrationen). 
+MailBeez hat bereits eine Auswahl an Automatisierungs-Modulen für die gängigsten [Shopbewertungs-Portale](/uber/integrationen).
 
 
 #### 3. Anpassung der Einladungs-Email
 
 Die Email zur Einladung kann im visuellen Editor beliebig gestaltet werden (Ausnahme: Trustpilot). Über ein Inhalts-Element "2 Spalten" können 2 Buttons eingefügt werden:
 ![editor_full.de.png](editor_full.de.png?lightbox=true&resize=600)
+
 
 (Der untere Hinweis auf ShopVote kann natürlich entfernt werden).
 

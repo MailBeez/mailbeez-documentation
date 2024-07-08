@@ -1,11 +1,11 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Zen Cart 1.5.x
-slug: basic-installation-zen-cart-1-5-x
+title: Zen Cart 2.x
+slug: basic-installation-zen-cart-2-x
 # menu: Zen Cart 1.5.x
-date: 01-02-2012
+date: 17-06-2024
 published: true
-publish_date: 01-02-2012
+publish_date: 17-06-2024
 # unpublish_date: 01-02-2012
 template: docs
 # theme: false
@@ -36,7 +36,7 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez works with **Zen Cart v1.5.x** running on PHP 5.3+
+MailBeez works with **Zen Cart v2.x** running on PHP 8+
 
 
 The installation is straight forward and can be done in a couple of minutes by following these steps:
@@ -68,7 +68,7 @@ mailhive.php
 
 ```
 
-In the mailbeez_installer-v4.xx fileset, navigate to **extra_files > extra_zencart > zencart_1.5.x > admin**, then copy/merge its contents into your Zen Cart admin-directory.
+In the mailbeez_installer-v4.xx fileset, navigate to **extra_files > extra_zencart > zencart_2.x > admin**, then copy/merge its contents into your Zen Cart admin-directory.
 
 ## Step 2 – install MailBeez
 
