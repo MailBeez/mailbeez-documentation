@@ -9,7 +9,7 @@ slug: config_bouncehive_advanced
 routes:
     aliases:
         - /dokumentation/installation/config/config_bouncehive_advanced
-        
+
 visible: true
 template: docs
 taxonomy:
@@ -30,7 +30,7 @@ module:
         - comp_digi
         - comp_zencart
         - comp_xtc
-        - comp_xtcm2        
+        - comp_xtcm2
         - comp_gambio
     thumbnail: 'http://www.mailbeez.com/wp-content/uploads/downloads/thumbnails/2012/05/icon_321.png'
     pro: pro
@@ -46,7 +46,7 @@ author:
 ---
 
  
->>>>>Configure [Newsletter2Go as Email Engine](dokumentation/configbeez/config_email_engine) to automatically process all bounces
+>>>>>Configure [MailBeez.Email as Email Engine](/documentation/configbeez/config_email_engine) to automatically process all bounces
 
 ## Requirements
 
@@ -73,5 +73,5 @@ After a configured number of soft-bounces, the next soft-bounce will be converte
 **Transient Bounces:** A transient bounce occurs when a particular message can not yet be delivered, but the server is still trying. MailBeez will not do anything with these Bounces as they are informative in nature.
 
 The bounces are stored using the customers’ email and the customers’ id. Both must match to block a sending, so when a customer has changed the email address to a valid email, the bounce-block for the old email will not affect the new sendings. Very cool!
-    
+  
   

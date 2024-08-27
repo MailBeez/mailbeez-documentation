@@ -73,7 +73,9 @@ Als Standard-Einstellung nutzt MailBeez die Email Funktion des Shop Systems. Som
 
 
 ###MailBeez.Email (empfohlen)
-Mit MailBeez.Email können wir allen MailBeez Usern den zuverlässigen Versand von MailBeez Emails anbieten
+Mit [MailBeez.Email](https://mailbeez.email) können wir allen MailBeez Usern den zuverlässigen Versand von MailBeez Emails anbieten.
+
+Mehr dazu auf [MailBeez.Email](https://mailbeez.email).
 
 
 | Vorteile                                                           | Nachteile

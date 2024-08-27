@@ -62,9 +62,9 @@ With the default setting MailBeez is utilizing the email function of your shop s
 
 
 ###MailBeez.Email (recommended)
-All MailBeez User are eligible to sent their Emails through MailBeez.Email servers (at addtional costs)
+All MailBeez User are eligible to sent their Emails through [MailBeez.Email](https://mailbeez.email) servers (at addtional costs)
 
-
+Read more on [MailBeez.Email](https://mailbeez.email).
 
 | Advantage                                                   | Disadvantage
 |-------------------------------------------------------------|----------------------------------------------

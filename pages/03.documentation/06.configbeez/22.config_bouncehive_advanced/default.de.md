@@ -59,7 +59,7 @@ metadata:
 Genervt von Bounce-Emails, auch bekannt als Rückläufer? Neben der Extra-Arbeit besteht das Risiko, als Spam-Versender eingestuft zu werden, wenn viele der Kunden-Adressen ungültig geworden sind. Mit diesem Modul werden die Bounce-Emails automatisch verarbeitet und sichergestellt, dass keine weiteren Emails an ungültige Email-Adressen verschickt werden.
 
 
->>>>>Konfigurieren Sie [Newsletter2Go als Email-System](dokumentation/configbeez/config_email_engine) - dann werden die Bounces automatisch verarbeitet.
+>>>>>Konfigurieren Sie [MailBeez.Email als Email-System](/dokumentation/configbeez/config_email_engine) - dann werden die Bounces automatisch verarbeitet.
 
 
 ## Voraussetzungen
@@ -80,7 +80,7 @@ Die nahtlos in MailBeez Integrierte BounceHive Rückläufer-Verarbeitung verarbe
 Die eingelesenen Bounces werden zusammen mit der Email Adresse und Kundennummer des Kunden gespeichert. Nur wenn beide übereinstimmen, wird der Versand blockiert. Falls der Kunde also auf eine gültige Email Adresse wechselt, werden weiterhin Emails verschickt werden können.
 
 ## Konfiguration
- 
+
 Bitte ein separates Email-Konto für die BounceHive Rückläufer-Verarbeitung einrichten, da die Emails in der Inbox dieses Accounts automatisch verarbeitet und in Unter-Ordner einsortiert werden.
 
 Durch die Angabe eines gesonderten “Senders” beim Email-Versand werden die Bounce-Emails an die eigens eingerichtete Bounce-Adresse gehen und nicht an die “Von”-Email Adresse. Wenn Kunden also auf Emails antworten, werden die Antworten wie gewohnt an die “Von”-Email Adresse gehen, während Bounce Emails an die “Sender” Email Adresse geschickt werden.
@@ -91,13 +91,13 @@ Die Bounce Verarbeitung kann manuell MailBeez über das Modul MailBeez Module > 
 
 Falls Sie historischen Bounce Emails gesammelt haben, können Sie diese von der BounceHive Rückläufer-Verarbeitung nachträglich analysieren lassen. Dazu bitte mit Hilfe eines Email Programmes (dort den Bounce Email-Account anlegen) die gesammelten Bounce Emails in die Inbox des Bounce Email-Accounts verschieben. Bei der nächsten Ausführung werden diese Emails dann verarbeitet.
 
-**Anforderungen:**  
+**Anforderungen:**
  Die BounceHive Rückläufer-Verarbeitung erfordert, dass MailBeez die MailBeez-eigene SMTP Email Engine verwendet – dies kann unter MailBeez > Konfiguration > Email System konfiguriert werden. Auch muss der Server zulassen, dass PHP Verbindung zu einem IMAP Server aufnehmen kann, bitte fragen Sie bei Ihrem Hoster nach, ob es Einschränkungen gibt, besonders wenn Sie planen, GMail einzusetzen – einige Hoster blockieren den GMail spezifischen Port.
 
 Die Verwendung eines GMail Email Accounts kann sich schwierig gestalten, folgend die richtigen Einstellungen:
 
-**Einstellungen GMail Accounts:**  
- active IMAP usage in the Gmail account  
- server: imap.gmail.com  
- port: 993  
+**Einstellungen GMail Accounts:**
+ active IMAP usage in the Gmail account
+ server: imap.gmail.com
+ port: 993
  Mailserver Service Option: SSL (if you test local, your local environment must support SSL!)
