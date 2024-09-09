@@ -10,14 +10,14 @@ MailBeez wurde von Grund auf so entwickelt, dass nur wenige Voraussetzungen für
 
 ### Shop-System
 
-MailBeez ist derzeit für eine Reihe von Shop-Systemen verfügbar, welche auf osCommerce bzw. xt:commerce basieren. Auf der Seite 
+MailBeez ist derzeit für eine Reihe von Shop-Systemen verfügbar, welche auf osCommerce bzw. xt:commerce basieren. Auf der Seite
 [MailBeez Installation](/dokumentation/installation) finden Sie alle unterstützen Systeme.
 
 
 
 ### PHP Voraussetzungen
 
-Sehr wahrscheinlich läuft Ihr Shop bereits auf einem Server mit PHP 5.4 oder höher - das ist alles, was MailBeez benötigt
+Sehr wahrscheinlich läuft Ihr Shop bereits auf einem Server mit PHP 7.3 oder höher - das ist alles, was MailBeez benötigt
 
 
 
