@@ -44,6 +44,9 @@ Mit dem passenden Integrations-Paket fügt sich das MailBeez System unter Nutzun
 ####Modified-Shop V3.0.2 PHP8.2
 <https://mailbeez-support.com/cloudfiles/modified-shop_3.0.2-r15701_delta.zip>
 
+####Modified-Shop V3.1.0 PHP8.3
+<https://mailbeez-support.com/cloudfiles/modified-shop_3.1.0-r16069_delta.zip>
+
 
 ### Modified-Shop V2
 ####Modified-Shop V2.0.0
