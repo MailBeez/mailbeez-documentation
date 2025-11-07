@@ -64,7 +64,18 @@ Die Integration erfolgt über asynchronen, leichtgewichtigen JavaScript-Code und
 
 Den Integrations-Code finden Sie unter `MailBeez > Konfiguration > SiteBeez` - dort den Code kopieren und im Zielsystem einfügen.
 
-In Gambio kann der Code unter `Shopeinstellungen > SEO > Trackingcode > Tracking-Code (Body)` eingefügt werden - danach den Seiten-Cache leeren.
+### Gambio
+In **Gambio** kann der Code unter `Shopeinstellungen > SEO > Trackingcode > Tracking-Code (Body)` eingefügt werden - danach den Seiten-Cache leeren.
+
+
+### Modified-Shop
+In **Modified-Shop** kann der Code über ein Auto-Include eingebunden werden.
+
+Dazu in `includes/extra/application_bottom/` eine Datei z.B. `20_sitebeez.php` erstellen und den Code in diese Datei kopieren (Ohne `<?php` und `?>` PHP Tags).
+
+
+### Andere Systeme
+Den Code ein geeigneter Stelle in das Template einfügen.
 
 
 ### CSS

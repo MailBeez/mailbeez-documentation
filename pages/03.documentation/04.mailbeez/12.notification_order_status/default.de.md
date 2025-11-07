@@ -48,7 +48,7 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses praktische Module sendet bei Änderung des Bestell-Status auf einen oder mehrere konfigurierbare Status eine Benachrichtigung an den Kunden.
+Dieses praktische Modul sendet bei Änderung des Bestell-Status auf einen oder mehrere konfigurierbare Status eine Benachrichtigung an den Kunden.
 
 Optional kann das Modul nach Versand den Bestell-Status auf einen neuen, wählbaren Status setzen. Ein eventuell vorliegender Kommentar zur Bestellung kann in die Email eingefügt werden.
 
@@ -65,8 +65,8 @@ Anwendungsbeispiele:
 **Vorlagen Variablen**
 
 
-| Vorlage-Variable   | Ausgabe                                 |
-|--------------------|-----------------------------------------|
+| Vorlagen-Variable    | Ausgabe                                 |
+|----------------------|-----------------------------------------|
 | [[$order_date]]      | formatiertes Datum der Bestellung   |
 | [[$status_date]]     | formatiertes Datum des Bestell-Status   |
 | [[$status_date_raw]] | unformatiertes Datum des Bestell-Status |
@@ -75,7 +75,7 @@ Anwendungsbeispiele:
 | [[$comments]]        | Kommentar                               |
 | [[$orders_data]]     | Array mit allen Spalten aus Tabelle orders, z.B. [[$orders_data.delivery_city]] |
 | [[$tracking]]        | Gambio: Formatierte Liste der Links     |
-| [[$trackingData]]     | Gambio: Daten-Array für eigene Smarty Templates ['url', 'service', 'code'] |
+| [[$trackingData]]    | Gambio: Daten-Array für eigene Smarty Templates ['url', 'service', 'code'] |
 
 **Beispiel für status-abhängigen Email-Text**
 
