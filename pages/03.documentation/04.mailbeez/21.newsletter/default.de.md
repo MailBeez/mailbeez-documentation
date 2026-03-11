@@ -60,7 +60,6 @@ Die Standard-Newsletter Funktion von osCommerce, Gambio, ModifiedShop & Zencart 
 
 Mit dem MailBeez Newsletter Profi-Modul wird diese Lücke geschlossen und Shopbetreiber können nun endlich zuverlässig professionelle Newsletter direkt aus dem Shopsystem versenden. Da das MailBeez Newsletter Profi Modul direkt in das Shopsystem eingebettet ist, müssen keine Daten exportiert oder importiert werden. Es kann sofort ein Newsletter an z.B. alle Kunden mit einem aktiven Newsletter-Abo versendet werden.
 
-[plugin:youtube](https://www.youtube.com/watch?v=Azs3fV7MD60)    
 
 
 Das Erstellen von Newslettern wird mit dem MailBeez Newsletter Profi Modul denkbar einfach gemacht: der Visuelle Editor ermöglicht das Verfassen von professionellen Newslettern, welche bestmöglich in den wichtigsten Email-Programmen dargestellt werden. In Kombination mit der [Responsive Vorlagen-Verwaltung](/dokumentation/configbeez/config_tmplmngr) können auch mobil-freundliche Newsletter erstellt werden, welche optimal auf z.B. iPhones dargestellt werden.
@@ -195,19 +194,19 @@ Newsletter können entweder manuell oder automatisiert versendet werden. Pro Auf
 
 Einrichtung eines Cronjobs (z.B. alle 5 Minuten), welches ausschliesslich anstehende Newsletter versendet:
 
- 
+
     wget -O - -q -t 1 <cronurl>\&module=mb_newsletter
 
 
 Stapel-Grösse:
 
- 
+
     100 Emails
 
 
 Einfache Drosselung (Zusatzmodul):
 
- 
+
     3600 Emails pro Stunde
 
 

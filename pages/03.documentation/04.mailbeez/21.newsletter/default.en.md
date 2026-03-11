@@ -60,7 +60,6 @@ Sending an email newsletter from a standard install of any system variant of OSc
 
 As a seamless integrated module, the MailBeez Newsletter Advanced Module has direct access to your customer's newsletter subscription setting. This allows you to send a newsletter campaign to all your subscribed customers without exporting or importing any data!
 
-[plugin:youtube](https://www.youtube.com/watch?v=Azs3fV7MD60)    
 
 
 The process of creating and editing a newsletter is very easy: the intuitive visual editor allows you to create professional newsletters that display in the best possible manner across different email clients. In combination with the [Responsive Template Manager](/documentation/configbeez/config_tmplmngr/) you will also be able to create mobil-friendly responsive newsletters which will look great e.g. on your customers iPhone.
@@ -187,19 +186,19 @@ Newsletter can be sent either manually or automatically. With each run, the send
 
 Set up a cronjob (e.g. all 5 minutes), which exclusively will work on the newsletter modules::
 
- 
+
     wget -O - -q -t 1 <cronurl>\&module=mb_newsletter
 
 
 chunk size:
 
- 
+
     100 emails
 
 
 Simple throttling (additional module):
 
- 
+
     3600 emails per hour
 
 
