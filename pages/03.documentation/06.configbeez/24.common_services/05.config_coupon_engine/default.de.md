@@ -66,7 +66,8 @@ Im Vergleich zu herkömmlichen, gemeinsamen Gutschein-Codes (z.B. "GEBURTSTAG") 
 
 Der Gutschein-Generator generiert personalisierte Gutscheine basierend auf **Vorlagen-Gutscheinen**, welche im jeweiligen Modul zugeordnet werden. Ein **Vorlagen-Gutschein** ist ein "normaler" Gutschein, kennzeichnet sich aber dadurch, dass der Gutschein-**CODE** mit der Zeichenfolgen `template_` beginnen muss.
 
->>>>>>Lassen Sie sich den Ablauf direkt in Ihrem Shop-System von dem Lehrgang zum Anlegen von Vorlagen-Gutscheinen zeigen
+> [!TIP]
+> Lassen Sie sich den Ablauf direkt in Ihrem Shop-System von dem Lehrgang zum Anlegen von Vorlagen-Gutscheinen zeigen
  
 **Beispiel "[Geburtstags-Email mit Gutschein](/dokumentation/mailbeez/coupon_birthday)"**:
 
@@ -98,7 +99,8 @@ In diesem Modul finden Sie einer Reihe von Hilfs-Funktionen zur Verwaltung von G
 **Zuordnung reparieren**: In einigen Fällen fehlt die Zuordnung von Gutscheinen zur den Emails, in denen der Gutschein versendet worden ist. Diese Zuordnung können Sie hiermit reparieren.
 
 
->>>>>**Bitte beachten**: Je Modul kann die Gutschein-Code Länge konfiguriert werden. Lange Codes (z.B. 8 oder 10 Zeichen) lassen sich sehr schnell generieren. Bei kurzen Codes und bereits vielen vorhandenen Gutscheinen muss das System ggf. "lange probieren" bis ein freier Code gefunden werden kann. Dies kann zu einem Abbruch (Time-Out) des Versende-Prozesses führen.
+> [!NOTE]
+> **Bitte beachten**: Je Modul kann die Gutschein-Code Länge konfiguriert werden. Lange Codes (z.B. 8 oder 10 Zeichen) lassen sich sehr schnell generieren. Bei kurzen Codes und bereits vielen vorhandenen Gutscheinen muss das System ggf. "lange probieren" bis ein freier Code gefunden werden kann. Dies kann zu einem Abbruch (Time-Out) des Versende-Prozesses führen.
 
 ## osCommerce Gutschein System Unterstützung
 

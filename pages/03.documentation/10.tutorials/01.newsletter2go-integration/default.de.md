@@ -61,65 +61,65 @@ Folgen Sie hierzu der Installationsanleitung für Ihr Shopsystem.
 
 Die mit <b class='label label-integrated'></b> markierten Shop-Systeme haben **MailBeez bereits vorintegriert**, hier ist die Grundinstallation mit wenigen Klicks erledigt.
 
-[ui-accordion independent=true open=none]
-[ui-accordion-item title="<b class='label label-integrated'></b> Gambio 3.x"]
+[doc-accordion independent=true open=none]
+[doc-accordion-item title="Gambio 3.x (integriert)"]
 Dank der Vorintegration von MailBeez in Gambio 3.x kann das kostenlose Grundsystem mit wenigen Klicks installiert werden. 
 
 Hierzu bitte unter `Module > Modul-Center` die Integration `MailBeez` aktivieren und dann über den neuen Menüpunkt `MailBeez` das Grundsystem installieren.
 
-[/ui-accordion-item]
-[ui-accordion-item title="<b class='label label-integrated'></b> Gambio 2.5+"]
+[/doc-accordion-item]
+[doc-accordion-item title="Gambio 2.5+ (integriert)"]
 
 Dank der Vorintegration von MailBeez in Gambio 2.5+ kann das kostenlose Grundsystem mit wenigen Klicks installiert werden. 
 
 Hierzu bitte unter `Module > Modul-Center` die Integration `MailBeez` aktivieren und dann über den neuen Menüpunkt `MailBeez` das Grundsystem installieren.
 
-[/ui-accordion-item]
-[ui-accordion-item title="<b class='label label-integrated'></b> Gambio 2.3+"]
+[/doc-accordion-item]
+[doc-accordion-item title="Gambio 2.3+ (integriert)"]
 Dank der Vorintegration von MailBeez in Gambio 2.3+ kann das kostenlose Grundsystem mit wenigen Klicks installiert werden. 
 
 Hierzu bitte in der Gambio Administration auf den Menüpunkt `MailBeez` klicken, um das Grundsystem zu installieren
 
-[/ui-accordion-item]
-[ui-accordion-item title="<b class='label label-integrated'></b> Gambiocloud.de"]
+[/doc-accordion-item]
+[doc-accordion-item title="Gambiocloud.de (integriert)"]
 Dank der Vorintegration von MailBeez in [Gambiocloud.de](https://gambiocloud.de) kann das kostenlose Grundsystem mit wenigen Klicks installiert werden. 
 
 Hierzu bitte unter `Module > Modul-Center` die Integration `MailBeez` aktivieren und dann über den neuen Menüpunkt `MailBeez` das Grundsystem installieren.
 
-[/ui-accordion-item]
-[ui-accordion-item title="Gambio 2.x"]
+[/doc-accordion-item]
+[doc-accordion-item title="Gambio 2.x"]
 Bitte der Anleitung zur [Installation von MailBeez auf Gambio 2.x](/dokumentation/installation/basic-installation-gambio-gx-2) folgen.
 
-[/ui-accordion-item]
-[ui-accordion-item title="Gambio 1.x"]
+[/doc-accordion-item]
+[doc-accordion-item title="Gambio 1.x"]
 Bitte der Anleitung zur [Installation von MailBeez auf Gambio 1.x](/dokumentation/installation/basic-installation-gambio) folgen.
 
-[/ui-accordion-item]
-[ui-accordion-item title="Modified-Shop 2.x"]
+[/doc-accordion-item]
+[doc-accordion-item title="Modified-Shop 2.x"]
 Bitte der Anleitung zur [Installation von MailBeez auf Modified-Shop 2.x](/dokumentation/installation/basic-installation-modified-shop-2) mittels des passenden updatesicheren Integrations-Pakets folgen.
 
-[/ui-accordion-item]
-[ui-accordion-item title="Modified-Shop 1.x"]
+[/doc-accordion-item]
+[doc-accordion-item title="Modified-Shop 1.x"]
 Bitte der Anleitung zur [Installation von MailBeez auf Modified-Shop 1.x](/dokumentation/installation/basic-installation-modified-shop) folgen.
 
-[/ui-accordion-item]
-[ui-accordion-item title="<b class='label label-integrated'></b> Zen-Cart-pro.at"]
+[/doc-accordion-item]
+[doc-accordion-item title="Zen-Cart-pro.at (integriert)"]
 Dank der Vorintegration von MailBeez in Zen-Cart-pro.at kann das kostenlose Grundsystem unter `Admin > Tools > MailBeez` per Button-Klick installiert werden.
 
-[/ui-accordion-item]
-[ui-accordion-item title="ZenCart"]
+[/doc-accordion-item]
+[doc-accordion-item title="ZenCart"]
 Bitte der Anleitung zur [Installation von MailBeez auf ZenCart](/dokumentation/installation/basic-installation-zen-cart-1-5-x) folgen.
 
-[/ui-accordion-item]
-[ui-accordion-item title="osCommerce 2.3.x"]
+[/doc-accordion-item]
+[doc-accordion-item title="osCommerce 2.3.x"]
 Bitte der Anleitung zur [Installation von MailBeez auf osCommerce 2.3+](/dokumentation/installation/oscommerce-2-3-x) folgen.
 
-[/ui-accordion-item]
-[ui-accordion-item title="osCommerce 2.2"]
+[/doc-accordion-item]
+[doc-accordion-item title="osCommerce 2.2"]
 Bitte der Anleitung zur [Installation von MailBeez auf osCommerce 2.2](/dokumentation/installation/basic-installation-oscommerce) folgen.
 
-[/ui-accordion-item]
-[/ui-accordion]
+[/doc-accordion-item]
+[/doc-accordion]
 
 ### 2. Verbindung herstellen
 Im MailBeez System unter `MailBeez > Konfiguration > Email System` den Button zur Verbindung mit Newsletter2Go (mindestens Standard-Tarif) anklicken.

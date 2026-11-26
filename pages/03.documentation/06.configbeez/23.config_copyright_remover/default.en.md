@@ -44,7 +44,8 @@ author:
     name: admin
 ---
 
->>>>>>All Pro MailBeez Email are already copryright free
+> [!TIP]
+> All Pro MailBeez Email are already copryright free
 
 
 ## Copyright Free Emails

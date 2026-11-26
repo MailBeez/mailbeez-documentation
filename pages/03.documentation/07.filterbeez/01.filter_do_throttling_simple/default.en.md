@@ -46,7 +46,8 @@ metadata:
 
 **Control Your Email Send Rate**
 
->>>>>>We strongly recommend to [ configure Newsletter2Go as your  Email-Engine](/documentation/configbeez/config_email_engine). Then you don't have to worry about any sending limits.
+> [!TIP]
+> We strongly recommend to [ configure Newsletter2Go as your  Email-Engine](/documentation/configbeez/config_email_engine). Then you don't have to worry about any sending limits.
 
 
 

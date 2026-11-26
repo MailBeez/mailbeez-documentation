@@ -27,4 +27,5 @@ metadata:
 
 Das Untersystem zur Prozess-Kontrolle stellt sicher, dass nur ein Versende-Prozess zur Zeit aktiv sein kann. Andernfalls kann es zu überlappenden Prozessen kommen, welche zum mehrfachen Versand der gleichen Emails führen kann.
 
->>>> Die Grundeinstellungen sollten nur geändert werden, wenn Sie die Auswirkungen verstehen!
+> [!WARNING]
+> Die Grundeinstellungen sollten nur geändert werden, wenn Sie die Auswirkungen verstehen!

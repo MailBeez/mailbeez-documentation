@@ -17,7 +17,8 @@ taxonomy:
 
 free, without support - use at your own risk ;)
 
->>>> You need to manually update community modules
+> [!WARNING]
+> You need to manually update community modules
 
 
 After Download extract the ZIP-Archive and transfert the files & folders into the [MailBeez folder structure (describe here)](/documentation/basics/folder-structure) using your FTP client.

@@ -18,7 +18,8 @@ taxonomy:
 
 [TOC]
 
->>>>>> Lassen Sie sich den Ablauf direkt in Ihrem Shop-System von dem Lehrgang zum Anlegen von Vorlagen-Gutscheinen zeigen
+> [!TIP]
+> Lassen Sie sich den Ablauf direkt in Ihrem Shop-System von dem Lehrgang zum Anlegen von Vorlagen-Gutscheinen zeigen
 
 In diesem Tutorial lernen Sie, wie Sie Vorlagen-Gutscheine anlegen und in den entsprechenden Module konfigurieren.
 
@@ -35,7 +36,8 @@ Der MailBeez Gutschein-Generator generiert basierend auf einem konfigurierten Vo
 
 ## Anlegen eines Vorlagen-Gutscheines
 
->>>>> Bitte sicherstellen, dass das Gutschein-System aktiviert ist (osCommerce: ein [kompatibles Gutschein-Addon](/dokumentation/configbeez/config_coupon_engine) muss installiert sein)
+> [!NOTE]
+> Bitte sicherstellen, dass das Gutschein-System aktiviert ist (osCommerce: ein [kompatibles Gutschein-Addon](/dokumentation/configbeez/config_coupon_engine) muss installiert sein)
 
 Navigieren Sie in der Shop-Administration zum Abschnitt "Gutscheine".
 
@@ -80,4 +82,5 @@ Mit der Zeit werden tausende von Gutscheinen generiert werden. Unter `MailBeez >
 
 Auf dem MailBeez Dashboard finden Sie eine Suchfunktion (ggf. unter `MailBeez > Konfiguration > Dashboard Konfiguration` nachinstallieren), mit der Sie schnell Gutscheine - oder auch Vorlagen-Gutscheine finden und dann zur Bearbeitung öffnen können.
 
->>>>>> Suchen Sie nach **template_**, um alle Vorlagen-Gutscheine zu finden und direkt zur Bearbeitung öffnen zu können
+> [!TIP]
+> Suchen Sie nach **template_**, um alle Vorlagen-Gutscheine zu finden und direkt zur Bearbeitung öffnen zu können

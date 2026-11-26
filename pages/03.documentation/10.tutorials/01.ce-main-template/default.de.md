@@ -21,4 +21,5 @@ taxonomy:
 Als Nutzer der kostenfreien Grundversion können Sie im
 [Schnelleinstieg, Schritt 3](/dokumentation/grundlagen/schnelleinstieg#schritt-3-gestalten-sie-die-vorlagen-nach-ihren-wunschen) lesen, wie die gemeinsame Hauptvorlage angepasst werden kann.
 
->>>>>>[plugin:content-inject](/content_blocks/pro_template_manager)
+> [!TIP]
+> [content-inject path="/content_blocks/pro_template_manager" /]

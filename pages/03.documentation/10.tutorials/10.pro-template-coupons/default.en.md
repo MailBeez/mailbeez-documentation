@@ -18,7 +18,8 @@ taxonomy:
 
 [TOC]
 
->>>>>> use the tour within MailBeez to see how it works in your Store
+> [!TIP]
+> use the tour within MailBeez to see how it works in your Store
 
 In this tutorial you will learn how to create template coupons and configure the appropriate modules.
 
@@ -35,7 +36,8 @@ The MailBeez Coupon Engine generates new coupons based on a configured template.
 
 ## Creating a template coupon
 
->>>>> Please ensure that the coupon system is activated (osCommerce: a [compatible coupon addon](/documentation/configbeez/config_coupon_engine) must be installed)
+> [!NOTE]
+> Please ensure that the coupon system is activated (osCommerce: a [compatible coupon addon](/documentation/configbeez/config_coupon_engine) must be installed)
 
 From your shopping-cart's admin panel, navigate to the main configuration settings for "coupons" or "vouchers".
 
@@ -79,4 +81,5 @@ Over time, thousands of coupons will be generated. Under `MailBeez > Configurati
 
 On the MailBeez Dashboard you can find a search function (eventually you'll need to install on `MailBeez > Configuration > Dashboard Configuration` ) that lets you quickly find templates or coupons and then to open it for editing.
 
->>>>>> Search for **template_** to find all template coupons and open directly to the editor
+> [!TIP]
+> Search for **template_** to find all template coupons and open directly to the editor

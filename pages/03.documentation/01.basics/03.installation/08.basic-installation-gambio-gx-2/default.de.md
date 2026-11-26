@@ -36,7 +36,8 @@ metadata:
 #  last_modified: true
 ---
 
->>>>**MailBeez ist ab Gambio 2.3 vorintegriert**<br>wenn Sie Gambio 2.3+ nutzen, bitte MailBeez über das Admin Menü per Klick installieren. Die folgenden Schritte dürfen nicht ausgeführt werden.
+> [!WARNING]
+> **MailBeez ist ab Gambio 2.3 vorintegriert**<br>wenn Sie Gambio 2.3+ nutzen, bitte MailBeez über das Admin Menü per Klick installieren. Die folgenden Schritte dürfen nicht ausgeführt werden.
 
 - - - - - -
 

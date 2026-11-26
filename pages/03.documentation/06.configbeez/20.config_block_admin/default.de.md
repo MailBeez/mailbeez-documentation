@@ -57,7 +57,8 @@ Dieses Modul erweitert die Opt-Out Funktion von MailBeez und bietet dem Administ
 
 Die Erweiterung der Opt-Out Funktion umfasst:
 
->>>>>>der folgende Code ist bereits in der aktuellen responsive Hauptvorlage integriert
+> [!TIP]
+> der folgende Code ist bereits in der aktuellen responsive Hauptvorlage integriert
 
 **Opt-Out aller MailBeez Emails**
 
@@ -88,7 +89,7 @@ Jede von MailBeez generierte Email stellt bereits einen Link “Keine weiteren E
 
 Ebenso gibt es aber auch die Situation, dass Kunden versehentlich oder aus Neugierde den Link “Keine weiteren Emails dieser Art” anklicken, dann aber doch weitere Angebote erhalten möchten und den Shopbetreiber dies bezüglich kontaktieren. Mit einer schnellen Suche mit Kundennummer, Email Adresse oder Namen ist der Vorgang in wenigen Sekunden erledigt.
 
-[plugin:youtube](https://www.youtube.com/watch?v=3yYfw8--94s)
+[doc-video url="https://www.youtube.com/watch?v=3yYfw8--94s" /]
 
 
 ## Import von Black-Listen

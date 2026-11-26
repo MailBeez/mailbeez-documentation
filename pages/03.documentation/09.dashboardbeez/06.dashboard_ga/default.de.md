@@ -44,7 +44,8 @@ Als Bestandteil des MailBeez Grundsystemes erlaubt Ihnen der Der Google Analytic
 ![](Screen_ga_dash_widget.png "Google Analytics-O-Pie")
 
 
->>>>>Um dieses Widget zu nutzen muss Google Analytics - gerne mit Ecommerce Tracking - im Shop installiert sein.
+> [!NOTE]
+> Um dieses Widget zu nutzen muss Google Analytics - gerne mit Ecommerce Tracking - im Shop installiert sein.
 
 ####Häufig gestellte Fragen 
 

@@ -48,7 +48,8 @@ The plugin cleverly utilizes your store’s traffic to trigger Mailbeez to begin
 ### Who should use it?
 For store owners looking to get up and running quickly, or who do not wish to enter the backend server environment to setup a Cronjob, this is a very handy feature.
 
->>>>> A "real" Cronjob is the most reliable way to automize MailBeez. This module is a simple alternative solution.
+> [!NOTE]
+> A "real" Cronjob is the most reliable way to automize MailBeez. This module is a simple alternative solution.
 
 
 ### How to set it up
@@ -71,7 +72,8 @@ As with "MailBeez Auto-run", this module utilises the traffic on your website to
 ### Who should use it?
 For store owners looking to get up and running quickly, or who do not wish to enter the backend server environment to setup a Cronjob. But also for those needing a more granular control over which emails go out when, and to reduce sending load.
 
->>>>> A "real" Cronjob is the most reliable and preferred way to automate MailBeez. This module is a simple alternative solution.
+> [!NOTE]
+> A "real" Cronjob is the most reliable and preferred way to automate MailBeez. This module is a simple alternative solution.
 
 ### How to set it up
 
@@ -100,7 +102,8 @@ You can find your Cronjob-URL at the bottom of your MailBeez Admin dashboard pan
 
 Secure Cronjob-URL (will immediately execute all active modules - but respects Mode).
 
->>>>> TIP: If you don’t want to spend hours learning how to set up a Cronjob, then the “MailBeez Auto-run” module is perhaps the ideal solution for most _smaller_ stores to automate MailBeez.
+> [!NOTE]
+> TIP: If you don’t want to spend hours learning how to set up a Cronjob, then the “MailBeez Auto-run” module is perhaps the ideal solution for most _smaller_ stores to automate MailBeez.
 
 
 ## Module timing and Cronjob 

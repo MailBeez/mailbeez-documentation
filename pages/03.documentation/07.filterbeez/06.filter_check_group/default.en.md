@@ -62,4 +62,5 @@ For example, you probably don’t want a wholesale customer to receive a product
 The Mailbeez Group Filter module gives you the ability to choose which group is authorized to receive a campaign.
 
 
->>>>>>the customer group filter enhances the segmentation rules e.g. used in [Newsletter Advanced](/documentation/mailbeez/newsletter) Module!
+> [!TIP]
+> the customer group filter enhances the segmentation rules e.g. used in [Newsletter Advanced](/documentation/mailbeez/newsletter) Module!

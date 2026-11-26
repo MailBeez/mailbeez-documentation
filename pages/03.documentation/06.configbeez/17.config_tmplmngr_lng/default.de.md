@@ -49,7 +49,8 @@ metadata:
 #  last_modified: true
 ---
 
->>>Dieses Modul hat alle Funktionen des [Responsive Template Manager](/dokumentation/configbeez/config_tmplmngr/), unterstützt zudem aber unbegrenzt viele im Shop konfigurierte Sprachen.
+> [!NOTE]
+> Dieses Modul hat alle Funktionen des [Responsive Template Manager](/dokumentation/configbeez/config_tmplmngr/), unterstützt zudem aber unbegrenzt viele im Shop konfigurierte Sprachen.
 
 
 ##Betreiben Sie Ihren Online-Shop in mehreren Sprache? 

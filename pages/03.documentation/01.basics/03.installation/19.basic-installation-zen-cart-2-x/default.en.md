@@ -93,7 +93,8 @@ as a new line above
 
 The Zen Cart email function is peculiar when sending custom emails, and you may experience some minor issues when sending MailBeez generated emails through Zen Cart. See FAQ:
 
->>>>> Please see [Zen Cart FAQ](/documentation/frequently-asked-questions#zen-cart) for more details
+> [!NOTE]
+> Please see [Zen Cart FAQ](/documentation/frequently-asked-questions#zen-cart) for more details
 
 **Quick Solution:** configure a SMTP Email Server in MailBeez > Configuration > Email Engine. This will bypass the Zen Cart email function and give MailBeez full control for sending emails.
 

@@ -39,7 +39,8 @@ Hierzu das Inhalts-Element `Live Content` wählen und dann wie gewünscht konfig
 
 Sie können aus der folgenden Auswahl von Quelle wählen, nach welchen Kriterien die Produkt-Empfehlungen zusammengestellt werden.Je nach gewählter Quelle stehen weitere Konfigurations-Möglichkeiten zur Verfügung.
 
->>>>>>Für Empfehlungen basierend auf Bestellungen (z.B. "ebenfalls gekaufte Produkte") bitte den relevanten Bestell-Status konfigurieren, sowie den Zeitrahmen der für die Zusammenstellung der Empfehlung relevanten Bestellungen. Hierdurch können Sie konfigurieren, wie **saisonales Kaufverhalten** die Empfehlungen beeinflusst.
+> [!TIP]
+> Für Empfehlungen basierend auf Bestellungen (z.B. "ebenfalls gekaufte Produkte") bitte den relevanten Bestell-Status konfigurieren, sowie den Zeitrahmen der für die Zusammenstellung der Empfehlung relevanten Bestellungen. Hierdurch können Sie konfigurieren, wie **saisonales Kaufverhalten** die Empfehlungen beeinflusst.
 
 
 
@@ -75,7 +76,8 @@ Sie können aus der folgenden Auswahl von Quelle wählen, nach welchen Kriterien
  Zeigt Produkte, welche von anderen Kunden gekauft wurden, welche ebenfalls die Produkte im Warenkorb gekauft haben.
 
 
->>>>> **Zen-Cart**: XSell basierte Quellen sind nur verfügbar, wenn das addon [Cross Sell Advanced](https://www.zen-cart.com/downloads.php?do=file&id=400) installiert ist
+> [!NOTE]
+> **Zen-Cart**: XSell basierte Quellen sind nur verfügbar, wenn das addon [Cross Sell Advanced](https://www.zen-cart.com/downloads.php?do=file&id=400) installiert ist
 
 
 #### Keine doppelten Produkte

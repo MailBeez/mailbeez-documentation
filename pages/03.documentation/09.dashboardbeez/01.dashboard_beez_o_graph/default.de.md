@@ -44,4 +44,5 @@ Standardmässig werden die Daten der letzten 30 Tage gezeigt, aber Sie können a
 
 In einer neuen MailBeez Installation werden im Beez-O-Graph naturgemäss noch keine Daten angezeigt - dies ändert sich aber, sobald Sie die ersten Emails im Simulations- oder Produktions-Modus versenden.
 
->>>>>>Nahezu alle Elemente des Beez-O-Graph sind anklickbar und zeigen dann weitere aufschlussreiche Informationen
+> [!TIP]
+> Nahezu alle Elemente des Beez-O-Graph sind anklickbar und zeigen dann weitere aufschlussreiche Informationen

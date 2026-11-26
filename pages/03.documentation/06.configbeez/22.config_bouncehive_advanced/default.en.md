@@ -46,7 +46,8 @@ author:
 ---
 
  
->>>>>Configure [MailBeez.Email as Email Engine](/documentation/configbeez/config_email_engine) to automatically process all bounces
+> [!NOTE]
+> Configure [MailBeez.Email as Email Engine](/documentation/configbeez/config_email_engine) to automatically process all bounces
 
 ## Requirements
 

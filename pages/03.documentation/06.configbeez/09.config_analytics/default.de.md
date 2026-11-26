@@ -71,4 +71,5 @@ Ein Bestellung gilt als über eine MailBeez Email vermittelt, wenn eine der folg
 - Kauf als Folge eines Link-Klicks
 - Kauf unter Nutzung des in der Email enthaltenen personalisierten Gutschein-Codes
 
->>>>> Öffnen und Klicks auf Kopie-Emails werden nicht gezählt, da diese Emails eine eigene Message-ID haben. Somit werden nur die Aktionen der wirklichen Empfänger (Kunden) erfasst.
+> [!NOTE]
+> Öffnen und Klicks auf Kopie-Emails werden nicht gezählt, da diese Emails eine eigene Message-ID haben. Somit werden nur die Aktionen der wirklichen Empfänger (Kunden) erfasst.

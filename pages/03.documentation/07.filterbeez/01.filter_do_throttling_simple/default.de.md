@@ -46,7 +46,8 @@ metadata:
 
 **Dieses Filtermodul drosselt den Email Versand von MailBeez.**
 
->>>>>>Wir empfehlen [Newsletter2Go als Email-System](/dokumentation/configbeez/config_email_engine) zu konfiguieren. Dann brauchen Sie sich über die Einhaltung von Versende-Limits keine Gedanken zu machen.
+> [!TIP]
+> Wir empfehlen [Newsletter2Go als Email-System](/dokumentation/configbeez/config_email_engine) zu konfiguieren. Dann brauchen Sie sich über die Einhaltung von Versende-Limits keine Gedanken zu machen.
 
 Einige Hoster schränken den Versand von Emails ein, z.B. maximal 480 Emails pro Stunde. Mit diesem Modul stellen Sie sicher, mit MailBeez immer unter diesem Limit zu bleiben.
 

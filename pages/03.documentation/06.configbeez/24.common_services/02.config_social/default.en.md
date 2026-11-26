@@ -41,7 +41,8 @@ As a common service the Social Sharing links give your customers the option to s
 
 Fully configurable, *you* choose which social network links will display to your customers by turning them on and off, thereby controlling the networks they can share with.
 
->>>>>by default the social sharing link are not include in responsive email template to keep them as clean as possible
+> [!NOTE]
+> by default the social sharing link are not include in responsive email template to keep them as clean as possible
 
 
 The following example shows how to integrate the social sharing - in this case the "tiny" template - elements into your product list template using `{$products[product].social_tiny}`: 

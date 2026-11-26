@@ -43,8 +43,9 @@ metadata:
     author: admin
 ---
 
->>>> **Deprecated**
->>>> Due to breaking changes in MailChimp API only the MailChimp legacy API is supported
+> [!WARNING]
+> **Deprecated**
+> Due to breaking changes in MailChimp API only the MailChimp legacy API is supported
 
 ##The MailBeez for MailChimp Connector
 <div style="float:right;margin-top: -48px !important" markdown="1">
@@ -70,7 +71,9 @@ For these simple reasons, thousands of companies and brands around the world now
 You love the way MailBeez automates your eCommerce email marketing, but you also like to use MailChimp for occasional newsletters, and dig the way it makes designing emails so simple, **removes any potential for email blacklisting**, and importantly makes sure each email presents itself perfectly in your customer’s inbox. Combine these two things and you have our new MailChimp Connector – MailBeez intelligence, MailChimp design and sending security.
 
 
->>>>>MailChimp is great, but the system comes with a number of headaches like limited number of personalization content fields.
+> [!NOTE]
+> MailChimp is great, but the system comes with a number of headaches like limited number of personalization content fields.
+
  Unless you really like to use MailChimp **we recommend** to [configure MailBeez.Email as your Email-Engine](/documentation/configbeez/config_email_engine). You will acchieve comparable delivery-rates but without any limitations.
 
 ##Advantages

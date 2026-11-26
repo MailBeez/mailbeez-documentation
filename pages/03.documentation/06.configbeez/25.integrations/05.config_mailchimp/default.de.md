@@ -55,8 +55,9 @@ metadata:
 #  last_modified: true
 ---
 
->>>> **Veraltet**
->>>> Aufgrund grundlegender Änderungen in der MailChimp API wird nur die alte Version der MailChimp API unterstützt.
+> [!WARNING]
+> **Veraltet**
+> Aufgrund grundlegender Änderungen in der MailChimp API wird nur die alte Version der MailChimp API unterstützt.
 
 ##Die MailBeez für MailChimp Integration
 <div style="float:right;margin-top: -48px !important" markdown="1">
@@ -81,7 +82,9 @@ Falls Sie es noch nicht wissen: MailChimp ist ein hervorragendes Newsletter-Syst
 
 Sie wollen die intelligente, integrierte Personalisierung von MailBeez nutzen, aber sich auf die Versende-Qualität von MailChip verlassen? Dann ist diese Integration genau die richtige Lösung: MailBeez generiert - MailChmip versendet.
 
->>>>>MailChimp ist toll, aber das System bereitet einige Kopfschmerzen z.B. aufgrund der begrenzten Anzahl von Personalisierungs-Feldern.
+> [!NOTE]
+> MailChimp ist toll, aber das System bereitet einige Kopfschmerzen z.B. aufgrund der begrenzten Anzahl von Personalisierungs-Feldern.
+
  Wenn Sie nicht unbedingt über MailChimp versenden wollen, dann empfehlen wir, [MailBeez.Email](/dokumentation/configbeez/config_email_engine) zu konfigurieren. Sie werden vergleichbare Zustellraten erreichen, aber ohne die Begrenzungen von MailChimp.
 
 ##Vorteile

@@ -33,7 +33,8 @@ The Customer Insight view gives you an immediate overview of all orders, product
 
 [read more about BeezDesk CRM](https://www.beezdesk.com)
 
->>>>>[plugin:content-inject](/content_blocks/hint_preintegration)
+> [!NOTE]
+> [content-inject path="/content_blocks/hint_preintegration" /]
 
 ### Installation
 

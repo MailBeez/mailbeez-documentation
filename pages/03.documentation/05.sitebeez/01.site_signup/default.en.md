@@ -41,7 +41,8 @@ metadata:
 ---
 
 
->>>>> BETA: The present version is a first BETA edition but has been developed and tested with great care. There are still missing important functions such as the design adaptation and editing of the texts.
+> [!NOTE]
+> BETA: The present version is a first BETA edition but has been developed and tested with great care. There are still missing important functions such as the design adaptation and editing of the texts.
 
 
 With the Newsletter Widget you can capture the email addresses of prospects as well as the consent of existing customers.

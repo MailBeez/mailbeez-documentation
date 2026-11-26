@@ -17,7 +17,8 @@ taxonomy:
 
 Kostenlos, ohne Support - Nutzung auf eigene Gefahr ;)
 
->>>> Alle Community Module müssen manuell aktualisiert werden
+> [!WARNING]
+> Alle Community Module müssen manuell aktualisiert werden
 
 
 Nach Download das ZIP-Archiv entpacken und per FTP in die  [MailBeez Ordnerstruktur (hier beschrieben)](/dokumentation/grundlagen/ordner-struktur) einfügen.

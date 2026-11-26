@@ -48,4 +48,5 @@ Es wird eine Info-Email an alle Kunden versendet. Ungültige Email-Adressen werd
  
 Dank der Integration mit Newsletter2Go werden alle ungültigen Email-Adressen an das MailBeez System zurückgemeldet. Dieser Vorgang kann einige Tage dauern und kann im Beez-O-Graph mit Klick auf "bounces" nachvollzogen werden.
 
->>>>>Beim Versand von Massen-Emails erhöhen Rückläufer Emails das **Risiko**, dass der versendende Email-Server als **Spam-Versender** markiert wird und auf diversen Blacklisten landet. Daher sollten Sie für diese Aktion niemals Ihren eigenen Email-Server verwenden, sondern auf **zertifizierte Profi-Versendesysteme** wie Newsletter2Go zurückgreifen.
+> [!NOTE]
+> Beim Versand von Massen-Emails erhöhen Rückläufer Emails das **Risiko**, dass der versendende Email-Server als **Spam-Versender** markiert wird und auf diversen Blacklisten landet. Daher sollten Sie für diese Aktion niemals Ihren eigenen Email-Server verwenden, sondern auf **zertifizierte Profi-Versendesysteme** wie Newsletter2Go zurückgreifen.

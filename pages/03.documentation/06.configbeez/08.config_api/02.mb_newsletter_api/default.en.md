@@ -67,7 +67,8 @@ The Email-Address was successfully added and an opt-in email based on the matchi
 
 
 
->>>> Check out the built-in signup-forms in `/mailhive/mailbeez/mb_newsletter/includes/templates` how to use the API-Calls with AJAX.
+> [!WARNING]
+> Check out the built-in signup-forms in `/mailhive/mailbeez/mb_newsletter/includes/templates` how to use the API-Calls with AJAX.
 
 
 ### Customers Confirmation 
@@ -119,7 +120,8 @@ http://<myshop.com>/mailhive.php/api/public/v1.0/newsletter/confirm/customers/53
 ### Update Prospect Data
 
 
->>>>you can only update prospects which are not yet converted into customers
+> [!WARNING]
+> you can only update prospects which are not yet converted into customers
 
 This API-Call can be used to update prospect data.
 

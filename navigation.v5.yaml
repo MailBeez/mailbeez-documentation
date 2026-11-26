@@ -1,0 +1,48 @@
+# Link existing documentation pages by source folder under pages/03.documentation.
+# An explicitly listed page is moved out of its original sidebar tree in both languages.
+groups:
+  - title: { en: Getting started, de: Erste Schritte }
+    items:
+      - page: 00.basic-tutorial
+      - page: 01.basics
+      - page: 10.quickstart
+
+  - title: { en: Insights, de: Einblicke }
+    items:
+      - page: 09.dashboardbeez
+        title: { en: Dashboard, de: Dashboard }
+      - page: 08.reportbeez
+      - page: 06.configbeez/09.config_analytics
+      - page: 06.configbeez/09.config_googleanalytics
+
+  - title: { en: Campaigns, de: Kampagnen }
+    items:
+      - page: 04.mailbeez
+        title: { en: Automations, de: Automatisierungen }
+      - page: 04.mailbeez/21.newsletter
+        title: { en: Newsletter, de: Newsletter }
+
+  - title: { en: 'Contacts & Content', de: 'Kontakte & Inhalte' }
+    items:
+      - page: 05.sitebeez/01.site_signup
+      - page: 10.tutorials/20.newsletter-signup-form
+      - page: 06.configbeez/16.config_gdpr_consent
+      - page: 06.configbeez/23.config_account_aggregation
+      - page: 06.configbeez/16.config_tmplmngr
+      - page: 10.tutorials/10.pro-main-template
+      - page: 11.cookbook/01.coupon-related
+
+  - title: { en: Settings, de: Einstellungen }
+    items:
+      - page: 06.configbeez
+        title: { en: Configuration, de: Konfiguration }
+      - page: 07.filterbeez
+
+  - title: { en: Reference, de: Nachschlagewerk }
+    include_remaining: true
+    items:
+      - page: 10.tutorials
+      - page: 11.cookbook
+      - page: 99.faq
+      - page: 13.compatibility
+      - page: 12.changelog

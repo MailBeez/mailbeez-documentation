@@ -60,7 +60,8 @@ The coupon engine generates personalized coupons based on **template coupons** w
  
 A **template coupon** is a "normal" coupon, but is distinguished by the coupon **CODE**, which **MUST** start with the pattern `template_`.
 
->>>>>>Make sure to view the helper section "How to set up a template coupon" in the Tour tab on your MailBeez admin panel.
+> [!TIP]
+> Make sure to view the helper section "How to set up a template coupon" in the Tour tab on your MailBeez admin panel.
  
 **Creating a Template Coupon**
 
@@ -94,7 +95,8 @@ In this module you'll find a range of features which will help you to maintain y
 **Repair sync**: In case coupons are not assigned to message you can repair this assignment
 
 
->>>>>**Please note**: In each module you can configure the length of the coupon code. Long codes (e.g. 8 or 10 characters) can be generated very efficiently. With shorter code lengths (and many existing codes), code generation might take longer until a free code is found. This can cause issues like time-outs during the sending process.
+> [!NOTE]
+> **Please note**: In each module you can configure the length of the coupon code. Long codes (e.g. 8 or 10 characters) can be generated very efficiently. With shorter code lengths (and many existing codes), code generation might take longer until a free code is found. This can cause issues like time-outs during the sending process.
 
 ## osCommerce Coupon System support
 

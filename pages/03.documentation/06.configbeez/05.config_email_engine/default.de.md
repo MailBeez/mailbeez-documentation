@@ -41,10 +41,11 @@ metadata:
 #  last_modified: true
 ---
 
->>>> **Warum kommen Emails beim Empfänger an und warum nicht?**
->>>>Viele Email-Empfängerserver - besonders zu erwähnen sind Gmail, Yahoo, Web.de, GMX, AOL, Outlook.com - erwarten bei einem höheren Volumen an Emails wie z.B. beim Versand von Newslettern einen expliziten Whitelisting Eintrag.
->>>>Diesen Eintrag können ausschließlich ausgewiesene Email-Versand-Anbieter beziehen und dann dem Versender entsprechende Authentifizierungsmaßnahmen wie DKIM, SPF Verfügung stellen. Nur hierdurch wird es den Mailservern der Empfängers möglich, herauszufinden, ob es sich um "legale" Emails handelt.
->>>>**Beim Versand über die Mailserver des Hosters werden somit häufig Emails abgelehnt, da die verwendeten Mailserver keine ausgewiesenen massenmail-fähigen Versand-Server sind.**
+> [!WARNING]
+> **Warum kommen Emails beim Empfänger an und warum nicht?**
+> Viele Email-Empfängerserver - besonders zu erwähnen sind Gmail, Yahoo, Web.de, GMX, AOL, Outlook.com - erwarten bei einem höheren Volumen an Emails wie z.B. beim Versand von Newslettern einen expliziten Whitelisting Eintrag.
+> Diesen Eintrag können ausschließlich ausgewiesene Email-Versand-Anbieter beziehen und dann dem Versender entsprechende Authentifizierungsmaßnahmen wie DKIM, SPF Verfügung stellen. Nur hierdurch wird es den Mailservern der Empfängers möglich, herauszufinden, ob es sich um "legale" Emails handelt.
+> **Beim Versand über die Mailserver des Hosters werden somit häufig Emails abgelehnt, da die verwendeten Mailserver keine ausgewiesenen massenmail-fähigen Versand-Server sind.**
 
 
 MailBeez gibt Ihnen volle Freiheit zu wählen, wie Sie die Emails versenden wollen:
@@ -119,7 +120,8 @@ Die betroffenen Einträge werden im System gelöscht, so dass diese Emails - je 
 Die betroffenen Einträge werden im System markiert, so dass diese Emails nicht erneut versendet werden.
 
 
->>>>>>Sollten häufig Fehler beim Versand auftreten, so prüfen Sie bitte die Konfiguration des verwendeten SMTP-Servers. Einige SMTP-Server können z.B. so konfiguriert sein, dass nur bestimmte Absender-Domains zugelassen werden. Bei abweichenden Absender-Domains verweigert der SMTP-Server dann den Versand mit einer Fehlersituation.
+> [!TIP]
+> Sollten häufig Fehler beim Versand auftreten, so prüfen Sie bitte die Konfiguration des verwendeten SMTP-Servers. Einige SMTP-Server können z.B. so konfiguriert sein, dass nur bestimmte Absender-Domains zugelassen werden. Bei abweichenden Absender-Domains verweigert der SMTP-Server dann den Versand mit einer Fehlersituation.
 
 
 

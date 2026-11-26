@@ -36,7 +36,8 @@ metadata:
 #  last_modified: true
 ---
 
->>>>>>Dieser Bericht kann schnell und kompfortabel vom MailBeez Dashboard über den "Beez-O-Graph" mit Klick auf die Legende **Abmeldungen** geöffnet werden.
+> [!TIP]
+> Dieser Bericht kann schnell und kompfortabel vom MailBeez Dashboard über den "Beez-O-Graph" mit Klick auf die Legende **Abmeldungen** geöffnet werden.
 
 Als Bestand-Teil vom MailBeez Grundsystem gibt dieses Modul Einblick, welche Kunden sich mit Klick auf den Abmelde-Links in den MailBeez Emails von weiteren Emails abgemeldet haben.
 
@@ -47,6 +48,7 @@ Die Liste zeigt, zu welcher Zeit und welches Modul der Kunden abgemeldet hat.
 
 Die Opt-Out Links in den Emails enthalten eine Kennzeichnung des Betriebs-Modus, d.h. "Produktions-Abmeldungen" werden auch als solche verarbeitet wenn sich MailBeez im Simulations-Modus befindet.
 
->>>>>Das Abmelden im Simulations-Modus wird nur dann richtig erfasst, wenn unter MailBeez > Konfiguration > Simulation die "Simulations-Protokollierung" aktiviert (True) ist.
+> [!NOTE]
+> Das Abmelden im Simulations-Modus wird nur dann richtig erfasst, wenn unter MailBeez > Konfiguration > Simulation die "Simulations-Protokollierung" aktiviert (True) ist.
 
 Die Simulations-Daten können mit Klick auf "Simulation neu starten" gelöscht werden.

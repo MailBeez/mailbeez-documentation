@@ -49,7 +49,8 @@ metadata:
 #  last_modified: true
 ---
 
->>>>>Die Einrichtung eines "echten" Cronjobs ist die beste Methode zur Automatisierung. Dieses Modul ist eine einfach zu nutzende Alternative
+> [!NOTE]
+> Die Einrichtung eines "echten" Cronjobs ist die beste Methode zur Automatisierung. Dieses Modul ist eine einfach zu nutzende Alternative
 
 
 **Ein einfaches, aber sehr praktisches Modul, um MailBeez automatisch auszuführen – ohne sich mit der Einrichtung eines Cronjobs befassen zu müssen**
@@ -71,7 +72,8 @@ Die Konfiguration ist sehr einfach und selbsterklärend:
 
 ## Installation
 
->>>>>[plugin:content-inject](/content_blocks/hint_preintegration)
+> [!NOTE]
+> [content-inject path="/content_blocks/hint_preintegration" /]
 
 
 ####Gambio 2.x und Modified-Shop 1.x

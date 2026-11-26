@@ -28,4 +28,5 @@ metadata:
 This process controll subsystem makes sure that only one sending process can be active - otherwise there could be overlapping processes causing sending the same email multiple times!
 
 
->>>> Never change the default settings unless you know what you are doing!
+> [!WARNING]
+> Never change the default settings unless you know what you are doing!

@@ -52,7 +52,8 @@ The update tool will perform the following steps:
 
 Upon returning to the MailBeez admin panel, you should see a new notification.
 
->>>>>>If you are facing issues with the Backup process not finishing, please delete all files that begin `appcache_` from the directory `/mailhive/common/templates_c` on the server hosting your shopping-cart system. With MailBeez Version 3.3.4 the cache is cleaned up automatically.
+> [!TIP]
+> If you are facing issues with the Backup process not finishing, please delete all files that begin `appcache_` from the directory `/mailhive/common/templates_c` on the server hosting your shopping-cart system. With MailBeez Version 3.3.4 the cache is cleaned up automatically.
 
 
 ## Update manually

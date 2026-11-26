@@ -36,7 +36,8 @@ metadata:
 #  last_modified: true
 ---
 
->>>>>>you can open this report directly from your MailBeez Dashboard when clicking on the legend of the "Beez-O-Graph" widget - you will see the filtered data.
+> [!TIP]
+> you can open this report directly from your MailBeez Dashboard when clicking on the legend of the "Beez-O-Graph" widget - you will see the filtered data.
 
 
 MailBeez tracks every email it sends out. This tracking data is used to cross-check a module’s email against the customers, thereby preventing the same customer from receiving the same email more than once.
@@ -48,6 +49,7 @@ The report will even tell you which mode you were in when the email was sent:
 - **PROD**: MailBeez was executed in Production Mode
 - **[SIM]**: MailBeez was executed in Simulation Mode
 
->>>>>Email tracking & reporting only works in simulation mode when configured properly. Please go to **Configuration tab > Simulation > ”Edit” > Enable Tracking in Simulation Mode** and set it to “True”.
+> [!NOTE]
+> Email tracking & reporting only works in simulation mode when configured properly. Please go to **Configuration tab > Simulation > ”Edit” > Enable Tracking in Simulation Mode** and set it to “True”.
 
 To delete the opt-out data collected while in simulation mode, click the Simulation “Restart” button.

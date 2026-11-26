@@ -70,14 +70,16 @@ Die Cronjob-Url finden Sie im entsprechenden Modul, diese ist wie folgt aufgebau
 
 Bitte richten Sie einen Cronjob ein, der diese Service-Url alle 5Min aufruft. Die Einrichtung von Cronjobs ist bei den verschiedenen Hosting-Anbietern unterschiedlich gelöst - Bitte kontaktieren Sie ggf. den Support Ihres Hosting-Anbieters.
 
->>>>**Wichtig:** In Crontab `\&` statt `&` nutzen, sonst wird der URL Parameter nicht korrekt übergeben:
+> [!WARNING]
+> **Wichtig:** In Crontab `\&` statt `&` nutzen, sonst wird der URL Parameter nicht korrekt übergeben:
 
 `wget -O - -q -t 1 <shop-url>/mailhive.php?m=service_beezdesk_sync\&ma=sync`
 
 
 ### Einbindung des Kontakt / Chat Widgets
 
->>>>> folgender Schritt ist nur bei Shop-Systemen ohne Vorintegration von MailBeez erforderlich
+> [!NOTE]
+> folgender Schritt ist nur bei Shop-Systemen ohne Vorintegration von MailBeez erforderlich
 
 
 **Code-Block**

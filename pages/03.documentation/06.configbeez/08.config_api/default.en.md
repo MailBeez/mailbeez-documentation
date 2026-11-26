@@ -32,6 +32,7 @@ The MailBeez API (**A**pplication **P**rogram **I**nterface) allows to integrate
 In the core configuration module you can configure the API Key.
 
 
->>>The MailBeez API is extensible and the available calls are depending on installed modules
+> [!NOTE]
+> The MailBeez API is extensible and the available calls are depending on installed modules
 
 Currently available API modules

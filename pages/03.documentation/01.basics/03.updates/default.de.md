@@ -54,7 +54,8 @@ Das Aktualiserungs-Programm führt dabei folgende Schritte durch:
 Nach Rückkehr zum MailBeez System sollten Sie einen entsprechenden Hinweis sehen.
 
 
->>>>>>Falls der Backup-Prozess nicht durchläuft, bitte mit Hilfe eines FTP Programmes alle Dateien deren Dateiname mit `appcache_` startet aus dem Verzeichnis `/mailhive/common/templates_c` löschen. Ab MailBeez Version 3.3.4 werden alte Cache Dateien automatisch entfernt.
+> [!TIP]
+> Falls der Backup-Prozess nicht durchläuft, bitte mit Hilfe eines FTP Programmes alle Dateien deren Dateiname mit `appcache_` startet aus dem Verzeichnis `/mailhive/common/templates_c` löschen. Ab MailBeez Version 3.3.4 werden alte Cache Dateien automatisch entfernt.
 
 ## Manuelles Aktualisieren
 

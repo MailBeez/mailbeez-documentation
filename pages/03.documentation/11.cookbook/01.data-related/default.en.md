@@ -49,4 +49,5 @@ We send out an info-email to all customers. Invalid email addresses will "bounce
 Thanks to the integration of Newsletter2Go with MailBeez all invalid Email-addresses will be reported into MailBeez and excluded for future campaigns. This process can take a couple of days and can be monitored through the Beez-O-Graph > "bounces"
  
 
->>>>> When sending bulk emails invalid recipients increase the risk the sending email server gets rated as **sending out spam**. For this reason you should never use your own email-server, but use a **certified email system** like Newsletter2go.
+> [!NOTE]
+> When sending bulk emails invalid recipients increase the risk the sending email server gets rated as **sending out spam**. For this reason you should never use your own email-server, but use a **certified email system** like Newsletter2go.

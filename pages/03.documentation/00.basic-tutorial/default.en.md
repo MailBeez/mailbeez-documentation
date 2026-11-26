@@ -43,7 +43,8 @@ MailBeez is designed for easy installation, configuration and rock-solid operati
  
 ## Step 1: Learn All About MailBeez
 
->>>>>>Use the built-in Guided Tours to get a quick feel for the MailBeez system. You will find all available tours in the first tab of the Mailbeez admin panel.
+> [!TIP]
+> Use the built-in Guided Tours to get a quick feel for the MailBeez system. You will find all available tours in the first tab of the Mailbeez admin panel.
 
 #### The MailBeez Dashboard
 
@@ -147,7 +148,8 @@ Whether you are using MailBeez free email templates or MailBeez premium email te
 #### Try a Global Customization - Change the Email Header Image
 
 
->>>>>>[plugin:content-inject](/content_blocks/pro_template_manager)
+> [!TIP]
+> [content-inject path="/content_blocks/pro_template_manager" /]
 
 No doubt you will want to replace the template email header with an email header of your own. This will be a global customization as you want it to affect every email MailBeez generates. 
 
@@ -173,11 +175,13 @@ No doubt you will want to replace the template email header with an email header
 - clear the cache of compiled template files using the button in MailBeez > configuration > Template System
 - your changes are not effective in preview and emails
 
->>>Remember: Changes in files having a filename starting with `default_` will be lost with the next update as these files are overwritten
+> [!NOTE]
+> Remember: Changes in files having a filename starting with `default_` will be lost with the next update as these files are overwritten
 
 #### Try a Per-Module Customization - Change the Module Graphic
 
->>>>>>[plugin:content-inject](/content_blocks/pro_template_manager)
+> [!TIP]
+> [content-inject path="/content_blocks/pro_template_manager" /]
 
 Using the Birthday Greeting module as an example, let’s say you want to change the ‘Happy Birthday’ graphic and it’s layout. 
 
@@ -203,7 +207,8 @@ Using the Birthday Greeting module as an example, let’s say you want to change
 - clear the cache of compiled template files using the button in MailBeez > configuration > Template System
 - your changes are not effective in preview and emails
 
->>>Remember: Changes in files having a filename starting with `default_` will be lost with the next update as these files are overwritten
+> [!NOTE]
+> Remember: Changes in files having a filename starting with `default_` will be lost with the next update as these files are overwritten
    
 
 #### More Information About MailBeez Email Template Modules
@@ -218,7 +223,8 @@ All premium email module templates come packaged without the MailBeez Copyright 
 ## Step 4: Download & Install Additional Modules
 
 
->>>>>>[plugin:content-inject](/content_blocks/pro_install_easy)
+> [!TIP]
+> [content-inject path="/content_blocks/pro_install_easy" /]
 
 The easiest way to browse for additional modules that might interest you is to use the Version Check Widget on the MailBeez Dashboard to bring up the AppStore.
 

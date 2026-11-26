@@ -42,7 +42,8 @@ metadata:
     author: admin
 ---
 
->>>>>A "real" Cronjob is the most reliable way to automize MailBeez. This module is a simple alternative solution.
+> [!NOTE]
+> A "real" Cronjob is the most reliable way to automize MailBeez. This module is a simple alternative solution.
 
  
 
@@ -57,7 +58,8 @@ Thanks to time stamp based caching technology, the additional load added to your
 
 ## Installation
 
->>>>>[plugin:content-inject](/content_blocks/hint_preintegration)
+> [!NOTE]
+> [content-inject path="/content_blocks/hint_preintegration" /]
 
 
 ####osCommerce

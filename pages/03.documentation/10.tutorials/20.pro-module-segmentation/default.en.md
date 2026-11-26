@@ -121,7 +121,8 @@ Next, you’ll create your awesome newsletter and connect it to the list you cre
 
 Now, design the email with your promotion and product info. (Click on the `+` icon in the editor to add layout elements.)
 
->>>>>If your store is set up for several languages, you need to design the other language templates as well.
+> [!NOTE]
+> If your store is set up for several languages, you need to design the other language templates as well.
 
 Once you are happy with your design and test emails, you can click on `ready for sending` to activate the newsletter.
 

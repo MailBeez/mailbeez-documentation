@@ -41,7 +41,8 @@ Delivered with the MailBeez framework, the Google-Analytics-O-Pie is a powerful 
 
 ![](Screen_ga_dash_widget.png "Google Analytics-O-Pie")
 
->>>>>You must have a Google Analytics account set up and have it activated & configured in MailBeez for this widget to function.
+> [!NOTE]
+> You must have a Google Analytics account set up and have it activated & configured in MailBeez for this widget to function.
  
 
 #### Common Questions

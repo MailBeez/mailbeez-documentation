@@ -29,7 +29,8 @@ taxonomy:
 
 ## Gutschein für Registrierung zum Newsletter
 
->>>>>> **Hinweis:** Unter Einhaltung von bestimmten Ausnahmeregelungen dürfen Shopbetreiber Ihre Kunden auch ohne explizite Einwilligung per Email kontaktieren, lesen Sie mehr auf [Rechtssichere Email-Werbung ohne ausdrückliche Einwilligung](/uber/rechtssicher-email-werbung-ohne-ausdruckliche-einwilligung-senden)
+> [!TIP]
+> **Hinweis:** Unter Einhaltung von bestimmten Ausnahmeregelungen dürfen Shopbetreiber Ihre Kunden auch ohne explizite Einwilligung per Email kontaktieren, lesen Sie mehr auf [Rechtssichere Email-Werbung ohne ausdrückliche Einwilligung](/uber/rechtssicher-email-werbung-ohne-ausdruckliche-einwilligung-senden)
 
 
 ### Problem
@@ -51,7 +52,7 @@ Hierzu gehen Sie bitte wie folgt vor:
 1. In den Segmentierungs-Einstellungen im Abschnitt `Kunde` bitte folgendes konfigurieren:
     - Kunde seit mindestens Tagen: 0
     - Kunde seit höchstens Tagen: 1 (oder einen höheren Wert, wenn Sie auch älteren Kunden einen Gutschein zusenden wollen)
-![List](Screen_welcome_list.de.png?lightbox=true)
+[doc-image src="Screen_welcome_list.de.png" alt="Newsletter-Liste" /]
 1. Segmentierung speichern
 1. Mit Klick auf `Segmentierung testen` können Sie sehen, welche Empfänger gefunden werden. Klicken Sie auf die Namen, um den Kunden-Insight des Kunden zu öffnen.
 
@@ -75,7 +76,7 @@ Sie haben somit eine Liste erstellt, welche aktuelle Newsletter-Subscriber liefe
     - Falls Ihre Online-Shop in mehreren Sprachen verfügbar ist, gestalten Sie die Emails ebenfalls für die anderen Sprachen
 1. Wenn Sie zufrieden mit der Gestaltung sind und die Test-Emails gut Aussehen, können Sie den neuen Newsletter oben rechts mit Klick auf `als versandfertig freigeben` aktiv schalten. 
 
-![List](Screen_welcome_email.de.png?lightbox=true)
+[doc-image src="Screen_welcome_email.de.png" alt="Willkommens-E-Mail" /]
 
 
 Herzlichen Glückwunsch! Sie haben jetzt eine Willkommens-Newsletter erstellt, der bei der nächsten automatischen Ausführung des Versendeprozesses an die passenden Empfänger versendet wird!
@@ -137,6 +138,7 @@ Herzlichen Glückwunsch! Sie haben jetzt eine Email erstellt, die bei der nächs
 
 Wenn Sie mehrere Geschenk-Gutscheine anbieten wollen, wiederholen Sie für jeden Wert die oben aufgeführten Schritte.
 
->>>>> **Aktuelle Einschränkungen**:   
->>>>> je Kunde und Kauf kann nur 1 Gutschein geliefert werden  
->>>>> **Bitte um kurze Nachricht, wenn hier Erweiterungsbedarf am Modul besteht.**  
+> [!NOTE]
+> **Aktuelle Einschränkungen**:\
+> je Kunde und Kauf kann nur 1 Gutschein geliefert werden\
+> **Bitte um kurze Nachricht, wenn hier Erweiterungsbedarf am Modul besteht.**

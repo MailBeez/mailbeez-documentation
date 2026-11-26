@@ -59,7 +59,8 @@ metadata:
 Genervt von Bounce-Emails, auch bekannt als Rückläufer? Neben der Extra-Arbeit besteht das Risiko, als Spam-Versender eingestuft zu werden, wenn viele der Kunden-Adressen ungültig geworden sind. Mit diesem Modul werden die Bounce-Emails automatisch verarbeitet und sichergestellt, dass keine weiteren Emails an ungültige Email-Adressen verschickt werden.
 
 
->>>>>Konfigurieren Sie [MailBeez.Email als Email-System](/dokumentation/configbeez/config_email_engine) - dann werden die Bounces automatisch verarbeitet.
+> [!NOTE]
+> Konfigurieren Sie [MailBeez.Email als Email-System](/dokumentation/configbeez/config_email_engine) - dann werden die Bounces automatisch verarbeitet.
 
 
 ## Voraussetzungen

@@ -36,12 +36,14 @@ metadata:
 #  last_modified: true
 ---
 
-Here it is, one huge list of everything we do, plus installation guides. 
+Find installation instructions, campaign guides, and reference material for MailBeez.
 
-Phew, very exhausting. 
+[doc-grid columns="2"]
+[doc-link-card href="/guide-to-getting-started" title="Getting started" description="Take a guided tour of MailBeez." icon="tabler/book.svg" /]
+[doc-link-card href="/basics/installation" title="Installation" description="Find instructions for your shop system." icon="tabler/download.svg" /]
+[doc-link-card href="/mailbeez" title="Automations" description="Explore the modules that run your email campaigns." icon="tabler/bolt.svg" /]
+[doc-link-card href="/mailbeez/newsletter" title="Newsletter" description="Read the newsletter module guide." icon="tabler/mail.svg" /]
+[/doc-grid]
 
-However, if you want to browse in a slightly more manageable way, then please check out our navigation area to the left, where you will find modules categorized by type – a handy way to find your way around the site.
-
-
-
->>>>>> The simplest way to navigate the documentation is to use the **Next** and **Previous** arrows (<i class="fa fa-chevron-left"></i> <i class="fa fa-chevron-right"></i>) on each page. You can see your progress represented by the check marks (<i class="fa fa-check"></i>) in the sidebar.
+> [!TIP]
+> Use the sidebar to browse by topic, or open Search to find a feature or module.

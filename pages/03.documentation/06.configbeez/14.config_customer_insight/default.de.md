@@ -46,7 +46,8 @@ Die Kunden-Insight Ansicht gibt Ihnen einen sofortigen Überblick aller Bestellu
 
 [mehr zum BeezDesk CRM](https://www.beezdesk.de)
 
->>>>>[plugin:content-inject](/content_blocks/hint_preintegration)
+> [!NOTE]
+> [content-inject path="/content_blocks/hint_preintegration" /]
 
 
 ### Installation

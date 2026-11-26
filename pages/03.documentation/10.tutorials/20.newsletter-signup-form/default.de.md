@@ -16,12 +16,16 @@ taxonomy:
     tag: [pro]
 ---
 
->>>**Vorbemerkung**  
+> [!NOTE]
+> **Vorbemerkung**
+
  Mit Hilfe des [SiteBeez Newsletter Anmelde-Widget](/dokumentation/sitebeez/site_signup) können Sie ohne weitere Entwicklung nach einfacher Integration von etwas JavaScript Code intelligent Email-Adressen von Besuchern und Kunden erfassen.
 
 [TOC]
 
->>>>>**Voraussetzung**  
+> [!NOTE]
+> **Voraussetzung**
+
  Technisches Wissen im Umgang mit HTML, CSS und Javascript  
  Die Code-Beispiele müssen "gelesen", verstanden und angepasst werden.
 

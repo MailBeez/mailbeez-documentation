@@ -40,7 +40,8 @@ When editing an email template just add the content element `Live Content` and c
 You can select from the following choice of content sources which define how recommendations are retrieved.
 Depending on the selected content source you will find a number of configuration options.
 
->>>>>>For order related recommendations (e.g. "also purchased") please configure the relevant order status and the timeframe of the orders to use for retrieving recommendations. This allows you to configure how fast the **seasonal buying behaviour** influences the recommendations.
+> [!TIP]
+> For order related recommendations (e.g. "also purchased") please configure the relevant order status and the timeframe of the orders to use for retrieving recommendations. This allows you to configure how fast the **seasonal buying behaviour** influences the recommendations.
 
 #### Catalog-based product recommendations 
 
@@ -73,7 +74,8 @@ Depending on the selected content source you will find a number of configuration
  Shows also purchased products based on products in cart
 
 
->>>>> **Zen-Cart:** XSell bases sources will only be available with the installed addon [Cross Sell Advanced](https://www.zen-cart.com/downloads.php?do=file&id=400)
+> [!NOTE]
+> **Zen-Cart:** XSell bases sources will only be available with the installed addon [Cross Sell Advanced](https://www.zen-cart.com/downloads.php?do=file&id=400)
 
 
 #### Unique products only

@@ -60,7 +60,9 @@ This module enhances the default Opt-Out handling which is already built into Ma
 ##Features
 
 The Advanced Opt-Out with admin covers following featres
->>>>>>the following code is already integrated in the latest responsive main templates
+
+> [!TIP]
+> the following code is already integrated in the latest responsive main templates
 
 
 **Opt-Out all MailBeez Emails**
@@ -88,7 +90,7 @@ for some modules, e.g. payment reminders you don't want to allow customers to bl
 
 In some cases you might want to manually block - or unblock - a customer. The MailBeez Opt-Out Admin panel allows you to quickly find the customer and perform the necessary action: 
 
-[plugin:youtube](https://www.youtube.com/watch?v=3yYfw8--94s)
+[doc-video url="https://www.youtube.com/watch?v=3yYfw8--94s" /]
 
 
 

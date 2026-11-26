@@ -44,7 +44,8 @@ MailBeez ist für einfachste Installation, Konfiguration und stabilen Betrieb en
 
 ## Schritt 1: MailBeez kennen lernen
 
->>>>>>Nutzen Sie die interaktiven Lehrgänge, um sich das MailBeez System erklären zu lassen. Sie finden die Lehrgänge im ersten Tab.
+> [!TIP]
+> Nutzen Sie die interaktiven Lehrgänge, um sich das MailBeez System erklären zu lassen. Sie finden die Lehrgänge im ersten Tab.
 
 
 #### Das MailBeez Dashboard
@@ -147,7 +148,8 @@ Egal ob Sie die Vorlagen der kostenlosen oder der Premium Module anpassen wollen
 
 #### Hauptvorlagen anpassen – Setzen Sie Ihr eigenes Bildmotiv ein
 
->>>>>>[plugin:content-inject](/content_blocks/pro_template_manager)
+> [!TIP]
+> [content-inject path="/content_blocks/pro_template_manager" /]
 
 
 
@@ -175,11 +177,13 @@ Wohl jeder MailBeez Benutzer wird das Standard-Bildmotiv im Kopfbereich der Emai
 - leeren Sie den Cache der kompilierten Template Dateien unter MailBeez > Konfiguration > Template System
 - die Anpassungen sind jetzt in der Vorschau und auch in den Emails sichtbar.
 
->>>Denken Sie daran: Änderungen an Dateien, deren Dateinamen mit `default_` beginnt, gehen bei Updates verloren. Diese Dateien werden überschrieben.
+> [!NOTE]
+> Denken Sie daran: Änderungen an Dateien, deren Dateinamen mit `default_` beginnt, gehen bei Updates verloren. Diese Dateien werden überschrieben.
 
 #### Modul-Vorlage Anpassen – Bearbeiten Sie Grafik & Layout
 
->>>>>>[plugin:content-inject](/content_blocks/pro_template_manager)
+> [!TIP]
+> [content-inject path="/content_blocks/pro_template_manager" /]
 
 Für dieses Beispiel verwenden wir das Geburtstags-Modul. 
 
@@ -206,7 +210,8 @@ Für dieses Beispiel verwenden wir das Geburtstags-Modul.
 - die Anpassungen sind jetzt in der Vorschau und auch in den Emails sichtbar.
 
 
->>>Denken Sie daran: Änderungen an Dateien, deren Dateinamen mit `default_` beginnt, gehen bei Updates verloren. Diese Dateien werden überschrieben.
+> [!NOTE]
+> Denken Sie daran: Änderungen an Dateien, deren Dateinamen mit `default_` beginnt, gehen bei Updates verloren. Diese Dateien werden überschrieben.
 
 #### Mehr Informationen zum MailBeez Vorlagen System
 
@@ -219,7 +224,8 @@ Wenn Sie ohne Profi-Tarif den MailBeez Copyright Hinweis aus den freien Modulen
 
 ## Schritt 4: Weitere Module installieren
 
->>>>>>[plugin:content-inject](/content_blocks/pro_install_easy)
+> [!TIP]
+> [content-inject path="/content_blocks/pro_install_easy" /]
 
 
 Mit der Versions-Prüfung auf dem MailBeez Dashboard können Sie mit einem Klick den “AppStore” in MailBeez öffnen. Mit dem Klick

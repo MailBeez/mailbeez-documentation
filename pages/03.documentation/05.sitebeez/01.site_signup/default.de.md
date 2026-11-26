@@ -151,7 +151,8 @@ Ein typischer Anwendungsfall: Nach Registrierung wird dem Empfänger ein bestimm
 
 ## Anpassungen
 
->>>>> Dies ist aktuell nicht in der GambioCloud möglich.
+> [!NOTE]
+> Dies ist aktuell nicht in der GambioCloud möglich.
 
 
 Folgende Schritte gelten für alle Dialoge unterhalb

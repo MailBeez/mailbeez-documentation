@@ -63,7 +63,8 @@ Konfiguration in Modified Shop
 Konfiguration in ZenCart
 
  
->>>>>>Der Kundengruppen-Filter erweitert auch die Segmentierungs-Möglichkeiten z.B. im [Newsletter Profi](/dokumentation/mailbeez/newsletter) Modul!
+> [!TIP]
+> Der Kundengruppen-Filter erweitert auch die Segmentierungs-Möglichkeiten z.B. im [Newsletter Profi](/dokumentation/mailbeez/newsletter) Modul!
 
  
 

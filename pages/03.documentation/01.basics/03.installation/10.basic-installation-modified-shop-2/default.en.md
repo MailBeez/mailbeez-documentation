@@ -81,7 +81,9 @@ Using the matching integration pack MailBeez will integrate itself seamlessly in
 
 
 ##Installation
->>>>> In case you renamed the `/admin` directory, please move the files from `admin/` into the renamed directory
+
+> [!NOTE]
+> In case you renamed the `/admin` directory, please move the files from `admin/` into the renamed directory
 
 Please start with downloading the matching integration pack. Then unzip the pack and merge the files into the file/folder structure of your Modified-Shop.
 

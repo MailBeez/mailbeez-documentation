@@ -42,7 +42,8 @@ author:
     name: admin
 ---
 
->>>This module comes with all great features of [Responsive Template Manager](/documentation/configbeez/config_tmplmngr/), but enhances MailBeez to support unlimited languages as configured in your store.
+> [!NOTE]
+> This module comes with all great features of [Responsive Template Manager](/documentation/configbeez/config_tmplmngr/), but enhances MailBeez to support unlimited languages as configured in your store.
 
  
 

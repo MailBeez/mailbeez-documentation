@@ -39,7 +39,7 @@ MailBeez hat bereits eine Auswahl an Automatisierungs-Modulen für die gängigst
 #### 3. Anpassung der Einladungs-Email
 
 Die Email zur Einladung kann im visuellen Editor beliebig gestaltet werden (Ausnahme: Trustpilot). Über ein Inhalts-Element "2 Spalten" können 2 Buttons eingefügt werden:
-![editor_full.de.png](editor_full.de.png?lightbox=true&resize=600)
+[doc-image src="editor_full.de.png" alt="Vorlagen-Editor" width="600px" /]
 
 
 (Der untere Hinweis auf ShopVote kann natürlich entfernt werden).
@@ -48,7 +48,7 @@ Der "Ja" Button führt in diesem Bespiel zur Bewertungs-Urls bei Shopvote, der "
 
 Und die Emails sind natürlich auch gleich responsive:
 
-![editor_mobil.de.png](editor_mobil.de.png?lightbox=true&resize=600)
+[doc-image src="editor_mobil.de.png" alt="Mobile Vorschau im Vorlagen-Editor" width="600px" /]
 
 
 Und wenn man möchte, könnte man diese Email auch gleich noch mit personalisierten Produkt-Empfehlungen anreichern - das Inhalts-Element "Live-Content" bietet hierzu eine Vielzahl an Möglichkeiten.

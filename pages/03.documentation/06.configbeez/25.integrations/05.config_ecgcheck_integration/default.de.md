@@ -40,7 +40,9 @@ metadata:
 #  last_modified: true
 ---
 
->>>>Wichtig für alle Marketing-Emails an Email-Adressen aus Österreich (AT)  
+> [!WARNING]
+> Wichtig für alle Marketing-Emails an Email-Adressen aus Österreich (AT)
+
  Bitte die passende Erweiterung unter **<https://apps.mailbeez.de/dashboard> > Tarife > Details anzeigen > Addons buchen**
 
 Diese Integration mit dem Online-Service ECG-Check.at gleicht automatisch alle Email-Adressen direkt vom dem Versand mit der österreichischen ECG-Liste ab. Bei positivem Treffer einer Email-Adresse bzw. Email-Domain wird die betroffene Email-Adresse blockiert.
@@ -50,7 +52,9 @@ Somit ist sichergestellt, dass keine Emails an Personen oder Unternehmen gesende
 
 
 
->>>>>**Was ist die ECG-Liste?**  
+> [!NOTE]
+> **Was ist die ECG-Liste?**
+
   In der von der RTR-GmbH geführten Liste können sich Personen und Unternehmen kostenlos eintragen, die keine Werbe-E-Mails erhalten möchten.  
   **Wer muss die ECG-Liste beachten?**  
   Alle Unternehmer, die E-Mail-Werbung unaufgefordert versenden, müssen diese Liste beachten.    

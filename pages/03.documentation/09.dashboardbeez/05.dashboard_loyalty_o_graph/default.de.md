@@ -42,4 +42,5 @@ Das Modul analysiert die Bestell-Datenbank Ihres Shops und ermittelt für jeden 
 
 Somit können Sie leicht den Stammkunden-Anteil ermitteln - und können auch nachvollziehen, wie das MailBeez System hierauf Einfluss nehmen kann.
 
->>>>>Wenn Sie durch entsprechende Aktionen viele Neukunden gewinnen, kann es aussehen, alsob die Kundenloyalität fällt - der Anteil an Bestellungen von bestehenden Kunden wird relativ geringer.
+> [!NOTE]
+> Wenn Sie durch entsprechende Aktionen viele Neukunden gewinnen, kann es aussehen, alsob die Kundenloyalität fällt - der Anteil an Bestellungen von bestehenden Kunden wird relativ geringer.

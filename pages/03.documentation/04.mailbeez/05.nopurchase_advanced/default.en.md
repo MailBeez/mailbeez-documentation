@@ -63,7 +63,9 @@ Check out [Abandoned Cart Advanced](/documentation/mailbeez/abandoned_cart_advan
 - Configurable to check for items in the customer’s shopping cart, allowing you to choose whether this group of customers will receive a coupon or not
 
 
->>>>>>Together with [Abandoned Cart Advanced](/documentation/mailbeez/abandoned_cart_advanced) you can distinguish between **customers w/o purchase and empty cart** and **customer w/o purchase but items in cart**. To achieve this please activate the option `Check For Empty Customer Basket` and in [Abandoned Cart Advanced](/documentation/mailbeez/abandoned_cart_advanced) deactivate the option `Check for previous Orders`.  
+> [!TIP]
+> Together with [Abandoned Cart Advanced](/documentation/mailbeez/abandoned_cart_advanced) you can distinguish between **customers w/o purchase and empty cart** and **customer w/o purchase but items in cart**. To achieve this please activate the option `Check For Empty Customer Basket` and in [Abandoned Cart Advanced](/documentation/mailbeez/abandoned_cart_advanced) deactivate the option `Check for previous Orders`.
+
  With these settings the module "No Purchase Advanced" will only target potential customers with empty cart, while [Abandoned Cart Advanced](/documentation/mailbeez/abandoned_cart_advanced) will follow up on any customer with products in cart.
 
 #### Take a look at some more great features below - click to open!

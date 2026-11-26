@@ -115,4 +115,5 @@ The faulty entries will be deleted from your system. Depending on the timing and
 ####Ignore
 The faulty entries will be marked, and the system will not try to send them again.
 
->>>>>>Please check the configuration of your SMTP server in case you get many errors. Some SMTP-Server might be configured to send only emails with a specific sender domain. So for a different sender-domain the SMTP-Server will quit with an error.
+> [!TIP]
+> Please check the configuration of your SMTP server in case you get many errors. Some SMTP-Server might be configured to send only emails with a specific sender domain. So for a different sender-domain the SMTP-Server will quit with an error.

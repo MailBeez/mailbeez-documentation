@@ -36,7 +36,8 @@ metadata:
 #  last_modified: true
 ---
 
->>>>>>Dieser Bericht kann schnell und kompfortable vom MailBeez Dashboard über den "Beez-O-Graph" geöffnet werden. Mit Klick auf die Legende **Emails versendet**, **geöffnet**, **geklickt** oder **bestellt** werden die entsprechenden Daten gefiltert angezeigt
+> [!TIP]
+> Dieser Bericht kann schnell und kompfortable vom MailBeez Dashboard über den "Beez-O-Graph" geöffnet werden. Mit Klick auf die Legende **Emails versendet**, **geöffnet**, **geklickt** oder **bestellt** werden die entsprechenden Daten gefiltert angezeigt
 
 MailBeez protokolliert jeden Email-Versand. Diese Tracking Daten werden verwendet, um sicherzustellen, dass jede Email nur genau 1x versendet wird - und verhinder damit den Mehrfach-Versand von Emails.
 
@@ -47,6 +48,7 @@ Der Bericht gibt auch Auskunft darüber, in welcher Betriebs-Art die Email verse
 - **PROD**:  Abmeldung im Produktions-Modus
 - **[SIM]**:  Abmeldung im Simulations-Modus
 
->>>>>Das Abmelden im Simulations-Modus wird nur dann richtig erfasst, wenn unter MailBeez > Konfiguration > Simulation die "Simulations-Protokollierung" aktiviert (True) ist.
+> [!NOTE]
+> Das Abmelden im Simulations-Modus wird nur dann richtig erfasst, wenn unter MailBeez > Konfiguration > Simulation die "Simulations-Protokollierung" aktiviert (True) ist.
 
 Die Simulations-Daten können mit Klick auf "Simulation neu starten" gelöscht werden.

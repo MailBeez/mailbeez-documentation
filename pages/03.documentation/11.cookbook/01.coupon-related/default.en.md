@@ -30,7 +30,8 @@ taxonomy:
 
 ## Coupon giveaway for registering to receive newsletters
 
->>>>>>  In compliance with certain exceptions, stores are allowed to contact their customers without explicit consent via email. Read more on [legal information](/about/legal-information)
+> [!TIP]
+> In compliance with certain exceptions, stores are allowed to contact their customers without explicit consent via email. Read more on [legal information](/about/legal-information)
 
 
 ### Requirement
@@ -52,7 +53,7 @@ Just follow these steps:
 1. In segmentation settings, in section `customer`, configure the following:
     - Customer Signup Age Min: 0
     - Customer Signup Age Max: 1 (or a higher value if you want to send a coupon to past subscribers)
-![List](Screen_welcome_list.en.png?lightbox=true)
+[doc-image src="Screen_welcome_list.en.png" alt="Newsletter list" /]
 1. Scroll down and click `update` to save the segmentation.
 1. Back in the `Edit Lists` window, click `Test Segmentation` - you will now see customers matching the segmentation criteria - click on a customer, and the Customer Insight window opens.
 
@@ -76,7 +77,7 @@ You have now created a list of the latest newsletter subscribers.
     - Note: If your store is set up for several languages, you need to design the other language templates as well.
 1. Once you are happy with the design and test emails, you can click on `ready for sending` to activate the newsletter.    
 
-![List](Screen_welcome_email.en.png?lightbox=true)
+[doc-image src="Screen_welcome_email.en.png" alt="Welcome email" /]
 
 Congratulations! You have now created a Welcome newsletter, which will be sent to all recipients matching your segmentation list the next time the sending process is triggered.
 
@@ -145,6 +146,7 @@ Congratulations! You have created an email, which will be sent to the customers 
 To offer multiple gift vouchers, just repeat the steps above for each additional gift voucher.
 
 
->>>>> **Current limitations**:   
->>>>> Only 1 voucher can be sent for each customer, and for each purchase.  
->>>>> **Please contact us in case you have additional requirements.**  
+> [!NOTE]
+> **Current limitations**:\
+> Only 1 voucher can be sent for each customer, and for each purchase.\
+> **Please contact us in case you have additional requirements.**

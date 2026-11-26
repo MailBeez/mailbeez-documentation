@@ -42,4 +42,5 @@ Delivered with the free MailBeez framework software, the Beez-O-Graph is a power
 
 When MailBeez is first installed, there won’t be a graph displayed by this widget because there has been no data tracked and therefore nothing to display. Once you get your MailBeez email campaigns up and running, this widget will be populated with data in no time at all!
 
->>>>>>Make sure you try to click every item to dive into more detailed data!
+> [!TIP]
+> Make sure you try to click every item to dive into more detailed data!

@@ -53,7 +53,8 @@ metadata:
 #  last_modified: true
 ---
 
->>>>>>Alle Premium MailBeez Email Module sind grundsätzlich bereits von dem MailBeez Copyright Hinweis befreit
+> [!TIP]
+> Alle Premium MailBeez Email Module sind grundsätzlich bereits von dem MailBeez Copyright Hinweis befreit
 
 
 **Dieses Module entfernt den Copyright Hinweis aus alle Emails, die mit den kostenlosen Modulen generiert werden.**

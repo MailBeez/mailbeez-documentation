@@ -36,10 +36,14 @@ metadata:
 #  last_modified: true
 ---
 
-Hier gibt es die gesamte verfügbare Dokumentation zu MailBeez und allen Modulen – schon ganz schön umfangreich aber niemals vollständig…
+Hier finden Sie Anleitungen zur Installation, zu Kampagnen und den Funktionen von MailBeez.
 
-Das Menü links hilft, den Überblick zu behalten – gruppiert nach Anwendungstypen. Und die Such-Funktion findet schnell passende Inhalte.
+[doc-grid columns="2"]
+[doc-link-card href="/de/schnelleinstieg" title="Schnelleinstieg" description="Lernen Sie MailBeez Schritt für Schritt kennen." icon="tabler/book.svg" /]
+[doc-link-card href="/de/grundlagen/installation" title="Installation" description="Finden Sie die Anleitung für Ihr Shopsystem." icon="tabler/download.svg" /]
+[doc-link-card href="/de/mailbeez" title="Automatisierungen" description="Entdecken Sie die Module für Ihre E-Mail-Kampagnen." icon="tabler/bolt.svg" /]
+[doc-link-card href="/de/mailbeez/newsletter" title="Newsletter" description="Lesen Sie die Anleitung zum Newsletter-Modul." icon="tabler/mail.svg" /]
+[/doc-grid]
 
-
-
->>>>>> Auf jeder Seite finden Sie die **Vor** und **Zurück** Pfeile (<i class="fa fa-chevron-left"></i> <i class="fa fa-chevron-right"></i>) mit denen Sie leicht durch die Dokumentation navigieren können. Im Menü links sehen Sie anhand der Markierungen (<i class="fa fa-check"></i>), welche Seiten Sie bereits besucht haben.
+> [!TIP]
+> Wählen Sie ein Thema in der Seitenleiste oder suchen Sie nach einer Funktion oder einem Modul.

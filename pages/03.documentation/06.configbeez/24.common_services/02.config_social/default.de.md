@@ -38,7 +38,8 @@ Als gemeines Dienst-Modul erlaubt dieses Unter-Modul das Einfügen von Social Sh
 
 ![](Screen_social_email.de.jpg?resize=582)
 
->>>>> Standardmässig sind die Share Link nicht in den responsive Email Vorlagen enthalten, um diese so schlank wie möglich zu halten.
+> [!NOTE]
+> Standardmässig sind die Share Link nicht in den responsive Email Vorlagen enthalten, um diese so schlank wie möglich zu halten.
 
 
 Nachfolgendes Beispiel zeigt, wie die Social Sharing Link - in diesem Fall die Vorlage "tiny" - in die Produkt-Listen Vorlagen unter Verwendung von `{$products[product].social_tiny}` eingfügt werden kann: 

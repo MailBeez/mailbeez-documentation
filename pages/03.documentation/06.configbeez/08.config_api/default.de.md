@@ -29,6 +29,7 @@ Die MailBeez API (**A**pplication **P**rogram **I**nterface)  ermöglicht die In
 
 Sie können hier den API Key konfigurieren.
 
->>>Die MailBeez API ist erweiterbar und die zur Verfügung stehenden Funktionen sind abhängig von den installierten Modulen.
+> [!NOTE]
+> Die MailBeez API ist erweiterbar und die zur Verfügung stehenden Funktionen sind abhängig von den installierten Modulen.
 
 Aktuell stehen folgende API Module zur Verfügung:

@@ -44,4 +44,5 @@ By default, it displays 365 days worth of data, but this number of days can be c
 
 When MailBeez is first installed, this widget analyzes the database of orders for recurring orders and populates right away. Handy!
 
->>>>>The customer loyalty might seem to drop when you start to acquire new customers - the relative number of repeated orders will become small as you get more orders by first-time buyers.
+> [!NOTE]
+> The customer loyalty might seem to drop when you start to acquire new customers - the relative number of repeated orders will become small as you get more orders by first-time buyers.

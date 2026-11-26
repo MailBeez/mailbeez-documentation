@@ -57,4 +57,5 @@ An order counts as referred by email, when one of the following conditions are m
 - order following a click on a link
 - placing an order using the unique personalized coupon from the email
 
->>>>>  open / clicks on copy-to emails are not counted as these emails are separate emails with a different message-id. so only open / click actions of the real recipients are counted.
+> [!NOTE]
+> open / clicks on copy-to emails are not counted as these emails are separate emails with a different message-id. so only open / click actions of the real recipients are counted.

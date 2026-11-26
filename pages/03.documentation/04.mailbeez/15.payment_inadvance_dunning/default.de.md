@@ -63,7 +63,8 @@ Um Vorkasse-Bestellungen mit offener Zahlung im System erkennen zu können, müs
 
 Für eine automatische Stornierung muss es eine Bestellstatus z.B. “storniert” geben.
 
->>>> Bei Fehl-Konfiguration kann es zu Fehlfunktionen z.B. in Verbindung mit externen Systemen kommen.
+> [!WARNING]
+> Bei Fehl-Konfiguration kann es zu Fehlfunktionen z.B. in Verbindung mit externen Systemen kommen.
 
 
 [plugin:content-inject](/content_blocks/pro_responsive_template)
