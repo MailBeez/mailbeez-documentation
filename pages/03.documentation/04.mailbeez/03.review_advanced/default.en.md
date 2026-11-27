@@ -1,5 +1,6 @@
 ---
-title: 'Review Reminder Advanced - Autologin'
+title: "Product reviews"
+module_subtitle: "Ask for product reviews"
 slug: review_advanced
 date: 21-06-2011
 published: true
@@ -19,7 +20,9 @@ taxonomy:
         - docs
     tag:
         - pro
+        - "Ask for product reviews"
 module:
+    plans_position: after_guide
     mc_ready: true
     code: review_advanced
     category:
@@ -48,33 +51,35 @@ metadata:
     author: admin
 ---
 
-This module integrates with the product rating feature of your store system!
+A customer buys a hand grinder from your coffee shop. On delivery day they can tell you whether the box arrived safely. After a week of making espresso, they can tell the next buyer how easy it is to adjust the grind. Use this flow to invite them to review the grinder on its product page.
 
-**Turbo charge your eCommerce store’s product reviews, and increase conversion rates with the Mailbeez Review Reminder module with Auto-login.**
+Each email step uses the same wording for every product. MailBeez adds review links for eligible items from the buyer’s order. If someone ordered a grinder and beans and has already reviewed the beans, their invitation lists just the grinder.
 
-Once a customer has paid and received their purchase from your store, they really have no motivation to return at a later date to write a product review. Whilst one or two of your customers will perhaps have a review mindset developed from frequenting larger, more established online stores, unfortunately they will always be in the minority.
+## Set up the flow
 
-**The Mailbeez Way!**
+Open **Campaigns → Automations → MailBeez Flows → Ask for product reviews**, then choose **Options → Configure**.
 
-The solution for a lack of product reviews from your store is to get proactive. To this end, Mailbeez offers you an easy to set up, fully automated solution in ‘Review Reminder Advanced’. This solution is designed to email your customers at specific intervals, and invites them to write product reviews for their recent purchase(s); all done in a non-invasive and intelligent manner.
+<span id="time-the-invitation-and-r"></span>
+<span id="settings-to-check"></span>
 
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+[doc-steps]
+[doc-step]
+**Give buyers time to try the product**
 
+Choose your shipped status under **Order Status Trigger**. Set **Wait after the order status changes** to a delay that allows for delivery and time to try the products, for example 10 days. The delay applies to all qualifying orders. Set **Maximum age of the status change** above that wait to limit how far back MailBeez looks for eligible orders.
+[/doc-step]
+[doc-step]
+**Choose the invitation and reminders**
 
-Depending on your store’s image settings, you might need to customize the templates to get the best results. However, you can also create your own templates, and the module will add them to the template selector.
+Use a request that works for anything in the order, such as “Help other shoppers choose. Review an item from your order.”
 
-#### Take a look at some more great features
+Set **Number of emails** to one for a single invitation. If you want to remind buyers, **Wait before email 2** counts from the first email and **Wait before email 3** from the second.
+[/doc-step]
+[doc-step]
+**Check where the buyer lands**
 
-**Easy Reviewing with Auto-Login – Get more reviews!**
+Open a product link in a test invitation and check the item and review form. **Open the rating form without another login** controls whether the buyer has to sign in again. Use an order with two products to see how the email handles the selection.
+[/doc-step]
+[/doc-steps]
 
-They've bought and liked your products, but customers do not need to jump through hoops just to give you their feedback. If you can make the review process as simple as possible, you'll be rewarded with more and better reviews. Luckily, Mailbeez has got you covered, as the Review Reminder module boasts a seamless ‘auto login’ feature, that automatically signs in customers after they click through from the request email. This allows customers to start writing product review straight away. No need to worry about security either. The auto login feature is only valid for writing reviews. This means that other pages on the site, like the “my account” area, still requires a manual login with valid user credentials. 
-
-To enable the autologin-functionality, you need to modify your shopping-cart system’s “product\_reviews\_write” page by adding just 2 lines of code. The download package comes with instructions for all platforms (osCommerce, ZenCart, xtCommerce) to assist you with this.
-
-
-[plugin:content-inject](/content_blocks/pro_common_advantage)
-
-
-#### Up the tempo with the Review-o-Meter
-
-Follow your rate of review from the Mailbeez Dashboard on the admin panel of your shopping-cart system using the “[Review-O-Meter](/documentation/dashboardbeez/dashboard_review_o_meter/ "Review-O-Meter")” (already part of your MailBeez platform). This handy visual widget gives you direct feedback on how your store is performing with regards to posted reviews for your products. Fun and informative, it’s just one of the many ways Mailbeez can assist you in increasing both conversion rates and product reviews... and consequently revenue.
+To follow the invitation from a shipped order to its review form, use [Schedule a review invitation](/cookbook/optimized-review-invite-flow). If a buyer is waiting for an email, [check the scheduled run](/quickstart/step-3-set-forget) and [look up the send](/sending-status).

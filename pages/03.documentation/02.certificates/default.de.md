@@ -37,26 +37,16 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez Premium Module erfordern ein gültiges Zertifikat. Dieses Zertifikat ist an die Shop-Domain gebunden und nur für diese Domain gültig.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+[Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Im Bestell-Ablauf ist die Shop-Domain einzugeben.
+Bestelle das Zertifikat für ein früheres Premium-Modul für genau den Hostnamen des Shops, in dem es laufen soll. Ein Zertifikat gilt für eine Domain.
 
-Damit wir ein gültiges Zertifikat generieren können, ist die Eingabe der genauen Shop-Domain wichtig!
+Prüfe den Hostnamen im Shop, für den du das Zertifikat brauchst. Testshop und öffentlicher Shop können gleich aussehen und trotzdem unterschiedliche Hostnamen verwenden.
 
-Die genaue Shop-Domain ist schnell zu finden unter:
+1. Öffne in diesem Shop **MailBeez → Über MailBeez** und suche unten im rot umrandeten Feld **Domain for Certification:** den Hostnamen.
+2. Übernimm den Hostnamen einschließlich einer angezeigten Subdomain in die Bestellung.
+3. <span id="zertifikate-fuer-test-ser"></span>Nutzt du zusätzlich einen Testshop, lies dessen Domain dort auf dieselbe Weise ab und trage sie im Feld für den Testserver ein. Andernfalls bleibt das Feld leer.
 
-> MailBeez > Über MailBeez
-
-Im unteren Bereich der Seite befindet sich ein rot eingerahmter Kasten mit Titel “Domain for Certification:”
-
-In diesem roten Kasten befindet sich die genaue Shop-Domain, bitte genau diese Domain im Bestell-Ablauf eingeben.
-
-### Zertifikate für Test-Server
-
-Test-Server werden verwendet, um Erweiterungen vor dem Einsatz im “echten” Online-Shop zu testen. Um Premium-Module auf einem Test-Server testen zu können ist ein kostenloses Zertifikat für diesen Server erforderlich.
-
-Bitte die genaue (siehe oben) Shop-Domain des Test-Servers im Bestell-Ablauf eingeben.
-
-Zertifkate für Test-Server werden manuell nach Prüfung erstellt und typisch innerhalb von 24 Stunden per E-Mail geschickt.
-
-Fall es keinen Test-Server gibt, bitte das Feld leer lassen
+Beim damaligen Bestellverfahren war das Testzertifikat kostenlos. Es wurde manuell geprüft, üblicherweise innerhalb von 24 Stunden.

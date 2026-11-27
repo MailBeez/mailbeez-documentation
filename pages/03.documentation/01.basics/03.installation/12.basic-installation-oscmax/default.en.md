@@ -36,112 +36,58 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez works with osCMax v2.0.25, running on php 5.3+
+[doc-callout type="note" title="Installation for earlier shop releases"]
+Check the version in your shop admin. For a different release, look under [Installation](/basics/installation) or in the [legacy reference](/legacy).
+[/doc-callout]
 
-The installation is straight forward and can be done in a couple of minutes by following these three steps:
+Use the installer for osCMax 2.0.25. The historical package specified PHP 5.3 or later.
 
-- copy new files
-- modify existing files
-- add admin access
-
-## Step 1 – copy new files
+Registering the file and granting group access are separate steps. Both matter when a staff member needs to open MailBeez from the shop admin.
 
 [plugin:content-inject](/content_blocks/download_installer)
 
+## Copy the shop files
 
-copy following file to your admin-directory
+<span id="step-1-copy-new-files"></span>Copy `catalog/admin/mailbeez.php` into the shop’s admin directory. Copy `catalog/mailhive/` and `catalog/mailhive.php` into the shop root alongside `index.php`.
 
-```bash
-mailbeez.php
-```
+## Register the filenames
 
+<span id="step-2-modify-existing-fi"></span><span id="1-add-the-filename-defini"></span>Open `admin/includes/filenames.php` in the shop installation.
 
-copy following file and folder to your catalog-directory (where your index.php is located)
+Add the admin filename definition.
 
-```bash
-mailhive (folder)
-mailhive.php
-```
-
-## Step 2 – modify existing files
-
-### 1. Add the filename definition
-
-located and open the file
-
-```bash
-admin/includes/filenames.php
-
-```
-
-
-add e.g. at the end
-
-```bash
+```php
 define('FILENAME_MAILBEEZ', 'mailbeez.php');
 define('FILENAME_HIVE', 'mailhive.php');
-
 ```
 
+Open `includes/filenames.php` in the shop installation.
 
-do almost the same for your catalog:
+Add the storefront filename definition.
 
-```bash
-includes/filenames.php
-
-```
-
-
-add
-
-```bash
+```php
 define('FILENAME_HIVE', 'mailhive.php');
-
 ```
 
+## Add the admin menu entry
 
-### 2. Add a menu entry
+<span id="2-add-a-menu-entry"></span>Open `admin/includes/boxes/tools.php` in the shop installation.
 
-located and open the file
+Locate this fragment in the existing file.
 
-```bash
-admin/includes/boxes/tools.php
-
-```
-
-
-find
-
-```
+```text
 tep_admin_files_boxes(FILENAME_WHOS_ONLINE, BOX_TOOLS_WHOS_ONLINE, TOP));
 ```
 
-replace with
+Replace the matching entry with the following.
 
-```
+```php
 tep_admin_files_boxes(FILENAME_WHOS_ONLINE, BOX_TOOLS_WHOS_ONLINE, TOP) . tep_admin_files_boxes(FILENAME_MAILBEEZ, 'MailBeez', TOP));
 ```
 
+## Grant group access
 
-this will add the menu-entry “MailBeez” to your Tools-Box. Feel free to place this link whereever you want.
-
-### Step 3: add admin access
-
-Administrator > File Access
-
-1. Click Folder “Tools”
-2. Click Button “store files”
-3. Select “mailbeez.php” in dropdown list
-4. Click Button “save”
-
-Administrator > Member Groups
-
-1. Click Button “Groups”
-2. Select the Group you would like to give access to MailBeez
-3. Click Button “new permission”
-4. Check mailbeez.php in section “Tools”
-
-repeat for any group you would like to give access to MailBeez
-
+1. <span id="step-3-add-admin-access"></span>Under **Administrator → File Access**, open **Tools → store files**, choose `mailbeez.php` and save.
+2. Under **Administrator → Member Groups → Groups**, choose the group and open **new permission**. Select `mailbeez.php` under **Tools**. Repeat for each group that needs access.
 
 [plugin:content-inject](/content_blocks/run_installer)

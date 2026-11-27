@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: The MailBeez News Feed Widget
+title: "MailBeez news"
+module_subtitle: "Show MailBeez news in the earlier dashboard"
 slug: dashboard_latest_news
 # menu: The MailBeez News Feed Widget
 date: 17-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "The MailBeez News Feed Widget"]
 # added collection selector
 
 author:
@@ -36,7 +37,8 @@ metadata:
 #  last_modified: true
 ---
 
+[doc-callout type="note" title="Earlier dashboard widget"]
+For the current workspace, open the [V5 dashboard guide](/dashboard). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-Delivered with the free MailBeez framework software, this dashboard widget connects you to the MailBeez news feed service and displays news items right on your dashboard.
-
-Stay up to date on new releases, bug fixes, tips & tricks, and more!
+Read announcements from the MailBeez news feed on the older dashboard. If you need the changes for a particular version, choose its release year in [Changelog](/changelog).

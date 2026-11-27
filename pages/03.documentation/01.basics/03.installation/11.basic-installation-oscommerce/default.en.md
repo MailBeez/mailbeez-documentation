@@ -36,59 +36,32 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez works with osCommerce ms2.2 / rca2, running on php 5.3+
+[doc-callout type="note" title="Installation for earlier shop releases"]
+Check the version in your shop admin. For a different release, look under [Installation](/basics/installation) or in the [legacy reference](/legacy).
+[/doc-callout]
 
-The installation is straight forward and can be done in a couple of minutes by following these two steps:
-
-- copy new files
-- modify existing files
-
-## Step 1 – copy new files
+Use the installer for osCommerce MS2.2 / rca2. The historical package specified PHP 5.3 or later.
 
 [plugin:content-inject](/content_blocks/download_installer)
 
+## Copy the shop files
 
-copy following file to your admin-directory
+<span id="step-1-copy-new-files"></span>Copy `catalog/admin/mailbeez.php` into the shop’s admin directory. Copy `catalog/mailhive/` and `catalog/mailhive.php` into the shop root alongside `index.php`.
 
-```bash
-mailbeez.php
-```
+## Add the admin menu entry
 
+<span id="step-2-modify-existing-fi"></span>Open `admin/includes/boxes/tools.php` in the shop installation.
 
-copy following file and folder to your catalog-directory (where your index.php is located)
+Locate this fragment in the existing file.
 
-```bash
-mailhive (folder)
-mailhive.php
-```
-
-
-## Step 2 – modify existing files
-
-
-located and open the file
-
-```bash
-admin/includes/boxes/tools.php
-```
-
-
-find
-
-```
+```text
 BOX_TOOLS_WHOS_ONLINE . '</a>'
 ```
 
+Insert the following immediately after that line.
 
-add
-
-```
+```php
 . '<br><a href="' . tep_href_link(FILENAME_MAILBEEZ, '', 'NONSSL') . '">MailBeez</a><br>'
 ```
-
-
-this will add the menu-entry “MailBeez” to your Tools-Box.
-
-Feel free to place this link whereever you want.
 
 [plugin:content-inject](/content_blocks/run_installer)

@@ -1,5 +1,6 @@
 ---
-title: 'Shoprating Invite'
+title: "Store reviews (Simple)"
+module_subtitle: "Ask buyers to rate their shopping experience"
 published: true
 date: '13-05-2014 00:00'
 publish_date: '13-05-2014 00:00'
@@ -11,6 +12,7 @@ template: docs
 taxonomy:
     tag:
         - core
+        - "Shoprating simple - ask your customer for a rating"
     category:
         - docs
 module:
@@ -29,10 +31,12 @@ author:
     name: admin
 ---
 
-This module invites your customers to write a review using the included [Shoprating](/documentation/configbeez/config_shopvoting/) module.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To set up a shop-review invitation in V5, open [Ask for reviews on your store](/mailbeez/shoprating_advanced). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-The shopvoting module allows your customers to rate your store. You can edit these ratings in your store admin and display them on your storefront.
+Use the earlier simple module to ask about the shopping experience after an order. Set up the store’s review page and open it from a test invitation before enabling the module.
 
+Choose a question the buyer can answer about the whole order, such as how the parcel was packed. That helps you interpret feedback about the shop.
 
-For a progressional application of the shop voting module please use the MailBeez Module "[Shoprating invite advanced](/documentation/mailbeez/shoprating_advanced/ "shop voting advanced")", which will generate up to twice as many ratings and allows you to dynamically integrate them into your MailBeez Emails e.g. [Winback Advanced](/documentation/mailbeez/winback_advanced/)
-
+Choose the order status that starts the invitation. Allow enough time for the buyer to receive the order before you ask about their experience.

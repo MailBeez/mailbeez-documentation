@@ -1,13 +1,13 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Schnellstart
+title: "Erste Kampagne einrichten"
 slug: quickstart
 # menu: Schnellstart
 date: 27-05-2010
 published: true
 publish_date: 27-05-2010
 # unpublish_date: 27-05-2010
-template: chapter
+template: docs
 # theme: false
 visible: false
 summary:
@@ -36,4 +36,8 @@ metadata:
 #  last_modified: true
 ---
 
-#Schnellstart
+Nutze für den Schnelleinstieg einen Shop und eine Testadresse. Wähle einen Anlass, den du selbst auslösen kannst, etwa die Registrierung eines Kundenkontos. Nach der Einrichtung suchst du die Adresse im Versandprotokoll und siehst, was mit der ersten E-Mail passiert ist.
+
+1. [MailBeez installieren](/quickstart/step-1-download-install-mailhive)
+2. [Automatisierung auswählen](/quickstart/step-2-choose-your-mailbeez)
+3. [Automatische Verarbeitung prüfen](/quickstart/step-3-set-forget)

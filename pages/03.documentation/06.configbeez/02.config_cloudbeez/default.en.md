@@ -1,5 +1,7 @@
 ---
-title: MailBeez CloudLoader
+title: "CloudLoader & licenses"
+module_subtitle: "Check which modules and licenses are assigned to your shop"
+show_hosted_settings_note: false
 slug: config_cloudbeez
 date: 28-09-2015
 published: true
@@ -19,8 +21,15 @@ metadata:
     author: admin
 ---
 
-This module allows you to configure the integration with the apps.mailbeez.com Server - important to e.g. install and update Pro subscriptions.
+If a licensed module is missing, look up the license for the shop where you expect to see it. Have the domain and module name ready, especially if your test and live shops look alike.
 
-You find your matching API-key on https://apps.mailbeez.com in section "Overview". Either navigate to "Subscriptions" or "Domains" and open the matching entry. Copy the API key and insert it here.
+Open **System → Configuration** and select **CloudLoader & licenses**.
 
-If you don't want to continue to use a subscription it is recommended to remove the API Key. In case you are having local certificate these will become active again.
+In a self-hosted shop, use this page to review module updates before installing them.
+
+<span id="settings-to-check"></span>
+
+## Find the license key for this shop
+
+- **Your API-Key**<br>
+  Enter the personal API key for your connection to apps.mailbeez.com.

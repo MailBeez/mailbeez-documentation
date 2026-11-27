@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: "Shopauskunft: Gutschein für Bewertungen"
+title: "Shopauskunft-Gutscheine"
+module_subtitle: "Eine Shopauskunft-Bewertung mit einem persönlichen Gutschein belohnen"
 slug: coupon_review_shopauskunft
 # menu: Shopauskunft: Gutschein für Bewertungen
 date: 08-02-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro,coupon]
+    tag: [pro,coupon, "Shopauskunft: Gutschein für Bewertungen"]
 module:
     code: 'coupon_review_shopauskunft'
     category: [mailbeez]
@@ -49,15 +50,18 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses Modul erfordert die [Mailbeez Shopauskunft Integration Suite ](/dokumentation/configbeez/config_shopauskunft_integration/ "Mailbeez Shopauskunft Integration Suite").
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Gutscheine](/content/coupons) einen erzeugten Gutscheincode nachschlagen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-**Bedanken Sie sich beim Kunden für das Abgeben von Bewertungen auf Shopauskunft**
+Vergib einen persönlichen Gutschein für eine Shopauskunft-Bewertung, sobald sie im Shop vorliegt. Prüfe deshalb zuerst den Import.
 
-Bewertungen auf Shopauskunft.de sind für Online-Shops (nahezu) Gold wert! Statistiken zeigen, dass eine grosse Anzahl von Bewertungen den Umsatz steigern.
+Sieht ein Käufer seine Bewertung bereits bei Shopauskunft, hat aber noch keine Prämie erhalten, prüfe zuerst, ob die Bewertung im Shop angekommen ist.
 
-**Personaliserte Gutscheine schützen vor ungewünschter Verbreitung**
+1. Richte [Bewertungen von Shopauskunft importieren](/configbeez/integrations/config_shopauskunft_integration) ein, damit die Bewertung erfasst wird.
+2. Lege fest, nach wie vielen Bewertungen ein Kunde einen Gutschein erhalten soll. Wähle das Angebot und prüfe den Gutscheinwert.
+3. Prüfe in der Vorschau, ob Angebot und persönlicher Code gemeinsam in der E-Mail erscheinen.
 
 [plugin:content-inject](/content_blocks/pro_coupon)
 
 [plugin:content-inject](/content_blocks/pro_responsive_template)
-

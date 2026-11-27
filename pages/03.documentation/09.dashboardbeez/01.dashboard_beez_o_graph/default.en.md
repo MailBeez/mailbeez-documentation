@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: The Beez-O-Graph
+title: "Beez-O-Graph"
+module_subtitle: "Compare the sending and engagement figures shown by the earlier widget"
 slug: dashboard_beez_o_graph
 # menu: The Beez-O-Graph
 date: 17-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "The Beez-O-Graph"]
 # added collection selector
 
 author:
@@ -36,11 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
-Delivered with the free MailBeez framework software, the Beez-O-Graph is a powerful widget with an intuitive graph display that provides you with a visual report of your daily MailBeez Analytics data, such as number of emails sent, number of emails opened, number of email links clicked, number of products ordered as a result of your emails, and number of customer opt-outs.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To compare sends, opens and clicks in V5, open [Email performance](/mailbeez-results/email-performance). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
- By default, it displays 30 days worth of data, but this number of days can be changed in the Beez-O-Graph configuration settings.
+Use the older Beez-O-Graph to locate the day when sends, opens or clicks changed. Select the relevant legend entry to open [Email Tracking Report](/reportbeez/report_track) with the matching filter.
 
-When MailBeez is first installed, there won’t be a graph displayed by this widget because there has been no data tracked and therefore nothing to display. Once you get your MailBeez email campaigns up and running, this widget will be populated with data in no time at all!
-
-> [!TIP]
-> Make sure you try to click every item to dive into more detailed data!
+A spike in clicks is easier to interpret alongside the number of sends that day. A larger mailing can produce more clicks even if individual engagement is similar.

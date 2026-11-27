@@ -1,5 +1,6 @@
 ---
-title: 'No Purchase Advanced'
+title: "First order"
+module_subtitle: "Invite registered customers who haven’t ordered yet to make their first purchase"
 slug: nopurchase_advanced
 date: 07-10-2011
 published: true
@@ -20,7 +21,9 @@ taxonomy:
     tag:
         - pro
         - coupon
+        - "Encourage a first order"
 module:
+    plans_position: after_guide
     mc_ready: true
     code: nopurchase_advanced
     category:
@@ -47,37 +50,30 @@ metadata:
     author: admin
 ---
 
+Someone opens an account in your wine shop but leaves before choosing a bottle. A few days later, a short guide to your tasting cases could help them place their first order. You could follow up with a first-order coupon if they still haven’t bought anything.
 
-This highly useful eCommerce email add-on gives you the tools to automatically email customers who created an account, but did not purchase from your store, at the same time offering them a personalized discount coupon to tempt them into making their first purchase.
+This flow starts from the registration date and checks whether the customer has placed an order. A shopper who bought a case and hasn’t returned belongs in [Win back inactive customers](/mailbeez/winback_advanced).
 
+## Set up the flow
 
-Check out [Abandoned Cart Advanced](/documentation/mailbeez/abandoned_cart_advanced) how to follow up on open carts of existing customers having ordered before.
+Open **Campaigns → Automations → MailBeez Flows → Encourage a first order**, then choose **Options → Configure**.
 
+[doc-steps]
+[doc-step]
+**Choose when to welcome a first order**
 
-**Top features of No Purchase Advanced**
+Set **First email: waiting period** to three days for the tasting guide. Use **Maximum age for starting the sequence** to decide how far back the first run should look for registrations. For example, with 14 days it can also find accounts opened last week.
+[/doc-step]
+[doc-step]
+**Decide how much help to offer**
 
-- Finds and emails customers who set up an account but never placed an order
-- Fully automated customer contact – just set and forget
-- Time delay configurable multi-step emailing
-- Entice non buying customers with a personalized offer coupon that can be set to increase in value in line with the multi step email process.
-- Configurable to check for items in the customer’s shopping cart, allowing you to choose whether this group of customers will receive a coupon or not
+Under **Number of emails**, choose one email for the guide alone or two for the guide and coupon. Set **Wait before email 2** to seven days for the second email. That week starts when the first email goes out. Choose **Coupon Template - Second Nopurchase Email** if you want that email to include an offer.
+[/doc-step]
+[doc-step]
+**Keep cart reminders separate**
 
+If you already send [cart reminders](/mailbeez/abandoned_cart_advanced), enable **Require an empty cart** here. A shopper with wine in their cart can then receive a message about that selection.
+[/doc-step]
+[/doc-steps]
 
-> [!TIP]
-> Together with [Abandoned Cart Advanced](/documentation/mailbeez/abandoned_cart_advanced) you can distinguish between **customers w/o purchase and empty cart** and **customer w/o purchase but items in cart**. To achieve this please activate the option `Check For Empty Customer Basket` and in [Abandoned Cart Advanced](/documentation/mailbeez/abandoned_cart_advanced) deactivate the option `Check for previous Orders`.
-
- With these settings the module "No Purchase Advanced" will only target potential customers with empty cart, while [Abandoned Cart Advanced](/documentation/mailbeez/abandoned_cart_advanced) will follow up on any customer with products in cart.
-
-#### Take a look at some more great features below - click to open!
-
-**Powerful campaigns to make customers place their first order**.
-
-[plugin:content-inject](/content_blocks/pro_coupon)
-
-[plugin:content-inject](/content_blocks/pro_common_advantage)
-
-[plugin:content-inject](/content_blocks/pro_responsive_template)
-
-#### See the results
-
-Mailbeez is pre installed with some great reporting widgets, one of which is the Nopurchase-O-Meter, which easily allows you to see what percentage of not-yet-customers are placing an order after receiving this email campaign, right from within your store’s admin area. See how many customers this module is bringing back to your store!
+[Check the first run](/quickstart/step-3-set-forget#check-the-first-run)

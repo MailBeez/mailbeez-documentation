@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Das Nopurchase-O-Meter
+title: "Nopurchase-O-Meter"
+module_subtitle: "Erstkäufe nach dem Kontakt mit registrierten Kunden prüfen"
 slug: dashboard_nopurchase_o_meter
 # menu: Nopurchase-O-Meter
 date: 25-10-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "Das Nopurchase-O-Meter"]
 
 # added collection selector
 
@@ -37,13 +38,10 @@ metadata:
 #  last_modified: true
 ---
 
-Das Nopurchase-O-Meter zeigt Ihnen, wie viele Kunden ohne Kauf Sie mit Hilfe von MailBeez als Kunden gewinnen konnten.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Flows & Newsletter](/mailbeez-results/flows-newsletters) Ergebnisse verschiedener Kampagnen vergleichen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-**Konfiguration**
+Prüfe, welcher Anteil der angeschriebenen Kunden nach der Kampagne erstmals bestellt hat. Lege für diese Kampagne einen Zielwert in Prozent fest und vergleiche ihn mit dem beobachteten Ergebnis. Den V5-Flow beschreibt [Zum ersten Kauf einladen](/mailbeez/nopurchase_advanced).
 
-In der Standard-Konfiguration werden die Daten der letzten 30 Tage ausgewertet, Sie können den Zeitrahmen aber in der Modul-Konfiguration anpassen.
-
-Zudem können Sie die Zielwerte konfigurieren - die typischen Konvertierungsraten sind abhängig von einer Reihe von Parametern wie z.B. der Art der Produkte und dem Kundensegment.  
- Experimentieren Sie etwas mit der Einstellung, falls die Ihnen die Standartwerte nicht sinnvoll erscheinen.  
-
-Die besten Ergebnisse können Sie mit dem intelligenten Modul  [Kunden ohne Kauf Profi](/dokumentation/mailbeez/nopurchase_advanced/ "Kunden ohne Kauf Profi") erreichen, welches mehrstufig personalisierte Gutscheine an verloren geglaubte Kunden ohne Kauf versendet.
+Betrachte neben dem Prozentsatz auch die Anzahl der kontaktierten Personen. Zwei Erstbestellungen nach zehn Einladungen sind anders einzuordnen als zwei nach tausend.

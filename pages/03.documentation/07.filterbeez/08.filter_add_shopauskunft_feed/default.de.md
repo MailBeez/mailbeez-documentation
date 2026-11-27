@@ -1,8 +1,9 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Shopauskunft Bewertungen in Emails einfügen
+title: "Shopauskunft-Bewertungen in E-Mails"
+module_subtitle: "Shopauskunft-Bewertungen mit dem früheren Vorlagensystem in E-Mails einfügen"
 slug: filter_add_shopauskunft_feed
-menu: Shopauskunft Bewertungen einfügen
+menu: "Shopauskunft-Bewertungen in E-Mails"
 date: 03-05-2011
 published: true
 publish_date: 03-05-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Shopauskunft Bewertungen in Emails einfügen"]
 module:
     code: 'config_shopauskunft_rss_importer'
     category: [filterbeez]
@@ -42,62 +43,45 @@ metadata:
 #  last_modified: true
 ---
 
-Fügen Sie Ihre wertvollen Shopauskunft Bewertungen automatisch in Ihre MailBeez Email Kampagnen ein – hervorragend geeignet, um z.B. die Emails zur [Kundenrückgewinnung](/dokumentation/mailbeez/winback_advanced) und [Kunden ohne Kauf](/dokumentation/mailbeez/nopurchase_advanced) aufzuwerten.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Integrationen](/extensions/integrationen) eine Bewertungsintegration auswählen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Dieses Hilfsmodule ist Teil der [Shopauskunft Integration Suite](/dokumentation/configbeez/config_shopauskunft_rss_importer/ "Shopauskunft Integration Suite").
+Zeige Bewertungen aus der Integration [Bewertungen von Shopauskunft importieren](/configbeez/integrations/config_shopauskunft_integration) in E-Mails mit dem früheren Vorlagensystem. Prüfe zuerst, ob Bewertungen vorliegen. Installiere und aktiviere anschließend das Anzeigemodul.
 
-### Installation
+Prüfe eine aktuelle Shopauskunft-Bewertung in der vorgesehenen E-Mail. Für Leser sollte erkennbar sein, dass sie den Shop betrifft und von welcher Plattform sie stammt.
 
-Modul installieren und aktivieren – vorher die [Shopauskunft Integration Suite](/dokumentation/configbeez/config_shopauskunft_rss_importer/ "Shopauskunft Integration Suite") konfigurieren und testen.
+## Bewertung in die Vorlage einfügen
 
-Mit folgenden Platzhaltern können Sie die konfigurierte Anzahl an Bewertungen in von MailBeez generierten Emails einfügen. Die Platzhalter können an jeder beliebigen Stellen in den MailBeez Vorlagen eingefügt werden. Sollen die Bewertungen in allen Emails sichtbar sein, am besten die Platzhalter direkt in die Hauptvorlage einfügen
+<span id="installation"></span>Für eine Kampagne bearbeitest du die Inhaltsvorlage, für alle E-Mails mit demselben Design die Hauptvorlage. Setze diesen Platzhalter in die HTML-Fassung.
 
-Platzhalter für die HTML-Version der Vorlage:
-
-```
+```smarty
 {$content.rss.shopauskunft.html}
 ```
 
-Platzhalter für die TXT-Version der Vorlage:
+Verwende in der Textfassung den entsprechenden Textplatzhalter.
 
-```
+```smarty
 {$content.rss.shopauskunft.txt}
 ```
 
-Die Vorlage für die Darstellung der Bewertungen ist folgende Datei
+Die Ausgabevorlagen liegen in `mailhive/configbeez/config_shopauskunft_rss_importer/templates`.
 
-```
+```text
 rss_email_html.tpl  
 rss_email_txt.tpl
 ```
 
-welche in folgendem Ordner liegt:
+Für eine eigene Darstellung kannst du in der Vorlagenschleife auf die Bewertungsfelder zugreifen.
 
-`mailhive\configbeez\config_shopauskunft_rss_importer\templates`
-
-Fortgeschrittene Benutzter können auch das Daten-Object mit den Bewertungen direkt im Email Template verwenden:
-
-
-```
+```smarty
 {assign var=feed_feed value=$data.feed.shopauskunft}
 {section name=item loop=$feed_feed}
   {$feed_feed[item].rating_stars}
-  {$feed_feed[item].text}</br>
-  {$feed_feed[item].user_deeplink}</br>
+  {$feed_feed[item].text}<br>
+  {$feed_feed[item].user_deeplink}<br>
   {$feed_feed[item].date|date_format}
 {/section}
 ```
 
-
-### Optionen:
-
-**Anzahl Bewertungen**  
- Anzahl Bewertungen in den Emails (Zahl)
-
-**Mindestanzahl Sterne**  
- Nur Bewertungen mit mindestens diese Anzahl Sterne anzeigen (3-5)
-
-**Zufällige Reihenfolge**  
- Zufällige Reihenfolge (True) oder chronologische Reihenfolge (False)
-
- 
+<span id="anzeigeoptionen"></span>Lege die Anzahl und die Mindestbewertung (3–5 Sterne) fest. Wähle, ob die neuesten passenden Bewertungen erscheinen oder die Reihenfolge zufällig sein soll.

@@ -1,5 +1,6 @@
 ---
-title: 'ShopVote.de Advanced'
+title: "SHOPVOTE"
+module_subtitle: "Ask for reviews on SHOPVOTE"
 slug: shopvote_advanced
 date:  02-11-2015
 published: true
@@ -16,7 +17,9 @@ taxonomy:
         - docs
     tag:
         - pro
+        - "Ask for reviews on SHOPVOTE"
 module:
+    plans_position: after_guide
     code: shopvote_advanced
     category:
         - mailbeez
@@ -44,34 +47,31 @@ metadata:
     author: admin
 ---
 
-**Get most out of your ShopVote.de Subscription**
+A customer orders cat food from your shop every month. You’d like a SHOPVOTE review about delivery and service, but asking after every bag would soon wear out the invitation. This flow lets you wait for delivery and leave a gap before asking the same buyer again.
 
-## Advanced Features
+## Set up the flow
 
-this advanced module gives you a couple of settings to streamline and improve your process of inviting customers to give a rating on ShopVote.de:
+Open **Campaigns → Automations → MailBeez Flows → Ask for reviews on SHOPVOTE**, then choose **Options → Configure**.
 
-## multiple order status
+<span id="space-out-shopvote-invita"></span>
+<span id="settings-to-check"></span>
 
-Do you have different order status marking orders as shipped! No problem, just check all orders status you want the module to react on
+[doc-steps]
+[doc-step]
+**Use the shop’s review link**
 
-## Delay times for international orders
+Paste the SHOPVOTE review link for your store into **Your ShopVote URL**. Open a preview and follow the link. Check that a buyer can recognise your store on the page that opens.
+[/doc-step]
+[doc-step]
+**Choose the first eligible day**
 
-Shipping to international customers typically takes a couple days longer. To avoid sending a rating invite before delivery, you can define an additional delay for orders shipping to countries other than your own!
+Under **Set Order Status**, choose the status that means the parcel has shipped. Set **Wait after the order status changes** to allow for delivery and **Maximum age of the status change** above that wait. If parcels take longer abroad, add those days under **Additional delay for international deliveries**.
+[/doc-step]
+[doc-step]
+**Set a gap for regular customers**
 
-The module automatically applies this delay to all orders which are shipped to a country, which is different from the home country you configured in your shopping-cart system.
+Set **Minimum interval between invitations** to 90 days for the monthly cat-food order. Compare two otherwise eligible buyers. One received a SHOPVOTE invitation last month, the other has never received one. The second can qualify now. The first is still inside the 90-day interval.
+[/doc-step]
+[/doc-steps]
 
-## recognition of regular customers
-
-Don't want to bother your regular customers with an Email to rate on ShopVote.de? Simply define a delay (e.g. 120 days) between to invites and your are done. The module will check when the last invite was sent and decides whether to wait or to send a new rating invite.
-
-## responsive email template
-
-the emails are shown perfectly also on mobile deviced
-
-
-<!--
-
-### Want to integrated your valuable ratings with your Store and Email Marketing?
-
-Using the [ShopVote.de Integration Suite](/documentation/configbeez/config_shopvote_rss_importer/) you can easily integrate your ShopVote.de-Ratings with your Store - in a way that makes this "unique fresh content" visible to search engines - and your MailBeez generated Email Marketing emails!
--->
+Check the planned run against a test order using [Schedule a review invitation](/cookbook/optimized-review-invite-flow).

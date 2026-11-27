@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: "Service: Sync internal newsletter subscription information"
+title: "Newsletter subscription sync"
+module_subtitle: "Compare the store’s newsletter subscription records with MailBeez"
 slug: service_sync_newsletter_xtc
 # menu: Service: Sync internal newsletter subscription information
 date: 05-03-2014
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "Service: Sync internal newsletter subscription information"]
 # added collection selector
 
 author:
@@ -36,41 +37,17 @@ metadata:
 #  last_modified: true
 ---
 
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To review the newsletter confirmation flow in V5, open [Signup Confirmation](/contacts/signup-confirmation). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-applies to: xtcommerce forks
+<span id="why"></span>Use this reference when maintaining an older modified-shop or Gambio installation that moved newsletter subscriptions to `newsletter_recipients`. The shop could still have a `customers.customers_newsletter` field even after it stopped updating that field.
 
-**IMPORTANT: read this documentation before activating the module**
+A customer account and an entry in the newsletter recipient table can describe the same person. Compare both records for a test address before interpreting a mismatch.
 
-## Why
+<span id="what-happens"></span>
 
-The latest release of modified-shop and Gambio contain some basic changes how newsletter subscription information is handled.
+> [!WARNING]
+> <span id="what-data-can-be-lost"></span>Before running the service, check that `newsletter_recipients` contains all current subscribers. A customer with no matching entry gets a subscription status of `0`. A deleted entry alone cannot tell you whether the person unsubscribed or was never subscribed.
 
-**before:**
-
-Table "customers" contains a field "customers\_newsletter" (0 or 1) holding the newsletter subscription status. This status can be edited in the customer admin interface.
-
-MailBeez utilises this status for: 
-- basic check for newsletter subscription (you can configure MailBeez for doing this) 
-- Newsletter Advanced Module: only customer with newsletter subscription will receive an email
-
-**after:**
-
-The field "customers\_newsletter" still exists, but is not updated any longer. In the modified-shop customer administration you can no longer edit this information.
-
-The table "newsletter\_recipients" contains all Newsletter subscriber information, both for customers and prospects.
-
-The MailBeez Framework does not check for this table.
-
-The MailBeez Newsletter Advanced module provides an adapter to use this table as a source for "prospect" lists. That allows you to both contact separately customers and prospects.
-
-## What happens?
-
-When running this module the customer status from table "newsletter\_recipients" newsletter will be synchronised into the "customers" table. If there is not entry the status will be set to 0.
-
-## What data can be lost?
-
-When a customer is performing an "unsubscribe" the matching entry in table "newsletters\_recipients" will be deleted. So you can not tell, if a customer has unsubscribed.
-
-For this reason after running the module only those customers with a matching entry in table "newsletter\_recipients" will still have a newsletter subscription.
-
-Please check whether table "newsletter\_recipients" contains all current subscriber information.
+The legacy MailBeez subscription check read the customer field. Newsletter Advanced could also read the recipient table for prospect lists. The synchronization service copies the current status from the recipient table into each customer record. Check a known subscriber and an unsubscribed account before using the synchronized field to select an audience.

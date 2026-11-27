@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: "Service: Block-All Handler"
+title: "Globale Abmeldungen verarbeiten"
+module_subtitle: "Abmeldungen von sämtlichen MailBeez-E-Mails verarbeiten"
 slug: service_handler_block_all
 # menu: Service: Block-All Handler
 date: 16-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Service: Block-All Handler"]
 module:
     code: 'config_block_admin'
     category: [configbeez]
@@ -39,4 +40,10 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses Modul ist Bestandteil von [Erweitertes Opt-out mit Admin](/dokumentation/configbeez/config_block_admin/).
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Versand & Status](/sending-status) eine einzelne Zustellung prüfen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
+
+Wenn ein Kunde sämtliche MailBeez-E-Mails abbestellt, verarbeitet dieser frühere interne Dienst die Anfrage für das Opt-out-Modul. In [Erweitertes Opt-out mit Admin](/configbeez/config_block_admin) kannst du die gespeicherte Entscheidung prüfen und verwalten.
+
+Wer alle E-Mails abbestellt, erwartet, dass diese Entscheidung auch für spätere Kampagnen gilt. Prüfe bei einer Rückfrage die Adresse und den Umfang der gespeicherten Sperre.

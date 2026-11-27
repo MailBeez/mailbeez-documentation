@@ -36,126 +36,54 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez arbeitet problemlos mit **xtc-modified / modified-shop 1.05** auf php 5.3+.
+[doc-callout type="note" title="Installation für frühere Shopversionen"]
+Prüfe die Versionsnummer in deiner Shopverwaltung. Für andere Versionen findest du die passende Anleitung unter [Installation](/grundlagen/installation) oder in der [Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Die Installation ist in wenigen Schritten erledigt und sollte nicht mehr als ein paar Minuten dauern (es sei denn, der FTP Transfer ist sehr langsam…)
+Verwende das Installationspaket für modified-shop 1.x. Für dieses frühere Paket war PHP ab 5.3 angegeben. MailBeez legt eigene Tabellen an.
 
-- Neue Dateien kopieren
-- Eine Datei anpassen
-- Admin Rechte setzen (halb automatisch)
-- MailBeez installieren
-
-MailBeez verwaltet eigene Datenbank-Tabellen – die Tabellen des Shop-Systemes werden nicht berührt.
-
-## Schritt 1 – Neue Dateien kopieren
+Diese Schritte beziehen sich auf die Dateistruktur der 1.x-Reihe. Für neuere modified-shop-Versionen findest du das Paket nach Version und Revision in der Installationsübersicht.
 
 [plugin:content-inject](/content_blocks/download_installer)
 
+## Shopdateien übertragen
 
-Aus dem Ordner “catalog” folgende Dateien in das Root-Verzeichnis des Shops  (dort, wo sich die index.php befindet) kopieren
+<span id="schritt-1-neue-dateien-ko"></span>Kopiere `catalog/admin/mailbeez.php` ins Adminverzeichnis des Shops. Kopiere `catalog/mailhive/` und `catalog/mailhive.php` ins Shopverzeichnis neben die `index.php`.
 
-```bash
+## Menüeintrag für die passende Version setzen
 
- /admin/mailbeez.php
+<span id="schritt-2-datei-anpassen"></span><span id="1-menue-eintrag-hinzufueg"></span>Öffne `admin/includes/column_left.php` im Shopverzeichnis.
 
- /mailhive (folder)
- /mailhive.php
+Verwende bis Version 1.05 die folgende Einfügestelle.
 
+Suche in der vorhandenen Datei nach diesem Ausschnitt.
+
+```text
+' . BOX_IMPORT . '</a><br>';
 ```
 
-## Schritt 2 – Datei anpassen
+Füge unmittelbar nach dieser Zeile den folgenden Eintrag ein.
 
-### 1. Menü-Eintrag hinzufügen
-
-**Modified Shop bis V1.05**  
- folgende Datei finden und öffnen:
-
- 
-```bash
-
- /admin/includes/column_left.php
-
-
+```php
+if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['module_newsletter'] == '1')) echo '<li><a href="' . xtc_href_link('mailbeez.php') . '" class="menuBoxContentLink"> -MailBeez</a></li>';
 ```
 
-dort
+Suche ab Version 1.06 in derselben Datei nach `//----HILFSPROGRAMME`. Verwende innerhalb dieses Abschnitts die folgende Einfügestelle.
 
-```bash
+Suche in der vorhandenen Datei nach diesem Ausschnitt.
 
-
- ' . BOX_IMPORT . '</a><br>';
-
-
-```
-
-finden und folgendes danach einfügen:
-
-```bash
-
-
-if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['module_newsletter'] == '1')) echo '<li><a href="' . xtc_href_link('mailbeez.php') . '" class="menuBoxContentLink" > -MailBeez</a></li>';
-
-
-```
-
-**Modified Shop ab V1.06**  
- folgende Datei finden und öffnen:
-
-```bash
-
-
- /admin/includes/column_left.php
- 
-
-```
-
-
-dort
-
-```
-
-
- //----HILFSPROGRAMME
-
-
-```
-
-finden und folgendes vor der Zeile
-
-
-```
- 
- 
+```text
 echo ('</ul>');
-
-
 ```
 
+Füge unmittelbar vor dieser Zeile den folgenden Eintrag ein.
 
-einfügen:
-
-
-```
-
+```php
 if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['module_newsletter'] == '1')) echo '<li><a href="' . xtc_href_link('mailbeez.php') . '" class="menuBoxContentLink" > -MailBeez</a></li>';
-
-
 ```
 
-## Schritt 3 - Zugriffsrechte vergeben
+## Zugriff vergeben
 
-einmalig im Browser
-
-```bash
-
- (shop-url)/mailhive.php
- 
-
-```
-
-aufrufen.
-
-Hierdurch werden die erforderlichen Admin-Rechten für den HAUPT-Admin vergeben.
-Falls erforderlich dann Zugriffs-Rechte im Admin System für weitere Admin-user vergeben.
+<span id="schritt-3-zugriffsrechte-"></span>Rufe auf der Shopdomain einmal `/mailhive.php` auf. Dadurch erhält der Hauptadministrator Zugriff. Weitere Berechtigungen vergibst du einzeln in der Shopverwaltung.
 
 [plugin:content-inject](/content_blocks/run_installer)

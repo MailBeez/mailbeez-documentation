@@ -1,5 +1,6 @@
 ---
-title: Trustpilot
+title: "Trustpilot (Community)"
+module_subtitle: "Invite buyers to rate your store on Trustpilot"
 slug: trustpilot
 routes:
     default: /documentation/mailbeez/trustpilot
@@ -18,6 +19,7 @@ taxonomy:
         - docs
     tag:
         - ce
+        - "Trustpilot"
 module:
     code: trustpilot
     category:
@@ -45,30 +47,16 @@ metadata:
     author: admin
 ---
 
-This free module, when installed, automatically asks your customers to rate your store on Trustpilot. For professional application, we recommend the [Trustpilot Advanced](/documentation/mailbeez/trustpilot_advanced) module which comes with any Pro Plan!
+[doc-callout type="note" title="Earlier campaign module"]
+Choose a flow for a current shop under [Automations](/mailbeez). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
+The earlier Community module invites a buyer to rate your shop on Trustpilot. Use the review destination for your own shop. Open it from a test invitation before enabling automated requests.
 
-**Proactively and intelligently request store reviews from your customers, and significantly increase your Trustpilot ratings over the same time frame compared to the standard Trustpilot review email with the Mailbeez Trustpilot module.**
+For a multilingual shop, try a test invitation in each language you use. Check the language on the review page as well as the wording in the email.
 
-Developed in close cooperation with Trustpilot, and officially sanctioned as their recommended partner solution, the Mailbeez Trustpilot module intelligently enhances the default Trustpilot review collection email. Utilizing customer specific order data to dynamically pre-fill the Trustpilot review email link, this module enables your customers to write their review in a “one-click” Trustpilot review environment, which, with its incredibly easy review process, can help to harvest up to 10 times more customer reviews for your store.
+Set the invitation language manually or let the historical Trustpilot service select it. Shops that used a per-customer language could supply that value in place of `MAILBEEZ_TRUSTPILOT_LANGUAGE`. Match the template language and the review page.
 
-**Here’s how the whole system works:**
+Choose the order status that starts the wait and allow enough time for delivery.
 
-- Trustpilot provides you with a unique Automatic Feedback Service email address, which they host for you on a secure, neutral server.
-- When a customer makes a purchase from your website, the MailBeez Trustpilot Module will send an email to your unique Trustpilot email address after a given time frame, while respecting the configured order status (e.g. “delivered”)
-- When the Trustpilot system receives this email, it automatically extracts the key information (customer email,order ID, name) and creates a review invitation email.
-- The system sends this email to the customer from your store’s order e-mail address, so it appears that you have sent the email.
-- The customer receives the email and clicks on the unique link which takes them directly to the** ‘one-click’** review page.
-- The provided link identifies the customer to Trustpilot so they do not need to enter personal information or confirm their email address. As soon as they press ‘Submit’, the review goes live.
-- The feedback system has multi-language recognition, so a French order confirmation triggers a French template and a French version of Trustpilot etc. You can decide if you select the language manually or let the Trustpilot Service choose automatically.
- 
-
-If you are using customer-based languages, you need to modify your trustpilot-mailbeez. Find the assignment:
-
-```
-‘language’ => MAILBEEZ_TRUSTPILOT_LANGUAGE
-```
-
-
-and assign the language based on how it is done in your system.
-
+For the V5 flow, see [Ask for reviews on Trustpilot](/mailbeez/trustpilot_advanced).

@@ -1,5 +1,6 @@
 ---
-title: 'Multilanguage Extension with Template Manager'
+title: "Multilingual Templates"
+module_subtitle: "Prepare language-specific email variants in Template Manager"
 published: true
 date: '03-03-2011 00:00'
 publish_date: '03-03-2011 00:00'
@@ -11,7 +12,7 @@ template: docs
 taxonomy:
     category:
         - docs
-    tag: [pro]
+    tag: [pro, "Multilanguage Extension with Template Manager"]
 summary:
     enabled: true
     format: short
@@ -42,50 +43,14 @@ author:
     name: admin
 ---
 
-> [!NOTE]
-> This module comes with all great features of [Responsive Template Manager](/documentation/configbeez/config_tmplmngr/), but enhances MailBeez to support unlimited languages as configured in your store.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To review email language assignments in V5, open [Language & assignment](/configbeez/language-assignment). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
- 
+<span id="do-you-run-a-store-with-m"></span><span id="become-a-global-seller-wi"></span><span id="plugin-development"></span>Use the multilingual edition of [Responsive Template Manager](/configbeez/config_tmplmngr) to prepare a separate email for each shop language. It discovers configured languages. You supply the translations for each module that uses the MailBeez template system.
 
-##Do you run a store with multiple languages? 
+Prepare a real test profile for each language you use. You can then check whether the shop selects the intended translation as well as whether that translation reads correctly.
 
-**Sehr gut! With this module you can enhance MailBeez to send emails in the customers's language**
-
-
-The Multilanguage Extension provides compatible online stores with the tools to make a hassle free, fast and easy entry into the world of internationalization, by enabling all existing and future MailBeez Modules (even your own as long as they use MailBeez template system), to support multiple language input.
-
-With that taken care of, all that is left for you to do is to translate your email text into the additional languages, copy it into the module’s admin, and away you go.
-
-## Become a Global Seller With MailBeez
-
-**Your first step to saying こんにちは (hello!)**
-
-The main difference between traditional and online stores is without doubt the potential to attract international customers. Whether you sell guitars, high heels or even garden furniture, if you are online, you can sell to the world.
-
-Of course, one of the challenges in selling internationally is the ability to communicate with your customers, and so whereas English might be the dominant language of commerce in your territory, that doesn’t mean your foreign customers want to receive email communication in that same language.
-
-Because none of the supported shopping systems actually store information about the customer’s language, the MailBeez Multilanguage Extension uses a few different techniques to analyze the existing data for reconstruction of the customer’s language.
-
-With the Multilanguage Extension, you now have the tools to communicate with your customers in their native tongue, and easily edit your Mailbeez module content, right from within your store’s admin!
-
-
-The most important additional features compared to [Responsive Template Manager](/documentation/configbeez/config_tmplmngr/)
-
-- Automatic detection of configured languages
-- Configuration of automatic multilevel customer language detection based on historic data and address data
-- Plugin-design for customer language detection e.g. based own modifications to store the customer’s language
-
-
-## easy to use
-
-
-This template manager with support for multiple languages supports you already when editing: You can preview both HTML and TXT versions in the correct language version from within the editor.  
- The default buttons (outside the editor environment) for “View html”, “View txt” and “Send Test-Mail” are automatically enhanced with a dialog for selecting the language:
- 
-
-##Plugin-Development
-
-Do you have a custom built solution to store the language of the customers in your database?  
- Please [contact MailBeez](/about/contact/ "Contact") for details.
-
-  
+1. <span id="easy-to-use"></span>Set up customer language detection. For shops that did not save a language on the customer record, the extension could use historical and address data. A custom detector could read a shop-specific field.
+2. Translate the HTML and plain-text templates for the same campaign.
+3. Select the language when previewing or sending a test. Check both the message and the destination of its links with a matching customer record.

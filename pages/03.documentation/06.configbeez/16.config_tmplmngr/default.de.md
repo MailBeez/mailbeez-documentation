@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: Responsive Template Manager
+module_subtitle: "Responsive E-Mail-Vorlagen im früheren Template Manager verwalten"
 slug: config_tmplmngr
 routes:
     aliases:
@@ -52,26 +53,14 @@ metadata:
 #  last_modified: true
 ---
 
-Mit dem visuellen Vorlagen Manager mit Unterstützung für responsive Emails können Sie schnell und einfach direkt aus dem MailBeez System heraus alle Email-Vorlagen bearbeiten und testen!
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Haupt-Vorlagen](/content/main-templates) den gemeinsamen E-Mail-Rahmen ändern. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Der Vorlagen Manager funktioniert mit allen offiziellen (Pro und CE) MailBeez Modulen aber auch mit Eigen-Entwicklungen, welche das MailBeez Vorlagen System nutzen.
+Ändere mit dem früheren visuellen Editor ein gemeinsames E-Mail-Layout. Speichere zuerst eine benannte Kopie, damit du bei unerwünschten Auswirkungen auf andere E-Mails zurückkehren kannst.
 
-Sie brauchen also nie wieder Vorlagen Dateien per FTP downloaden, lokal abspeichern, bearbeiten und dann wieder hochladen um diese dann zu testen.
+Prüfe zwei Kampagnen mit demselben Layout, am besten eine kurze Nachricht und eine mit langem Produktnamen. Die Layoutänderung sollte für beide funktionieren.
 
-
-## Funktionen
-
-- **Komfortabler visueller Editor** macht HTML Kenntnisse überflüssig
-- **Mobil-Vorschau** mit verschiedenen Schirmgrössen (z.B. iPhone, iPad)
-- Vorlagen **direkt im Layout** bearbeiten und testen.
-- **Eigene Vorlagen speichern** und ggf. wieder herstellen
-- **Wiederherstellung der Standard-Vorlagen** falls es Probleme gab
-- **Kompatibel** mit der Unterstützung für [Mehrsprachigkeit](/dokumentation/configbeez/config_tmplmngr_lng/ "Multilanguage Template Manager")!
-- **Nerd-Mode** mit Syntax highlighting gibt alle Freiheiten für fortgeschrittene Anwender
-- **Einfachstes updaten von MailBeez** da alle Vorlagen in der Datenbank gespeichert werden
-- **Automatischer Import** der Modul -.tpl Dateien.
-
-Der visuelle Editor bietet eine Reihe direkt zugänglicher Funktionen, um die HTML & TXT Version der Email zu bearbeiten und zu testen.
-
-> [!NOTE]
-> Standardmässig wird automatisch eine Text-Version aus der HTML-Vorlage generiert. Eigene in den Modulen definierte TXT-Inhalte werden nur übernommen, wenn auch eine eigene TXT-Hauptvorlage erstellt worden ist.
+1. <span id="funktionen"></span>Öffne die Vorlage und bearbeite ihre Elemente. Die Verwaltung importiert `.tpl`-Dateien der Module und speichert die bearbeitbaren Vorlagen in der Shopdatenbank. Im **Nerd-Mode** kannst du den Quelltext anpassen.
+2. Prüfe die mobile Vorschau sowie HTML- und Textfassung. MailBeez erzeugt den Text normalerweise aus dem HTML. Für einen eigenen Modultext braucht auch die Hauptvorlage eine eigene Textfassung.
+3. Sende eine Test-E-Mail. Bei Bedarf lade die gespeicherte Kopie oder die Standardvorlage. Für sprachabhängige Fassungen siehe [Erweiterung für Mehrsprachigkeit](/configbeez/config_tmplmngr_lng).

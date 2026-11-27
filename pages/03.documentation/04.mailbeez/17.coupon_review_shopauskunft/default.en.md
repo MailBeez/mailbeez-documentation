@@ -1,5 +1,6 @@
 ---
-title: 'Shopauskunft Review Reward Coupon'
+title: "Shopauskunft rewards"
+module_subtitle: "Reward a Shopauskunft review with a personal coupon"
 published: true
 date: '08-02-2012 00:00'
 publish_date: '08-02-2012 00:00'
@@ -12,6 +13,7 @@ taxonomy:
     tag:
         - pro
         - coupon
+        - "Shopauskunft Review Reward Coupon"
     category:
         - docs
 summary:
@@ -41,14 +43,17 @@ author:
     name: admin
 ---
 
-This module requires the [Mailbeez Shopauskunft Integration Suite ](/documentation/configbeez/config_shopauskunft_integration/ "Mailbeez Shopauskunft Integration Suite").
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To look up a generated coupon code in V5, open [Coupons](/content/coupons). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-**Say thanks to your customers for giving a review on Shopauskunft, and send them an automated email with a personalized coupon towards their next purchase with the Mailbeez Shopauskunft Review Reward Coupon module.**
+Reward a Shopauskunft review with a personal coupon once the review has reached your shop. Check the import before setting up the reward.
 
-If you are already using the [Mailbeez Shopauskunft module](/documentation/mailbeez/shopauskunft/ "Mailbeez Shopauskunft Module") to collect more Shopauskunft reviews for your store, then the Shopauskunfte Review Reward Coupon module is a powerful way to augment the review cycle by rewarding customers with a personalized offer coupon email after they have written a review. Fully automated and personalized (for that is the Mailbeez way!), the module offers powerful functionality to send the coupon after a preset number of reviews have been written, and of course, to alter the value of the coupon or deal you wish to offer the reviewer.
+If a buyer can see their review on Shopauskunft but has no reward yet, check when the shop last received that review from the provider.
 
-**Personalized coupons to prevent code sharing**
-
+1. Set up [Import reviews from Shopauskunft](/configbeez/integrations/config_shopauskunft_integration) so the review can be recorded.
+2. Choose how many reviews a customer must submit to qualify. Select the coupon offer and check its value.
+3. Preview the reward email and check that the personal code appears with the offer.
 
 [plugin:content-inject](/content_blocks/pro_coupon)
 

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: BeezDesk CRM Kunden Insight
+title: "Kundenübersicht"
+module_subtitle: "Kundendaten im Shop-Admin anzeigen"
 slug: config_customer_insight
 # menu: BeezDesk Kunden Insight
 date: 22-03-2013
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "Kundendaten im Shop-Admin anzeigen"]
 # added collection selector
 
 author:
@@ -36,88 +37,12 @@ metadata:
 #  last_modified: true
 ---
 
-Das erweiterbare BeezDesk CRM Kunden Insight Modul hilft Ihnen, mit einer kunden-zentrischen Ansicht der relevanten Daten aus Ihrem Shop **das Verständnis über Ihre Kunden sowie Ihren Kunden-Service zu verbessern**.
+Ein Blumenladen ruft wegen einer Vasenlieferung an. Zwei Kunden im Shop haben denselben Nachnamen. Der Support gleicht deshalb zuerst die E-Mail-Adresse der Bestellung ab. Über das Kundenpanel lassen sich die verfügbaren Kundendaten direkt bei der Bearbeitung in der Shopverwaltung einsehen.
 
-Die modulare Kunden-Insight Ansicht kann von jeder Admin-Seite mit Kunden-Informationen (Kunden, Bestellungen) geöffnet werden, während das BeezDesk CRM Pad schnell von jeder Seite aus erreicht werden kann.
+## Das Panel für den Kundenservice einrichten
 
-Entwickler können leicht die Kunden-Insight Ansicht mit Modulen erweitern, welche beispielsweise kunden-relatierte Daten aus Dritt-Systemen einbinden und somit die Entwicklungs-Aufwände auf ein Minimum reduzieren. Dabei bleibt das System voll update-fähig, da keine Kern-Dateien verändert werden brauchen.
+Öffne **System → Erweiterungen → Zusatzmodule → Kundendaten und Inhalte** und wähle **Kundendaten im Shop-Admin anzeigen**.
 
-Die Kunden-Insight Ansicht gibt Ihnen einen sofortigen Überblick aller Bestellungen, gekaufter Produkte usw. zu einem Kunden und kann zu einem voll ausgestatteten, professionellen Multichannel Kunden Support System für Email, LiveChat, Facebook, Twitter, Telefone sowie Formulare, Knowledgebase, Foren und Vorschlag-Tafeln erweitert werden. Dies erlaubt Shop-Betreibern, alle modernen Kommunikations-Kanäle zu konsolidieren sowie die Kunden-Service Prozesse zu optimieren.
+Öffne die Bestellung mit den Rechten deines Supportteams. Klappe das Kundenpanel auf und vergleiche die Adresse mit der Anfrage. Welche Informationen erscheinen, hängt von der Shopanbindung, den Zugriffsrechten und den installierten Modulen ab.
 
-[mehr zum BeezDesk CRM](https://www.beezdesk.de)
-
-> [!NOTE]
-> [content-inject path="/content_blocks/hint_preintegration" /]
-
-
-### Installation
-
-Um das BeezDesk CRM Pad sowie den BeezDesk Kunden-Insight Button auf allen Seiten der Shop-Administration einzubinden, bitte folgendes durchführen:
-
-
-**Alle Systeme**
-
-öffne 
-
-`(shop)/<admin-dir>/includes/footer.php`
-
-vor dem schliessenden PHP Tag `?>`  folgenden Code einfügen
-
-```
-// BOF: Mailbeez Customer Insight
-define('MH_DIR_FS_CATALOG', (substr(DIR_FS_CATALOG, -1) != '/') ? DIR_FS_CATALOG . '/' : DIR_FS_CATALOG);
-@include(MH_DIR_FS_CATALOG . '/mailhive/configbeez/config_customer_insight/includes/admin_footer_include.php');
-// EOF: Mailbeez Customer Insight
-```
-
-
-
-
-Weitere Installations-Anweisungen:
-
-
-**Modified-Shop**
-
-öffne
-
- 
-`(shop)/<admin-dir>/start.php`
-
-
-vor dem schliessenden HTML Tag `</body>` folgenden Code einfügen:
-
-```
-<?php
-// BOF: Mailbeez Customer Insight
-define('MH_DIR_FS_CATALOG', (substr(DIR_FS_CATALOG, -1) != '/') ? DIR_FS_CATALOG . '/' : DIR_FS_CATALOG);
-@include(MH_DIR_FS_CATALOG . '/mailhive/configbeez/config_customer_insight/includes/admin_footer_include.php');
-// EOF: Mailbeez Customer Insight
-?>
-```
-
-
-
-**Zencart**
-
-öffne
-
-bis Zencart 1.5.6
- 
-`(shop)/<admin-dir>/index.php`
-
-ab Zencart 1.5.7
-
-`(shop)/<admin-dir>/home.php`
-
-
-
-vor dem schliessenden HTML Tag `</body>` folgenden Code einfügen:
-
-```
-<?php
-// BOF: Mailbeez Customer Insight
-define('MH_DIR_FS_CATALOG', (substr(DIR_FS_CATALOG, -1) != '/') ? DIR_FS_CATALOG . '/' : DIR_FS_CATALOG);
-@include(MH_DIR_FS_CATALOG . '/mailhive/configbeez/config_customer_insight/includes/admin_footer_include.php');
-// EOF: Mailbeez Customer Insight
-?>
-```
+Fehlt der Reiter auf einer bestimmten Seite, prüfe **Adminseiten ausschließen**. Verdeckt er dort eine Schaltfläche, passe **Abstand des Panel-Reiters** an und öffne die Bestellung erneut.

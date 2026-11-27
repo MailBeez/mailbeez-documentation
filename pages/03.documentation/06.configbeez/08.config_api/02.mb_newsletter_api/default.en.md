@@ -1,183 +1,42 @@
 ---
 title: 'Newsletter API'
+module_subtitle: "Submit newsletter signups through the API"
 template: docs
 taxonomy:
     category: [docs]
     tag: [pro]
     
 ---
-This API Module groups API calls related to the [MailBeez Newsletter Advanced](/documentation/mailbeez/newsletter/) module.
 
+[doc-callout type="note" title="Earlier module settings"]
+For the signup form in a current shop, see [Embed a signup form](/sitebeez/site_signup). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-##Newsletter Subscriber API
+Use the older newsletter API when your own shop form should start a confirmed signup. The form submits the email address and consent. [Newsletter](/mailbeez/newsletter) supplies the confirmation link for that subscriber.
 
-The Newsletter Subscriber API allows you to add and opt-in a customer or prospect to the Newsletter-lists.
+Use an address you can access for the first submission. This lets you distinguish a form that accepts an address from a signup that the person has actually confirmed.
 
+## Connect the signup form
 
-### Add an Email-Address
-Opt-In Email will be send
+1. Ask for the email address and newsletter consent. Send the form to `/mailhive.php/api/public/v1.0/newsletter/add/` on your shop over HTTPS using POST. Pass the address in `email` and the subscriber’s choice in `consent`. The older API assumes consent if you omit this field, so pass it explicitly.
+2. To offer a choice of topics, send one topic ID or a comma-separated list in `topic_ids`. You can also pass the shop’s `language_id`. The optional `firstname`, `lastname` and `gender` fields apply to prospects. Existing customers keep their account details.
+3. Read the JSON response before showing a message to the subscriber.
 
-This API-Call can be used to built a custom sign-up-form e.g. using AJAX or to trigger the subscription process from any other system.
+| Response | What to show |
+| --- | --- |
+| `{"error":false}` | Ask the subscriber to open their email and follow the confirmation link. |
+| `invalid_email` | Ask them to check their email address. |
+| `consent` | Explain that signing up requires their consent. |
+| `duplicate` | The address already has a confirmed subscription. |
 
+The installed module includes example signup forms in `mailhive/mailbeez/mb_newsletter/includes/templates`.
 
-POST `http://<myshop.com>/mailhive.php/api/public/v1.0/newsletter/add/`
+## Confirm the subscription
 
+Customers and prospects receive different confirmation links. Use the link generated for that recipient in the matching email template. When the recipient follows it, the shop displays a confirmation. The follow-up email can include a coupon if the module is configured to offer one.
 
-#### Mandatory Parameters
+## Update an existing prospect or change topics
 
-| Parameter    	| Type 	| Description                            	|
-|--------------	|------	|----------------------------------------	|
-| email  	    | text  | Email-Address of Customer or Prospect	    |
+The prospect update accepts `firstname`, `lastname`, `gender` and `language_id`. A successful update returns `{"error":false}`. If your integration specifies a redirect, the result appears in the `result` query parameter (`OK` on success). The update changes the prospect’s details and preserves their subscription status.
 
-
-#### Optional Parameters
-
-| Parameter   | Type       | Description                                                       |
-|:------------|:-----------|:------------------------------------------------------------------|
-| firstname   | text       | Firstname (ignored for customers), default -1                     |
-| lastname    | text       | Lastname (ignored for customers), default -1                      |
-| gender      | text       | gender (ignored for customers)                                    |
-| language_id | int        | language-id                                                       |
-| topic_ids   | int / list | single or multiple (separated by ,) id of topics to subscribe for |
-| consent     | boolean    | set true for consent given (assumed true if parameter is missing) |
-
-
-
-
-####Return
-
-
-The API-Call returns a `JSON-Array` with following values:
-
-**invalid Email Address**  
-`{"error":"invalid_email"}`  
-The Email-Address seems to be invalid
-
-**missing consent**  
-`{"error":"consent"}`  
-Consent is not given, only appears when parameter `consent` is set
-
-**Email-Adress exists**  
-`{"error":"duplicate"}`  
-The Email-Address belongs to a customer with valid newsletter subscription or to an existing prospect with valid subscription
-
-**Successfully added Email-Adress**  
-`{"error":false}`  
-The Email-Address was successfully added and an opt-in email based on the matching type (customer | prospect) with confirmation-link is sent.
-
-
-
-> [!WARNING]
-> Check out the built-in signup-forms in `/mailhive/mailbeez/mb_newsletter/includes/templates` how to use the API-Calls with AJAX.
-
-
-### Customers Confirmation 
-Confirmation Message will be shown and Customer Confirmation-Email with coupon will be send.
-
-This API-Call is triggered when a customer clicks on the confirmation link in the customer confirmation email, but can also be used from any other system.
-
-GET `http://<myshop.com>/mailhive.php/api/public/v1.0/newsletter/confirm/customers/[confirmation_code]`
-
-
-#### Mandatory Parameters
-
-| Parameter    	    | Type 	| Description                            	|
-|--------------	    |------	|----------------------------------------	|
-| confirmation-code | text  | unique customer confirmation code	        |
-
-you find the customer confirmation-code in table `mailbeez_newsletter_source_customers`.
-
-
-### Prospect Confirmation
-Confirmation Message will be shown and Prospect Confirmation-Email with coupon will be send.
-
-This API-Call is triggered when a prospect clicks on the confirmation link in the prospects confirmation email, but can also be used from any other system.
-
-GET `http://<myshop.com>/mailhive.php/api/public/v1.0/newsletter/confirm/prospects/[confirmation_code]`
-
-
-#### Mandatory Parameters
-
-| Parameter    	    | Type 	| Description                            	|
-|--------------	    |------	|----------------------------------------	|
-| confirmation-code | text  | unique prospect confirmation code	        |
-
-you find the prospects confirmation-code in table `mailbeez_newsletter_source_prospects`.
-
-
-
-####Example
-
-```
-http://<myshop.com>/mailhive.php/api/public/v1.0/newsletter/confirm/customers/53efef14241107e0fbb7750c4d3023a5
-```
-
-
-
-
-
-
-### Update Prospect Data
-
-
-> [!WARNING]
-> you can only update prospects which are not yet converted into customers
-
-This API-Call can be used to update prospect data.
-
-
-POST `http://<myshop.com>/mailhive.php/api/public/v1.0/newsletter/prospect/update/[base64_encode(<email>)]`
-
-
-#### Mandatory Parameters
-
-| Parameter    	| Type 	| Description                            	|
-|--------------	|------	|----------------------------------------	|
-| base64_encode(email)    | text  | base64_encode of Email-Address of Prospect	    |
-
-
-#### Optional Parameters
-
-| Parameter    	| Type 	| Description                                                      |
-|--------------	|------	|----------------------------------------	                                |
-| firstname 	| text  | Firstname, default -1	                            |
-| lastname 	    | text  | Lastname, default -1                              |
-| gender   	    | text  | gender           	                                |
-| language_id   | int 	| language-id                            	                                |
-| redirect      | url 	| if set the call redirects to the given URL adding `result` as parameter  |
-
-
-
-
-####Return
-
-With a given redirect URL the API-will redirect adding parameter `result`, otherwise the API-Call returns a `JSON-Array` with following values:
-
-**invalid prospect**  
-`{"error":"invalid_prospect"}`  
-The Email-Address is not registered as prospect
-
-**is customer**  
-`{"error":"is_customer"}`  
-The prospect email address belongs to a customer, no update
-
-**Successfully updated prospect data**  
-`{"error":false}`  
-The Email-Address was successfully added and an opt-in email based on the matching type (customer | prospect) with confirmation-link is sent.
-(in redirect mode: `result=OK`)
-
-
-
-### Update Subscriber Topics
-
-This API-Call redirects to the form for updating subscriber Topics
-
-GET `http://<myshop.com>/mailhive.php/api/public/v1.0/newsletter/topics/web/[base64_encode(<email>)]`
-
-
-#### Mandatory Parameters
-
-| Parameter    	| Type 	| Description                            	|
-|--------------	|------	|----------------------------------------	|
-| [base64_encode(<email>)]    | text  | base64_encode of Email-Address of Subscriber (Customer or Prospect)	    |
-
+An `invalid_prospect` result means the address has no prospect record. An `is_customer` result means the address belongs to a customer account. To let a subscriber change topics themselves, use the preferences link supplied by the module. It opens the topic selection form.

@@ -1,5 +1,6 @@
 ---
-title: 'Service: DataBase Optimize'
+title: "Database optimization"
+module_subtitle: "Schedule optimization for the database tables managed by the service"
 slug: service_db_optimize
 routes:
     default: /documentation/mailbeez/service_db_optimize
@@ -18,6 +19,7 @@ taxonomy:
         - docs
     tag:
         - ce
+        - "Service: DataBase Optimize"
 module:
     code: service_db_optimize
     category:
@@ -45,12 +47,10 @@ metadata:
     author: admin
 ---
 
-To keep your orders database functioning smoothly, it is sometimes necessary to reclaim unused space and defragment the data for optimal performance. Optimizing the table can many times improve the performance of your database significantly.
+[doc-callout type="note" title="Earlier campaign module"]
+Choose a flow for a current shop under [Automations](/mailbeez). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-This MailBeez service module optimizes your database and sends you an email with the results.
+Schedule maintenance for the database tables managed by this earlier service. Choose a daily, weekly or monthly interval. After the run, check the email with the result before changing the schedule.
 
-Can be at run at intervals:
-
-- Daily
-- Weekly
-- Monthly
+Choose a time when the shop is normally quiet. Having the scheduled interval written down also helps your team recognize a routine maintenance run in the logs.

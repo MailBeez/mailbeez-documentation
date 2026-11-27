@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Shopauskunft Integration Suite
+title: "Shopauskunft"
+module_subtitle: "Bewertungen von Shopauskunft importieren"
 slug: config_shopauskunft_integration
 routes:
     default: /dokumentation/configbeez/config_shopauskunft_integration
@@ -19,7 +20,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Bewertungen von Shopauskunft importieren"]
 module:
     code: 'config_shopauskunft_integration'
     category: [configbeez]
@@ -51,102 +52,26 @@ metadata:
 #  last_modified: true
 ---
 
-<div style="float:right" markdown="1">[![](sa_siegel.jpg)](http://www.shopauskunft.de/retailer_process.html)</div>
+Eine Kundin lobt auf Shopauskunft die Verpackung eines gerahmten Drucks. Du möchtest den Kommentar im Shop zeigen, siehst dort aber nur die Bewertungen von gestern. MailBeez kann einen bereits geladenen Feed eine Zeit lang weiterverwenden. Prüfe deshalb zuerst, wie alt der Abruf ist und wie viele Bewertungen angefordert werden.
 
-Entwickelt in enger Zusammenarbeit mit Shopauskunft.
+## Anzahl und Aktualisierung der Bewertungen festlegen
 
-**Händler mit entsprechendem Shopauskunft Enterprise-Vertrag können jetzt die wertvollen Bewertungen noch wirksamer im Onlineshop und sogar in MailBeez Email Kampagnen einsetzen.**
+Öffne **System → Erweiterungen → Externe Dienste** und wähle **Bewertungen von Shopauskunft importieren**.
 
-Wie vielen Online Händler haben Sie sich für Shopauskunft entschieden, um neuen und auch bestehenden Kunden Sicherheit und Vertrauen zu demonstrieren.
+[doc-steps]
 
-Mit der MailBeez Shopauskunft Integration Suite haben Sie jetzt mehr Flexibilität um positive Bewertungen besonders wirkungsvoll im Shop und sogar in von MailBeez generierten Email zu platzieren.
+[doc-step]
+**Den Shop zuordnen**
 
-Basierend auf 100% anpassbaren Vorlagen können Sie z.B. 5-Sterne Bewertungen an besonders kritischen Stellen einsetzten, z.B. auf der Seite zur Kontoeröffnung oder auch beim Checkout. Hier hilft eine zufällige, positive Bewertung letzte Zweifel aus den Weg zu räumen.  
- Da die Bewertungen direkt in das HTML des Shops eingefügt werden, haben diesen einen positiven SEO Effekt – alle Bewertungen können somit von Suchmaschinen erfasst werden.
+Trage unter **Shopauskunft-Partnertoken** den Token von Shopauskunft ein. Trägst du unter **Bei Shopauskunft angeforderte Bewertungen** eine Null ein, fragt MailBeez bis zu 100 Bewertungen ab. Der Dienst kann weniger liefern.
+[/doc-step]
 
-Durch die nahtlose Integration mit den MailBeez Email Kampagnen können Sie auf einfachste Weise z.B. in Emails zur [Kunden Rückgewinnung](/dokumentation/mailbeez/winback_advanced/ "Winback Advanced") oder auch beim [Kontakt von Kunden ohne Bestellung](/dokumentation/mailbeez/nopurchase_advanced/ "No Purchase Advanced") Ihre positive Bewertungen herausstellen und somit das Kaufverhalten positiv beeinflussen.
+[doc-step]
+**Den nächsten Abruf prüfen**
 
-Die wichtigsten Funktionen im Überblick:
+Lege die **Cache-Dauer für Bewertungen (Minuten)** fest und speichere. Ist die Zeit abgelaufen, lädt MailBeez den Feed bei der nächsten Anfrage neu. Wähle **Feed testen** und suche den Kommentar zum Druck. Stimmen Datum und Shop mit dem Original überein?
+[/doc-step]
 
-- Vorlagenbasierte Darstellung der Bewertungen
-- Caching des Shopauskunft Bewertungs Feed für schnelle Ladezeiten
-- Unbeschränkte Anzahl von Vorlagen zur Integration an verschiedenen Stellen, eine Vorlage für Email Integration.
-- Auswahl der anzuzeigenden Bewertungen, z.B. “Mindestens 4 Sterne”
-- Zufällige oder chronologische Auflistung der Bewertungen
-- Einfachster Funktionsaufruf für die Einbindung der Ausgabe in den Onlineshop
+[/doc-steps]
 
-
-### Anwendung
-
-Modul installieren und Konfigurieren – den API Feed konfigurieren wie im Adminbereich des Moduls beschrieben.  
- Mit der integrierten Test-Funktion kann der API Feed komfortabel getestet werden.
-
-Das MailBeez System liest über die API-Schnittstelle von Shopauskunft.de automatisiert die Bewertungs-Daten ein. Diese Daten können dann frei gestaltbar mit wenigen Zeilen Code in das Shop-Frontend eingefügt werden. Dabei sind mehrere Darstellungen möglich, so dass Sie z.B. an besonders Conversion-kritischen Punkten stets aktuelle Bewertungen darstellen können. Zugleich sind die Bewertungen durch die serverseitige Integration auch für Google & Co. sichtbar und liefern als “unique fresh content” einen positiven SEO-Betrag.
-
-
-Und weil die Bewertungen ja schon mal im MailBeez System vorhanden sind, können diese natürlich auch in alle von MailBeez generierten Emails, z.B. zur [Rückgewinnung von Alt-Kunden](/dokumentation/mailbeez/winback_advanced), automatisiert und dynamisch [eingefügt werden](/dokumentation/filterbeez/filter_add_shopauskunft_feed).
-
-
-
-
-#### Integration der Bewertungen in den Shop:
-
-
-**Gambio, Modified-Shop, xt:Commerce**
-
-Um z.B. die Shopauskunft Bewertungen in beliebigen Stellen im Shop-Frontend darstellen zu können, bitte folgende Schritte durchführen:
-
-In der Datei `templates/source/boxes.php` z.B. ganz am Ende vor dem `?>`  folgendes einfügen:
-
-```php
-// MailBeez Shopauskunft Integration Suite
-require_once(DIR_FS_CATALOG . 'mailhive/configbeez/config_shopauskunft_integration/classes/shopauskunft_integration.php');
-// create new instance
-$feed = new shopauskunft_integration();
-     
-// generate output (template, number of ratings, min stars, shuffle)
-$smarty->assign('sabox_reviewpage', $feed->output_feed('feed_reviewpage.tpl', 25, 4, 'False') );
-$smarty->assign('sabox_single', $feed->output_feed('feed_reviewpage.tpl', 1, 4, 'True') );
-// - MailBeez Shopauskunft Integration Suite
-
-```
-
-Hiermit werden die Template-Variablen `{$sabox_reviewpage}` und `{$sabox_single}` angelegt und basierend auf der Vorlagen `feed_reviewpage.tpl` mit formatierten Bewertungen gefüllt.
-
-Um z.B. eine einzelne Bewertung auf der "Kontakt"-Seite darzustellen, folgende Änderung vornehmen:
-
-In der Datei `templates/module/contact_us.html` z.B. am Ende `{$sabox_single}` einfügen.
-
-<!-- Die mitgelieferte DIV/CSS basierende Vorlage “feed_reviewpage.tpl” generiert dann folgende Ausgabe: -->
-
-Mit dem Anlegen und Anpassen verschiedener eigener Vorlagen, z.B. “feed\_shoppingcart.tpl” für eine zufällige Bewertung im Einkaufswagen – können die Shopauskunft Bewertungen sehr flexibel eingebunden werden.
-
-**osCommerce, ZenCart, CRE Loaded**
-
-Um z.B. die Shopauskunft Bewertungen in der “Kontakt” Seite des Shopsystems einzubinden, bitte folgenden Code in die seite “contact\_us.php” einfügen:
-
-```php
-//include class
-require_once(DIR_FS_CATALOG . 'mailhive/configbeez/config_shopauskunft_integration/classes/shopauskunft_integration.php');
-// create new instance
-$feed = new shopauskunft_integration();
-// generate output (template, number of ratings, min stars, shuffle)
-echo $feed->output_feed('feed_reviewpage.tpl', 7, 4, 'True');
-```
-
-<!-- Die mitgelieferte DIV/CSS basierende Vorlagee “rss\_reviewpage.tpl” lieferte folgende Ausgabe: -->
-
-Mit dem Anlegen und Anpassen verschiedener eigener Vorlagen, z.B. “feed\_shoppingcart.tpl” für eine zufällige Bewertung im Einkaufswagen – können die Shopauskunft Bewertungen sehr flexibel eingebunden werden.
-
-
-
-####Einbindung der Shopauskunft Bewertungen in MailBeez Kampagnen
-
-Mit dem leichten Einfügen eines einfachen Platzhalters in MailBeez Vorlagen können Shopauskunft Bewertungen in alle oder ausgewählten von MailBeez generierten Emails angezeigt werden.  
- Mehr Information hierzu finden Sie auf [Shopauskunft Bewertungen in MailBeez Emails integrieren](/dokumentation/filterbeez/filter_add_shopauskunft_feed)
- 
-####Gutschein nach Bewertung
-  
-Die Integration kann noch mehr: Anhand der übermittelten Bestell-Nr. kann MailBeez feststellen, welcher Kunde eine Bewertung abgegeben hat - und kann dann automatisiert einen frei konfigurierbaren Gutschein als Dank für die entstandenen Mühen an den Kunden senden!
-
-Mehr Informationen hierzu finden Sie auf [Gutschein nach Bewertung](/dokumentation/mailbeez/coupon_review_shopauskunft)
+Für eine neue Bewertungseinladung nutze den [Shopauskunft-Flow](/mailbeez/shopauskunft_advanced).

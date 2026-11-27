@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Daily Limit
+title: "Daily send limit"
+module_subtitle: "Limit flow emails per day"
 slug: filter_do_limit
 # menu: Simple Throttling
 date: 08-04-2011
@@ -14,7 +15,7 @@ summary:
 taxonomy:
     migration_status: review
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Limit flow emails per day"]
 module:
    code: 'filter_do_limit'
    category: [filterbeez]
@@ -39,6 +40,12 @@ metadata:
 #  last_modified: true
 ---
 
-**Limit the number of Emails per day**
+You’ve just enabled review invitations after a busy sale. You want to send at most 100 flow emails a day while your support team handles the replies. If MailBeez has already sent 80 qualifying flow emails today, 20 remain for the other flows that day.
 
-under construction
+## Set a daily allowance for flows
+
+Open **System → Extensions → Add-ons → Sending and scheduling** and select **Limit flow emails per day**.
+
+Set **Trigger emails per day** to the total for the shop. All eligible trigger modules draw on that allowance. The count uses the database server’s calendar day and excludes newsletters and test sends.
+
+A value of zero stops eligible flow emails. To lift the daily limit, disable this add-on. If your delivery provider also limits how quickly you can send, check [Sending rate](/filterbeez/filter_do_throttling_simple).

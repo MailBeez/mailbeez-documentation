@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Grund-Konfiguration
+title: "Grundeinstellungen"
+module_subtitle: "Festlegen, welche Bestellstatus bei der Umsatzberechnung zählen"
 slug: config_queen
 
 routes:
@@ -41,16 +42,15 @@ metadata:
 #  last_modified: true
 ---
 
-Diese Modul steht stellvertretend für das MailBeez Grundsystem.
+Lege fest, welche Bestellstatus beim Umsatz zählen. Soll eine stornierte Bestellung aus der Summe fallen, lass den Stornostatus aus der Auswahl. Bei unterschiedlichen Statusregeln können zwei Berichte für dieselben Bestellungen verschiedene Umsätze ausweisen.
 
-Hier können Sie grundlegende Funktionen konfigurieren, am besten sehen Sie sich die Möglichkeiten direkt im System an.
+Öffne **System → Konfiguration** und wähle **Grundeinstellungen**.
 
+Prüfe hier auch die Optionen für manuelle Läufe.
 
-#### MailBeez Aktualisieren
+<span id="diese-einstellungen-sind-"></span>
 
+## Welche Bestellungen zählen zum Umsatz?
 
-Eine neue Version dieses Modules bedeutet, dass es eine neue Version des MailBeez Grundsystemes gibt!
- 
-**Ab Version 3**: bitten nutzen Sie den MailBeez Updater - Klicken Sie auf den Hinweis zur neuen Version und folgen Sie dem Verlauf
-
-**Vor Version 3**: bitten laden Sie das Grundpaket und folgen Sie den dort enthaltenen Anweisungen zur Aktualisierung des MailBeez Systems
+- **Gültige Umsatz-Bestellstatus**<br>
+  Wähle mindestens einen Status für gültige Umsatz-Bestellungen. Stornos und Erstattungen nur einbeziehen, wenn sie mitzählen sollen. Teilrückerstattungen werden nicht automatisch abgezogen.

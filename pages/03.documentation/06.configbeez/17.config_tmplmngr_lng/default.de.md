@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Erweiterung für Mehrsprachigkeit
+title: "Mehrsprachige Vorlagen"
+module_subtitle: "Sprachvarianten von E-Mail-Vorlagen im Template Manager vorbereiten"
 slug: config_tmplmngr_lng
 # menu: Erweiterung für Mehrsprachigkeit
 date: 03-03-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Erweiterung für Mehrsprachigkeit"]
 module:
     code: 'config_tmplmngr_lng'
     category: [configbeez]
@@ -49,47 +50,14 @@ metadata:
 #  last_modified: true
 ---
 
-> [!NOTE]
-> Dieses Modul hat alle Funktionen des [Responsive Template Manager](/dokumentation/configbeez/config_tmplmngr/), unterstützt zudem aber unbegrenzt viele im Shop konfigurierte Sprachen.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Sprache & Zuordnung](/configbeez/sprachzuordnung) die E-Mail-Sprachzuordnung prüfen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
+<span id="betreiben-sie-ihren-onlin"></span><span id="der-erste-schritt-hello-z"></span><span id="einfache-anwendung"></span>Mit der mehrsprachigen Ausgabe von [Responsive Template Manager](/configbeez/config_tmplmngr) bereitest du pro Shopsprache eine E-Mail vor. Die Erweiterung erkennt die eingerichteten Sprachen. Die Übersetzungen für die einzelnen Module mit MailBeez-Vorlagen hinterlegst du selbst.
 
-##Betreiben Sie Ihren Online-Shop in mehreren Sprache? 
+Bereite für jede verwendete Sprache ein Testprofil vor. So kannst du prüfen, ob der Shop die gewünschte Fassung auswählt und ob ihr Text stimmig ist.
 
-**Very good! Mit der Erweiterung für Mehrsprachigkeit ist es einfach möglich MailBeez generierte Emails in der Sprache des Kunden zu versenden.**
-
-Der Hauptunterschied zwischen den traditionellen Ladengeschäften und Online-Shops ist zweifellos die Möglichkeit, einen internationalen Kundenkreis anzusprechen. Ob Sie nun Gitarren, Schuhe oder Gartengeräte vertreiben – wenn Sie online verkaufen, können Sie weltweit verkaufen. Eine der Herausforderungen des internationalen Vertriebes ist, mit den Kunden kommunizieren zu können. Während Deutsch die vorherrschende Sprache in Ihrem engerem Vertriebsgebiet ist, werden internationale Kunden wohl kaum Emails in deutsch erhalten wollen.
-
-##Der erste Schritt こんにちは (hello!) zu sagen
-
-Die Erweiterung für Mehrsprachigkeit stellt den kompatiblen Shopssystemen das bisher fehlende Werkzeug zur Verfügung, um einen problemlosen, schnellen und einfachen Einstieg in die Welt der Internationalisierung zu tätigen: Es ermöglicht, alle bestehenden und zukünftigen offiziellen (oder sogar Ihre selbst entwickelten – so lange diese das MailBeez template system nutzen) MailBeez Module unbegrenzt mehrsprachig einzusetzen.  
- Natürlich bleibt die Aufgabe der Übersetzung der Email Vorlagen in die zusätzlichen Sprachen bei Ihnen – diese Texte lassen sich dann aber schnell über die Vorlagen Verwaltung einsetzen.
-
-##Der Shop kennt leider nicht die Sprache des Kunden
-
-Keines der von MailBeez unterstützen Shop-Systeme speichert die Sprachinformation zusammen mit den Kunden Daten. 
-
-Daher nutzt MailBeez ein mehrstufiges konfigurierbares Verfahren, um aus den bestehenden Daten bestmöglich die Sprache des Kunden rekonstruieren zu können.
-
-Mit der Erweiterung für Mehrsprachigkeit erhalten Sie somit ein Werkzeug, um mit Ihren Kunden in deren Sprache zu kommunizieren. Gleichzeitig erhalten Sie eine Vorlagen-Verwaltung, mit der Sie die Email Vorlagen der MailBeez Module direkt aus der Shop Administration bearbeiten können. Happy selling!
-
-Die wichtigsten Zusatz-Funktionen im Vergleich zum [Responsive Template Manager](/dokumentation/configbeez/config_tmplmngr/)
-
-- Automatisches Erkennen der konfigurierten Sprachen
-- Konfiguration der automatischen mehrstufigen Erkennung der Kundensprache aus historischen und Adress Daten
-- Plugin-design, um die Kundensprache basierend auf eigenen Anpassungen zu erkennen.
- 
-
-
-##Einfache Anwendung
-
-Die mehrsprachige Vorlagen Verwaltung bietet integrierte Funktionen für die Vorschau sowohl der HTML alsauch der TXT Versionen der Emails und auch können Test-Emails direkt verschickt werden:  
- Somit wird die Bearbeitung in mehreren Sprachen schnell und einfach.  
- Ausserhalb der Vorlagen Verwaltung werden die Standard-Buttons für die Vorlagen-Vorschau und den Test-Versand automatisch um eine Sprach-Auswahl erweitert, so dass Sie auch hier leicht die gewünschte Sprache wählen können. 
-
-
-
-##Plugin-Entwicklung
-Haben Sie selbst eine Anpassung entwickelt, um die Sprache des Kunden im Shop zu speichern?  
- Bitte [MailBeez kontaktieren](/about/contact/ "Kontakt") um mehr zu erfahren.
-
-
+1. <span id="der-shop-kennt-leider-nic"></span><span id="plugin-entwicklung"></span>Richte die Sprachzuordnung ein. Speicherten ältere Shops keine Sprache im Kundenkonto, konnte die Erweiterung bisherige Bestell- und Adressdaten auswerten. Ein eigenes Plugin konnte ein shopspezifisches Sprachfeld lesen.
+2. Übersetze für dieselbe Kampagne die HTML- und die Textvorlage.
+3. Wähle bei Vorschau oder Testversand die Sprache. Prüfe Nachricht und Linkziele anhand eines passenden Kundenkontos.

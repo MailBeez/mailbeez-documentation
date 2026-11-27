@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: MailBeez Copyright entfernen
+title: "Copyright-Hinweis entfernen"
+module_subtitle: "Die Lizenz zum Entfernen des MailBeez-Hinweises in Community-E-Mails prüfen"
 slug: config_copyright_remover
 routes:
     aliases:
@@ -21,7 +22,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "MailBeez Copyright entfernen"]
 module:
     code: 'config_copyright_remover'
     category: [configbeez]
@@ -53,15 +54,10 @@ metadata:
 #  last_modified: true
 ---
 
-> [!TIP]
-> Alle Premium MailBeez Email Module sind grundsätzlich bereits von dem MailBeez Copyright Hinweis befreit
+[doc-callout type="note" title="Frühere Moduleinstellungen"]
+Einstellungen in der aktuellen App findest du unter [System](/app-system). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
+Steht in der Fußzeile einer Community-E-Mail ein MailBeez-Hinweis, prüfe zuerst die Ausgabe. Das frühere Zertifikat entfernte den Hinweis bei den dafür vorgesehenen Community-Nachrichten. Profi-Vorlagen enthielten ihn bereits nicht.
 
-**Dieses Module entfernt den Copyright Hinweis aus alle Emails, die mit den kostenlosen Modulen generiert werden.**
-
-Schon seit der ersten Version hat MailBeez neu gestarteten ebenso wie alt eingesessenen Online Händlern mit einer Auswahl von kostenlosen, aber sehr effektiven Modulen den Einstieg in automatisiertes Email Marketing ermöglicht, um dann später – auf die Erfolge aufbauend – den Weg zu den professionellen Premium Modulen zu ebnen.
-
-MailBeez wird weiterhin eine Auswahl von kostenlosen Modulen anbieten, deren Emails den MailBeez Copyright Hinweis in der Fusszeile tragen.
-
-Obwohl dieser Hinweis recht unauffällig ist, können Sie ihn mit dem Kauf dieses Modules den Hinweis aus den Emails der kostenlosen Module entfernen – und so den ersten Schritt zum professionellen MailBeez Einsatz vornehmen.
-
+Vergleiche eine zugestellte E-Mail mit der Modulvorlage. So kannst du den betreffenden Herkunftshinweis einordnen, bevor du das Zertifikat des Shops prüfst.

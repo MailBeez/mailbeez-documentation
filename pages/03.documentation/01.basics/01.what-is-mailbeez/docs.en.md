@@ -4,74 +4,23 @@ taxonomy:
     category: docs
 ---
 
-MailBeez is a modular system for the implementation of fully automated after sale email campaigns. Typically installed within 5-15 minutes following some very easy steps, you can be sending out your first emails in no time! For further reading, take a look at the [Installation Manual](/documentation/installation/)
+Imagine you run an online coffee shop. Someone buys an espresso machine for the first time. This week, a guide to pulling the first shot could help. Six months from now, a reminder about the right replacement filter might be welcome. A regular who buys only beans might appreciate a reminder when their usual bag is running low.
 
-**Here are some examples of what Mailbeez can do:**
+MailBeez uses information from your shop to send emails when they make sense for each customer. A useful tip, a review request or a greeting on an anniversary can bring your shop back to mind between purchases. Start with one occasion you can explain from the buyer’s point of view.
 
-- Automate product review reminders
-- Tempt back & reactivate old customers with personalised coupon offers
-- Track and manage customer invoice payments with staggered payment reminder emails
-- Email your customers on their Birthday, or even send Season Greetings, all with an embedded personalized coupon code
-- Gather store reviews with the Mailbeez TrustPilot.com module
-- Initiate customer satisfaction surveys after a defined number of days
+## Choose how a message starts
 
-Mailbeez sits within your store’s existing admin area in its own separate section. From the Mailbeez dashboard, you can track which emails have been sent, and see how your product review and winback emails are working out!
+- **Use a ready-made MailBeez Flow for a familiar occasion**<br>
+  Choose an installed flow under [Automations](/mailbeez). You supply the timing and wording. For example, [ask for a product review](/mailbeez/review_advanced) after the buyer has had time to use the grinder, or [invite an inactive customer back](/mailbeez/winback_advanced) when their usual order is overdue.
+- **Build a Custom Flow around a particular audience**<br>
+  A machine owner may still need a replacement filter even if they ordered beans yesterday. Select the model they bought and exclude buyers who already have the filter. You can also teach a new owner in a short series or suggest a compatible accessory. The [Custom Flows guide](/mailbeez/custom-flows) includes examples for purchases and abandoned carts.
+- **Use a newsletter for a date you choose**<br>
+  Announce a seasonal espresso roast on Friday to subscribers interested in espresso. For a product update or an issue affecting one model, choose the relevant buyers. [Plan a newsletter](/tutorials-and-recipes/plan-a-newsletter) shows how to check the audience and schedule.
 
+Before adding a second message, consider what else that customer will receive that week. If the brewing course already explains when to change the filter, one link there may do more for the buyer than another email.
 
-## Seamless integrated with your Store System
+## Know where to look afterwards
 
-The tight, seamless integration of Mailbeez allows the system to access all available data and use these for meaningful actions and reports:
- 
- ![MailBeez Admin](../Screen_Gambio_GX2_Administration.en.png)
+Use [MailBeez results](/mailbeez-results) to see sends, clicks and attributed orders. Use [Shop](/shop) when the question concerns the store as a whole, such as whether buyers are coming back or what they say in reviews.
 
-
-## Feature list
-
-Whilst Mailbeez is a feature rich solution right out of the box, like any software, it is under constant development, with new features being added all the time. If you have the time, then please support us with feedback and suggestions.
-
-
-**Easy adoption of your email templates**
-  
-MailBeez generates emails based on filebased templates which you can customize. There is a global main template defining header and footer content and content templates for each module.
-
-[plugin:content-inject](/content_blocks/pro_template_manager)
-
-
-
-**Overview**
-
-- Google Analytics Integration – track MailBeez in GA
-- Activate / deactivate MailBeez
-- Secure Cronjob URL – Security Key generated
-- CC emails to admin (configure number of emails per MailBeez module)
-- check for updates online
-
-**The Modules**
-
-- Simple Design – based on class extension of mailbeez-class
-- Easy to customize
-- Templates for HTML and TXT emails
-- Common Frame-Template
-- Activate / deactivate MailBeez Modules
-- Preview HTML / TXT emails
-- Send test emails
-- List recipients (real time)
-- Run manually
-- Customers can opt-out (block) based on modules with a unified “unsubscribe link” in email footer
-
-**Simulation Mode**
-
-- Test your MailBeez Modules
-- tracking of Simulation data and restart
-
-**Production Mode**
-
-- Tracking of sent emails
-- Safe to restart sending – sent emails will be skipped
-
-**Technical**
-
-- Cross Platform Compatible with compatibility layer
-- Zen-Cart and CRE Loaded: “drop-in” installation without modifying any files!
-
-
+Follow [Getting started](/guide-to-getting-started) to prepare your first email. For an older installation, use the [Legacy reference](/legacy) for version-specific instructions.

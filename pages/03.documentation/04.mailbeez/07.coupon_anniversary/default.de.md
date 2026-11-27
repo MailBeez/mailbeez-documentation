@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Jahrestag-Email mit Gutschein
+title: "Kundenjubiläum"
+module_subtitle: "Zum Kundenjubiläum gratulieren"
 slug: coupon_anniversary
 # menu: Jahrestags-Email mit Gutschein
 date: 26-05-2021
@@ -17,8 +18,9 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro,coupon]
+    tag: [pro,coupon, "Zum Kundenjubiläum gratulieren"]
 module:
+    plans_position: after_guide
     mc_ready: true
     code: 'coupon_anniversary'
     category: [mailbeez]
@@ -48,12 +50,30 @@ metadata:
 #  last_modified: true
 ---
 
-**Warum nicht auch den Jahrestag der Registrierung feiern? Ein willkommener Anlass, dem Kunden eine Email mit personalisiertem Gutschein zu schicken!**
+Eine Kundin hat am 12. Juni letzten Jahres ein Konto in deinem Teeshop angelegt. Am 12. Juni dieses Jahres kannst du ihr für das erste gemeinsame Jahr danken und einen Rabatt auf die nächste Dose Tee schenken. So hast du auch dann einen Anlass, dich zu melden, wenn zwischen den Bestellungen Monate liegen.
 
-Ganz automatisiert, personalisiert und mit einer konfigurierbaren Gültigkeitsperiode ist dieses Module das perfekte Werkzeug um den geschätzen Kunden Aufmerksamkeit zu schenken.
+Für das Jubiläum zählt die Registrierung im Shop. MailBeez prüft für jedes Jahr, ob der Gruß schon verschickt wurde. Wer sich erst diesen Juni angemeldet hat, bekommt diesen Juni noch keine E-Mail zum ersten Jahrestag.
 
-**Automatisch generierte Gutschein**  
+## Flow einrichten
 
-[plugin:content-inject](/content_blocks/pro_coupon)
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → Zum Kundenjubiläum gratulieren** und wähle **Optionen → Konfigurieren**.
 
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+[doc-steps]
+[doc-step]
+**Den Tag für den Gruß wählen**
+
+Trage für den Jahrestag selbst unter **Versand vor dem Jahrestag der Registrierung** eine 0 ein. Mit 3 darf der Gruß bis zu drei Tage früher ankommen. **Nachträgliche Glückwünsche zulassen** gibt dem nächsten geplanten Lauf Zeit, einen verpassten Jahrestag nachzuholen. Wähle den Zeitraum passend zum Text.
+[/doc-step]
+[doc-step]
+**Ein Geschenk vorbereiten**
+
+Dein Shop muss Gutscheine unterstützen. Wähle unter **Gutschein Vorlage** die Vorlage für das Angebot. Trage für ein Geschenk mit zwei Wochen Laufzeit unter **Gültigkeit des Gutscheins** 14 Tage ein. Die Frist zählt ab dem Versand. Erwähne einen Mindestbestellwert oder andere Bedingungen aus der Vorlage.
+[/doc-step]
+[doc-step]
+**Jahrestag und Gutschein prüfen**
+
+Nutze ein Konto, dessen Jahrestag im Versandzeitraum liegt. Vergleiche den Gruß mit dem Registrierungsdatum und prüfe den ausgestellten Code unter [Gutscheine](/content/coupons).
+[/doc-step]
+[/doc-steps]
+
+Lässt du nachträgliche Grüße zu, passt „Danke für ein Jahr mit uns“ auch dann, wenn die E-Mail ein paar Tage später eintrifft.

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Das Opt-Out Admin Widget
+title: "Abmelde-Widget"
+module_subtitle: "Eine Abmeldung oder E-Mail-Sperre im früheren Dashboard finden"
 slug: dashboard_block_admin
 # menu: The Customer Opt-Out Admin Widget
 date: 17-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Das Opt-Out Admin Widget"]
 # added collection selector
 
 author:
@@ -36,6 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Kontakte](/mailbeez-results/contacts) Abmeldungen und Sperren auswerten. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
+Suche im früheren Abmeldewidget nach der Adresse. Prüfe den Geltungsbereich der Sperre, bevor du sie auf Wunsch des Empfängers änderst. Die Übersicht beschreibt [Auflistung Opt-Out Abmeldungen](/reportbeez/report_block), die Verwaltung [Erweitertes Opt-out mit Admin](/configbeez/config_block_admin).
 
-Als Bestand-Teil vom Modul [Erweitertes Opt-out mit Admin](/dokumentation/configbeez/config_block_admin/) können Sie mit diesem Widget nach Kunden suchen und dann die gewünschten Module abmelden oder auch wieder aktivieren.
+Kläre bei einer gewünschten Wiederanmeldung Adresse und Nachrichtenart. Die gespeicherte Abmeldung kann mehr umfassen als die Kampagne, die der Empfänger genannt hat.

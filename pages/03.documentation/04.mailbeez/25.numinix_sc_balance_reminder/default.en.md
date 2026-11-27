@@ -1,5 +1,6 @@
 ---
-title: 'Numinix Store Credit: Balance Reminder'
+title: "Numinix balance reminder"
+module_subtitle: "Remind Zen Cart customers to use their remaining store credit"
 slug: numinix-store-credit-balance-reminder
 routes:
     aliases:
@@ -20,6 +21,7 @@ taxonomy:
         - docs
     tag:
         - pro
+        - "Numinix Store Credit: Balance Reminder"
 module:
     code: numinix_sc_balance_reminder
     category:
@@ -41,27 +43,16 @@ metadata:
     author: admin
 ---
 
-**Developed in Cooperation with Numinix, the inventor of the popular [Numinix Store Credit module](https://www.numinix.com/plugins/zen-cart-plugins/taxes-order-totals/store-credit-and-reward-dollars?referral_code=888671548 )**
+[doc-callout type="note" title="Earlier campaign module"]
+Choose a flow for a current shop under [Automations](/mailbeez). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
+Remind Zen Cart customers of unused credit. The shop needs the [Numinix Store Credit & Reward Points add-on](https://www.numinix.com/plugins/zen-cart-plugins/taxes-order-totals/store-credit-and-reward-dollars).
 
-The Numinix Store Credit Balance Reminder module will periodically send a store credit balance reminder to your customers. 
+A reminder is useful when someone has earned credit and may have forgotten it. Show the balance clearly so the buyer can decide whether to use it on their next order.
 
-Once set-up, it will send a defined block of emails, per run, to customers with a defined minimum balance amount.
-
-The module easily allows you to configure how often the balance statement will be sent out. The delay time is checked against the Review Reward Module which already contains the updated Balance - a nice feature that avoids spamming customers with too high a frequency of emails with similar content.
+1. Set the minimum credit balance a customer needs to receive a reminder.
+2. Set the number of reminders per run and the interval between statements. If you use [Numinix Store Credit: Review Rewards](/mailbeez/numinix_sc_review_reward), the module also checks that notification when spacing out balance emails.
+3. Preview the balance with an eligible customer. The included [Numinix Store Credit: Display Balance](/filterbeez/filter_add_numinix_sc_balance) filter makes the current balance available in other templates.
 
 [plugin:content-inject](/content_blocks/pro_responsive_template)
-
-
-**Requirements:**
-
-- Zen Cart e-commerce platform
-- The [Numinix Store Credit & Reward Points addon](https://www.numinix.com/plugins/zen-cart-plugins/taxes-order-totals/store-credit-and-reward-dollars?referral_code=888671548 ) for Zen Cart
-
-**Included**
-
-The [Numinix Store Credit Display Balance](/documentation/filterbeez/filter_add_numinix_sc_balance/ "Numinix Store Credit: Display Balance") Filterbeez Module – allows you to display the current Balance in any MailBeez generated Email !
-
-**Like this? You might also like…**
-
-[Numinix Store Credit: Review Rewards](/documentation/mailbeez/numinix_sc_review_reward/ "Numinix Store Credit: Review Rewards")

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Prozess Kontrolle
+title: "Prozesskonfiguration"
+module_subtitle: "Nach einem abgebrochenen Lauf aktive Versandprozesse prüfen"
 slug: config_process_control
 date: 26-03-2012
 published: true
@@ -16,7 +17,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "Prozess Konfiguration"]
 # added collection selector
 
 author:
@@ -25,7 +26,10 @@ metadata:
     author: admin
 ---
 
-Das Untersystem zur Prozess-Kontrolle stellt sicher, dass nur ein Versende-Prozess zur Zeit aktiv sein kann. Andernfalls kann es zu überlappenden Prozessen kommen, welche zum mehrfachen Versand der gleichen Emails führen kann.
+Prüfe nach einem abgebrochenen Lauf, ob noch ein Versandprozess arbeitet. Diese Einstellungen verhindern, dass zwei Läufe gleichzeitig E-Mails verarbeiten.
 
-> [!WARNING]
-> Die Grundeinstellungen sollten nur geändert werden, wenn Sie die Auswirkungen verstehen!
+Ein Lauf kann ohne Nachricht enden, wenn niemand die Bedingungen erfüllt. Ein unterbrochener Lauf hat ein anderes Fehlerbild. Kläre vor einem neuen Start, welcher Fall bei dir vorliegt.
+
+Öffne **System → Konfiguration** und wähle **Prozess Konfiguration**.
+
+Vergleiche den letzten Start- und Abschlusszeitpunkt. Fehlt eine Kampagnen-E-Mail, suche unter [Versand & Status](/sending-status) nach einem Versandprotokolleintrag, bevor du einen weiteren Lauf startest.

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Der Kunden-Loyalitäts-O-Graph
+title: "Loyalty-O-Graph"
+module_subtitle: "Wiederkäufe im früheren Dashboard-Widget vergleichen"
 slug: dashboard_loyalty_o_graph
 # menu: The Loyalty-O-Graph
 date: 17-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "Der Kunden-Loyalitäts-O-Graph"]
 # added collection selector
 
 author:
@@ -36,11 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
-Der Kunden-Loyalitäts-O-Graph zeigt Ihnen auf einen Blick eine wichtige Information über Ihren Kundenstamm: **Wie loyal sind Ihre Kunden?**
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Kunden](/shop/customers) Wiederkäufe im gesamten Shop prüfen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Das Modul analysiert die Bestell-Datenbank Ihres Shops und ermittelt für jeden Monat, wie viel Prozent der Bestellungen von bestehenden Kunden eingehen - untergliedert nach der Anzahl der Bestellungen der jeweiligen Kunden.
+Lies zuerst den Zeitraum ab, wenn du Bestellungen von Bestandskunden mit allen Bestellungen vergleichst. Beide Zahlen müssen sich auf denselben Zeitraum beziehen.
 
-Somit können Sie leicht den Stammkunden-Anteil ermitteln - und können auch nachvollziehen, wie das MailBeez System hierauf Einfluss nehmen kann.
-
-> [!NOTE]
-> Wenn Sie durch entsprechende Aktionen viele Neukunden gewinnen, kann es aussehen, alsob die Kundenloyalität fällt - der Anteil an Bestellungen von bestehenden Kunden wird relativ geringer.
+In einer starken Woche können sowohl Folge- als auch Erstbestellungen zunehmen. Vergleiche deshalb neben den absoluten Zahlen auch den Anteil der Wiederkäufe.

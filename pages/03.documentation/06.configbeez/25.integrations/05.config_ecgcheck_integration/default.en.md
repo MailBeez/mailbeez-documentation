@@ -1,5 +1,6 @@
 ---
-title: ECG-Check.at Integration
+title: "ECG-CHECK"
+module_subtitle: "Check recipients against the ECG list"
 slug: config_ecgcheck_integration
 routes:
     default: /documentation/configbeez/config_ecgcheck_integration
@@ -15,7 +16,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Check recipients against the ECG list"]
 module:
     code: 'config_ecgcheck_integration'
     category: [configbeez]
@@ -29,22 +30,26 @@ metadata:
     author: admin
 ---
 
-> [!WARNING]
-> Important for all marketing emails to email addresses from Austria (AT)
+Your outdoor shop is preparing a seasonal mailing and wants to screen its addresses against the ECG list. First establish that MailBeez can reach the service with your saved credentials. Checking customer addresses is a separate decision because matching recipients can be blocked across all MailBeez mailings.
 
- Please book the matching addon for your MailBeez Pro subscription on **<https://apps.mailbeez.com/dashboard> > subscriptions > show Details > Buy Addons**
- 
-This integration with the online service ECG-Check.at automatically checks all email adresses against the austrian ECG list. With a positiv match for an email address or email domain the email-address will be blocked.
+<span id="settings-to-check"></span>
 
-This ensures no emails are sent to persons or companies having an entry in the ECG list. Disregard of this list can cause penalties of up to EUR 37.000.
+## Connect your ECG-CHECK account
 
+Open **System → Extensions → External services** and select **Check recipients against the ECG list**.
 
+[doc-steps]
 
+[doc-step]
+**Test the saved connection**
 
-> [!NOTE]
-> **Why do I need to use this integration?**
+Save the **ECG-CHECK API key**, then choose **Test connection**. The test checks the certificate and service connection without screening recipients. Change the **MailBeez license certificate** only if MailBeez support asks you to.
+[/doc-step]
 
- The authorities of Austria (AT, Member of the European Union) maintains a national blacklist (ECG-List) every company needs to respect - otherwise you risk penalties of up to 37.000Eur.  
- **Who needs this Integration?**  
- Everyone sending marketing emails to email-adresses in Austria (AT).    
-  <br>Find more information on <a href="https://www.ecg-check.at/" target="_blank">www.ecg-check.at</a>
+[doc-step]
+**Choose when addresses are checked**
+
+Review **Check during regular MailBeez runs** before using **Check addresses**. The address check can apply global blocks immediately. It screens customer addresses and, if Newsletter is active, eligible prospects. Already globally blocked recipients are skipped. A match count refers to addresses, so it can differ from the number of recipient records reported for blocking.
+[/doc-step]
+
+[/doc-steps]

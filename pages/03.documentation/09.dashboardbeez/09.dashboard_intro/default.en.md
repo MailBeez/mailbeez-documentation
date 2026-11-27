@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: The MailBeez Introduction Widget
+title: "Dashboard introduction"
+module_subtitle: "Find the introductory links in the earlier dashboard"
 slug: dashboard_intro
 # menu: The MailBeez Introduction Widget
 date: 17-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "The MailBeez Introduction Widget"]
 # added collection selector
 
 author:
@@ -36,5 +37,8 @@ metadata:
 #  last_modified: true
 ---
 
-Delivered with the free MailBeez framework software, this dashboard widget provides quick links to tutorials and support on the MailBeez website, as well as to our Facebook & Twitter pages so you can get the help & support you need and remain up to date on what’s new with MailBeez.
+[doc-callout type="note" title="Earlier dashboard widget"]
+For the current workspace, open the [V5 dashboard guide](/dashboard). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
+The introduction widget linked to tutorials for the earlier dashboard. If you are setting up a V5 shop, follow [Getting started](/guide-to-getting-started) from installation through to the first recorded send.

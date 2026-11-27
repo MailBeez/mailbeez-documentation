@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Gutschein Rezepte
+title: "Gutschein-Beispiele"
 #menu: Beez-O-Graph
 slug: gutschein-rezepte
 
@@ -9,6 +9,7 @@ routes:
         - /dokumentation/kochbuch/newsletter-rezepte
 
 
+original_v4: true
 published: true
 template: tutorial
 # theme: false
@@ -24,121 +25,30 @@ taxonomy:
 
 ---
 
-[TOC]
+<span id="problem"></span>Mit dem Willkommensgutschein bedankst du dich für eine bestätigte Anmeldung. Beim Geschenkgutschein lieferst du einen Wert, den jemand bereits bezahlt hat. Wähle den Ablauf passend zu diesem Unterschied. Für beide Beispiele braucht dein Shop ein unterstütztes Gutscheinsystem.
 
+<span id="gutschein-fr-registrierung-zum-newsletter"></span>
 
-## Gutschein für Registrierung zum Newsletter
+## Gutschein nach der Anmeldung verschicken
 
-> [!TIP]
-> **Hinweis:** Unter Einhaltung von bestimmten Ausnahmeregelungen dürfen Shopbetreiber Ihre Kunden auch ohne explizite Einwilligung per Email kontaktieren, lesen Sie mehr auf [Rechtssichere Email-Werbung ohne ausdrückliche Einwilligung](/uber/rechtssicher-email-werbung-ohne-ausdruckliche-einwilligung-senden)
+1. <span id="lsung"></span>Öffne unter [Inhalte → Gutscheine](/content/coupons) die **Vorlagen**. Lege zum Beispiel einen festen Rabatt von 5 € an und bestimme Gültigkeit und Einlösebedingungen.
+2. Öffne [Kontakte → Anmeldung](/contacts/signup-confirmation). Wähle die Bestätigungs-E-Mail für Interessenten oder Kunden und weise die Vorlage zu, sofern die Option verfügbar ist. Melde dich mit einer erreichbaren Testadresse an und folge dem Bestätigungslink.
+3. Öffne die E-Mail, die nach der Bestätigung ankommt. Prüfe den Code, das Ablaufdatum und den Abzug im Warenkorb deines Testshops. Können sich auch Personen mit bestehendem Shopkonto anmelden, teste diesen Weg ebenfalls.
 
+### Willkommensgutschein im Newsletter-Profi-Modul
 
-### Problem
+<span id="erstellen-einer-dynamischen-empfngerliste"></span>Im früheren Newsletter-Editor gehörte die Willkommensmail zu einer Kampagne mit dynamischer Liste. Das ursprüngliche Beispiel verwendete die Newsletter-Abos im Shop und beschränkte das Alter des Kundenkontos auf null bis einen Tag. Ein langjähriger Kunde, der sich heute zum Newsletter anmeldet, kann dadurch fehlen. Teste die Liste deshalb mit einem neuen und einem älteren Konto.
 
-Sie möchten Ihren Kunden einen Gutschein zusenden, sobald diese sich für den Newsletter registrieren
+[doc-image src="Screen_welcome_list.de.png" alt="Frühere Listenverwaltung mit dem eingestellten Kontoalter für den Willkommensgutschein" /]
 
-### Lösung
+<span id="erstellen-eines-willkommens-newsletters"></span>Ordne der Kampagne die Liste und dem Willkommensnewsletter die Gutscheinvorlage zu. Prüfe den Aktivitätszeitraum und die Vorschau in jeder Shopsprache. Schicke dir eine Testmail, bevor du den Newsletter für den Versand freigibst.
 
-Mit Hilfe des [Newsletter Profi Modules](/dokumentation/mailbeez/newsletter) können Sie automatisiert einen frei konfigurierbaren Gutschein an Ihre Kunden nach Registrierung zum Newsletter versenden.
+[doc-image src="Screen_welcome_email.de.png" alt="Früherer Newsletter-Editor mit der Willkommensmail und ihrem Gutschein" /]
 
-Hierzu gehen Sie bitte wie folgt vor:
+<span id="gutschein-als-produkt"></span>
 
-####Erstellen einer dynamischen Empfängerliste
+## Gekauften Geschenkgutschein versenden
 
-1. Navigieren Sie zum MailBeez Newsletter Modul `MailBeez > MailBeez Module > Newsletter Profi`
-1. Klicken Sie rechts im Abschnitt `Listen einrichten` auf den Button `Listen bearbeiten`
-1. Erstellen Sie eine neue Liste mit Namen z.B. `Willkommens Gutschein` und wählen Sie als Quelle für die neue Liste `Shop Newsletter-Abos` aus - Liste speichern.
-1. Wählen Sie die neu erstellte Liste an und klicken Sie rechts im Abschnitt `Segmentierung` auf `Segmentierung bearbeiten` - es öffnet sich ein Fenster
-1. In den Segmentierungs-Einstellungen im Abschnitt `Kunde` bitte folgendes konfigurieren:
-    - Kunde seit mindestens Tagen: 0
-    - Kunde seit höchstens Tagen: 1 (oder einen höheren Wert, wenn Sie auch älteren Kunden einen Gutschein zusenden wollen)
-[doc-image src="Screen_welcome_list.de.png" alt="Newsletter-Liste" /]
-1. Segmentierung speichern
-1. Mit Klick auf `Segmentierung testen` können Sie sehen, welche Empfänger gefunden werden. Klicken Sie auf die Namen, um den Kunden-Insight des Kunden zu öffnen.
+<span id="problem-1"></span><span id="lsung-1"></span><span id="anlegen-eines-produktes-geschenk-gutschein"></span><span id="erstellen-einer-dynamischen-empfngerliste-1"></span>Lege im älteren Shop mit Newsletter-Profi-Modul einen Geschenkgutschein über 25 € als eigenen Artikel an. Wähle in der Liste die Käufer dieses Artikels aus und ordne der Gutscheinmail die Vorlage über 25 € zu. Prüfe, welche Bestellstatus deine Einrichtung berücksichtigt, bevor du eine Bestellung als bezahlt behandelst.
 
-Sie haben somit eine Liste erstellt, welche aktuelle Newsletter-Subscriber liefert.
-
-
-
-####Erstellen eines Willkommens-Newsletters
-
-[plugin:content-inject](/content_blocks/pro_template_coupon_setup)
-
-
-1. Navigieren Sie zum MailBeez Newsletter Modul `MailBeez > MailBeez Module > Newsletter Profi`
-1. Klicken Sie rechts im Abschnitt `Erstellen und Bearbeiten Sie Ihre Kampagnen` auf den Button `Kampagnen bearbeiten`
-1. Erstellen Sie eine neue Kampagne mit Namen z.B. `Willkommens Emails` und wählen Sie als Standard-Liste die zuvor neu erstellte Liste `Willkommens Gutschein` - Kampagne speichern
-1. Wählen Sie die neu erstellte Kampagne an und klicken Sie rechts `Kampagnen-Emails bearbeiten`.
-1. Erstellen Sie einen neuen Newsletter
-1. Wählen Sie rechts den passenden Vorlagen-Gutschein und speichern Sie
-1. Konfigurieren Sie rechts als Aktiv bis Datum z.B. den 1.1.2099 (also setzen Sie den Newsletter dauer-aktiv) und speichern Sie
-1. Gestalten Sie im Hauptbereich die Email mit Hilfe des Visuellen Editors, mit Klick auf das + Icon können Sie auch ein Inhalts-Element für die Darstellung des Gutscheines einfügen.
-    - Falls Ihre Online-Shop in mehreren Sprachen verfügbar ist, gestalten Sie die Emails ebenfalls für die anderen Sprachen
-1. Wenn Sie zufrieden mit der Gestaltung sind und die Test-Emails gut Aussehen, können Sie den neuen Newsletter oben rechts mit Klick auf `als versandfertig freigeben` aktiv schalten. 
-
-[doc-image src="Screen_welcome_email.de.png" alt="Willkommens-E-Mail" /]
-
-
-Herzlichen Glückwunsch! Sie haben jetzt eine Willkommens-Newsletter erstellt, der bei der nächsten automatischen Ausführung des Versendeprozesses an die passenden Empfänger versendet wird!
-
-
-## Gutschein als Produkt
-
-### Problem
-
-Sie möchten in Ihrem Shop einen Gutschein als kaufbares Produkt anbieten, welchen Ihre Kunden dann weiterverschenken können.
-
-### Lösung
-
-Mit Hilfe des [Newsletter Profi Modules](/dokumentation/mailbeez/newsletter) können Sie automatisiert einen frei konfigurierbaren Gutschein nach Kauf eines bestimmten Produktes dem Käufer zusenden. Der Geschenk-Gutschein wird dabei personalisiert generiert. Der Geschenk-Gutschein kann alle Konfigurationsmöglichkeiten des im Shop vorhandenen Gutschein-Systemes übernehmen - also z.B. kann nur 1x eingelöst werden, Begrenzung auf Produkt-Kategorien usw.
- 
-#### Anlegen eines Produktes "Geschenk Gutschein"
- 
-1. Erstellen Sie in Ihrem Shop eine neue Kategorie `Geschenk-Gutscheine`
-1. In der neuen Kategorie erstellen Sie ein neues Produkt z.B. `Geschenk-Gutschein 25 Eur`
-    - wählen Sie eine passende Produktbeschreibung, Produkt-Bild usw.
-    - setzen Sie als Kaufpreis den Gutschein-Wert fest, z.B. 25 Eur
-
-Sie haben jetzt ein Produkt angelegt, mit dessen Kauf Ihre Kunden einen Geschenk-Gutschein über 25 Eur erwerben. Im nächsten Schritt konfigurieren wir das Newsletter Profi Modul, so dass automatisiert nach Kauf dieses bestimmten Produktes ein entsprechender Gutschein generiert und versendet wird.
-
-
-####Erstellen einer dynamischen Empfängerliste
-
-1. Navigieren Sie zum MailBeez Newsletter Modul `MailBeez > MailBeez Module > Newsletter Profi`
-1. Klicken Sie rechts im Abschnitt `Listen einrichten` auf den Button `Listen bearbeiten`
-1. Erstellen Sie eine neue Liste mit Namen z.B. `Geschenk Gutschein 25 Eur` und wählen Sie als Quelle für die neue Liste `Shop Newsletter-Abos` aus - Liste speichern.
-1. Wählen Sie die neu erstellte Liste an und klicken Sie rechts im Abschnitt `Segmentierung` auf `Segmentierung bearbeiten` - es öffnet sich ein Fenster
-1. In den Segmentierungs-Einstellungen im Abschnitt `Geographisch` bitte folgendes konfigurieren:
-    - Folgende Länder vom Newsletter-Check ausschliessen: Alle relevanten Länder eingeben, damit die Email auch an Kunden ohne Newsletter-Abo versendet wird
-1. In den Segmentierungs-Einstellungen im Abschnitt `Produkte` bitte folgendes konfigurieren:
-    - gekaufte Produkte: `Geschenk Gutschein 25 Eur`
-1. Segmentierung speichern
-1. Mit Klick auf `Segmentierung testen` können Sie sehen, welche Empfänger gefunden werden. Klicken Sie auf die Namen, um den Kunden-Insight des Kunden zu öffnen.
-
-Sie haben somit eine Liste erstellt, welche die Käufer des Produktes `Geschenk Gutschein 25 Eur` liefert.
-
-
-####Erstellen der Geschenk-Gutschein Email
-
-[plugin:content-inject](/content_blocks/pro_template_coupon_setup)
-
-1. Navigieren Sie zum MailBeez Newsletter Modul `MailBeez > MailBeez Module > Newsletter Profi`
-1. Klicken Sie rechts im Abschnitt `Erstellen und Bearbeiten Sie Ihre Kampagnen` auf den Button `Kampagnen bearbeiten`
-1. Erstellen Sie eine neue Kampagne mit Namen z.B. `Geschenk-Gutscheine` - Kampagne speichern
-1. Wählen Sie die neu erstellte Kampagne an und klicken Sie rechts `Kampagnen-Emails bearbeiten`.
-1. Erstellen Sie einen neuen Newsletter
-1. Wählen Sie rechts den passenden Vorlagen-Gutschein mit Wert 25 Eur und speichern Sie
-1. Konfigurieren Sie rechts als Aktiv bis Datum z.B. den 1.1.2099 (also setzen Sie den Newsletter dauer-aktiv) und speichern Sie
-1. Gestalten Sie im Hauptbereich die Email mit Hilfe des Visuellen Editors, mit Klick auf das + Icon können Sie auch ein Inhalts-Element für die Darstellung des Gutscheines einfügen.
-    - Falls Ihre Online-Shop in mehreren Sprachen verfügbar ist, gestalten Sie die Emails ebenfalls für die anderen Sprachen
-1. Wenn Sie zufrieden mit der Gestaltung sind und die Test-Emails gut Aussehen, können Sie den neuen Newsletter oben rechts mit Klick auf `als versandfertig freigeben` aktiv schalten. 
-
-Herzlichen Glückwunsch! Sie haben jetzt eine Email erstellt, die bei der nächsten automatischen Ausführung des Versendeprozesses an die Käufer des Produktes `Geschenk Gutschein 25 Eur` versendet wird!
-
-
-Wenn Sie mehrere Geschenk-Gutscheine anbieten wollen, wiederholen Sie für jeden Wert die oben aufgeführten Schritte.
-
-> [!NOTE]
-> **Aktuelle Einschränkungen**:\
-> je Kunde und Kauf kann nur 1 Gutschein geliefert werden\
-> **Bitte um kurze Nachricht, wenn hier Erweiterungsbedarf am Modul besteht.**
+<span id="erstellen-der-geschenk-gutschein-email"></span>Teste eine bezahlte Gutscheinbestellung und eine Bestellung mit gewöhnlichen Artikeln. Nur der Käufer des Gutscheins soll einen einlösbaren Code über 25 € erhalten. Das ursprüngliche Rezept unterstützt einen Gutschein je Kunde und Kauf. Prüfe eine Bestellmenge von zwei Stück, bevor du mehrere Gutscheine in einer Bestellung anbietest. Für einen anderen Nennwert verwendest du einen eigenen Artikel mit passender Vorlage.

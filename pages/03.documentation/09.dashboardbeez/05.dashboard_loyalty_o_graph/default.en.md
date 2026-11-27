@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: The Loyalty-O-Graph
+title: "Loyalty-O-Graph"
+module_subtitle: "Compare repeat-purchase activity in the earlier dashboard widget"
 slug: dashboard_loyalty_o_graph
 # menu: The Loyalty-O-Graph
 date: 17-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "The Loyalty-O-Graph"]
 # added collection selector
 
 author:
@@ -36,13 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
-Delivered with the free MailBeez framework software, the Loyalty-O-Graph is a powerful dashboard widget with an intuitive graph display that provides you with a visual report of how many orders come from returning customers.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To check repeat purchases across the shop in V5, open [Customers](/shop/customers). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-Because it tracks total repeat business without regard to the MailBeez modules, you can use the data this widget reports to compare e.g. against the data from the Winback widget to see how much of your repeat business is a result of your Winback email campaign.
+Read the date range before comparing orders from returning customers with all orders. Both counts need the same period.
 
-By default, it displays 365 days worth of data, but this number of days can be changed in the Loyalty-O-Graph configuration settings.
-
-When MailBeez is first installed, this widget analyzes the database of orders for recurring orders and populates right away. Handy!
-
-> [!NOTE]
-> The customer loyalty might seem to drop when you start to acquire new customers - the relative number of repeated orders will become small as you get more orders by first-time buyers.
+A busy week can bring more returning orders and more first orders at the same time. Compare the returning share as well as the counts.

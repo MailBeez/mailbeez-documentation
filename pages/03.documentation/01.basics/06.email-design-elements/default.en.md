@@ -34,55 +34,19 @@ metadata:
 #  last_modified: true
 ---
 
+[doc-callout type="note" title="Earlier MailBeez versions"]
+[Browse the legacy reference](/legacy).
+[/doc-callout]
 
-Rock-solid foundation of highly configurabel design elements
+<span id="perfect-rendering-of-all-"></span><span id="email-clients"></span><span id="web-based-clients"></span>If an older template looks different in two inboxes, reproduce the issue with the same message in both programs. The historical Litmus tests covered Apple Mail 8–10, Outlook 2010–2016, Windows 10 Mail, Thunderbird, iOS 7 and later, and webmail from AOL, Gmail, GMX, Mail.ru, Outlook.com and Web.de.
 
-Extensive Testing with Litmus.com
+Keep the original message for comparison. If only one email program shows the issue, you can narrow your next test to the element that program renders differently.
 
+- <span id="limitations"></span><span id="mobiles-showing-desktop-v"></span><span id="very-limited-rendering-br"></span>**Desktop layout on a phone**<br>
+  Gmail for Android could display the desktop layout. Lotus Notes 7 and 8.5 had limited layout support.
+- <span id="desktop-only-elements-sho"></span><span id="mobile-only-elements-show"></span><span id="unwanted-vertical-padding"></span>**Visibility and spacing**<br>
+  Mobile-only elements could appear in Outlook 2000–2003, Lotus Notes and Comcast in Internet Explorer. Yahoo Mail could add vertical padding.
+- <span id="background-image-not-show"></span>**Missing backgrounds**<br>
+  Set a fallback background color so text remains readable. Earlier tests found missing images in Lotus Notes, Outlook 2007 mobile-only elements, Android 4.4, Gmail for Android and Comcast webmail.
 
-
-## Perfect rendering of all elements on
-
-### Email Clients
-
-* Apple Mail 8-10
-* Outlook 2010-2016
-* Windows 10 Mail
-* Thunderbird
-* iOS 7+
-
-### Web-based clients
-* AOL Mail all Browser
-* Gmail all Browser
-* GMX.de all Browser
-* Mail.ru all Browser
-* Outlook.com all Browser
-* Web.de all Browser
-
-
-
-## Limitations
-
-#### Mobiles showing Desktop Version
-* Gmail App Android
-
-#### Very limited rendering / broken Layout
-* Lotus Notes 7, 8.5
-
-#### Desktop only elements shown on mobile
-- 
-
-#### Mobile only elements shown on desktop
-* Lotus Notes 7, 8.5
-* Outlook 2000, 2002, 2003
-* Comcast Web-based client on Explorer
-
-#### Unwanted Vertical padding
-* Yahoo! Mail all Browser
-
-#### Background Image not showing (background-color as fallback) on:
-* Lotus Notes
-* Outlook 2007 for Mobile only elements
-* Android 4.4
-* Gmail App (Android)
-* ComCast Web-based client on Explorer, Firefox, Chrome
+Use [Responsive Emails with MailBeez](/basics/responsive-emails) to check the email in the clients your recipients use today.

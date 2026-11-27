@@ -1,5 +1,6 @@
 ---
-title: 'Welcome Email'
+title: "Welcome email"
+module_subtitle: "Welcome new customers"
 slug: create_account
 date: 10-05-2011
 published: true
@@ -16,7 +17,9 @@ taxonomy:
         - docs
     tag:
         - pro
+        - "Welcome new customers"
 module:
+    plans_position: after_guide
     code: create_account
     category:
         - mailbeez
@@ -44,23 +47,25 @@ metadata:
     author: admin
 ---
 
-**A helpful module that sends a Welcome email at a pre-defined time after a customer has created an account.**
+A customer registers at your bike-parts shop to see which brake pads fit their bike. Your shop already confirms the registration. A welcome email the next day can do something more useful for this customer, such as showing where to find the brake model number and linking to the parts finder.
 
-You might be thinking that this module simply doubles up on the email that your shopping cart system already sends when a customer creates an account. However, with some creative thinking, this secondary ‘welcome’ email can be used for some really interesting ideas, like providing additional store information, or to alert the customer to current specials and offers. With the rise on social commerce, this email could even be tailored to attract visitors exclusively to your Facebook or Twitter pages.
+The trigger is the creation of the customer account. Someone can qualify even if they’ve already ordered. For an offer meant only for people who have never bought, use [Encourage a first order](/mailbeez/nopurchase_advanced).
 
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+## Set up the flow
 
+Open **Campaigns → Automations → MailBeez Flows → Welcome new customers**, then choose **Options → Configure**.
 
-**Add gender for dynamic content**
+[doc-steps]
+[doc-step]
+**Choose how soon to write**
 
-For stores that cater for both men and women, this second MailBeez generated email could actually be used for more advanced email processes, like providing differentiated content for male and female recipients - which would make use of the Mailbeez “[Add Gender](/documentation/filterbeez/filter_add_gender/ "Add Gender")” plugin.
+Set **Wait after registration** to one day for the parts guide. Choose a longer **Maximum account age**. For example, seven days limits the first run to recently created accounts and keeps older customers out of a welcome campaign.
+[/doc-step]
+[doc-step]
+**Give the reader one next step**
 
-**Easy configuration**
+Open the welcome email and put the parts-finder link next to the instructions for finding the model number. Read it alongside the shop’s registration confirmation so the customer gets the account details once and the buying advice separately.
+[/doc-step]
+[/doc-steps]
 
-The options for this module include the following parameters, which should look quite familiar and straight forward:
-
-- **Set days delay after create account** The number of days delay after the creation of a new account before sending the emails
-- **Set days to skip after** The number of days after which to skip the create account email (in case cron job failed)
-- **Sender email** The sender’s email
-- **Sender name** The sender’s name
-- **Sort order of display**. Sort order of display. Lowest is displayed first.
+Compare an eligible two-day-old account with one opened a month ago. With the settings above, only the newer account falls inside the window. The [first-run guide](/quickstart/step-3-set-forget#check-the-first-run) explains how to check the result before sending.

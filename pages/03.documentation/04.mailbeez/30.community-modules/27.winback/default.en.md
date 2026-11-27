@@ -1,5 +1,6 @@
 ---
-title: 'Winback Simple'
+title: "Winback Simple"
+module_subtitle: "Send a reminder to customers who have stopped ordering"
 slug: winback
 routes:
     default: /documentation/mailbeez/winback
@@ -45,16 +46,10 @@ metadata:
     author: admin
 ---
 
-**Reactivate legacy customers with the Mailbeez Winback Simple module**
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To set up winback reminders in V5, open [Win back inactive customers](/mailbeez/winback_advanced). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-For store owners new to the world of online selling, or for curious retailers looking to explore Mailbeez before purchasing the more comprehensive Advanced Mailbeez service. Winback Simple is a handy, time-saving solution that will kick-start your store’s email marketing efforts, and let's you begin automatically emailing customers who haven’t made a purchase from your store for a while.
+To contact earlier buyers who have stopped ordering, set the waiting period in the simple Community module. Compare a recent order with an older one before sending. For a sequence with several emails, see [Win back inactive customers](/mailbeez/winback_advanced).
 
-**Bring it right back**
-
-Whilst the free version of Winback does not give you the more advanced features and flexibility that your store will eventually need as your email marketing efforts develop (this functionality can be found in the [Mailbeez Advanced Winback module](/documentation/mailbeez/winback_advanced "Advanced Winback")), nevertheless, it will allow your store to automatically email historical customers who have'nt made a purchase for a while, in an attempt to entice them back to your store.
-
-**Easily installed and configured**
-
-Winback Simple, like all Mailbeez modules, even the extremely powerful Advanced modules, is very simple to install and configure. Installation is usually a case of just transferring a few files with your FTP client, whilst configuration is via the Mailbeez module controls in your online shopping cart’s admin panel; an environment you are already very familiar with.
-
-Get the best Win-Back Rates with the advanced Multi-step MailBeez Module [Winback Advanced with Coupons](/documentation/mailbeez/winback_advanced/ "Review Reminder Advanced – Autologin").
+Base the wait on how often customers normally buy again. Someone who buys a year’s supply is unlikely to need the same reminder as a monthly buyer.

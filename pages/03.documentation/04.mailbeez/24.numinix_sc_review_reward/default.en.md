@@ -1,5 +1,6 @@
 ---
-title: 'Numinix Store Credit: Review Rewards'
+title: "Numinix review rewards"
+module_subtitle: "Credit a customer’s Zen Cart account after a qualifying review"
 slug: numinix_sc_review_reward
 routes:
     aliases:
@@ -19,6 +20,7 @@ taxonomy:
         - docs
     tag:
         - pro
+        - "Numinix Store Credit: Review Rewards"
 module:
     code: numinix_sc_review_reward
     category:
@@ -40,27 +42,10 @@ metadata:
     author: admin
 ---
 
-**Developed in Cooperation with Numinix, the inventor of the popular [Numinix Store Credit module](https://www.numinix.com/plugins/zen-cart-plugins/taxes-order-totals/store-credit-and-reward-dollars?referral_code=888671548)**
+[doc-callout type="note" title="Earlier campaign module"]
+Choose a flow for a current shop under [Automations](/mailbeez). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
+Credit a Zen Cart customer after a qualifying review. This earlier module needs Numinix Store Credit & Reward Points. For periodic messages about credit that remains unused, see [Numinix Store Credit: Balance Reminder](/mailbeez/numinix-store-credit-balance-reminder).
 
-The Numinix Store Credit Review Rewards module will automatically assign, and then email notification of reward points to your customers after they write one or more approved product reviews. 
-
-The module looks for newly approved reviews in store and waits a defined period of time before sending notification, to allow the customer time to write additional reviews. 
-
-
-You can, of course, define the amount to reward per review. But only one reward is given per order.
-
-[plugin:content-inject](/content_blocks/pro_responsive_template)
-
-
-**Requirements:**
-
-- Zen Cart e-commerce platform
-- The [Numinix Store Credit & Reward Points addon](https://www.numinix.com/plugins/zen-cart-plugins/taxes-order-totals/store-credit-and-reward-dollars?referral_code=888671548) for Zen Cart
-
-
-**Like this? You might also like…**
-
-[Numinix Store Credit: Balance Reminder](/documentation/mailbeez/numinix_sc_balance_reminder/)
-
- 
+Look at the customer’s store credit balance when checking a reward. That is where the customer would use the value on a later purchase.

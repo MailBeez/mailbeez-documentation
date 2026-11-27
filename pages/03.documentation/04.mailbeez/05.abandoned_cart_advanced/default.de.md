@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: 'Verlassene Warenkörbe Profi'
+title: "Warenkorberinnerung"
+module_subtitle: "An offene Warenkörbe erinnern"
 slug: abandoned_cart_advanced
 date: 20-02-2018
 published: true
@@ -14,9 +15,10 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro,coupon]
+    tag: [pro,coupon, "An offene Warenkörbe erinnern"]
 module:
-    mc_ready: false
+    plans_position: after_guide
+    mc_ready: true
     code: abandoned_cart_advanced
     category: [mailbeez]
     compatiblity: [comp_cre,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio]
@@ -45,44 +47,32 @@ metadata:
 #  last_modified: true
 ---
 
+Eine Kundin meldet sich in deinem Kaffeeshop an, legt Espressobohnen und einen Wasserfilter in den Warenkorb und verlässt den Shop vor dem Kauf. Zwei Tage später erinnert sie die E-Mail „Dein Warenkorb ist noch da“ an ihren Einkauf. Darunter sieht sie die Bohnen, den Filter und den Link zurück in den Shop. Wer eine Kaffeemühle im Warenkorb hat, bekommt denselben Text und sieht die Mühle.
 
-Dieses Modul hilft Ihnen, effektiv und automatisiert **Warenkorbabbrüche von bestehenden Kunden** zu reduzieren - eingebettet in Ihre MailBeez Marketing Strategie!
+Für jede Erinnerungsstufe gibt es eine gemeinsame Vorlage. Du legst Text und Wartezeit fest und kannst einen Gutschein ergänzen. MailBeez fügt die Produkte aus dem jeweiligen Warenkorb ein. Dafür braucht der Flow ein Kundenkonto mit E-Mail-Adresse und gespeichertem Warenkorb.
 
-Neukunden, welche sich zwar registriert aber noch keine Bestellung getätigt haben, können mit [Kunden ohne Kauf Profi](/dokumentation/mailbeez/nopurchase_advanced) kontaktiert werden.
+## Flow einrichten
 
-**Die wichtigsten Funktionen**
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → An offene Warenkörbe erinnern** und wähle **Optionen → Konfigurieren**.
 
-- Findet und kontaktiert Kunden mit offenen Warenkörben
-- Voll automatisierbarer Kundenkontakt – einstellen und vergessen
-- Zeitverzögerte, mehrstufige Email-Abfolge
-- Je Schritt der Abfolge können Sie optional einen Gutschein vergeben
+[doc-steps]
+[doc-step]
+**Passende Warenkörbe auswählen**
 
-Mit Hilfe einer konfigurierbaren Abfolge von Erinnerungs-E-Mails wird der Kunden darauf aufmerksam gemacht, dass Produkte im Warenkorb liegen - also dass die Bestellung noch nicht abgeschlossen wurde.
+Unter **Erste E-Mail: Wartezeit** legst du für alle passenden Warenkörbe dieselbe Frist fest, zum Beispiel zwei Tage. **Höchstalter für den Einstieg** legt fest, wie alt der Warenkorb beim Einstieg sein darf. Möchtest du nur bisherige Käufer anschreiben, aktiviere **Auf vorherige Bestellungen prüfen?**.
+[/doc-step]
+[doc-step]
+**Abstand zwischen den Nachrichten festlegen**
 
-> [!TIP]
-> Die Module [Kundenrückgewinnung Profi](/dokumentation/mailbeez/winback_advanced) und [Gutschein: Wiederbestellen](/dokumentation/mailbeez/reorder_advanced) prüfen standardmässig auf leeren Warenkorb (konfigurierbar), um eine Überschneidung zu verhindern. Oder anders gesagt: solange ein Kunde Produkte im Warenkorb hat, werden diese Module bei entsprechender Konfiguration pausiert.
+Wähle unter **Anzahl der E-Mails** eine E-Mail oder ergänze eine weitere. Unter **Wartezeit vor E-Mail 2** kannst du etwa drei Tage eintragen. In der ersten E-Mail genügt eine kurze Erinnerung an den offenen Warenkorb. Möchtest du erst in der zweiten einen Rabatt anbieten, wähle dort **Gutschein Vorlage - Zweite Erinnerung**. Bei einer wiederkehrenden Erinnerung lassen sich die Wartezeit vor dem ersten Durchlauf und der Abstand zwischen den Wiederholungen getrennt einstellen.
+[/doc-step]
+[doc-step]
+**Den Weg zurück in den Shop prüfen**
 
-&nbsp;
+Nutze ein angemeldetes Testkonto mit einem ausreichend alten Warenkorb. Vergleiche die Produkte in der Testmail mit dem gespeicherten Warenkorb und folge dann dem Link zurück in den Shop. Nutzt du auch [Zum ersten Kauf einladen](/mailbeez/nopurchase_advanced), kannst du diesen zweiten Flow auf Konten mit leerem Warenkorb beschränken.
+[/doc-step]
+[/doc-steps]
 
-> [!WARNING]
-> Mit Deaktiverung der Option `Auf vorherige Bestellungen prüfen?` wird das Modul auch Neukunden ohne Kauf (aber mit Produkten im Warenkorb) kontaktieren -  dadurch werden die Ausnahme-Regeln des Verbotes von Email-Werbung nicht mehr eingehalten.
+Soll der Text zum Produkt passen? Im Rezept [Warenkorberinnerungen nach Produkt gestalten](/tutorials-und-rezepte/warenkorberinnerungen-nach-produkt) siehst du, wie das mit eigenen Flows gelingt.
 
-&nbsp;
-
-> [!TIP]
-> In Kombination mit [Kunden ohne Kauf Profi](/dokumentation/mailbeez/nopurchase_advanced) besteht die Möglichkeit, zwischen Kunden ohne Kauf mit leerem Warenkorb und Kunden ohne Kauf aber mit Produkten im Warenkorb zu unterscheiden und somit verschiedene Emails und verschiedene Gutschein-Codes zu senden.
-
- Hierzu die Option `Auf vorherige Bestellungen prüfen?` deaktivieren und in [Kunden ohne Kauf Profi](/dokumentation/mailbeez/nopurchase_advanced) die Option `Auf leeren Warenkorb prüfen?` aktivieren. Das Modul [Kunden ohne Kauf Profi](/dokumentation/mailbeez/nopurchase_advanced) wird dann nur potenzielle Neukunden mit leerem Warenkorb erreichen, während "Verlassene Warenkörbe Profi" alle Kunden (mit oder ohne vorheriger Bestellung) mit Produkten im Warenkorb kontaktiert.
-
-
-
-
-#### Weitere Starke Vorteile
-
-**Wirkungsvolle Kampagnen zur Konvertierung von Warenkorbabbrechern**
-
-[plugin:content-inject](/content_blocks/pro_coupon)
-
-[plugin:content-inject](/content_blocks/pro_common_advantage)
-
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+Wie du Empfängerauswahl und Zeitplan prüfst, liest du unter [Den ersten Lauf prüfen](/quickstart/step-3-set-forget#den-ersten-lauf-pruefen).

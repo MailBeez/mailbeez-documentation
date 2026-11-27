@@ -36,176 +36,54 @@ metadata:
 #  last_modified: true
 ---
 
-> [!WARNING]
-> **MailBeez ist ab Gambio 2.3 vorintegriert**<br>wenn Sie Gambio 2.3+ nutzen, bitte MailBeez über das Admin Menü per Klick installieren. Die folgenden Schritte dürfen nicht ausgeführt werden.
+[doc-callout type="note" title="Installation für frühere Shopversionen"]
+Prüfe die Versionsnummer in deiner Shopverwaltung. Für andere Versionen findest du die passende Anleitung unter [Installation](/grundlagen/installation) oder in der [Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-- - - - - -
-
-MailBeez arbeitet problemlos mit *Gambio GX 2.x*.
-
-Die Installation ist in wenigen Schritten erledigt:
-- Die neuen Dateien übertragen
-- Menü-Eintrag anlegen (frühe Gambio 2 Versionen)
-- Zugriffs-Rechte für den Admin vergeben (halb automatisch)
-- MailBeez per Button-Klick installieren
-
-MailBeez verwaltet eigene Tabellen - die vorhandenen Shop-Tabellen werden nicht verändert.
-
-
-## Schritt 1: Neue Dateien
+Verwende das Installationspaket für Gambio GX 2.x vor 2.3. MailBeez legt eigene Tabellen an. Nutze ab 2.3 die integrierte Anbindung wie beschrieben unter [Gambio](/grundlagen/installation/gemeinsam-gambio).
 
 [plugin:content-inject](/content_blocks/download_installer)
 
+## Shopdateien übertragen
 
-folgende Dateien und Ordner aus dem entpackten Zip-Archiv auf den Shop-Server übertragen:
+<span id="schritt-1-neue-dateien"></span><span id="mailbeez-installer"></span>Kopiere `catalog/admin/mailbeez.php` ins Adminverzeichnis des Shops. Kopiere `catalog/mailhive/` und `catalog/mailhive.php` ins Shopverzeichnis neben die `index.php`.
 
-### MailBeez Installer
+<span id="integration"></span>Kopiere die Integrationsdateien aus `/extra files/extras_gambio2.x` in die entsprechenden Shopverzeichnisse.
 
-```bash
-admin/mailbeez.php
-mailhive/
-mailhive.php
-
-
-```
-
-
-### Integration
-
-folgende Dateien und Ordner aus dem entpackten Zip-Archiv
-
-
-```bash 
-/extra files/extras_gambio2.x 
-
-
-```
-
-
-auf den Shop-Server übertragen:
-
-```bash
-Menue
+```text
 /system/conf/admin_menu/menu_mailbeez.xml
 /admin/includes/mailbeez/images/mailbeez_gambio_icon.png
-
-CRM Pad und BeezDesk Kunden Insight
 /system/overloads/AdminApplicationBottomExtenderComponent/BeezDesk.inc.php
-
-Dynamische Erweiterung des MailBeez Menues
 /system/overloads/AdminApplicationTopExtenderComponent/MailBeezAdminApplicationTopExtender.inc.php
-
-Einbindung des clicktrackers
 /system/overloads/ApplicationTopExtenderComponent/MailBeezAnalyticsClicktracker.inc.php
-
-Einbindung der Shopbewertungs-Box
 /system/overloads/ApplicationTopExtenderComponent/MailBeezShopvotingDefault.inc
-
-Frontend-Hook fuer MailBeez automatisch ausfuehren und MailBeez BigData Tracking
 /system/overloads/ApplicationBottomExtenderComponent/MailBeezExtender.inc.php
-
-
-
 ```
 
+## Adminmenü prüfen
 
+<span id="schritt-2-menue-eintrag-a"></span><span id="gambio-gx2-fruehe-version"></span>Suche bei einer frühen GX-2-Version in `admin/includes/column_left.php` den Menüeintrag mit `BOX_CUSTOMERS_STATUS`. Füge in der nächsten Zeile den folgenden Eintrag ein. Er erscheint unter **Kunden**.
 
-## Schritt 2 - Menü-Eintrag anlegen
-
-#### Gambio GX2 frühe Version
-
-folgende Datei öffnen:
-
-```bash 
-admin/includes/column_left.php  
-
-
-```
-
-
-finde
-
-``` 
-' . BOX_CUSTOMERS_STATUS . '<span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px;">;
-
-
-```
-
-
-Danach in einer neuen Zeile folgendes einfügen:
-
-
-
-``` 
+```php
 if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['mailbeez'] == '1')) 
     echo '<ul>
             <li><a id="BOX_MAILBEEZ" href="' . xtc_href_link('mailbeez.php') . '"> MailBeez</a></li>
           </ul>';
-
 ```
 
+<span id="gambio-gx2-mit-service-pa"></span>Vergib bei Service Pack 1.1 zuerst die Zugriffsrechte. Fehlt der Eintrag weiterhin, füge in derselben Datei unmittelbar über `# SAMPLE ITEM:` den folgenden Code ein.
 
-
-Dies platziert den Menü-Eintrag "MailBeez" im Abschnitt "Kunden"
-
-#### Gambio GX2 mit Service Pack
-
-Wenn der obige Eintrag nicht zu finden ist, ist Service Pack 1.1 installiert. Dann sollte der Menü-Eintrag bereits mit Hilfe der Integrations-Dateien angelegt werden.
-
-Wenn dies auch nach Schritt 3 nicht funktioniert, bitte den Menü-Eintrag wie folgt manuell anlegen:
-
-folgende Datei öffnen:
-
- 
-```
-admin/includes/column_left.php  
-
-```
-
-
-
-finde
-
-
-```
-# SAMPLE ITEM:
-
-```
-
-
-
-darüber folgenden Code in eine neue Zeile einfügen
-
-
-```
+```php
 if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['module_newsletter'] == '1')) 
     echo '<ul>
             <li><a id="BOX_MAILBEEZ" href="' . xtc_href_link('mailbeez.php') . '">MailBeez</a></li>
           </ul>';
-
-
 ```
 
+## Zugriff vergeben
 
-## Schritt 3 - Zugriffsrechte vergeben
+<span id="schritt-3-zugriffsrechte-"></span>Rufe auf der Shopdomain einmal `/mailhive.php` auf. Dadurch erhält der Hauptadministrator Zugriff. Weitere Berechtigungen vergibst du einzeln in der Shopverwaltung.
 
-einmalig
-
-
-```
-http://(shop)/mailhive.php
-
-
-```
-
-
-im Browser aufrufen.
-
-Hierdurch werden die erforderlichen Admin-Rechten für den HAUPT-Admin vergeben.
-
-Nach einem erneuten Login und leeren des Seiten-Caches wird MailBeez im Abschnitt "Zusatzmodule" erscheinen.
-
-Falls erforderlich dann Zugriffs-Rechte im Gambio-Admin System für weitere Admin-user vergeben
-
+Melde dich erneut an, leere den Seitencache und prüfe **Zusatzmodule**.
 
 [plugin:content-inject](/content_blocks/run_installer)

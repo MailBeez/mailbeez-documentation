@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Google Analytics configuration
+title: "Google Analytics"
+module_subtitle: "Identify visits from tagged campaign emails in Google Analytics"
 slug: config_googleanalytics
 date: 26-03-2012
 published: true
@@ -25,6 +26,8 @@ metadata:
     author: admin
 ---
 
-In this module you can configure the Google Analytics url parameters.
+A refill reminder and a winback email both link to the same bag of espresso beans. In Google Analytics you can tell which flow brought the buyer to that page. MailBeez puts the sending module’s identifier in `utm_campaign` and adds the source and medium configured for your shop.
 
-The defaults are meaningful, but feel free to adopt the settings to your needs. Please consult the Google Analytics documentation regarding the parameters.
+1. Open **System → Configuration → Tracking Codes** and check the installed provider settings.
+2. Send yourself a test email and open a shop link. Look for `utm_source`, `utm_medium` and `utm_campaign` in the destination URL. Compare their values with the source, medium and campaign you expect to see in Google Analytics.
+3. Follow the link and check the campaign in Google Analytics. To inspect events recorded by MailBeez itself, see [Open & Click Tracking](/configbeez/config_analytics).

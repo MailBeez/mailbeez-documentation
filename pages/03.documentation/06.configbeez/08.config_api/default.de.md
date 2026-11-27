@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: API
+title: "API-Zugang"
+module_subtitle: "API-Schlüssel, Anfragelimits und IP-Ausnahmen einrichten"
 slug: config_api
 date: 26-03-2012
 published: true
@@ -25,11 +26,23 @@ metadata:
     author: admin
 ---
 
-Die MailBeez API (**A**pplication **P**rogram **I**nterface)  ermöglicht die Integration mit anderen Systemen und Webseiten. 
+Kläre vor der Anbindung, welchen Endpunkt die Integration aufruft. Für einen geschützten Aufruf braucht sie den API-Schlüssel des Shops. Für öffentliche Aufrufe gelten die eingestellten Limits, sofern die IP-Adresse nicht ausgenommen ist.
 
-Sie können hier den API Key konfigurieren.
+Nutzen mehrere Werkzeuge die Shop-API, kläre, welche denselben Schlüssel verwenden. Bei einem Schlüsselwechsel musst du den neuen Wert in jedem dieser Werkzeuge hinterlegen.
 
-> [!NOTE]
-> Die MailBeez API ist erweiterbar und die zur Verfügung stehenden Funktionen sind abhängig von den installierten Modulen.
+Öffne **System → Konfiguration** und wähle **API-Zugang**.
 
-Aktuell stehen folgende API Module zur Verfügung:
+Prüfe das benötigte API-Modul und dessen Zugangsdaten. Bewahre private Zugangsdaten auf dem Server auf und teste die Verbindung mit der benötigten Funktion.
+
+<span id="diese-einstellungen-sind-"></span>
+
+## API-Zugriff und Anfragelimits festlegen
+
+- **API-Schlüssel**<br>
+  Authentifiziert geschützte API-Aufrufe. Passen Sie verbundene Integrationen an, wenn Sie diesen Schlüssel ändern.
+- **Öffentliche Anfragen pro Zeitfenster**<br>
+  Maximale Anzahl von Anfragen an öffentliche Endpunkte im eingestellten Zeitfenster.
+- **Öffentliches Zeitfenster (Sekunden)**<br>
+  Zeitraum, in dem Anfragen an öffentliche Endpunkte gezählt werden.
+- **IP-Adressen ohne Begrenzung**<br>
+  Kommagetrennte IP-Adressen, für die keine Anfragebegrenzung gilt.

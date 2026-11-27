@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: The MailBeez Actions Widget
+title: "Dashboard actions"
+module_subtitle: "Find the quick actions available in the earlier dashboard"
 slug: dashboard_actions
 # menu: The MailBeez Actions Widget
 date: 17-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "The MailBeez Actions Widget"]
 # added collection selector
 
 author:
@@ -36,6 +37,8 @@ metadata:
 #  last_modified: true
 ---
 
+[doc-callout type="note" title="Earlier dashboard widget"]
+For the current workspace, open the [V5 dashboard guide](/dashboard). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-Delivered with the free MailBeez framework software, this dashboard widget provides quick links to your MailBeez modules, reports, filters, and configuration area.
-
+Use a shortcut in the older dashboard to open its module, report, filter or settings page. In V5, find a campaign under [Automations](/mailbeez) and a filter under [Add-ons](/extensions/addons).

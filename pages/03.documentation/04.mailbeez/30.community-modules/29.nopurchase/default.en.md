@@ -1,5 +1,6 @@
 ---
-title: 'Nopurchase Simple'
+title: "First order (Simple)"
+module_subtitle: "Follow up with registered customers who haven’t placed an order"
 slug: nopurchase
 routes:
     default: /documentation/mailbeez/nopurchase
@@ -18,6 +19,7 @@ taxonomy:
         - docs
     tag:
         - ce
+        - "Nopurchase Simple"
 module:
     code: nopurchase
     category:
@@ -45,15 +47,10 @@ metadata:
     author: admin
 ---
 
-This MailBeez Module allows you to contact customers who have an account, but no purchases.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To follow up after registration without a purchase in V5, open [Encourage a first order](/mailbeez/nopurchase_advanced). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
+Choose how long a new account can go without a first order before the simple Community module contacts it. For a multi-step first-order campaign, see [Encourage a first order](/mailbeez/nopurchase_advanced).
 
-**Great for stores just starting out**
-
-Whilst Nopurchase Simple does not include the more advanced features of the [Nopurchase Advanced with Coupons](/documentation/mailbeez/nopurchase_advanced/ "Nopurchase Advanced") - a module we recommend you upgrade to once you've tested Nopurchase Simple for a few days - nevertheless it will allow you to start automatically emailing customers who have no purchases straight out of the box.
-
-**Easily installed and configured**
-
-Like all Mailbeez modules, even the extremely powerful Advanced modules, Nopurchase Simple is very simple to install and configure. Installation is usually a case of just transferring a few files into your FTP, whilst configuration is via the Mailbeez module controls in your store’s admin area; an environment you are already familiar very familiar with.
-
-Get the best Rates for first orders with the advanced Multi-step MailBeez Module  [Nopurchase Advanced with Coupons](/documentation/mailbeez/nopurchase_advanced/ "Nopurchase Advanced").
+Use the first message to remove a practical obstacle. A fitting guide or an explanation of delivery options can help someone who registered while comparing products.

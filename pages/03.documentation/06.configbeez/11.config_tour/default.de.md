@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: Tour
+module_subtitle: "Sich mit der früheren Tour in MailBeez orientieren"
 slug: config_tour
 date: 26-03-2012
 published: true
@@ -25,8 +26,8 @@ metadata:
     author: admin
 ---
 
-Hier gibt es nicht viel zu tun - wählen Sie, ob Sie den Tab mit den "Tour" Modulen (Interaktive Lehrgänge) zeigen lassen wollen.
+[doc-callout type="note" title="Frühere Moduleinstellungen"]
+Einstellungen in der aktuellen App findest du unter [System](/app-system). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Mit der integrierten MailBeez Tour Funktion haben Sie Zugang zu einer laufenden erweiterten Bibliothek von interaktiven Lehrgängen, um das MailBeez System und häufige Abläufe besser zu verstehen.
-
-Dank des Indikators sehen Sie, wie viele neue Lehrgänge auf Sie warten.
+Aktiviere in einer älteren Installation mit interaktiven Anleitungen den Tab **Tour**, wenn du die Rundgänge in der Verwaltung anbieten möchtest. Der Zähler zeigt an, wie viele neue Touren verfügbar sind.

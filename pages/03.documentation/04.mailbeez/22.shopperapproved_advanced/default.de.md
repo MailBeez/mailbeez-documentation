@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: Shopper Approved Profi
+module_subtitle: "Die Umfrage für Käufer und den Versandzeitpunkt festlegen"
 slug: shopperapproved_advanced
 # menu: Shopper Approved Profi
 date: 08-05-2015
@@ -48,5 +49,33 @@ metadata:
 #  last_modified: true
 ---
 
-Diese Modul ist nur relevant für Online-Shops aus dem englisch-sprachigem Raum. Daher ist die Dokumentation nur in englisher Sprache verfügbar: 
- [Shopper Approved Advanced EN](/en/documentation/mailbeez/shopperapproved_advanced)
+[doc-callout type="note" title="Früheres Kampagnenmodul"]
+Für einen aktuellen Shop wählst du den Flow unter [Automatisierung](/mailbeez). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
+
+Lege fest, welche Umfrage von Shopper Approved Käufer erhalten sollen und wann. Halte die Kontodaten deines Shops bereit und berücksichtige längere Lieferzeiten ins Ausland.
+
+Folge einem Testlink bis zur Umfrage. So siehst du, welche Fragen Käufer erhalten und ob der Einladungstext den Ablauf zutreffend beschreibt.
+
+## Empfänger der Einladung auswählen
+
+1. Wähle die Bestellstatus, bei denen die Wartezeit beginnt. Lege bei Bedarf eine zusätzliche Wartezeit für Lieferungen außerhalb des im Shop hinterlegten Heimatlandes fest.
+2. Lege die Mindestanzahl der Bestellungen fest. Wähle für wiederkehrende Käufer einen Mindestabstand zwischen Einladungen, zum Beispiel 120 Tage. Das Modul prüft den Zeitpunkt der letzten Einladung.
+3. Wähle die erste Befragung oder verlinke die vollständige Befragung mit vorausgefüllter Bestellnummer.
+
+## Bewertungsseite anpassen
+
+Füge den folgenden Code in eine eigene Bewertungsseite ein. Dort gibt das Modul seine Bewertungsvorlage aus.
+
+```
+if (isset($_GET['SA'])) {
+    require_once(DIR_FS_CATALOG . 'mailhive/mailbeez/shopperapproved_advanced.php');
+    $sa = new shopperapproved_advanced();
+    $code = $sa->generate_page($_GET['SA'], 'core.tpl.html');
+    echo $code;
+}
+```
+
+Verlinke die Seite in deiner E-Mail-Vorlage mit dem Einladungsparameter, zum Beispiel `https://example.com/my-custom-page.php?SA={$sa_invite_parameter_value}`.
+
+Kopiere für die vollständige Befragung den Link aus deinem Shopper-Approved-Konto und ersetze `<order-id>` durch `{$order_id}`. Mit der [Integration](/configbeez/integrations/config_shopperapproved_integration) kannst du Bewertungen auch im Shop und in MailBeez-E-Mails anzeigen.

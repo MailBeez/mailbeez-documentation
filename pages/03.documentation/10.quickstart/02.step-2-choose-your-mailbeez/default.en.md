@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: "Step 2: Choose your MailBeez"
+title: "Choose an automation"
 slug: step-2-choose-your-mailbeez
 # menu: Step 2: Choose your MailBeez
 date: 27-05-2010
@@ -36,8 +36,9 @@ metadata:
 #  last_modified: true
 ---
 
-After installing the Quickstart Package you’ll now find some standard Mailbeez modules sat in your dashboard area.
+Choose an event you can reproduce, such as a new registration or a test order reaching the shipped status. A test email lets you check the message itself. To check whether the flow selects the right recipient, you’ll also need a matching event in the shop.
 
-To expand the functionality of the core installation, click on “Find & Share” to browse the [Mailbeez modules repository](/download/) – a place to discover & share MailBeez Modules.
-
-[Tutorial: Guide to Getting Started](/documentation/tutorials/guide-to-getting-started/)
+1. Open **Campaigns → Automations → MailBeez Flows**. Choose the matching flow. If it is missing, **Add Automation** shows modules available for your shop.
+2. Check who qualifies and when the first email can go out. For a review request, allow time for the order to reach the buyer.
+3. Preview the email, send a test to your own inbox and try its main link.
+4. Before triggering the event, check the mode and inbox for the scheduled run in [Simulation Mode](/configbeez/config_simulation). Trigger the event in your shop and note the time. Once the wait ends, [check the next scheduled run](/quickstart/step-3-set-forget).

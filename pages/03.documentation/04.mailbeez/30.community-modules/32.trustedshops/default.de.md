@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Trustedshops
+title: "Trusted Shops (Community)"
+module_subtitle: "Käufer zu einer Shopbewertung auf Trusted Shops einladen"
 slug: trustedshops
 routes:
     default: /dokumentation/mailbeez/trustedshops
@@ -19,7 +20,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [ce]
+    tag: [ce, "Trustedshops"]
 module:
     code: 'trustedshops'
     category: [mailbeez]
@@ -51,15 +52,14 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses kostenfreie Modul bitte Kunden automatisch nach der Bestellung um Bewertung auf Trustedshops. Für den professionellen Einsatz empfehlen wir das [Trustedshops Profi](/dokumentation/mailbeez/trustedshops_advanced) Modul als Bestandteil der Profi-Tarife!
+[doc-callout type="note" title="Früheres Kampagnenmodul"]
+Für einen aktuellen Shop wählst du den Flow unter [Automatisierung](/mailbeez). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-> [!WARNING]
-> **ACHTUNG:** Aufgrund verschiedener gesetzlicher Regelungen weist Trustedshops darauf hin, dass dieses Modul nur an Kunden Aufforderungen zur Bewertung schicken darf, die ausdrücklich ihre Einwilligung dazu gegeben haben.
+Das frühere Community-Modul lädt Käufer zur Shopbewertung bei Trusted Shops ein. Verwende das Bewertungsziel deines Shops und öffne es aus einer Testeinladung, bevor du den automatischen Versand aktivierst.
 
-Dies kann über eine separate Checkbox oder aber den Newsletter-Abo geschehen:
+Wähle einen Zeitpunkt nach der Lieferung. Erfasst der Shopstatus den Versand, berücksichtige die langsamste Lieferart, deren Käufer du einlädst.
 
-> Es ist möglich, die Einwilligung zum Erhalt einer Bewertungsaufforderung mit der Einwilligung zum Erhalt des Newsletters zu koppeln, dann muss jedoch in der Einwilligung bereits der (erweiterte) Umfang genau erkennbar sein. So müsste es etwa lauten “[  ]  Ich möchte den Newsletter erhalten und einmalig per E-Mail an die Abgabe einer Bewertung erinnert werden. Der Widerruf der Einwilligung ist jederzeit möglich.”.
+Wähle den Bestellstatus für den Start der Wartezeit und plane genügend Zeit für die Lieferung ein.
 
-Jeder Shopbetreiber ist also selbst für den Einsatz dieses Modules verantwortlich. Falls die Einwilligung mit dem Newsletter-Abo gekoppelt werden soll, bitte MailBeez entsprechend konfigurieren. Im Bereich MailBeez > Konfiguration findet sich die Option nur an Kunden mit einem Newsletter-Abo zu verschicken.
-
-Mit der [Trustedshops Integration Suite](/dokumentation/configbeez/config_trustedshops_rss_importer) als Bestandteil der Profi-Tarife können Shopbetreiber die wertvollen Bewertungen optimial in ihren Online-Shop und in von MailBeez generierten Emails integrieren.
+Den V5-Flow beschreibt [Um Bewertungen auf Trusted Shops bitten](/mailbeez/trustedshops_advanced).

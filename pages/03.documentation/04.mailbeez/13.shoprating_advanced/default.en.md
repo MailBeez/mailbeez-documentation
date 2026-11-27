@@ -1,5 +1,6 @@
 ---
-title: 'Shoprating Invitation Advanced'
+title: "Store reviews"
+module_subtitle: "Ask for reviews on your store"
 slug: shoprating_advanced
 routes:
     aliases:
@@ -19,7 +20,9 @@ taxonomy:
         - docs
     tag:
         - pro
+        - "Ask for reviews on your store"
 module:
+    plans_position: after_guide
     code: shoprating_advanced
     category:
         - mailbeez
@@ -46,14 +49,30 @@ metadata:
     author: admin
 ---
 
-This module has been developed for professional application of the free add-on [Shoprating](/documentation/configbeez/config_shopvoting/).
+A buyer unpacks a set of wine glasses. All six survived the journey, and support answered their delivery question the same afternoon. That’s useful feedback for someone deciding whether to buy from your shop. This flow invites the buyer to leave a store review on your own site.
 
-The shopvoting module allows your customers to rate your store. You can edit these ratings in your store admin and display them on your storefront.
+Set up [store reviews](/configbeez/config_shopvoting) first so there is a form to receive the feedback. For comments on the glasses themselves, use [Ask for product reviews](/mailbeez/review_advanced).
 
-This module allows store-owners to automatically invite their customers to rate their store.
+## Set up the flow
 
-In comparison to the free version the Shoprating Invitation advanced module offers a range of features like auto-login and recognition of regular customers which will generate up to twice as many ratings
+Open **Campaigns → Automations → MailBeez Flows → Ask for reviews on your store**, then choose **Options → Configure**.
 
-This module allows you to dynamically integrate the rating in real time into your MailBeez Emails e.g. [Winback Advanced](/documentation/mailbeez/winback_advanced/)
+[doc-steps]
+[doc-step]
+**Wait until the order has arrived**
 
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+Choose your shipped status under **Target Order Status**. Set **Wait after the order status changes** to allow for delivery. For example, if parcels usually arrive within three days, waiting a week gives the buyer time to unpack them.
+[/doc-step]
+[doc-step]
+**Ask about the shopping experience**
+
+Choose **Number of emails** and the delay for each reminder you use. One question such as “How did your glasses arrive?” gives the buyer a place to start. If you also ask for a product review, check how the two invitations will read in the same inbox.
+[/doc-step]
+[doc-step]
+**Try the form as a buyer**
+
+Open a test invitation and follow the review link on a phone. **Open the rating form without another login** determines whether the buyer has to sign in again. Check that the form belongs to your store and asks about the order experience.
+[/doc-step]
+[/doc-steps]
+
+[Schedule a review invitation](/cookbook/optimized-review-invite-flow) shows how to follow an order from its status change to the review page.

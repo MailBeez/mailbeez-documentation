@@ -8,76 +8,23 @@ taxonomy:
     category: docs
 ---
 
+Stell dir vor, du betreibst einen Onlineshop für Kaffee. Eine Kundin kauft ihre erste Espressomaschine. Diese Woche hilft ihr vielleicht eine Anleitung für den ersten Espresso. In sechs Monaten freut sie sich eher über einen Hinweis auf den passenden Ersatzfilter. Ein Stammkunde, der nur Bohnen kauft, freut sich vielleicht über eine Erinnerung, wenn sein Lieblingskaffee zur Neige geht.
 
-**Die richtige Email zum richtigen Zeitpunkt an den richtigen Empfänger**  
- MailBeez ist die passende Erweiterung für Shopbetreiber, für die Aftersales zum guten Ton im eCommerce gehört. Damit binden Sie Ihre Kunden langfristig an Ihren Shop und animieren sie immer wieder zu neuen Käufen. 
- Shopbetreiber investieren häufig viel Zeit, Mühe und Geld, um mehr Besucher in den Shop zu bekommen – mit Mailbeez gelingt es, die bestehenden Kunden nochmal zu gewinnen.
+MailBeez nutzt die Daten aus deinem Shop, um solche E-Mails zum passenden Zeitpunkt zu verschicken. Ein Tipp, eine Bitte um Bewertung oder ein Gruß zum Kundenjubiläum bringt deinen Shop auch zwischen zwei Käufen in Erinnerung. Beginne mit einem Anlass, der aus Sicht des Käufers sinnvoll ist.
 
-**Zum Beispiel können mit Mailbeez vollautomatisiert angelegt werden:**
+## Den Anlass für eine Nachricht wählen
 
-- eMails für Geburtstagsglückwünsche
-- Aktive Kundenrückgewinnung mit einem Gutschein für den nächsten Kauf
-- Aufforderung zur Produktbewertung
-- Zahlungserinnerung
-- Automatische Mahnungen
-- Umfrage zur Kundenzufriedenheit
+- **Einen fertigen MailBeez Flow nutzen**<br>
+  Wähle unter [Automatisierung](/mailbeez) einen installierten Flow. Zeitpunkt und Text bestimmst du. Bitte etwa um eine [Produktbewertung](/mailbeez/review_advanced), nachdem die Kundin ihre Mühle ausprobiert hat. Mit der [Kundenrückgewinnung](/mailbeez/winback_advanced) kannst du dich melden, wenn die gewohnte Bestellung ausbleibt.
+- **Einen eigenen Flow für eine Zielgruppe aufbauen**<br>
+  Auch wer gestern Bohnen bestellt hat, kann einen Ersatzfilter brauchen. Wähle Käufer des passenden Maschinenmodells und schließe diejenigen aus, die den Filter schon haben. Du kannst neue Besitzer auch mit einem kurzen E-Mail-Kurs begleiten oder passendes Zubehör empfehlen. Unter [Eigene Flows](/mailbeez/eigene-flows) findest du Beispiele für Käufe und offene Warenkörbe.
+- **Einen Newsletter zu einem festen Termin verschicken**<br>
+  Kündige die neue Espressoröstung am Freitag bei Abonnenten an, die sich für Espresso interessieren. Bei einem Produktupdate oder einem Problem mit einem Modell wählst du gezielt die betroffenen Käufer. [Newsletter planen](/tutorials-und-rezepte/newsletter-planen) zeigt, wie du Empfänger und Termin prüfst.
 
-Das ist nur eine kleine Auswahl, tatsächlich kann das System noch viel mehr. Zur automatischen Ausführung von MailBeez ist eine URL per Cronjob aufzurufen. Zur Sicherheit hat jeder Shop eine eigene, sichere URL.
- 
+Schau vor einer weiteren Aussendung, welche E-Mails derselbe Kunde in dieser Woche schon bekommt. Erklärt dein Kaffeekurs bereits den Filterwechsel, hilft ein Link an dieser Stelle oft mehr als eine zusätzliche Nachricht.
 
-## Voll mit dem Shopsystem integriert
+## Nach dem Versand die Ergebnisse prüfen
 
-MailBeez bettet sich nahtlos in die Shop-Administration ein - dadurch hat MailBeez Zugriff auf alle im Shop vorhandenen Daten und kann diese jederzeit auswerten:
+Unter [MailBeez-Ergebnisse](/mailbeez-results) findest du Versandzahlen, Klicks und zugeordnete Bestellungen. Unter [Shop](/shop) siehst du die Entwicklung des gesamten Shops, etwa ob Käufer wiederkommen oder welche Rückmeldungen sie geben.
 
-
-![MailBeez Admin](../Screen_Gambio_GX2_Administration.de.png)
- 
-
-## Funktionsumfang
-
-**Simulation**  
- Im Simulationsmodus können alle Funktionen getestet werden. Alle eMails werden personalisiert generiert, aber nur an die konfigurierbare Test-Adresse verschickt. Wenn das Ergebnis wie erwartet ausfällt, wird MailBeez dann im Production-Modus die echten eMails zuverlässig verschicken.
-
-**Einfache Anpassung der eMails**  
- Alle Inhalte der eMails werden aus textbasierten Vorlagen (HTML & TXT) generiert, deren Inhalte sind leicht anpassbar. Es gibt eine globale Rahmen-Vorlage mit Kopf- und Fussbereich und moduleigene Inhaltsvorlagen.
- 
-[plugin:content-inject](/content_blocks/pro_template_manager)
-
-**Versandprotokoll, Google Analytics Integration, Opt-Out**  
- MailBeez als “Aftersales Trigger Email Campaigns” Plattform übernimmt alle lästigen Aufgaben wie zum Beispiel die Protokollierung (welcher Kunde hat welche Email erhalten), Google Analytics Integration (URL Rewrite), Opt-Out (Kunden können austragen) und weitere gemeinsamen Funktionen.
-
-**Ausbaubares Modulsystem**  
- Derzeit gibt es bereits eine interessante Auswahl an kostenlosen MailBeez Modulen, aber auch “Premium”-Module mit kostenpflichtigem Download. So kann jeder Shop-Betreiber sofort und kostenlos MailBeez einsetzen. Weitere Module folgen, wer das entsprechende Programmierwissen (PHP, SQL) hat, kann natürlich aber auch selbst Module entwickeln – und auf Wunsch auf MailBeez.com zur Verfügung stellen.
-
-**Überblick**
-
-- Google Analytics Integration – sehe den Erfolg der MailBeez Kampagnen in Google Analytics
-- Aktiviere / Deaktivier MailBeez
-- Sichere Cronjob URL – Security Key wird automatisch generiert
-- Kopie Emails
-- Integrierter Version-Check
-
-**Die Module**
-
-- Einfaches Moduledesigen – basierend auf einer mailbeez-class
-- Einfache Anpassung
-- Vorlagen für HTML und TXT Email-Format
-- Gemeinsame Hauptvorlagen (Kopf und Fusszeile)
-- Vorschau der HTML / TXT Email Vorlagen
-- Test-Versand
-- Auflistung der aktuellen Empfänger
-- Module manuell ausführen
-- Kunden können modulebasiert Emails abbestellen (Opt-Out)
-
-**Simulation Modus**
-
-- Ideal um alle Funktionen und Module zu testen
-- Protokollierung der Simulation, Neustart der Simulation
-
-**Production Modus**
-
-- Protokollierung des Email Versandes
-- Keine Doppelversendung – die Ausführung von MailBeez kann beliebig oft gestartet werden
-
-
-
+Der [Schnelleinstieg](/schnelleinstieg) führt dich zur ersten E-Mail. Für ältere Installationen findest du versionsspezifische Anleitungen in der [Referenz für ältere Versionen](/legacy).

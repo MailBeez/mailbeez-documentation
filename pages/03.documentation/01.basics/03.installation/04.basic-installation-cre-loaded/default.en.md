@@ -36,56 +36,28 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez works with CRE_Loaded_PCI_CE_v6.4.1a, running on php 5.3+
+[doc-callout type="note" title="Installation for earlier shop releases"]
+Check the version in your shop admin. For a different release, look under [Installation](/basics/installation) or in the [legacy reference](/legacy).
+[/doc-callout]
 
-The installation is straight forward and can be done in a couple of minutes by following this single step:
-
-- copy new files
-
-MailBeez is maintaining it’s own tables – the shops existing table stay as they are.
-
-## Step 1 – copy new files
+Use the installer for CRE Loaded PCI CE 6.4.1a. The historical package specified PHP 5.3 or later.
 
 [plugin:content-inject](/content_blocks/download_installer)
 
-The “Quickstart Package” Zip-File contains several folders. The Folder “catalog” contains the files and folders you need to copy into your Shop Root.
+## Copy the shop files
 
-Copy following file and folder to your Shop Root (where your index.php is located)
+<span id="step-1-copy-new-files"></span>Copy `catalog/admin/mailbeez.php` into the shop’s admin directory. Copy `catalog/mailhive/` and `catalog/mailhive.php` into the shop root alongside `index.php`.
 
-```bash
-catalog/admin/mailbeez.php -> admin/mailbeez.php  
-catalog/mailhive -> mailhive (folder)  
-catalog/mailhive.php -> mailhive.php
+From `extras_creloaded`, copy the integration files to these locations in the shop.
 
-```
-
-and the CRE Loaded specific “drop-in installation files” located in
-
-```bash
- (MailBeez package) / extras_creloaded
-
-```
-
-into their locations:
-
-```bash
+```text
 admin/includes/runtime/applicationtop/MAILBEEZ_applicationtop_bottom.php  
 admin/includes/runtime/marketing/MAILBEE_marketing_boxesbottom.php  
 includes/runtime/applicationtop/MAILBEEZ_applicationtop_bottom.php
-
 ```
- 
 
-## Step 2 (CRE Loaded B2B) – add admin rights
+## Grant access in CRE Loaded B2B
 
-the B2B version of CRE Loaded supports admin rights. After copying the files into CRE Loaded you need to grant access to the MailBeez system with following steps:
-
-1. go to “Administrator > Menu File Access”
-2. Click on line item “Marketing”
-3. Click Button “Insert File”
-4. Choose “mailbeez.php” in the drop-down list & save the settings
-
-Now you find the Menu item “MailBeez” under “Marketing” in the admin menu
-
+<span id="step-2-cre-loaded-b2b-add"></span>Under **Administrator → Menu File Access**, select **Marketing → Insert File**. Choose `mailbeez.php` and save. Open **Marketing → MailBeez** to check the entry.
 
 [plugin:content-inject](/content_blocks/run_installer)

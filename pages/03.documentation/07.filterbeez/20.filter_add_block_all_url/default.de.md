@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Komplett Opt-Out Link
+title: "Abmeldelink"
+module_subtitle: "Link zur vollständigen Abmeldung einfügen"
 slug: filter_add_block_all_url
 # menu: Add Block All Link
 date: 16-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Link zur vollständigen Abmeldung einfügen"]
 module:
     code: 'config_block_admin'
     category: [filterbeez]
@@ -42,4 +43,14 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses Module ist Bestandteil des [Erweitertes Opt-Out mit Admin](/dokumentation/configbeez/config_block_admin/) Modules und fügt den erforderlichen Link Informationen in die Emails ein.
+Ein Kunde erhält deinen Geburtstagsgruß und möchte künftig gar keine MailBeez-E-Mails aus deinem Shop bekommen. Schon am Link im Footer sollte er erkennen, dass seine Entscheidung auch für spätere Erinnerungen gilt. Ein möglicher Wortlaut ist „Alle MailBeez-E-Mails dieses Shops abbestellen“.
+
+## Den Link zur vollständigen Abmeldung einfügen
+
+Öffne **System → Erweiterungen → Zusatzmodule → Einwilligungen und Sperren** und wähle **Link zur vollständigen Abmeldung einfügen**.
+
+In den Sperreinstellungen kann dein Shop einzelne Module von der vollständigen Abmeldung ausnehmen. Prüfe die Ausnahmen, bevor du im Footer beschreibst, welche E-Mails abbestellt werden.
+
+Das Hilfsmodul stellt der Vorlage den persönlichen Abmeldelink bereit. Verwende den für die jeweilige Nachricht erzeugten Link. Kopierst du ihn aus einer fremden E-Mail, gehört er weiterhin zu deren Empfänger.
+
+Prüfe den Footer in einer Nachricht an dein eigenes Testkonto. Bietest du zusätzlich die Abmeldung von einer einzelnen Kampagne an, lies beide Linktexte nebeneinander. Wie du eine vorhandene Sperre nachsiehst, erfährst du unter [E-Mail-Sperren](/filterbeez/filter_check_block_all).

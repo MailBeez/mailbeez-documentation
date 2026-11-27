@@ -35,48 +35,22 @@ metadata:
 #  last_modified: true
 ---
 
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+[Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Ab Version 3.0 kann MailBeez sehr komfortabel mit dem integrierten Aktualisierungs-Programm auf die jeweils neueste Version gebracht werden.
+Seit MailBeez 3.0 kann das Updatewerkzeug die Core-Dateien eines älteren Shops ersetzen. Notiere vor dem Update die installierte Version und sichere eigene Änderungen separat. So kannst du sie mit den neu installierten Dateien vergleichen.
 
-## Aktualisieren bei Anzeige einer neuen Version
+## Update über eine Benachrichtigung starten
 
-Die Versions-Kontrolle zeigt im System einen Hinweis an, wenn eine neue Version vorliegt. Bitte diesen Hinweis anklicken und dann das Aktualisierungs-Programm durchführen.
+1. <span id="aktualisieren-bei-anzeige"></span>Öffne den Versionshinweis in MailBeez und starte das Updatewerkzeug.
+2. Das Werkzeug prüft den Server, lädt das Paket herunter und prüft die Schreibrechte für alle benötigten Dateien. Behebe gemeldete Rechteprobleme, bevor du fortfährst.
+3. Warte, bis das Werkzeug `/mailhive` gesichert und die neuen Dateien geschrieben hat. Öffne die Administration wieder und prüfe den Updatehinweis.
 
-Das Aktualiserungs-Programm führt dabei folgende Schritte durch:
+Hängt die Sicherung bei einer Version vor 3.3.4, entferne nur Dateien mit dem Präfix `appcache_` aus `/mailhive/common/templates_c` und starte das Update erneut. Ab 3.3.4 bereinigt das Werkzeug diese Cache-Dateien selbst.
 
-1. Prüfung der Server-Umgebung
-1. Download der neuen Dateien
-1. Prüfung, ob alle neuen Dateien geschrieben werden können - hierdurch wird sichergestellt, dass kein "Versions-Mix" von alten, nicht schreibbaren und neuen schreibbaren Dateien entstehen kann
-1. Backup des /mailhive Verzeichnis
-1. Schreiben der neuen Dateien (es werden alle Dateien überschrieben)
+## Updatewerkzeug direkt öffnen
 
+<span id="manuelles-aktualisieren"></span>Setze in der URL deiner MailBeez-Administration den Parameter `cloudloader_mode=update_core`, etwa `https://shop.example/admin/mailbeez.php?cloudloader_mode=update_core`. Folge denselben Prüfschritten.
 
-Nach Rückkehr zum MailBeez System sollten Sie einen entsprechenden Hinweis sehen.
-
-
-> [!TIP]
-> Falls der Backup-Prozess nicht durchläuft, bitte mit Hilfe eines FTP Programmes alle Dateien deren Dateiname mit `appcache_` startet aus dem Verzeichnis `/mailhive/common/templates_c` löschen. Ab MailBeez Version 3.3.4 werden alte Cache Dateien automatisch entfernt.
-
-## Manuelles Aktualisieren
-
-In einigen Fällen kann es erforderlich sein, das Aktualisierungs-Programm manuell aufzurufen.
-
-Hierzu bitte folgendes
-
-`?cloudloader_mode=update_core` 
-
-an die URL der MailBeez-Seite anhängen, also dass die URL im Browser etwa so aussieht:
-
-`http://<shop-url>/<admin>/mailbeez.php?cloudloader_mode=update_core`
-
-dann sollten Sie wie gewohnt durch den Aktualisierungs-Ablauf geführt werden.
-
-
-
-
-## Aktualisierung per FTP
-
-Sollte das Aktualisierungs-Programm aus unbekannten Gründen nicht durchlaufen, so kann das MailBeez Grundsystem auch "Old-School" per FTP aktualisiert werden:
-
-Hierzu das
-[MailBeez Grundsystem (.zip) downloaden](https://apps.mailbeez.com/api/public/v1/core/get), auf dem eigenen Rechner entpacken und dann per FTP auf den Server übertragen.
+<span id="aktualisierung-per-ftp"></span>Kann das Werkzeug das Update nicht abschließen, lade das [Core-Paket](https://apps.mailbeez.com/api/public/v1/core/get) herunter, entpacke es lokal und übertrage die Dateien per FTP in die entsprechenden Shopverzeichnisse.

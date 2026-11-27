@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Winback Advanced Cross Check
+title: "Winback cross-check"
+module_subtitle: "Avoid contacting customers again after an earlier winback reminder"
 slug: filter_check_winback_advanced
 # menu: Winback Advanced Cross Check
 date: 16-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Winback Advanced Cross Check"]
 module:
     code: 'winback_advanced'
     category: [filterbeez]
@@ -40,10 +41,12 @@ metadata:
 #  last_modified: true
 ---
 
-## Don’t Duplicate Your Emails
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To set up winback reminders in V5, open [Win back inactive customers](/mailbeez/winback_advanced). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-Delivered with the [Winback Advanced](/documentation/mailbeez/winback_advanced/) module, this filter checks for customers who have blocked or already received Winback emails from the Winback Simple module before sending out emails when the Winback Advanced module is run.
+<span id="don-t-duplicate-your-emai"></span>If you moved from the simple module to the advanced edition, use this historical filter to check the earlier sending history and opt-outs. It prevents a buyer who already received or blocked the simple module’s message from receiving it again through the advanced module.
 
-If you were running the Simple version of the module prior to installing the Advanced version, this filter ensures that customers won’t receive the same email twice (once from each version), or at all if they have opted-out.
+A customer may still be inactive after receiving an earlier winback email. Their past send record matters when deciding whether the newer module should contact them again.
 
-If you begin using the Winback Advanced module without ever having run the Winback Simple module, then there is no need to enable this filter.
+A shop that started with the advanced edition has no simple-module history to check.

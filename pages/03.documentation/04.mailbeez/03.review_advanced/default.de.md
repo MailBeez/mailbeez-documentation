@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Produkt-Bewertungen Profi - mit Autologin
+title: "Produktbewertungen"
+module_subtitle: "Um Produktbewertungen bitten"
 slug: review_advanced
 # menu: Produktbewertungen Profi - mit Autologin
 date: 21-06-2011
@@ -20,8 +21,9 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Um Produktbewertungen bitten"]
 module:
+    plans_position: after_guide
     mc_ready: true
     code: 'review_advanced'
     category: [mailbeez]
@@ -53,36 +55,35 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses Modul arbeitet mit der im Shop-System vorhandenen Funktion für Produkt-Bewertungen zusammen!
+Ein Kunde bestellt in deinem Kaffeeshop eine Handmühle. Bei der Lieferung kann er schon sagen, ob das Paket heil angekommen ist. Nach einer Woche weiß er auch, wie gut sich der Mahlgrad für Espresso einstellen lässt. Mit diesem Flow bittest du ihn um eine Bewertung der Mühle auf der Produktseite.
 
-**Produktbewertungen haben einen umsatzsteigernden Effekt – leider kommen die Produktbewertungen aber nicht ohne weiteres Zutun. Mit diesem Modul können Sie die optimale Anzahl an Produktbewertungen erhalten und so zur Umsatzsteigerung beitragen. Das Modul integriert sich nahtlos mit dem Produktbewertungssystem vom Online-Shop**
+Pro E-Mail-Stufe gilt derselbe Text für alle Produkte. MailBeez ergänzt die Bewertungslinks zu den Artikeln aus der jeweiligen Bestellung. Hat der Kunde eine Mühle und Kaffeebohnen bestellt und die Bohnen schon bewertet, erscheint nur die Mühle in seiner Einladung.
 
-Wenn ein Kunde ersteinmal die Ware erhalten hat, besteht oft keine Motiviation mehr, den Shop später wieder zu besuchen, um eine Produktbewertung abzugeben. Einige Kunden haben vielleicht eine “Produktbewertungs-Kultur” von häufigen Besuchen auf den grossen Shops entwickelt – diese werden aber immer die Minderheit darstellen.
+## Flow einrichten
 
-**So geht es mit MailBeez!**
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → Um Produktbewertungen bitten** und wähle **Optionen → Konfigurieren**.
 
-Der einzige Weg, um Kunden zur Produktbewertung zu bewegen, ist pro-aktiv zu werden. Und hierzu bietet MailBeez ein einfach zu installierendes, voll automatisch arbeitendes Modul “Produktbewertungen Profi” an, welches dazu entwickelt wurde, Kunden zu kontaktieren und diese zur Bewertung der kürzlich erworbenden Produkte aufzufordern.
+<span id="zeitpunkt-fuer-einladung-"></span>
+<span id="diese-einstellungen-sind-"></span>
 
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+[doc-steps]
+[doc-step]
+**Zeit zum Ausprobieren einplanen**
 
+Wähle unter **Bestell-Status** deinen Versandstatus. Plane unter **Wartezeit nach dem Statuswechsel** Zeit für die Lieferung und das Ausprobieren ein, zum Beispiel zehn Tage. Diese Frist gilt für alle passenden Bestellungen. Setze **Höchstalter des Statuswechsels** über diese Wartezeit, um die Auswahl älterer Bestellungen zu begrenzen.
+[/doc-step]
+[doc-step]
+**Einladung und Erinnerungen festlegen**
 
-Abhängig von Ihrer Shop-Konfiguration erfordern die Vorlagen eine Anpassung der Produkt-Bildgrössen. Es ist natürlich auch möglich, eigene Vorlage anzulegen – diese stehen auch automatisch in der Vorlagen-Auswahl zur Verfügung.
+Formuliere die Einladung so, dass sie zu jedem Artikel passt, etwa „Hilf anderen bei der Auswahl. Bewerte einen Artikel aus deiner Bestellung.“
 
-#### Weitere Starke Vorteile
-** Komfortabel mit Auto-Login – gibt mehr Bewertungen**
+Wähle unter **Anzahl der E-Mails** eine E-Mail, wenn du nur einmal einladen möchtest. Für eine Erinnerung zählt **Wartezeit vor E-Mail 2** ab der ersten Nachricht und **Wartezeit vor E-Mail 3** ab der zweiten.
+[/doc-step]
+[doc-step]
+**Das Bewertungsformular öffnen**
 
- Kunden haben zwar bei Ihnen Produkte gekauft und sind dort den ganzen Weg des Check-Outs gegangen, aber zum Abgeben einer Bewertung darf es gerne so einfach wie möglich sein – Ihre Kunden werden es mit mehr Bewertungen belohnen. Zum Glück bietet das Modul daher die einfach zu installierende “Auto-Login” Funktion, welches Kunden automatisch auf zum Schreiben einer Bewertung einloggt und somit alle Hindernisse aus dem Weg räumt. Zur Sicherheit ist das Login nur für das Schreiben der Bewertung gültig, d.h. alle anderen Seiten des Kundenkontos erfordern weiterhin den manuellen Login des Kunden. Zur Integration des Auto-Logins muss die Seite “product_reviews_write” um zwei Zeilen Code ergänzt werden – das Download-Paket enthält einfache Anweisungen für alle unterstützten Shopsysteme (osCommerce, xtCommerce, ZenCart)
+Öffne den Produktlink in einer Testeinladung und prüfe Artikel und Formular. Mit **Bewertungsformular ohne erneute Anmeldung öffnen** bestimmst du, ob sich der Käufer noch einmal anmelden muss. An einer Bestellung mit zwei Artikeln siehst du, welche davon in der E-Mail erscheinen.
+[/doc-step]
+[/doc-steps]
 
-[plugin:content-inject](/content_blocks/pro_common_advantage)
-
-
-
-#### Ergebnisse beobachten und Optimieren
-
-Auf dem Dashboard finden Sie das “[Review-O-Meter](/documentation/dashboardbeez/dashboard_review_o_meter/ "Review-O-Meter")“. Dieses praktische Widget gibt eine direkte Erfolgskontrolle und zeigt aktuell, wieviele Kunden eine Bewertung abgebeben haben.
-
-Optimieren Sie Ihre Emails (Text, Betreffzeile) anhand dieser Daten.
-
-
-
-
+Das Rezept [Bewertungseinladung planen](/kochbuch/optimierter-ablauf-bitte-um-bewertung) führt dich vom Versandstatus bis zum Formular. Wartet ein Käufer auf die E-Mail, prüfe den [geplanten Lauf](/quickstart/step-3-set-forget) und den [Versandeintrag](/sending-status).

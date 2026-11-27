@@ -1,5 +1,6 @@
 ---
-title: 'BounceHive Bounce Handling'
+title: "BounceHive"
+module_subtitle: "Process returned messages in shops sending via SMTP with PHPMailer"
 published: true
 date: '26-03-2012 00:00'
 publish_date: '26-03-2012 00:00'
@@ -15,7 +16,7 @@ template: docs
 taxonomy:
     category:
         - docs
-    tag: pro
+    tag: ["pro", "BounceHive Bounce Handling"]
 summary:
     enabled: true
     format: short
@@ -45,34 +46,27 @@ author:
     name: admin
 ---
 
- 
-> [!NOTE]
-> Configure [MailBeez.Email as Email Engine](/documentation/configbeez/config_email_engine) to automatically process all bounces
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To investigate an individual delivery in V5, open [Sending & status](/sending-status). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-## Requirements
+When the shop sends through SMTP with PHPMailer, BounceHive can read returned messages from a dedicated IMAP mailbox. Use this guide to distinguish a permanent rejection from a temporary delay. MailBeez.Email has its own delivery-event handling.
 
-- A separate email account set up specifically for bounce handling & configured as an IMAP mailbox in your email client
-- Use of MailBeez own built in Email Engine – SMTP (PHPMailer)
-- Your server must allow you to connect to IMAP servers – Check with your hosting company, especially if you plan to use GMail, as some have blocked the GMail-specific port
+Look at the type of failure before deciding what to do about an address. A full mailbox and a permanently unknown address call for different handling.
 
-## Get Your Bounced Emails Under Control
+## Connect the bounce mailbox
 
-Bounced emails from outdated customer email addresses is a huge problem, especially for those shop owners using purchased email lists. Even if you send email only to those customers who have signed up to receive them, you can expect some bounced emails when inboxes are full, email addresses are changed, or servers are temporarily down.
+1. Use the MailBeez **SMTP (PHPMailer)** sending method and a dedicated mailbox that your shop server can reach over IMAP. The historical Gmail example used IMAP over SSL at `imap.gmail.com`, port `993`. Check the connection settings with your provider.
+2. Set the envelope sender for outgoing messages to the bounce mailbox. Customer replies still use the visible From or reply address. Give BounceHive access to the inbox and the configured folders for hard bounces, soft bounces and other messages.
+3. Run the bounce service and check where it filed the messages. To process historical bounce messages, move them into the dedicated inbox. If a slow mail server causes processing timeouts, switch from the regular MailHive run to the module’s dedicated cron URL.
 
-Bounced emails that are not properly handled might result in an increased spam rating, so it is important to handle the inevitable email bounces that will come your way, and there’s no better way to do it than with the MailBeez BounceHive Bounce Handling module!
+## How the recorded result affects sending
 
-## Handle All Types of Bounces
+- **Hard bounce**<br>
+  An unknown or invalid address is blocked immediately.
+- **Soft bounce**<br>
+  A temporary failure, such as a full inbox, delays the next attempt for the configured number of days. Repeated soft bounces can reach the configured threshold for a hard bounce.
+- **Transient bounce**<br>
+  The receiving server is still trying to deliver the message. BounceHive records no block for this notice.
 
-The fully integrated BounceHive Bounce Handling from MailBeez allows you to automatically handle hard bounces, soft bounces and transient bounces:
-
-**Hard Bounces:** Hard bounces result when email addresses are completely unknown, obsolete, or incorrect and will never be delivered to the recipient. Hard-Bounced email addresses are immediately blocked by MailBeez so that no further emails will be sent to these addresses.
-
-**Soft Bounces:** Soft bounces result when email addresses have full mailboxes, their domain is temporarily down, or they’re currently not able to receive email for whatever reason. Soft-Bounces will cause MailBeez to wait the configured number of days before trying the send again.
-
-After a configured number of soft-bounces, the next soft-bounce will be converted into a hard bounce and no further emails will be sent to that address.
-
-**Transient Bounces:** A transient bounce occurs when a particular message can not yet be delivered, but the server is still trying. MailBeez will not do anything with these Bounces as they are informative in nature.
-
-The bounces are stored using the customers’ email and the customers’ id. Both must match to block a sending, so when a customer has changed the email address to a valid email, the bounce-block for the old email will not affect the new sendings. Very cool!
-  
-  
+A block matches both the customer ID and the email address. When a customer replaces an invalid address, the block on the old address does not apply to the new one.

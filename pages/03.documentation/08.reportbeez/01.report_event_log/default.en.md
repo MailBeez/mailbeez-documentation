@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Event Log Viewer
+title: "Event log"
+module_subtitle: "Review events recorded during an earlier MailBeez run"
 slug: report_event_log
 # menu: Event Log Viewer
 date: 03-03-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "Event Log Viewer"]
 # added collection selector
 
 author:
@@ -36,21 +37,12 @@ metadata:
 #  last_modified: true
 ---
 
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To investigate an individual delivery in V5, open [Sending & status](/sending-status). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-MailBeez tracks when MailHive is initiated, run, tested, and completed. The tracking for each of these events is displayed in a log which allows you to browse through both the recent and historical events. Delivered with the MailBeez framework software, this report helps you to see when MailHive was triggered to execute the MailBeez modules.
+Match the start and end of a run before investigating a missing email. A normal run starts with `MAILHIVE_RUN_INIT` and finishes with `MAILHIVE_RUN_COMPLETE`. For a test email, look for `MAILHIVE_TEST_INIT` and `MAILHIVE_TEST_COMPLETE`. If the start has no corresponding end, check the log at that time.
 
-The report will even tell you which mode you were in when the modules were run:
+Read the events immediately before and after the gap you are investigating. That context helps distinguish an unfinished run from a completed run with no eligible recipients.
 
-- **PROD**: MailBeez was executed in Production Mode
-- **[SIM]**: MailBeez was executed in Simulation Mode
-
-**Events**
-
-- **MAILHIVE_RUN_INIT**: Initialization of MailHive for executing a run. An INIT w/o a COMPLETE means something went wrong
-- **MAILHIVE_RUN_COMPLETE**: Run was completed
-- **MAILHIVE_TEST_INIT**: Initialization of MailHive for executing a send test email. An INIT w/o a COMPLETE means something went wrong
-- **MAILHIVE_TEST_COMPLETE**: Run was completed
-- **MAILBEEZ_MODULE_INIT**: Initialization of a Module (when event log was configured to log this event)
-
-
-All other data should explaine themselves.
+With module logging enabled, `MAILBEEZ_MODULE_INIT` identifies the module start. `PROD` marks a production run and `[SIM]` a simulation.

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Das MailBeez Einführungs-Widget
+title: "Dashboard-Einstieg"
+module_subtitle: "Die Einstiegslinks im früheren Dashboard finden"
 slug: dashboard_intro
 # menu: The MailBeez Introduction Widget
 date: 17-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "Das MailBeez Einführungs-Widget"]
 # added collection selector
 
 author:
@@ -36,7 +37,8 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses Widget ist Bestandteil des MailBeez Grundsystemes gibt direkten Zugriff auf weitere Resourcen.
+[doc-callout type="note" title="Früheres Dashboard-Widget"]
+Die aktuelle Ansicht findest du in der [V5-Anleitung zum Dashboard](/dashboard). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-
-(Dieses Modul kann gefahrlos deaktiviert werden ;) )
+Das Einführungswidget verwies auf Anleitungen für das frühere Dashboard. Richtest du einen V5-Shop ein, führt dich [Schnelleinstieg](/schnelleinstieg) von der Installation bis zum ersten protokollierten Versand.

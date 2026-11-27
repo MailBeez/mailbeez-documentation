@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Process Controll
+title: "Background Processing"
+module_subtitle: "Check active sending processes after an interrupted run"
 slug: config_process_control
 date: 26-03-2012
 published: true
@@ -25,8 +26,10 @@ metadata:
     author: admin
 ---
 
-This process controll subsystem makes sure that only one sending process can be active - otherwise there could be overlapping processes causing sending the same email multiple times!
+After an interrupted run, check whether another sending process is still active. These settings prevent two runs from processing email at the same time.
 
+A processing run can finish without creating a message if nobody qualifies. An unfinished run is a different case. Check which of the two you are investigating before retrying.
 
-> [!WARNING]
-> Never change the default settings unless you know what you are doing!
+Open **System → Configuration** and select **Background Processing**.
+
+Compare the last start and completion time. For a missing campaign email, check [Sending & status](/sending-status) for a send record before starting another run.

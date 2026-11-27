@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Produktbewertung Profi Cross Check
+title: "Produktbewertungs-Abgleich"
+module_subtitle: "Bereits vom einfachen Modul versandte Einladungen zur Produktbewertung überspringen"
 slug: filter_check_review_advanced
 # menu: Produktbewertung Profi Cross Check
 date: 16-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Produktbewertung Profi Cross Check"]
 module:
     code: 'review_advanced'
     category: [filterbeez]
@@ -41,6 +42,12 @@ metadata:
 #  last_modified: true
 ---
 
-Als Teil des [Produktbewertung Profi mit Autologin](/dokumentation/mailbeez/review_advanced/) Modules prüft dieser Filter, ob ein Kunde die Emails des einfachen Modules erhalten oder blockiert hat.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Um Produktbewertungen bitten](/mailbeez/review_advanced) Einladungen zu Produktbewertungen einrichten. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Wenn Sie vor der Installation des Profi Modules die einfache Version benutzt haben, wird dieser Filter sicherstellen, dass Kunden nicht doppelt kontaktiert werden.
+Beim Wechsel vom einfachen Modul zur Profi-Ausgabe berücksichtigte dieser frühere Filter die bisherige Versandhistorie und Abmeldungen. Wer die Nachricht über das einfache Modul bereits erhalten oder gesperrt hatte, sollte sie über das Profi-Modul nicht erneut bekommen.
+
+Wähle eine Bestellung, für die das einfache Modul bereits um eine Produktbewertung gebeten hat. Prüfe ihren Verlauf beim Umstieg, bevor die neuere Edition Einladungen versendet.
+
+Bei einem Shop, der direkt mit der Profi-Ausgabe begann, gibt es keine Versandhistorie des einfachen Moduls zu prüfen.

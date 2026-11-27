@@ -1,9 +1,10 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: data related recipes
+title: "Check bounces from an earlier mailing"
 #menu: Beez-O-Graph
 slug: data-related
 date: 17-02-2016
+original_v4: true
 published: true
 publish_date: 17-02-2016
 template: tutorial
@@ -17,37 +18,20 @@ taxonomy:
     migration_status: done
     category: [docs]
     tag: [pro]
---------------
+---
 
-[TOC]
+[doc-callout type="note" title="Earlier MailBeez versions"]
+[Browse the legacy reference](/legacy).
+[/doc-callout]
 
+<span id="check-email-addresses-of-customer-base"></span><span id="check-email-addresses-of-"></span><span id="issue"></span>Use bounce records from a mailing to identify addresses that could not be reached. The historical example used Newsletter Advanced and an existing Newsletter2Go delivery connection. Before interpreting the results, check which mailing, audience and sending period they belong to.
 
-## check email-addresses of customer base
+A delivery failure answers a question about one sending attempt. Keep it separate from whether the person signed up for the newsletter or later withdrew their consent.
 
-### Issue
-In a 10 year old store very likely many email addresses have become invalid (email-addresses were deleted or do not accept more emails). Therefore it is necessary to check, which email-addresses are valid and to mark the invalid ones.
+1. <span id="solution"></span>Check the selected audience and its subscription rules in [Newsletter](/mailbeez/newsletter). A bounce can identify a delivery problem. It cannot establish consent to future mailings.
+2. Confirm which delivery service handled the mailing in [Sending method](/configbeez/config_email_engine). Allow time for bounce reports to return. In the historical integration they could arrive over several days.
+3. Open the bounces in the earlier Beez-O-Graph. Distinguish permanent rejections from temporary failures before acting on the address. For an SMTP installation with a separate bounce mailbox, see [BounceHive Bounce Handling](/configbeez/config_bouncehive_advanced).
 
+The old example used a list called “all customer - no abo check” with country-specific subscription overrides. If you find it in an existing shop, review those overrides before reusing the list.
 
-### Solution
-
-We send out an info-email to all customers. Invalid email addresses will "bounce". This information is used to marked those email-addresses as invalid and to exclude them from future campaigns.
-
-1. Subscribe to a MailBeez plan with [Newsletter Advanced](/documentation/mailbeez/newsletter)
-
-1. In MailBeez configure the [Email-System](/documentation/configbeez/config_email_engine) to send through Newsletter2Go (if not done yet please register using the integrated form) and make sure you have enough volume (eventually charge your account)
-
-1. Go to [Newsletter Advanced](/documentation/mailbeez/newsletter) and create a new list "all customer - no abo check". Configure in the segmentation of this list, for which countries the newsletter status should be ignored.
-
-1. Go to [Newsletter Advanced](/documentation/mailbeez/newsletter) and create a new campaign using the list "all customer - no abo check". Within the campaign create a new email using following text (example - feel free to modify): 
-
- > To improve our customer service we want to make sure your Email-Address is still valid
- >  
- > In case you do not want to receive further information from us, please us the "no more emails" link in the footer of this email
- 
-1. activate the Newsletter and send it out.
-
-Thanks to the integration of Newsletter2Go with MailBeez all invalid Email-addresses will be reported into MailBeez and excluded for future campaigns. This process can take a couple of days and can be monitored through the Beez-O-Graph > "bounces"
- 
-
-> [!NOTE]
-> When sending bulk emails invalid recipients increase the risk the sending email server gets rated as **sending out spam**. For this reason you should never use your own email-server, but use a **certified email system** like Newsletter2go.
+If the service reports a full mailbox, the inbox could not accept that attempt. If it reports an unknown recipient, confirm the spelling with the customer before using the address again. In each case, keep the reason with the mailing that produced it.

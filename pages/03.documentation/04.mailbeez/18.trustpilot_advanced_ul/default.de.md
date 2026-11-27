@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Trustpilot Profi - Unique Links Version
+title: "Trustpilot-Einzellinks"
+module_subtitle: "Die Trustpilot-Links einer früheren Anbindung in E-Mail-Vorlagen erkennen"
 slug: trustpilot_advanced_ul
 # menu: Trustpilot Profi - Unique Links Version
 date: 05-12-2014
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Trustpilot Profi - Unique Links Version"]
 module:
     code: 'trustpilot_advanced_ul'
     category: [mailbeez]
@@ -49,48 +50,18 @@ metadata:
 #  last_modified: true
 ---
 
-**Optimieren Sie Ihre Trustpilot Partnerschaft**
+[doc-callout type="note" title="Früheres Kampagnenmodul"]
+Für einen aktuellen Shop wählst du den Flow unter [Automatisierung](/mailbeez). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Automatic Feedback Service Version: [Trustpilot Profi](/dokumentation/mailbeez/trustpilot_advanced/)
+<span id="warum-trustpilot-unique-l"></span>Diese frühere Ausgabe setzt ein Trustpilot-Konto mit Freigabe für Unique Links voraus. Für Einladungen über den Automatischen Feedback-Service siehe [Um Bewertungen auf Trustpilot bitten](/mailbeez/trustpilot_advanced).
 
-**Hinweis:** Unique Links sind nicht in allen Packages und nur auf Anfrage verfügbar.
+Kläre bei einer älteren Vorlage, welche Anbindung ihre Links erzeugt. Auch beim Übertragen der Vorlage auf einen anderen Shop gelten die Kontovoraussetzungen dieser Edition.
 
-## Warum Trustpilot Unique Links?
+1. <span id="mehrere-bestell-status"></span><span id="beruecksichtigung-von-aus"></span>Wähle die Bestellstatus für den Start der Einladung und plane Zeit für die Lieferung ein. Für Sendungen außerhalb des im Shop hinterlegten Landes kannst du eine zusätzliche Wartezeit einstellen.
+2. <span id="stammkunden-erkennung"></span>Lege einen Mindestabstand zwischen Einladungen für denselben Käufer fest. Bei 120 Tagen erhält auch ein monatlicher Stammkunde frühestens nach rund vier Monaten die nächste Anfrage.
+3. <span id="individuelle-emails"></span><span id="mehrere-sprachen"></span>Bearbeite die Einladung in der MailBeez-Vorlage. Bei Verwendung von [Erweiterung für Mehrsprachigkeit](/configbeez/config_tmplmngr_lng) sollten Nachricht und verlinkte Trustpilot-Seite dieselbe Sprache haben. Prüfe den Link in einer Test-E-Mail.
 
-Alternativ zum Automatic Feedback Service stellt Trustpilot Partnern auf Anfrage die Möglichkeit bereit, Kunden direkt mit "Unique Links" zur Bewertung einzuladen. Es ist somit nicht erforderlich, die Kunden-Daten an Trustpilot übergeben.
-
-Dieses MailBeez Modul ermöglicht allen Shop-Betreibern mit einem zu MailBeez kompatiblen Shop sofort die Trustpilot Unique links nutzen zu können! (erfordert, dass Trustpilot die Unique Links frei-schaltet).
-
-Das Modul bietet zudem eine Reihe von intelligenten Profi-Funktionen:
-
-## Individuelle Emails
-
-Basierend auf dem MailBeez Vorlagen-System können Sie die Einladung nach Ihren eigenen Wünschen gestalten!
+<span id="wollen-sie-ihre-wertvolle"></span>Um Bewertungen wieder in den Shop zu übernehmen, nutze [Bewertungen von Trustpilot importieren](/configbeez/integrations/config_trustpilot_rss_importer).
 
 [plugin:content-inject](/content_blocks/pro_responsive_template)
-
-## Mehrere Bestell Status
-
-Haben Sie verschiedene Status, welche eine Bestellung als "ausgeliefert" kennzeichnet? Kein Problem, markieren Sie einfach alle relevanten Status.
-
-## Berücksichtigung von Auslands-Bestellungen
-
-Der Versand ins Ausland nimmt typisch ein paar Tage länger in Anspruch. Definieren Sie eine Verzögerung für Auslandsbestellungen, damit die Einladungs-Email zur Bewertung nicht vor der Ware ankommt!
-
-Das Modul wird dann eine Verzögerung für Bestellungen mit Lieferung an die Länder hinzufügen, welche von dem im Shop-System als Betreiber-Land konfigurierten Land abweichen.
-
-## Stammkunden Erkennung
-
-Wollen Sie Ihre häufig bestellenden Stammkunden vor eine Bewertungseinladung nach jeder Bestellung beschützen? Definieren Sie einfach, wie viele Tage seit der letzten Einladungs-Email vergangen sein müssen, bevor eine erneute Einladung versendet werden soll.
-
-Das Modul wird dann automatisch prüfen, ob bereits eine neuen Einladung versendet werden kann oder nicht.
-
-## Mehrere Sprachen?
-
-Kein Problem! In Verbindung mit der [Erweiterung für Mehrsprachigkeit mit Responsive Visual Editor](/dokumentation/configbeez/config_tmplmngr_lng/) erhalten Kunden die Einladung zur Bewertung auf Trustpilot in der passenden Sprache und auch der Link selbst führt auf die passende Trustpilot-Seite:
-
-Deutsch-sprachige Kunden erhalten eine deutsche Email mit Link zu Trustpilot.de, spanisch sprechende Kunden eine Email in spanisch mit Link zu es.trustpilot.com
-
-### Wollen Sie Ihre wertvollen Bewertungen mit Shop und Email-Marketing integrieren?
-
-Mit der [Trustpilot Integration Suite](/dokumentation/configbeez/config_trustpilot_rss_importer/) können Sie schnell und einfach Trustpilot-Bewertungen Server-seitig in Ihren Shop (positiver SEO Effekt durch "unique fresh content") und auch in alle von MailBeez generieren Email Marketing Emails integrieren

@@ -1,5 +1,6 @@
 ---
-title: Trustedshops
+title: "Trusted Shops (Community)"
+module_subtitle: "Invite buyers to rate your store on Trusted Shops"
 slug: trustedshops
 routes:
     default: /documentation/mailbeez/trustedshops
@@ -18,6 +19,7 @@ taxonomy:
         - docs
     tag:
         - ce
+        - "Trustedshops"
 module:
     code: trustedshops
     category:
@@ -45,6 +47,14 @@ metadata:
     author: admin
 ---
 
-This free module, when installed, automatically asks your customers to rate your store on the Trustedshops rating service. For professional application, we recommend the [Trustedshops Advanced](/documentation/mailbeez/trustedshops_advanced) module which comes with any Pro Plan!
+[doc-callout type="note" title="Earlier campaign module"]
+Choose a flow for a current shop under [Automations](/mailbeez). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-The [Trustedshops Integration Suite](/documentation/configbeez/config_trustedshops_rss_importer) allows you to integrate your valuable TrustedShops rating into your Store-Front (SEO!) and into MailBeez generated Emails!
+The earlier Community module invites a buyer to rate your shop on Trusted Shops. Use the review destination for your own shop. Open it from a test invitation before enabling automated requests.
+
+Choose a point when buyers have received the order. If the shop status records dispatch, leave enough time for the slowest delivery option you include.
+
+Choose the order status that starts the wait and allow enough time for delivery.
+
+For the V5 flow, see [Ask for reviews on Trusted Shops](/mailbeez/trustedshops_advanced).

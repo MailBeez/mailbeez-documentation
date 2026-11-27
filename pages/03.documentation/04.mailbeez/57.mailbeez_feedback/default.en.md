@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: MailBeez Feedback
+title: "MailBeez Feedback"
+module_subtitle: "Check the older module that sends monthly usage statistics"
 slug: mailbeez_feedback
 # menu: MailBeez Feedback
 date: 22-05-2010
@@ -49,11 +50,10 @@ metadata:
 #  last_modified: true
 ---
 
-Help to improve MailBeez – this MailBeez Module sends a monthly statistic to MailBeez.com
+[doc-callout type="note" title="Earlier campaign module"]
+Choose a flow for a current shop under [Automations](/mailbeez). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-The Email contains following information:
+If an older shop generates a monthly usage-statistics email, look for the MailBeez feedback module. Open its configuration to identify the scheduled message.
 
-- installed modules
-- total number of emails
-- your personal greeting
-
+Start with the module’s own settings if the message is unexpected. Its monthly usage report serves a different purpose from an individual campaign’s delivery report.

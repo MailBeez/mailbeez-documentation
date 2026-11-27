@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Trustpilot
+title: "Trustpilot (Community)"
+module_subtitle: "Käufer zu einer Shopbewertung auf Trustpilot einladen"
 slug: trustpilot
 routes:
     default: /dokumentation/mailbeez/trustpilot
@@ -19,7 +20,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [ce]
+    tag: [ce, "Trustpilot"]
 module:
     code: 'trustpilot'
     category: [mailbeez]
@@ -51,27 +52,16 @@ metadata:
 #  last_modified: true
 ---
 
+[doc-callout type="note" title="Früheres Kampagnenmodul"]
+Für einen aktuellen Shop wählst du den Flow unter [Automatisierung](/mailbeez). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Dieses kostenfreie Modul bitte Kunden automatisch nach der Bestellung um Bewertung auf Trustpilot. Für den professionellen Einsatz empfehlen wir das [Trustpilot Profi](/dokumentation/mailbeez/trustpilot_advanced) Modul als Bestandteil der Profi-Tarife!
+Das frühere Community-Modul lädt Käufer zur Shopbewertung bei Trustpilot ein. Verwende das Bewertungsziel deines Shops und öffne es aus einer Testeinladung, bevor du den automatischen Versand aktivierst.
 
-**Haben Sie viele zufriedene Kunden, aber wenig positive Bewertungen? Trustpilot’s automatischer Feedback Service sammelt automatisch Bewertungen von Ihren Kunden.**
+Teste bei einem mehrsprachigen Shop eine Einladung je verwendeter Sprache. Prüfe neben dem E-Mail-Text auch die Sprache der Bewertungsseite.
 
-In enger Zusammenarbeit mit Trustpilot entwickelt und offiziell als Partner-Lösung empfohlen, erweitert das MailBeez Trustpilot Modul den Trustpilot “Automatic Feedback Service”. Das Modul sammelt automatisch die erforderlichen Daten und übermittelt diese kontrolliert an Trustpilot. Trustpilot generiert daraufhin eine “1-Klick”-Email, welche dem Kunden das sofortige Schreiben einer Bewertung erlaubt – dies ergibt bis zu 10x mehr Bewertungen!
+Lege die Einladungssprache fest oder überlass die Auswahl dem damaligen Trustpilot-Dienst. Shops mit einer Sprache je Kunde konnten diesen Wert anstelle von `MAILBEEZ_TRUSTPILOT_LANGUAGE` einsetzen. Stimme die Sprache der Vorlage und der Bewertungsseite aufeinander ab.
 
-**So funktioniert das System:**
+Wähle den Bestellstatus für den Start der Wartezeit und plane genügend Zeit für die Lieferung ein.
 
-- Trustpilot stellt die persönliche Automatic Feedback Service Email Adresse bereit
-- Nach dem Kauf sendet das MailBeez Trustpilot Modul nach einem definierten Zeitraum und abhängig vom Bestellstatu eine Email an diese persönliche Email-Adresse.
-- Das Trustpilot System extrahiert die erforderlichen Kundeninformationen
-- Das System schickt dem Kunden daraufhin eine “1-Klick” Email mit Bitte um Bewertung – der Kunde kann sofort mit dem Schreiben loslegen.
- 
-
-Hinweis:
-
-wenn Sie mehrere Sprachen nutzen, bitte in der Email Vorlage die Zeile
-
-```
-‘language’ => MAILBEEZ_TRUSTPILOT_LANGUAGE
-```
-
-anpassen, so dass die richtige Information zur Kundensprache übermittelt wird.
+Den V5-Flow beschreibt [Um Bewertungen auf Trustpilot bitten](/mailbeez/trustpilot_advanced).

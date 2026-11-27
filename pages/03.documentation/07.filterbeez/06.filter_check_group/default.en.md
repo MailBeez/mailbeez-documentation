@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Customer Group Filter
+title: "Customer groups"
+module_subtitle: "Choose which customer groups receive emails"
 slug: filter_check_group
 # menu: Customer Group Filter
 date: 27-05-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Choose which customer groups receive emails"]
 module:
     code: 'filter_check_group'
     category: [filterbeez]
@@ -43,24 +44,26 @@ metadata:
 #  last_modified: true
 ---
 
+A roaster sells beans to households and to cafés on wholesale terms. A refill coupon for a 500 g bag makes sense for households. Use your shop’s customer groups to keep wholesale accounts out of this particular flow while leaving their other emails alone.
 
-**Please Note: This module is only compatible with Zen Cart, CRE Loaded B2B, xt:Commerce, xtc-Modified and Gambio GX systems.**
+## Choose the groups for each flow
 
-If you sell to different customer groups, then the Customer Group Filter is for you! This handy module gives you complete control of your email sends, by allowing you to target specific customer groups to recieve your various Mailbeez campaigns.
+Open **System → Extensions → Add-ons → Filters** and select **Choose which customer groups receive emails**.
 
-![zencart](Screen_zencart.png)
-Configuration in ZenCart
+[doc-steps]
 
-![Modified-Shop](Screen_xtcm.png)
-Configuration in Modified Shop
+[doc-step]
+**Assign groups to the module**
 
+Open **Assign groups**, find the refill flow and select the retail group. Review the selection when you install another flow. With no allowed groups for a module, customers with a matching account are excluded from that module.
+[/doc-step]
 
-Since different market sectors will almost certainly have individual marketing needs, segmenting customers into groups is a great idea!
+[doc-step]
+**Check both sides of the rule**
 
-For example, you probably don’t want a wholesale customer to receive a product review request, or an end user customer to receive a product offer at the wholesale price.
+Choose a retail and a wholesale account with otherwise similar orders. Only the retail account should pass this filter for the refill flow. Recipients without a matching customer account pass this filter, so use a separate audience rule if your offer also needs to exclude them.
+[/doc-step]
 
-The Mailbeez Group Filter module gives you the ability to choose which group is authorized to receive a campaign.
+[/doc-steps]
 
-
-> [!TIP]
-> the customer group filter enhances the segmentation rules e.g. used in [Newsletter Advanced](/documentation/mailbeez/newsletter) Module!
+The shop must provide customer groups. Earlier versions list Zen Cart, CRE Loaded B2B, xt:Commerce, xtc-Modified and Gambio GX.

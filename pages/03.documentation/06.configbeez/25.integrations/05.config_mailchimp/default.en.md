@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: MailChimp Integration
+module_subtitle: "Check how the earlier integration synchronizes newsletter subscriptions"
 slug: config_mailchimp
 routes:
     default: /documentation/configbeez/config_mailchimp
@@ -43,60 +44,24 @@ metadata:
     author: admin
 ---
 
-> [!WARNING]
-> **Deprecated**
-> Due to breaking changes in MailChimp API only the MailChimp legacy API is supported
+[doc-callout type="note" title="Earlier module settings"]
+For settings in the current app, start with [System](/app-system). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-##The MailBeez for MailChimp Connector
-<div style="float:right;margin-top: -48px !important" markdown="1">
-![](mc_connector_badge.png?resize=380,328)
-</div>
+<span id="the-mailbeez-for-mailchim"></span>Use this reference for a shop already running the historical MailChimp connector. It depends on the legacy MailChimp API. Check the available connection in that installation before trying to synchronize a list.
 
-Run MailBeez in your MailBeez compatible eCommerce store, but want to deliver its intelligent, personalized content through your MailChimp account?
-With our official MailChimp Connector you can do just that.
-(The connector was developed in close cooperation with MailChimp)
+When maintaining a historical list, compare one known subscriber on both sides during simulation. That gives you a concrete record to check before synchronizing a larger list.
 
-**What the hey is MailBeez?**
+<span id="advantages"></span>MailBeez prepared personalized content for supported modules. MailChimp delivered the mailing. The connector synchronized list changes in both directions and used an incremental sync for large lists, including those over 15,000 subscribers.
 
-If you run an MailBeez compatible store but don't know MailBeez yet then here’s the skinny. MailBeez is a store admin controlled email eco-system that you can add to over time. From **automating product review requests**, right down to the creation and delivery of **personalized offer coupons**, Mailbeez gets things done, **driving increased revenue** from your existing customer base, and mining the lifecycle of your customer to its fullest potential.
+Use the setup wizard’s simulation to check the mapping first. The provider limited the number of personalization fields. For the delivery options in V5, see [Sending method](/configbeez/config_email_engine).
 
-**Hmm, sounds good, and MailChimp?**
+## Modules supported by this connector
 
-For anyone out there who has been hiding under a rock, MailChimp is an awesome email newsletter system that makes it a cinch to design and send stylish, inbox friendly (that’s important) emails.
-For these simple reasons, thousands of companies and brands around the world now rely on MailChimp for their email newsletter needs.
-
-
-**now put the two together.**
-
-You love the way MailBeez automates your eCommerce email marketing, but you also like to use MailChimp for occasional newsletters, and dig the way it makes designing emails so simple, **removes any potential for email blacklisting**, and importantly makes sure each email presents itself perfectly in your customer’s inbox. Combine these two things and you have our new MailChimp Connector – MailBeez intelligence, MailChimp design and sending security.
-
-
-> [!NOTE]
-> MailChimp is great, but the system comes with a number of headaches like limited number of personalization content fields.
-
- Unless you really like to use MailChimp **we recommend** to [configure MailBeez.Email as your Email-Engine](/documentation/configbeez/config_email_engine). You will acchieve comparable delivery-rates but without any limitations.
-
-##Advantages
-
-**DELIVERY!** Improve your delivery-rate by using MailChimps Email System
- **STAY IN SYNC!** on both sidestrue 2-way synchronisation keeps information up-to-date
- **AUTOMATIC!** No extra efforts once set up and configured the integration will run on autopilot
-
-Developed in close cooperation with MailChimp: reviewed and approved!
- New: Works also with lists larger than 15.000 subscribers thanks to fast delta-sync
- Easy installation: Wizard based, with simulation capabilities
-
-
-
-
-##Mailchimp ready modules:
-The MailChimp Integration works with all MailChimp-ready MailBeez Premium Modules:
-<ul class="mc_read_list">
-    {% for p in page.find('/documentation/mailbeez').children  if p.header.module.mc_ready %}
-    <li>
-    {# workaround #}
-    {{ "[#{p.title}](#{p.url})"|markdown }}
-    </li>
-    {% endfor %}
-</ul>
-
+- <span id="mailchimp-ready-modules"></span>[Ask for product reviews](/mailbeez/review_advanced)
+- [Win back inactive customers](/mailbeez/winback_advanced)
+- [Remind shoppers about their cart](/mailbeez/abandoned_cart_advanced)
+- [Encourage a first order](/mailbeez/nopurchase_advanced)
+- [Celebrate customer anniversaries](/mailbeez/coupon_anniversary)
+- [Send birthday wishes](/mailbeez/coupon_birthday)
+- [Coupon Referral Honey](/mailbeez/coupon_referral_honey)

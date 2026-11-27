@@ -10,7 +10,7 @@ publish_date: 08-10-2011
 # unpublish_date: 08-10-2011
 template: docs
 # theme: false
-visible: true
+visible: false
 summary:
     enabled: true
     format: short
@@ -37,26 +37,16 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez Premium Modules require a license (certificate) to run. This Certificate is connected to your Store-Domain and only valid for this Domain.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+[Browse the legacy reference](/legacy).
+[/doc-callout]
 
-During the Ordering-Process you need to enter your Store-Domain.
+For an older Premium module, order the certificate for the exact hostname of the shop where it will run. A certificate belongs to one domain.
 
-For generating a valid certificate for you, it is very important that you enter the exact Server-Domain of your Server.
+Check the hostname in the shop you intend to license. A staging site and the customer-facing shop can look identical while using different hostnames.
 
-You find your Server-Domain when you go to:
+1. Open **MailBeez → About** in that shop. Find **Domain for Certification:** in the red-bordered box near the bottom.
+2. Copy the hostname from that box into the order. Include the subdomain exactly as shown.
+3. <span id="certificates-for-test-ser"></span>If you also use a test shop, repeat the lookup there and enter its domain in the test-server field. Otherwise leave that field empty.
 
-> MailBeez > About
-
-In the lower section of this page you find a red-bordered box titled “Domain for Certification:”
-
-In this box you find your exact Server-Domain, use this exact Server-Domain in the Ordering process.
-
-### Certificates for Test-Server
-
-In case you have a test-server where you try everything before you add it to your live-shop you need a free certificate for this Test-Server.
-
-Please enter the exact Server-Domain (see above how to find it) of your Test-Server in the Ordering process.
-
-Certificates for Test-Servers are issued manually after validation – you will receive it typically within 24hrs.
-
-Leave empty if you do not work with Test-Servers
+The historical ordering process offered a free, manually reviewed test certificate and quoted a typical turnaround of 24 hours.

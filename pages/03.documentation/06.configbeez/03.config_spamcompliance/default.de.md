@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: Antispam Regeln
+module_subtitle: "Einwilligung und Reichweite von Abmeldelinks in früheren Versionen prüfen"
 slug: config_spamcompliance
 # menu: Antispam Regeln
 date: 20-04-2012
@@ -36,6 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
-Hier können Sie konfigurieren, ob ausschliesslich Kunden mit bestehendem Newsletter-Abo (Newsletter Abo Check: true) oder alle Kunden kontaktiert werden sollen.
+[doc-callout type="note" title="Frühere Moduleinstellungen"]
+Einstellungen in der aktuellen App findest du unter [System](/app-system). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Zudem können Sie wählen, ob ein Klick auf einen Opt-Out Link in einer E-Mail nur weitere E-Mails des jeweiligen Modules blockieren soll - oder bewirkt, dass generell für diesen Kunden keine E-Mails mehr versendet werden.
+Lege in dieser früheren Konfiguration zuerst fest, ob Empfänger ein Newsletter-Abo benötigen. Entscheide dann, wie weit der Abmeldelink reicht. Eine Modulsperre stoppt den Versand dieses Moduls. Eine globale Sperre gilt für alle MailBeez-Module. Prüfe die Einstellung mit einer Testadresse, bevor du eine laufende Kampagne änderst.
+
+Überlege, was Kunden beim Abmelden in einer Bewertungseinladung erwarten. Der Linktext sollte genau den Umfang der Abmeldung beschreiben, die der Link tatsächlich speichert.

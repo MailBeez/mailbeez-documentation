@@ -36,52 +36,25 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez arbeitet problemlos mit *osCommerce CE Phoenix*.
+[doc-callout type="note" title="Installation für frühere Shopversionen"]
+Prüfe die Versionsnummer in deiner Shopverwaltung. Für andere Versionen findest du die passende Anleitung unter [Installation](/grundlagen/installation) oder in der [Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-
-Die Installation ist in wenigen Schritten erledigt:
-
-- Die neuen Dateien übertragen
-- Die extra Dateien infügen
-
-
-
-## Schritt 1: Neue Dateien
+Verwende das Installationspaket für osCommerce CE Phoenix.
 
 [plugin:content-inject](/content_blocks/download_installer)
 
+## Shopdateien übertragen
 
-folgende Dateien und Ordner aus dem entpackten Zip-Archiv auf den Shop-Server übertragen:
+<span id="schritt-1-neue-dateien"></span>Kopiere `catalog/admin/mailbeez.php` ins Adminverzeichnis des Shops. Kopiere `catalog/mailhive/` und `catalog/mailhive.php` ins Shopverzeichnis neben die `index.php`.
 
+## Adminmenü und Hook anbinden
 
-```bash
-admin/mailbeez.php
-mailhive/
-mailhive.php
+<span id="schritt-2-integration-mit"></span>Kopiere jede Paketdatei an den Shop-Pfad in derselben Zeile.
 
-
+```text
+extra files/extras_osc_233x/admin/includes/boxes/customers_mailbeez.php → admin/includes/boxes/customers_mailbeez.php
+extra files/extras_osc_phoenix_V1/includes/hooks/admin/siteWide/beezdesk.php → includes/hooks/admin/siteWide/beezdesk.php
 ```
-
-
-## Schritt 2: Integration mit der Administration
-
-Durch einfaches kopieren von 2 Plugins können Sie schnell und einfach MailBeez in die Administration integrieren:
-
-Bitte die Dateien aus
-
-```bash
-extra files/extras_osc_233x/admin/includes/boxes/customers_mailbeez.php
-extra files/extras_osc_phoenix_V1/includes/hooks/admin/siteWide/beezdesk.php
-```
-
-in das osCommerce CE Phoenix System in die entsprechenden Ordner kopieren:
-
-```bash
-admin/includes/boxes/customers_mailbeez.php
-includes/hooks/admin/siteWide/beezdesk.php
-```
-
-fertig.
 
 [plugin:content-inject](/content_blocks/run_installer)
-

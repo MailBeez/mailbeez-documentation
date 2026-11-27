@@ -1,5 +1,6 @@
 ---
-title: 'Payment: Invoice Dunning'
+title: "Unpaid invoices"
+module_subtitle: "Follow up on unpaid invoices"
 slug: payment_invoice_dunning
 date: 28-06-2011
 published: true
@@ -16,7 +17,9 @@ taxonomy:
         - docs
     tag:
         - pro
+        - "Follow up on unpaid invoices"
 module:
+    plans_position: after_guide
     code: payment_invoice_dunning
     category:
         - mailbeez
@@ -43,23 +46,30 @@ metadata:
     author: admin
 ---
 
-**The Mailbeez Invoice Dunning module is an incredibly powerful solution for stores that send out orders for clients on invoice terms, and one that drastically reduces store administration; allowing the business owner to focus on sales rather than admin.**
+A café orders two cases of filters on account. The goods have arrived, but the invoice still shows as unpaid in your shop. A first reminder with the invoice reference, amount and payment details makes it easy for the café to settle it or tell you that it has already paid.
 
-As an intelligent and fully automated payment reminder system, the Invoice Dunning module can be configured to send emails to all open account orders that are awaiting payment. Emails develop, naturally, from friendly reminders, all the way through to debt collection.
- 
+MailBeez follows the order statuses your team uses for unpaid invoices. Record incoming payments in the shop before the next run. A bank transfer that has arrived but hasn’t been recorded can leave an order eligible for a reminder.
 
-**Easy configuration**
+## Set up the flow
 
-For each step, you can easily configure the email template, and the delay between steps, providing total control over the eco-system of emails.
+Open **Campaigns → Automations → MailBeez Flows → Follow up on unpaid invoices**, then choose **Options → Configure**.
 
-**Preparation:**
+[doc-steps]
+[doc-step]
+**Choose the unpaid orders**
 
-To identify which orders are waiting for payment, you simply need to configure your order status / payment modules as following:
+Select your outstanding invoice status under **Order Status for Unpaid Invoices**. Check an unpaid invoice and a settled one side by side. Recording payment should move the settled order out of the statuses used for reminders.
+[/doc-step]
+[doc-step]
+**Set the first and later waits**
 
-- You need to have an order status which identifies orders with open payment, e.g. “open payment of invoice”
-- All “invoice” payment orders need to be set to this status until you received the payment. You can choose the default order status in the payment module setting
+Set **First reminder: waiting period** from the change to the trigger status, in line with your invoicing process. Set **Wait before email 2** from the first reminder. For example, if you want to give the café a further week after that email, enter seven days. Review the status assigned at each reminder stage.
+[/doc-step]
+[doc-step]
+**Check who receives an escalation**
 
-For automatic identification of orders with long overdue payments, the module can assign an order status of “debt collection”
+If you use the debt collection stage, review **Debt collection notice: waiting period**, **Order Status for Debt Collection** and **Debt Collection Notification Email** with the colleague who handles overdue invoices. When the fourth email goes out, MailBeez changes the order to the status you chose for debt collection. The final notification goes to the configured email address. Check the recipient and contents using a test shop before enabling the sequence.
+[/doc-step]
+[/doc-steps]
 
-
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+If the buyer must pay before you dispatch the goods, [Remind buyers to pay in advance](/mailbeez/payment_inadvance_dunning) covers that process.

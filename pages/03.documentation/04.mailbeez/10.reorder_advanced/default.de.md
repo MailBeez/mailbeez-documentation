@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: "Gutschein: Wiederbestellen"
+title: "Nachbestellung"
+module_subtitle: "Zur Nachbestellung einladen"
 slug: reorder_advanced
 routes:
     aliases:
@@ -21,8 +22,9 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro,coupon]
+    tag: [pro,coupon, "Zur Nachbestellung einladen"]
 module:
+    plans_position: after_guide
     code: 'reorder_advanced'
     category: [mailbeez]
     compatiblity: [comp_cre,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio,comp_saas]
@@ -51,27 +53,33 @@ metadata:
 #  last_modified: true
 ---
 
-**Bedanken Sie sich beim Kunden für den Einkauf mit einem Gutschein für die nächste Bestellung – Häufig kommt die dann schneller als erwartet!**
+Stell dir vor, du verkaufst Hundefutter. Wer einen Vier-Kilo-Sack bestellt, braucht oft nach etwa einem Monat Nachschub. Eine E-Mail 25 Tage nach dem Versand lässt genug Zeit zum Nachbestellen. Du kannst einen Gutschein beilegen und das Angebot auf Kunden beschränken, die schon mehrfach bei dir gekauft haben.
 
-Gelegentliche Aufmerksamkeiten in Form eines Gutscheines ist eine schöne Art und Weise sich für den Kauf zu bedanken – besonders für Online Shops im harten Wettbewerb wo jede Bestellung zählt. Das MailBeez “Gutschein für die nächste Bestellung” gibt Ihnen die Möglichkeit nicht nur zu wählen, in welchem Zeitraum nach der Bestellung der Kunden kontaktiert wird, sondern auch ob dies schon gleich nach der ersten, zweiten dritten oder erst ab der 4. Bestellung geschehen soll – dies vermeidet, Kunden frühzeitig Gutscheine in die Hand zu geben, welche dann unnötigerweise den Gewinn reduzieren.
+Der fertige Flow prüft die letzte Bestellung des Kunden und ihren Status. Möchtest du gezielt an eine bestimmte Packungsgröße erinnern, nutze einen [eigenen Flow auf Basis des Produktkaufs](/tutorials-und-rezepte/wiederkaeufe#bohnen-nachbestellen).
 
+## Flow einrichten
 
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → Zur Nachbestellung einladen** und wähle **Optionen → Konfigurieren**.
 
+<span id="passende-bestellungen-fue"></span>
+<span id="diese-einstellungen-sind-"></span>
 
-**Intelligente Aktivierung**
+[doc-steps]
+[doc-step]
+**Die Erinnerung zeitlich einordnen**
 
-Es wäre nicht sehr intelligent Gutscheine ein Kunden zu verschicken, der Bestellung aufgrund Verzögerungen noch nicht in den Versand gegangen ist. Um diese Situation zu vermeiden, arbeitet das Modul nur auf Bestellungen einen bestimmten Bestell-Status haben – es können beliebig vielen Bestellstatus aktiviert werden.
+Wähle unter **Bestell-Status** deinen Versandstatus und trage unter **Wartezeit nach dem Statuswechsel** 25 Tage ein. Setze **Höchstalter des Statuswechsels** höher als die Wartezeit. Hat der Kunde inzwischen wieder bestellt, zählt die ältere Bestellung nicht mehr als seine letzte.
+[/doc-step]
+[doc-step]
+**Den Gutschein für Stammkunden einrichten**
 
+Mit **Bestell-Status für Mindest-Anzahl an Bestellungen** legst du fest, welche Bestellungen für **Mindest-Anzahl Bestellung** zählen. Wähle beispielsweise abgeschlossene Bestellungen und als Mindestanzahl zwei. Unter **Anzahl an Wiederbestell Gutscheinen** bestimmst du, wie oft derselbe Kunde das Angebot bekommen kann.
+[/doc-step]
+[doc-step]
+**Angebot und Warenkorb prüfen**
 
-> [!TIP]
-> Für ein optimales Zusammenspiel mit dem Modul [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) wird standardmässig auf einen leeren Warenkorb geprüft (konfigurierbar) - befinden sich Produkte im Warenkorb des Kunden, wird keine Wiederbestell-Email versendet.
+Wähle das Angebot unter **Gutschein Vorlage** und kontrolliere Code und Gültigkeit in einer Testmail. Aktiviere **Leeren Warenkorb voraussetzen**, wenn du Kunden mit Futter im Warenkorb bereits separat erinnerst.
+[/doc-step]
+[/doc-steps]
 
-
-**Personalisierte Gutscheine**
-
-[plugin:content-inject](/content_blocks/pro_coupon)
-
-[plugin:content-inject](/content_blocks/pro_common_advantage)
-
-[plugin:content-inject](/content_blocks/pro_responsive_template)
-
+Vergleiche für das Beispiel einen Kunden mit zwei abgeschlossenen Bestellungen und einen mit nur einer. Auch wenn beide letzten Bestellungen alt genug sind, erfüllt nur der erste Kunde die Mindestanzahl.

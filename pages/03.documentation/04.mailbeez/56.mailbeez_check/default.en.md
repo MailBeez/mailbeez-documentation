@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: MailBeez check for update
+title: "Update check"
+module_subtitle: "Receive an email when the update service detects a new module or version"
 slug: mailbeez_check
 # menu: MailBeez check for update
 date: 09-06-2010
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core,depreciated]
+    tag: [core,depreciated, "MailBeez check for update"]
 module:
     code: 'mailbeez_check'
     category: [depreciated]
@@ -49,6 +50,10 @@ metadata:
 #  last_modified: true
 ---
 
-This MailBeez Module checks the MailBeez-Server for updates or new Modules and sends you an Email.
+[doc-callout type="note" title="Earlier campaign module"]
+Choose a flow for a current shop under [Automations](/mailbeez). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
+Receive an email when the older update service identifies a new version or module. If no notice arrives, check that scheduled processing runs and that the configured notification address receives email.
 
+Record the installed version when reviewing an update notice. It gives you the starting point for finding relevant changes in the release notes.

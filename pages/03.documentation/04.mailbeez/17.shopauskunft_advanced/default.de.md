@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Shopauskunft.de Profi
+title: "Shopauskunft"
+module_subtitle: "Um Bewertungen auf Shopauskunft bitten"
 slug: shopauskunft_advanced
 # menu: Shopauskunft.de Profi
 date:  02-11-2015
@@ -17,9 +18,10 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Um Bewertungen auf Shopauskunft bitten"]
     
 module:
+    plans_position: after_guide
     code: 'shopauskunft_advanced'
     category: [mailbeez]
     compatiblity: [comp_osc,comp_cre,comp_digi,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio]
@@ -42,31 +44,30 @@ metadata:
 
 ---
 
-**Optimieren Sie Ihre Shopauskunft.de Partnerschaft**
+Ein Möbelshop verschickt einen zerlegten Eichentisch per Spedition. Erst wenn die Kartons angekommen sind, kann der Käufer Lieferung und Verpackung beurteilen. Eine Einladung zu Shopauskunft zehn Tage nach Versand passt hier besser als eine E-Mail beim Verlassen des Lagers.
 
-## Profi-Funktionen
+MailBeez erstellt den Link für deinen Shopauskunft-Zugang. Bei hinterlegter Shop-ID enthält er Bestellnummer, Kundennummer und E-Mail-Adresse aus der Bestellung. Verwende zum Prüfen einen Testkunden.
 
-Die Profi-Version optimiert den Ablaufes zur Bewertungs-Aufforderung:
+## Flow einrichten
 
-## Mehrere Bestell Status
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → Um Bewertungen auf Shopauskunft bitten** und wähle **Optionen → Konfigurieren**.
 
-Haben Sie verschiedene Status, welche eine Bestellung als "ausgeliefert" kennzeichnet? Kein Problem, markieren Sie einfach alle relevanten Status.
+[doc-steps]
+[doc-step]
+**Die Einladung dem richtigen Shop zuordnen**
 
-## Berücksichtigung von Auslands-Bestellungen
+Trage unter **Ihre Shopauskunft ID** die ID des richtigen Shops ein. Bei einer älteren Einrichtung über eine feste URL prüfst du **Ihre Shopauskunft URL**. Öffne den Bewertungslink einer Testeinladung und kontrolliere den Shopnamen.
+[/doc-step]
+[doc-step]
+**Die Lieferzeit berücksichtigen**
 
-Der Versand ins Ausland nimmt typisch ein paar Tage länger in Anspruch. Definieren Sie eine Verzögerung für Auslandsbestellungen, damit die Einladungs-Email zur Bewertung nicht vor der Ware ankommt!
+Wähle unter **Bestell-Status für Bewertungen** deinen Versandstatus und trage für den Tisch unter **Wartezeit nach dem Statuswechsel** zehn Tage ein. Wähle für **Höchstalter des Statuswechsels** einen längeren Zeitraum. Dauert die Lieferung ins Ausland länger, gib unter **Zusätzliche Wartezeit bei Auslandslieferungen** zusätzliche Tage an.
+[/doc-step]
+[doc-step]
+**Den Abstand zwischen Einladungen wählen**
 
-Das Modul wird dann eine Verzögerung für Bestellungen mit Lieferung an die Länder hinzufügen, welche von dem im Shop-System als Betreiber-Land konfigurierten Land abweichen.
+Lege mit **Mindestabstand zwischen Einladungen** fest, wie viel Zeit zwischen Einladungen an denselben Käufer liegen soll. Lies Betreff und Einstieg zusammen mit der Liefernachricht. Frag etwa, wie die Terminabsprache geklappt hat oder ob alle Kartons angekommen sind.
+[/doc-step]
+[/doc-steps]
 
-## Stammkunden Erkennung
-
-Wollen Sie Ihre häufig bestellenden Stammkunden vor eine Bewertungseinladung nach jeder Bestellung beschützen? Definieren Sie einfach, wie viele Tage seit der letzten Einladungs-Email vergangen sein müssen, bevor eine erneute Einladung versendet werden soll.
-
-Das Modul wird dann automatisch prüfen, ob bereits eine neuen Einladung versendet werden kann oder nicht.
-
-[plugin:content-inject](/content_blocks/pro_responsive_template)
-
-
-### Wollen Sie Ihre wertvollen Bewertungen mit Shop und Email-Marketing integrieren?
-
-Mit der [Shopauskunft.de Integration Suite](/dokumentation/configbeez/config_shopauskunft_rss_importer/) können Sie schnell und einfach Shopauskunft.de-Bewertungen serverseitig in Ihren Shop (positiver SEO Effekt durch "unique fresh content") und auch in alle von MailBeez generieren Email Marketing Emails integrieren. Zudem können sich Sich dann auch bei Ihren Kunden für die Abgabe einer Bewertung bedanken - natürlich voll automatisch mit dem Modul [Shopauskunft: Gutschein für Bewertungen](/dokumentation/mailbeez/coupon_review_shopauskunft/)
+Im Rezept [Bewertungseinladung planen](/kochbuch/optimierter-ablauf-bitte-um-bewertung) kannst du den Zeitpunkt an einer Testbestellung prüfen.

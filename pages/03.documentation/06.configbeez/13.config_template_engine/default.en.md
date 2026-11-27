@@ -1,5 +1,6 @@
 ---
-title: 'Template Engine'
+title: "Email Templates"
+module_subtitle: "Configure the templates MailBeez uses to build campaign emails"
 slug: config_template_engine
 date: 26-03-2012
 published: true
@@ -15,15 +16,17 @@ taxonomy:
     category:
         - docs
     tag:
-        - core
+        - pro
 author:
     name: admin
 metadata:
     author: admin
 ---
 
-MailBeez utilizes the popular template system "[Smarty](http://smarty.net)" to generate email content.
+If a logo or footer appears in several campaigns, check which shared template those emails use before editing an individual message.
 
-Here you can empty the cache of the template system.
+For example, change a shared footer once if several campaigns need a new address. To change the wording of a single invitation, look at that campaign’s message.
 
-Not all email clients support external CSS files, so by default all CSS are converted into inline CSS. In case this causes issues with custom templates you can deactivate this behaviour.
+Open **System → Configuration** and select **Email Templates**.
+
+To change the branding of a main template, open **Content → Main Templates** and preview an email that uses it.

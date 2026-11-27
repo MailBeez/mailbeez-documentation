@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Newsletter Subscribers Only
+title: "Newsletter subscription filter"
+module_subtitle: "Limit campaign recipients to newsletter subscribers"
 slug: filter_check_newslettersubscriber
 # menu: Newsletter Subscribers Only
 date: 08-04-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Newsletter Subscribers Only"]
 module:
     code: 'filter_check_newslettersubscriber'
     category: [depreciated]
@@ -49,6 +50,10 @@ metadata:
 #  last_modified: true
 ---
 
- 
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To review the newsletter confirmation flow in V5, open [Signup Confirmation](/contacts/signup-confirmation). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-**As of MailBeez V2.6+ this module is obsolete – the functionality has been integrated into the MailBeez framework software and is available immediately upon installation.**
+For MailBeez 2.6 and later, check the framework’s subscription settings when investigating a recipient exclusion. Older installations used a separate filter for this check. In V5, see [Anti-Spam & Consent](/configbeez/config_spamcompliance_advanced).
+
+Use a recipient whose subscription status you know when comparing versions. That makes it easier to identify which subscription check excluded the address.

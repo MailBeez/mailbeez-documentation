@@ -1,5 +1,6 @@
 ---
 title: Social Sharing
+module_subtitle: "Prüfen, welche Ziele die früheren Teilen-Links für Produkte öffnen"
 slug: config_social
 routes:
     default: /dokumentation/configbeez/config_social
@@ -31,25 +32,20 @@ metadata:
     author: admin
 ---
 
-## Social Sharing in Emails
+[doc-callout type="note" title="Frühere Moduleinstellungen"]
+Einstellungen in der aktuellen App findest du unter [System](/app-system). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
+<span id="social-sharing-in-emails"></span>Ergänze bei jedem Produkt einer früheren E-Mail-Vorlage einen Link zum Teilen. Das Modul erzeugte Links für die damals eingerichteten Dienste, darunter Facebook, Twitter und Google+. Prüfe das heute noch verwendete Ziel.
 
-Als gemeines Dienst-Modul erlaubt dieses Unter-Modul das Einfügen von Social Sharing Elementen in die Produkt Listen. Sie können wählen, für welche der Sozialen Seiten Facebook, Twitter, oder Google+ Sie Share Buttons einfügen wollen.
+Öffne den Teilen-Link zu einem gut erkennbaren Produkt. Auf der Zielseite oder im Dialog sollte sichtbar sein, welchen Artikel der Empfänger gerade teilen möchte.
 
-![](Screen_social_email.de.jpg?resize=582)
+In responsiven Vorlagen fehlte der Teilen-Baustein standardmäßig. Füge die kleine Variante in die vorhandene Produktschleife ein. Der Link braucht die Daten des jeweiligen Produkts.
 
-> [!NOTE]
-> Standardmässig sind die Share Link nicht in den responsive Email Vorlagen enthalten, um diese so schlank wie möglich zu halten.
-
-
-Nachfolgendes Beispiel zeigt, wie die Social Sharing Link - in diesem Fall die Vorlage "tiny" - in die Produkt-Listen Vorlagen unter Verwendung von `{$products[product].social_tiny}` eingfügt werden kann: 
-
-```text
+```smarty
 {section name=product loop=$products max=$max_products}
-(...)
    {$products[product].social_tiny}
-(...)
 {/section}
 ```
 
-**Wichtig**: Das Tag `{$products[product].social_tiny}` kann nur innerhalb der `products` Schleife, da Produkt-Daten verwendet werden. 
+![Links zum Teilen unter einem Produkt](Screen_social_email.de.jpg?resize=582)

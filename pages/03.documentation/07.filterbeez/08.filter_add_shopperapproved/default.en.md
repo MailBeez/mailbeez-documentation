@@ -1,7 +1,8 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Add ShopperApproved Ratings to Emails
-menu: Add ShopperApproved Ratings
+title: "Reviews in emails"
+module_subtitle: "Show Shopper Approved reviews in emails"
+menu: "Reviews in emails"
 slug: filter_add_shopperapproved
 published: true
 template: docs
@@ -14,7 +15,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Show Shopper Approved reviews in emails"]
 module:
     code: 'config_shopperapproved_integration'
     category: [filterbeez]
@@ -39,40 +40,24 @@ metadata:
 #  last_modified: true
 ---
 
-Automatically add your store’s ShopperApproved reviews into any MailBeez email campaign with this filter, part of the [ShopperApproved Integration Suite](/documentation/configbeez/config_shopperapproved_integration/ "ShopperApproved Integration Suite"); perfect for spicing up the [Winback](/documentation/mailbeez/winback_advanced/ "Winback Advanced Module") and [No Purchase](/documentation/mailbeez/nopurchase_advanced/ "Mailbeez No Purchase Modules") Mailbeez modules.
+A customer buying fragile ceramics might appreciate hearing how well another order was packed. You can include a short selection of Shopper Approved reviews in the email. First [import reviews for your shop](/configbeez/integrations/config_shopperapproved_integration) so the template has comments to choose from.
 
-### Usage
+## Choose which reviews the email can show
 
-Install and activate this Module – you need to have the [ShopperApproved Integration Suite](/documentation/configbeez/config_shopperapproved_integration/ "ShopperApproved Integration Suite") configured.
+Open **System → Extensions → Add-ons → Customer data and content** and select **Show Shopper Approved reviews in emails**.
 
-By adding the following tags into your MailBeez templates you will be able to show a configured number of ShopperApproved ratings in your MailBeez generated emails. You can place the tags wherever you want, so for example if you place them within your main template the ratings will be shown in all emails, but if you place them only in your content template, you are able control exactly in which emails the ratings will be visible:
+[doc-steps]
 
-Place this into the HTML-Version of your MailBeez template:
+[doc-step]
+**Select enough detail for the reader**
 
-```
-{$content.shopperapproved.html}
-```
+Set **Reviews per email** and **Minimum rating**. With **Minimum comment length (characters)** you can leave out one-word ratings when the email needs a comment buyers can actually read.
+[/doc-step]
 
-Place his into the TXT-Version of your MailBeez template:
+[doc-step]
+**Check the selection in the message**
 
-```
-{$content.shopperapproved.txt}
-```
+Enable **Randomize reviews** for a varying selection, or leave it off to show the latest qualifying reviews. Preview a template that includes the review block. If it is empty, check whether any imported comment satisfies both minimums.
+[/doc-step]
 
-
-
-More advanced users can also directly access the data object holding the ratings in the email template using following code example.
-
-
-```
-{assign var=feed_feed value=$data.shopperapproved}
-{section name=item loop=$feed_feed}
-  {$feed_feed[item].stars_overall}
-  {$feed_feed[item].customers_textcomments}</br>
-  {$feed_feed[item].customers_fullurl}</br>
-  {$feed_feed[item].customers_displaydate|date_format}
-{/section}
-```
-
-
- 
+[/doc-steps]

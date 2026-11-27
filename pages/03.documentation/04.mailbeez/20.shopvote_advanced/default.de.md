@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: ShopVote.de Profi
+title: "SHOPVOTE"
+module_subtitle: "Um Bewertungen auf SHOPVOTE bitten"
 slug: shopvote_advanced
 # menu: ShopVote.de Profi
 date:  02-11-2015
@@ -17,9 +18,10 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Um Bewertungen auf SHOPVOTE bitten"]
     
 module:
+    plans_position: after_guide
     code: 'shopvote_advanced'
     category: [mailbeez]
     compatiblity: [comp_osc,comp_cre,comp_digi,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio,comp_saas]
@@ -50,33 +52,31 @@ metadata:
 #  last_modified: true
 ---
 
-**Optimieren Sie Ihre ShopVote.de Partnerschaft**
+Ein Kunde bestellt jeden Monat Katzenfutter bei dir. Du möchtest ihn auf SHOPVOTE nach Lieferung und Service fragen. Eine Einladung nach jedem Sack wäre schnell zu viel. Mit diesem Flow kannst du die Lieferung abwarten und festlegen, wie bald derselbe Käufer wieder eine Einladung erhalten darf.
 
-## Profi-Funktionen
+## Flow einrichten
 
-Die Profi-Version optimiert den Ablaufes zur Bewertungs-Aufforderung:
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → Um Bewertungen auf SHOPVOTE bitten** und wähle **Optionen → Konfigurieren**.
 
-## Mehrere Bestell Status
+<span id="abstand-zwischen-shopvote"></span>
+<span id="diese-einstellungen-sind-"></span>
 
-Haben Sie verschiedene Status, welche eine Bestellung als "ausgeliefert" kennzeichnet? Kein Problem, markieren Sie einfach alle relevanten Status.
+[doc-steps]
+[doc-step]
+**Den Bewertungslink deines Shops hinterlegen**
 
-## Berücksichtigung von Auslands-Bestellungen
+Trage unter **Ihre ShopVote URL** den SHOPVOTE-Bewertungslink deines Shops ein. Folge dem Link aus einer Vorschau und prüfe, ob der Käufer deinen Shop auf der Zielseite wiedererkennt.
+[/doc-step]
+[doc-step]
+**Den frühesten Versandtag bestimmen**
 
-Der Versand ins Ausland nimmt typisch ein paar Tage länger in Anspruch. Definieren Sie eine Verzögerung für Auslandsbestellungen, damit die Einladungs-Email zur Bewertung nicht vor der Ware ankommt!
+Wähle unter **Bestell-Status für Bewertungen** den Status für verschickte Pakete. Plane unter **Wartezeit nach dem Statuswechsel** genug Zeit für die Lieferung ein und setze **Höchstalter des Statuswechsels** höher als diese Wartezeit. Für längere Lieferwege ins Ausland gibt es **Zusätzliche Wartezeit bei Auslandslieferungen**.
+[/doc-step]
+[doc-step]
+**Einen Abstand für Stammkunden setzen**
 
-Das Modul wird dann eine Verzögerung für Bestellungen mit Lieferung an die Länder hinzufügen, welche von dem im Shop-System als Betreiber-Land konfigurierten Land abweichen.
+Wähle für die monatliche Futterbestellung unter **Mindestabstand zwischen Einladungen** zum Beispiel 90 Tage. Vergleiche zwei sonst passende Käufer. Einer hat letzten Monat eine SHOPVOTE-Einladung erhalten, der andere noch nie. Der zweite kommt jetzt infrage. Beim ersten sind die 90 Tage noch nicht um.
+[/doc-step]
+[/doc-steps]
 
-## Stammkunden Erkennung
-
-Wollen Sie Ihre häufig bestellenden Stammkunden vor eine Bewertungseinladung nach jeder Bestellung beschützen? Definieren Sie einfach, wie viele Tage seit der letzten Einladungs-Email vergangen sein müssen, bevor eine erneute Einladung versendet werden soll.
-
-Das Modul wird dann automatisch prüfen, ob bereits eine neuen Einladung versendet werden kann oder nicht.
-
-[plugin:content-inject](/content_blocks/pro_responsive_template)
-
-<!--
-
-### Wollen Sie Ihre wertvollen Bewertungen mit Shop und Email-Marketing integrieren?
-
-Mit der [ShopVote.de Integration Suite](/dokumentation/configbeez/config_shopvote_rss_importer/) können Sie schnell und einfach ShopVote.de-Bewertungen serverseitig in Ihren Shop (positiver SEO Effekt durch "unique fresh content") und auch in alle von MailBeez generieren Email Marketing Emails integrieren
--->
+Wie du den geplanten Lauf an einer Testbestellung prüfst, zeigt [Bewertungseinladung planen](/kochbuch/optimierter-ablauf-bitte-um-bewertung).

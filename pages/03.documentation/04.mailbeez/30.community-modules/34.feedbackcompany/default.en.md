@@ -1,5 +1,6 @@
 ---
-title: 'The Feedback Company'
+title: "The Feedback Company"
+module_subtitle: "Invite buyers to write a store review on The Feedback Company"
 slug: feedbackcompany
 routes:
     default: /documentation/mailbeez/feedbackcompany
@@ -45,4 +46,12 @@ metadata:
     author: admin
 ---
 
-This simple, free module allows you to ask your customers for a review within the Dutch review service [The Feedback Company](https://www.feedbackcompany.nl/).
+[doc-callout type="note" title="Earlier campaign module"]
+Choose a flow for a current shop under [Automations](/mailbeez). [Browse the legacy reference](/legacy).
+[/doc-callout]
+
+The earlier Community module invites a buyer to rate your shop on The Feedback Company. Use the review destination for your own shop. Open it from a test invitation before enabling automated requests.
+
+Open the destination from a test message before using the old integration again. The provider’s review page must still be reachable for a buyer to respond.
+
+Choose the order status that starts the wait and allow enough time for delivery.

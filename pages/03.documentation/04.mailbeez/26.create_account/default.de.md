@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Willkommens Email
+title: "Willkommensmail"
+module_subtitle: "Neue Kunden begrüßen"
 slug: create_account
 # menu: Willkommens Email
 date: 10-05-2011
@@ -17,8 +18,9 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Neue Kunden begrüßen"]
 module:
+    plans_position: after_guide
     code: 'create_account'
     category: [mailbeez]
     compatiblity: [comp_osc,comp_cre,comp_digi,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio,comp_saas]
@@ -49,23 +51,25 @@ metadata:
 #  last_modified: true
 ---
 
-**Dieses hilfreiche Module versendet eine Begrüssungsemail eine bestimmte Anzahl an Tagen nachdem der neue Kunden das Kundenkonto eröffnet hat.**
+Ein Kunde legt in deinem Fahrradteile-Shop ein Konto an und sucht passende Bremsbeläge. Die Bestätigung der Registrierung verschickt dein Shop bereits. Eine Willkommensmail am nächsten Tag kann ihm bei seiner eigentlichen Frage helfen. Zeige, wo die Modellnummer der Bremse steht, und verlinke deinen Teilefinder.
 
-Dieses Modul versendet nur auf den ersten Blick eine weitere Begrüssungsemail – nachdem das Shopsystem ja bereits die Bestätigung der Kundenkonto-Eröffnung verschickt hat.  
- Mit etwas Kreativität kann dieses Modul für interessante Ideen, wie z.B. weiteren Informationen zum Kundenservice, Neukunden-Angebote, Zufriedenheits-Umfragen usw. eingesetzt werden. Mit der steigenden Bedeutung der sozialen Medien kann dieses Modul auch genutzt werden, um den neuen Kunden auf z.B. die Facebook-Seite aufmerksam zu machen.
- 
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+Den Flow löst die Registrierung aus. Auch wer schon bestellt hat, kann die Willkommensmail bekommen. Für ein Angebot ausschließlich an Kunden ohne Bestellung nutze [Zum ersten Kauf einladen](/mailbeez/nopurchase_advanced).
 
+## Flow einrichten
 
-**Geschlechtsspezifischen Inhalte definieren (Erweiterung)**
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → Neue Kunden begrüßen** und wähle **Optionen → Konfigurieren**.
 
-Für Online-Shops mit gemischtem Kundenkreis (Damen/Herren) erlaubt das Erweiterungs-Module “[Geschlechtsspezifische Inhalte](/documentation/filterbeez/filter_add_gender/ "Add Gender")” die Inhalte auch dieser Email differenziert nach der Kundengruppe anzupassen.
+[doc-steps]
+[doc-step]
+**Den Zeitpunkt wählen**
 
-**Einfache Konfiguration**
+Trage für den Teilefinder unter **Wartezeit nach der Registrierung** einen Tag ein. Wähle unter **Höchstalter des Kundenkontos** einen längeren Zeitraum. Mit sieben Tagen erreichst du beim Start kürzlich angelegte Konten. Langjährige Kunden bekommen dann keinen Willkommensgruß.
+[/doc-step]
+[doc-step]
+**Dem Leser einen nächsten Schritt anbieten**
 
-Die Konfiguration dieses Modules ist recht einfach:
+Öffne die Willkommensmail. Setze den Link zum Teilefinder direkt zum Hinweis auf die Modellnummer. Lies die E-Mail zusammen mit der Registrierungsbestätigung deines Shops. So erhält der Kunde die Kontodaten in einer Nachricht und die Hilfe zum Einkauf in der anderen.
+[/doc-step]
+[/doc-steps]
 
-- **Mindest-Alter des Kundenkontos** Zeitlicher Abstand nach Eröffnung des Kundenkontos
-- **Höchst-Alter des Kundenkontos** Zeitliche Begrenzung des Zeitraumes
-- **Absender Email**
-- **Absender Name**
+Vergleiche ein zwei Tage altes Testkonto mit einem, das vor einem Monat eröffnet wurde. Von beiden liegt nur das jüngere im Beispielfenster. Unter [Den ersten Lauf prüfen](/quickstart/step-3-set-forget#den-ersten-lauf-pruefen) siehst du, wie du die Auswahl vor dem Versand kontrollierst.

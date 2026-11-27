@@ -1,5 +1,6 @@
 ---
-title: 'Shoprating Review Reward Coupon'
+title: "Store review rewards"
+module_subtitle: "Give customers a personal coupon after they review your store"
 published: true
 date: '08-02-2012 00:00'
 publish_date: '08-02-2012 00:00'
@@ -12,6 +13,7 @@ taxonomy:
     tag:
         - pro
         - coupon
+        - "Shoprating Review Reward Coupon"
     category:
         - docs
 summary:
@@ -34,14 +36,17 @@ author:
     name: admin
 ---
 
-This module works with the [Mailbeez Shoprating System](/dokumentation/configbeez/config_shopvoting/).
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To look up a generated coupon code in V5, open [Coupons](/content/coupons). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-**Say thanks to your customers for giving a review, and send them an automated email with a personalized coupon towards their next purchase with the Mailbeez Shoprating Review Reward Coupon module.**
+Thank a customer for reviewing your shop with a personal coupon. Use the recorded shop review to qualify the customer for the reward.
 
-If you are already using the [Mailbeez Shoprating System](/dokumentation/configbeez/config_shopvoting/) to collect Shop reviews for your store, then this Review Reward Coupon module is a powerful way to augment the review cycle by rewarding customers with a personalized offer coupon email after they have written a review. Fully automated and personalized (for that is the Mailbeez way!), the module offers powerful functionality to send the coupon after a preset number of reviews have been written, and of course, to alter the value of the coupon or deal you wish to offer the reviewer.
+Look up the store review before investigating a missing reward. A product rating from the same buyer describes a different action and may belong to a different reward module.
 
-**Personalized coupons to prevent code sharing**
-
+1. Set up [Collect reviews in your store](/configbeez/config_shopvoting) so the review can be recorded.
+2. Choose how many reviews a customer must submit to qualify. Select the coupon offer and check its value.
+3. Preview the reward email and check that the personal code appears with the offer.
 
 [plugin:content-inject](/content_blocks/pro_coupon)
 

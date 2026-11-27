@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Idealo Integration Suite
+title: "idealo"
+module_subtitle: "Import reviews from idealo"
 slug: config_idealo_integration
 routes:
     default: /documentation/configbeez/config_idealo_integration
@@ -19,7 +20,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Import reviews from idealo"]
 module:
     code: 'config_idealo_integration'
     category: [configbeez]
@@ -44,8 +45,26 @@ metadata:
 #  last_modified: true
 ---
 
-Import and Integrate your valuable Idealo Reviews
+A replacement pump arrives before the weekend and the customer leaves an idealo review about the fast delivery. Your shop receives the review notification by email. MailBeez can read these notifications from an IMAP mailbox and move processed messages to a folder you choose.
 
-## How it works
+## Read one notification from the right mailbox
 
-As idealo is not offering any API the dealer notification emails for new reviews are automatically processed.
+Open **System → Extensions → External services** and select **Import reviews from idealo**.
+
+[doc-steps]
+
+[doc-step]
+**Connect the notification mailbox**
+
+Enter **IMAP server**, **IMAP username** and **IMAP password** for the mailbox that actually receives idealo reviews. Set **IMAP port** and **IMAP connection options** as required by the mail provider. Save, then choose **Test mailbox**.
+[/doc-step]
+
+[doc-step]
+**Decide how to process incoming mail**
+
+Choose a writable **Folder for processed messages** and set **Messages per import run**. Keep **Run during normal MailBeez processing** enabled unless a separate cron job runs the importer. **Start import** processes messages. Check the date of a known review against the notification in the processed folder.
+[/doc-step]
+
+[/doc-steps]
+
+To ask a new buyer for feedback on idealo, use the [idealo invitation flow](/mailbeez/idealo_advanced).

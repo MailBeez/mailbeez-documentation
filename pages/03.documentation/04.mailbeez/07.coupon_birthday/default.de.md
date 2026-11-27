@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Geburtstags-Email mit Gutschein
+title: "Geburtstagsgruß"
+module_subtitle: "Zum Geburtstag gratulieren"
 slug: coupon_birthday
 # menu: Geburtstags-Email mit Gutschein
 date: 26-10-2010
@@ -17,8 +18,9 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro,coupon]
+    tag: [pro,coupon, "Zum Geburtstag gratulieren"]
 module:
+    plans_position: after_guide
     mc_ready: true
     code: 'coupon_birthday'
     category: [mailbeez]
@@ -48,24 +50,30 @@ metadata:
 #  last_modified: true
 ---
 
-**Wenn Kunden Geburtstag haben, wird vor dem Online Shop der rote Teppich ausgerollt und der Kunde erhält einen personalisierten Gutschein – automatisch mit diesem Modul generiert und termingerecht verschickt!**
+Stell dir vor, du betreibst eine Confiserie. Zum Geburtstag schenkst du einem Stammkunden einen Gutschein für eine Schachtel Pralinen. Du kannst am Geburtstag gratulieren oder ein paar Tage vorher schreiben, damit die Pralinen rechtzeitig bestellt werden können.
 
-Ganz automatisiert, personalisiert und mit einer konfigurierbaren Gültigkeitsperiode ist dieses Module das perfekte Werkzeug um den geschätzen Kunden Aufmerksamkeit zu schenken.
+MailBeez verwendet das Geburtsdatum aus dem Kundenprofil. Fehlt dort ein gültiger Geburtstag, kommt der Kontakt für diesen Flow nicht infrage. MailBeez merkt sich den Gruß für das jeweilige Jahr.
 
-**Automatisch generierte Gutschein**  
+## Flow einrichten
 
-[plugin:content-inject](/content_blocks/pro_coupon)
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → Zum Geburtstag gratulieren** und wähle **Optionen → Konfigurieren**.
 
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+[doc-steps]
+[doc-step]
+**Den Versandtag festlegen**
 
- 
- <!---
+Wähle unter **Versand vor dem Geburtstag** eine 0 für den Geburtstag selbst oder eine 3, wenn der Gruß bis zu drei Tage vorher ankommen darf. Unter **Nachträgliche Glückwünsche zulassen** legst du fest, ob der nächste Lauf einen verpassten Geburtstag nachholen darf.
+[/doc-step]
+[doc-step]
+**Das Geschenk einrichten**
 
-Falls der Kunde nicht zufällig ‘Dave’ heisst, so wird natürlich der richtige Namen des Kunden über die dynamischen Platzhalter eingefügt, so dass jede Email voll personalisiert mit Vornamen, Nachnamen und weiteren Elementen, die aus der Datenbank des Online-Shops kommen, gefüllt werden. Die Vorlagen sind in english gehalten.
+Dein Shop muss Gutscheine unterstützen. Wähle unter **Gutschein Vorlage** das Angebot für die Pralinen und lege unter **Gültigkeit des Gutscheins** die Laufzeit fest. Vierzehn Tage zählen ab Versand, auch bei einem vorgezogenen Gruß. Nenne das Ablaufdatum, damit der Kunde weiß, bis wann er bestellen kann.
+[/doc-step]
+[doc-step]
+**Den Text mit einem Testprofil lesen**
 
-**Eine Erinnerung kann helfen**
+Nutze für die Vorschau ein Profil mit passendem Geburtstag. „Heute ist dein Geburtstag“ passt zum Versand am Geburtstag selbst. Bei einem früheren Gruß funktioniert „Eine Kleinigkeit zu deinem Geburtstag“ besser. Prüfe Code und Bedingungen unter [Gutscheine](/content/coupons).
+[/doc-step]
+[/doc-steps]
 
-Wie wohl die meisten Online-Nutzer, so werden auch Ihre Kunden viele Emails erhalten – und daher besteht das Risiko, dass die Geburtstags Email mit dem vorteilhaften Gutschein in der Mailbox untergeht und in Vergessenheit gerät. Durch die vollständige Integration in das Gutschein System ist es aber zum Glück möglich, einige Tage vor Ablauf des Gutscheines eine Erinnerung zu verschicken – falls der Gutschein noch nicht eingelöst worden ist.  
- Das Module [Gutschein Ablauf Erinnerungen](/dokumentation/mailbeez/coupon_expire/ "Gutschein Ablauf Erinnerung") (bitte separat erwerben) übernimmt diese Funktion für alle von MailBeez Modulen generierten Gutscheine.
-
--->
+Möchtest du stattdessen an die Registrierung in deinem Shop anknüpfen, nutze [Zum Kundenjubiläum gratulieren](/mailbeez/coupon_anniversary).

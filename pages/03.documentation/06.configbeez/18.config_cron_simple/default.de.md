@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: MailBeez automatisch ausführen
+title: "Versand bei Besuch"
+module_subtitle: "Versand durch Shopbesuche starten"
 slug: config_cron_simple
 # menu: MailBeez automatisch ausführen
 date: 05-07-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Versand durch Shopbesuche starten"]
 module:
     code: 'config_cron_simple'
     category: [configbeez]
@@ -49,127 +50,24 @@ metadata:
 #  last_modified: true
 ---
 
-> [!NOTE]
-> Die Einrichtung eines "echten" Cronjobs ist die beste Methode zur Automatisierung. Dieses Modul ist eine einfach zu nutzende Alternative
+In deinem Wollshop ist nachts wenig los. Um 7 Uhr wäre eine Bewertungsanfrage zu einem Strickset fällig. Der erste Kunde öffnet den Shop aber erst mittags. Starten Shopbesuche die Verarbeitung, kann die Anfrage bis dahin warten. Das passt, wenn es beim Versand auf einige Stunden Unterschied nicht ankommt.
 
+## Festlegen, wie lange ein Lauf warten darf
 
-**Ein einfaches, aber sehr praktisches Modul, um MailBeez automatisch auszuführen – ohne sich mit der Einrichtung eines Cronjobs befassen zu müssen**
+Öffne **System → Erweiterungen → Zusatzmodule → Versand und Zeitplanung** und wähle **Versand durch Shopbesuche starten**.
 
-Mit diesem einfachen Modul können Sie sich die Mühe sparen, einen Cronjob einzurichten, um MailBeez zu automatisieren. Dieses Modul nutzt den Besucher-Traffic auf Ihrem Shop, um MailBeez so oft wie gewünscht auszuführen. Für MailBeez Benutzer, die schnell das System automatisieren wollen, oder welche sich nicht mit der Einrichtung eines Cronjobs beschäftigen wollen, ist dies sehr praktisch.
+[doc-steps]
 
-**Einfach und schnell**  
- Mit Hilfe von Zeitstempel-Caches wird die zusätzliche Last auf Ihrem Server sehr gering gehalten. Durch den Einsatz von moderner AJAX Technologie wird der Besucher in Ihrem Shop nichts von der Ausführung des Modules merken: Der MailBeez Versand wird erst angestossen, nach dem die Seite vollständig geladen worden ist.
+[doc-step]
+**Den Mindestabstand einstellen**
 
-Um mit diesem Modul zu beginnen, sind neben der einfachen “Drop-In” Installation des neuen Konfigurationsmodules nur sehr einfache Anpassungen an den Shop-Dateien erforderlich.
+Die Anbindung im Shop muss aktiv sein. Lege den **Mindestabstand bei Shopbesuchen (Stunden)** fest. Bei zwei Stunden Abstand startet ein Besuch zehn Minuten nach dem letzten Lauf noch keinen neuen.
+[/doc-step]
 
-## Konfiguration:
+[doc-step]
+**Besuche und Laufzeit vergleichen**
 
-Die Konfiguration ist sehr einfach und selbsterklärend:
+Nach Ablauf des Abstands kann der nächste geeignete Besuch die Verarbeitung starten. Soll eine Erinnerung auch an ruhigen Tagen früh hinausgehen, richte einen Server-Cronjob für die [automatische Verarbeitung](/configbeez/automatische-verarbeitung) ein.
+[/doc-step]
 
-**Zeitraum zwischen den Ausführungen von MailBeez (Stunden)**  
- Geben Sie ein, wieviele Stunden zwischen der Ausführung von MailBeez vergehen sollen.
-
-
-## Installation
-
-> [!NOTE]
-> [content-inject path="/content_blocks/hint_preintegration" /]
-
-
-####Gambio 2.x und Modified-Shop 1.x
-Öffne Datei `includes/application_bottom.php` und finde die Zeile 
-
-`echo '</body></html>';`
-
-davor folgenden code einfuegen:
-```php
-// MailBeez
-if (defined('MAILBEEZ_CRON_SIMPLE_STATUS') && MAILBEEZ_CRON_SIMPLE_STATUS == 'True') {
-    require_once(DIR_FS_CATALOG . 'mailhive/configbeez/config_cron_simple/includes/cron_simple_inc.php');
-}
-// - MailBeez
-```
-
-Um Einträge wie "/mailhive.php?cron_simple=1" in der Who-Is-Online Tabelle zu vermeiden, bitte die Datei `inc/xtc_update_whos_online.inc.php` wie folgt modifizieren:
-
-Finde
-
-```php
-$wo_last_page_url = addslashes(getenv('REQUEST_URI'));
-```
-
-danach folgendes einfügen:
-
-```php
-// MailBeez
-// avoid /mailhive.php?cron_simple=1 in who is online table
-if (preg_match("/mailhive.php/", $wo_last_page_url)) {
-   return false;
-}
-// - MailBeez
-```
-
-
-####Zencart
-Öffne Datei  `<store-root>/includes/modules/footer.php` und vor dem schliessenden `?>` PHP-Tag folgendes einfügen:
-
-```PHP
-// MailBeez
-if (defined('MAILBEEZ_CRON_SIMPLE_STATUS') && MAILBEEZ_CRON_SIMPLE_STATUS == 'True') {
-    require_once(DIR_FS_CATALOG . 'mailhive/configbeez/config_cron_simple/includes/cron_simple_inc.php');
-}
-// - MailBeez
-
-```
-Um Einträge wie "/mailhive.php?cron_simple=1" in der Who-Is-Online Tabelle zu vermeiden, bitte die Datei `<store-root>/includes/functions/whos_online.php` wie folgt modifizieren:
-
-
-Finde
-
-```php
-$wo_last_page_url = (...)');
-```
-
-danach folgendes einfügen:
-
-```php
-// MailBeez
-// avoid /mailhive.php?cron_simple=1 in who is online table
-if (preg_match("/mailhive.php/", $wo_last_page_url)) {
-   return false;
-}
-// - MailBeez
-``` 
-
-
-####osCommerce
-Öffne Datei `<store-root>/includes/footer.php` und vor dem schliessenden `?>` PHP-Tag folgendes einfügen:
-
-```PHP
-// MailBeez
-if (defined('MAILBEEZ_CRON_SIMPLE_STATUS') && MAILBEEZ_CRON_SIMPLE_STATUS == 'True') {
-    require_once(DIR_FS_CATALOG . 'mailhive/configbeez/config_cron_simple/includes/cron_simple_inc.php');
-}
-// - MailBeez
-
-```
-Um Einträge wie "/mailhive.php?cron_simple=1" in der Who-Is-Online Tabelle zu vermeiden, bitte die Datei  `<store-root>/includes/functions/whos_online.php` wie folgt modifizieren:
-
-
-Finde
-```php
-$wo_last_page_url = getenv('REQUEST_URI');
-```
-
-danach folgendes einfügen:
-
-```php
-// MailBeez
-// avoid /mailhive.php?cron_simple=1 in who is online table
-if (preg_match("/mailhive.php/", $wo_last_page_url)) {
-   return false;
-}
-// - MailBeez
-``` 
-
-
+[/doc-steps]

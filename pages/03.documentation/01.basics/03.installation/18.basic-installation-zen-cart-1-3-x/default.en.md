@@ -36,80 +36,29 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez works with **Zen Cart v1.3.8 and v1.3.9x**, running on php 5.3+
+[doc-callout type="note" title="Installation for earlier shop releases"]
+Check the version in your shop admin. For a different release, look under [Installation](/basics/installation) or in the [legacy reference](/legacy).
+[/doc-callout]
 
+For Zen Cart 1.3.8 / 1.3.9x, use the v4.xx integration package. It creates MailBeez’s own tables. The historical package for this shop release specified PHP 5.3+.
 
-The installation is straight forward and can be done in a couple of minutes by following these steps:
-
-- copy new files
-- install MailBeez
-
-MailBeez maintains its own tables – the shopping cart's existing tables remain as they are... unchanged.
-
-
-## Step 1 – copy new files
+Check the name of the actual admin directory before uploading the package. The destination in a customized Zen Cart shop can differ from the folder name in the archive.
 
 [plugin:content-inject](/content_blocks/download_installer)
 
+1. Copy `catalog/admin/mailbeez.php` from the package into your shop’s admin directory.
+2. Copy the `mailhive` folder and `mailhive.php` from `catalog` to the shop root, alongside `index.php`.
+3. Merge the contents of `extras_zencart/zencart_1.3.x/admin` into the shop’s admin directory.
+4. Sign in to the Zen Cart admin, open **Tools → MailBeez** and choose **Install**.
 
-In the mailbeez_installer-v4.xx fileset, navigate to catalog > admin, then copy the following file to your Zen-Cart admin-directory.
+## Rewrite rules and email layout
 
-```bash
- mailbeez.php
+In the shop’s `.htaccess`, add this condition immediately before the rule that sends all remaining requests to Zen Cart’s `index.php`.
 
+```apache
+RewriteCond %{REQUEST_URI} !^/mailhive [NC]
 ```
 
-
-In the mailbeez_installer-v4.xx fileset, navigate to the catalog folder, then copy the following file and folder to your root Zen Cart directory (where your index.php is located).
-
-```bash
-mailhive (folder)
-mailhive.php
-
-```
-
-In the mailbeez_installer-v4.xx fileset, navigate to **extras\_zencart > zencart\_1.3.x > admin**, then copy/merge its contents into your Zen Cart admin-directory.
-
-
-## Step 2 – install MailBeez
-
-Log in to your Zen Cart administration panel. From the navigation bar, select **Tools > MailBeez**. Then, click the “Install” button.
-
-
-## Adaption of Zen Cart
-
-####changes to your .htaccess rewrite rules
-
-Please add following condition
-
-    # Don't rewrite MailBeez directory
-    RewriteCond %{REQUEST_URI} !^/mailhive [NC]
-
-as a new line above
-
-    # Handle all other URIs using Zen Cart (its index.php)
-
-
-####Fix the email function
-The Zen Cart email function is peculiar when sending custom emails, and you may experience some minor issues when sending MailBeez generated emails through Zen Cart. See FAQ:
-
-> [!NOTE]
-> Please see [Zen Cart FAQ](/documentation/frequently-asked-questions#zen-cart) for more details
-
-**Quick Solution:** configure a SMTP Email Server in MailBeez > Configuration > Email Engine. This will bypass the Zen Cart email function and give MailBeez full control for sending emails.
-
-If would like MailBeez to use its own template system to generate MailBeez email (recommended), rather than integrating with and using Zen Cart’s email template system to generate MailBeez email (default), please do the following:
-
-1. Using your FTP program, download includes/functions/functions\_email.php from your server to your local drive (i.e. your computer)
-2. Using a text editing program such as Notepad or Notepad++, find this line of code:
-
-
-`$email_html = zen_build_html_email_from_template($module, $block);`
-
-1. And change it as described on:
-<http://www.zen-cart.com/showthread.php?158085-Mailbeez-After-Sales-Modules&p=1170912#post1170912>
-
-This code change tells Zen Cart to check if the content contains a valid html tag, and if not, applies the Zen Cart template system.
-
+If Zen Cart wraps the message in a second email template, the historical installation offered two options. Configure SMTP in the MailBeez email system to bypass the Zen Cart mail function, or keep that function and apply the version-specific layout adjustment. For the latter, locate `$email_html = zen_build_html_email_from_template($module, $block);` in `includes/functions/functions_email.php`. [Zen Cart adjustment for this release](http://www.zen-cart.com/showthread.php?158085-Mailbeez-After-Sales-Modules&p=1170912#post1170912) · [Zen Cart FAQ](/frequently-asked-questions#zen-cart).
 
 [plugin:content-inject](/content_blocks/run_installer)

@@ -1,5 +1,6 @@
 ---
-title: GDPR Export Framework
+title: "GDPR Data Export"
+module_subtitle: "Export the data associated with a customer’s email address"
 slug: config_gdpr_export
 # menu: Antispam Regeln
 date: 24-05-2018
@@ -34,15 +35,8 @@ metadata:
 #  last_modified: true
 ---
 
-GDPR Export Framework
+To prepare a data export, confirm the requester’s identity and the email address they used in this shop. If they ordered under more than one address, establish which address the export should cover before sharing the file.
 
+Open **System → Configuration** and select **GDPR Data Export**.
 
-The MailBeez GDPR Export Framework matches the GDPR requirements to export on request all stored data for a customer contact.
-
-
-This extension for the [BeezDesk Customer-Insight](/documentation/configbeez/config_customer_insight) allows your to easily export all data for a customer contact in CSV format.
-
-![Screen_gdpr_export.de.png](Screen_gdpr_export.de.png)
-
-
-The GDPR Export Framework is extensible so a programmer can easily integrate data from an external system into the export (details will follow).
+Check which data the export for this email address contains. Customer Insight supplies a CSV. Connected systems may hold additional data. Review the file before sharing it. The export is available according to your role.

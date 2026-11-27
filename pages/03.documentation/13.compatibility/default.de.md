@@ -37,3 +37,15 @@ metadata:
 #  last_modified: true
 ---
 
+Wähle unter **Shopsystem** deinen Shop und gib bei **Module suchen** einen Teil des Namens ein. Die Anleitung zum Treffer nennt die Voraussetzungen. Soll etwa der Geburtstagsgruß einen persönlichen Gutschein enthalten, braucht dein Shop ein funktionierendes Gutscheinsystem. **Zurücksetzen** zeigt wieder die ganze Liste.
+
+Die Einstellungen unter [System → Konfiguration](/configbeez) gelten für alle unterstützten Shopsysteme. Bei gehosteten Shops bedeutet **Einstellungen ausgeblendet**, dass MailBeez Services Änderungen an der Konfiguration übernimmt.
+
+Die geplanten gehosteten Anbindungen für Shopify, WooCommerce, JTL-Shop und Shopware haben denselben Funktionsumfang. So liest du die Angaben für gehostete Konten.
+
+- **Kompatibel**<br>
+  Ein Shop mit gehosteter Anbindung kann das Modul nutzen. Prüfe in der Anleitung, welche Voraussetzungen für deinen Shop oder Tarif gelten.
+- **Einstellungen ausgeblendet**<br>
+  Du kannst das Modul im normalen gehosteten Konto nicht selbst konfigurieren. Es kann trotzdem im Hintergrund laufen.
+- **Nicht bestätigt**<br>
+  Kläre mit MailBeez Services, ob sich das Modul für dein Vorhaben eignet. In den [Installationsanleitungen](/grundlagen/installation) erfährst du, wie du eine Beratung anfragst und den Connector erhältst.

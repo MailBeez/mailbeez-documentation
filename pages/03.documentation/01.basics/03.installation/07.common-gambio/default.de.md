@@ -26,21 +26,17 @@ metadata:
 
 ---
 
-Die aktuellen Versionen von Gambio haben bereits das MailBeez Grundsystem vorintegriert:
+[doc-callout type="note" title="Installation für frühere Shopversionen"]
+Prüfe die Versionsnummer in deiner Shopverwaltung. Für andere Versionen findest du die passende Anleitung unter [Installation](/grundlagen/installation) oder in der [Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-##Gambio ab Version 2.5
+Prüfe zuerst die GX-Version in der Shopverwaltung.
 
-Ab Version 2.5 sind externe vorintegrierte Module zunächst zu aktivieren. Bitte lesen Sie weiter auf folgender Seite: 
-[Aktivierung von MailBeez](/dokumentation/installation/basic-installation-gambio-gx-25)
+Die GX-Version bestimmt, ob du Dateien brauchst und über welches Menü du MailBeez öffnest. Weicht dein Menü von der Anleitung ab, prüfe die vollständige GX-Version.
 
-##Version Gambio 2.3.x und 2.4.x
-
-Bitte MailBeez über das Admin Menü per Klick installieren.
-
-##Vor Version Gambio 2.3
-
-Bitte folgenden Sie der Installations-Anleitung für Ihre Gambio Version
-
-- [Gambio 1.x](/dokumentation/installation/basic-installation-gambio)
-- [Gambio 2.x](/dokumentation/installation/basic-installation-gambio-gx-2)
-
+- <span id="gambio-ab-version-2-5"></span>**Ab GX 2.5**<br>
+  Aktiviere das mitgelieferte Modul wie unter [Gambio GX 2.5+](/grundlagen/installation/basic-installation-gambio-gx-25) beschrieben.
+- <span id="version-gambio-2-3-x-und-"></span>**Bei GX 2.3.x und 2.4.x**<br>
+  Nutze den Admin-Eintrag aus [Gambio GX 2.3+](/grundlagen/installation/basic-installation-gambio-gx-23).
+- <span id="vor-version-gambio-2-3"></span>**Bei älteren Versionen**<br>
+  Nutze die Integrationsdateien für [Gambio GX 1.x](/grundlagen/installation/basic-installation-gambio) oder [Gambio GX 2.x](/grundlagen/installation/basic-installation-gambio-gx-2).

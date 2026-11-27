@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Pattern Blacklist
+title: "Address blocklist"
+module_subtitle: "Block email addresses by pattern"
 slug: filter_check_pattern_blacklist
 routes:
     aliases:
@@ -20,7 +21,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Block email addresses by pattern"]
 module:
    code: 'filter_check_pattern_blacklist'
    category: [filterbeez]
@@ -45,11 +46,12 @@ metadata:
 #  last_modified: true
 ---
 
+Your team orders spare parts with test addresses every time it checks the checkout. Those accounts should stay out of customer emails. If they all use a dedicated domain, one address rule can cover them without adding each tester individually.
 
-This handy Mailbeez filter gives you the tools to set up an email blacklist based on email address patterns that you define.
+## Match a distinctive piece of the address
 
-A good example of its usefulness is that you could create a blacklist to block MailBeez for all customers created through a store integration with Amazon. To achieve this just enter the pattern  `@marketplace.amazon.com`.
+Open **System → Extensions → Add-ons → Filters** and select **Block email addresses by pattern**.
 
-Pattern Blacklist allows you to define an unlimited number of patterns.
+Enter one literal string per line under **Email address text to block**. The match is case-sensitive and can occur anywhere in the address. Asterisks are treated as text.
 
-  
+For example, `@test.example` matches `alex@test.example` and also `alex@test.example.org`. It leaves `alex@shop.example` alone. Compare the intended matches with a similar address you want to keep before enabling the rule. To block a particular customer across campaigns, see [Customer blocks](/filterbeez/filter_check_block_all).

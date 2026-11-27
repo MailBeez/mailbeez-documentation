@@ -1,5 +1,6 @@
 ---
 title: 'Responsive Template Manager'
+module_subtitle: "Manage responsive templates in the earlier Template Manager"
 published: true
 date: '30-06-2011 00:00'
 publish_date: '30-06-2011 00:00'
@@ -45,26 +46,14 @@ author:
     name: admin
 ---
 
-The visual Template Manager with support for responsive Emails allows you to easily edit and view your text changes right from the MailBeez area within your store’s admin! 
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To change the shared email layout in V5, open [Main Templates](/content/main-templates). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-It is fully functional with all official (free and premium) MailBeez Modules as well as with custom built modules, making template editing a breeze – so much so that you may wonder how you ever lived without it!
+Use the older visual editor to change an email layout shared by several campaigns. Save a named copy first so you can restore it if a change affects another message.
 
-Say goodbye to downloading template files, editing & saving them on your local drive, uploading them back to your server, and viewing them online only to have to go back and repeat the process after every change.  
+Preview two campaigns that use the same layout, ideally one with a short message and one with a long product name. A layout change must accommodate both.
 
-## Features
-
-- **Comfortable Visual editor** makes no html knowledge necessary
-- **Preview in mobile devices** with different screen sizes like iPhone, iPad
-- Edit your email copy in **real time**, then preview and send test emails
-- **save user templates** so you can role back if necessary
-- **Restoration of the default template** in case anything goes wrong
-- **Upwards compatible** with the Mailbeez [Multilanguage Template Manager](/documentation/configbeez/config_tmplmngr_lng/ "Multilanguage Template Manager") so you can take your store multilingual!
-- **Nerd-Mode** with syntax highlighting allows you to edit source code  for greates flexibility
-- **Easier upgrade of MailBeez** as the templates are moved into the store’s database
-- **Automatic import** of module .tpl files
-
-The editor provides embedded buttons for previewing the html & txt versions of the email, as well as allowing you to directly send a test email; all of which makes fast editing very easy:  
-  
-  
-> [!NOTE]
-> By default the system automatically generates a TXT version from the HTML templates. If you want to customize the txt version for a module you also need to create a custom txt version for the main template.
+1. <span id="features"></span>Open the template and edit its blocks. The manager imports module `.tpl` files and stores the editable templates in the shop database. Use **Nerd-Mode** if you need to edit the source.
+2. Check the mobile previews, the HTML version and the plain-text version. MailBeez normally builds the text from the HTML. For custom module text, the main template also needs its own text version.
+3. Send a test email. If needed, restore your saved template or the supplied default. For language-specific copies, see [Multilanguage Extension with Template Manager](/configbeez/config_tmplmngr_lng).

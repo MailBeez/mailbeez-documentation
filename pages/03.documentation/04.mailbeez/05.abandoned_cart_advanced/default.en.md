@@ -1,5 +1,6 @@
 ---
-title: 'Abandoned Cart'
+title: "Cart reminder"
+module_subtitle: "Remind shoppers about their cart"
 slug: abandoned_cart_advanced
 date: 20-02-2018
 published: true
@@ -18,7 +19,9 @@ taxonomy:
     tag:
         - pro
         - coupon
+        - "Remind shoppers about their cart"
 module:
+    plans_position: after_guide
     mc_ready: true
     code: abandoned_cart_advanced
     category:
@@ -44,38 +47,32 @@ metadata:
     author: admin
 ---
 
-Target **abandoned carts** for existing customers - effective and fully automatized embedded into the MailBeez Marketing strategy.
+A customer signs in to your coffee shop, adds espresso beans and a water filter to the cart, then leaves before checkout. Two days later, your reminder says “You still have items in your cart.” Below the message, the shopper sees the beans, the filter and a link back to your shop. Someone who left a grinder sees the same wording with the grinder in their email.
 
-New customer, which signed up, but never order can be followed up with [No Purchase Advanced](/documentation/mailbeez/nopurchase_advanced).
+Each reminder step has one template for all eligible customers. You choose the wording, delay and optional coupon for that step. MailBeez fills in the products from each customer’s saved cart. The flow needs a customer account with a saved cart and an email address.
 
-**Most important Features**
+## Set up the flow
 
-- Finds and contacts customers with open carts
-- Fully automated customer contact – just set and forget
-- Time delay configurable multi-step emailing
-- With each step you optionally can provide a tempting coupon
+Open **Campaigns → Automations → MailBeez Flows → Remind shoppers about their cart**, then choose **Options → Configure**.
 
-With a configurable sequence of emails you can reminder you existing customers of items left in their cart - waiting to get ordered.
+[doc-steps]
+[doc-step]
+**Choose which carts to contact**
 
+Set **First email: waiting period** to two days, for example. That delay applies to every eligible cart. **Maximum age for starting the sequence** sets how old a cart can be when it first enters the sequence. If you want to reach only people who have bought from you before, enable **Check for previous Orders**.
+[/doc-step]
+[doc-step]
+**Space the messages**
 
-> [!TIP]
-> The modules [Winback Advanced](/documentation/mailbeez/winback_advanced) and [Reorder Advanced](/documentation/mailbeez/reorder_advanced) check for empty carts (configurable) to avoid overlapping campaigns: Customers with products in their carts will not receive these types of emails.
+Choose one email under **Number of emails**, or add a follow-up. For example, set **Wait before email 2** to three days. The first email can simply remind the customer what they left behind. If you want to offer a discount in the second, choose **Coupon Template - Second Abandoned Cart Email** there. With a repeating sequence you can set the wait before the repeating step and the interval between repeats separately.
+[/doc-step]
+[doc-step]
+**Try the route back to the shop**
 
+Use a signed-in test account with a saved cart old enough to qualify. Compare the products in the email with the saved cart, then follow the link back to the shop. If you also run [Encourage a first order](/mailbeez/nopurchase_advanced), you can reserve that flow for accounts with an empty cart.
+[/doc-step]
+[/doc-steps]
 
-&nbsp;
+Want the wording to depend on the product? See [Write different reminders for different cart contents](/tutorials-and-recipes/cart-reminders-by-product) for a Custom Flow example.
 
-> [!TIP]
-> Together with [No Purchase Advanced](/documentation/mailbeez/nopurchase_advanced) you can distinguish between **customers w/o purchase and empty cart** and **customer w/o purchase but items in cart**. To achieve this please deactivate the option `Check for previous Orders` and in [No Purchase Advanced](/documentation/mailbeez/nopurchase_advanced) activate the option `Check For Empty Customer Basket`.
-
- With these settings the module [No Purchase Advanced](/documentation/mailbeez/nopurchase_advanced) will only target potential customers with empty cart, while "Abandoned Cart Advanced" will follow up on any customer with products in cart.
-
-
-#### Take a look at some more great features
-
-**Powerful campaigns to convert abandoned carts**.
-
-[plugin:content-inject](/content_blocks/pro_coupon)
-
-[plugin:content-inject](/content_blocks/pro_common_advantage)
-
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+The [first-run guide](/quickstart/step-3-set-forget#check-the-first-run) explains how to check the recipient selection and the scheduled run.

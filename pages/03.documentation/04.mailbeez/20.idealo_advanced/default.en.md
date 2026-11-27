@@ -1,5 +1,6 @@
 ---
-title: 'Idealo Advanced'
+title: "idealo reviews"
+module_subtitle: "Ask for reviews on idealo"
 slug: idealo_advanced
 date: 15-04-2015
 published: true
@@ -16,7 +17,9 @@ taxonomy:
         - docs
     tag:
         - pro
+        - "Ask for reviews on idealo"
 module:
+    plans_position: after_guide
     code: idealo_advanced
     category:
         - mailbeez
@@ -43,24 +46,31 @@ metadata:
     author: admin
 ---
 
-**Get the most out of your Idealo Subscription**
+A shopper finds a replacement vacuum filter on idealo and orders it from your store. Once the filter arrives, you can ask about their experience with you as a retailer. The invitation leads to the review form for your dealer ID. You decide whether the link carries information from the order.
 
-## Advanced Features
+## Set up the flow
 
-This advanced module gives you a couple of settings to streamline and improve the process of inviting customers to give you a rating on Idealo:
+Open **Campaigns → Automations → MailBeez Flows → Ask for reviews on idealo**, then choose **Options → Configure**.
 
-## Multiple order status
+<span id="choose-the-order-and-wait"></span>
+<span id="settings-to-check"></span>
 
-Do you use different order status? No problem, you decide which order status you want the module to react on.
+[doc-steps]
+[doc-step]
+**Choose the retailer and the data in the link**
 
-## Recognition of regular customers
+Enter your **Idealo Dealer ID**. With **Pre-fill Data** enabled, MailBeez adds the order number and order email address to the idealo link. With it off, the link still selects the retailer. Use a test order when checking which details are passed.
+[/doc-step]
+[doc-step]
+**Give the buyer time to receive the filter**
 
-Don't want to bother your regular customers with an invite to rate on Trustpilot? Simply define a delay (e.g. 120 days) between two invites and you're done. The module will check when the last invite was sent and decide whether to wait or to send a new invite.
+Choose your shipped status under **Target Order Status**. For an invitation a week after dispatch, set **Wait after the order status changes** to seven days. Keep **Maximum age of the status change** above seven so a later run can still pick up eligible orders.
+[/doc-step]
+[doc-step]
+**Open the invitation as a buyer**
 
-## Responsive email template
+Follow the link from a test email. Check the retailer on the form and compare the prefilled details, if enabled, with your test order. Ask about the shopping experience, such as whether the parcel arrived as promised.
+[/doc-step]
+[/doc-steps]
 
-The invitation emails are shown perfectly on all devices.. including mobile.
-
-### Want to integrate your valuable Trustpilot ratings with your marketing efforts?
-
-Using the [Idealo Integration Suite](/documentation/configbeez/config_idealo_rss_importer/), you can easily integrate your Trustpilot ratings with your online shopping-cart - in a way that makes this unique and "fresh" content visible to search engines - and your MailBeez generated marketing emails!
+To compare this invitation with one that asks about the product itself, see [Schedule a review invitation](/cookbook/optimized-review-invite-flow).

@@ -36,124 +36,54 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez works with **xtc-modified / modified-shop* 1.05**, running on php 5.3+
+[doc-callout type="note" title="Installation for earlier shop releases"]
+Check the version in your shop admin. For a different release, look under [Installation](/basics/installation) or in the [legacy reference](/legacy).
+[/doc-callout]
 
-The installation is straight forward and can be done in a couple of minutes by following these steps:
+Use the installer for modified-shop 1.x. The historical package specified PHP 5.3 or later. MailBeez creates its own tables.
 
-- copy new files
-- add permission (half automatic)
-- Install MailBeez
-
-MailBeez is maintaining it’s own tables – the shops existing table stay as they are.
-
-## Step 1 – copy new files
+Use the steps for the 1.x shop layout. If you are maintaining a newer modified-shop, first find the package for its release and revision in the installation overview.
 
 [plugin:content-inject](/content_blocks/download_installer)
 
+## Copy the shop files
 
-copy following file to your admin-directory
+<span id="step-1-copy-new-files"></span>Copy `catalog/admin/mailbeez.php` into the shop’s admin directory. Copy `catalog/mailhive/` and `catalog/mailhive.php` into the shop root alongside `index.php`.
 
-```bash
+## Choose the menu edit for your version
 
-mailbeez.php
+<span id="step-2-modify-existing-fi"></span><span id="1-add-a-menu-entry"></span>Open `admin/includes/column_left.php` in the shop installation.
 
+Up to version 1.05, use the following insertion point.
+
+Locate this fragment in the existing file.
+
+```text
+' . BOX_IMPORT . '</a><br>';
 ```
 
+Insert the following immediately after that line.
 
-copy following file and folder to your shoproot (where your index.php is located)
-
-```bash
-
-mailhive (folder)
-mailhive.php
-
-
-```
-
-## Step 2 – modify existing files
-
-### 1. Add a menu entry
-
-**Modified Shop up to V1.05**  
- located and open the file
-
-```bash
-
- admin/includes/column_left.php
-
-```
-
-
-
-find
-
-```bash
-
-
- ' . BOX_IMPORT . '</a><br>';
-
-```
-
-
-add
-
-```bash
-
+```php
 if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['module_newsletter'] == '1')) echo '<li><a href="' . xtc_href_link('mailbeez.php') . '" class="menuBoxContentLink"> -MailBeez</a></li>';
-
-
 ```
 
+From version 1.06, locate `//----HILFSPROGRAMME` in the same file. In that section, use this insertion point.
 
-**Modified Shop V1.06+**  
- located and open the file
+Locate this fragment in the existing file.
 
-```bash
-
-admin/includes/column\_left.php
-
-
-```
-
-find
-
-
-```
-
- //----HILFSPROGRAMME
-
-
-```
-
-ABOVE this line:
-
-```
- 
+```text
 echo ('</ul>');
-
-
 ```
 
-insert:
+Insert the following immediately before that line.
 
-
-```
-
+```php
 if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['module_newsletter'] == '1')) echo '<li><a href="' . xtc_href_link('mailbeez.php') . '" class="menuBoxContentLink" > -MailBeez</a></li>';
-
-
 ```
 
+## Grant access
 
-
-## Step 3 – add permission
-
-run
-
-(shop)/mailhive.php
-
-this will add the required permission for MailBeez for the primary admin account.
-
-If necessary add admin permission for MailBeez for secondary admin accounts as well.
+<span id="step-3-add-permission"></span>Open `/mailhive.php` once on the shop domain to grant the primary administrator access. Grant additional administrators access separately in the shop administration.
 
 [plugin:content-inject](/content_blocks/run_installer)

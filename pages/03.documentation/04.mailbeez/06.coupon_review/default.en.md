@@ -1,5 +1,6 @@
 ---
 title: 'Review Reward Coupon'
+module_subtitle: "Reward a recorded product review with a personal coupon"
 slug: coupon_review
 routes:
     aliases:
@@ -45,11 +46,15 @@ metadata:
     author: admin
 ---
 
-**Say thanks to your customers for giving a review, and send them an automated email with a personalized coupon towards their next purchase with the Mailbeez Review Reward Coupon module.**
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To look up a generated coupon code in V5, open [Coupons](/content/coupons). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-If you are already using the [Mailbeez Review Advanced module](/documentation/mailbeez/review_advanced/ "Mailbeez Review Advanced Module") to collect more product reviews for your store, then the new Review Reward Coupon module is a powerful way to augment the review cycle by rewarding customers with a personalized offer coupon email after they have written a review. Fully automated and personalized (for that is the Mailbeez way!), the module offers powerful functionality to send the coupon after a preset number of reviews have been written, and of course, to alter the value of the coupon or deal you wish to offer the reviewer.
+Reward a recorded product review with a personal coupon. The review must first reach the shop so the module can count it towards the customer’s reward.
 
-**Personalized coupons to prevent code sharing**
+1. Set up [Ask for product reviews](/mailbeez/review_advanced) so the review can be recorded.
+2. Choose how many reviews a customer must submit to qualify. Select the coupon offer and check its value.
+3. Preview the reward email and check that the personal code appears with the offer.
 
 [plugin:content-inject](/content_blocks/pro_coupon)
 

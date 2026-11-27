@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Ereignis Protokoll
+title: "Ereignisprotokoll"
+module_subtitle: "Gespeicherte Ereignisse eines früheren MailBeez-Laufs prüfen"
 slug: report_event_log
 # menu: MailBeez Event Log Viewer
 date: 03-03-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "Ereignis Protokoll"]
 # added collection selector
 
 author:
@@ -36,21 +37,12 @@ metadata:
 #  last_modified: true
 ---
 
-Das MailBeez System protokolliert eine Reihe von Aktivitäten, z.B. wann der Versende-Prozess gestartet wurde, ob es sich um eine Simulation, einen Test oder einen Aufruf im Produktions-Modus handelt.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Versand & Status](/sending-status) eine einzelne Zustellung prüfen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Mit Hilfe des Ereignis-Protokolles können Sie einsehen, wie MailBeez arbeitet.
+Suche nach Start und Ende desselben Laufs, bevor du eine fehlende E-Mail untersuchst. Ein regulärer Lauf beginnt mit `MAILHIVE_RUN_INIT` und endet mit `MAILHIVE_RUN_COMPLETE`. Bei einer Test-E-Mail heißen die Ereignisse `MAILHIVE_TEST_INIT` und `MAILHIVE_TEST_COMPLETE`. Fehlt der Abschluss, prüfe das Protokoll für diesen Zeitpunkt.
 
-In der Spalte "Modus" können Sie sehen:
-- **PROD** - MailBeez wurde im Produktions-Modus ausgeführt
-- **[SIM]** - MailBeez wurde im Simulations-Modus ausgeführt
+Lies die Ereignisse unmittelbar vor und nach der auffälligen Stelle. So lässt sich ein abgebrochener Lauf von einem abgeschlossenen Lauf ohne passende Empfänger unterscheiden.
 
-**Ereignisse**
-
-- **MAILHIVE_RUN_INIT** – Initialisierung des MailBeez Versende-Prozesses. ein INIT ohne einen dazugehörigen COMPLETE Eintrag bedeutet, dass etwas schief gelaufen ist
-- **MAILHIVE_RUN_COMPLETE**: Die Ausführung des Versende-Prozesses wurde sauber abgeschlossen
-- **MAILHIVE_TEST_INIT**: Initialisierung des MailBeez Versende-Prozesses zum Versand einer Test-Email. Ein INIT ohne einen dazugehörigen COMPLETE Eintrag bedeutet auch hier, dass etwas schief gelaufen ist
-- **MAILHIVE_TEST_COMPLETE**: Die Ausführung des Versende-Prozesses zum Test-Versand wurde sauber abgeschlossen
-- **MAILBEEZ_MODULE_INIT**: Initialisierung eines Modules (Wenn das Ereignis-Protokoll so konfiguriert wurde)
-
-
-Die weiteren Angaben des Protokolles sollten sich selbst erklären.
+Bei aktiver Modulprotokollierung kennzeichnet `MAILBEEZ_MODULE_INIT` den Modulstart. `PROD` steht für Produktivbetrieb, `[SIM]` für Simulation.

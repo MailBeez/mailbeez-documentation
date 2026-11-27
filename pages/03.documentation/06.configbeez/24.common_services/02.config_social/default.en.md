@@ -1,5 +1,6 @@
 ---
 title: Social Sharing
+module_subtitle: "Check what the older product sharing links open"
 slug: config_social
 routes:
     default: /documentation/configbeez/config_social
@@ -30,29 +31,20 @@ metadata:
     author: admin
 ---
 
-## Social Sharing Links in Email
+[doc-callout type="note" title="Earlier module settings"]
+For settings in the current app, start with [System](/app-system). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-As a common service the Social Sharing links give your customers the option to share your products on Facebook, Twitter, or Google+ with a single click, enabling you to leverage the power of social media within your eCommerce email marketing campaigns!
+<span id="social-sharing-links-in-e"></span>Add a sharing link to each product in an older email template. The module built links for the networks configured at the time, including Facebook, Twitter and Google+. Test the destination you still use.
 
-![](Screen_social_email.en.jpg?resize=582)
+Open a sharing link for one recognizable product. The page or sharing dialog should identify that item so a recipient can tell what they are about to share.
 
+Responsive templates generally omitted the sharing block. To add the small version, place the placeholder inside the existing product loop. It needs the current product to build the link.
 
- 
-
-Fully configurable, *you* choose which social network links will display to your customers by turning them on and off, thereby controlling the networks they can share with.
-
-> [!NOTE]
-> by default the social sharing link are not include in responsive email template to keep them as clean as possible
-
-
-The following example shows how to integrate the social sharing - in this case the "tiny" template - elements into your product list template using `{$products[product].social_tiny}`: 
-
-```text
+```smarty
 {section name=product loop=$products max=$max_products}
-(...)
    {$products[product].social_tiny}
-(...)
 {/section}
 ```
 
-**Important**: the `{$products[product].social_tiny}` Tag only works within the `products` loop as product data is added to the share links.
+![Sharing links below a product](Screen_social_email.en.jpg?resize=582)

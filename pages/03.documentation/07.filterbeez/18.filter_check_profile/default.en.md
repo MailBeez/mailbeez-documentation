@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Controll modules by Profile-Tags
+title: "Module profile filter"
+module_subtitle: "Select which modules run using tags from Profiling Engine"
 slug: filterbeez_check_profile
 published: true
 template: docs
@@ -12,7 +13,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Controll modules by Profile-Tags"]
 module:
     code: 'filterbeez_check_profile'
     category: [filterbeez]
@@ -26,7 +27,10 @@ metadata:
     author: admin
 ---
 
-**under development**
-    
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To build an audience for a mailing in V5, open [Lists and Segments](/contacts/lists-segments). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-using this module in combination with the [profiling engine](/documentation/configbeez/config_profiling_engine) you can controll which modules are active by profile tags assigned
+The earlier profile filter used tags from [Profiling Engine](/configbeez/common_services/config_profiling_engine) to determine whether a module could run for a customer or order. For example, a rule could exclude orders tagged for a particular product from a reminder. Check which development version is installed before depending on it.
+
+Write out the audience in ordinary words before interpreting a tag rule, for example customers who bought one range of products but have never bought another.

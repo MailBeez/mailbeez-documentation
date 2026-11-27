@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: The ReferralHoney Analytics Widget
+title: "ReferralHoney widget"
+module_subtitle: "Compare referred orders with the invitations that generated them"
 slug: dashboard_coupon_referral_honey
 routes:
     aliases:
@@ -21,7 +22,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "The ReferralHoney Analytics Widget"]
 module:
     code: 'coupon_referral_honey'
     category: [dashboardbeez]
@@ -46,11 +47,10 @@ metadata:
 #  last_modified: true
 ---
 
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To compare results across campaigns in V5, open [Flows & newsletters](/mailbeez-results/flows-newsletters). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-Delivered with the [ReferralHoney](/documentation/mailbeez/coupon_referral_honey) module this is a powerful widget with an intuitive graph display that provides you with a visual report of your ReferralHoney statistics, such as number of invites sent, number of resulting site visits, number of coupons redeemed, and more!
+Use the widget to compare the invitations and resulting referral orders recorded by ReferralHoney. To investigate one stage of the programme, open [ReferralHoney Statistics](/reportbeez/report_coupon_referral_honey) and check the configured order status.
 
-![](Screen_referralhoney_widget.png "ReferralHoney Analytics Widget")
-
- By default, it displays 30 days worth of data, but this number of days can be changed in the widget’s configuration settings.
-
-When ReferralHoney is first installed, there won’t be a graph displayed by this widget because there has been no data tracked and therefore nothing to display. Once you get ReferralHoney up and running, this widget will be populated with data in no time at all!
+If invitations increase while rewards stay flat, look at referred orders before changing the reward. Some of those orders may still be awaiting a qualifying status.

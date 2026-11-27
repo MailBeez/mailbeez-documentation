@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Das ReferralHoney Analytics Widget
+title: "ReferralHoney-Widget"
+module_subtitle: "Bestellungen aus Weiterempfehlungen mit den Einladungen vergleichen"
 slug: dashboard_coupon_referral_honey
 routes:
     aliases:
@@ -21,7 +22,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Das ReferralHoney Analytics Widget"]
 module:
     code: 'coupon_referral_honey'
     category: [dashboardbeez]
@@ -46,8 +47,10 @@ metadata:
 #  last_modified: true
 ---
 
-Als Bestandteil des [ReferralHoney](/dokumentation/mailbeez/coupon_referral_honey) Neukunden-Gewinnungs-Systems liefert dieses Widget eine Zusammenfassung der Aktivitäten - Versendete Einladungen, Reaktion der Kunden, Besuche von Freunden auf der Teilen-Seite und einglöste Neukunden-Gutscheine.
-![](Screen_referralhoney_widget.png "ReferralHoney Analytics Widget")
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Flows & Newsletter](/mailbeez-results/flows-newsletters) Ergebnisse verschiedener Kampagnen vergleichen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Als Standardeinstellung werden die Aktivitäten der letzten 30 Tage gezeigt, Sie können aber auch einen anderen Zeitraum konfigurieren.
-  
+Vergleiche im Widget die von ReferralHoney erfassten Einladungen und die zugehörigen Empfehlungsbestellungen. Öffne für eine einzelne Stufe [ReferralHoney Statistik](/reportbeez/report_coupon_referral_honey) und prüfe den konfigurierten Bestellstatus.
+
+Steigen die Einladungen bei unveränderter Prämienzahl, prüfe vor einer Änderung die vermittelten Bestellungen. Einige warten möglicherweise noch auf den maßgeblichen Bestellstatus.

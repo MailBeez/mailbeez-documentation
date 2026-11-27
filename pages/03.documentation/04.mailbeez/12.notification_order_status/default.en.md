@@ -1,5 +1,6 @@
 ---
-title: 'Order Status Update Notification'
+title: "Order status"
+module_subtitle: "Send order status updates"
 slug: notification_order_status
 date: 01-03-2013
 published: true
@@ -16,7 +17,9 @@ taxonomy:
         - docs
     tag:
         - pro
+        - "Send order status updates"
 module:
+    plans_position: after_guide
     code: notification_order_status
     category:
         - mailbeez
@@ -44,42 +47,30 @@ metadata:
     author: admin
 ---
 
-This handy module sends a custom email notification to a customer once an order is set to one or more configured order status.
+A repair shop has finished servicing a customer’s espresso machine. The customer needs to know when the workshop is open and whether to bring their collection receipt. When your team marks the order ready for pickup, MailBeez can send those details using the same message each time.
 
-Optionally, you can configure the module to change the order status to a new status. The order comment, order status name, and order status date can be inserted into the email using a template variable.
+Use a status that has a clear meaning in your shop. A message promising collection today only works if the machine is actually on the pickup shelf.
 
-The notification email is sent out at the next batch MailBeez email send - it is recommended to set up a cronjob running every minute to reduce the time delay between setting the order status and sending out the notification email. The MailBeez Support is happy to help you in case you have some questions.
+## Set up the flow
 
-On Gambio you can insert links for parcel tracking.
+Open **Campaigns → Automations → MailBeez Flows → Send order status updates**, then choose **Options → Configure**.
 
-Scenarios where this module can be applied:
+[doc-steps]
+[doc-step]
+**Select the status that triggers the email**
 
-- an external order management solution updates the order status, but does not sent any notification email
-- you would like to replace the default order status update email with a custom designed email
-- you would like to automatise processes depending on the order status
+Under **Process Order Status**, select your ready-for-pickup status. Set **Wait after the order status changes** to the wait you need after the change. Choose a longer **Maximum age of the status change** so the order can still qualify on a later processing run.
+[/doc-step]
+[doc-step]
+**Decide what happens to the order**
 
-**Template Variables**
+Under **Order status after sending**, choose whether the order keeps its current status after sending. If your team tracks “Pickup notice sent”, select the change option and choose it under **New order status**. Check whether your shop already sends a pickup email for the same status.
+[/doc-step]
+[doc-step]
+**Check the handoff to the customer**
 
+Put the collection address, opening hours and order reference in the message. Use a disposable order in a test shop. Read the email and reopen the order to see which status your colleagues will see.
+[/doc-step]
+[/doc-steps]
 
-| Template Variable  | Output                                  |
-|--------------------|-----------------------------------------|
-| [[$status_date]]     | formated order status date              |
-| [[$status_date_raw]] | raw order status date                   |
-| [[$status_id]]       | status id                               |
-| [[$status_name]]     | order status name                       |
-| [[$comments]]        | comments                                |
-| [[$orders_data]]     | Array with all columns from table orders, e.g. [[$orders_data.delivery_city]]  |
-| [[$tracking]]        | Gambio: formated list of tracking links     |
-| [[trackingData]]     | Gambio: data array for building custom template ['url', 'service', 'code'] |
-
-**Custom Email Message**
-
-You can build your custom messages depending on the order status using some [smarty.net code](http://www.smarty.net/docs/en/language.function.if.tpl)
-
-    {if $status_id == 3}
-       Your order is shipped
-    {/if}
-
-
-
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+To send updates about a supplier’s changing delivery date, use [Keep buyers informed about backorders](/mailbeez/notification_backorder).

@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: "Step 3: Set & Forget"
+title: "Check automatic processing"
 slug: step-3-set-forget
 # menu: "Step 3: Set & Forget"
 date: 27-05-2010
@@ -35,8 +35,12 @@ metadata:
 #  cache_enable: false
 #  last_modified: true
 ---
-Now Mailbeez is installed, you should customize the supplied email templates to match your store’s branding and design. It is easy to adopt the basic email templates that are supplied with each MailBeez module, so you will be ready to go in no time at all.
 
-After you have tested your MailBeez modules in Simulation mode and sent some test emails, you are ready for Production mode. Just click the Simulation button to change the status to Production, make sure you have set up a cron job on your server to activate Mailbeez every day, and the system will now take care of itself.
+A scheduled run checks which emails are due. If you mark a test order as shipped today and your review invitation has a seven-day wait, today’s run can finish with no invitation. Look for the first run inside the sending window after those seven days have passed.
 
-Read more on [Tutorial: Guide to Getting Started](/documentation/tutorials/guide-to-getting-started/)
+## Check the first run
+
+1. **Choose a contact who should qualify.** Check the flow’s trigger and timing. For a [review invitation](/mailbeez/review_advanced), count from the day the order reached the selected status. Pick a second contact who is still too early. Write down which address you expect to see.
+2. **Test the selection.** In a test shop, run the flow in [Simulation Mode](/configbeez/config_simulation). Look for the first address in the results. The second should be absent. To check the subject, links and any offer in your inbox, enable simulation copies and check their destination. A coupon created in simulation can still be redeemable.
+3. **Check the schedule.** In a self-hosted shop, open [Automatic processing](/configbeez/automatic-processing) and check what starts each run. In a hosted shop, check your account’s schedule. Confirm which mode the scheduled run uses. A successful manual simulation tells you who matched at that moment.
+4. **Look up the first live send.** After the expected run, search for the address in [Sending & status](/sending-status). Open the send record to see which delivery events have arrived. If there’s no record, check when the run took place and whether the contact still met the flow’s conditions.

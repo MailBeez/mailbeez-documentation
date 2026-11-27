@@ -1,5 +1,6 @@
 ---
 title: 'Editor and Image Engine'
+module_subtitle: "Configure image sources and cache settings for the earlier visual editor"
 slug: config_editor
 routes:
     default: /documentation/configbeez/config_editor
@@ -28,33 +29,17 @@ metadata:
     author: admin
 ---
 
-The module "visual editor" is part of a couple of modules, e.g. Newsletter advanced or template manager.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To change the shared email layout in V5, open [Main Templates](/content/main-templates). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-There are following configuration options:
+Configure where the older visual editor finds images, writes cached files and previews mobile layouts. These settings apply to the modules that share the editor.
 
-**Root for image browser**
+An original image and a generated preview serve different purposes. Identify the source folder before cleaning up or changing any directory used for cached images.
 
-Here you can enter a path relative to your store root directory. The image browser will then open with this path.
-
-Path relativ to store root  
- empty value: browse all images on shop server
-
-
-**Root for image cache**
-
-Here you can enter a path relative to your store root directory. The MailBeez Image Engine writes Image files into this directory. The cache can be fully regenerated.
-
-With changing the cache path, the cache will be automatically moved, but you should keep the old cache path containing a .htaccess file to support image generation for in earlier sent emails referenced images.
-
-
-**Mobile Editor width settings**
-
-To support the creating and editing of responsive emails you can switch the editor into different width.
-
-Only change when necessary.
-
-**Mobile Editor View Width 1**: Width for Mobile Editor View 1, e.g. 320px
-
-**Mobile Editor View Width 2**: Width for Mobile Editor View 2, e.g. 480px
-
-**Mobile Editor View Width 3**: Width for Mobile Editor View 3, e.g. 600px
+- **Root for image browser**<br>
+  Enter a path relative to the shop root. An empty path exposes the shop’s image folders to the picker. Set a narrower path if editors only need campaign images.
+- **Root for image cache**<br>
+  Enter the cache path relative to the shop root. The engine can rebuild the cache and moves it when the setting changes. Keep the former directory and its `.htaccess` so image URLs in emails already sent still work.
+- **Mobile Editor width settings**<br>
+  Choose three preview widths, for example 320, 480 and 600 pixels. Use widths supported by the template.

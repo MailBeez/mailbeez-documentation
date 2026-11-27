@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Shopbewertung Advanced Cross Check
+title: "Store review cross-check"
+module_subtitle: "Skip store-review invitations sent before switching to the advanced module"
 slug: filter_check_shopbewertung_advanced
 # menu: Shopbewertung Advanced Cross Check
 date: 18-12-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: review
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Shopbewertung Advanced Cross Check"]
 module:
     code: 'shoprating_advanced'
     category: [filterbeez]
@@ -41,11 +42,13 @@ metadata:
 #  cache_enable: false
 #  last_modified: true
 ---
-deprecated
-<!--
-Delivered with the [Shoprating Advanced](/documentation/mailbeez/shoprating_advanced/) module, this filter checks for customers who have blocked or already received Shopbewertung emails from the Shopbewertung Simple module before sending out emails when the Shopbewertung Advanced module is run.
 
-If you were running the Shopbewertung version of the module prior to installing the Advanced version, this filter ensures that customers won’t receive the same email twice (once from each version), or at all if they have opted-out.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To set up a shop-review invitation in V5, open [Ask for reviews on your store](/mailbeez/shoprating_advanced). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-If you begin using the Shopbewertung Advanced module without ever having run the Shopbewertung Simple module, then there is no need to enable this filter.
--->
+If you moved from the simple module to the advanced edition, use this historical filter to check the earlier sending history and opt-outs. It prevents a buyer who already received or blocked the simple module’s message from receiving it again through the advanced module.
+
+Use an earlier store-review invitation when testing the transition. A product-review invitation from the same customer belongs to a different campaign history.
+
+A shop that started with the advanced edition has no simple-module history to check.

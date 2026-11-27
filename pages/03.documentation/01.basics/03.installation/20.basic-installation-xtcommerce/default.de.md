@@ -36,70 +36,46 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez arbeitet problemlos auf **xt:Commerce Version 3.04**.
+[doc-callout type="note" title="Installation für frühere Shopversionen"]
+Prüfe die Versionsnummer in deiner Shopverwaltung. Für andere Versionen findest du die passende Anleitung unter [Installation](/grundlagen/installation) oder in der [Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Die Installation ist in wenigen Schritten erledigt:
+Verwende das Installationspaket für xt:Commerce 3.04. Für dieses frühere Paket war PHP ab 5.3 angegeben. MailBeez legt eigene Tabellen an.
 
-- Die neuen Dateien übertragen
-- Menü-Eintrag anlegen
-- Zugriffs-Rechte für den Admin vergeben (halb automatisch)
-- MailBeez per Button-Klick installieren
-
-MailBeez verwaltet eigene Tabellen - die vorhandenen Shop-Tabellen werden nicht verändert.
-
-
-## Schritt 1 - Die neuen Dateien übertragen
+Auch auf demselben Versionsstand können zwei Shops unterschiedliche Menüdateien verwenden. Ermittle zuerst, welche Datei deine Verwaltung lädt, und wähle dann das passende Beispiel.
 
 [plugin:content-inject](/content_blocks/download_installer)
 
+## Shopdateien übertragen
 
-folgende Datei in das admin-Verzeichnis kopieren
+<span id="schritt-1-die-neuen-datei"></span>Kopiere `catalog/admin/mailbeez.php` ins Adminverzeichnis des Shops. Kopiere `catalog/mailhive/` und `catalog/mailhive.php` ins Shopverzeichnis neben die `index.php`.
 
-```
-catalog/admin/mailbeez.php
+## Passendes Adminmenü wählen
 
-```
+<span id="schritt-2-menue-eintrag-a"></span><span id="1-add-a-menu-entry"></span>Die früheren Pakete beschreiben zwei Menüvarianten. Prüfe vor der Änderung, welche Datei das Menü in deinem Shop aufbaut.
 
-folgende Dateien und Ordner in den Shop-Root kopieren
+Öffne `admin/includes/column_left.php` im Shopverzeichnis.
 
-```
-catalog/mailhive (Ordner)  
-catalog/mailhive.php
+Suche in der vorhandenen Datei nach diesem Ausschnitt.
 
-```
-
-## Schritt 2 - Menü-Eintrag anlegen
-
-### 1. Add a menu entry
-
-folgende Datei öffnen:
-
-```bash
-admin/includes/column_top.php
-
-```
-danach folgendes einfügen
-
-
-```
- if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['module_newsletter'] == '1')) echo '<li><a href="' . xtc_href_link('mailbeez.php') . '"> -MailBeez</a></li>';
- 
+```text
+' . BOX_IMPORT . '</a><br>';
 ```
 
+Füge unmittelbar nach dieser Zeile den folgenden Eintrag ein.
 
-## Schritt 3 - Zugriffsrechte vergeben
-
-einmalig im Browser
-
-```bash
-
- (shop-url)/mailhive.php
-
+```php
+if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['module_newsletter'] == '1')) echo '<li><a href="' . xtc_href_link('mailbeez.php') . '"> -MailBeez</a></li>';
 ```
 
-aufrufen.
+Verwendet der Shop `admin/includes/column_top.php`, füge in dieser Datei bei den übrigen Menüeinträgen den folgenden Code ein.
 
-Hierdurch werden die erforderlichen Admin-Rechten für den HAUPT-Admin vergeben.
-Falls erforderlich dann Zugriffs-Rechte im Admin System für weitere Admin-user vergeben.
+```php
+if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['module_newsletter'] == '1')) echo '<li><a href="' . xtc_href_link('mailbeez.php') . '"> -MailBeez</a></li>';
+```
+
+## Zugriff vergeben
+
+<span id="schritt-3-zugriffsrechte-"></span>Rufe auf der Shopdomain einmal `/mailhive.php` auf. Dadurch erhält der Hauptadministrator Zugriff. Weitere Berechtigungen vergibst du einzeln in der Shopverwaltung.
 
 [plugin:content-inject](/content_blocks/run_installer)

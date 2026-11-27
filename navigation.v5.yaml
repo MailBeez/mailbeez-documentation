@@ -1,48 +1,345 @@
-# Link existing documentation pages by source folder under pages/03.documentation.
-# An explicitly listed page is moved out of its original sidebar tree in both languages.
+# Entries use Grav folder identities so existing URLs stay stable.
 groups:
-  - title: { en: Getting started, de: Erste Schritte }
+  - title: { en: "", de: "" }
     items:
       - page: 00.basic-tutorial
+        icon: heroicons/outline/rocket-launch.svg
+        items:
+          - page: 10.quickstart/01.step-1-download-install-mailhive
+          - page: 10.quickstart/02.step-2-choose-your-mailbeez
+          - page: 10.quickstart/03.step-3-set-forget
       - page: 01.basics
-      - page: 10.quickstart
-
-  - title: { en: Insights, de: Einblicke }
+        icon: heroicons/outline/book-open.svg
+        items:
+          - page: 01.basics/01.what-is-mailbeez
+          - page: 01.basics/02.requirements
+            title: { en: "Requirements", de: "Voraussetzungen" }
+          - page: 01.basics/03.installation
+            title: { en: "Installation", de: "Installation" }
+            include_unlisted_children: false
+            items:
+              - page: 01.basics/03.installation/08.basic-installation-gambio-gx-4
+                title: { en: "Gambio GX", de: "Gambio GX" }
+              - page: 01.basics/03.installation/08.basic-installation-gambiocloud
+                title: { en: "GambioCloud", de: "GambioCloud" }
+              - page: 01.basics/03.installation/19.basic-installation-zen-cart-2-x
+                title: { en: "ZenCart", de: "ZenCart" }
+              - page: 01.basics/03.installation/10.basic-installation-modified-shop-2
+                title: { en: "ModifiedShop", de: "ModifiedShop" }
+              - page: 01.basics/03.installation/21.shopify
+                title: { en: "Shopify", de: "Shopify" }
+              - page: 01.basics/03.installation/22.woocommerce
+                title: { en: "WooCommerce", de: "WooCommerce" }
+              - page: 01.basics/03.installation/23.jtl-shop
+                title: { en: "JTL-Shop", de: "JTL-Shop" }
+              - page: 01.basics/03.installation/24.shopware
+                title: { en: "Shopware", de: "Shopware" }
+          - page: 01.basics/03.updates
+            title: { en: "Updates", de: "Aktualisieren" }
+          - page: 01.basics/05.responsive-emails
+            title: { en: "Responsive Emails", de: "Responsive E-Mails" }
+          - page: 01.basics/06.email-design-elements
+            title: { en: "Design Elements", de: "E-Mail-Design" }
+      - page: 30.tutorials-recipes
+        icon: heroicons/outline/academic-cap.svg
+        items:
+          - page: 30.tutorials-recipes/06.newsletter-learning-path
+          - page: 30.tutorials-recipes/01.test-winback
+            title: { en: "Test a winback flow", de: "Rückgewinnung testen" }
+          - page: 30.tutorials-recipes/05.post-purchase-emails
+            title: { en: "Post-purchase emails", de: "E-Mails nach dem Kauf" }
+          - page: 30.tutorials-recipes/02.plan-newsletter
+            title: { en: "Plan a newsletter", de: "Newsletter planen" }
+          - page: 30.tutorials-recipes/03.investigate-clicks
+            title: { en: "Investigate clicks", de: "Klicks untersuchen" }
+          - page: 30.tutorials-recipes/04.repeat-purchase-recipes
+            title: { en: "Repeat purchases", de: "Wiederkäufe" }
+          - page: 30.tutorials-recipes/07.cart-reminders-by-product
+            title: { en: "Cart product reminders", de: "Warenkorb nach Produkt" }
+          - page: 11.cookbook/01.optimized-review-invite-flow
+            title: { en: "Review invitations", de: "Bewertungseinladungen" }
+          - page: 10.tutorials/20.newsletter-signup-form
+            title: { en: "Connect a signup form", de: "Anmeldeformular anbinden" }
+          - page: 10.tutorials/10.pro-main-template
+            title: { en: "Edit a main template", de: "Hauptvorlage bearbeiten" }
+          - page: 10.tutorials/10.pro-template-coupons
+            title: { en: "Create a coupon template", de: "Gutscheinvorlage erstellen" }
+          - page: 11.cookbook/01.coupon-related
+            title: { en: "Coupon recipes", de: "Gutschein-Beispiele" }
+  - title: { en: "", de: "" }
+    section: app
     items:
-      - page: 09.dashboardbeez
-        title: { en: Dashboard, de: Dashboard }
-      - page: 08.reportbeez
-      - page: 06.configbeez/09.config_analytics
-      - page: 06.configbeez/09.config_googleanalytics
-
-  - title: { en: Campaigns, de: Kampagnen }
+      - page: 20.dashboard
+        icon: heroicons/outline/squares-2x2.svg
+  - title: { en: "Reports", de: "Auswertung" }
+    id: reports
+    section: app
+    icon: heroicons/outline/chart-bar.svg
+    items:
+      - page: 21.shop
+        items:
+          - page: 21.shop/01.overview
+          - page: 21.shop/02.customers
+          - page: 21.shop/03.reviews
+      - page: 22.mailbeez-results
+        items:
+          - page: 22.mailbeez-results/01.overview
+          - page: 22.mailbeez-results/02.email-performance
+          - page: 22.mailbeez-results/03.flows-newsletters
+          - page: 22.mailbeez-results/04.contacts
+  - title: { en: "Campaigns", de: "Kampagnen" }
+    id: campaigns
+    section: app
+    icon: heroicons/outline/paper-airplane.svg
     items:
       - page: 04.mailbeez
-        title: { en: Automations, de: Automatisierungen }
+        items:
+          - page: 04.mailbeez/03.review_advanced
+          - page: 04.mailbeez/04.winback_advanced
+          - page: 04.mailbeez/05.abandoned_cart_advanced
+          - page: 04.mailbeez/05.nopurchase_advanced
+          - page: 04.mailbeez/07.coupon_anniversary
+          - page: 04.mailbeez/07.coupon_birthday
+          - page: 04.mailbeez/08.coupon_expire
+          - page: 04.mailbeez/10.reorder_advanced
+          - page: 04.mailbeez/11.notification_backorder
+          - page: 04.mailbeez/12.notification_order_status
+          - page: 04.mailbeez/13.shoprating_advanced
+          - page: 04.mailbeez/14.payment_invoice_dunning
+          - page: 04.mailbeez/15.payment_inadvance_dunning
+          - page: 04.mailbeez/17.shopauskunft_advanced
+          - page: 04.mailbeez/19.trustpilot_advanced
+          - page: 04.mailbeez/20.ausgezeichnet_advanced
+          - page: 04.mailbeez/20.googlereviews_advanced
+          - page: 04.mailbeez/20.idealo_advanced
+          - page: 04.mailbeez/20.shopvote_advanced
+          - page: 04.mailbeez/21.trustedshops_advanced
+          - page: 04.mailbeez/26.create_account
+          - page: 04.mailbeez/60.custom-flows
       - page: 04.mailbeez/21.newsletter
-        title: { en: Newsletter, de: Newsletter }
-
-  - title: { en: 'Contacts & Content', de: 'Kontakte & Inhalte' }
+      - page: 23.calendar
+  - title: { en: "Contacts & Content", de: "Kontakte & Inhalte" }
+    id: contacts-content
+    section: app
+    icon: heroicons/outline/user-group.svg
     items:
-      - page: 05.sitebeez/01.site_signup
-      - page: 10.tutorials/20.newsletter-signup-form
-      - page: 06.configbeez/16.config_gdpr_consent
-      - page: 06.configbeez/23.config_account_aggregation
-      - page: 06.configbeez/16.config_tmplmngr
-      - page: 10.tutorials/10.pro-main-template
-      - page: 11.cookbook/01.coupon-related
-
-  - title: { en: Settings, de: Einstellungen }
+      - page: 24.contacts
+        items:
+          - page: 24.contacts/01.customers
+          - page: 24.contacts/02.prospects
+          - page: 24.contacts/03.lists-segments
+          - page: 24.contacts/04.topics
+          - page: 24.contacts/05.signup-confirmation
+            items:
+              - page: 05.sitebeez/01.site_signup
+      - page: 25.content
+        items:
+          - page: 25.content/01.main-templates
+          - page: 25.content/02.newsletter-templates
+          - page: 25.content/03.coupons
+  - title: { en: "", de: "" }
+    section: app
     items:
-      - page: 06.configbeez
-        title: { en: Configuration, de: Konfiguration }
-      - page: 07.filterbeez
-
-  - title: { en: Reference, de: Nachschlagewerk }
-    include_remaining: true
+      - page: 28.system
+        icon: heroicons/outline/cog-6-tooth.svg
+        items:
+          - page: 06.configbeez
+            items:
+              - page: 06.configbeez/01.config_queen
+              - page: 06.configbeez/35.automatic-processing
+              - page: 06.configbeez/36.appearance
+              - page: 06.configbeez/02.config_cloudbeez
+              - page: 06.configbeez/37.sender-addresses
+              - page: 06.configbeez/05.config_email_engine
+              - page: 06.configbeez/13.config_template_engine
+              - page: 06.configbeez/09.config_analytics
+              - page: 06.configbeez/38.tracking-codes
+                before: { de: 06.configbeez/09.config_analytics }
+                items:
+                  - page: 06.configbeez/09.config_analytics_econda
+                  - page: 06.configbeez/09.config_googleanalytics
+                  - page: 06.configbeez/09.config_analytics_piwik
+              - page: 06.configbeez/03.config_gdpr_export
+              - page: 06.configbeez/33.config_spamcompliance_advanced
+              - page: 06.configbeez/07.config_process_control
+              - page: 06.configbeez/04.config_simulation
+              - page: 06.configbeez/24.common_services/05.config_coupon_engine
+              - page: 06.configbeez/39.preview-test-data
+              - page: 06.configbeez/08.config_api
+              - page: 06.configbeez/40.language-assignment
+          - page: 26.extensions
+            items:
+              - page: 26.extensions/01.addons
+                items:
+                  - page: 06.configbeez/10.config_shopvoting
+                  - page: 06.configbeez/18.config_email_rate
+                  - page: 06.configbeez/16.config_gdpr_consent
+                  - page: 07.filterbeez/20.filter_add_block_all_url
+                  - page: 07.filterbeez/21.filter_check_block_all
+                  - page: 06.configbeez/19.config_cron_advanced
+                  - page: 06.configbeez/18.config_cron_simple
+                  - page: 06.configbeez/21.config_email_archive
+                  - page: 07.filterbeez/02.filter_do_limit
+                  - page: 07.filterbeez/01.filter_do_throttling_simple
+                  - page: 07.filterbeez/06.filter_check_group
+                  - page: 07.filterbeez/02.filter_check_pattern_blacklist
+                  - page: 07.filterbeez/02.filter_check_routing
+                  - page: 06.configbeez/23.config_account_aggregation
+                  - page: 06.configbeez/14.config_customer_insight
+                  - page: 07.filterbeez/03.filter_add_customer_information
+                  - page: 07.filterbeez/07.filter_add_gender
+                  - page: 07.filterbeez/23.filter_add_invoicenumber_xtcm
+                  - page: 07.filterbeez/08.filter_add_shopperapproved
+              - page: 26.extensions/02.integrations
+                items:
+                  - page: 06.configbeez/15.config_mouseflow
+                  - page: 06.configbeez/25.integrations/05.config_ecgcheck_integration
+                  - page: 26.extensions/02.integrations/01.sitezen
+                  - page: 06.configbeez/25.integrations/01.config_idealo_integration
+                  - page: 06.configbeez/25.integrations/02.config_shopauskunft_integration
+                  - page: 06.configbeez/25.integrations/04.config_shopperapproved_integration
+                  - page: 06.configbeez/25.integrations/03.config_trustedshops_rss_importer
+                  - page: 06.configbeez/25.integrations/04.config_trustpilot_rss_importer
+          - page: 27.sending-status
+  - title: { en: "Archive", de: "Archiv" }
+    id: legacy-reference
+    sidebar: false
+    icon: heroicons/outline/archive-box.svg
     items:
-      - page: 10.tutorials
-      - page: 11.cookbook
-      - page: 99.faq
+      - page: 29.legacy
+        items:
+          - page: 02.certificates
+          - page: 05.sitebeez
+          - page: 07.filterbeez
+            items:
+              - page: 07.filterbeez/08.filter_add_shopauskunft_feed
+              - page: 07.filterbeez/08.filter_add_shoprating
+              - page: 07.filterbeez/08.filter_add_trustpilot_rss
+              - page: 07.filterbeez/09.filter_add_trustedshops_rss
+              - page: 07.filterbeez/10.filter_add_numinix_sc_balance
+              - page: 07.filterbeez/10.filter_add_pakettracking_zencart
+              - page: 07.filterbeez/12.filter_modify_mouseflow
+              - page: 07.filterbeez/13.filter_check_nopurchase_advanced
+              - page: 07.filterbeez/14.filter_check_review_advanced
+              - page: 07.filterbeez/15.filter_check_shopbewertung_advanced
+              - page: 07.filterbeez/16.filter_check_winback_advanced
+              - page: 07.filterbeez/17.filterbeez_add_content_suite
+              - page: 07.filterbeez/18.filter_add_profiling
+              - page: 07.filterbeez/18.filter_add_profiling_content
+              - page: 07.filterbeez/18.filter_check_profile
+              - page: 07.filterbeez/22.filter_check_customers_authorization_zencart
+              - page: 07.filterbeez/90.filter_check_newslettersubscriber
+              - page: 07.filterbeez/90.filter_layout_optimizer
+          - page: 08.reportbeez
+            items:
+              - page: 08.reportbeez/01.report_event_log
+              - page: 08.reportbeez/02.report_track
+              - page: 08.reportbeez/03.report_block
+              - page: 08.reportbeez/04.report_analytics_advanced
+              - page: 08.reportbeez/05.report_coupon_referral_honey
+              - page: 08.reportbeez/10.report_ga
+          - page: 09.dashboardbeez
+            items:
+              - page: 09.dashboardbeez/01.dashboard_beez_o_graph
+              - page: 09.dashboardbeez/02.dashboard_review_o_meter
+              - page: 09.dashboardbeez/03.dashboard_winback_o_meter
+              - page: 09.dashboardbeez/04.dashboard_nopurchase_o_meter
+              - page: 09.dashboardbeez/05.dashboard_loyalty_o_graph
+              - page: 09.dashboardbeez/06.dashboard_ga
+              - page: 09.dashboardbeez/07.dashboard_latest_news
+              - page: 09.dashboardbeez/08.dashboard_actions
+              - page: 09.dashboardbeez/09.dashboard_intro
+              - page: 09.dashboardbeez/10.dashboard_event_log
+              - page: 09.dashboardbeez/11.dashboard_versioncheck
+              - page: 09.dashboardbeez/12.dashboard_coupon_admin
+              - page: 09.dashboardbeez/13.dashboard_block_admin
+              - page: 09.dashboardbeez/14.dashboard_coupon_referral_honey
+          - page: 10.tutorials
+            title: { en: "Legacy tutorials", de: "Frühere Tutorials" }
+            items:
+              - page: 10.tutorials/01.ce-main-template
+                title: { en: "Shared layout (CE)", de: "Hauptvorlage (CE)" }
+              - page: 10.tutorials/01.ce-module-templates
+                title: { en: "Campaign layout (CE)", de: "Modulvorlage (CE)" }
+              - page: 10.tutorials/01.newsletter2go-integration
+              - page: 10.tutorials/10.pro-module-templates
+                title: { en: "Campaign layout (Pro)", de: "Modulvorlage (Pro)" }
+              - page: 10.tutorials/10.mailbeez-automation
+                title: { en: "Schedule runs", de: "Versandläufe planen" }
+              - page: 10.tutorials/20.pro-module-segmentation
+                title: { en: "Product audiences", de: "Zielgruppen nach Produkt" }
+          - page: 11.cookbook
+            title: { en: "Legacy recipes", de: "Frühere Rezepte" }
+            items:
+              - page: 11.cookbook/01.data-related
+                title: { en: "Bounced addresses", de: "Rückläufer prüfen" }
+              - page: 11.cookbook/01.template-related
+                title: { en: "Coupon expiry dates", de: "Ablaufdatum formatieren" }
+              - page: 11.cookbook/01.misc
+                title: { en: "Groups and birthdays", de: "Gruppen und Geburtstage" }
+          - page: 99.faq
+          - page: 29.legacy/01.campaign-modules
+            items:
+              - page: 04.mailbeez/01.birthday
+              - page: 04.mailbeez/02.shoprating
+              - page: 04.mailbeez/06.coupon_review
+              - page: 04.mailbeez/09.coupon_referral_honey
+              - page: 04.mailbeez/16.coupon_review_shoprating
+              - page: 04.mailbeez/17.coupon_review_shopauskunft
+              - page: 04.mailbeez/18.trustpilot_advanced_ul
+              - page: 04.mailbeez/22.shopperapproved_advanced
+              - page: 04.mailbeez/23.service_db_repair_order
+              - page: 04.mailbeez/24.numinix_sc_review_reward
+              - page: 04.mailbeez/25.numinix_sc_balance_reminder
+              - page: 04.mailbeez/30.community-modules
+                items:
+                  - page: 04.mailbeez/30.community-modules/27.winback
+                  - page: 04.mailbeez/30.community-modules/28.review
+                  - page: 04.mailbeez/30.community-modules/29.nopurchase
+                  - page: 04.mailbeez/30.community-modules/30.shopauskunft
+                  - page: 04.mailbeez/30.community-modules/31.ausgezeichnet
+                  - page: 04.mailbeez/30.community-modules/31.idealo
+                  - page: 04.mailbeez/30.community-modules/31.shopvote
+                  - page: 04.mailbeez/30.community-modules/32.trustedshops
+                  - page: 04.mailbeez/30.community-modules/33.trustpilot
+                  - page: 04.mailbeez/30.community-modules/34.feedbackcompany
+                  - page: 04.mailbeez/30.community-modules/35.review_facebook
+                  - page: 04.mailbeez/30.community-modules/36.zc_testimonials
+                  - page: 04.mailbeez/30.community-modules/37.service_db_optimize
+                  - page: 04.mailbeez/30.community-modules/45.service_handler_block_all
+              - page: 04.mailbeez/47.brand-fans
+              - page: 04.mailbeez/55.service_sync_newsletter_xtc
+              - page: 04.mailbeez/56.mailbeez_check
+              - page: 04.mailbeez/57.mailbeez_feedback
+          - page: 29.legacy/02.configuration-modules
+            items:
+              - page: 06.configbeez/03.config_spamcompliance
+              - page: 06.configbeez/06.config_dashboard
+              - page: 06.configbeez/08.config_api/01.config_api_product
+              - page: 06.configbeez/08.config_api/02.mb_newsletter_api
+              - page: 06.configbeez/11.config_tour
+              - page: 06.configbeez/16.config_tmplmngr
+              - page: 06.configbeez/17.config_editor
+              - page: 06.configbeez/17.config_tmplmngr_lng
+              - page: 06.configbeez/20.config_block_admin
+              - page: 06.configbeez/22.config_bouncehive_advanced
+              - page: 06.configbeez/23.config_beezdesk
+              - page: 06.configbeez/23.config_copyright_remover
+              - page: 06.configbeez/24.common_services
+                items:
+                  - page: 06.configbeez/24.common_services/01.config_list_engine
+                  - page: 06.configbeez/24.common_services/02.config_social
+                  - page: 06.configbeez/24.common_services/03.config_template_selector
+                  - page: 06.configbeez/24.common_services/04.config_editor
+                  - page: 06.configbeez/24.common_services/06.config_profiling_engine
+                  - page: 06.configbeez/24.common_services/07.config_content_engine
+              - page: 06.configbeez/25.integrations
+                items:
+                  - page: 06.configbeez/25.integrations/05.config_mailchimp
+              - page: 06.configbeez/34.config_helpdesk
+  - title: { en: "Resources", de: "Ressourcen" }
+    id: resources
+    icon: heroicons/outline/bookmark.svg
+    items:
       - page: 13.compatibility
       - page: 12.changelog

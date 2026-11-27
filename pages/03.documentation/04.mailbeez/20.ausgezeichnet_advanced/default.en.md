@@ -1,5 +1,6 @@
 ---
-title: 'Ausgezeichnet.org Advanced'
+title: "AUSGEZEICHNET.org"
+module_subtitle: "Ask for reviews on AUSGEZEICHNET.org"
 slug: ausgezeichnet_advanced
 date:  25-04-2016
 published: true
@@ -16,7 +17,9 @@ taxonomy:
         - docs
     tag:
         - pro
+        - "Ask for reviews on AUSGEZEICHNET.org"
 module:
+    plans_position: after_guide
     code: ausgezeichnet_advanced
     category:
         - mailbeez
@@ -43,21 +46,31 @@ metadata:
     author: admin
 ---
 
-**Get most out of your Ausgezeichnet.org Subscription**
+You ship ceramic mixing bowls at home and abroad. A local buyer may have unpacked the bowls a week after dispatch while an international parcel is still in transit. Give both buyers time to receive the goods before inviting them to review your shop on AUSGEZEICHNET.org.
 
-## Advanced Features
+## Set up the flow
 
-this advanced module gives you a couple of settings to streamline and improve your process of inviting customers to give a rating on Ausgezeichnet.org:
+Open **Campaigns → Automations → MailBeez Flows → Ask for reviews on AUSGEZEICHNET.org**, then choose **Options → Configure**.
 
-## multiple order status
+<span id="allow-time-for-delivery"></span>
+<span id="settings-to-check"></span>
 
-Do you have different order status marking orders as shipped! No problem, just check all orders status you want the module to react on
+[doc-steps]
+[doc-step]
+**Connect your review page**
 
-## recognition of regular customers
+Enter **Your Domain** and **Your PIN** from the same AUSGEZEICHNET.org account. These two values form the destination of the review link. Open the link in a preview and check that it names your ceramics shop.
+[/doc-step]
+[doc-step]
+**Time domestic and international invitations**
 
-Don't want to bother your regular customers with an Email to rate on Ausgezeichnet.org? Simply define a delay (e.g. 120 days) between to invites and your are done. The module will check when the last invite was sent and decides whether to wait or to send a new rating invite.
+Choose the dispatch status under **Set Order Status**. Set **Wait after the order status changes** to seven days and **Additional delay for international deliveries** to four more for international deliveries. Two parcels shipped on the same day can then qualify after seven and eleven days respectively. Set **Maximum age of the status change** above the initial wait.
+[/doc-step]
+[doc-step]
+**Space out invitations to regular buyers**
 
-## responsive email template
+Set **Minimum interval between invitations** if you want a gap between invitations for different orders by the same customer. If you also invite buyers to Google, decide which service should receive each invitation before enabling both flows.
+[/doc-step]
+[/doc-steps]
 
-the emails are shown perfectly also on mobile deviced
-
+The [review distribution guide](/filterbeez/filter_check_routing) shows how to divide eligible orders between services.

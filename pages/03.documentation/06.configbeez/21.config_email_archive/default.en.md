@@ -1,5 +1,6 @@
 ---
-title: 'Email Web-view and Archive'
+title: "Email archive"
+module_subtitle: "Offer a browser version of each email"
 slug: config_email_archive
 routes:
     aliases:
@@ -15,7 +16,7 @@ template: docs
 taxonomy:
     category:
         - docs
-    tag: pro
+    tag: ["pro", "Offer a browser version of each email"]
 summary:
     enabled: true
     format: short
@@ -46,50 +47,24 @@ author:
     name: admin
 ---
 
-Enhance your MailBeez system with the "Email Web-view and Archive" module:
+A buyer opens your brewing guide in an email app that hides images. A browser link lets them read a copy of the message you sent, including their own coupon and order details. Use a message addressed to yourself whenever you show someone how the link works.
 
-## Web-view
+## Decide how long a browser link should work
 
-In the main- or body of your email template, use the variable:
+Open **System → Extensions → Add-ons → Sending and scheduling** and select **Offer a browser version of each email**.
 
-```
-<a href="{$webversion_url}">Web-View</a>
-```
+[doc-steps]
 
+[doc-step]
+**Allow time to use the email**
 
- When the email recipient clicks this link, they will be redirected to a web version of the email.
+If a coupon is valid for a month, consider how long its owner may need the browser copy. **Never viewed: retention (days)** counts from archiving. **Last viewed: retention (days)** counts from the most recent archive view.
+[/doc-step]
 
-## Archive
+[doc-step]
+**Check the link before enabling cleanup**
 
-All Mailbeez generated emails will be automatically archived in both TXT and HTML format. The archived versions can be displayed easily by either the Beez-O-Graph or when working directly with a customer using the free [BeezDesk CRM Customer Insight](/documentation/configbeez/config_customer_insight/) add-on. 
+Open a newly archived test email in the browser and check the guide and its images. With **Delete expired archive entries automatically** enabled, cleanup removes entries that have reached the retention period. Zero days makes an entry eligible at the next cleanup. Once removed, its browser link can no longer show the email.
+[/doc-step]
 
-Getting an overview or checking exactly which emails a customer has received has now become a very simple task!
-
-
-With the help of the integrated "clean-up function", older entries can be deleted in a rule-based manner. This can be performed manually in the module or, if configured accordingly, automatically.
-
-## Configuring an external database
-
-In the default configuration, the e-mail archive is stored in the shop database.
-Depending on the email volume, the archive can achieve a size of several GBs despite the automated clean-up function, whereby e.g. backups of the database become more difficult.
-
-In order not to add load to the shop database, a separate database can be configured for the email archive. The steps are quite simple: first, create a new database in the server administration, then configure the access data for this database in the module. In case of connection problems, the module will help you with the appropriate hints.
-
-Since the email archive data are non-critical data, a backup can be omitted. However, the automatic clean-up function should be activated in order to avoid an uncontrolled increase in the database size.
-
-
-## Configure your own archive URL
-
-You can define a short URL to your email archive: Please provide the complete URL e.g. "http://mystore.com/m/", the message-id will be added to that url.
-Then you need to configure a rewrite rule in your htaccess file, which rewrites the given URL  URL into the real URL "http://mystore.com/mailhive.php?m=service_handler_email_archive&ma=show&mp=<message-id>":
-
-
-```htaccess
-    // URL rewrite option
-    // e.g. when url is set to <shop>/m/
-    // add this rewrite rule to htaccess
-
-    RewriteEngine on
-    RewriteRule   ^m/([a-z0-9]+)/(.*)$   mailhive.php?m=service_handler_email_archive&ma=show&mp=$1&$2
-
-```
+[/doc-steps]

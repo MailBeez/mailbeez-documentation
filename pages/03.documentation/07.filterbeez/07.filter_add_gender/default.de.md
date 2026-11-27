@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Geschlechtsabhängige Inhalte
+title: "Anreden"
+module_subtitle: "E-Mail-Anreden personalisieren"
 slug: filter_add_gender
 # menu: Geschlechtsabhängige Inhalte
 date: 08-04-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "E-Mail-Anreden personalisieren"]
 module:
     code: 'filter_add_gender'
     category: [filterbeez]
@@ -42,45 +43,12 @@ metadata:
 #  last_modified: true
 ---
 
-Mit diesem Modul können die MailBeez generierte Emails and das Geschlecht des Kunden / der Kundin angepasst werden.
+Eine Weinhandlung lädt zur Verkostung ein und möchte ihre Kunden förmlich begrüßen. Für eine Kundin ist die passende Anrede im Konto hinterlegt. Ein anderer Gast hat bei der Anmeldung nur Namen und E-Mail-Adresse angegeben. Die Einladung soll in beiden Fällen so klingen, als hättest du sie persönlich geschrieben.
 
-Diese Funktion steht nach Installation in allen offiziellen MailBeez Email Kampagnen Modulen zur Verfügung.
+## Eine neutrale Anrede vorsehen
 
-Aufgrund der nahtlosen Integration in das MailBeez System können Sie z.B. das Geschlecht beim Senden von Test-Emails auswählen – sehr sinnvoll bei der Entwicklung und dem Testen von Email Kampagnen mit geschlechtsspezifischen Inhalten.
+Öffne **System → Erweiterungen → Zusatzmodule → Kundendaten und Inhalte** und wähle **E-Mail-Anreden personalisieren**.
 
-![](Screen_gender_choose.png)
+Das Zusatzmodul stellt der Vorlage die im Kundenkonto gespeicherte Geschlechtsangabe zur Verfügung. Verwende die persönliche Anrede, wenn die Angabe dazu passt. Bei einem leeren oder unbekannten Wert eignet sich für die Einladung ein neutrales „Guten Tag“. Setze auch die Satzzeichen passend zur jeweiligen Anrede.
 
-Zur Kontrolle wird das erkannte Geschlecht des Kunden beim Versand angezeigt:  
-![](Screen_gender_list.png)
-
-
-
-In Email-Vorlagen können Sie mit etwas Logik wie folgt unterschiedliche Inhalte nach Geschlecht ausgeben:
-
-```
-{if $gender == "f"}
-   Sehr geehrte Frau {$lastname}
-{elseif $gender == "m"}
-   Sehr geehrter Herr {$lastname}
-{else}
-   Hallo {$firstname} {$lastname}
-{/if}
-
-```
-
-bzw. mit Tags im visuellen Editor:
-
-```
-[[if $gender == "f"]]
-   Sehr geehrte Frau [[$lastname]]
-[[elseif $gender == "m"]]
-   Sehr geehrter Herr [[$lastname]]
-[[else]]
-   Hallo [[$firstname]] [[$lastname]]
-[[/if]]
-
-```
-
-
-
-Dies beschränkt sich nicht nur auf die Anrede, ganze Inhalts-Abschnitte - auch in der gemeinsamen Hauptvorlage - können somit personalisiert werden.
+Öffne die Vorlage unter [Vorschau & Testdaten](/configbeez/vorschau-testdaten) einmal mit und einmal ohne hinterlegte Angabe. Lies jeweils die erste Zeile zusammen mit dem folgenden Satz.

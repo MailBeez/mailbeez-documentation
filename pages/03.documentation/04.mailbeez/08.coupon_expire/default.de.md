@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Gutschein-Ablauf Erinnerung
+title: "Gutschein läuft ab"
+module_subtitle: "An auslaufende Gutscheine erinnern"
 slug: coupon_expire
 routes:
     aliases:
@@ -20,8 +21,9 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro,coupon]
+    tag: [pro,coupon, "An auslaufende Gutscheine erinnern"]
 module:
+    plans_position: after_guide
     code: 'coupon_expire'
     category: [mailbeez]
     compatiblity: [comp_cre,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio,comp_saas]
@@ -41,28 +43,30 @@ metadata:
 
 ---
 
-**Gutscheine drohen, ungenutzt zu verfallen? Abhilfe kann hier die automatische Erinnerungsmail bringen.**
+Eine Kundin hat für ihre nächste Bestellung Kaffeebohnen einen Gutschein bekommen. Er läuft nächste Woche ab, doch die E-Mail mit dem Code liegt weit unten im Postfach. Eine Erinnerung mit Code, Ablaufdatum und Link zu den Bohnen macht das Einlösen einfacher.
 
-Wie Sie sicher wissen, haben personalisierte Ecommerce Email Kamapagnen die höchsten Rendite aller Werbeformen – und deshalb ist die Mailbox des Kunden ein heiss umworbener Platz. Wenn Sie sicherstellen wollen, dass Gutschein Kampagnen optimale Resultate erzielen, ist eine Erinnerung vor Ablauf des datierten Gutscheines ein wertvolles Hilfsmittel.
+MailBeez sucht nach ausgestellten Gutscheinen, die bald ablaufen. Dabei berücksichtigt es, wie oft der Code insgesamt und pro Empfänger eingelöst werden darf. Rabatt und Ablaufdatum des ursprünglichen Gutscheins gelten weiter.
 
-**Eine automatisierte und intelligente Lösung**
+## Flow einrichten
 
-Wie alle MailBeez Kampagnen Module, so ist auch die Gutschein Ablauf Erinnerung – einmal installiert, angepasst und konfiguert – ein voll-automatisches Module welches prüft, welche Gutschein noch ungenutzt sind und im konfigurierten Zeitraum verfallen. Die entsprechenden Kunden werden dann per Email erinnert.
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → An auslaufende Gutscheine erinnern** und wähle **Optionen → Konfigurieren**.
 
-Natürlich ist das Modul so intelligent aufgebaut, dass nicht mehr gültige Gutschein ausgeschlossen werden – es werden nur Kunden kontaktiert, die ihren personalisierten Gutschein noch nicht genutzt haben.
+[doc-steps]
+[doc-step]
+**Den Zeitraum vor Ablauf wählen**
 
-[plugin:content-inject](/content_blocks/pro_responsive_template)
- 
+Für eine Erinnerung rund eine Woche vorher trägst du unter **Verbleibende Gültigkeit: mindestens** 5 und unter **Verbleibende Gültigkeit: höchstens** 8 ein. Die Untergrenze zählt mit, die Obergrenze ist ausgeschlossen. Der geplante Lauf kann also Gutscheine mit fünf, sechs oder sieben verbleibenden Tagen finden.
+[/doc-step]
+[doc-step]
+**Gutscheinbedingungen in die Erinnerung einfügen**
 
-**Einstellungen**
+Gilt der Gutschein nur für Kaffeebohnen, trage „Nur für Kaffeebohnen gültig“ in die **Beschreibung** der [Gutscheinvorlage](/configbeez/common_services/config_coupon_engine) ein. Jeder aus der Vorlage erzeugte Gutschein übernimmt diesen Text.
 
-Dieses Module hat neben den üblichen Konfigurationsparametern zwei Einstellungen, um den Zeitrahmen vor Ablauf des Gutscheines zu bestimmen:
+Füge `[[$coupon_description]]` neben dem Code und dem Ablaufdatum in die Erinnerungs-E-Mail ein. Dort liest die Kundin die Bedingungen ihres Gutscheins.
+[/doc-step]
+[doc-step]
+**Die Erinnerung in der Vorschau prüfen**
 
-- **Mindest Anzahl Tage vor Ablauf (A) ** Der Gutschein ist mindestens noch diese Anzahl Tage gütig
-- **Maxium Anzahl Tage vor Ablauf (B) **Der Gutschein ist höchstens noch diese Anzahl Tage gütig (“in weniger als X Tagen verliert der Gutschein seine Gültigkeit)
-
-**Beispiel:**
-
-A auf 5, B ist auf 7 gesetzt:
-
-Mit diesen Einstellungen wird das Module alle Kunden kontaktieren, welche einen von MailBeez generierte Gutschein erhalten aber nicht genutzt haben, dessen Gültigkeit in weniger als 7 aber mehr als 5 Tage abläuft.
+Wähle unter **Gutschein-Vorlage für Vorschau** die Vorlage für Kaffeebohnen. Prüfe, ob die Bedingungen neben dem Code stehen. Beim Versand verwendet MailBeez den auslaufenden Gutschein der Kundin.
+[/doc-step]
+[/doc-steps]

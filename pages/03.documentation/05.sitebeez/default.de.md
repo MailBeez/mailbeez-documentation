@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: SiteBeez Module
+title: "SiteBeez-Module"
 slug: sitebeez
 date: 28-06-2018
 published: true
@@ -33,8 +33,6 @@ metadata:
 #  last_modified: true
 ---
 
-### Abschnitt 3
-# SiteBeez Module
+Schlage in der SiteBeez-Referenz ein bereits im früheren Shop eingebundenes Widget nach. Das Einbinden und Testen des heutigen Newsletter-Formulars beschreibt [Anmeldeformular einbinden](/sitebeez/site_signup).
 
-Mit den SiteBeez Modulen können Sie Ihren Shop aber auch - je nach Modul - andere Webseiten mit Interaktionen und personalisierten Inhalten anreichern.
-
+Suche die Stelle, an der das Widget eingebunden ist, etwa den Fußbereich einer Kategorieseite. Dort kannst du eine Konfigurationsänderung unmittelbar überprüfen.

@@ -36,72 +36,43 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez arbeitet problemlos mit *osCommerce 2.3.x*.
+[doc-callout type="note" title="Installation für frühere Shopversionen"]
+Prüfe die Versionsnummer in deiner Shopverwaltung. Für andere Versionen findest du die passende Anleitung unter [Installation](/grundlagen/installation) oder in der [Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
+Verwende das Installationspaket für osCommerce 2.3.x (ursprüngliche Anleitung für 2.3.1). Für dieses frühere Paket war PHP ab 5.3 angegeben.
 
-Die Installation ist in wenigen Schritten erledigt:
-- Die neuen Dateien übertragen
-- Menü-Eintrag anlegen
-
-
-
-## Schritt 1: Neue Dateien
+Vergleiche das Beispiel vor der Änderung mit den installierten 2.3.x-Dateien. Ein angepasstes Adminmenü kann zusätzliche Einträge enthalten, die du beibehalten möchtest.
 
 [plugin:content-inject](/content_blocks/download_installer)
 
+## Shopdateien übertragen
 
-folgende Dateien und Ordner aus dem entpackten Zip-Archiv auf den Shop-Server übertragen:
+<span id="schritt-1-neue-dateien"></span>Kopiere `catalog/admin/mailbeez.php` ins Adminverzeichnis des Shops. Kopiere `catalog/mailhive/` und `catalog/mailhive.php` ins Shopverzeichnis neben die `index.php`.
 
+## Adminintegration wählen
 
-```bash
-admin/mailbeez.php
-mailhive/
-mailhive.php
+<span id="schritt-2-menue-eintrag-a"></span><span id="a-admin-plugin"></span>Kopiere ab 2.3.3 das Admin-Plugin aus dem Paket an die entsprechende Stelle im Shop.
 
-
+```text
+extra_files/extras_osc_233x/admin/includes/boxes/customers_mailbeez.php → admin/includes/boxes/customers_mailbeez.php
 ```
 
+<span id="b-code-aenderung"></span>Für den manuellen Menüeintrag bei 2.3.x öffne `admin/includes/boxes/tools.php`.
 
-## Schritt 2 - Menü-Eintrag anlegen
+Suche in der vorhandenen Datei nach diesem Ausschnitt.
 
-Je nach osCommerce Version können Sie entweder das Admin Plugin nutzen oder den Menü-Eintrag in den Code einfügen:
-
-### A. Admin Plugin
-
-Seit osCommerce 2.3.3 gibt es ein Plugin-System zum Hinzufügen von Admin Menü-Einträgen. Kopieren Sie hierzu
-
-```bash
-extra_files/extras_osc_233x/admin/includes/boxes/customers_mailbeez.php
-```
-
-in das osCommerce System:
-
-```bash
-admin/includes/boxes/customers_mailbeez.php
-```
-
-
-### B. Code Änderung
-
-Diese Datei zum Bearbeiten öffnen:
-
-```bash
-admin/includes/boxes/tools.php
-```
-
-Die Zeile
-
-```
-    array(
+```text
+array(
         'code' => FILENAME_WHOS_ONLINE,
         'title' => BOX_TOOLS_WHOS_ONLINE,
         'link' => tep_href_link(FILENAME_WHOS_ONLINE)
     )
 ```
 
-finden und folgenden Code hinzufügen:
+Füge unmittelbar nach dieser Zeile den folgenden Eintrag ein.
 
-```
+```php
 // mailbeez
      ,
      array(
@@ -112,9 +83,4 @@ finden und folgenden Code hinzufügen:
      // - mailbeez
 ```
 
-
-Hiermit wird der Admin-Menü Eintrag angelegt.
-
-
 [plugin:content-inject](/content_blocks/run_installer)
-

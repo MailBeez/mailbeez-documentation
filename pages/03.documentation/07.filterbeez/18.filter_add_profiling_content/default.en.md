@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Content Integration Suite
+title: "Profile-based content"
+module_subtitle: "Select prepared email content using customer or order tags"
 slug: filterbeez_add_content_suite
 # menu: Content Integration Suite
 date: 11-08-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Content Integration Suite"]
 module:
     code: 'filterbeez_add_content_suite'
     category: [filterbeez]
@@ -42,21 +43,14 @@ metadata:
 #  last_modified: true
 ---
 
-**under development**
-    
+[doc-callout type="note" title="Earlier filter"]
+For the filters you can configure in V5, open [Add-ons](/extensions/addons). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-this module works in combination with the [profiling engine](/documentation/configbeez/config_profiling_engine) and the content partials of the [Template Manager with multilanguage Support](/documentation/configbeez/config_tmplmngr_lng) you can personalize the email content by assigned customer and/or order profile tags.
+The development version used order or customer tags to insert prepared content into emails. Check that the shop has both [Profiling Engine](/configbeez/common_services/config_profiling_engine) and the multilingual template manager with reusable content blocks ([Multilanguage Extension with Template Manager](/configbeez/config_tmplmngr_lng)).
 
+Use an example with a known tag to trace the old design. Check which text should appear for that tag and what a reader would see without it.
 
-follow this preparation steps:
-
-- create profiles with rules to tag orders / customers
-- create content partials
-
-then
-
-configure which tags must or must not be assigned to customer / orders to add the specific content partial. If there are multiple matching content partials all of them are added in the assigned sort order.
-
-finally edit the email template (can be a body template or the main template) and insert the content block "Profiling content" from within the visual editor (move mouse on an element, click on the + icon, select the element to insert)
-
-
+1. Define a tagging rule and create the content block.
+2. Specify which tags must be present or absent for the block to appear. If several blocks match, their configured sort order controls their order in the email.
+3. In the visual editor, use the plus button to insert the profiling content element in the main or module template. Preview one record that matches the tags and another that does not.

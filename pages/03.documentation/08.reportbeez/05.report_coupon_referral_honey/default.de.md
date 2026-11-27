@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: ReferralHoney Statistik
+title: "ReferralHoney Statistik"
+module_subtitle: "Eine Weiterempfehlung von der Einladung bis zur Bestellung verfolgen"
 slug: report_coupon_referral_honey
 # menu: ReferralHoney Statistics
 date: 16-10-2012
@@ -40,6 +41,10 @@ metadata:
 #  last_modified: true
 ---
 
-Der ReferralHoney Statistik-Bericht ist Bestandteil des [ReferralHoney Modul](/documentation/mailbeez/coupon_referral_honey/).
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Flows & Newsletter](/mailbeez-results/flows-newsletters) Ergebnisse verschiedener Kampagnen vergleichen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Der Bericht gibt Einblick, wie Kunden die Neukunden-Gutscheine nutzen und warnt bei betrügerischem Verhalten, also wenn bereits bestehende Kunden einen der Neukunden-Gutscheine verwendet.
+Verfolge eine Empfehlung von der Einladung über die Bestellung des Freundes bis zur Prämie. Fehlt eine erwartete Bestellung, vergleiche ihren Status mit den Bedingungen in [Neukunden-Gewinnungssystem "ReferralHoney"](/mailbeez/coupon_referral_honey).
+
+Geteilte Einladung, vermittelte Bestellung und verdiente Prämie sind eigene Schritte. Suche zuerst den letzten belegten Schritt, bevor du nach dem nächsten suchst.

@@ -36,54 +36,25 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez works with osCommerce CE Phoenix
+[doc-callout type="note" title="Installation for earlier shop releases"]
+Check the version in your shop admin. For a different release, look under [Installation](/basics/installation) or in the [legacy reference](/legacy).
+[/doc-callout]
 
-The installation is straight forward and can be done in a couple of minutes by following these two steps:
-
-- copy new files
-- add extra files
-
-
-
-## Step 1 - copy new files
+Use the installer for osCommerce CE Phoenix.
 
 [plugin:content-inject](/content_blocks/download_installer)
 
+## Copy the shop files
 
-copy following file to your admin-directory
+<span id="step-1-copy-new-files"></span>Copy `catalog/admin/mailbeez.php` into the shop’s admin directory. Copy `catalog/mailhive/` and `catalog/mailhive.php` into the shop root alongside `index.php`.
 
-```bash
-mailbeez.php
+## Connect the admin menu and hook
+
+<span id="step-2-add-extra-files"></span>Copy each package file to the shop path on the same row.
+
+```text
+extra files/extras_osc_233x/admin/includes/boxes/customers_mailbeez.php → admin/includes/boxes/customers_mailbeez.php
+extra files/extras_osc_phoenix_V1/includes/hooks/admin/siteWide/beezdesk.php → includes/hooks/admin/siteWide/beezdesk.php
 ```
-
-
-copy following file and folder to your catalog-directory (where your index.php is located)
-
-```bash
-mailhive (folder)
-mailhive.php
-```
-
-
-## Step 2 - add extra files
-
-With copying 2 files you can easily integrate MailBeez into your Store Administration
-
-
-Please copy
-
-```bash
-extra files/extras_osc_233x/admin/includes/boxes/customers_mailbeez.php
-extra files/extras_osc_phoenix_V1/includes/hooks/admin/siteWide/beezdesk.php
-```
-
-into the matching locations in your osCommerce CE Phoenix System:
-
-```bash
-admin/includes/boxes/customers_mailbeez.php
-includes/hooks/admin/siteWide/beezdesk.php
-```
-
-Open the MailBeez System and start exploring!
 
 [plugin:content-inject](/content_blocks/run_installer)

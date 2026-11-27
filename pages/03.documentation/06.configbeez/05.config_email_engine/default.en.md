@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Email Engine Configuration
+title: "Sending method"
+module_subtitle: "Connect a delivery service and verify the sender with a test email"
 slug: config_email_engine
 routes:
     aliases:
@@ -41,79 +42,17 @@ metadata:
 #  last_modified: true
 ---
 
+Have your delivery service’s connection details and a mailbox you can open. After connecting the service, send a test there. Check the sender customers will see and reply to the message to see where replies arrive.
 
-You can choose, which delivery engine MailBeez should use to send out the generated Emails:
+Open **System → Configuration** and select **Sending method**.
 
+Select the delivery service configured for your shop and enter the connection details supplied by that service. Check the connection and send a test to your own address before using it for campaigns.
 
-1. **Shop (default)**: Email-Function of your Shop-System
-1. **Mailbeez.Email (recommended)**: Email delivery through MailBeez.Email Servers
-1. **SMTP**: any SMTP Server
+<span id="settings-to-check"></span>
 
-###Shop (default)
+## Set thresholds for failed sends
 
-With the default setting MailBeez is utilizing the email function of your shop system to send out emails.
-
-| Advantage                              | Disadvantage
-|----------------------------------------|----------------------------------------------
-| no configuration necessary             | check for email limit of your mail server
-| no additional costs                    | risk of spam rating on your mail server
-|                                        | delivery rates are depending on your mail server, typically less than 50%
-
-
-
-###MailBeez.Email (recommended)
-All MailBeez User are eligible to sent their Emails through [MailBeez.Email](https://mailbeez.email) servers (at addtional costs)
-
-Read more on [MailBeez.Email](https://mailbeez.email).
-
-| Advantage                                                   | Disadvantage
-|-------------------------------------------------------------|----------------------------------------------
-| bypass spam filters thanks to server certificates           | SPF and DKIM configuration required - we are happy to assist!
-| Whitelisting all relevante recipients                       | additional costs, **typically covered by increased delivery rates**
-| No throttling required                                      |  |
-| You don't have to worry about blacklists, spam ratings etc. |  |
-| Gmail compliant DMAR authentication                         |  |
-| Gmail compliant header                                      |  |
-
-
-
-### SMTP
-
-This option allows you to configure any SMTP server.
-
-| Advantage                                    | Disadvantage
-|---------------------------------------------|----------------------------------------------
-| any STMP server can be configured           | configuration efforts
-| support for  DKIM                      | risk of spam rating on your mail server
-| no additional costs                   | delivery rates are depending on your mail server, typically less than 50%  |
-| Gmail compliant header                                      |  |
-
-
-Settings for using Gmail Email-Servers:
-```bash
- smtp.gmail.com
- Auth: true
- security: ssl
- Port: 465
-```
-
-
-
-
-### Error Sending Emails <a id="error"></a>
-
-In case the SMTP server throws an error when trying to send an email, this email will be marked with `message_id=-1`.
-
-The system status overview will tell you, how many errors have occurred.
-
-With click on the tool symbol, you can choose between following actions to resolve the situation:
-
-
-####Restart
-The faulty entries will be deleted from your system. Depending on the timing and module configuration the system will try to send them again.
-
-####Ignore
-The faulty entries will be marked, and the system will not try to send them again.
-
-> [!TIP]
-> Please check the configuration of your SMTP server in case you get many errors. Some SMTP-Server might be configured to send only emails with a specific sender domain. So for a different sender-domain the SMTP-Server will quit with an error.
+- **Failure rate in 1 hour**<br>
+  The default threshold is 5%. The check requires at least three failures in the hour.
+- **Failure rate in 24 hours**<br>
+  The default threshold is 2%. The check requires at least three failures in the 24-hour period.

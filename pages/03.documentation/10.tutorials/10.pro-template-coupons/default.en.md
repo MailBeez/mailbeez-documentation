@@ -1,7 +1,8 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Creating template coupons
+title: "Create a coupon template"
 slug: creating-template-coupons
+original_v4: true
 published: true
 template: tutorial
 
@@ -16,70 +17,19 @@ taxonomy:
     tag: [pro]
 ---
 
-[TOC]
+<span id="personalized-coupons"></span>Define the discount once and let the campaign issue a separate code to each recipient. Your shop needs a supported coupon system. Some older osCommerce installations need an additional coupon module.
 
-> [!TIP]
-> use the tour within MailBeez to see how it works in your Store
+Decide what a recipient can buy with the coupon before choosing its discount. A fixed amount off selected products and a percentage off an entire order are different offers.
 
-In this tutorial you will learn how to create template coupons and configure the appropriate modules.
+1. Open **Content → Coupons → Templates** and choose **New Template Coupon**.
+2. Set the discount, validity and restrictions for the offer.
+3. <span id="assigning-the-template-coupon"></span>In the campaign, select the template for the email step that should offer the discount. Check the generated message in simulation before sending to customers.
+4. Open **Content → Coupons → Generated** to look up the issued codes. The template is the rule used to create them.
 
+## Template codes in the earlier coupon system
 
-## Personalized Coupons
+<span id="creating-a-template-coupon"></span>Create a coupon in the shop’s own coupon administration. Enter `template_birthday` in the coupon code field. The earlier selector recognises the `template_` prefix in the code itself. A coupon name with that prefix is insufficient. Save the discount and select the template in the birthday module.
 
-The MailBeez [Coupon Engine](/documentation/configbeez/config_coupon_engine) is a sub-module of all MailBeez coupon modules. It allows you to generate and send personalized coupons.
+<span id="how-it-works"></span><span id="find-out-more"></span><span id="testing-coupon-generation"></span>When the module runs, it copies the template into a personal code with its own expiry date. The earlier module marks simulated codes with `[SIM]`. Those codes can still be redeemed, so check one in a test shop.
 
-We'll use the module [Birthday Greetings Coupon](/documentation/mailbeez/coupon_birthday) as an example, to show the configuration steps for setting up coupons. This procedure can be applied to all other MailBeez modules with a couponing function.
-
-## How it works
-
-The MailBeez Coupon Engine generates new coupons based on a configured template. The generated coupon is a copy of this template coupon, but the **expiration date** and **coupon code** are generated individually. This ensures that every customer receives a unique coupon code that is only valid as long as has been configured in the respective module (for example, "Birthday Greetings Coupon"). 
-
-## Creating a template coupon
-
-> [!NOTE]
-> Please ensure that the coupon system is activated (osCommerce: a [compatible coupon addon](/documentation/configbeez/config_coupon_engine) must be installed)
-
-From your shopping-cart's admin panel, navigate to the main configuration settings for "coupons" or "vouchers".
-
-Then click on "New coupon".
-
-Find input field **Coupon Code** (not name), then enter the following: `template_birthday`.
-
-It is important that the **coupon code** starts with `template_` , as this identifies template couponsrs. Otherwise, the template's coupon will not be allocated in the following section.
-
-Configure the template coupon according to your wishes by adding discount amount etc.. All info, except the expiration date, will be transferred to the coupon that's generated.
-
-Now, save the coupon promo. (Important: after one click, a page to verify the information is shown, then click again to confirm.)
-
-## Assigning the template coupon
-
-Make sure that the newly created template coupons can be seen in the coupon system of your shopping-cart.
-
-Navigate to `MailBeez > MailBeez Modules > Birthday Greetings Coupon` and click the **Edit** button at the top right side of the screen to open the Configuration view for this module. Further down the right side you will find a **Coupon Template** selection list, from which you can select the coupon template you just created.
-
-Now, save the configuration for this module.
-
-In the view of the right you see at the bottom that the template coupon has been activated.
-
-## Find out more
-
-### Testing coupon generation
-
-You can test the generation of coupons using the "Simulation" mode. Ensure that MailBeez is in simulation mode by clicking the button in the upper right corner of the window. Now run the module "Birthday Greetings Coupon". There are "real" emails generated, but they are all configured and sent to the simulation e-mail address and marked with **[SIM]** in the subject.
-
-In the coupon system you will find for each email a generated coupon. The simulation coupons are marked with **[SIM]** in the coupon code. These coupons are fully functional, and you can now make test orders.
-
-### Deleting Simulation coupons
-
-In simulation mode, coupons can be deleted in their respective modules with the structure appearing button. Alternatively, you can use the delete function in `MailBeez > Configuration > Certificate` .
-
-### Deleting old coupons
-
-Over time, thousands of coupons will be generated. Under `MailBeez > Configuration > Coupon Engine` contains a handy "cleanup" function to delete expired coupons.
-
-### Find coupons
-
-On the MailBeez Dashboard you can find a search function (eventually you'll need to install on `MailBeez > Configuration > Dashboard Configuration` ) that lets you quickly find templates or coupons and then to open it for editing.
-
-> [!TIP]
-> Search for **template_** to find all template coupons and open directly to the editor
+<span id="deleting-simulation-coupons"></span><span id="deleting-old-coupons"></span><span id="find-coupons"></span>The earlier coupon tools distinguish simulated codes from expired coupons. Check which set you have selected before cleaning it up. In the earlier dashboard coupon search, look for `template_` to find your templates again.

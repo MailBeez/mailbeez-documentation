@@ -1,7 +1,8 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Add Shopauskunft Ratings to Emails
-menu: Add Shopauskunft Ratings
+title: "Shopauskunft ratings in emails"
+module_subtitle: "Insert Shopauskunft ratings in emails based on the earlier template system"
+menu: "Shopauskunft ratings in emails"
 slug: filter_add_shopauskunft_feed
 date: 03-05-2011
 published: true
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Add Shopauskunft Ratings to Emails"]
 module:
     code: 'config_shopauskunft_rss_importer'
     category: [filterbeez]
@@ -42,59 +43,45 @@ metadata:
 #  last_modified: true
 ---
 
-Automatically add your store’s Shopauskunft reviews into any MailBeez email campaign with this filter, part of the [Shopauskunft Integration Suite](/documentation/configbeez/config_shopauskunft_rss_importer/ "Shopauskunft Integration Suite"); perfect for spicing up the [Winback](/documentation/mailbeez/winback_advanced/ "Winback Advanced Module") and [No Purchase](/documentation/mailbeez/nopurchase_advanced/ "Mailbeez No Purchase Modules") Mailbeez modules.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To choose a review integration in V5, open [Integrations](/extensions/integrations). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-### Usage
+Display Shopauskunft reviews in emails that use the earlier template system. Check that reviews from [Import reviews from Shopauskunft](/configbeez/integrations/config_shopauskunft_integration) are available first, then install and activate the display module.
 
-Install and activate this Module – you need to have the [Shopauskunft Integration Suite](/documentation/configbeez/config_shopauskunft_rss_importer/ "Shopauskunft Integration Suite") configured.
+Preview a recent Shopauskunft review in the email where it will appear. Check that a reader can tell the review concerns your store and identify its source.
 
-By adding the following tags into your MailBeez templates you will be able to show a configured number of Shopauskunft ratings in your MailBeez generated emails. You can place the tags wherever you want, so for example if you place them within your main template the ratings will be shown in all emails, but if you place them only in your content template, you are able control exactly in which emails the ratings will be visible:
+## Insert the review into a template
 
-Place this into the HTML-Version of your MailBeez template:
+<span id="usage"></span>For one campaign, edit its content template. For all emails with the same design, edit the main template. Put this placeholder in the HTML version.
 
-```
+```smarty
 {$content.rss.shopauskunft.html}
 ```
 
-Place his into the TXT-Version of your MailBeez template:
+Use its text counterpart in the plain-text version.
 
-```
+```smarty
 {$content.rss.shopauskunft.txt}
 ```
 
-the template for displaying the ratings is taken from the RSS-Feed template files
+The display templates are in `mailhive/configbeez/config_shopauskunft_rss_importer/templates`.
 
-```
+```text
 rss_email_html.tpl  
 rss_email_txt.tpl
 ```
-located in
 
-`mailhive\configbeez\config_shopauskunft_rss_importer\templates`
+For a custom display, read the review fields in the template loop.
 
-More advanced users can also directly access the data object holding the ratings in the email template using following code example.
-
-
-```
+```smarty
 {assign var=feed_feed value=$data.feed.shopauskunft}
 {section name=item loop=$feed_feed}
   {$feed_feed[item].rating_stars}
-  {$feed_feed[item].text}</br>
-  {$feed_feed[item].user_deeplink}</br>
+  {$feed_feed[item].text}<br>
+  {$feed_feed[item].user_deeplink}<br>
   {$feed_feed[item].date|date_format}
 {/section}
 ```
 
-
-
-
-### Options:
-
-**Number of ratings**  
- Number of ratings shown in emails (number)
-
-**Minimum Stars**  
- Show only ratings with at least this number of stars (3-5)
-
-**Shuffle Ratings**  
- Do you want to shuffle the ratings (True) or show only the latest ones (False)
+<span id="display-options"></span>Set the number of ratings and the minimum rating (3–5 stars). Choose whether to show the latest matching reviews or shuffle them.

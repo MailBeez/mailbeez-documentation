@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Tägliches Versandlimit
+title: "Tageslimit"
+module_subtitle: "Täglichen Versand von Flow-E-Mails begrenzen"
 slug: filter_do_limit
 # menu: Einfache Drosselung
 published: true
@@ -14,7 +15,7 @@ summary:
 taxonomy:
     migration_status: review
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Täglichen Versand von Flow-E-Mails begrenzen"]
 module:
     code: 'filter_do_limit'
     category: [filterbeez]
@@ -39,6 +40,12 @@ metadata:
 #  last_modified: true
 ---
 
-**Dieses Filtermodul begrenzt den täglichen Email Versand von MailBeez.**
+Nach einem gut besuchten Ausverkauf schaltest du Bewertungseinladungen ein. Solange dein Team die Rückfragen bearbeitet, möchtest du höchstens 100 Flow-E-Mails am Tag verschicken. Hat MailBeez heute bereits 80 solcher Nachrichten versendet, bleiben für alle weiteren Flows zusammen noch 20.
 
-Beschreibung folgt
+## Ein Tageslimit für Flows festlegen
+
+Öffne **System → Erweiterungen → Zusatzmodule → Versand und Zeitplanung** und wähle **Täglichen Versand von Flow-E-Mails begrenzen**.
+
+Trage unter **Trigger-E-Mails pro Tag** die Gesamtzahl für den Shop ein. Alle betroffenen Trigger-Module teilen sich dieses Limit. Der Kalendertag richtet sich nach dem Datenbankserver. Newsletter und Testsendungen zählen nicht mit.
+
+Bei null stoppt der Versand dieser Flow-E-Mails. Deaktiviere das Zusatzmodul, wenn du das Tageslimit aufheben möchtest. Begrenzt dein Versanddienst auch die Geschwindigkeit, sieh dir das [Sendetempo](/filterbeez/filter_do_throttling_simple) an.

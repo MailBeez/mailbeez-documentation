@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Kunden ohne Kauf einfach
+title: "Erstkauf (Einfach)"
+module_subtitle: "Registrierte Kunden anschreiben, die noch keine Bestellung aufgegeben haben"
 slug: nopurchase
 routes:
     default: /dokumentation/mailbeez/nopurchase
@@ -19,7 +20,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [ce]
+    tag: [ce, "Kunden ohne Kauf einfach"]
 module:
     code: 'nopurchase'
     category: [mailbeez]
@@ -51,13 +52,10 @@ metadata:
 #  last_modified: true
 ---
 
-**Kunden nach Registrierung aber ohne Kauf “anstupsen”**
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Zum ersten Kauf einladen](/mailbeez/nopurchase_advanced) Kontakte nach einer Registrierung ohne Kauf anschreiben. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Für neue Online-Shops oder für neugierige Online-Händler – die gerne MailBeez ausprobieren möchten, bevor sie eines der Profi-Module kaufen – ist das Module “Kunden ohne Kauf einfach” eine praktische und zeitsparende Lösung, um dem Email-Marketing neuen Schwung zu geben und automatisch Kunden zu kontaktieren, die zwar ein Kundenkonto angelegt, aber nie etwas gekauft haben.
+Lege fest, wie lange das einfache Community-Modul nach der Registrierung auf eine erste Bestellung wartet. Eine mehrstufige Kampagne für diese Zielgruppe beschreibt [Zum ersten Kauf einladen](/mailbeez/nopurchase_advanced).
 
-**Einfach zu installieren und konfigurieren**
-
-Das Modul “Kunden ohne Kauf einfach” ist – wie alle MailBeez Module – sehr einfach zu installieren und konfigurieren. Einfach mit FTP die Modul-Dateien übertragen, dann steht das neue Modul in der MailBeez Administration zur Konfiguration bereit.  
- Die Email Vorlagen sind wie gewohnt in .tpl Dateien definiert und können dort bearbeitet werden – für den Profi-Einsatz empfiehlt sich natürlich die Erweiterung “[Vorlagen Manager](/dokumentation/configbeez/config_tmplmngr/)“ als Bestandteil der Profi Tarife.
-
-Die besten Ergebnisse der Gewinnung von Kunden ohne Kauf liefert das Module [Kunden ohne Kauf Profi mit Gutscheinen](/dokumentation/mailbeez/nopurchase_advanced/ "Kunden ohne Kauf Profi").
+Greife in der ersten Nachricht eine konkrete Hürde auf. Eine Größenhilfe oder Informationen zur Lieferung helfen etwa jemandem, der beim Produktvergleich ein Konto angelegt hat.

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Das Winback-O-Meter
+title: "Winback-O-Meter"
+module_subtitle: "Das Rückgewinnungsziel mit Bestellungen nach dem Kundenkontakt vergleichen"
 slug: dashboard_winback_o_meter
 #menu:  Winback-O-Meter
 date: 14-02-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "Das Winback-O-Meter"]
 # added collection selector
 
 author:
@@ -36,15 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
-Das Winback-O-Meter zeigt Ihnen, wie viele Kunden Sie mit Hilfe von MailBeez nach Versand der Kundenrückgewinnungs-Email zurückgewinnen konnten.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Flows & Newsletter](/mailbeez-results/flows-newsletters) Ergebnisse verschiedener Kampagnen vergleichen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-**Konfiguration**
+Vergleiche den Zielwert für die Rückgewinnung mit dem Anteil angeschriebener Kunden, die wieder bestellt haben. Die Anzeige erfasst Käufe nach dem Kontakt. Wartezeiten und Angebot der Kampagne beschreibt [Inaktive Kunden zurückgewinnen](/mailbeez/winback_advanced).
 
-In der Standard-Konfiguration werden die Daten der letzten 30 Tage ausgewertet, Sie können den Zeitrahmen aber in der Modul-Konfiguration anpassen.
-
-
-Zudem können Sie die Zielwerte konfigurieren - die typischen Rückgewinnungsraten sind abhängig von einer Reihe von Parametern wie z.B. der Art der Produkte und dem Kundensegment.  
- Experimentieren Sie etwas mit der Einstellung, falls die Ihnen die Standartwerte nicht sinnvoll erscheinen.  
-
-Die besten Ergebnisse können Sie mit dem intelligenten Modul  [Kundenrückgewinnung Profi](/dokumentation/mailbeez/winback_advanced/ "Kundenrückgewinnung Profi") erreichen, welches mehrstufig personalisierte Gutscheine an verloren geglaubte Kunden versendet.
-  
+Nutze die Anzeige, um einen Zeitraum für eine genauere Prüfung auszuwählen. Aus einem späteren Kauf allein lässt sich keine zusätzliche Wirkung der Nachricht ableiten.

@@ -39,16 +39,6 @@ metadata:
 #  last_modified: true
 ---
 
-<!--
-{{ 'core'|mailbeez_core_version }}
-{{ 'core'|mailbeez_core_date|date("d. M. Y") }}
-{{ 'core'|mailbeez_core_filesize|mailbeez_formatBytes }}
--->
+When release notes are available, choose the release year and find the entry for your installed Core or module version. Check its changes before updating a shop. Each note appears in the language of publication.
 
-<hr>
-
-
-<div class="changelog" markdown="1" >    
-<!--{{ 'core'|mailbeez_core_changelog|markdown }}-->
-</div>
-
+If you skipped several updates, read the entries between your installed version and the one you plan to use. A fix may have landed in an intermediate release.

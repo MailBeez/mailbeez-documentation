@@ -1,5 +1,6 @@
 ---
-title: 'Winback Advanced'
+title: "Win back customers"
+module_subtitle: "Win back inactive customers"
 slug: winback_advanced
 routes:
     aliases:
@@ -20,9 +21,13 @@ taxonomy:
     category:
         - docs
     tag:
+        - "winback"
+        - "inactive customers"
         - pro
         - coupon
+        - "Win back inactive customers"
 module:
+    plans_position: after_guide
     code: winback_advanced
     category:
         - mailbeez
@@ -49,43 +54,50 @@ metadata:
     author: admin
 ---
 
-**In which Mailbeez daringly assists you in the reactivation of previously good customers.**
+<span id="example-coffee-reorders"></span>
 
-Getting new customers is great, and seeing all your hard work pay off when an order comes through is one of the best feelings a store owner can experience. However, with the constant drive to find new customers comes the risk that existing customers will get overlooked – customers you were once just as excited to welcome to your store.
+Imagine you run an online coffee shop. A regular customer usually orders a bag of beans every two months. This time, three months go by. A short email asking “Running low on coffee?” gives them an easy way back to their favourite beans. If they order again, that’s the end of the reminder. If they don’t, you might send a second email two weeks later, perhaps with a coupon.
 
-**The Mailbeez way!**
+**Win back inactive customers** is a ready-made MailBeez Flow for this kind of gap between orders. You can send one, two or three emails, or keep in touch with a repeating reminder. You decide how long to wait between emails. Everyone who reaches a particular step receives the message you prepared for it.
 
-In order to prevent formerly good customers from falling through the cracks of your marketing strategy, Mailbeez has developed a deceptively powerful, fully automated module called Winback Advanced, which gives you the tools to email old customers who haven’t placed an order for a pre-determined time span (set in the admin area), both reminding them of your presence, and enticing them back with personalised offers.
+<span id="who-qualifies-for-the-fir"></span>
 
-> [!TIP]
-> For best operations in combination with [Abandoned Cart Advanced](/documentation/mailbeez/abandoned_cart_advanced) this module checks for empty carts (configurable) to avoid contacting customers with open carts.
+## How far back should the first run look?
 
+Suppose you want to wait 90 days after a customer’s latest order reached your shipped status. When you switch the flow on, some customers have already been waiting longer. A 120-day lookback picks up about a month of overdue reminders on that first run. To reach fewer customers at launch, use 100 days instead. That picks up about ten days of overdue reminders.
 
-**A personalized coupon for every customer**
+From then on, the window moves forward with each run. As customers reach 90 days, they can receive their first email. MailBeez checks its sending history, so tomorrow’s run won’t send the first email again for the same order.
 
-When you contact an inactive customer, it is wise to give them an additional incentive to return. Just imagine if you hadn’t been to a store in several months, you might expect a coupon just to sweeten the return, and that funnily enough, is exactly what your customer’s will expect.
+## Set up the flow
 
-With Winback Advanced, not only can you send a personalized one-off coupon to formerly long lost customers, but as part of its multi-step architecture, if the customer still isn’t returning, Winback can raise the stakes over a series of emails with pre-configured time delays, all embedded with offer coupons that can be set to increase in value in line with the multi-step process; until the customer simply *cannot* resist the deal you are offering.
+Open **Campaigns → Automations → MailBeez Flows → Win back inactive customers**, then choose **Options → Configure**.
 
-**Top features of Winback Advanced**
+[doc-steps]
+[doc-step]
+**Choose the orders and timing**
 
-- Fully automated customer contact – just set and forget
-- Time delay configurable multi step emailing
-- Entice old customers back with personalised offer coupons that can be set to increase in value in line with the multi step process.
-- Remind customers what they have previously bought by adding their purchased products into their email
+Under **Target Order Status**, choose the status your shop uses when it ships an order. You can select more than one. For the coffee example, set **Target Days Since Last Purchase** to 90 and **Target Days to Look Back** to 120.
+[/doc-step]
+[doc-step]
+**Choose how many emails to send**
 
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+Under **Workflow - Number of Winback Emails (1-4+)**, choose **1 Step**, **2 Steps**, **3 Steps** or **Loop**. For the coffee shop, choose **2 Steps** and set **Second Winback Email Delay** to 14 days. The two weeks start when the first email is sent. If the customer orders again, the remaining reminders for the earlier order stop.
 
-Depending on your image settings, you might need to customize the included templates for the best results. In addition, you can also create your own templates and the module will add them to the template selector.
+For **3 Steps** or **Loop**, set **Third Winback Email Delay** to the number of days to wait after email two. With **Loop**, the customer receives the first three emails and then a recurring reminder. **Winback Email Loop Delay and Period** sets both the wait after email three and the interval between repeats.
+[/doc-step]
+[doc-step]
+**Write the emails and choose an offer**
 
-#### Take a look at some more great features below
+For the first email, link straight to your beans. If you want to offer a coupon in the second, choose a template under **Coupon Template - Second Winback Email** and set how long the coupon is valid.
 
-**Powerful Winback Campaigns**  
-[plugin:content-inject](/content_blocks/pro_coupon)
+To show different products in the same email, add **Live Content** in the editor. If your shop offers a source based on past purchases, you can use it to recommend beans each customer might like. MailBeez selects the products for that recipient at send time.
+[/doc-step]
+[/doc-steps]
 
-[plugin:content-inject](/content_blocks/pro_common_advantage)
+<span id="check-the-first-run"></span>
 
+Before activation, [check the first run](/quickstart/step-3-set-forget#check-the-first-run) or [try Winback with two test orders](/tutorials-and-recipes/test-winback). If you also send cart reminders, **Check For Empty Customer Basket** lets you limit Winback to customers with an empty cart. If you accept guest orders, test the follow-up separately. It needs a matching customer account.
 
-#### See the results
+## When a Custom Flow fits better
 
-Mailbeez is pre installed with some great reporting widgets, one of which is the Winback-O-Meter, which easily allows you to see what percentage of customers are re-ordering off the back of your new Winback email campaign, right from within your store’s admin area. See how many customers Winback is bringing back to your store!
+A customer who bought beans last week might still need a new water filter for a machine they bought six months ago. For that reminder, the date of the **machine purchase** matters. The [Custom Flows guide](/mailbeez/custom-flows) shows how to reach buyers of a particular product, with recipes for replacement parts, refills and emails that teach customers how to use their purchase.

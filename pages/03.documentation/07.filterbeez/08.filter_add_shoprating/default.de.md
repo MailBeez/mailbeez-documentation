@@ -1,8 +1,9 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: ShopBewertungen in Emails einfügen
+title: "Shopbewertungen in E-Mails"
+module_subtitle: "Shopbewertungen mit dem früheren Vorlagensystem in E-Mails einfügen"
 slug: filter_add_shoprating
-menu: ShopBewertungen einfügen
+menu: "Shopbewertungen in E-Mails"
 published: true
 template: docs
 # theme: false
@@ -14,7 +15,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "ShopBewertungen in Emails einfügen"]
 module:
     code: 'shoprating_advanced'
     category: [filterbeez]
@@ -39,26 +40,24 @@ metadata:
 #  last_modified: true
 ---
 
-Fügen Sie Ihre wertvollen ShopBewertungen automatisch in Ihre MailBeez Email Kampagnen ein – hervorragend geeignet, um z.B. die Emails zur [Kundenrückgewinnung](/dokumentation/mailbeez/winback_advanced) und [Kunden ohne Kauf](/dokumentation/mailbeez/nopurchase_advanced) aufzuwerten.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Integrationen](/extensions/integrationen) eine Bewertungsintegration auswählen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
+Zeige Bewertungen aus der Integration [Shopbewertungen im eigenen Shop erfassen](/configbeez/config_shopvoting) in E-Mails mit dem früheren Vorlagensystem. Prüfe zuerst, ob Bewertungen vorliegen. Installiere und aktiviere anschließend das Anzeigemodul.
 
-### Installation
+Ein kurzer Kundenkommentar zu Versand oder Service kann vor einem weiteren Kauf helfen. Die Shopbewertung sollte als Rückmeldung zum Einkaufserlebnis erkennbar bleiben.
 
-Modul installieren und aktivieren – vorher das [ShopBewertungs-Modul](/dokumentation/configbeez/config_shopvoting "Shopbewertungen") konfigurieren und testen.
+## Bewertung in die Vorlage einfügen
 
-Mit folgenden Platzhaltern können Sie die konfigurierte Anzahl an Bewertungen in von MailBeez generierten Emails einfügen. Die Platzhalter können an jeder beliebigen Stellen in den MailBeez Vorlagen eingefügt werden. Sollen die Bewertungen in allen Emails sichtbar sein, am besten die Platzhalter direkt in die Hauptvorlage einfügen
+<span id="installation"></span>Für eine Kampagne bearbeitest du die Inhaltsvorlage, für alle E-Mails mit demselben Design die Hauptvorlage. Setze diesen Platzhalter in die HTML-Fassung.
 
-Platzhalter für die HTML-Version der Vorlage:
-
-```
+```smarty
 {$content.shoprating.html}
 ```
 
-Platzhalter für die TXT-Version der Vorlage:
+Verwende in der Textfassung den entsprechenden Textplatzhalter.
 
-```
+```smarty
 {$content.shoprating.txt}
 ```
-
-
- 

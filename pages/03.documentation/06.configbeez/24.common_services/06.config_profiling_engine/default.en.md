@@ -1,5 +1,6 @@
 ---
 title: Profiling Engine
+module_subtitle: "Define rules for tagging customers or orders in the earlier development version"
 slug: config_profiling_engine
 routes:
     default: /documentation/configbeez/config_profiling_engine
@@ -29,35 +30,14 @@ metadata:
 
 ---
 
-Under development - The MailBeez profiling engine allows you to add rule-based tags to customer profiles and orders. 
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To build an audience for a mailing in V5, open [Lists and Segments](/contacts/lists-segments). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-These tags can be utilized by other control-modules to control the behaviour and content of email modules, creating rich relationships between content and customer segments. This allows for even more effective targeting of your email campaigns.
+The development version of the profiling engine described rules for tagging orders and customers. For example, the rule “has never bought product B” could assign the customer tag `upsell-B`. Check the installed edition before relying on these features.
 
+A tag only helps another module if its meaning is clear. Record which rule assigned it before using the old proposal to interpret a customer group.
 
-Examples
-
-- Tag all customers, who've never purchased product B, with tag "upsell-B"
-- Tag all customers, who've only purchased from category X, with tag "only-cat-X"
-- Tag all orders containing product H with tag "product-H"
-
-
-
-Modules utilizing tags are:
-
-- [Profile Filter](/documentation/filterbeez/filter_check_profile)  
- Examples
-      - only send Birthday coupons to customers tagged with "upsell-B"
-      - never send a product review reminder to customer orders containing "product H"
-    
-
-- [Profile Content](/documentation/filterbeez/filter_add_profiling_content)  
- Examples
-      - insert upsell content promoting product B in all emails for customers tagged with "upsell-B"
-
-
-
-- [Profile Information](/documentation/filterbeez/filter_add_profiling)  
- Examples
-      - build custom logic code using order characteristics and/or parameters found in the customer profile.
-
-
+- [Controll modules by Profile-Tags](/filterbeez/filterbeez_check_profile) used tags to include or exclude a customer or order from a module.
+- [Content Integration Suite](/filterbeez/filter_add_profiling_content) used the same tags to insert a matching content block.
+- [Add Profiling Data](/filterbeez/filterbeez_add_profiling) exposed the assigned tags to custom template logic.

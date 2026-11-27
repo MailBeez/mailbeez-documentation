@@ -38,64 +38,16 @@ metadata:
 #  last_modified: true
 ---
 
-Responsive Webseiten liegen hoch im Trend, aber wie sieht es mit responsive Emails aus?
+<span id="was-sind-responsive-email"></span><span id="wussten-sie"></span>Teste eine Kampagnen-E-Mail mit langem Produktnamen, Bild und einem Link, den Kunden tatsächlich nutzen. Auf einem schmalen Bildschirm siehst du, ob sich die Nachricht ohne seitliches Scrollen lesen und bedienen lässt.
+
+Öffne dieselbe Nachricht auch mit abgeschalteten Bildern. Erkennst du dann noch das Angebot und den Link, der zurück in den Shop führt?
+
 {{ page.find('/images').media['responsive.png'].html }}
 
-##Was sind responsive Emails?  
+1. <span id="mailbeez-kann-responsive-"></span>Prüfe die Vorschau in Desktop- und Mobilbreite. Achte darauf, wie Spalten umbrechen, ob das Bild mitskaliert und ob sich der wichtigste Link gut antippen lässt.
+2. <span id="mobile-endgeraete-welche-"></span>Schicke dir eine Test-E-Mail und öffne sie in einem E-Mail-Programm deiner Kunden. Manche Programme zeigen auch auf dem Smartphone das Desktop-Layout.
+3. Ragt ein Bild über den Rand hinaus, prüfe seine Breitenangabe in der Vorlage. Ersetze lange sichtbare URLs durch kurze, aussagekräftige Linktexte. Kontrolliere Vorschau und Test-E-Mail erneut.
 
-Responsive Emails passen sich der Bildschirmgrösse an. Auf einem PC sehen sie wie "normale" Emails aus, während sich die Darstellung auf z.B. iPhones ändert: Text wird grösser dargestellt, Spalten brechen zu Zeilen um, Buttons werden breiter und höher - all dies dient dazu, das Benutzer-Erlebnis auf kleinen Bildschirmen zu verbessern! 
+Die [Referenz für ältere Versionen](/legacy) beschreibt Unterschiede zwischen damaligen E-Mail-Programmen. Die frühere Vorlage passte sich etwa in der mitgelieferten E-Mail-App von Android 4.x an den Bildschirm an. Auf dem Galaxy S4 konnte die App dagegen das Desktop-Layout anzeigen.
 
- 
-
-## Wussten Sie:
-
-- **47+% der Emails** werden **auf mobilen Endgeräten geöffnet**
-- **80% der Leute löschen eine Email, wenn diese auf ihrem mobilen Endgeräten nicht gut dargestellt wird.**
-- Studien haben gezeigt, dass Leute **im Schnitt 150 mal am Tag** ihr Telefon öffnen. Diese kurzen Interaktionen bedeuten, dass Nachrichten besonders schnell lesbar sein müssen, um Aufmerksamkeit zu bekommen.
-
-## MailBeez kann responsive Emails versenden!
-
-Mit einem intuitiven, visuellen Editor ausgestattet, der bereits beim Erstellen der Email eine Vorschau in verschiedenen mobilen Endgeräten liefert, war es wohl nie zuvor so einfach, gut aussehende, responsive Emails zu erstellen!
-
-Erweitern Sie jetzt Ihr MailBeez System mit der MailBeez responsive Vorlagen Verwaltung und Sie können sofort Email-Vorlagen erstellen, die hervorragend auf den mobilen Endgeräten Ihrer Kunden dargestellt werden! [Mehr Informationen zur MailBeez Responsive Vorlagen Verwaltung](/dokumentation/configbeez/config_tmplmngr)
-
-
-### Mobile Endgeräte, welche responsive Emails unterstützen
-
-**Aktuell sind 80% der mobilen Endgeräten iPhones oder iPads:**
-
-- 53% auf iPhone
-- 27% auf iPad
-- 20% auf Android
-- 1% andere
-
-**Responsive Emails werden unterstützt von:**
-
-- iOS Mail app
-- Android 4.x Email (OEM) app
-- Windows Phone 7.5
-- BlackBerry OS7
-- BlackBerry Z10
-
-**Responsive Emails werden nicht unterstützt von:**
-
-- Samsung Galaxy S4 [mehr Information](https://www.campaignmonitor.com/forums/topic/7827/media-query-not-working-on-samsung-galaxy-s4/)
-- iPhone Gmail app
-- iPhone Mailbox app
-- iPhone Yahoo! Mail app
-- Android Gmail app
-- Android Yahoo! Mail app
-- BlackBerry OS5
-- Windows Mobile 6.1
-- Windows Phone 7
-- Windows Phone 8
-
-<http://stylecampaign.com/blog/2012/10/responsive-email-support/>
-
-
-
-
-
-
-
-Statistiken von [litmus](http://www.litmus.com) - an email testing and email marketing analytics company
+Testergebnisse zu älteren Vorlagen findest du unter [E-Mail-Designelemente](/grundlagen/email-design-elements). Den früheren Editor beschreibt [Responsive Template Manager](/configbeez/config_tmplmngr).

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: "Numinix Store Credit: Review Rewards"
+title: "Numinix-Bewertungsguthaben"
+module_subtitle: "Zen-Cart-Kunden für eine passende Bewertung Guthaben gutschreiben"
 slug: numinix_sc_review_reward
 routes:
     aliases:
@@ -21,7 +22,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Numinix Store Credit – Guthaben für Bewertungen"]
 module:
     code: 'numinix_sc_review_reward'
     category: [mailbeez]
@@ -51,26 +52,10 @@ metadata:
 #  last_modified: true
 ---
 
+[doc-callout type="note" title="Früheres Kampagnenmodul"]
+Für einen aktuellen Shop wählst du den Flow unter [Automatisierung](/mailbeez). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-**Developed in Cooperation with Numinix, the inventor of the popular [Numinix Store Credit module](https://www.numinix.com/plugins/zen-cart-plugins/taxes-order-totals/store-credit-and-reward-dollars?referral_code=888671548)**
+Schreibe einem Zen-Cart-Kunden nach einer passenden Bewertung Guthaben gut. Das frühere Modul benötigt Numinix Store Credit & Reward Points. Erinnerungen an ungenutztes Guthaben beschreibt [Numinix Store Credit – Guthabenerinnerung](/mailbeez/numinix_sc_balance_reminder).
 
-
-The Numinix Store Credit Review Rewards module will automatically assign and email notification of rewards points to your customers after they write one or more approved product reviews. 
-
-The module looks for newly approved reviews in store and waits a defined period of time to allow the customer to write additional reviews. 
-
-
-You can of course define the amount of reward per review, but only one reward is given per order.
-
-[plugin:content-inject](/content_blocks/pro_responsive_template)
-
-
-**Requirements:**
-
-- Zen Cart e-commerce platform
-- The [Numinix Store Credit & Reward Points addon](https://www.numinix.com/plugins/zen-cart-plugins/taxes-order-totals/store-credit-and-reward-dollars?referral_code=888671548) for Zen Cart
-
-
-**Like this? You might also like…**
-
-[Numinix Store Credit: Balance Reminder](/documentation/mailbeez/numinix_sc_balance_reminder/)
+Prüfe bei einer Rückfrage das Guthaben des Kundenkontos. Dort steht der Wert, den der Kunde bei einem späteren Einkauf einsetzen kann.

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Kundenrückgewinnung Profi Cross Check
+title: "Rückgewinnungs-Abgleich"
+module_subtitle: "Kunden nach einer früheren Rückgewinnungs-E-Mail nicht erneut anschreiben"
 slug: filter_check_winback_advanced
 # menu: Kundenrückgewinnung Profi Cross Check
 date: 16-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]    
+    tag: [pro, "Kundenrückgewinnung Profi Cross Check"]
 module:
     code: 'winback_advanced'
     category: [filterbeez]
@@ -41,6 +42,12 @@ metadata:
 #  last_modified: true
 ---
 
-Als Teil des [Kundenrückgewinnung Profi](/dokumentation/mailbeez/winback_advanced/) Modules prüft dieser Filter, ob ein Kunde die Emails des einfachen Modules erhalten oder blockiert hat.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Inaktive Kunden zurückgewinnen](/mailbeez/winback_advanced) Erinnerungen zur Kundenrückgewinnung einrichten. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Wenn Sie vor der Installation des Profi Modules die einfache Version benutzt haben, wird dieser Filter sicherstellen, dass Kunden nicht doppelt kontaktiert werden.
+Beim Wechsel vom einfachen Modul zur Profi-Ausgabe berücksichtigte dieser frühere Filter die bisherige Versandhistorie und Abmeldungen. Wer die Nachricht über das einfache Modul bereits erhalten oder gesperrt hatte, sollte sie über das Profi-Modul nicht erneut bekommen.
+
+Ein Kunde kann auch nach einer früheren Rückgewinnungs-E-Mail inaktiv sein. Der damalige Versand zählt, wenn das neue Modul über eine erneute Ansprache entscheidet.
+
+Bei einem Shop, der direkt mit der Profi-Ausgabe begann, gibt es keine Versandhistorie des einfachen Moduls zu prüfen.

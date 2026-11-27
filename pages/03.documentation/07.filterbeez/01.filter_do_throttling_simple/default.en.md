@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Simple Throttling
+title: "Sending rate"
+module_subtitle: "Space out emails during sending"
 slug: filter_do_throttling_simple
 routes:
     - aliases: /documentation/filterbeez/simple-throttling
@@ -19,7 +20,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Space out emails during sending"]
 module:
    code: 'filter_do_throttling_simple'
    category: [filterbeez]
@@ -44,15 +45,24 @@ metadata:
 #  last_modified: true
 ---
 
-**Control Your Email Send Rate**
+Your delivery provider allows 600 emails per hour. You have 300 backorder updates to send after a shipment arrives. With one run and a target of 600 an hour, allow roughly half an hour for those messages. If two runs send at the same time, their rates add up.
 
-> [!TIP]
-> We strongly recommend to [ configure Newsletter2Go as your  Email-Engine](/documentation/configbeez/config_email_engine). Then you don't have to worry about any sending limits.
+## Pace one processing run
 
+Open **System → Extensions → Add-ons → Sending and scheduling** and select **Space out emails during sending**.
 
+[doc-steps]
 
-Simple Throttling allows you to configure the **hourly rate** and **total number of emails** that MailBeez sends . This is useful because many hosting companies place a limit on how many emails can be sent out at once and in total. Accounts exceeding these limits can trigger automatic spam alerts that hosting companies have in place to protect their servers.
+[doc-step]
+**Set the hourly rate**
 
-Simple Throttling keeps you in good standing with your hosting service provider and helps you ensure that your site is still responsive to visitors while sending out emails behind the scenes.
+Enter a positive whole number under **Target emails per hour**. At 600 an hour, MailBeez spaces messages about six seconds apart within that run.
+[/doc-step]
 
-Just drop-in the module, activate it and configure the hourly rate and total number of emails to sent – done.
+[doc-step]
+**Choose a batch your server can finish**
+
+Use **Emails per processing run** to limit the size of a run. A lower rate or a larger batch keeps the run open longer. If you also need a ceiling on the total number of flow emails for the day, use the [daily send limit](/filterbeez/filter_do_limit).
+[/doc-step]
+
+[/doc-steps]

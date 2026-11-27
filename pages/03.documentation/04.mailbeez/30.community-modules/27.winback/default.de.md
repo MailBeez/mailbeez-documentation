@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Kundenrückgewinnung einfach
+title: "Kundenrückgewinnung einfach"
+module_subtitle: "Kunden nach einer längeren Kaufpause erneut anschreiben"
 slug: winback
 routes:
     default: /dokumentation/mailbeez/winback
@@ -51,17 +52,10 @@ metadata:
 #  last_modified: true
 ---
 
-**Jetzt mit der aktiven Kundenrückgewinnung starten**
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Inaktive Kunden zurückgewinnen](/mailbeez/winback_advanced) Erinnerungen zur Kundenrückgewinnung einrichten. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Für neue Online-Shops oder für neugierige Online-Händler – die gerne MailBeez ausprobieren möchten, bevor sie eines der Profi-Module kaufen – ist das Module “Kundenrückgewinnung einfach” eine praktische und zeitsparende Lösung, um dem Email-Marketing neuen Schwung zu geben und automatisch Kunden zu kontaktieren, die seit einiger Zeit nicht mehr bestellt haben.
+Lege im einfachen Community-Modul die Wartezeit für Käufer ohne weitere Bestellung fest. Prüfe vor dem Versand eine jüngere und eine ältere Bestellung. Eine mehrstufige Folge beschreibt [Inaktive Kunden zurückgewinnen](/mailbeez/winback_advanced).
 
-**Kunden wieder in den Shop holen**
-
-Diese kostenlose Version des Modules zur Kundenrückgewinnung hat natürlich nicht die Profi-Funktionen, welche ein ernsthafter Einsatz erfordern ([Kundenrückgewinnung Profi](/dokumentation/mailbeez/winback_advanced "Kundenrückgewinnung Profi")), aber dennoch ermöglicht es die automatische Kontaktaufnahme zu bereits verloren geglaubten Kunden.
-
-**Einfach zu installieren und konfigurieren**
-
-Das Modul “Kundenrückgewinnung einfach” ist – wie alle MailBeez Module – sehr einfach zu installieren und konfigurieren. Einfach mit FTP die Modul-Dateien übertragen, dann steht das neue Modul in der MailBeez Administration zur Konfiguration bereit.  
- Die Email Vorlagen sind wie gewohnt in .tpl Dateien definiert und können dort bearbeitet werden – für den Profi-Einsatz empfiehlt sich natürlich die Erweiterung “[Vorlagen Manager](/dokumentation/configbeez/config_tmplmngr)“.
-
-Die beste Kunden-Rückgewinnungs Resultate liefert das Modul [Kundenrückgewinnung Profi mit Gutscheinen](/documentation/mailbeez/winback_advanced/ "Kundenrückgewinnung Profi") als Bestandteil der Profi-Tarife.
+Richte die Wartezeit am üblichen Kaufabstand aus. Wer einen Jahresvorrat kauft, braucht meist eine andere Erinnerung als jemand, der monatlich nachbestellt.

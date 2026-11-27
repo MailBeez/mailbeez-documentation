@@ -1,8 +1,9 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: The Google Analytics Data Report
+title: "Google Analytics report"
+module_subtitle: "Review visits and orders attributed to email campaigns in the earlier report"
 slug: report_ga
-menu: Google Analytics
+menu: "Google Analytics report"
 date: 08-05-2012
 published: true
 publish_date: 08-05-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "The Google Analytics Data Report"]
 # added collection selector
 
 author:
@@ -36,11 +37,12 @@ metadata:
 #  last_modified: true
 ---
 
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To configure campaign link parameters in V5, open [Tracking Codes](/configbeez/tracking-codes). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-Delivered with the MailBeez framework software, the Google Analytics Report utilizes the secure Google Analytics API to allow you to see Google Analytics Campaign tracking data directly in your MailBeez interface.
+The legacy report read campaign visits from a connected Google Analytics reporting profile. It used the authorization token obtained through the dashboard widget.
 
-Simply sign in through the Dashboard Widget using your Google Analytics Credentials. If the dashboard widget is not visible on your MailBeez Dashboard, go ahead and activate the widget through the Dashboard Configuration panel.
+Start with a date when the connected profile was receiving shop traffic. An empty period can otherwise look like a campaign that attracted no visits.
 
-Once you’re signed in, select your profile and browse through the recorded campaign data!
-
-With MailBeez, your data is secure! Your Google Analytics login credentials are not stored, but transmitted to Google in order to obtain a security token. This token makes it possible to retrieve your Google Analytics data securely – nothing is exported or shared.
+For an installation that already has the integration, enable the widget in the dashboard configuration, open it and choose the connected profile. Compare a known campaign and date there. See [The Google Analytics O'Pie](/dashboardbeez/dashboard_ga) for the original connection procedure or [Email performance](/mailbeez-results/email-performance) for MailBeez’s own email figures.

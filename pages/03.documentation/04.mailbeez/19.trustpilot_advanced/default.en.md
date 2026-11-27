@@ -1,5 +1,6 @@
 ---
-title: 'Trustpilot Advanced'
+title: "Trustpilot"
+module_subtitle: "Ask for reviews on Trustpilot"
 slug: trustpilot_advanced
 date: 04-06-2013
 published: true
@@ -16,7 +17,9 @@ taxonomy:
         - docs
     tag:
         - pro
+        - "Ask for reviews on Trustpilot"
 module:
+    plans_position: after_guide
     code: trustpilot_advanced
     category:
         - mailbeez
@@ -43,40 +46,31 @@ metadata:
     author: admin
 ---
 
-**Get the most out of your Trustpilot Subscription**
+Your coffee subscription shop wants to ask how the first delivery went. With Trustpilot’s Automatic Feedback Service, two emails are involved. MailBeez sends the trigger to Trustpilot. Trustpilot then sends the invitation the buyer sees. That distinction matters when choosing the send date or looking for a missing invitation.
 
-See the Trustpilot Unique Link Edition here: [Trustpilot Advanced Unique Link Edition](/documentation/mailbeez/trustpilot_advanced_ul/)
+## Set up the flow
 
+Open **Campaigns → Automations → MailBeez Flows → Ask for reviews on Trustpilot**, then choose **Options → Configure**.
 
+<span id="choose-when-mailbeez-noti"></span>
+<span id="settings-to-check"></span>
 
-## Invite for Service- & Productreviews
+[doc-steps]
+[doc-step]
+**Connect the invitation service**
 
-Trustpilot’s Service Reviews strengthen relationships between companies and customers. Trustpilot’s Product Reviews complement Service Reviews, helping customers make informed purchase decisions.
+Copy the Automatic Feedback Service address from your Trustpilot account into **Your Trustpilot Email Address**. Use the address assigned to the store you want reviewed. The service uses the customer and order details in the trigger to prepare the invitation.
+[/doc-step]
+[doc-step]
+**Add up both waits**
 
-Does your Trustpilot Subscription support product reviews? Great, this module allows you to automatically invite your customers to review their purchased products as well.
+Choose the dispatch status under **Set Order Status**. If **Wait after the order status changes** is three days and your Trustpilot account waits two more, the invitation is due about five days after dispatch. Allow for the next scheduled run. Keep **Maximum age of the status change** above the MailBeez wait and add extra days for international delivery where needed.
+[/doc-step]
+[doc-step]
+**Give frequent buyers a break**
 
-And thanks to the seamless integration of MailBeez with your Store System, you can invite your existing customer base for reviews - within a configurable timeframe without any additional efforts.
+Set **Minimum interval between invitations** for the subscription deliveries. A fresh shipment every month needn’t mean another invitation every month. Check the invitation text and schedule in the Trustpilot account that receives the trigger.
+[/doc-step]
+[/doc-steps]
 
-
-
-## Advanced Features
-
-By integrating with the Trustpilot Feedback Service, this advanced module gives you a couple of settings to streamline and improve the process of inviting your customers to provide a rating on Trustpilot.
-
-## Multiple order status
-
-Do you use different order status? No problem, you decide which orders status you want the module to react on.
-
-## Delay times for international orders
-
-Shipping to international customers typically takes a couple days longer. To avoid sending a rating invite before delivery, you can define an additional delay for orders shipping to other countries than your own!
-
-The module automatically applies this delay to all orders which are shipped to a country, which is different from the home country you configured in your shopping-cart system.
-
-## Recognition of regular customers
-
-Don't want to bother your regular customers with an invite to rate on Trustpilot? Simply define a delay (e.g. 120 days) between two invites and you're done. The module will check when the last invite was sent and decide whether to wait or to send a new invite.
-
-### Want to integrate your valuable Trustpilot ratings with your marketing efforts?
-
-Using the [Trustpilot Integration Suite](/documentation/configbeez/config_trustpilot_rss_importer/), you can easily integrate your Trustpilot ratings with your online shopping-cart - in a way that makes this unique and "fresh" content visible to search engines - and your MailBeez generated marketing emails!
+If the buyer asks about a missing invitation, [look up the trigger in MailBeez](/sending-status) first. Once it has gone to the service address, check the invitation’s status in Trustpilot.

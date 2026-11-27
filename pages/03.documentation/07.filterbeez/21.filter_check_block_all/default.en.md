@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Block Customer Administration Check
+title: "Customer blocks"
+module_subtitle: "Block emails to individual customers"
 slug: filter_check_block_all
 # menu: Block Customer Administration Check
 date: 16-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Block emails to individual customers"]
 module:
     code: 'config_block_admin'
     category: [filterbeez]
@@ -42,6 +43,12 @@ metadata:
 #  last_modified: true
 ---
 
-## Ensure Opted-Out Customers Don’t Get Email
+A customer asks why their reorder reminder never came. Their last order qualifies, but they previously used the link to stop all MailBeez emails. A global block can account for several missing campaigns at once.
 
-Delivered with the [Advanced Opt-Out with Admin](/documentation/configbeez/config_block_admin/) module, this filter checks for customers who have elected to opt-out of all MailBeez generated emails before sending out emails when an email module is run.
+## Find the scope of a block
+
+Open **System → Extensions → Add-ons → Consent and blocking** and select **Block emails to individual customers**.
+
+Look up the email address used on the order under [Reports → MailBeez → Contacts](/mailbeez-results/contacts) in **Opt-outs & blocks**. Check whether the entry applies to all modules or names a particular campaign. A module explicitly excluded from global blocking can still send. A block on review invitations alone would leave the reorder reminder to investigate separately.
+
+If you find no applicable block, check the flow’s order status and delay, then look up the address under [Sending & status](/sending-status). A gap in the sending history on its own cannot tell you whether the customer opted out.

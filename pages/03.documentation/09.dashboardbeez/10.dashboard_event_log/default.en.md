@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: The Event Log Widget
+title: "Event log widget"
+module_subtitle: "See recent MailBeez events from the earlier dashboard"
 slug: dashboard_event_log
 # menu: The Event Log Widget
 date: 17-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "The Event Log Widget"]
 # added collection selector
 
 author:
@@ -36,8 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
-## About This Widget
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To investigate an individual delivery in V5, open [Sending & status](/sending-status). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-Delivered with the free MailBeez framework software, this widget displays information from the MailBeez event log and offers an alternative to viewing the information through the Reports tab > [Event Log Viewer](/documentation/reportbeez/report_event_log).
+Use this older dashboard widget to spot a recent processing event. For the full sequence, open [Event Log Viewer](/reportbeez/report_event_log) and match the start and end of the same run.
 
-When MailBeez is first installed, this widget will be void of information, as shown in the image above. Once you start running MailBeez, this widget will begin to immediately populate with data.
+The latest event can belong to a different module from the one you are investigating. Match the module name and time before following up in the log.

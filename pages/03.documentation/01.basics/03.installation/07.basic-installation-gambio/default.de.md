@@ -36,92 +36,41 @@ metadata:
 #  last_modified: true
 ---
 
+[doc-callout type="note" title="Installation für frühere Shopversionen"]
+Prüfe die Versionsnummer in deiner Shopverwaltung. Für andere Versionen findest du die passende Anleitung unter [Installation](/grundlagen/installation) oder in der [Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-MailBeez arbeitet problemlos mit *Gambio GX 1.x*.
+Verwende das Installationspaket für Gambio GX 1.x. MailBeez legt eigene Tabellen an.
 
-Die Installation ist in wenigen Schritten erledigt:
-- Die neuen Dateien übertragen
-- Menü-Eintrag anlegen (frühe Gambio 2 Versionen)
-- Zugriffs-Rechte für den Admin vergeben (halb automatisch)
-- MailBeez per Button-Klick installieren
-
-MailBeez verwaltet eigene Tabellen - die vorhandenen Shop-Tabellen werden nicht verändert.
-
-
-
-## Schritt 1: Neue Dateien
+Bei GX 1.x ergänzt du den Menüeintrag von Hand. Bewahre die geänderte Datei auf, damit du den Eintrag nach einem Shopupdate wiederherstellen kannst.
 
 [plugin:content-inject](/content_blocks/download_installer)
 
+## Shopdateien übertragen
 
-folgende Dateien und Ordner aus dem entpackten Zip-Archiv auf den Shop-Server übertragen:
+<span id="schritt-1-neue-dateien"></span>Kopiere `catalog/admin/mailbeez.php` ins Adminverzeichnis des Shops. Kopiere `catalog/mailhive/` und `catalog/mailhive.php` ins Shopverzeichnis neben die `index.php`.
 
+## Eintrag im Adminmenü anlegen
 
-```bash
-admin/mailbeez.php
-mailhive/
-mailhive.php
+<span id="schritt-2-menue-eintrag-a"></span>Öffne `admin/includes/column_left.php` im Shopverzeichnis. Ein Shopupdate kann eine manuelle Menüänderung überschreiben.
 
+Suche in der vorhandenen Datei nach diesem Ausschnitt.
 
-```
-
-
-
-
-## Schritt 2 - Menü-Eintrag anlegen
-
-
-folgende Datei öffnen:
-
-```bash 
-admin/includes/column_left.php  
-
-
-```
-
-
-finde
-
-``` 
+```text
 ' . BOX_IMPORT . '</a><br>';
-
-
 ```
 
+Füge unmittelbar nach dieser Zeile den folgenden Eintrag ein.
 
-Danach in einer neuen Zeile folgendes einfügen:
-
-
-
-``` 
+```php
 if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['mailbeez'] == '1')) 
     echo '<li class="leftmenu_body_item"><a class="fav_drag_item" href="' . xtc_href_link('mailbeez.php') . '"> MailBeez</a></li>';
-
 ```
 
+## Zugriff vergeben
 
+<span id="schritt-3-zugriffsrechte-"></span>Rufe auf der Shopdomain einmal `/mailhive.php` auf. Dadurch erhält der Hauptadministrator Zugriff. Weitere Berechtigungen vergibst du einzeln in der Shopverwaltung.
 
-## Schritt 3 - Zugriffsrechte vergeben
-
-einmalig
-
-
-```
-http://(shop)/mailhive.php
-
-
-```
-
-
-im Browser aufrufen.
-
-Hierdurch werden die erforderlichen Admin-Rechten für den HAUPT-Admin vergeben.
-Nach einem erneuten Login und leeren des Seiten-Caches wird MailBeez im Admin Menü erscheinen.
-Falls erforderlich dann Zugriffs-Rechte im Gambio-Admin System für weitere Admin-user vergeben
-
-
+Melde dich erneut an und leere den Seitencache, bevor du den Menüeintrag prüfst.
 
 [plugin:content-inject](/content_blocks/run_installer)
-
-
-

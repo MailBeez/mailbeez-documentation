@@ -1,7 +1,8 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Add ShopRatings to Emails
-menu: Add ShopRatings
+title: "Store ratings in emails"
+module_subtitle: "Insert store ratings in emails based on the earlier template system"
+menu: "Store ratings in emails"
 slug: filter_add_shoprating
 published: true
 template: docs
@@ -14,7 +15,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Add ShopRatings to Emails"]
 module:
     code: 'shoprating_advanced'
     category: [filterbeez]
@@ -39,22 +40,24 @@ metadata:
 #  last_modified: true
 ---
 
-Automatically add your store’s ShopRatings reviews into any MailBeez email campaign with this filter; perfect for spicing up the [Winback](/documentation/mailbeez/winback_advanced/ "Winback Advanced Module") and [No Purchase](/documentation/mailbeez/nopurchase_advanced/ "Mailbeez No Purchase Modules") Mailbeez modules.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To choose a review integration in V5, open [Integrations](/extensions/integrations). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-### Usage
+Display store reviews in emails that use the earlier template system. Check that reviews from [Collect reviews in your store](/configbeez/config_shopvoting) are available first, then install and activate the display module.
 
-Install and activate this Module – you need to have the [MailBeez ShopRating](/documentation/configbeez/config_shopvoting "ShopRating") configured.
+A short customer comment about shipping or support can reassure someone considering another order. Keep the store review recognizable as feedback about the shopping experience.
 
-By adding the following tags into your MailBeez templates you will be able to show a configured number of ShopRatings in your MailBeez generated emails. You can place the tags wherever you want, so for example if you place them within your main template the ratings will be shown in all emails, but if you place them only in your content template, you are able control exactly in which emails the ratings will be visible:
+## Insert the review into a template
 
-Place this into the HTML-Version of your MailBeez template:
+<span id="usage"></span>For one campaign, edit its content template. For all emails with the same design, edit the main template. Put this placeholder in the HTML version.
 
-```
+```smarty
 {$content.shoprating.html}
 ```
 
-Place his into the TXT-Version of your MailBeez template:
+Use its text counterpart in the plain-text version.
 
-```
+```smarty
 {$content.shoprating.txt}
 ```

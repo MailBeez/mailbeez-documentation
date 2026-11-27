@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Coupon Recipes
+title: "Coupon recipes"
 slug: coupon-recipes
 
 routes:
@@ -8,6 +8,7 @@ routes:
         - /documentation/cookbook/newsletter-related
 
 date: 17-02-2016
+original_v4: true
 published: true
 publish_date: 17-02-2016
 template: tutorial
@@ -24,129 +25,30 @@ taxonomy:
 
 ---
 
-[TOC]
+<span id="requirement"></span>A signup coupon rewards a confirmed subscription. A gift voucher delivers value someone has already paid for. Start with the recipe that matches your promise to the customer. Your shop needs a supported coupon system for either one.
 
+<span id="coupon-giveaway-for-registering-to-receive-newsletters"></span>
 
+## Give a subscriber a welcome coupon
 
-## Coupon giveaway for registering to receive newsletters
+1. <span id="solution"></span>In [Content → Coupons](/content/coupons), open **Templates**. For example, enter a fixed €5 discount and choose its validity and redemption restrictions.
+2. Open [Contacts → Signup Confirmation](/contacts/signup-confirmation). Select the confirmation email for prospects or customers and assign the template if this option is available. Use an inbox you can access to sign up and follow the confirmation link.
+3. Open the email that arrives after confirmation. Check the code, its expiry and the discount on an eligible basket in your test shop. If you also accept signups from people with a shop account, repeat the test with that type of account.
 
-> [!TIP]
-> In compliance with certain exceptions, stores are allowed to contact their customers without explicit consent via email. Read more on [legal information](/about/legal-information)
+### Welcome coupons in Newsletter Advanced
 
+<span id="create-a-dynamic-list-of-recipients"></span>In the earlier newsletter editor, the welcome email belonged to a campaign with a dynamic list. The original example used shop newsletter subscribers and limited customer account age to zero or one day. An existing customer who subscribes today can already be outside that age window. Test the list with both a new account and an older subscriber before using it.
 
-### Requirement
+[doc-image src="Screen_welcome_list.en.png" alt="Earlier list editor with the age criteria for the welcome coupon audience" /]
 
-You want to send your customers a coupon or voucher when they sign up for your newsletter
+<span id="create-a-welcome-newsletter"></span>Assign the list to the campaign and the coupon template to the welcome newsletter. Check the newsletter’s active period, preview each shop language and test the email before marking it ready.
 
-### Solution
+[doc-image src="Screen_welcome_email.en.png" alt="Earlier newsletter editor showing the welcome email with its coupon" /]
 
-Using the [Newsletter Advanced Module](/documentation/mailbeez/newsletter), you can customize and automatically send a store coupon to customers that register for the newsletter.
+<span id="voucher-as-a-gift-product"></span>
 
-Just follow these steps:
+## Send a purchased gift voucher
 
-####Create a dynamic list of recipients
+<span id="requirement-1"></span><span id="solution-1"></span><span id="create-a-gift-voucher-product"></span><span id="create-a-dynamic-list-of-recipients-1"></span>In an older shop with Newsletter Advanced, create a €25 gift voucher as a shop product. Select buyers of that product in the list, then assign a €25 coupon template to the voucher email. Check which order statuses your setup accepts before treating an order as paid.
 
-1. Navigate to MailBeez Newsletter Module `MailBeez > MailBeez Modules > Newsletter Advanced`.
-1. On the right hand side, click on button `Edit Lists`.
-1. Create a new list, named e.g. `welcome coupon`. Select source `Shop Subscriber`. Click `insert` to save the list.
-1. Select the newly created list and click on `edit segmentation` - a new window opens.
-1. In segmentation settings, in section `customer`, configure the following:
-    - Customer Signup Age Min: 0
-    - Customer Signup Age Max: 1 (or a higher value if you want to send a coupon to past subscribers)
-[doc-image src="Screen_welcome_list.en.png" alt="Newsletter list" /]
-1. Scroll down and click `update` to save the segmentation.
-1. Back in the `Edit Lists` window, click `Test Segmentation` - you will now see customers matching the segmentation criteria - click on a customer, and the Customer Insight window opens.
-
-You have now created a list of the latest newsletter subscribers.
-
-
-
-####Create a Welcome newsletter
-
-[plugin:content-inject](/content_blocks/pro_template_coupon_setup)
-
-
-1. Navigate to MailBeez Newsletter Module `MailBeez > MailBeez Modules > Newsletter Advanced`. 
-1. On the right hand side click on button  `Edit Campaigns`.
-1. Create a new campaign named e.g. `Welcome newsletter`, and as default list, select the previously created list `welcome coupon` - click `insert` to save the campaign.
-1. Select the newly created campaign and click on `Edit Campaign items`.
-1. Create a new Newsletter - select the coupon template - and click `New newsletter`.
-1. Scroll down to `Select Coupon-Template for this Newsletter` to select or set-up a new coupon. Click `update` to save.
-1. Configure the 'active until' date to 01/01/2099 (sets the newsletter to virtually never expire) and click `update` to save.
-1. Now, design the email. Click on the + icon in the editor to add the layout element to display the coupon.
-    - Note: If your store is set up for several languages, you need to design the other language templates as well.
-1. Once you are happy with the design and test emails, you can click on `ready for sending` to activate the newsletter.    
-
-[doc-image src="Screen_welcome_email.en.png" alt="Welcome email" /]
-
-Congratulations! You have now created a Welcome newsletter, which will be sent to all recipients matching your segmentation list the next time the sending process is triggered.
-
-
-
-
-
-## Voucher as a gift product
-
-### Requirement
-You want to give your customers the option to purchase a store voucher that they can use as a gift.
-
-
-### Solution
-Using the [Newsletter Advanced Module](/documentation/mailbeez/newsletter) you can customize and automate a configurable voucher that customers can purchase as an individual product. The voucher can be configured with all configuration options available in your store coupon-system - e.g. one time use, limited to products/categories etc. The voucher is unique, but not personalized. 
-
-Just follow these steps:
- 
-#### Create a "gift voucher" product
- 
-1. In your products catalog create a new category `Gift Voucher`
-1. In this new category create a product named e.g. `Gift Voucher 25 USD` (use relevant currency)
-    - Select a product description, product image etc.
-    - Set a price matching the value of the voucher
-
-Now you have created a new product, which is a voucher and represents the purchase of a voucher with a value of 25 USD. In the next step we will configure the Newsletter Advanced module to automatically send a voucher after the purchase of this product.
-
-
-####Create a dynamic list of recipients
-
-1. Navigate to MailBeez Newsletter Module `MailBeez > MailBeez Modules > Newsletter Advanced`.
-1. On the right hand side, click on button `Edit Lists`.
-1. Create a new list, name it e.g. `gift voucher`. Select source `Shop Subscriber`. Click `insert` to save the list.
-1. Select the newly created list and click on `edit segmentation` - a new window opens.
-1. In the segmentation settings, section `geographical` configure the following:
-    - Exclude following countries from newsletter check: (you should enter all relevant countries so the voucher can be sent to a customer regardless if they have subscribed to the newsletter or not).
-1. In the segmentation settings, in section `products`, configure the following:
-    - Products purchased: Select a voucher product you created e.g. `Gift Voucher 25 USD`.
-1. Click `update` to save the segmentation.
-1. Click on `Test Segmentation`- you will now see customers matching the segmentation criteria - click on a customer, and the Customer Insight window opens.
-
-You have now created a list which finds all customers who have purchased the product Gift Voucher.
-
-
-
-
-
-####Create the voucher email
-
-[plugin:content-inject](/content_blocks/pro_template_coupon_setup)
-
-1. Navigate to MailBeez Newsletter Module `MailBeez > MailBeez Modules > Newsletter Advanced` 
-1. On the right hand side click on button  `Edit Campaigns`
-1. Create a new campaign named e.g. `Gift Voucher Emails`, and as default list, select the previously created list `gift voucher` - click `insert` to save the campaign.
-1. Select the newly created campaign and click on `Edit Campaign items`.
-1. Create a new Newsletter - select the coupon template - and click `New newsletter`.
-1. Scroll down to `Select Coupon-Template for this Newsletter` to select or set-up a new coupon. Click `update` to save.
-1. Configure the 'active until' date to 01/01/2099 (sets the newsletter to virtually never expire) and click `update` to save.
-1. Now, design the email. Click on the + icon in the editor to add the layout element to display the coupon.
-    - Note: If your store is set up for several languages, you need to design the other language templates as well.
-1. Once you are happy with the design and test emails, you can click on `ready for sending` to activate the newsletter.
-
-
-Congratulations! You have created an email, which will be sent to the customers who have purchase the gift voucher the next time the sending process is triggered.
-
-To offer multiple gift vouchers, just repeat the steps above for each additional gift voucher.
-
-
-> [!NOTE]
-> **Current limitations**:\
-> Only 1 voucher can be sent for each customer, and for each purchase.\
-> **Please contact us in case you have additional requirements.**
+<span id="create-the-voucher-email"></span>Try one paid voucher order and one ordinary order in a test shop. Only the voucher buyer should receive a redeemable €25 code. The original recipe supports one voucher per customer and purchase. Test a quantity of two before offering multiple vouchers on one order. For a second denomination, use a separate product and a matching template.

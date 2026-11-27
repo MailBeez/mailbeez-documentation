@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: MailBeez Analytics
+title: "Öffnungs- & Klick-Tracking"
+module_subtitle: "Festlegen, welche Öffnungen und Klicks MailBeez erfasst"
 slug: config_analytics
 routes:
     aliases:
@@ -40,36 +41,17 @@ metadata:
 #  last_modified: true
 ---
 
+Lege fest, ob MailBeez Öffnungen und Klicks für deine Kampagnen erfassen soll. Im Bericht erscheinen nur Ereignisse, die bei eingeschaltetem Tracking aufgezeichnet wurden.
 
-MailBeez Analytics ist das MailBeez eigene Analytics System, mit dem Sie den Erfolg Ihrer MailBeez Emails messen können.
+Eine Öffnung oder ein Klick ist eine erfasste Interaktion mit der Nachricht. Für den anschließenden Besuch im Shop prüfst du die Kampagnenparameter deines Analysedienstes.
 
-Die Messung erfolgt nach folgenden Prinzipien:
+Öffne **System → Konfiguration** und wähle **Öffnungs- & Klick-Tracking**.
 
+Die erfassten Werte findest du unter **Auswertung → MailBeez → E-Mail-Performance**. Vergleiche Zeiträume mit denselben Tracking-Einstellungen.
 
-### Öffnungsraten
+<span id="diese-einstellungen-sind-"></span>
 
-eine Email gilt als geöffnet, wenn eines der folgenden Ereignisse eintrifft:
+## Kennzahlen im Dashboard aktualisieren
 
-- Das Tracking-Pixel wird geladen (passiert nur, wenn das Email-Programm des Kunden die HTML-Version der Email anzeigt und die Bilder lädt)
-- Klick auf einen Link in der Email, der zum Shop führt
-- Tätigung eines Kaufes unter Nutzung des in der Email enthaltenen Gutschein-Codes
-
-
-Das Laden des Tracking-Pixels verwendet einen hoch performanten Aufruf, um die Server-Last zu minimieren: Jeder Pixel-Aufruf wird in einer Log-Datei protokolliert. Bei jeder Ausführung von MailBeez wird die Log-Datei in die MailBeez Analytics Datenbank importiert und die Log-Datei wird gelöscht. Hierdurch kann eine zeitliche Verzögerung zwischen dem eigentlichen Öffnen der Email und der Aktualisierung der Öffnungsraten entstehen.
-
-
-### Klickraten
-
-Eine Email gilt als angeklickt wenn das folgende Ereignis eintrifft:
-- Klick auf einen Link in der Email, der zum Shop führt
-
-
-### Bestellraten
-
-Ein Bestellung gilt als über eine MailBeez Email vermittelt, wenn eine der folgenden Bedingungen erfüllt ist:
-
-- Kauf als Folge eines Link-Klicks
-- Kauf unter Nutzung des in der Email enthaltenen personalisierten Gutschein-Codes
-
-> [!NOTE]
-> Öffnen und Klicks auf Kopie-Emails werden nicht gezählt, da diese Emails eine eigene Message-ID haben. Somit werden nur die Aktionen der wirklichen Empfänger (Kunden) erfasst.
+- **Manuelle Aktualisierung im Dashboard**<br>
+  Lege fest, was eine manuelle Aktualisierung neu berechnet. Automatische Prüfungen laufen weiter. Während der Berechnung bleiben die bisherigen Werte sichtbar.

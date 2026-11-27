@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: "Numinix Store Credit: Display Balance"
+title: "Numinix balance in emails"
+module_subtitle: "Display a customer’s available store credit in a Zen Cart email"
 slug: filter_add_numinix_sc_balance
 # menu: Numinix Store Credit: Display Balance
 date: 14-10-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Numinix Store Credit: Display Balance"]
 # added collection selector
 module:
     code: 'numinix_sc_balance_reminder'
@@ -41,12 +42,10 @@ metadata:
 #  last_modified: true
 ---
 
-**Display Store Credit Balance in Emails**
+[doc-callout type="note" title="Earlier filter"]
+For the filters you can configure in V5, open [Add-ons](/extensions/addons). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-Developed in Cooperation with Numinix, the inventor of the popular [Numinix Store Credit module](https://www.numinix.com/plugins/zen-cart-plugins/taxes-order-totals/store-credit-and-reward-dollars?referral_code=888671548  "Numinix Store Credit Module")
+Display the customer’s current credit balance in a Zen Cart email. The filter comes with [Numinix Store Credit: Balance Reminder](/mailbeez/numinix-store-credit-balance-reminder) and requires Numinix Store Credit & Reward Points. Add the balance field to the appropriate email template, then preview it with a customer who has credit. See [Numinix Store Credit: Review Rewards](/mailbeez/numinix_sc_review_reward) if a review should also earn credit.
 
-
-Delivered with the [Numinix Store Credit Balance Reminder email module](/documentation/mailbeez/numinix_sc_balance_reminder/), this filter allows you to easily display a customer’s current store credit balance in any MailBeez generated email by adding a simple tag to your email templates.
-
-You might also like the [Numinix Review Reward module](/documentation/mailbeez/numinix_sc_review_reward/ "Numinix Review Reward Module")  
-  
+Preview an email for a customer with a known balance. Compare the displayed amount with the credit in that customer’s shop account before using the template.

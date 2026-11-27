@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="24" viewBox="0 0 48 24">
+<defs><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" id="module-art" width="16" height="16"><circle cx="9" cy="8" r="3"/><path d="M3 21v-2a6 6 0 0 1 12 0v2M16 5a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 4v2"/></svg></defs>
+<g transform="translate(0 0)"><rect width="24" height="24" rx="6" fill="color-mix(in oklab, oklch(70.2% 0.183 293.541) 80%, transparent)"/><g><use xlink:href="#module-art" x="4" y="4" color="#fff" stroke="none"/></g></g>
+<g transform="translate(24 0)"><rect width="24" height="24" rx="6" fill="color-mix(in oklab, oklch(70.2% 0.183 293.541) 80%, transparent)"/><g><use xlink:href="#module-art" x="4" y="4" color="#fff" stroke="none"/></g></g>
+</svg>

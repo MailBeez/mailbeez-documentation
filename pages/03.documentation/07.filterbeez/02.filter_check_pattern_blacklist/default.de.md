@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Musterbasierte Blacklist
+title: "Adress-Sperrliste"
+module_subtitle: "E-Mail-Adressen nach Mustern sperren"
 slug: filter_check_pattern_blacklist
 routes:
     aliases:
@@ -20,7 +21,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "E-Mail-Adressen nach Mustern sperren"]
 module:
    code: 'filter_check_pattern_blacklist'
    category: [filterbeez]
@@ -45,6 +46,12 @@ metadata:
 #  last_modified: true
 ---
 
-Dieser Filter blockiert MailBeez für alle Email-Adressen, die einem bestimmten Muster entsprechen, z.B. `@marketplace.amazon.de`.
+Dein Team bestellt bei jedem Test des Checkouts Ersatzteile mit eigenen Testadressen. Diese Konten sollen keine Kundenmailings erhalten. Nutzen alle eine eigene Testdomain, kannst du sie mit einer Regel erfassen.
 
-Es können unbegrenzte Muster wie `@marketplace.amazon.de` defniert werden , ein Muster je Linie. Emails, die dieses Muster enthalten, werden blockiert.
+## Einen eindeutigen Adressbestandteil wählen
+
+Öffne **System → Erweiterungen → Zusatzmodule → Filter** und wähle **E-Mail-Adressen nach Mustern sperren**.
+
+Trage unter **Gesperrte E-Mail-Adressbestandteile** pro Zeile eine feste Zeichenfolge ein. Groß- und Kleinschreibung zählen. Die Folge kann an jeder Stelle der Adresse vorkommen. Ein Sternchen gilt als gewöhnliches Zeichen.
+
+So trifft `@test.example` auf `alex@test.example` und auch auf `alex@test.example.org` zu. `alex@shop.example` bleibt unberührt. Vergleiche vor dem Aktivieren gewünschte Treffer mit einer ähnlichen Adresse, die weiter E-Mails erhalten soll. Für die Sperre eines einzelnen Kunden helfen dir die [E-Mail-Sperren](/filterbeez/filter_check_block_all).

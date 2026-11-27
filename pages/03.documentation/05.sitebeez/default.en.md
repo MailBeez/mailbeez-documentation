@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: SiteBeez Modules
+title: "SiteBeez modules"
 slug: sitebeez
 date: 28-06-2018
 published: true
@@ -33,8 +33,6 @@ metadata:
 #  last_modified: true
 ---
 
-### Chapter 3
+Use the SiteBeez reference to identify a widget already embedded in an older storefront. To add or test the current newsletter form, use [Embed a signup form](/sitebeez/site_signup).
 
-# SiteBeez Modules
-
-The SiteBeez modules allow you to enrich the user experience of your store and - depending on the type of module - virtually any of your other websites with intercations and personalized content.
+Find the page where the widget appears, such as the footer of a category page. That gives you a concrete place to check after changing its configuration.

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Add Trustpilot Ratings
+title: "Trustpilot ratings in emails"
+module_subtitle: "Insert imported Trustpilot ratings in campaign emails"
 slug: filter_add_trustpilot_rss
 # menu: Add Trustpilot Ratings
 date: 03-05-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Add Trustpilot Ratings"]
 module:
     code: 'config_trustpilot_rss_importer'
     category: [filterbeez]
@@ -42,61 +43,47 @@ metadata:
 #  last_modified: true
 ---
 
-Automatically add your store’s Trustpilot reviews into any MailBeez email campaign with the Add Trust Pilot Filter, part of the [Trustpilot Integration Suite](/documentation/configbeez/config_trustpilot_rss_importer/ "Trustpilot Integration Suite"); perfect for spicing up the [Winback](/documentation/mailbeez/winback_advanced/ "Winback Advanced Module") and [No Purchase](/documentation/mailbeez/nopurchase/ "Mailbeez No Purchase Modules") Mailbeez modules.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To choose a review integration in V5, open [Integrations](/extensions/integrations). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-With a default installation that uses the included template, your Trustpilot ratings will appear in a Mailbeez email like this:
+Display Trustpilot reviews in emails that use the earlier template system. Check that reviews from [Import reviews from Trustpilot](/configbeez/integrations/config_trustpilot_rss_importer) are available first, then install and activate the display module.
 
-![](Screen_default_email_template.png) 
+Check that the Trustpilot reviews on file belong to the storefront named in the email. This is easy to overlook when two shops share the same layout.
 
-### Options:
+## Insert the review into a template
 
-**Number of ratings**  
- Number of ratings shown in emails (number)
+<span id="usage"></span>For one campaign, edit its content template. For all emails with the same design, edit the main template. Put this placeholder in the HTML version.
 
-**Minimum Stars**  
- Show only ratings with at least this number of stars (3-5)
-
-**Shuffle Ratings**  
- Do you want to shuffle the ratings (True) or show only the latest ones (False)
-
-### Usage
-
-Install and activate this Module – you need to have the [Trustpilot Integration Suite](/documentation/configbeez/config_trustpilot_rss_importer/ "Trustpilot Integration Suite") configured.
-
-By adding the following tags into your MailBeez templates you will be able to show a configured number of Trustpilot ratings in your MailBeez generated emails. You can place the tags wherever you want, so for example if you place them within your main template the ratings will be shown in all emails, but if you place them only in your content template, you are able control exactly in which emails the ratings will be visible:
-
-Place this into the HTML-Version of your MailBeez template:
-
-```
+```smarty
 {$content.rss.trustpilot.html}
 ```
 
-Place his into the TXT-Version of your MailBeez template:
+Use its text counterpart in the plain-text version.
 
-```
+```smarty
 {$content.rss.trustpilot.txt}
 ```
 
-the template for displaying the ratings is taken from the RSS-Feed template files
+The display templates are in `mailhive/configbeez/config_trustpilot_rss_importer/templates`.
 
-```
+```text
 rss_email_html.tpl  
 rss_email_txt.tpl
 ```
-located in
 
-`mailhive\configbeez\config_trustpilot_rss_importer\templates`
+For a custom display, read the review fields in the template loop.
 
-More advanced users can also directly access the data object holding the ratings in the email template using following code example.
-
-
-```
+```smarty
 {assign var=feed_feed value=$data.feed.trustpilot}
 {section name=item loop=$feed_feed}
   {$feed_feed[item].rating_stars}
-  {$feed_feed[item].text}</br>
-  {$feed_feed[item].user_deeplink}</br>
+  {$feed_feed[item].text}<br>
+  {$feed_feed[item].user_deeplink}<br>
   {$feed_feed[item].date|date_format}
 {/section}
 ```
 
+<span id="display-options"></span>Set the number of ratings and the minimum rating (3–5 stars). Choose whether to show the latest matching reviews or shuffle them.
+
+![Three Trustpilot reviews in the email footer, each with a star rating and a link to the full review.](Screen_default_email_template.png)

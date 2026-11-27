@@ -1,5 +1,6 @@
 ---
-title: Birthday
+title: "Birthday greetings"
+module_subtitle: "Send an annual greeting on the customer’s birthday"
 published: true
 date: '22-05-2010 00:00'
 publish_date: '22-05-2010 00:00'
@@ -42,7 +43,25 @@ author:
     name: admin
 ---
 
-It does what it says it does! It sends Birthday Greetings to your customers – each year – for free.
+[doc-callout type="note" title="Earlier campaign module"]
+Choose a flow for a current shop under [Automations](/mailbeez). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-To include a unique and personalized Coupon with a Birthday Greeting, sent through responsive design emails, please choose the [Birthday Coupon Module](/documentation/mailbeez/coupon_birthday/ "The Mailbeez Birthday Coupon Module") as part of the matching Pro Subscriptions.
+To send the annual greeting on the birthday itself, use a customer record with a birth date and set the send window accordingly. A wider window can also include greetings shortly before or after the birthday.
 
+If your team processes birthday greetings on weekdays, decide first whether a late Monday greeting still makes sense for a Saturday birthday.
+
+To send only on the birthday, set both day limits to `0`. Preview the greeting with a customer profile that includes a birth date.
+
+<span id="settings-to-check"></span>
+
+## Choose the birthday window
+
+- **Target Days Before**<br>
+  Days before the birthday. Use `0` for the birthday itself.
+- **Target Days After**<br>
+  Last day to send a belated greeting. Use `0` to end the window on the birthday.
+- **Google Analytics Integration**<br>
+  Enable campaign parameters on links for this module.
+- **Google Analytics Integration URL rewrite mode**<br>
+  Choose which links receive these parameters.

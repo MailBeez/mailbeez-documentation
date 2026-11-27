@@ -2,6 +2,7 @@
 # http://learn.getgrav.org/content/headers
 title: Anpassung der Modul-Vorlagen
 slug: anpassung-der-modul-vorlagen
+original_v4: true
 published: true
 template: tutorial
 
@@ -16,77 +17,18 @@ taxonomy:
     tag: [pro]
 ---
 
-[TOC]
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Haupt-Vorlagen](/content/main-templates) den gemeinsamen E-Mail-Rahmen ändern. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
+<span id="aufbau-der-vorlagen"></span>Bearbeite die Modulvorlage, wenn sich der Inhalt einer einzelnen Kampagne ändern soll. Im früheren Editor fügt die gemeinsame Hauptvorlage diese Nachricht bei `{$body}` ein. Die Modulvorlage kann eine Produktliste einbinden, etwa mit `{$list_engine.productlist}`. Den heutigen [Geburtstagsflow](/mailbeez/coupon_birthday) beschreibt die V5-Anleitung. Für Änderungen am gemeinsamen Kopfbereich siehe [Eine Haupt-Vorlage bearbeiten](/tutorials/anpassung-der-hauptvorlage).
 
-## Aufbau der Vorlagen
-Alle von MailBeez generierten Emails werden aus der gemeinsamen Haupt-Vorlage und Modul-Vorlagen zusammengesetzt. In diesem Tutorial wird beschrieben, wie die Vorlagen der Module bearbeitet werden können.
+Verwende in der Vorschau Text in realistischer Länge. Eine Zeile mit kurzem Beispielnamen kann bei einem langen Kundennamen ganz anders umbrechen.
 
-<div style="padding: 30px; border: 1px solid #c0c0c0; background-color: #FFFFFF; width: 100%; max-width: 600px; margin:auto" markdown="1">
-[Gemeinsame Hauptvorlage](/dokumentation/tutorials/anpassung-der-hauptvorlage)
-<div style="padding: 30px; border: 1px solid #c0c0c0; background-color: #E7F2FA;" markdown="1">Modul-spezifische Inhalts-Vorlage<br>
-Platzhalter `{$body}`
-<div style="padding: 30px; border: 1px solid #c0c0c0;" markdown="1">Produktlisten-Vorlage<br>
-Platzhalter z.B. `{$list_engine.productlist}`
-</div>
-</div>
-</div>
+## Kampagnenlayout bearbeiten
 
-
-## Modul-Vorlage zum Bearbeiten öffnen
-
-Alle Profi-Module enthalten den visuellen Editor, mit dem die modul-spezifischen Vorlagen (also der Inhalt welches die Module in das gemeinsame "Briefpapier" einfügen) komfortabel und visuelle bearbeitet werden können.
-
-Die Modul-Vorlagen können jeweils im Modul, also z.b. für das Modul "[Gutschein: Geburtstags Glückwünsche](/dokumentation/mailbeez/coupon_birthday)" unter 
-
-`MailBeez > MailBeez Module > Gutschein: Geburtstags Glückwünsche  > Template Verwaltung Button "bearbeiten"` 
-
-im visuellen Editor zur Bearbeitung geöffnet werden.
-
-
-## Laden einer Vorlage
-
-Auf der rechten Seite kann mit Hilfe des Buttons `Layout-Vorlage wählen` eine Vorlage geladen werden. Wählen Sie dort die für das aktuelle Modul passende "**responsive**" Vorlage aus, um die aktuellste Version der mobilfreundlichen Modul-Vorlage zu laden.
-
-
-## Anpassung des Inhaltes
-
-Jede Vorlage ist aus einer Reihe von Inhalts-Elementen zusammengestellt, welche einzeln bearbeitet, verschoben oder auch entfernt werden können. Sobald Sie den Mouse-Zeiger über die Bereiche bewegen, werden Sie die Inhalts-Elemente erkennen. 
-
-### Inhalt bearbeiten
-
-Zeigt sich links ein Bleistift-Symbol? Einfach anklicken und es öffnet sich die jeweilige Bearbeitungs-Ansicht.
-
-### Element verschieben
-
-In dem Kontext-Menü rechts sehen Sie Pfeile (oben/unten) - mit klick auf den gewünschten Pfeil verschieben Sie das aktuelle Element entweder nach oben oder unten
-
-
-### Element löschen
-
-Die Mülltonne-Schaltfläche im  Kontext-Menü macht genau dies - es entfernt das aktuelle Element
-
-### Element einfügen
-
-Mit Klick auf das +-Symbol Kontext-Menü öffnet sich eine Auswahl der einfügbare Inhalts-Elemente. Mit Klick wird das gewünschte Element nach dem aktuellen Element eingefügt.
-
-## Testen der Vorlage
-
-Im visuellen Editor finden Sie oben links Buttons wie "320px", "480px" - hiermit können Sie jederzeit beim bearbeiten testen, wie die Vorlage auf mobilen Endgeräten umgebrochen wird. Sollte sich die Vorlage nach einigen Anpassungen nicht sauber auf z.B. 320px umbrechen, dann gibt es ein Element (z.B. ein Bild) welches eine feste Breiten-Angabe hat und somit nicht angepasst werden kann. In diesem Fall als Breite "100%" angeben. Auch lange URLs können Probleme machen, ggf. den Text etwas kürzen.
-
-Sobald die Vorlage im Editor gut aussieht, können Sie die "Mobil" Vorschau nutzen - oben rechts finden Sie den Button "Mobil", welche Ihnen dann die aktuelle Vorlage interaktiv in verschiedenen mobilen Endgeräten anzeigt. Auch können Sie mit der Funktion "Sende Test-Email" schnell eine Email mit Test-Inhalten zur Layout-Kontrolle an eine beliebige Email-Adresse senden.
-
-
-## Text-Version
-
-Um das Risiko eines Spam-Ratings zu reduzieren und auch alte Email-Programm zu unterstützen empfiehlt es sich, auch die Text-Version der Vorlage zu bearbeiten. Mit Klick auf den Button "**TXTMODE**" öffnet sich der Editor der Text-Version - mit dem entsprechenden Button unten rechts kann dann automatisch eine Text-Version der Modul-Vorlage angelegt und danach bearbeitet werden.
-
-
-## Speichern einer Vorlage
-
-Sind Sie mit den Anpassungen zufrieden? Dann ist es eine gute Idee, den aktuellen Stand als Vorlage zu speichern. Hierzu rechts den Button `als Layout-Vorlage speichern` anklicken und nach Angabe eines Namens die Vorlage abspeichern. Diese Version kann dann jederzeit unter  `Layout-Vorlage wählen > User` wieder geladen werden.
- 
- 
-## Aufpasst: Nerd-Mode
-
-Der "**Nerd-Mode**" erlaubt die Bearbeitung der Modul-Vorlagen in Code-Ansicht. Hier haben Sie vollen Zugriff auf den Code der Vorlage und Experten können dort komplexere Anpassungen vornehmen - Achtung: man kann auch schnell eine Vorlage "Kaputt"-verbessern, so dass die Darstellung auf den verschiedenen Email-Programmen (z.B. Outlook ist sehr undankbar) ungewünschte Ergebnisse bring.
+1. <span id="modul-vorlage-zum-bearbeiten-ffnen"></span><span id="modul-vorlage-zum-bearbei"></span>Öffne die Vorlagenverwaltung des Moduls. Beim Geburtstagsmodul findest du sie unter **MailBeez → MailBeez Module → Gutschein: Geburtstags Glückwünsche**. Wähle dort **bearbeiten**. Der visuelle Editor gehörte zu den Profi-Modulen.
+2. <span id="element-lschen"></span><span id="element-einfgen"></span><span id="laden-einer-vorlage"></span><span id="anpassung-des-inhaltes"></span><span id="inhalt-bearbeiten"></span><span id="element-verschieben"></span><span id="element-loeschen"></span><span id="element-einfuegen"></span>Um ein Layout zu laden, öffne **Layout-Vorlage wählen** und wähle die zum Modul passende responsive Vorlage. Mit dem Bleistift bearbeitest du ein Element, mit den Pfeilen verschiebst du es. Der Papierkorb entfernt es, das Pluszeichen fügt danach ein neues Element ein.
+3. <span id="testen-der-vorlage"></span>Prüfe die Vorschau bei 320 und 480 Pixeln. Ragt ein Bild über den Rand, teste `100%` als Breite. Kürze lange sichtbare Linktexte. Prüfe dann die Vorschau **Mobil** und sende dir eine Test-E-Mail.
+4. <span id="text-version"></span>Öffne **TXTMODE**, um die Textfassung zu erzeugen oder zu bearbeiten. Prüfe, ob der wichtigste Link enthalten ist.
+5. <span id="speichern-einer-vorlage"></span><span id="aufpasst-nerd-mode"></span>Wähle **als Layout-Vorlage speichern** und gib deiner Kopie einen Namen. Unter **Layout-Vorlage wählen → User** kannst du sie wieder laden. Teste Änderungen im **Nerd-Mode** erneut in den E-Mail-Programmen deiner Kunden.

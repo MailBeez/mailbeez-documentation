@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: Listen Dienst
+module_subtitle: "Raster für Produktlisten in E-Mails konfigurieren"
 slug: config_list_engine
 routes:
     default: /dokumentation/configbeez/config_list_engine
@@ -44,10 +45,12 @@ metadata:
 #  last_modified: true
 ---
 
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Listen und Segmente](/contacts/lists-segments) eine Empfängerauswahl zusammenstellen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-## Darstellung von Produkten in Emails
+<span id="darstellung-von-produkten"></span>Lege im Listen-Dienst fest, wie viele Produktbilder und Spalten eine E-Mail zeigt. Dafür muss das Modul den Listen-Dienst nutzen und seine Produktlistenvorlage die Einstellungen unterstützen.
 
-Dieses Untermodul ist für die Generierung von Produkt-Grids verantwortlich.  
- Hier können Sie die Anzahl an Spalten und Produkten gesamt konfigurieren.
+Teste das Raster mit einem langen Produktnamen und mit einer unvollständigen letzten Zeile. Beides zeigt, ob die gewählte Spaltenzahl gut lesbar ist.
 
-**Hinweis**: die verwendete Listen-Vorlage muss diese Einstellungen unterstützen.
+Prüfe die Vorschau mit einer Bestellung, die mehrere Produkte enthält. Bleibt das Raster gleich, kontrolliere die von der Kampagne verwendete Produktlistenvorlage.

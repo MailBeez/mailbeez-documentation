@@ -1,7 +1,8 @@
 ---
 redirect: http://beezdesk.com
 
-title: 'MailBeez eCommerce Helpdesk'
+title: "MailBeez Helpdesk"
+module_subtitle: "Find the helpdesk for an earlier MailBeez shop"
 slug: config_helpdesk
 date: 22-03-2013
 published: true
@@ -16,45 +17,17 @@ taxonomy:
     migration_status: done
     category:
         - docs
-    tag: {  }
+    tag: ["MailBeez eCommerce Helpdesk"]
 author:
     name: admin
 metadata:
     author: admin
 ---
 
-# E-Commerce Customer Service Helpdesk
+[doc-callout type="note" title="Earlier module settings"]
+For settings in the current app, start with [System](/app-system). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-## supported communication channels:
+<span id="e-commerce-customer-servi"></span><span id="supported-communication-c"></span><span id="email"></span><span id="chat"></span><span id="forms"></span><span id="facebook"></span><span id="twitter"></span><span id="forum"></span><span id="feedback-suggestions"></span><span id="knowledgebase"></span>This earlier helpdesk brought customer conversations from email, chat, forms, Facebook, Twitter, forums and feedback boards into one service desk. It also included a knowledge base. Use [BeezDesk CRM Integration](/configbeez/config_beezdesk) for the shop connection, department assignment and message synchronization procedure.
 
-### Email
-
-- unlimited number of email accounts
-
-### Chat
-
-- unlimited number of chats
-
-### Forms
-
-- unlimited number of forms
-
-### Facebook
-
-- unlamented number of Facebook pages
-
-### Twitter
-
-- unlimited number of Twitter accounts
-
-### Forum
-
-- unlimited number of forums
-
-### Feedback/Suggestions
-
-- unlimited number of feedback / suggestion boards
-
-### Knowledgebase
-
-- unlimited number of knowledgbase entries and categories
+If you are tracing an old customer enquiry, identify its original channel and shop first. Those details help you find the conversation in a shared service desk.

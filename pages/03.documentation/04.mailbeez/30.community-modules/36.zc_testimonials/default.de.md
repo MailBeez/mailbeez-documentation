@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: ZC Testimonials Erinnerung Einfach
+title: "Zen-Cart-Erfahrungsberichte"
+module_subtitle: "Zen-Cart-Käufer um einen Erfahrungsbericht bitten"
 slug: zc_testimonials
 routes:
     default: /dokumentation/mailbeez/zc_testimonials
@@ -19,7 +20,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [ce]
+    tag: [ce, "ZC Testimonials Erinnerung Einfach"]
 module:
     code: 'zc_testimonials'
     category: [mailbeez]
@@ -51,4 +52,10 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses Modul ist als Ergänzung zum [Zencart Testimonial Manager](http://www.zen-cart.com/downloads.php?do=file&id=299) entwickelt worden. Es wird Ihre Kunden automatisch an die Abgabe einer Bewertung erinnern.
+[doc-callout type="note" title="Früheres Kampagnenmodul"]
+Für einen aktuellen Shop wählst du den Flow unter [Automatisierung](/mailbeez). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
+
+Für eine Einladung zu einem Erfahrungsbericht braucht die frühere Zen-Cart-Erinnerung den Testimonial Manager. Öffne das Formular über eine Testeinladung, bevor du Erinnerungen aktivierst.
+
+Erkläre den Käufern, wozu du einen Erfahrungsbericht möchtest. Eine Frage nach Lieferung oder Service gibt ihnen einen Einstieg, um den Einkauf in eigenen Worten zu beschreiben.

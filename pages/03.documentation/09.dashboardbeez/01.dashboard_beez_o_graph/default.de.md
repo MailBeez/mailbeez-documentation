@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Der Beez-O-Graph
+title: "Beez-O-Graph"
+module_subtitle: "Versand- und Interaktionszahlen im früheren Widget vergleichen"
 #menu: Beez-O-Graph
 slug: dashboard_beez_o_graph
 date: 17-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: review
     category: [docs]
-    tag: [core]
+    tag: [core, "Der Beez-O-Graph"]
 # added collection selector
 
 author:
@@ -36,13 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
-Der Beez-O-Graph ist das wohl wichtigste Widget auf dem MailBeez Dashboard:
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [E-Mail-Performance](/mailbeez-results/email-performance) Versand, Öffnungen und Klicks vergleichen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Hier können Sie auf einen Blick sehen, wie das System arbeitet. Sie bekommen schnell Einblick, wie viele Emails versendet worden sind, wie viele davon geöffnet, geklickt oder sogar zu Bestellungen geführt haben.
+Suche im früheren Beez-O-Graph den Tag, an dem sich Versandmenge, Öffnungen oder Klicks verändert haben. Ein Klick auf den Legendeneintrag öffnet [Auflistung Tracking Data](/reportbeez/report_track) mit dem passenden Filter.
 
-Standardmässig werden die Daten der letzten 30 Tage gezeigt, aber Sie können auch einen anderen Zeitraum konfigurieren.
-
-In einer neuen MailBeez Installation werden im Beez-O-Graph naturgemäss noch keine Daten angezeigt - dies ändert sich aber, sobald Sie die ersten Emails im Simulations- oder Produktions-Modus versenden.
-
-> [!TIP]
-> Nahezu alle Elemente des Beez-O-Graph sind anklickbar und zeigen dann weitere aufschlussreiche Informationen
+Vergleiche einen Anstieg der Klicks mit der Zahl der versendeten Nachrichten am selben Tag. Ein größerer Versand kann bei ähnlichem Empfängerverhalten mehr Klicks erzeugen.

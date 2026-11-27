@@ -1,5 +1,6 @@
 ---
-title: 'Shopauskunft.de Advanced'
+title: "Shopauskunft"
+module_subtitle: "Ask for reviews on Shopauskunft"
 slug: shopauskunft_advanced
 date:  02-11-2015
 published: true
@@ -16,7 +17,9 @@ taxonomy:
         - docs
     tag:
         - pro
+        - "Ask for reviews on Shopauskunft"
 module:
+    plans_position: after_guide
     code: shopauskunft_advanced
     category:
         - mailbeez
@@ -43,35 +46,30 @@ metadata:
     author: admin
 ---
 
-**Get most out of your Shopauskunft.de Subscription**
+A furniture shop sends a flat-packed oak table by freight. The buyer can review the delivery and packaging once the boxes have arrived. A Shopauskunft invitation ten days after dispatch may suit that order better than an email on the day it leaves the warehouse.
 
-## Advanced Features
+MailBeez builds the link for your Shopauskunft account. With a configured shop ID, it includes the order number, customer number and order email in the link. Use a test customer when checking the destination.
 
-this advanced module gives you a couple of settings to streamline and improve your process of inviting customers to give a rating on Shopauskunft.de:
+## Set up the flow
 
-## multiple order status
+Open **Campaigns → Automations → MailBeez Flows → Ask for reviews on Shopauskunft**, then choose **Options → Configure**.
 
-Do you have different order status marking orders as shipped! No problem, just check all orders status you want the module to react on
+[doc-steps]
+[doc-step]
+**Point the invitation to your shop**
 
+Enter the ID for the correct storefront under **Your Shopauskunft ID**. Check **Your Shopauskunft URL** if you use the older URL-based configuration. Open the review link from a sample invitation to confirm that it identifies your shop.
+[/doc-step]
+[doc-step]
+**Allow for delivery**
 
-## Delay times for international orders
+Select your dispatch status under **Set Order Status** and set **Wait after the order status changes** to 10 for the table example. Keep **Maximum age of the status change** longer than the wait. If freight takes longer abroad, use **Additional delay for international deliveries** to add days for those orders.
+[/doc-step]
+[doc-step]
+**Choose how often to ask**
 
-Shipping to international customers typically takes a couple days longer. To avoid sending a rating invite before delivery, you can define an additional delay for orders shipping to countries other than your own!
+Set **Minimum interval between invitations** so repeat buyers have time between invitations. Read the subject and opening line alongside the delivery notice. Ask about the experience the buyer has just had, such as arranging delivery or receiving all the boxes.
+[/doc-step]
+[/doc-steps]
 
-The module automatically applies this delay to all orders which are shipped to a country, which is different from the home country you configured in your shopping-cart system.
-
-## recognition of regular customers
-
-Don't want to bother your regular customers with an Email to rate on Shopauskunft.de? Simply define a delay (e.g. 120 days) between to invites and your are done. The module will check when the last invite was sent and decides whether to wait or to send a new rating invite.
-
-## responsive email template
-
-the emails are shown perfectly also on mobile deviced
-
-
-<!--
-
-### Want to integrated your valuable ratings with your Store and Email Marketing?
-
-Using the [Shopauskunft.de Integration Suite](/documentation/configbeez/config_shopauskunftrss_importer/) you can easily integrate your Shopauskunft.de-Ratings with your Store - in a way that makes this "unique fresh content" visible to search engines - and your MailBeez generated Email Marketing emails!
--->
+Use [Schedule a review invitation](/cookbook/optimized-review-invite-flow) to check the timing against a test order.

@@ -1,5 +1,6 @@
 ---
-title: 'anniversary Coupon'
+title: "Customer anniversary"
+module_subtitle: "Celebrate customer anniversaries"
 slug: coupon_anniversary
 date: 26-05-2021
 published: true
@@ -17,7 +18,9 @@ taxonomy:
     tag:
         - pro
         - coupon
+        - "Celebrate customer anniversaries"
 module:
+    plans_position: after_guide
     mc_ready: true
     code: coupon_anniversary
     category:
@@ -44,12 +47,30 @@ metadata:
     author: admin
 ---
 
-**The customer anniversary is just one more opportunity to get in touch with your customers. This module sends an email each year for the anniversary of the registration**
+A customer opened an account at your tea shop on 12 June last year. On 12 June this year you could thank them for a year with the shop and offer a discount on their next tin. Their registration date gives you an occasion to write even if their orders are months apart.
 
-Fully automated, personalized and complete with configurable expiry dates, the Mailbeez anniversary Coupon module gives you the tools to let your customers know you are thinking about them during their special day.
+The anniversary comes from the customer account. MailBeez checks each year’s greeting separately. An account created this June won’t receive a first-anniversary email this June.
 
-**Auto-generated coupons**
+## Set up the flow
 
-[plugin:content-inject](/content_blocks/pro_coupon)
+Open **Campaigns → Automations → MailBeez Flows → Celebrate customer anniversaries**, then choose **Options → Configure**.
 
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+[doc-steps]
+[doc-step]
+**Choose the day for the greeting**
+
+Use 0 under **Send before the registration anniversary** for the anniversary itself. Use 3 if the greeting can arrive up to three days early. **Allow belated greetings** lets a later scheduled run pick up a missed anniversary. Choose a window that still makes sense for your wording.
+[/doc-step]
+[doc-step]
+**Prepare a gift the customer can use**
+
+You need coupon support in the shop. Under **Coupon Template**, choose the template for the offer. Set **Coupon validity** to 14 for a two-week gift. The two weeks start when the email goes out. Mention any minimum spend or other restriction from the template.
+[/doc-step]
+[doc-step]
+**Check the year, code and expiry**
+
+Use an account whose registration anniversary falls inside your sending window. Compare the anniversary in the greeting with the registration date, then check the issued code under [Coupons](/content/coupons).
+[/doc-step]
+[/doc-steps]
+
+If you allow a late greeting, “Thank you for a year with us” works even when the sending day falls just after the anniversary.

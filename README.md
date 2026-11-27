@@ -1,10 +1,57 @@
-# MailBeez documentation for Helios
+# MailBeez V5 documentation
 
-This branch is the content source for the standalone V5 documentation site. The original documentation branch continues to serve the legacy site.
+Edit the English and German Grav guides on the `V5` branch. Their shared source directory is `pages/03.documentation`. The standalone Helios site mounts this directory for its [English](https://docs.mailbeez.test/) and [German](https://docs.mailbeez.test/de) previews.
 
-- Keep page folder names, language files, slugs and route front matter stable when moving a guide in the menu.
-- Edit [navigation.v5.yaml](navigation.v5.yaml) to place existing pages. Each entry identifies the source folder under `pages/03.documentation`. Optional titles apply only to the sidebar and Previous/Next navigation.
-- Use GitHub-style Markdown alerts (`> [!NOTE]`, `> [!WARNING]` and `> [!TIP]`) for callouts. Use Helios shortcodes for card grids, accordions, lightbox images and video embeds. The English and German landing pages, Newsletter2Go, Coupon Recipes and Block Admin demonstrate these components.
-- Translate an article in its existing folder. The two languages share a content identity and each published translation keeps its localized URL.
+## Place a guide
 
-The sections follow BeezUI V5 terminology from the live navigation provider at `dabe2ddb`. Getting started and Reference contain documentation-specific material. Topics with no matching guide in this checkout, including Calendar and DOI Flow, are absent from the menu.
+1. Find the screen in BeezUI. Check the group and page order in `catalog/mailhive/app_dev/components/Data/Live/LiveNavigationProvider.php` and `components/Insight/Navigation.php`. Check labels in the English and German language files and in the page or module that renders the control. Modules can supply their own display name. Some screens depend on the edition, installed modules or permissions.
+2. Edit both language files in the same Grav folder. Use the localized screen name for a screen guide and the reader’s task for a how-to. Keep the existing folder, slug, aliases and anchors used by other guides. In Markdown, link to the localized slug without a language prefix. Grav adds the active language.
+3. Add the folder identity once under its parent in [navigation.v5.yaml](navigation.v5.yaml). Each entry has a `page` and can contain nested `items`. If the app orders siblings differently in one language, set `before` on the entry with that language code and the sibling’s folder identity. Its children move with it. Update the guide links on the parent page in both languages. A guide can appear under a different sidebar parent while keeping its published URL.
+4. Put cross-product material such as Compatibility and Changelog under Resources. Put installers and extensions without a verified V5 screen under Legacy reference. Keep the shop versions, prerequisites and original procedures with those guides. On a restored tutorial or recipe, set `original_v4: true` in a translation that has a matching V4 article. Helios uses the version catalog to show its original instructions when the archive is available.
+
+For an Automation flow, open with the customer situation, the trigger and the choices that affect the email. Follow with a realistic shop example before the setup steps. Use the exact app flow name in the guide title and instructions. The V5 app defines these names in its language files under `UI_TRIGGER_MODULE_TITLE_*`. Use a matching short label in the sidebar entry and overview card. Check both languages in Helios at desktop and mobile widths. Use `module.plans_position: after_guide` in each translation to show the plan table after the instructions.
+
+For a list of settings, put each exact app label in bold on its own line. Start the explanation on the next line. Use the same layout in both languages.
+
+```markdown
+- **Coupon validity**<br>
+  Enter the number of days the recipient can use their code after the email is sent.
+```
+
+## Update hosted platform compatibility
+
+Settings under **System → Configuration** apply to every supported shop system. Helios uses that sidebar branch to omit per-guide platform tables and to show hosted settings as managed by MailBeez Services in the Compatibility resource. Extensions with `/configbeez` URLs follow their own module compatibility data.
+
+Use the store names on the matrix and the module guides. Shopify, WooCommerce, JTL-Shop and Shopware share one hosted feature set. Their installation guides describe the quote, consultation and connector handoff. Confirm connector availability with MailBeez Services.
+
+Record merchant access once in [compatibility.v5.yaml](compatibility.v5.yaml), using the guide folder name without its numeric prefix. Several guides can share a package ID while exposing different settings. Check the hosted module inventory, the V5 module blueprint for `saas_superuser` and the restrictions in BeezUI’s `Extensions/Access.php` and `Support/ConfigurationAccess.php`. Use `supported` for verified hosted modules, `hidden` when the merchant cannot configure the module, and leave unconfirmed entries out. Keep shop-specific prerequisites in the guide.
+
+## Refresh module card icons
+
+The Helios card uses `card-identity.svg` from the target guide’s folder in both languages. To refresh the icons after a module or BeezUI palette change, run the exporter from this checkout with the path to Core’s `catalog/mailhive` and the standalone site’s route catalog.
+
+```sh
+php scripts/export-card-identities.php /path/to/catalog/mailhive /path/to/grav-mailbeez-docs/migration/catalog.json
+```
+
+The exporter reads module artwork, the BeezUI configuration directory and its installed Tailwind palette. For Extensions it uses the same display metadata as the app's Extensions table, including add-on group colors and integration brand colors. The docs show each module's standard colors independently of its status in a particular shop. The exporter puts the light and dark tiles side by side in each SVG. Helios displays the half for the selected theme. New guide folders or routes need an up-to-date catalog before export. After adding icons, clear the local Grav page cache with `bin/grav clearcache` from the site’s `public` directory.
+
+## Verify locally
+
+From the standalone Helios checkout, run `./scripts/rebuild-routes.sh` after adding pages, translations or route changes. This refreshes the route catalog and legacy redirect map using the local Grav installation. Run `./scripts/redirect-preview.sh` to serve the map locally. Use `python3 scripts/verify.py --help` for the V5 crawl and redirect verification options.
+
+Check each language in Helios, including the sidebar, breadcrumb, language switch and links in the article. Check an old link on each legacy host when changing a route. Helios owns the shared navigation templates, the Changelog feed and the generated routing files.
+
+## Test the guides with a merchant
+
+Start a first-time reader on the V5 documentation home page in their preferred language. Give them one task at a time. Let them use search or the sidebar and ask them to show where they found their answer. These tasks can all be completed from the documentation.
+
+| Task | English prompt | Deutsche Aufgabe |
+| --- | --- | --- |
+| Connect SiteZen | You run a Shopify store and want to use SiteZen. How would you find out whether you can connect it? | Du betreibst einen Shopify-Shop und möchtest SiteZen nutzen. Wie findest du heraus, ob du es anbinden kannst? |
+| Choose a Winback test customer | The first email waits 90 days and the flow looks back 120 days. Three customers’ latest orders shipped 80, 95 and 125 days ago. They meet the other conditions. Which customer would you test with, and why? | Die erste E-Mail hat 90 Tage Wartezeit. Der Flow prüft die letzten 120 Tage. Die jeweils letzte Bestellung von drei Kunden wurde vor 80, 95 oder 125 Tagen versendet. Die anderen Bedingungen sind erfüllt. Mit wem würdest du den Flow testen und warum? |
+| Trace a review invitation | A buyer expected a review invitation yesterday. Where would you look first? What could you tell them if you found only a send time? What would you check if there were no entry? | Ein Käufer hat gestern eine Bewertungsanfrage erwartet. Wo würdest du nachsehen? Was kannst du ihm sagen, wenn du nur die Versandzeit findest? Was prüfst du, wenn es keinen Eintrag gibt? |
+
+Keep the answers with the facilitator. For SiteZen, the reader should find MailBeez Services and recognize that the hosted account has no settings for this connection. For Winback, they should choose 95 days and explain why the other two orders fall outside the window. For the missing invitation, they should distinguish a recorded send from confirmed delivery and check the order status, waiting period and next run if there is no record.
+
+Record the language, whether the reader finished unaided and the first place they went wrong or needed help. Keep their wording for anything they misunderstood. Revise that passage and repeat the same task with a new reader in that language.

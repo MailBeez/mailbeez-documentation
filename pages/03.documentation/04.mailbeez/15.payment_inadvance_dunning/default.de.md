@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Zahlungserinnerung Vorkasse
+title: "Vorkasse-Erinnerung"
+module_subtitle: "An offene Vorkassezahlungen erinnern"
 slug: payment_inadvance_dunning
 # menu: Zahlungserinnerung Vorkasse
 date: 13-05-2011
@@ -17,8 +18,9 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "An offene Vorkassezahlungen erinnern"]
 module:
+    plans_position: after_guide
     code: 'payment_inadvance_dunning'
     category: [mailbeez]
     compatiblity: [comp_osc,comp_cre,comp_digi,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio]
@@ -49,22 +51,30 @@ metadata:
 #  last_modified: true
 ---
 
-Mit diesem MailBeez Module kann der Geschäftsprozess zur Zahlungserinnerung bei Bestellungen per Vorkasse automatisiert werden. Kunden mit Vorkasse-Zahlungen erhalten automatisch in einstellbaren Abständen drei Zahlungsaufforderungen und letztendlich die Information, dass die Bestellung storniert wurde.
+Dein Ersatzteilshop reserviert eine Pumpe, während ein Kunde die Vorkasse überweist. Drei Tage später wartet die Bestellung noch auf Zahlung. Eine E-Mail mit Betrag, Bankverbindung und Verwendungszweck hilft dem Kunden, die Überweisung zu erledigen, ohne die Bestellbestätigung suchen zu müssen.
 
-Für jeden Schritt kann ein eigene Email Vorlage erstellt werden und die Anzahl Tage nach dem vorhergehenden Schritt eingestellt werden.
- 
+MailBeez orientiert sich am Status der offenen Vorkassebestellung. Plane Zeit für die Zuordnung der Zahlungseingänge ein. Sobald die Bestellung keinen der Erinnerungsstatus mehr hat, sollte der Kunde dazu keine Zahlungsaufforderung mehr erhalten.
 
-**Vorbereitung:**
+## Flow einrichten
 
-Um Vorkasse-Bestellungen mit offener Zahlung im System erkennen zu können, müssen folgende Bestell-Status Informationen vorliegen:
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → An offene Vorkassezahlungen erinnern** und wähle **Optionen → Konfigurieren**.
 
-- **Es muss einen Bestell-Status z.B. “Wartet auf Zahlungseingang” geben, dieser darf ausschliesslich für Vorkasse-Zahlarten genutzt werden**
-- Alle Zahlarten vom Typ “Vorkasse” müssen diesen Status als Standardstatus erhalten, wenn Bestellungen eingehen oder Bestellung nach Prüfung akzeptiert werden. Dies kann typisch bei der Zahlart eingestellt werden
+[doc-steps]
+[doc-step]
+**Bestellungen mit offener Vorkasse erkennen**
 
-Für eine automatische Stornierung muss es eine Bestellstatus z.B. “storniert” geben.
+Wähle unter **Bestellstatus von offenen Vorkasse Bestellungen** den Status, der bei euch ausdrücklich für ausstehende Vorkasse steht. Prüfe, wohin die Bestellung wechselt, wenn die Zahlung eingeht. Ein allgemeines „In Bearbeitung“, das auch bezahlte Aufträge tragen, wäre zu weit gefasst.
+[/doc-step]
+[doc-step]
+**Erste Erinnerung und Folge-E-Mail planen**
 
-> [!WARNING]
-> Bei Fehl-Konfiguration kann es zu Fehlfunktionen z.B. in Verbindung mit externen Systemen kommen.
+Trage für die Pumpe unter **Erste Erinnerung: Wartezeit** drei Tage ab dem Statuswechsel ein. Verschickst du eine weitere Erinnerung, zählt **Wartezeit vor E-Mail 2** ab der ersten E-Mail. Vergleiche Betrag, Verwendungszweck und Bankverbindung mit einer Testbestellung.
+[/doc-step]
+[doc-step]
+**Die Stornierung prüfen**
 
+Sieht euer Ablauf eine Stornierung vor, kontrolliere **Stornierung: Wartezeit** und **Bestellstatus für Stornierung**. In dieser Stufe kann MailBeez den Bestellstatus ändern und eine Stornierungsnachricht versenden. Spiele den Ablauf mit einer eigens angelegten Bestellung im Testshop durch, bevor du ihn für reservierte Ware einsetzt.
+[/doc-step]
+[/doc-steps]
 
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+Für bereits auf Rechnung gelieferte Ware nutze [An offene Rechnungen erinnern](/mailbeez/payment_invoice_dunning).

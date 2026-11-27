@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: API
+title: "API Access"
+module_subtitle: "Configure API keys, request limits and IP exemptions"
 slug: config_api
 date: 26-03-2012
 published: true
@@ -24,15 +25,24 @@ author:
 metadata:
     author: admin
 ---
-# API
 
+Before connecting an integration, find out which endpoint it calls. A protected request needs the shop’s API key. Public requests are subject to the configured limits unless the IP address is exempt.
 
-The MailBeez API (**A**pplication **P**rogram **I**nterface) allows to integrate with other sites and applications.
+When several tools use the shop API, identify which ones use the same key. They will each need the new value if you replace it.
 
-In the core configuration module you can configure the API Key.
+Open **System → Configuration** and select **API Access**.
 
+Check which API module and credentials it requires. Keep private credentials on the server and test the connection with the specific operation your integration uses.
 
-> [!NOTE]
-> The MailBeez API is extensible and the available calls are depending on installed modules
+<span id="settings-to-check"></span>
 
-Currently available API modules
+## Control API access and request limits
+
+- **API key**<br>
+  Authenticates protected API requests. Update connected integrations if you change this key.
+- **Public requests per time window**<br>
+  Maximum number of requests to public endpoints within the configured window.
+- **Public time window (seconds)**<br>
+  Duration used to count requests to public endpoints.
+- **IP addresses exempt from limits**<br>
+  Comma-separated IP addresses that bypass request limits.

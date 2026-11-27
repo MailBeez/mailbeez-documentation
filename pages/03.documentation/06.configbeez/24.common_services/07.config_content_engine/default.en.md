@@ -1,5 +1,6 @@
 ---
 title: Content Engine
+module_subtitle: "Insert product recommendations using a Live Content block"
 slug: config_content_engine
 routes:
     default: /documentation/configbeez/config_content_engine
@@ -30,58 +31,23 @@ metadata:
 
 ---
 
-Adds rulebased **personalised product recommendations** to any MailBeez Email.
+[doc-callout type="note" title="Earlier module settings"]
+For settings in the current app, start with [System](/app-system). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-When editing an email template just add the content element `Live Content` and configure the settings to add product recommendations.
+Add a `Live Content` block when a campaign should recommend products. Choose a source that matches the email. A cart reminder can show products in the cart, while a reorder email can suggest items bought with the customer’s previous purchase.
 
-![](Screen_config.en.png)
+Match the recommendation to the reason for the email. A reminder about an unfinished purchase should still make sense when the customer reads the product list below it.
 
+![Product recommendation source settings](Screen_config.en.png)
 
-You can select from the following choice of content sources which define how recommendations are retrieved.
-Depending on the selected content source you will find a number of configuration options.
+- <span id="catalog-based-product-rec"></span>**Catalog**<br>
+  Choose featured products, new products sorted by date, or specials.
+- <span id="product-recommendations-b"></span>**Past purchases**<br>
+  Show cross-sell or frequently bought-together items based on what the customer purchased.
+- <span id="product-recommendations-b-1"></span>**Cart**<br>
+  Show the cart contents, cross-sell items or products frequently bought with items in the cart.
 
-> [!TIP]
-> For order related recommendations (e.g. "also purchased") please configure the relevant order status and the timeframe of the orders to use for retrieving recommendations. This allows you to configure how fast the **seasonal buying behaviour** influences the recommendations.
+For order-based sources, choose which order statuses and how much order history to consider. A shorter window gives recent seasonal purchases more influence. On Zen Cart, cross-sell sources require [Cross Sell Advanced](https://www.zen-cart.com/downloads.php?do=file&id=400).
 
-#### Catalog-based product recommendations 
-
-**Featured Products**  
- Shows the products marked as "featured"
-
-**New Products**  
- Shows the configured number of new product items, sorted by date
-
-**Specials Products**  
- Shows the configured number of special product items, sorted by date
-
-
-#### Product recommendations by purchased products
-**XSell-Product by purchased products**  
- Shows xsell products based on previously purchased products
-
-**Also purchased products by purchased products**  
- Shows also purchased products based on previously purchased products
-
-
-#### Product recommendations by products in cart
-**Products in Cart**  
- Shows the products in cart
-
-**XSell-Products by products in cart**  
- Shows xsell products based on products in cart
-
-**Also purchased products by products in cart**  
- Shows also purchased products based on products in cart
-
-
-> [!NOTE]
-> **Zen-Cart:** XSell bases sources will only be available with the installed addon [Cross Sell Advanced](https://www.zen-cart.com/downloads.php?do=file&id=400)
-
-
-#### Unique products only
-You can add multiple content elements of type `Live Content` - just active the option "**Exclude already shown products**" to make sure only unique products are shown, e.g. in case a product is both new and a specials products and you have added both `Live Content` of type "New Products" and "Specials Products"
-
-#### FSK18- and Group-Check
-The store systems **Modified-Shop** and **Gambio** allow to tag products with "FSK18" and "group" permissions. By default the content engine will respect these settings to make sure only appropriate products are recommended. If you like you can deactivate this setting.
-On other store systems this configuration option is hidden.
-
+<span id="unique-products-only"></span><span id="fsk18-and-group-check"></span>If you add several blocks, enable **Exclude already shown products** to prevent a product appearing twice. Modified-Shop and Gambio respect FSK18 and customer-group restrictions by default. Check these before changing the optional restriction setting. Other platforms do not show it.

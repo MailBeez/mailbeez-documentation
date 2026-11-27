@@ -1,5 +1,6 @@
 ---
-title: 'MailBeez Copyright Remover Certificate'
+title: "Copyright remover"
+module_subtitle: "Check the license required to remove MailBeez attribution from Community emails"
 published: true
 date: '09-09-2011 00:00'
 publish_date: '09-09-2011 00:00'
@@ -11,7 +12,7 @@ template: docs
 taxonomy:
     category:
         - docs
-    tag: pro
+    tag: ["pro", "MailBeez Copyright Remover Certificate"]
 routes:
     aliases:
         - /documentation/configbeez/copyright_remover
@@ -44,22 +45,10 @@ author:
     name: admin
 ---
 
-> [!TIP]
-> All Pro MailBeez Email are already copryright free
+[doc-callout type="note" title="Earlier module settings"]
+For settings in the current app, start with [System](/app-system). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
+If a Community email includes MailBeez attribution in the footer, check its edition before looking for a certificate. The historical certificate removed attribution from eligible Community messages. Pro templates already omitted it.
 
-## Copyright Free Emails
-
-
-Since its inception, Mailbeez has been pleased to support young, email curious retailers with a selection of free to use, highly useful modules that provide the stepping stones towards a more comprehensive email marketing strategy based on the increased functionality of the Mailbeez premium modules at a later date.
-
-Whilst Mailbeez is fully committed to continuing to provide a selection of stripped back free to use modules, with the release of V2.5, Mailbeez has introduced a simple Mailbeez copyright footer that will appear in any email generated from a free module.
-
-Whilst this copyright area is unobtrusive, you may wish to purchase the Copyright Remover Certificate module which, once installed, will remove the Mailbeez copyright area from your free module’s emails, effectively white labeling your campaign.
-
-Alternatively, upgrading to the premium version of a free module will automatically remove the Mailbeez footer for future emails.
-
-**Paid modules are white-labeled by default!**
-
-Premium modules are of course unaffected, and need not make, or request any changes to their systems, as their email campaigns are white labeled by default.
-
+Compare a delivered email with the template used for that module. That helps you identify the attribution in question before checking the certificate for this shop.

@@ -1,8 +1,9 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Auflistung Opt-Out Abmeldungen
+title: "Abmeldeliste"
+module_subtitle: "Gespeicherte Abmeldungen und Sperren früherer Versionen nachschlagen"
 slug: report_block
-menu: Opt-Out Abmeldung
+menu: "Abmeldeliste"
 date: 03-03-2011
 published: true
 publish_date: 03-03-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "Auflistung Opt-Out Abmeldungen"]
 # added collection selector
 
 author:
@@ -36,19 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
-> [!TIP]
-> Dieser Bericht kann schnell und kompfortabel vom MailBeez Dashboard über den "Beez-O-Graph" mit Klick auf die Legende **Abmeldungen** geöffnet werden.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Kontakte](/mailbeez-results/contacts) Abmeldungen und Sperren auswerten. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Als Bestand-Teil vom MailBeez Grundsystem gibt dieses Modul Einblick, welche Kunden sich mit Klick auf den Abmelde-Links in den MailBeez Emails von weiteren Emails abgemeldet haben.
+Suche die Empfängeradresse, wenn eine erwartete E-Mail fehlt. Prüfe, ob die Sperre für ein einzelnes Modul oder für alle Module gilt. Möchte der Empfänger die Einstellung ändern, nutze [Erweitertes Opt-out mit Admin](/configbeez/config_block_admin).
 
-Die Liste zeigt, zu welcher Zeit und welches Modul der Kunden abgemeldet hat. 
-
-- **PROD**:  Abmeldung im Produktions-Modus
-- **[SIM]**:  Abmeldung im Simulations-Modus
-
-Die Opt-Out Links in den Emails enthalten eine Kennzeichnung des Betriebs-Modus, d.h. "Produktions-Abmeldungen" werden auch als solche verarbeitet wenn sich MailBeez im Simulations-Modus befindet.
-
-> [!NOTE]
-> Das Abmelden im Simulations-Modus wird nur dann richtig erfasst, wenn unter MailBeez > Konfiguration > Simulation die "Simulations-Protokollierung" aktiviert (True) ist.
-
-Die Simulations-Daten können mit Klick auf "Simulation neu starten" gelöscht werden.
+Erhält der Kunde weiterhin andere E-Mails, kann eine modulspezifische Abmeldung die Ursache sein. Prüfe ihren Umfang, bevor du von einer verlorenen Abmeldung ausgehst.

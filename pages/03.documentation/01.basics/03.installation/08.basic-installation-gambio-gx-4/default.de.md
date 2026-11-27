@@ -1,11 +1,11 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Gambio GX 4.x
+title: "Gambio auf eigenem Server"
 slug: basic-installation-gambio-gx-4
-# menu: Gambio GX 2.5+
 date: 01-09-2020
 published: true
 template: docs
+installation_platform: comp_gambio
 # theme: false
 visible: true
 summary:
@@ -34,19 +34,6 @@ metadata:
 #  last_modified: true
 ---
 
-
-MailBeez arbeitet problemlos mit *Gambio GX 4.x *.
-
-Dank der Vor-Integration von MailBeez mit Gambio gestaltet sich die Installation sehr einfach:
-
-
-## Modul aktivieren
-
-Im Modul-Center unter
-
-`Module > Modul-Center`
-
-bitte MailBeez aktivieren.
-
+<span id="modul-aktivieren"></span>Bei Gambio auf eigenem Server ist MailBeez bereits enthalten. Öffne in der Shopverwaltung **Module → Modul-Center** und aktiviere **MailBeez**.
 
 [plugin:content-inject](/content_blocks/run_installer)

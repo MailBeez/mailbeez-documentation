@@ -1,5 +1,6 @@
 ---
-title: ShopVote.de
+title: "SHOPVOTE (Community)"
+module_subtitle: "Invite buyers to rate your store on SHOPVOTE"
 slug: shopvote
 routes:
     default: /documentation/mailbeez/shopvote
@@ -18,6 +19,7 @@ taxonomy:
         - docs
     tag:
         - ce
+        - "ShopVote.de"
 module:
     code: 'shopvote'
     category: [mailbeez]
@@ -28,8 +30,14 @@ metadata:
     author: admin
 ---
 
-**Get more reviews on ShopVote.de**
+[doc-callout type="note" title="Earlier campaign module"]
+Choose a flow for a current shop under [Automations](/mailbeez). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-This simple, free module allows you to ask your customers for reviews on the German ecommerce rating service ShopVote.
+The earlier Community module invites a buyer to rate your shop on SHOPVOTE. Use the review destination for your own shop. Open it from a test invitation before enabling automated requests.
 
-The [ShopVote.de Advanced Module](/documentation/mailbeez/shopvote_advanced/) allows you to works smarter, e.g. configure multiple order status, responsive emails and recognition repeated orders.
+Read the invitation alongside the order confirmation. A buyer who sees the same shop name in both messages can more easily recognize the review request.
+
+Choose the order status that starts the wait and allow enough time for delivery.
+
+For the V5 flow, see [Ask for reviews on SHOPVOTE](/mailbeez/shopvote_advanced).

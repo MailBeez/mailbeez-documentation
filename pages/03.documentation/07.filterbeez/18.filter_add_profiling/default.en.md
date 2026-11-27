@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: Add Profiling Data 
+module_subtitle: "Make profiling data available in email templates"
 slug: filterbeez_add_profiling
 date: 11-08-2011
 published: true
@@ -41,38 +42,18 @@ metadata:
 #  last_modified: true
 ---
 
-**under development**
-    
+[doc-callout type="note" title="Earlier filter"]
+For the filters you can configure in V5, open [Add-ons](/extensions/addons). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-this module works in combination with the [profiling engine](/documentation/configbeez/config_profiling_engine) and adds
+Use the development version of [Profiling Engine](/configbeez/common_services/config_profiling_engine) to read assigned customer and order tags in an older Smarty template. Read `$data.profiles.order.profiles` or `$data.profiles.customer.profiles` for the comma-separated IDs. Each matching ID also has an entry in its parent array.
 
-Orders Profiles
+Look at one known order and its customer separately. A tag assigned to the order may explain that purchase without describing the customer’s other orders.
 
-```
-{$data.profiles.order.profiles} - CSV string with all assigned profile_ids e.g "2,6,9"
-{$data.profiles.order} - array with all assigned profiles
-{$data.profiles.order.<profile_id>} - array if profile with <profile_id> is set
+For example, use the following inside the module template to show content for order tag `6`. Use `$data.profiles.customer.42` for customer tag `42`.
 
-```
-
-
-Customer Profiles
-```
-{$data.profiles.customer.profiles} - CSV string with all assigned profile_ids e.g "2,6,9"
-{$data.profiles.customer} - array with all assigned profiles
-{$data.profiles.customer.<profile_id>} - array if profile with <profile_id> is set
-
-```
-
-Example
-
-```
+```smarty
 {if is_array($data.profiles.order.6)}
-   this order has profile tag 6
-{/if}
-{if is_array($data.profiles.customer.42)}
-   this customer has profile tag 42
-{else}
-   Hey
+    See accessories for your order.
 {/if}
 ```

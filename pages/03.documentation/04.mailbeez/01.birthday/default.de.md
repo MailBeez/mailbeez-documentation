@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Geburtstags-Email
+title: "Geburtstagsgrüße"
+module_subtitle: "Kunden einmal im Jahr an ihrem Geburtstag gratulieren"
 slug: birthday
 # menu: Geburtstags-Email
 date: 22-05-2010
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "Geburtstags Glückwünsche"]
 module:
     code: 'birthday'
     category: [mailbeez]
@@ -49,8 +50,25 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses Module macht genau was es sagt, jedes Jahr und kostenlos!
+[doc-callout type="note" title="Früheres Kampagnenmodul"]
+Für einen aktuellen Shop wählst du den Flow unter [Automatisierung](/mailbeez). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Um einen personalisierten Gutschein mit mobilfreundlichen (responsive) Emails zum Geburtstag zu verschicken, bitte das Modul [Geburtstags-Email – mit Gutschein](/documentation/mailbeez/coupon_birthday/ "Geburtstags-Email") als Bestandteil der Profi Tarife verwenden.
+Für einen Gruß am Geburtstag brauchst du ein Kundenkonto mit Geburtsdatum und ein passendes Versandfenster. Mit einem größeren Zeitfenster sind auch frühere oder nachträgliche Grüße möglich.
 
+Verschickt dein Team Geburtstagsgrüße nur werktags, entscheide zuerst, ob du zu einem Geburtstag am Samstag noch am Montag gratulieren möchtest.
 
+Soll der Gruß nur am Geburtstag ankommen, setze beide Tageswerte auf `0`. Prüfe die Vorschau mit einem Kundenprofil, das ein Geburtsdatum enthält.
+
+<span id="diese-einstellungen-sind-"></span>
+
+## Zeitraum für Geburtstagsgrüße festlegen
+
+- **Zeitraum vor Geburtstag**<br>
+  Tage vor dem Geburtstag. Mit `0` beginnt das Zeitfenster am Geburtstag.
+- **Zeitraum nach dem Geburtstag**<br>
+  Letzter Tag für einen nachträglichen Gruß. Mit `0` endet das Zeitfenster am Geburtstag.
+- **Google Analytics Integration**<br>
+  Aktiviere Kampagnenparameter an den Links dieses Moduls.
+- **Google Analytics Umschreib-Modus**<br>
+  Wähle, welche Links diese Parameter erhalten.

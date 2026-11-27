@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Layout Optimizer
+title: "Layout Optimizer"
+module_subtitle: "Das HTML-Layout älterer E-Mail-Vorlagen optimieren"
 slug: filter_layout_optimizer
 routes:
     aliases:
@@ -39,4 +40,8 @@ metadata:
 #  last_modified: true
 ---
 
-Die Funktion dieses Modules ist in das MailBeez System integriert worden
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Haupt-Vorlagen](/content/main-templates) den gemeinsamen E-Mail-Rahmen ändern. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
+
+Ist der Layout Optimizer in einer alten Installation aufgeführt, prüfe vor einer Neuinstallation die Version des Grundsystems. Die Layoutfunktion ging in das Grundsystem über. Den Test der resultierenden E-Mail beschreibt [Responsive Emails mit MailBeez](/grundlagen/responsive-emails).

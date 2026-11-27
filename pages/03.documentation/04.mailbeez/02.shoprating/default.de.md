@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Bitte zur Shopbewertungen
+title: "Shopbewertungen (Einfach)"
+module_subtitle: "Kunden um eine Bewertung ihres Einkaufs bitten"
 slug: shoprating
 routes:
     aliases: 
@@ -21,7 +22,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "Shopbewertung Einfach - Kunden um Bewertung bitten"]
 module:
     code: 'shoprating'
     category: [mailbeez]
@@ -45,10 +46,12 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses Modul zur Bewertungsaufforderung arbeitet nahtlos mit dem bereits in MailBeez enthaltenen Modul [Shopbewertungen](/dokumentation/configbeez/config_shopvoting/).
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Um Bewertungen im eigenen Shop bitten](/mailbeez/shoprating_advanced) Einladungen zur Shopbewertung einrichten. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Mit dem Shopbewertungs-Modul können Kunden eine Bewertung des Shops abgeben, diese Bewertungen sind dann in der Administrations zu bearbeiten und das Ergebnis kann in der Storefront angezeigt werden.
+Mit dem früheren einfachen Modul fragst du nach der Erfahrung mit dem Einkauf. Richte die Shopbewertungsseite ein und öffne sie über eine Testeinladung, bevor du das Modul aktivierst.
 
-Mit diesem Modul können Shop-Betreiber ihre Kunden automatische zur Abgabe einer Bewertung auffordern.
+Frage nach etwas, das die gesamte Bestellung betrifft, etwa nach der Verpackung. So kannst du die Rückmeldung später dem Einkaufserlebnis zuordnen.
 
-Für den ernsthaften Einsatz des Shopbewertungs-Modules empfiehlt sich das MailBeez Modul "[Shopbewertung Profi](/dokumentation/mailbeez/shoprating_advanced/ "Shopbewertung Profi")", welches bis zu doppelt so viele Bewertungen gibt und es erlaubt, Shopbewertungen in anderen MailBeez Emails (z.B. [Kundenrückgewinnung Profi](/dokumentation/mailbeez/winback_advanced/) ) anzuzeigen.
+Wähle den Bestellstatus, der die Einladung auslöst. Plane genügend Zeit für die Lieferung ein, damit Käufer den gesamten Einkauf bewerten können.

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Newsletter Abo Check
+title: "Newsletter-Abo-Filter"
+module_subtitle: "Den Versand auf Newsletter-Abonnenten beschränken"
 slug: filter_check_newslettersubscriber
 # menu: Newsletter Abo Check
 date: 08-04-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Newsletter Abo Check"]
 module:
     code: 'filter_check_newslettersubscriber'
     category: [depreciated]
@@ -49,5 +50,10 @@ metadata:
 #  last_modified: true
 ---
 
-Seit MailBeez V2.6+ ist dieses Modul nicht mehr erforderlich – die Funktion ist vorintegriert.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Anmeldung](/contacts/signup-confirmation) die Newsletter-Bestätigung prüfen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
+Prüfe ab MailBeez 2.6 die Aboregeln des Grundsystems, wenn ein Empfänger ausgeschlossen wird. Frühere Installationen nutzten für die Prüfung einen eigenen Filter. In V5 findest du die Einstellungen unter [Anti-Spam & Einwilligung](/configbeez/config_spamcompliance_advanced).
+
+Verwende beim Versionsvergleich einen Empfänger mit bekanntem Abostatus. So lässt sich leichter feststellen, welche Aboprüfung die Adresse ausgeschlossen hat.

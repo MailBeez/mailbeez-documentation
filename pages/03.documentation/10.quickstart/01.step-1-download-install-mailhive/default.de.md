@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: "Schritt 1: MailBeez downloaden & installieren"
+title: "MailBeez installieren"
 slug: step-1-download-install-mailhive
 # menu: Schritt 1: MailBeez downloaden & installieren
 date: 27-05-2010
@@ -36,12 +36,35 @@ metadata:
 #  last_modified: true
 ---
 
-**Willkommen zu Mailbeez!**
+[doc-steps]
+[doc-step]
+**Installationsanleitung auswählen**
 
-Mit Mailbeez können Sie auf schnelle und einfache Art und Weise automatisch ablaufenden Email Marketing Kampagnen einrichten – MailBeez ist für einfachste Installation und soliden Betrieb entwickelt worden!
+Ist dein Shop bereits mit MailBeez verbunden, gehe direkt zu Schritt 3. Andernfalls wähle unter [Installation](/grundlagen/installation) dein Shopsystem.
 
-MailBeez nutzt die bestehenden Daten Ihres Online-Shops mit Lese-Zugriff und verwaltet eigene Datenbank-Tabellen um weiteren Daten zu speichern.
+Für [Shopify](/grundlagen/installation/shopify), [WooCommerce](/grundlagen/installation/woocommerce), [JTL-Shop](/grundlagen/installation/jtl-shop) und [Shopware](/grundlagen/installation/shopware) ist eine gehostete Anbindung geplant. Über die jeweilige Anleitung kannst du Beratung und ein Angebot anfragen. MailBeez Services bestätigt die Verfügbarkeit und liefert nach der Beauftragung den Connector.
 
-Also, los gehts!
+Läuft MailBeez direkt in deinem Shop, halte die genaue Shopversion bereit und öffne die passende Anleitung.
 
-Mehr dazu auf: [Der MailBeez Schnelleinstieg](/documentation/tutorials/guide-to-getting-started/ "Guide to Getting Started")
+[doc-grid columns="2"]
+[doc-link-card href="/de/grundlagen/installation/basic-installation-gambio-gx-4" title="Gambio auf eigenem Server" icon="platforms/gambio.svg" new-tab="false" /]
+[doc-link-card href="/de/grundlagen/installation/basic-installation-gambiocloud" title="GambioCloud" icon="platforms/gambio.svg" new-tab="false" /]
+[doc-link-card href="/de/grundlagen/installation/basic-installation-zen-cart-2-x" title="Zen Cart 2.x" icon="platforms/zen-cart.svg" new-tab="false" /]
+[doc-link-card href="/de/grundlagen/installation/basic-installation-modified-shop-2" title="Modified Shop" icon="platforms/modified-shop.svg" new-tab="false" /]
+[/doc-grid]
+[/doc-step]
+[doc-step]
+**MailBeez installieren oder aktivieren**
+
+Bei einer gehosteten Anbindung folgst du den Einrichtungshinweisen von MailBeez Services.
+
+Bei [GambioCloud](/grundlagen/installation/basic-installation-gambiocloud) ist MailBeez bereits enthalten. Aktiviere **MailBeez** unter **Module → Modul-Center** und folge dem Installationsassistenten.
+
+Bei [Zen Cart 2.x](/grundlagen/installation/basic-installation-zen-cart-2-x) kopierst du zuerst die Dateien in den Shop und startest dann den Installer in der Shopverwaltung.
+[/doc-step]
+[doc-step]
+**Dashboard öffnen**
+
+Öffne MailBeez nach der Einrichtung im Shop oder über den Zugang von MailBeez Services. Sobald du das **Dashboard** siehst, kannst du deine [erste Automatisierung auswählen](/quickstart/step-2-choose-your-mailbeez).
+[/doc-step]
+[/doc-steps]

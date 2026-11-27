@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Trustpilot Profi
+title: "Trustpilot"
+module_subtitle: "Um Bewertungen auf Trustpilot bitten"
 slug: trustpilot_advanced
 # menu: Trustpilot Profi
 date: 04-06-2013
@@ -17,8 +18,9 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Um Bewertungen auf Trustpilot bitten"]
 module:
+    plans_position: after_guide
     code: 'trustpilot_advanced'
     category: [mailbeez]
     compatiblity: [comp_osc,comp_cre,comp_digi,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio]
@@ -49,42 +51,31 @@ metadata:
 #  last_modified: true
 ---
 
-**Optimieren Sie Ihre Trustpilot Partnerschaft**
+Dein Shop für Kaffee-Abos möchte nach der ersten Lieferung fragen, wie sie angekommen ist. Beim automatischen Einladungsservice von Trustpilot sind zwei E-Mails beteiligt. MailBeez sendet den Auslöser an Trustpilot. Trustpilot verschickt anschließend die Einladung an den Käufer. Das ist wichtig für den Versandtermin und für die Suche nach einer fehlenden Einladung.
 
-Trustpilot Unique Link Version: [Trustpilot Profi Unique Link Version](/dokumentation/mailbeez/trustpilot_advanced_ul/)
+## Flow einrichten
 
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → Um Bewertungen auf Trustpilot bitten** und wähle **Optionen → Konfigurieren**.
 
+<span id="zeitpunkt-fuer-die-meldun"></span>
+<span id="diese-einstellungen-sind-"></span>
 
-## Einladung zu Service- & Produktbewertungen
+[doc-steps]
+[doc-step]
+**Den Einladungsservice anbinden**
 
-Neben den bekannten Trustpilot Service-Bewertungen bietet Trustpilot auch die Möglichkeit, Produktbewertungen zu sammeln.
+Übernimm die Adresse des automatischen Einladungsservices aus deinem Trustpilot-Konto in **Deine Trustpilot Email Adresse**. Verwende die Adresse des Shops, der bewertet werden soll. Der Dienst erhält die Kunden- und Bestelldaten für die Einladung mit der auslösenden Nachricht.
+[/doc-step]
+[doc-step]
+**Beide Wartezeiten zusammenrechnen**
 
-Unterstützt Ihr Trustpilot-Tarif Produktbewertungen? Prima, dann können Sie Ihre Kunden mit diesem Modul automatisiert auch zur Bewertung der gekauften Produkte einladen.
+Wähle unter **Bestell-Status für Bewertungen** deinen Versandstatus. Stehen unter **Wartezeit nach dem Statuswechsel** drei Tage und wartet Trustpilot zwei weitere Tage, ist die Einladung ungefähr fünf Tage nach Versand fällig. Berücksichtige den nächsten geplanten Lauf. Wähle für **Höchstalter des Statuswechsels** einen längeren Zeitraum als die Wartezeit in MailBeez. Plane für Auslandssendungen bei Bedarf zusätzliche Tage ein.
+[/doc-step]
+[doc-step]
+**Stammkunden seltener einladen**
 
-Und Dank der tiefen Integration von MailBeez mit dem Shopsystem können Sie ohne zusätzlichen Aufwand Ihren Kundenbestand auch nachträglich in einem von Ihnen konfiguierten Zeitrahmen zur Bewertung bitten.
+Lege für die Abo-Lieferungen unter **Mindestabstand zwischen Einladungen** einen passenden Abstand fest. So muss auf ein monatliches Paket nicht jeden Monat eine Einladung folgen. Text und Zeitplan der Kundeneinladung prüfst du im zugehörigen Trustpilot-Konto.
+[/doc-step]
+[/doc-steps]
 
-## Profi-Funktionen
-
-Im Vergleich zum kostenfreien Trustpilot Modul, welches bereits die Integration mit dem Trustpilot Feedback Service zum Einladen von Kunden zur Abgabe von Bewertungen bietet, erlaubt die Profi-Version die Optimierung des Ablaufes zur Bewertungs-Aufforderung:
-
-## Mehrere Bestell Status
-
-Haben Sie verschiedene Status, welche eine Bestellung als "ausgeliefert" kennzeichnet? Kein Problem, markieren Sie einfach alle relevanten Status.
-
-## Berücksichtigung von Auslands-Bestellungen
-
-Der Versand ins Ausland nimmt typisch ein paar Tage länger in Anspruch. Definieren Sie eine Verzögerung für Auslandsbestellungen, damit die Einladungs-Email zur Bewertung nicht vor der Ware ankommt!
-
-Das Modul wird dann eine Verzögerung für Bestellungen mit Lieferung an die Länder hinzufügen, welche von dem im Shop-System als Betreiber-Land konfigurierten Land abweichen.
-
-## Stammkunden Erkennung
-
-Wollen Sie Ihre häufig bestellenden Stammkunden vor eine Bewertungseinladung nach jeder Bestellung beschützen? Definieren Sie einfach, wie viele Tage seit der letzten Einladungs-Email vergangen sein müssen, bevor eine erneute Einladung versendet werden soll.
-
-Das Modul wird dann automatisch prüfen, ob bereits eine neuen Einladung versendet werden kann oder nicht.
-
-
-
-### Wollen Sie Ihre wertvollen Bewertungen mit Shop und Email-Marketing integrieren?
-
-Mit der [Trustpilot Integration Suite](/dokumentation/configbeez/config_trustpilot_rss_importer/) können Sie schnell und einfach Trustpilot-Bewertungen serverseitig in Ihren Shop (positiver SEO Effekt durch "unique fresh content") und auch in alle von MailBeez generieren Email Marketing Emails integrieren
+Fehlt die Einladung, prüfe zuerst den [Versand des Auslösers in MailBeez](/sending-status). Ging er an die Serviceadresse, schau im nächsten Schritt im Trustpilot-Konto nach der Einladung.

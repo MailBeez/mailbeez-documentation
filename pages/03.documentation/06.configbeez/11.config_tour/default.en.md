@@ -1,5 +1,6 @@
 ---
 title: 'Guided tour'
+module_subtitle: "Use the earlier guided tour to find your way around MailBeez"
 slug: config_tour
 date: 26-03-2012
 published: true
@@ -22,8 +23,8 @@ metadata:
     author: admin
 ---
 
-Not so much to do here - you can configure if you want to see the Guided Tour Tab.
+[doc-callout type="note" title="Earlier module settings"]
+For settings in the current app, start with [System](/app-system). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-The integrated MailBeez Tour module provides a growing number of interactive tour sessions, which will help you to better understand the system and typical workflows.
-
-Thanks to the indicator you will see how many new tours are available.
+In an installation with interactive tours, enable the **Guided Tour** tab if users should see walkthroughs in the administration. The indicator shows how many new tours are available.

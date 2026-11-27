@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Add Block All Link
+title: "Unsubscribe link"
+module_subtitle: "Add an unsubscribe link for all emails"
 slug: filter_add_block_all_url
 # menu: Add Block All Link
 date: 16-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Add an unsubscribe link for all emails"]
 module:
     code: 'config_block_admin'
     category: [filterbeez]
@@ -42,4 +43,14 @@ metadata:
 #  last_modified: true
 ---
 
-Delivered with the [Advanced Opt-Out with Admin](/documentation/configbeez/config_block_admin/) module, this filter lets you add a “Block All” link to all of your MailBeez generated emails.
+A customer who receives your birthday greeting wants to stop all MailBeez mailings from your shop. The footer should make the scope clear before they click. A label such as “Unsubscribe from all MailBeez emails from this shop” tells them what will happen to future reminders, too.
+
+## Add the global opt-out to a template
+
+Open **System → Extensions → Add-ons → Consent and blocking** and select **Add an unsubscribe link for all emails**.
+
+If the sender has excluded a module in the email-blocking settings, the global unsubscribe does not cover it. Check those exclusions before promising which messages will stop.
+
+This helper supplies the recipient’s global opt-out link to the email template. Use the link generated for that message. Copying a link from someone else’s email would carry their recipient details into your test.
+
+Check the footer in a message addressed to your own test account. If you also offer an opt-out for just one campaign, read both labels together. For an existing request to stop mail, see [Customer blocks](/filterbeez/filter_check_block_all).

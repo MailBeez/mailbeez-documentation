@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: MailBeez Feedback
+title: "MailBeez Feedback"
+module_subtitle: "Das frühere Modul für den monatlichen Versand von Nutzungsstatistiken prüfen"
 slug: mailbeez_feedback
 # menu: MailBeez Feedback
 date: 22-05-2010
@@ -49,10 +50,10 @@ metadata:
 #  last_modified: true
 ---
 
-Helfen Sie, MailBeez zu verbessern! 
+[doc-callout type="note" title="Früheres Kampagnenmodul"]
+Für einen aktuellen Shop wählst du den Flow unter [Automatisierung](/mailbeez). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Dieses Modul sendet monatlich einen Bericht an MailBeez.de mit folgenden Informationen:
+Erzeugt ein älterer Shop monatlich eine E-Mail mit Nutzungsstatistiken, prüfe das MailBeez-Feedbackmodul. In seiner Konfiguration kannst du die geplante Nachricht zuordnen.
 
-- installierte Module
-- Anzahl versendeter Emails
-- Ihr persönlicher Gruss :)
+Öffne bei einer unerwarteten Nachricht zuerst die Einstellungen des Moduls. Der monatliche Nutzungsbericht beantwortet andere Fragen als das Versandprotokoll einer Kampagne.

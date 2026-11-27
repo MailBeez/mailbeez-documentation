@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Die Gutschein-Suche
+title: "Gutschein-Suche"
+module_subtitle: "Einen erzeugten Gutschein im früheren Dashboard finden"
 slug: dashboard_coupon_admin
 # menu: The Coupon Search Widget
 date: 17-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro,coupon]
+    tag: [pro,coupon, "Die Gutschein-Suche"]
 author:
     name: kelly
 metadata:
@@ -34,9 +35,10 @@ metadata:
 #  last_modified: true
 ---
 
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Gutscheine](/content/coupons) einen erzeugten Gutscheincode nachschlagen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Dieses Widget komplementiert den [Gutschein Generator](/dokumentation/configbeez/config_coupon_engine) mit einer komfortablen Suchfunktion. 
+Gib den ausgegebenen Gutscheincode im früheren Gutschein-Widget ein und öffne den passenden Eintrag. In V5 findest du ihn unter **Inhalte → Gutscheine → Generierte**. Den Unterschied zwischen Vorlagen und Serien erklärt [Gutscheine](/content/coupons).
 
-Geben Sie einfache den zu findenden Gutschein-Code ein und das System zeigt Ihnen die Treffer-Daten mit Link zur Bearbeitungs-Maske des Shop-Systemes.
-
-Mit Suche nach `template_` können Sie sich schnell und einfach alle Vorlagen-Gutscheine anzeigen lassen und auch bearbeiten.
+Frage nach dem Code, den der Kunde erhalten hat. Der Vorlagenname bezeichnet das Angebot, mit dem ausgestellten Code findest du den einzelnen Gutschein.

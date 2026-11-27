@@ -1,5 +1,6 @@
 ---
-title: 'Share Review on Facebook'
+title: "Facebook review sharing"
+module_subtitle: "Check the Facebook sharing link attached to an older review"
 slug: review_facebook
 routes:
     default: /documentation/mailbeez/review_facebook
@@ -18,6 +19,7 @@ taxonomy:
         - docs
     tag:
         - ce
+        - "Share Review on Facebook"
 module:
     code: review_facebook
     category:
@@ -45,14 +47,10 @@ metadata:
     author: admin
 ---
 
-This module offers your customers the ability to share their reviews of your store and products on Facebook.
+[doc-callout type="note" title="Earlier campaign module"]
+Choose a flow for a current shop under [Automations](/mailbeez). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-The email contains a list of purchased products and includes:
+Check the sharing link attached to an old product or store review. The earlier Facebook extension offered the link after the review. Open it from an existing test review to see whether the external destination is still available.
 
-- image
-- direct link to Facebook sharer
-
-Like all MailBeez modules, the email content is generated from a template, and the list of products is defined in a sub-template.
-
-The Facebook sharer link points to the review-info page, where the review defined by products_id and review_id is displayed. 
-Facebook should be able to extract the Review-Text from this page.
+When checking a shared review, look at the page a reader reaches from the post. That destination is where a new visitor will learn about the shop or product.

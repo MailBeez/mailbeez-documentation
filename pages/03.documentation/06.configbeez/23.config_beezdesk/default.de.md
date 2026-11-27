@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: BeezDesk CRM Integration
+module_subtitle: "Shops verbinden und ihre Kundentickets in BeezDesk CRM einsehen"
 slug: config_beezdesk
 date: 22-03-2013
 published: true
@@ -30,12 +31,15 @@ module:
     thumbnail: 'http://www.mailbeez.com/wp-content/uploads/downloads/thumbnails/2014/04/icon_32.png'
     pro: 'pro'
     cert: 'true'
-----------------
+---
 
-Auf dieser Seite wird die Integration des Shop-Systems mit BeezDesk CRM beschrieben
-[mehr zum BeezDesk CRM](https://www.beezdesk.de)
+[doc-callout type="note" title="Frühere Moduleinstellungen"]
+Einstellungen in der aktuellen App findest du unter [System](/app-system). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
+Damit Kundentickets mehrerer Shops in BeezDesk CRM erscheinen, verbindest du jeden Shop und bestimmst einen Hauptshop. Für die frühere Integration waren ein BeezDesk-Abo und MailBeez in jedem beteiligten Shop erforderlich.
 
+Halte fest, welche Anbindung zu welchem Shop gehört. Das erleichtert in einer Umgebung mit mehreren Shops die Suche nach einem Ticket, das in der falschen Abteilung gelandet ist.
 
 ## Installation
 
@@ -49,16 +53,16 @@ Neue Domains dort bitte unter `Übersicht > Tarife > BeezDesk > Details zeigen >
 
 ### Integration in das Admin-System
 
-Bitte folgen Sie der [Anleitung zur Einbindung von BeezDesk CRM Kunden Insight](/dokumentation/configbeez/config_customer_insight). Sobald das BeezDesk System erfolgreich installiert und konfiguiert ist, werden Sie die neuen Kommunikations-Funktionen im Kunden Insight finden.
+Bitte folgen Sie der [Anleitung zur Einbindung von BeezDesk CRM Kunden Insight](/configbeez/config_customer_insight). Sobald das BeezDesk System erfolgreich installiert und konfiguiert ist, werden Sie die neuen Kommunikations-Funktionen im Kunden Insight finden.
 
 ### Cronjobs
 
-####BeezDesk Service Aufgaben
+#### BeezDesk Service Aufgaben
 
 Im Installations-Verlauf wird Ihnen eine Cronjob-Url mitgeteilt, bitten richten Sie eine Cronjob ein, der diese Url z.B. alle 5Min aufruft.
 
 
-####Synchronisierung von Nachrichten
+#### Synchronisierung von Nachrichten
 Neue Nachrichten in BeezDesk erscheinen erst nach Ausführung des BeezDesk Service Modules in der Shop-Administration.
 
 Bitte stellen Sie sicher, dass die **BeezDesk Service Module** unter `MailBeez > MailBeez Module` installiert sind.

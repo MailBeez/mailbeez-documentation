@@ -1,5 +1,6 @@
 ---
-title: Gastkonten zusammenfassen
+title: "Konten zusammenführen"
+module_subtitle: "Gast- und Kundenkonten zusammenführen"
 slug: config_account_aggregation
 routes:
     aliases:
@@ -18,7 +19,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Gast- und Kundenkonten zusammenführen"]
 module:
     code: 'config_account_aggregation'
     category: [configbeez]
@@ -43,37 +44,24 @@ metadata:
 #  last_modified: true
 ---
 
-#### Problem: Redundante Gast-Konten
+Ein Café bestellt Filter zunächst als Gast und eröffnet später mit derselben E-Mail-Adresse ein Geschäftskonto. Die Einkäufe können dadurch auf mehrere Kundendatensätze verteilt sein. MailBeez findet Konten mit derselben Adresse und kann sie zusammenführen. Nutzen mehrere Personen das Postfach des Cafés, lohnt sich ein genauer Blick auf die vorgeschlagenen Treffer.
 
-Wenn ein Kunde mehrmals per Gast-Konto mit gleicher Email-Adresse bestellt hat, liegen im System mehrere Kunden-Konten mit gleicher Email-Adresse. Die jeweiligen Bestellungen gehören somit zu verschiedene Kunden-Konten. Dies macht es sehr schwer z.B. das Datum des letzten Kaufes zu ermitteln.
+## Treffer vor der Zusammenführung prüfen
 
+Öffne **System → Erweiterungen → Zusatzmodule → Kundendaten und Inhalte** und wähle **Gast- und Kundenkonten zusammenführen**.
 
-## Automatisiertes Aufräumen
+[doc-steps]
 
-Mit dem Modul "Gastkonten zusammenfassen" werden automatisiert die redundanten Daten zusammengeführt:
+[doc-step]
+**Shoptabellen und einen Beispielfall prüfen**
 
-- Je Email-Adresse nur 1 Kunden-Konto, egal ob die Email-Adresse für Gast- und/oder Bestands-Konten genutzt wurde
-- Alle Bestellungen gehören zum zusammengeführten Kunden-Konto
-- der Konto-Type der zusammengeführten Konten kann in der Konfiguration gewählt werden, um z.B. ursprünglichen Gast-Bestellern das Anfordern eines Passwortes zu ermöglichen.
+Wähle **Tabellen prüfen**, um zu sehen, welche Tabellen das Zusatzmodul kennt. Aktiviere **Zusammenführung simulieren**. Vergleiche einen vorgeschlagenen Treffer mit den Gastbestellungen und dem Kundenkonto des Cafés.
+[/doc-step]
 
+[doc-step]
+**Kundengruppe und Anmeldung festlegen**
 
+Prüfe, welcher Gruppe das Konto anschließend angehören soll und ob eine Anmeldung möglich sein soll. Das ist besonders wichtig, wenn nur Gastkonten zusammenpassen. **Konten pro Durchlauf** begrenzt den Umfang eines Laufs. Sobald du die Simulation ausschaltest, können nachfolgende Läufe echte Kundendatensätze ändern.
+[/doc-step]
 
-Einmal konfiguriert wird das Modul "Gastkonten zusammenfassen" also laufend die wertvolle Datengrundlage optimieren und automatisiertes Email-Retargeting mit MailBeez verbessern.
-
-Alle Änderungen werden protokolliert und machen die Zusammenführung der Daten nachvollziehbar.
-
-
-### Installation
-
-Unter MailBeez > Konfiguration das Modul "Konten zusammenfassen" aktivieren.
-
-Unter MailBeez > MailBeez Module erscheint dann "Service Konten zusammenfassen" - hier kann das Modul ausgeführt werden. Zur Automatisierung bitte den beschriebenen Cronjob konfigurieren.
-
-
-### Testen
-
-Dieses Modul hat einen eigenen Simulations-Modus, welcher standardmässig gewählt ist. Zu testen bitte das Service-Modul ausführen.
-
-Dann unter CRM Pad > BeezDesk CRM Dashboard > Konto Konsolidierung die durchgeführten Vorgänge einsehen. Wenn alles richtig aussieht, kann der Simulations-Modus unter MailBeez > Konfiguration > "Konten zusammenfassen" deaktiviert werden.
-
-
+[/doc-steps]

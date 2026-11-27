@@ -1,5 +1,6 @@
 ---
 title: 'Shopper Approved Advanced'
+module_subtitle: "Choose which survey buyers receive and when to send it"
 slug: shopperapproved_advanced
 date: 08-05-2015
 published: true
@@ -43,47 +44,23 @@ metadata:
     author: admin
 ---
 
-**Get the most out of your Shopper Approved plan**
+[doc-callout type="note" title="Earlier campaign module"]
+Choose a flow for a current shop under [Automations](/mailbeez). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-This module allows you to invite your customers to review your Store on Shoppperapproved.com. You can even go back in time to kickstart your reviews!
+Choose which Shopper Approved survey buyers should receive and when it should arrive. Have your shop’s account details ready and allow enough time for international delivery.
 
-## Advanced Features
+Follow a test link as far as the survey itself. That shows you which questions buyers will see and whether your email describes the experience accurately.
 
-This advanced module gives you a couple of settings to streamline and improve the process of inviting customers to give a review on Shopper Approved.
+## Choose who receives an invitation
 
-## Multiple order status
+1. Select the order statuses that start the waiting period. Set an extra delay for deliveries outside the home country configured in your shop.
+2. Set the minimum number of orders. To limit reminders for repeat buyers, set the interval between invitations, for example 120 days. The module checks when the last invitation was sent.
+3. Choose whether to send the initial survey or link to the full survey with the order ID already filled in.
 
-Do you use different order status? No problem, you decide which order status you want the module to react on.
+## Customize the review page
 
-## Delay times for international orders
-
-Shipping to international customers typically takes a couple days longer. To avoid sending a review invite before delivery, you can define an additional delay for orders shipping to other countries than your own!
-
-The module automatically applies this delay to all orders which are shipped to a country, which is different from the home country you configured in your shopping-cart system.
-
-## Recognition of regular customers
-
-Don't want to bother your regular customers with an invite to review on Shopper Approved? Simply define a delay (e.g. 120 days) between two invites and you're done. The module will check when the last invite was sent and decide whether to wait or to send a new invite.
-
-## Segmentation by number of orders
-
-Select how many orders a customer must haved placed before the module invites them to give a review!
-
-### Want to integrate your valuable Shopper Approved ratings with your marketing efforts?
-
-Using the [Shopper Approved Integration Suite](/documentation/configbeez/config_shopperapproved_integration/) you can easily integrate your Shopper Approved reviews with your online shopping-cart - in a way that makes this unique and "fresh" content visible to search engines - and your MailBeez generated marketing emails!
-
-### Different ways to invite 
-
-Choose different ways to invite your customers to give reviews - all customizable to your needs! You can also create the initial invite with pre-populated customer data!
-
-## Default review page
-
-The default review page is template based and you can easily set up your own, customized template!
-
-### Make any page a review page
-
-Insert the following code on the page (e.g. `my-custom-page.php`) where you want to direct the customers to place a review:
+To use a custom review page, add the following code to that page. The module renders its review template there.
 
 ```
 if (isset($_GET['SA'])) {
@@ -94,15 +71,6 @@ if (isset($_GET['SA'])) {
 }
 ```
 
+In the email template, link to your page using the invitation parameter, for example `https://example.com/my-custom-page.php?SA={$sa_invite_parameter_value}`.
 
-...then adjust the invite link in your MailBeez email template to e.g.:
-
-`http://mydomain.com/my-custom-page.php?SA={$sa_invite_parameter_value}`
-
-## Invite to full Survey with pre-populated order-id
-
-Do you want to skip the initial survey? No Problem!
-
-Copy the link to the full survey from your Shopper Approved account into your MailBeez email template. Replace `<order-id>` with `{$order_id}`
-
-Now customers are directed to the full survey with pre-filled order id!
+For the full survey, copy its link from your Shopper Approved account and replace `<order-id>` with `{$order_id}`. The [integration suite](/configbeez/integrations/config_shopperapproved_integration) can also display reviews in the shop and in MailBeez emails.

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Einfache Drosselung
+title: "Sendetempo"
+module_subtitle: "E-Mails mit Abstand versenden"
 slug: filter_do_throttling_simple
 routes:
     - aliases: /dokumentation/filterbeez/einfache-drosselung
@@ -19,7 +20,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "E-Mails mit Abstand versenden"]
 module:
     code: 'filter_do_throttling_simple'
     category: [filterbeez]
@@ -44,17 +45,24 @@ metadata:
 #  last_modified: true
 ---
 
-**Dieses Filtermodul drosselt den Email Versand von MailBeez.**
+Dein Versanddienst erlaubt 600 E-Mails pro Stunde. Eine Lieferung ist eingetroffen, und 300 Kunden warten auf eine Rückstandsmeldung. Bei einem einzelnen Lauf mit 600 E-Mails pro Stunde dauert der Versand ungefähr eine halbe Stunde. Laufen zwei Versandprozesse gleichzeitig, addieren sich ihre Raten.
 
-> [!TIP]
-> Wir empfehlen [Newsletter2Go als Email-System](/dokumentation/configbeez/config_email_engine) zu konfiguieren. Dann brauchen Sie sich über die Einhaltung von Versende-Limits keine Gedanken zu machen.
+## Das Tempo eines Verarbeitungslaufs einstellen
 
-Einige Hoster schränken den Versand von Emails ein, z.B. maximal 480 Emails pro Stunde. Mit diesem Modul stellen Sie sicher, mit MailBeez immer unter diesem Limit zu bleiben.
+Öffne **System → Erweiterungen → Zusatzmodule → Versand und Zeitplanung** und wähle **E-Mails mit Abstand versenden**.
 
-Bespiel:
-- MailBeez wird von einem Cronjob minütlich ausgeführt
-- Der Hoster erlaubt höchsten 30 Emails pro Minute
-- Daher muss “Maximal Anzahl Emails per Durchlauf” unter 30 liegen, z.B. 25
+[doc-steps]
 
-Mit dieser Einstellung wird MailBeez den Versand nach 25 Emails anhalten, was nicht länger als 1 minute dauern sollte – also bevor der nächste Durchlauf startet.
+[doc-step]
+**Die stündliche Rate wählen**
 
+Trage unter **Angestrebte E-Mails pro Stunde** eine positive ganze Zahl ein. Bei 600 pro Stunde hält MailBeez innerhalb dieses Laufs grob sechs Sekunden Abstand zwischen den Nachrichten.
+[/doc-step]
+
+[doc-step]
+**Eine passende Größe für den Lauf wählen**
+
+Mit **E-Mails pro Verarbeitungslauf** begrenzt du die Anzahl je Lauf. Bei niedrigerem Tempo oder mehr Nachrichten bleibt der Lauf länger offen. Für eine Obergrenze aller Flow-E-Mails eines Tages gibt es das [Tageslimit](/filterbeez/filter_do_limit).
+[/doc-step]
+
+[/doc-steps]

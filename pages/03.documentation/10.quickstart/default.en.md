@@ -1,13 +1,13 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Quickstart
+title: "Set up your first campaign"
 slug: quickstart
 # menu: Quickstart
 date: 27-05-2010
 published: true
 publish_date: 27-05-2010
 # unpublish_date: 27-05-2010
-template: chapter
+template: docs
 # theme: false
 visible: false
 summary:
@@ -36,4 +36,8 @@ metadata:
 #  last_modified: true
 ---
 
-#Quickstart
+Use one shop and one test address for this walkthrough. Pick an event you can trigger there, such as registering an account. After setup, you’ll look for that address in the send record to see what happened to the first email.
+
+1. [Install MailBeez](/quickstart/step-1-download-install-mailhive)
+2. [Choose an automation](/quickstart/step-2-choose-your-mailbeez)
+3. [Check automatic processing](/quickstart/step-3-set-forget)

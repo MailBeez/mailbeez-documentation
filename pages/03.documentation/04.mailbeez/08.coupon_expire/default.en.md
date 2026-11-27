@@ -1,5 +1,6 @@
 ---
-title: 'Coupon Expiry Reminder'
+title: "Coupon expiry"
+module_subtitle: "Remind shoppers to use their coupon"
 slug: coupon_expire
 routes:
     aliases:
@@ -20,7 +21,9 @@ taxonomy:
     tag:
         - pro
         - coupon
+        - "Remind shoppers to use their coupon"
 module:
+    plans_position: after_guide
     code: coupon_expire
     category:
         - mailbeez
@@ -46,28 +49,30 @@ metadata:
     author: admin
 ---
 
-**Store issued coupons not used by customer yet? Never fear! Send them an automated coupon expiry reminder email with this handy Mailbeez module.**
+A buyer received a voucher for their next order of coffee beans. It expires next week, and the code is buried in an old email. A reminder can put the original code, expiry date and reorder link together so they can use the offer in time.
 
-As we’re sure you know, whilst email has the highest Return on Investment of any eCommerce marketing strategy, your customer’s inbox is a seriously busy place. Therefore, if you want to maximize the opportunity for your coupon campaign to be used, it is a good idea to send a timely expiration reminder email; which is the reason this little Mailbeez module exists.
+MailBeez looks for issued coupons with time left to redeem them. It checks the permitted uses for the code and recipient. Sending a reminder leaves the original discount and expiry in place.
 
-**Automated and intelligent**
+## Set up the flow
 
-Like all Mailbeez modules, the Coupon Expiry Reminder is fully automated. Once installed and styled, it is a fit-and-forget functional addition that simply checks for any coupons that have yet to be used and that will expire within the configured time frame. It then sends a notification email to the identified customers accordingly.
+Open **Campaigns → Automations → MailBeez Flows → Remind shoppers to use their coupon**, then choose **Options → Configure**.
 
-Mailbeez is an intelligent email system, so in case you are concerned that previous customers with invalid coupons will be sent reminders, then you can rest easy; Mailbeez will only email customers with a valid coupon.
+[doc-steps]
+[doc-step]
+**Choose how close to expiry to write**
 
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+For a reminder about a week ahead, enter 5 under **Minimum remaining validity** and 8 under **Maximum remaining validity**. The lower limit is included and the upper limit is excluded. This gives the scheduled run days five, six and seven before expiry to pick up eligible coupons.
+[/doc-step]
+[doc-step]
+**Include the coupon terms in the reminder**
 
+If the coupon is valid only on coffee beans, enter “Valid on coffee beans only” in the **Description** field of the [coupon template](/configbeez/common_services/config_coupon_engine). Each coupon generated from that template carries this text.
 
-**Configuration settings**
+Add `[[$coupon_description]]` next to the code and expiry date in the reminder email. The shopper will see the terms for their own coupon there.
+[/doc-step]
+[doc-step]
+**Preview the reminder**
 
-Every Mailbeez module offers deceptively simple configuration options, and the Coupon Reminder module offers two distinct settings:
-
-- **Set minimum days left before expiry (A) ** Sets the minimum number of days before the coupon expires
-- **Set maximum days left before expiry (B) **Sets the maximum number of days before the coupon expires
-
-**Here’s a real world example:**
-
-A is set to 5, B is set to 7
-
-Based on these settings, the reminder email will be sent to customers who have received a coupon which has between 7 and 5 days left before it expires.
+Under **Coupon Template for preview**, select the coffee bean template. Check that the terms appear next to the code. When MailBeez sends the reminder, it uses the shopper’s expiring coupon.
+[/doc-step]
+[/doc-steps]

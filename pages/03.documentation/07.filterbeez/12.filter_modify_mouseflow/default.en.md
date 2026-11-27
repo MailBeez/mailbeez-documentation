@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: Mouseflow Integration
+module_subtitle: "Recognize visits from campaign emails in Mouseflow"
 slug: ID-5233
 # menu: Mouseflow Integration
 date: 16-10-2012
@@ -36,8 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
-deprecated - now part of the MailBeez Core
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To manage Mouseflow recording in V5, open [View visits from emails in Mouseflow](/configbeez/config_mouseflow). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
+<span id="track-email-link-results-"></span>The retired Mouseflow filter added an identifier to shop links so visits from an email could be recognized. In an older shop, check whether the filter is still installed or the framework already handles these links.
 
-## Track Email Link Results With Mouseflow
- This filter adds an identifier to store links in MailBeez generated emails so that mouseflow can track visitors arriving at your store from clicking an email link.
+Use an email produced by the older installation when tracing the identifier. A new message created after migration may use the currently installed Mouseflow integration instead.

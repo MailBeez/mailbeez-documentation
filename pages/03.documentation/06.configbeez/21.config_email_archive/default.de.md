@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Email Web-Ansicht und Archiv
+title: "E-Mail-Archiv"
+module_subtitle: "E-Mails im Browser anzeigen"
 slug: config_email_archive
 routes:
     aliases:
@@ -21,7 +22,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "E-Mails im Browser anzeigen"]
 module:
     code: 'config_email_archive'
     category: [configbeez]
@@ -53,44 +54,24 @@ metadata:
 #  last_modified: true
 ---
 
-Mit dem Modul "Email Web-Ansicht und Archiv" erweitern Sie Ihr MailBeez System schnell und einfach um folgende Funktionen
+Eine Kundin öffnet deine Brühanleitung in einem E-Mail-Programm, das Bilder ausblendet. Über den Browserlink kann sie die versendete Nachricht lesen, einschließlich ihres persönlichen Gutscheins und ihrer Bestelldaten. Nutze eine an dich selbst adressierte E-Mail, wenn du jemandem die Browseransicht zeigst.
 
-## Web-Ansicht
+## Festlegen, wie lange ein Browserlink funktioniert
 
-Platzieren Sie den neuen Platzhalter
+Öffne **System → Erweiterungen → Zusatzmodule → Versand und Zeitplanung** und wähle **E-Mails im Browser anzeigen**.
 
-```
-<a href="{$webversion_url}">Web-Ansicht</a>
-```
+[doc-steps]
 
-in Ihrer Haupt- oder auch Inhalts-Vorlage. Der Empfänger wird dann mit Klick auf diesen Link auf eine Web-Seite geleitet, welche die Email als Online-Version zeigt.
+[doc-step]
+**Genug Zeit zum Nachlesen geben**
 
-## Archiv
+Ist der Gutschein einen Monat gültig, sollte die Kundin auch später noch auf die Anleitung zugreifen können. **Nie geöffnet: Aufbewahrung (Tage)** zählt ab der Archivierung. **Zuletzt geöffnet: Aufbewahrung (Tage)** zählt ab dem letzten Aufruf der Archivkopie.
+[/doc-step]
 
-Alle Emails werden automatisch in Text- und HTML-Version archiviert und sind komfortable über den Beez-O-Graph aber auch je Kunden im kostenfreien [BeezDesk Kunden Insight](/dokumentation/configbeez/config_customer_insight/) einsehbar - So ist leicht nachvollziehbar, welche Emails den Kunden gesendet worden sind.
+[doc-step]
+**Den Link vor dem Aufräumen prüfen**
 
-Mit Hilfe der integrierten "Aufräum-Funktion" können ältere Einträge regelbasiert gelöscht werden. Dies kann manuell im Modul oder - bei entsprechender Konfiguration - automatisiert erfolgen.
+Öffne eine neu archivierte Testmail im Browser und prüfe Text und Bilder. Mit **Abgelaufene Archiveinträge automatisch löschen** entfernt die Bereinigung Einträge nach Ablauf ihrer Frist. Bei null Tagen ist das schon bei der nächsten Bereinigung möglich. Danach lässt sich die E-Mail über den Link nicht mehr öffnen.
+[/doc-step]
 
-## Konfiguration einer externen Datenbank
-
-In der Standard-Konfiguration wird das Email-Archiv in der Shop-Datenbank gespeichert. 
-Je nach Versende-Volumen kann das Archiv trotzt automatisierter Aufräum-Funktion eine Grösse von mehreren GBs erreichen, wodurch sich z.B. Backups der Datenbank erschweren.
-
-Um die Shop-Datenbank nicht zu belasten, kann eine eigene Datenbank für das Email-Archiv konfiguriert werden. Die Schritte hierzu sind recht einfach: Zunächst in der Server-Administration eine neue Datenbank anlegen, dann die Zugangsdaten dieser Datenbank im Modul konfigurieren - fertig. Bei Verbindungsproblemen hilft das Modul mit entsprechenden Hinweisen weiter.
-
-Da es sich bei den Email-Archiv-Daten um nicht kritische Daten handelt, kann auf ein Backup verzichtet werden. Es sollte aber dennoch die automatische Aufräum-Funktion aktiviert werden, um ein unkontrolliertes Anwachsen der Datenbankgrösse zu vermeiden.
-
-## Konfiguration einer eigenen URL
-Sie können eine kurze URL zum Email-Archiv einrichten, bitte geben Sie die komplette URL an wie z.B. "http://mystore.com/m/". Die message-id wird an diese URL angehängt.
-Es ist erforderlich, dass Sie eine Rewrite-Regel in der htaccess anlegen, welche die angegebene URL in die URL "http://mystore.com/mailhive.php?m=service_handler_email_archive&ma=show&mp=<message-id>" umschreibt.
-
-
-```htaccess
-    // URL rewrite option
-    // e.g. when url is set to <shop>/m/
-    // add this rewrite rule to htaccess
-
-    RewriteEngine on
-    RewriteRule   ^m/([a-z0-9]+)/(.*)$   mailhive.php?m=service_handler_email_archive&ma=show&mp=$1&$2
-
-```
+[/doc-steps]

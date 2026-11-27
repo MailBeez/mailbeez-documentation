@@ -1,5 +1,6 @@
 ---
-title: ECG-Check.at Integration
+title: "ECG-CHECK"
+module_subtitle: "Empfänger mit der ECG-Liste abgleichen"
 slug: config_ecgcheck_integration
 routes:
     default: /dokumentation/configbeez/config_ecgcheck_integration
@@ -15,7 +16,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Empfänger mit der ECG-Liste abgleichen"]
 module:
     code: 'config_ecgcheck_integration'
     category: [configbeez]
@@ -40,22 +41,26 @@ metadata:
 #  last_modified: true
 ---
 
-> [!WARNING]
-> Wichtig für alle Marketing-Emails an Email-Adressen aus Österreich (AT)
+Dein Outdoor-Shop bereitet einen Saisonnewsletter vor und möchte Adressen mit der ECG-Liste abgleichen. Prüfe zuerst, ob MailBeez den Dienst mit den gespeicherten Zugangsdaten erreicht. Beim anschließenden Adressabgleich können Treffer für alle MailBeez-Mailings gesperrt werden.
 
- Bitte die passende Erweiterung unter **<https://apps.mailbeez.de/dashboard> > Tarife > Details anzeigen > Addons buchen**
+<span id="diese-einstellungen-sind-"></span>
 
-Diese Integration mit dem Online-Service ECG-Check.at gleicht automatisch alle Email-Adressen direkt vom dem Versand mit der österreichischen ECG-Liste ab. Bei positivem Treffer einer Email-Adresse bzw. Email-Domain wird die betroffene Email-Adresse blockiert.
+## ECG-CHECK-Konto verbinden
 
-Somit ist sichergestellt, dass keine Emails an Personen oder Unternehmen gesendet werden, welche sich in die ECG-Liste eingetragen haben. Missachtung dieser Liste sind verwaltungsrechtlich strafbar (Strafrahmen bis zu EUR 37.000). 
+Öffne **System → Erweiterungen → Externe Dienste** und wähle **Empfänger mit der ECG-Liste abgleichen**.
 
+[doc-steps]
 
+[doc-step]
+**Die gespeicherte Verbindung testen**
 
+Speichere den **ECG-CHECK API-Schlüssel** und wähle **Verbindung testen**. Dabei prüft MailBeez Zertifikat und Erreichbarkeit, ohne Empfänger abzugleichen. Ändere das **MailBeez-Lizenzzertifikat** nur auf Anweisung des MailBeez-Supports.
+[/doc-step]
 
-> [!NOTE]
-> **Was ist die ECG-Liste?**
+[doc-step]
+**Den Zeitpunkt des Abgleichs festlegen**
 
-  In der von der RTR-GmbH geführten Liste können sich Personen und Unternehmen kostenlos eintragen, die keine Werbe-E-Mails erhalten möchten.  
-  **Wer muss die ECG-Liste beachten?**  
-  Alle Unternehmer, die E-Mail-Werbung unaufgefordert versenden, müssen diese Liste beachten.    
-  <br>Weitere Informationen finden Sie auf <a href="https://www.ecg-check.at/" target="_blank">www.ecg-check.at</a>
+Prüfe **Bei regulären MailBeez-Läufen prüfen**, bevor du **Adressen abgleichen** wählst. Der Abgleich kann sofort globale Sperren setzen. Er berücksichtigt Kunden und bei aktivem Newsletter auch geeignete Interessenten. Bereits global gesperrte Empfänger werden übersprungen. Eine Adresse kann zu mehreren Empfängerdatensätzen gehören. Deshalb können die ausgewiesenen Treffer und Sperrvorgänge voneinander abweichen.
+[/doc-step]
+
+[/doc-steps]

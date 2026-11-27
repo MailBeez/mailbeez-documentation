@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Share Review on Facebook
+title: "Bewertungen auf Facebook teilen"
+module_subtitle: "Den Facebook-Freigabelink zu einer älteren Bewertung prüfen"
 slug: review_facebook
 routes:
     default: /dokumentation/mailbeez/review_facebook
@@ -19,7 +20,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [ce]
+    tag: [ce, "Share Review on Facebook"]
 module:
     code: 'review_facebook'
     category: [mailbeez]
@@ -51,15 +52,10 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses Modul kontaktiert Kunden nach der Abgabe einer Produkt-Bewertung mit der Möglichkeit, die Bewertung mit einem Klick auf Facebook zu teilen.
+[doc-callout type="note" title="Früheres Kampagnenmodul"]
+Für einen aktuellen Shop wählst du den Flow unter [Automatisierung](/mailbeez). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
+Prüfe den Freigabelink an einer älteren Produkt- oder Shopbewertung. Die frühere Facebook-Erweiterung zeigte ihn nach der Bewertung an. Öffne ihn an einer Testbewertung, um das externe Ziel zu kontrollieren.
 
-Die Email beinhaltet eine Liste der Produkte mit
-- Bild
-- Link zur Facebook Teilen Seite
-
-Wie bei alle MailBeez Modulen wird der Inhalt der Email basierend auf vorlagen generiert und die Produkt-Liste ist in einer Unter-Vorlage definiert.
-
-Der Facebook Teilen Link zeigt auf die review_info Seite, auf der Anhand der products_id und review_id die Bewertung des Kunden gezeigt wird.
-
-Facebook muss in der Lage sein, den Bewertungs-Text von dieser Seite zu lesen - ggf. die Shopseite anpassen.
+Prüfe bei einer geteilten Bewertung auch die Zielseite des Beitrags. Dort machen sich neue Besucher ein Bild vom Shop oder vom bewerteten Produkt.

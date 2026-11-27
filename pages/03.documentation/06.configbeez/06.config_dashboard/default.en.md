@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: Dashboard Configuration
+module_subtitle: "Choose which widgets appear on the MailBeez dashboard"
 slug: config_dashboard
 date: 26-03-2012
 published: true
@@ -25,4 +26,10 @@ metadata:
     author: admin
 ---
 
-Utilize the dashboard configuration to adopt the dashboard to your needs.
+[doc-callout type="note" title="Earlier module settings"]
+For settings in the current app, start with [System](/app-system). [Browse the legacy reference](/legacy).
+[/doc-callout]
+
+If a widget is missing from an older dashboard, open its dashboard configuration and check the selected widgets. Open the dashboard again to verify the selection. For the list of historical widgets, see [Earlier dashboard widgets](/dashboardbeez).
+
+Compare the widget list with the dashboard in the same installation. That helps distinguish a widget hidden by a setting from one the shop has never installed.

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Kunden ohne Kauf Profi Cross Check
+title: "Erstkauf-Abgleich"
+module_subtitle: "Nach dem Wechsel vom einfachen Modul doppelte Erstkauferinnerungen vermeiden"
 slug: filter_check_nopurchase_advanced
 # menu: Kunden ohne Kauf Profi Cross Check
 date: 16-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Kunden ohne Kauf Profi Cross Check"]
 module:
     code: 'nopurchase_advanced'
     category: [filterbeez]
@@ -40,6 +41,12 @@ metadata:
 #  last_modified: true
 ---
 
-Als Teil des [Kunden ohne Kauf Profi](/dokumentation/mailbeez/nopurchase_advanced/)[ ](/dokumentation/mailbeez/shopbewertung_advanced/) Modules prüft dieser Filter, ob ein Kunde die Emails des einfachen Modules erhalten oder blockiert hat.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Zum ersten Kauf einladen](/mailbeez/nopurchase_advanced) Kontakte nach einer Registrierung ohne Kauf anschreiben. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Wenn Sie vor der Installation des Profi Modules die einfache Version benutzt haben, wird dieser Filter sicherstellen, dass Kunden nicht doppelt kontaktiert werden.
+Beim Wechsel vom einfachen Modul zur Profi-Ausgabe berücksichtigte dieser frühere Filter die bisherige Versandhistorie und Abmeldungen. Wer die Nachricht über das einfache Modul bereits erhalten oder gesperrt hatte, sollte sie über das Profi-Modul nicht erneut bekommen.
+
+Prüfe ein Konto, das vor dem Wechsel bereits zum ersten Kauf eingeladen wurde. Der frühere Versand an dieses Konto ist der Grund für den Abgleich beim Umstieg.
+
+Bei einem Shop, der direkt mit der Profi-Ausgabe begann, gibt es keine Versandhistorie des einfachen Moduls zu prüfen.

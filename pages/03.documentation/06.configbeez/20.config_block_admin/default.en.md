@@ -1,5 +1,6 @@
 ---
 title: 'Advanced Opt-Out with Admin'
+module_subtitle: "Set the scope of an opt-out and review blocks from the shop admin"
 slug: config_block_admin
 date: 18-10-2011
 published: true
@@ -44,40 +45,26 @@ metadata:
     author: admin
 ---
 
- 
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To review opt-outs and blocks in V5, open [Contacts](/mailbeez-results/contacts). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-## About This Module
+<span id="about-this-module"></span>Check an address in the former opt-out administration before changing a preference. A recipient can have a block for one module or for all MailBeez mail. Confirm the intended scope with the recipient before unblocking it.
 
-This module enhances the default Opt-Out handling which is already built into MailBeez by allowing you to adjust customer Opt-Out settings by manually editing which of your customers will receive Mailbeez generated emails. And it can all be done from within your store’s admin! With this module, you can:
+Start with what the recipient asked to stop. A customer who only wants fewer review requests may still want other messages they signed up for.
 
-- Insert “block all” links into your email templates, allowing customers to choose between blocking specific emails and blocking all MailBeez generated emails
-- Manually unblock customers who opt-out via accidental click
-- Disable opt-out for selected modules – for example, payment reminder emails
-- Manually block and unblock a customer on a per module basis
-- Manually block and unblock a customer on a global basis
+## Add the links to a template
 
+<span id="features"></span>First check whether the responsive main template already contains both links. The first placeholder blocks the current module. The second applies across modules.
 
-##Features
-
-The Advanced Opt-Out with admin covers following featres
-
-> [!TIP]
-> the following code is already integrated in the latest responsive main templates
-
-
-**Opt-Out all MailBeez Emails**
-
-Introducing the template var `{$block_all_url}` allows you to add a new link to your email footer:
-
-```html
+```smarty
 <a href="{$block_url}">no more emails like this</a> | 
 <a href="{$block_all_url}">no ore emails at all</a>
 ```
 
-**Disable opt-out for selected modules**
+For a module configured without opt-out, the template can check `$noblock` before showing the links.
 
-for some modules, e.g. payment reminders you don't want to allow customers to block these emails. Using the following code these emails will not provide the opt-out links:
-```
+```smarty
 {if $noblock}
    You can not block this notification
 {else}
@@ -86,20 +73,8 @@ for some modules, e.g. payment reminders you don't want to allow customers to bl
 {/if}
 ```
 
-## Opt-Out Administration
+## Manage an existing block
 
-In some cases you might want to manually block - or unblock - a customer. The MailBeez Opt-Out Admin panel allows you to quickly find the customer and perform the necessary action: 
+<span id="opt-out-administration"></span><span id="import-of-blacklist"></span>Look up the customer by ID, email or name. Select the module or the global block. To import existing blocks, paste one address per line and select the modules they apply to. Only matching customer records are blocked.
 
 [doc-video url="https://www.youtube.com/watch?v=3yYfw8--94s" /]
-
-
-
-## Import of blacklist
-
-Are you having email-addresses to block from external systems? This new feature allows you to easily block the matching customers.
-
-- Pasted Email-Addresses you want to block into the input field – one address per line
-- Select the modules to block
-- the Email-Addresses are processed against your customer-table and the matching customers are blocked
-
-Installation and configuration are fast and easy! Installation instructions are included in the download package.

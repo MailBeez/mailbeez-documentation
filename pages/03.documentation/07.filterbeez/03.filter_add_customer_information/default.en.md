@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Extended Customer Information
+title: "Customer details"
+module_subtitle: "Include more customer details in emails"
 slug: filter_add_customer_information
 routes:
     aliases:
@@ -20,7 +21,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Include more customer details in emails"]
 module:
    code: 'filter_add_customer_information'
    category: [filterbeez]
@@ -45,48 +46,12 @@ metadata:
 #  last_modified: true
 ---
 
-This module lets you add a variety of additional customer information into your emails so that each customer will receive personalized emails that provide the impression that the mailings you send them are customized just for them, vs. an impersonal bulk mailing that goes out to a massive mailing list.
+Your coffee wholesaler wants account emails to mention the café’s company name. Retail customers buy the same beans, but their company field is usually empty. The add-on makes stored customer details available to the template so you can write a message that reads naturally in both cases.
 
-For example, in addition to displaying the customer's name in your emails, you can also display or use their date of birth, age, phone number, company name, address, fax number, newsletter subscription status, and more!
+## Use a field from the customer’s default address
 
-```
-{$data.customer.firstname} // firstname
-{$data.customer.lastname} // lastname
-{$data.customer.dob} // date of birth
-{$data.customer.age} // age
-{$data.customer.telephone} // phone
-{$data.customer.fax} // fax
-{$data.customer.newsletter} // newsletter 0/1
-{$data.customer.company} // company
-{$data.customer.postcode} // postcode
-{$data.customer.city} // city
-{$data.customer.state} // state
-{$data.customer.country_id} // country id
-{$data.customer.zone_id} // zone id
-{$data.customer.raw} // array with all data
+Open **System → Extensions → Add-ons → Customer data and content** and select **Include more customer details in emails**.
 
-```
+For the company name, the template field is `$data.customer.company`. It comes from the default address on the customer account. A parcel’s delivery address can be different. Use the saved company name only where the message concerns the customer account.
 
-**Example:** Age-dependent salutation
-
-check the [smarty documentation](http://www.smarty.net/docsv2/en/language.function.if.tpl) for more examples of if else statements
-
-smarty syntax
-
-```
-{if $data.customer.age gt 30}
-    above 30: hello sir, your age is {$data.customer.age} - dob: {$data.customer.dob}
-{else}
-    below 31: hi there, your age is {$data.customer.age} - dob {$data.customer.dob}
-{/if}
-```
-
-or in the visual editor use these tags protected from editing:
-
-```
-[[if $data.customer.age gt 30]]
-    above 30: hello sir, your age is [[$data.customer.age]] - dob: [[$data.customer.dob]]
-[[else]]
-    below 31: hi there, your age is [[$data.customer.age]] - dob [[$data.customer.dob]]
-[[/if]]
-```
+Choose two profiles under [Preview & Test Data](/configbeez/preview-test-data). Preview the template with the café, then with a private customer. Check that the company appears for the café and that a missing name leaves a complete sentence for the private customer.

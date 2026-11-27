@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: The Customer Opt-Out Admin Widget
+title: "Opt-out widget"
+module_subtitle: "Find a customer’s opt-out or email block from the earlier dashboard"
 slug: dashboard_block_admin
 # menu: The Customer Opt-Out Admin Widget
 date: 17-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "The Customer Opt-Out Admin Widget"]
 # added collection selector
 
 author:
@@ -36,6 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
-Delivered with the [Advanced Opt-Out with Admin module,](/documentation/configbeez/config_block_admin/) this widget lets you manually assign opt-out/opt-in status for your customers right from your dashboard!
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To review opt-outs and blocks in V5, open [Contacts](/mailbeez-results/contacts). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-This is useful if a customer accidentally clicks an opt-out link and needs to opt back in.
+Search for the address in the old opt-out widget. Check the scope of its block before changing it at the recipient’s request. Use [Opt-Out List Viewer](/reportbeez/report_block) to review recorded blocks and [Advanced Opt-Out with Admin](/configbeez/config_block_admin) for the administration procedure.
+
+When someone asks to resume mail, check which address and which type of message they mean. The saved preference may cover more than the campaign they mentioned.

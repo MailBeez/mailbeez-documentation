@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Template System
+title: "E-Mail-Vorlagen"
+module_subtitle: "Vorlagen für den Aufbau von Kampagnen-E-Mails konfigurieren"
 slug: config_template_engine
 # menu: MailBeez Analytics
 date: 26-03-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [pro]
 # added collection selector
 
 author:
@@ -36,8 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
-Zur Generierung der Emails nutzt MailBeez das beliebte Templatesystem "[Smarty](http://smarty.net)", welches auch in vielen Shop-Systemen zum Einsatz kommt.
+Tauchen dasselbe Logo oder dieselbe Fußzeile in mehreren Kampagnen auf, prüfe vor der Bearbeitung einer einzelnen E-Mail die gemeinsame Vorlage.
 
-In diesem Modul kann der Cache des Template Systemes geleert werden.
+Eine neue Anschrift im gemeinsamen Fußbereich kannst du für mehrere Kampagnen zentral ändern. Geht es nur um den Text einer Einladung, öffne die Nachricht dieser Kampagne.
 
-Nicht alle Email Programm unterstützen externe CSS Dateien, daher werden standardmässig alle CSS Angaben in Inline-CSS umgewandelt. Sollte dieses Verhalten bei selbst erstellten Email-Vorlagen stören, kann es hier deaktiviert werden.
+Öffne **System → Konfiguration** und wähle **E-Mail-Vorlagen**.
+
+Das Erscheinungsbild einer Hauptvorlage änderst du unter **Inhalte → Haupt-Vorlagen**. Prüfe das Ergebnis mit einer E-Mail, die diese Vorlage verwendet.

@@ -1,5 +1,6 @@
 ---
 title: Inhalts-Generator
+module_subtitle: "Produktempfehlungen mit einem Live-Content-Baustein einfügen"
 slug: config_content_engine
 routes:
     default: /dokumentation/configbeez/config_content_engine
@@ -30,61 +31,23 @@ metadata:
 
 ---
 
-Im visuellen Editor können Sie schnell und einfach regelbasierte **personalisierte Produkt-Empfehlungen** in jede MailBeez Email einfügen.
+[doc-callout type="note" title="Frühere Moduleinstellungen"]
+Einstellungen in der aktuellen App findest du unter [System](/app-system). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Hierzu das Inhalts-Element `Live Content` wählen und dann wie gewünscht konfigurieren.
+Füge den Baustein `Live Content` ein, wenn eine Kampagne Produkte empfehlen soll. Wähle eine Quelle passend zur Nachricht. Eine Warenkorberinnerung kann die Artikel im Warenkorb zeigen, eine Nachbestell-E-Mail passende Produkte zu einem früheren Kauf.
 
+Stimme die Empfehlungen auf den Anlass ab. Bei einer Erinnerung an einen offenen Einkauf sollte für den Kunden erkennbar sein, warum die aufgeführten Artikel in dieser E-Mail stehen.
 
-![](Screen_config.de.png)
+![Einstellungen für die Quelle der Produktempfehlungen](Screen_config.de.png)
 
-Sie können aus der folgenden Auswahl von Quelle wählen, nach welchen Kriterien die Produkt-Empfehlungen zusammengestellt werden.Je nach gewählter Quelle stehen weitere Konfigurations-Möglichkeiten zur Verfügung.
+- <span id="katalog-basierte-produkt-"></span>**Katalog**<br>
+  Wähle Top-Produkte, nach Datum sortierte Neuheiten oder Sonderangebote.
+- <span id="produkt-empfehlungen-nach"></span>**Frühere Käufe**<br>
+  Zeige Cross-Selling-Artikel oder häufig zusammen gekaufte Produkte passend zum bisherigen Einkauf.
+- <span id="produkt-empfehlungen-nach-1"></span>**Warenkorb**<br>
+  Zeige den Warenkorbinhalt, Cross-Selling-Artikel oder Produkte, die oft mit diesen Artikeln gekauft wurden.
 
-> [!TIP]
-> Für Empfehlungen basierend auf Bestellungen (z.B. "ebenfalls gekaufte Produkte") bitte den relevanten Bestell-Status konfigurieren, sowie den Zeitrahmen der für die Zusammenstellung der Empfehlung relevanten Bestellungen. Hierdurch können Sie konfigurieren, wie **saisonales Kaufverhalten** die Empfehlungen beeinflusst.
+Bei bestellbasierten Quellen wählst du Bestellstatus und Zeitraum. Ein kürzerer Zeitraum gewichtet das jüngere, saisonale Kaufverhalten stärker. Zen Cart benötigt für Cross-Selling-Quellen [Cross Sell Advanced](https://www.zen-cart.com/downloads.php?do=file&id=400).
 
-
-
-#### Katalog-basierte Produkt-Empfehlungen
-
-**Top Produkte**  
- Hiermit werden die im Shop als "Top" Produkte markierten Artikel aufgelistet
-
-**Neue Produkte**  
- Zeigt die konfigurierte Anzahl an neuen Produkte an, sortiert nach Datum
-
-**Sonderangebote**  
- Zeigt die konfigurierte Anzahl an Sonderangebots-Produkten an
-
-
-#### Produkt-Empfehlungen nach gekauften Produkte
-
-**XSell-Produkte nach gekauften Produkten**  
- Zeigt XSell-Produkte an, basieren auf den vom Kunden zuvor gekauften Produkte
-
-**Ebenfalls gekaufte Produkte nach gekauften Produkten**  
- Zeigt Produkte, welche von anderen Kunden gekauft wurden, welche zuvor gleiche Produkte gekauft hatten.
-
-
-#### Produkt-Empfehlungen nach Warenkorb
-**Produkte im Warenkorb**  
- Zeigt den aktuellen Warenkorb
-
-**XSell-Produkte nach Produkten im Warenkorb**  
- Zeigt XSell-Produkte passenden zu den Produkten im Warenkorb
-
-**Ebenfalls gekaufte Produkte nach Produkten im Warenkorb**  
- Zeigt Produkte, welche von anderen Kunden gekauft wurden, welche ebenfalls die Produkte im Warenkorb gekauft haben.
-
-
-> [!NOTE]
-> **Zen-Cart**: XSell basierte Quellen sind nur verfügbar, wenn das addon [Cross Sell Advanced](https://www.zen-cart.com/downloads.php?do=file&id=400) installiert ist
-
-
-#### Keine doppelten Produkte
-Sie können gerne mehrere Inhalts-Elemente vom Typ `Live Content` einfügen - mit der Option "**Bereits gezeigte Produkte ausschliessen**" können Sie sicher sein, dass keine doppelten Produkte erscheinen, falls z.B. eine Neuheit auch gleichzeigtig ein Sonderangebot ist und sowohl `Live Content` vom Typ "Neue Produkte" als auch "Sonderangebote" eingefügt wurden.
-
-
-#### FSK18- und Gruppen-Check
-In den Shop-Systemen **Modified-Shop** und **Gambio** können Produkte mit FSK18- und Gruppen-Berechtigungen versehen werden. Standardmässig berücksichtigt der Inhalts-Generator diese Berechtigungen, so dass nur für den Kunden passende Produkte vorgeschlagen werden. Optional kann dieser Check deaktiviert werden. In anderen Shopsystem steht diese Konfigurationsmöglichkeit nicht zur Verfügung.
-
-
+<span id="keine-doppelten-produkte"></span><span id="fsk18-und-gruppen-check"></span>Mit **Bereits gezeigte Produkte ausschliessen** vermeidest du doppelte Artikel in mehreren Bausteinen. Modified-Shop und Gambio berücksichtigen standardmäßig FSK18- und Gruppenberechtigungen. Prüfe diese Vorgaben, bevor du die optionale Prüfung änderst. Auf anderen Plattformen ist die Option ausgeblendet.

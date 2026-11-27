@@ -1,5 +1,6 @@
 ---
-title: 'Shopauskunft Integration Suite'
+title: "Shopauskunft"
+module_subtitle: "Import reviews from Shopauskunft"
 slug: config_shopauskunft_integration
 routes:
     default: /documentation/configbeez/config_shopauskunft_integration
@@ -16,7 +17,7 @@ taxonomy:
     migration_status: done
     category:
         - docs
-    tag: [pro]
+    tag: [pro, "Import reviews from Shopauskunft"]
 module:
     code: config_shopauskunft_integration
     category:
@@ -43,48 +44,27 @@ author:
 metadata:
     author: admin
 ---
-<div style="float:right" markdown="1">[![](sa_siegel.jpg)](http://www.shopauskunft.de/retailer_process.html)</div>
 
+A customer praises the packaging of a framed print on Shopauskunft. You’d like to show the review in your shop, but yesterday’s reviews are still the newest ones you can see. MailBeez can reuse a downloaded feed for a set time. Check its age and the number requested before changing the connection.
 
-**For retailers with a paid Shopauskunft.de Enterprise account, this Mailbeez module allows you to easily embed Shopauskunft reviews on your website, and as embedded content within Mailbeez emails; greatly extending the reach of your Shopauskunft investment.**
+## Choose how many reviews to request and when to refresh them
 
-Like many enterprising retailers, if you have made the investment and signed up for a Shopauskunft Enterprise account for your store, you are probably already looking for extra ways to leverage your subscription in order to maximize the exposure of good reviews to help sales; and this is where this module excels.
+Open **System → Extensions → External services** and select **Import reviews from Shopauskunft**.
 
-The Mailbeez Shopauskunft Integration Suite effectively gives you the tools to publish your Shopauskunft reviews on your website, and within any Mailbeez email via the introduction of a simple tag; greatly increasing review exposure.
+[doc-steps]
 
-**Trust at checkout**
+[doc-step]
+**Identify your shop**
 
-In addition to the core functionality of the module, creative retailers could also create a secondary template to pull in only a handful of reviews at a time, and display them as snippets on the shopping cart or checkout page. As one of the main areas where a sale is decided upon, and where consequently trust is vitally important, this would be a highly effective, yet simple step to alert your customers to the store’s trustworthiness.
+Enter the token supplied by Shopauskunft under **Shopauskunft partner token**. Under **Reviews requested from Shopauskunft**, zero requests up to 100 reviews. The service may return fewer.
+[/doc-step]
 
-**Top features of the Integration Suite**
+[doc-step]
+**Check the next request**
 
-- Caching of the Shopauskunft Rating Feed for fast page loads
-- Template based formatting of the output
-- Unlimited number of different templates for page integration, one template for email integration
-- Selection of ratings to display e.g. “at least 4 star ratings”
-- Random ratings or chronological list of ratings
-- Easy drop-in installation into MailBeez
-- Easy function call for output in the storefront
+Set **Review cache duration (minutes)** and save. Once the cache expires, the next request fetches the feed again. Choose **Test feed** and look for the comment about the print. Check that its date and shop match the original review.
+[/doc-step]
 
-### Getting started
+[/doc-steps]
 
-Install and activate the module – configure your API feed as described in the Module’s admin interface. You can use the integrated Test-Button to test your settings and check if the API feed is correctly imported.
-
-**Integrate Ratings into the storefront:**
-
-Let’s say you wanted to add the Shopauskunft reviews to your ‘Contact Us’ page. In order to do this, you would simply use the following PHP code and place it into the Contact us’ page.
-
-```php
-//include class
-require_once(DIR_FS_CATALOG . 'mailhive/configbeez/config_shopauskunft_integration/classes/shopauskunft_integration.php');
-// create new instance
-$feed = new shopauskunft_integration();
-// generate output (template, number of ratings, min stars, shuffle)
-echo $feed->output_feed('feed_reviewpage.tpl', 7, 4, 'True');
-```
-
-The included DIV/CSS based template “feed\_reviewpage.tpl” generates a default output, which can be customized to match your store’s theme with only a little extra work.
-
-**Integrate Ratings into MailBeez campaigns:**
-
-By adding a simple tag into your MailBeez template you can also show your ratings in all or selected MailBeez generated emails, read more on [integrate Shopauskunft ratings into MailBeez Emails](/documentation/filterbeez/filter_add_shopauskunft_feed)
+To invite a buyer to contribute another review, use the [Shopauskunft flow](/mailbeez/shopauskunft_advanced).

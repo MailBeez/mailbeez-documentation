@@ -36,88 +36,41 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez works with Holbi TrueLoaded, running on php 5.3+
+[doc-callout type="note" title="Installation for earlier shop releases"]
+Check the version in your shop admin. For a different release, look under [Installation](/basics/installation) or in the [legacy reference](/legacy).
+[/doc-callout]
 
-The installation is straight forward and can be done in a couple of minutes by following these three steps:
+<span id="requirements"></span>Use the installer for Holbi TrueLoaded. The historical package specified PHP 5.3 or later.
 
-- copy new files
-- modify existing files
-- add admin access rights
-
-### Requirements
-
-You need to be able to upload new files to your TrueLoaded shopping cart system and modify existing ones.
-
-
-## Step 1 – copy new files
+This installation also requires access for the admin group. If the file is present but another administrator cannot open it, check that group’s permissions.
 
 [plugin:content-inject](/content_blocks/download_installer)
 
+## Copy the shop files
 
-In the mailbeez_installer-v4.xx fileset, navigate to catalog > admin, then copy the following file to your TrueLoaded admin-directory.
+<span id="step-1-copy-new-files"></span>Copy `catalog/admin/mailbeez.php` into the shop’s admin directory. Copy `catalog/mailhive/` and `catalog/mailhive.php` into the shop root alongside `index.php`.
 
-```bash
-mailbeez.php
-```
+## Add the admin menu entry
 
+<span id="step-2-modify-existing-fi"></span><span id="add-a-menu-entry"></span>Open `admin/includes/boxes/tools.php` in the shop installation.
 
-In the mailbeez_installer-v4.xx fileset, navigate to the catalog folder, then copy the following file and folder to your Trueloaded root directory (where your index.php is located).
+Locate this fragment in the existing file.
 
-```bash
-mailhive (folder)
-mailhive.php
-```
-
-
-## Step 2 – modify existing files
-
-### Add a menu entry
-
-In your Trueloaded shopping cart system files, locate and open the file:
-
-```bash
-admin/includes/boxes/tools.php
-```
-
-
-find
-
-```
+```text
 tep_admin_files_boxes(FILENAME_WHOS_ONLINE, BOX_TOOLS_WHOS_ONLINE) .
 ```
 
+Insert the following immediately after that line.
 
-add a new line with the following text:
-
-```
- // mailbeez
+```php
+// mailbeez
  tep_admin_files_boxes('mailbeez.php', 'MailBeez') .
  // - mailbeez
 ```
 
+## Grant group access
 
-this will add the menu-entry “MailBeez” to your Tools-Box.
-
-## Step 3: add admin access
-
-### Add File Access
-
-Administrator > File Access
-
-1. Click Folder “Tools”
-2. Click Button “store files”
-3. Select “mailbeez.php” in dropdown list
-4. Click Button “save”
-
-### Assign Access Rights
-
-Administrator > Member Groups
-
-1. Click Button “Groups”
-2. Select the Group you would like to give access to MailBeez
-3. Click Button “new permission”
-4. Check mailbeez.php in section “Tools”
-
-repeat for any group you would like to give access to MailBeez
+1. <span id="step-3-add-admin-access"></span><span id="add-file-access"></span><span id="assign-access-rights"></span>Under **Administrator → File Access**, open **Tools → store files**, choose `mailbeez.php` and save.
+2. Under **Administrator → Member Groups → Groups**, choose the group and open **new permission**. Select `mailbeez.php` under **Tools**. Repeat for each group that needs access.
 
 [plugin:content-inject](/content_blocks/run_installer)

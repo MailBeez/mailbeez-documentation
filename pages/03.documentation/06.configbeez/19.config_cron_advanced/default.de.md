@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Zeitsteuerung
+title: "Versandzeiten"
+module_subtitle: "Versandzeiten je Modul festlegen"
 slug: config_cron_advanced
 # menu: MailBeez automatisch ausführen - Profi
 date: 02-12-2013
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Versandzeiten je Modul festlegen"]
 module:
     code: 'config_cron_advanced'
     category: [configbeez]
@@ -49,21 +50,24 @@ metadata:
 #  last_modified: true
 ---
 
-Mit dem "Zeitsteuerung" Modul erhalten Sie volle Kontrolle über den Versende-Zeitpunkt jedes Modules.
+Ein Ersatzteilhändler verschickt Zahlungserinnerungen am Dienstagmorgen, wenn die Buchhaltung Rückfragen beantworten kann. Ein Zeitfenster von 8 bis 9 Uhr passt dazu. Ein Verarbeitungslauf um 8:30 Uhr kann die Erinnerung versenden. Um 9:30 Uhr ist das Zeitfenster bereits geschlossen.
 
-**Vorteile**
+## Ein Versandfenster für ein Modul festlegen
 
-- Sie können einfach kontrollieren, an welchen Wochentagen und zu welcher Stunde die jeweiligen Emails versendet werden.  
-Z.B. können Sie eine Willkommens-Email, in der Sie Ihre schnelle Hilfe anbieten, nur während Ihrer Geschäftszeiten versenden.
-- Reduzierung der Server-Last.  
-Abhängig von Ihrem Server, Anzahl der MailBeez Module und Konfiguration kann der Versende-Prozess die Grenzen Ihres Servers erreichen. Mit Hilfe dieses Modules können Sie die Ausführung der einzelnen Module aufteilen und somit die Last reduzieren.
+Öffne **System → Erweiterungen → Zusatzmodule → Versand und Zeitplanung** und wähle **Versandzeiten je Modul festlegen**.
 
+[doc-steps]
 
+[doc-step]
+**Tag und Uhrzeit wählen**
 
-**Einrichtung:**
+Öffne **Zeiten festlegen**, suche die Zahlungserinnerung und wähle den Wochentag und die gewünschten Stunden. Andere Flows können ihren eigenen Zeitplan behalten.
+[/doc-step]
 
-Das Modul "Zeitsteuerung" enthält die Automatik-Funktion des "[MailBeez automatisch ausführen](/dokumentation/configbeez/config_cron_simple)" Modules, um den Traffic auf der Website zur Ausführung des Versende Prozesses zu nutzen. Dies passiert asynchron, d.h. die Ladezeiten werden nicht negativ beeinflusst.
+[doc-step]
+**Einen Lauf im Zeitfenster einplanen**
 
-**Für beste Zuverlässigkeit bitte einen traditionellen Cronjob einrichten, welche die MailBeez Cronjob-URL z.B. alle 5 Minuten ausführt und dann in dem Modul einfach und flexible die Zeitsteuerung je Modul konfigurieren.**
- 
-Somit sind die Ausführungs-Zeiten nicht vom Besucher-Traffic abhängig.
+Prüfe, was die [automatische Verarbeitung](/configbeez/automatische-verarbeitung) startet. Das Zeitfenster erlaubt den Versand. Zum Start braucht es weiterhin einen Server-Cronjob oder einen geeigneten Shopbesuch. **Mindestabstand bei Shopbesuchen (Minuten)** gilt für Läufe, die durch Besuche ausgelöst werden.
+[/doc-step]
+
+[/doc-steps]

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Produktbewertungen einfach
+title: "Produktbewertungen einfach"
+module_subtitle: "Käufer über die Bewertungsfunktion des Shops um eine Produktbewertung bitten"
 slug: review
 routes:
     default: /dokumentation/mailbeez/review
@@ -51,17 +52,10 @@ metadata:
 #  last_modified: true
 ---
 
-**Das “Produktbewertungen einfach” Modul für den kostenlosen Einstieg in die Welt des automatischen Email Marketings.**
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Um Produktbewertungen bitten](/mailbeez/review_advanced) Einladungen zu Produktbewertungen einrichten. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Wenn ein Kunde ein Produkt bei Ihnen bestellt hat, ist der nächste logische Schritt, diesen Kunden um eine Produktbewertung zu bitten – dies vertieft die Beziehung zum Kunden und liefert natürlich mehr Inhalte für Ihren Online-Shop. Eine Daumenregel lautet: “Mehr Produktbewertungen ergeben mehr Umsatz”.
+Nutze mit der einfachen Community-Erinnerung die Produktbewertung des Shops. Wähle einen Bestellstatus und plane Zeit für Lieferung und Nutzung ein. Folge-E-Mails beschreibt [Um Produktbewertungen bitten](/mailbeez/review_advanced).
 
-**Starke Lösung für Einsteiger**
-
-Obwohl diese einfache Version des Modules zur Bitte um Produktbewertungen natürlich nicht den Funktionsumfang von [Produktbewertungen Profi](/dokumentation/mailbeez/review_advanced "Produktbewertungen einfach") besitzt, erlaubt es dennoch sofort mit der automatischen Aufforderung von Kunden zur Produktbewertung zu starten und einen ersten Eindruck der Ergebnisse zu erhalten.
-
-**Einfach zu installieren und konfigurieren**
-
-Das Modul “Produktbewertungen einfach” ist – wie alle MailBeez Module – sehr einfach zu installieren und konfigurieren. Einfach mit FTP die Modul-Dateien übertragen, dann steht das neue Modul in der MailBeez Administration zur Konfiguration bereit.  
- Die Email Vorlagen sind wie gewohnt in .tpl Dateien definiert und können dort bearbeitet werden – für den Profi-Einsatz empfiehlt sich natürlich die Erweiterung “[Vorlagen Manager](/dokumentation/configbeez/config_tmplmngr/“ als Bestandteil der Profi-Tarife.
-
-Der Turbo-Start für Produktbewertungen mit dem Modul [Produktbewertungen Profi – mit Autologin](/dokumentation/mailbeez/review_advanced/ "Review Reminder Advanced – Autologin")
+Überlege vor einer kürzeren Wartezeit, wann ein Käufer den Artikel beurteilen kann. Muss er ihn erst montieren, können nach der Lieferung einige zusätzliche Tage sinnvoll sein.

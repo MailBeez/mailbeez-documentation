@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Layout Optimizer
+title: "Layout Optimizer"
+module_subtitle: "Adjust the HTML layout used by earlier email templates"
 slug: layout-optimizer
 slug: filter_layout_optimizer
 routes:
@@ -40,4 +41,8 @@ metadata:
 #  last_modified: true
 ---
 
-The functionality of this modules has been integrated into the MailBeez Framework.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To change the shared email layout in V5, open [Main Templates](/content/main-templates). [Browse the legacy reference](/legacy).
+[/doc-callout]
+
+If an old installation lists the Layout Optimizer, check the framework version before reinstalling the filter. Its layout function moved into the framework. Use [Responsive Emails with MailBeez](/basics/responsive-emails) to test the resulting email.

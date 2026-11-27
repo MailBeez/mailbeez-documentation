@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: '[Modified] Neue Rechnungsnummer'
+title: "Rechnungsnummer"
+module_subtitle: "Rechnungsnummern in E-Mails einfügen"
 slug: filter_add_invoicenumber_xtcm
 date: 19-06-2017
 published: true
@@ -15,7 +16,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Rechnungsnummern in E-Mails einfügen"]
 module:
     code: 'filter_add_invoicenumber_xtcm'
     category: [filterbeez]
@@ -26,13 +27,12 @@ module:
 
 ---
 
-Wenn Sie das Modul "Neue Rechnungsnummer" installiert haben, dann stellt dieses Filterbeez-Modul die passenden Platzhalter für den Einsatz in alle MailBeez Email Vorlagen zur Verfügung.
+Ein Café fragt, zu welcher Rechnung deine Zahlungserinnerung gehört. Die Buchhaltung sucht nach der Rechnungsnummer auf dem Beleg. Deine Bestellnummer kann ganz anders lauten. Ist das Rechnungsnummernmodul im Shop aktiv, kann MailBeez die vorhandene Nummer und das Datum in die Bestell-E-Mail übernehmen.
 
-Die Platzhalter werden nur befüllt, wenn das jeweilige MailBeez-Modul die "order_id" zur Verfügung stellt. Dies ist typisch bei allen Modulen der Fall, welche in Bezug auf Bestellungen arbeiten.
+## Die E-Mail mit dem Beleg abgleichen
 
+Öffne **System → Erweiterungen → Zusatzmodule → Kundendaten und Inhalte** und wähle **Rechnungsnummern in E-Mails einfügen**.
 
+Verwende in der Vorlage `$data.order.invoice_number` für die Nummer und `$data.order.invoice_date` für das Datum. Die Rechnung erstellt dein Shop. Das Zusatzmodul liest die Angaben zur Bestellung aus.
 
-    [[$data.order.ibn_billnr]] 
-    [[$data.order.invoice_number]] // Alias für ibn_billnr
-    [[$data.order.ibn_billdate]]
-    [[$data.order.invoice_date]] // Alias für ibn_billdate
+Vergleiche eine Testnachricht zu einer bereits abgerechneten Bestellung mit dem Beleg. In der Vorlagenvorschau kann eine Beispielnummer stehen. Fehlt der Bestelldatensatz, kann `n/a` erscheinen. Bei einer Bestellung ohne Rechnung kann das Nummernfeld leer sein. Prüfe den Beleg, bevor du den Käufer darauf verweist.

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Idealo Integration Suite
+title: "idealo"
+module_subtitle: "Bewertungen von idealo importieren"
 slug: config_idealo_integration
 routes:
     default: /dokumentation/configbeez/config_idealo_integration
@@ -20,7 +21,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Bewertungen von idealo importieren"]
 module:
     code: 'config_idealo_integration'
     category: [configbeez]
@@ -45,10 +46,26 @@ metadata:
 #  last_modified: true
 ---
 
-Importieren und Integrieren Sie Ihre wertvollen Idealo Bewertungen
+Eine Ersatzpumpe kommt noch vor dem Wochenende an. Der Kunde lobt die schnelle Lieferung auf idealo und dein Shop erhält die Bewertung per E-Mail. MailBeez liest solche Benachrichtigungen aus einem IMAP-Postfach und verschiebt verarbeitete Nachrichten in den vorgesehenen Ordner.
 
-## Funktionsweise
+## Eine Bewertungsnachricht aus dem Postfach einlesen
 
-Idealo bietet leider keine API zum Import der Bewertungen. 
+Öffne **System → Erweiterungen → Externe Dienste** und wähle **Bewertungen von idealo importieren**.
 
-Das System verarbeitet daher automatisiert die Benachrichtungs-Emails bei neuen Bewertungen.
+[doc-steps]
+
+[doc-step]
+**Das richtige Postfach verbinden**
+
+Trage **IMAP-Server**, **IMAP-Benutzername** und **IMAP-Passwort** für das Postfach ein, in dem die idealo-Nachrichten ankommen. Wähle **IMAP-Port** und **IMAP-Verbindungsoptionen** nach den Vorgaben deines Mailanbieters. Speichere und wähle **Postfach testen**.
+[/doc-step]
+
+[doc-step]
+**Die Verarbeitung festlegen**
+
+Wähle einen beschreibbaren **Ordner für verarbeitete Nachrichten** und lege **Nachrichten pro Importlauf** fest. Lass **Bei normaler MailBeez-Verarbeitung ausführen** aktiv, sofern kein eigener Cronjob den Import übernimmt. **Import starten** verarbeitet Nachrichten. Vergleiche das Datum einer bekannten Bewertung mit der Benachrichtigung im Zielordner.
+[/doc-step]
+
+[/doc-steps]
+
+Um Käufer um eine neue idealo-Bewertung zu bitten, nutze den [idealo-Einladungsflow](/mailbeez/idealo_advanced).

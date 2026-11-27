@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Status-Änderungs-Benachrichtigung
+title: "Bestellstatus"
+module_subtitle: "Über den Bestellstatus informieren"
 slug: notification_order_status
 date: 01-03-2013
 published: true
@@ -16,8 +17,9 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Über den Bestellstatus informieren"]
 module:
+    plans_position: after_guide
     code: 'notification_order_status'
     category: [mailbeez]
     compatiblity: [comp_osc,comp_cre,comp_digi,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio,comp_saas]
@@ -48,43 +50,30 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses praktische Modul sendet bei Änderung des Bestell-Status auf einen oder mehrere konfigurierbare Status eine Benachrichtigung an den Kunden.
+Eine Werkstatt hat die Espressomaschine eines Kunden repariert. Jetzt möchte er wissen, wann er sie abholen kann und ob er den Abholschein braucht. Sobald dein Team die Bestellung als abholbereit markiert, kann MailBeez diese Angaben per E-Mail verschicken.
 
-Optional kann das Modul nach Versand den Bestell-Status auf einen neuen, wählbaren Status setzen. Ein eventuell vorliegender Kommentar zur Bestellung kann in die Email eingefügt werden.
+Wähle einen Status, den alle im Shop gleich verwenden. Eine Abholbenachrichtigung passt, wenn die Maschine wirklich zur Abholung bereitsteht.
 
-Die Benachrichtigungs-Emails wird beim nächsten Durchlauf von MailBeez versendet. Um den Zeitversatz zwischen Setzen des Bestell-Status und Versand der Email gering zu halten, empfehlen wir mit Hilfe eines Cronjobs MailBeez z.B. minütlich auszuführen. Der MailBeez Support hilft bei Fragen hierzu.
+## Flow einrichten
 
-In Gambio können die Tracking-Links zur Paketverfolgung eingefügt werden.
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → Über den Bestellstatus informieren** und wähle **Optionen → Konfigurieren**.
 
-Anwendungsbeispiele:
+[doc-steps]
+[doc-step]
+**Den auslösenden Status wählen**
 
-- Eine externe Software zur Bestellbearbeitung setzt den Bestellstatus, jedoch ohne eine Benachrichtung zu versenden
-- Sie möchten die Standard Bestelltstatus-Email mit einer eigenen Version ersetzen
-- Sie möchten Abläufe in Abhängigkeit vom Bestell-Status automatisieren
+Wähle unter **Bestellungen mit diesem Status bearbeiten** deinen Status für abholbereite Bestellungen. Lege unter **Wartezeit nach dem Statuswechsel** fest, wie lange MailBeez ab dem Wechsel wartet. Setze **Höchstalter des Statuswechsels** höher, damit auch der nächste geplante Lauf die Bestellung noch finden kann.
+[/doc-step]
+[doc-step]
+**Den Status nach dem Versand bestimmen**
 
-**Vorlagen Variablen**
+Unter **Bestellstatus nach dem Versand** entscheidest du, ob der bisherige Status bestehen bleibt. Führt dein Team einen Status wie „Abholung angekündigt“, wähle die Statusänderung und trage ihn unter **Neuer Bestellstatus** ein. Prüfe, ob dein Shop beim selben Wechsel schon eine Abholmail verschickt.
+[/doc-step]
+[doc-step]
+**Die Übergabe prüfen**
 
+Nenne in der E-Mail Abholadresse, Öffnungszeiten und Bestellnummer. Probiere den Ablauf im Testshop mit einer eigens dafür angelegten Bestellung aus. Lies die E-Mail und öffne danach die Bestellung. So siehst du auch den Status, mit dem dein Team weiterarbeitet.
+[/doc-step]
+[/doc-steps]
 
-| Vorlagen-Variable    | Ausgabe                                 |
-|----------------------|-----------------------------------------|
-| [[$order_date]]      | formatiertes Datum der Bestellung   |
-| [[$status_date]]     | formatiertes Datum des Bestell-Status   |
-| [[$status_date_raw]] | unformatiertes Datum des Bestell-Status |
-| [[$status_id]]       | Bestell-Status-ID                       |
-| [[$status_name]]     | Bestell-Status-Name                     |
-| [[$comments]]        | Kommentar                               |
-| [[$orders_data]]     | Array mit allen Spalten aus Tabelle orders, z.B. [[$orders_data.delivery_city]] |
-| [[$tracking]]        | Gambio: Formatierte Liste der Links     |
-| [[$trackingData]]    | Gambio: Daten-Array für eigene Smarty Templates ['url', 'service', 'code'] |
-
-**Beispiel für status-abhängigen Email-Text**
-
-Sie können mit etwas [Smarty.net Code](http://www.smarty.net/docs/en/language.function.if.tpl) beliebige Ausgaben z.B. in Abhängigkeit vom Bestell-Status generieren:
-
-    {if $status_id == 3}
-       Ihre Bestellung wurde versendet.
-    {/if}
-
-
-
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+Für Änderungen eines voraussichtlichen Liefertermins nutze [Bei Lieferrückstand informieren](/mailbeez/notification_backorder).

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Shopbewertung Gutschein für Bewertungen
+title: "Gutscheine für Shopbewertungen"
+module_subtitle: "Nach einer Bewertung im eigenen Shop einen persönlichen Gutschein vergeben"
 slug: coupon_review_shoprating
 date: 08-02-2012
 published: true
@@ -16,7 +17,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro,coupon]
+    tag: [pro,coupon, "Shopbewertung Gutschein für Bewertungen"]
 module:
     code: 'coupon_review_shoprating'
     category: [mailbeez]
@@ -42,15 +43,18 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses Modul arbeitet mit dem [Mailbeez Shopbewertungs System](/dokumentation/configbeez/config_shopvoting/) zusammen.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Gutscheine](/content/coupons) einen erzeugten Gutscheincode nachschlagen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-**Bedanken Sie sich beim Kunden für das Abgeben von Shop-Bewertungen**
+Bedanke dich für eine Shopbewertung mit einem persönlichen Gutschein. Grundlage für die Prämie ist die im Shop erfasste Bewertung.
 
-Bewertungen auf Shopauskunft.de sind für Online-Shops (nahezu) Gold wert! Statistiken zeigen, dass eine grosse Anzahl von Bewertungen den Umsatz steigern.
+Suche bei einer fehlenden Prämie zuerst die Shopbewertung. Eine Produktbewertung derselben Person betrifft einen anderen Anlass und kann zu einem anderen Prämienmodul gehören.
 
-**Personaliserte Gutscheine schützen vor ungewünschter Verbreitung**
+1. Richte [Shopbewertungen im eigenen Shop erfassen](/configbeez/config_shopvoting) ein, damit die Bewertung erfasst wird.
+2. Lege fest, nach wie vielen Bewertungen ein Kunde einen Gutschein erhalten soll. Wähle das Angebot und prüfe den Gutscheinwert.
+3. Prüfe in der Vorschau, ob Angebot und persönlicher Code gemeinsam in der E-Mail erscheinen.
 
 [plugin:content-inject](/content_blocks/pro_coupon)
 
 [plugin:content-inject](/content_blocks/pro_responsive_template)
-

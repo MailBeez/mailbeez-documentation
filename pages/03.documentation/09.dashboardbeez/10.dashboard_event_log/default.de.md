@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Das Ereignis Protokoll Widget
+title: "Ereignisprotokoll-Widget"
+module_subtitle: "Aktuelle MailBeez-Ereignisse im früheren Dashboard sehen"
 slug: dashboard_event_log
 # menu: The Event Log Widget
 date: 17-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "Das Ereignis Protokoll Widget"]
 # added collection selector
 
 author:
@@ -36,6 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses Widget zeigt die letzten Aktivitäten des MailBeez Systems - die komplette Liste der Ereignisse können Sie im [Ereignis Protokoll](/dokumentation/reportbeez/report_event_log) einsehen.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Versand & Status](/sending-status) eine einzelne Zustellung prüfen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-In frischen MailBeez Installationen werden keine Daten gezeigt, dies ändert sich aber, sobald Sie das System in Betrieb nehmen.
+Im früheren Dashboard-Widget siehst du die jüngsten Verarbeitungsvorgänge. Öffne für den gesamten Ablauf [Ereignis Protokoll](/reportbeez/report_event_log) und suche Start und Ende desselben Laufs.
+
+Das jüngste Ereignis kann zu einem anderen Modul gehören als dem gesuchten. Gleiche Modulnamen und Uhrzeit ab, bevor du im Protokoll weiterliest.

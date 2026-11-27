@@ -1,5 +1,6 @@
 ---
-title: Ausgezeichnet.org
+title: "AUSGEZEICHNET.org (Community)"
+module_subtitle: "Invite buyers to rate your store on AUSGEZEICHNET.org"
 slug: ausgezeichnet
 routes:
     default: /documentation/mailbeez/ausgezeichnet
@@ -18,6 +19,7 @@ taxonomy:
         - docs
     tag:
         - ce
+        - "Ausgezeichnet.org"
 module:
     code: 'ausgezeichnet'
     category: [mailbeez]
@@ -28,8 +30,14 @@ metadata:
     author: admin
 ---
 
-**Get more reviews on Ausgezeichnet.org**
+[doc-callout type="note" title="Earlier campaign module"]
+Choose a flow for a current shop under [Automations](/mailbeez). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-This simple, free module allows you to ask your customers for reviews on the German ecommerce rating service Ausgezeichnet.org.
+The earlier Community module invites a buyer to rate your shop on AUSGEZEICHNET.org. Use the review destination for your own shop. Open it from a test invitation before enabling automated requests.
 
-The [Ausgezeichnet.org Advanced Module](/documentation/mailbeez/ausgezeichnet_advanced/) allows you to works smarter, e.g. configure multiple order status, responsive emails and recognition repeated orders.
+Try the link from a delivered test message. The buyer should reach your store’s review page even when they are signed out of the shop.
+
+Choose the order status that starts the wait and allow enough time for delivery.
+
+For the V5 flow, see [Ask for reviews on AUSGEZEICHNET.org](/mailbeez/ausgezeichnet_advanced).

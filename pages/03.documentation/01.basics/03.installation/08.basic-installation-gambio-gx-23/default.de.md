@@ -35,19 +35,10 @@ metadata:
 #  last_modified: true
 ---
 
+[doc-callout type="note" title="Installation für frühere Shopversionen"]
+Prüfe die Versionsnummer in deiner Shopverwaltung. Für andere Versionen findest du die passende Anleitung unter [Installation](/grundlagen/installation) oder in der [Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-MailBeez arbeitet problemlos mit *Gambio GX 2.3+*.
-
-Dank der Vor-Integration von MailBeez mit Gambio gestaltet sich die Installation sehr einfach:
-
-
-## Modul aktivieren
-
-Im Admin-Menü unter
-
-`MailBeez`
-
-bitte MailBeez aktivieren.
-
+<span id="modul-aktivieren"></span>Bei Gambio GX 2.3.x / 2.4.x ist MailBeez bereits enthalten. Öffne in der Shopverwaltung **MailBeez** und aktiviere **MailBeez**.
 
 [plugin:content-inject](/content_blocks/run_installer)

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Shopbewertung Advanced Cross Check
+title: "Shopbewertungs-Abgleich"
+module_subtitle: "Vor dem Wechsel zur Profi-Version versandte Shopbewertungs-Einladungen überspringen"
 slug: filter_check_shopbewertung_advanced
 # menu: Shopbewertung Advanced Cross Check
 date: 18-12-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Shopbewertung Advanced Cross Check"]
 module:
     code: 'shoprating_advanced'
     category: [filterbeez]
@@ -40,10 +41,13 @@ metadata:
 #  cache_enable: false
 #  last_modified: true
 ---
-deprecated
 
-<!--
-Als Teil des [Shopbewertung Profi ](/dokumentation/mailbeez/shoprating_advanced/)Modules prüft dieser Filter, ob ein Kunde die Emails des einfachen Shopbewertung-Modules erhalten oder blockiert hat.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Um Bewertungen im eigenen Shop bitten](/mailbeez/shoprating_advanced) Einladungen zur Shopbewertung einrichten. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Wenn Sie vor der Installation des Profi Modules die einfache Version benutzt haben, wird dieser Filter sicherstellen, dass Kunden nicht doppelt kontaktiert werden.
--->
+Beim Wechsel vom einfachen Modul zur Profi-Ausgabe berücksichtigte dieser frühere Filter die bisherige Versandhistorie und Abmeldungen. Wer die Nachricht über das einfache Modul bereits erhalten oder gesperrt hatte, sollte sie über das Profi-Modul nicht erneut bekommen.
+
+Teste den Übergang mit einer früheren Einladung zur Shopbewertung. Eine Anfrage zur Produktbewertung beim selben Kunden gehört zu einem anderen Kampagnenverlauf.
+
+Bei einem Shop, der direkt mit der Profi-Ausgabe begann, gibt es keine Versandhistorie des einfachen Moduls zu prüfen.

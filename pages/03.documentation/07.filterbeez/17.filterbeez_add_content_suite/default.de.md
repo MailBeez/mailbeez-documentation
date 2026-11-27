@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: Content Integration Suite
+module_subtitle: "Im früheren Entwicklungsstand Produktempfehlungen in Kampagnen-E-Mails einfügen"
 slug: filterbeez_add_content_suite
 # menu: Content Integration Suite
 date: 11-08-2011
@@ -42,14 +43,12 @@ metadata:
 #  last_modified: true
 ---
 
-**In Vorbereitung**
+[doc-callout type="note" title="Früheres Filtermodul"]
+Die Filter für deinen V5-Shop findest du unter [Zusatzmodule](/extensions/zusatzmodule). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Mit Hilfe dieses Modules können Sie automatisch generierte Produkt-Listen in jede MailBeez Email einfügen.
+Der dokumentierte Entwicklungsstand sah Produktempfehlungen in Kampagnen-E-Mails vor. Beispiele waren Neuheiten, Angebote, ausgewählte Produkte, Cross-Selling und häufig zusammen gekaufte Produkte. Welche Quellen zur Verfügung stehen, hängt von der installierten Version ab.
 
-- Ebenfalls gekaufte Produkte (Also Purchased)
-- Neue Produkte
-- Angebote (Specials)
-- Ausgewählte
-- Cross-Selling Produkte
-- Top-Seller
-- Sehr gut bewertete Produkte
+Ordne in den Entwurfsbeispielen die Produktquelle dem Zweck der E-Mail zu. Eine Neuheitenliste spricht andere Kaufabsichten an als Zubehör zu einem bereits gekauften Artikel.
+
+Die damalige Beschreibung nannte außerdem Bestseller und besonders gut bewertete Produkte. Quellen und Darstellung beschreibt [Inhalts-Generator](/configbeez/common_services/config_content_engine).

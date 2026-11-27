@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Trustedshops Profi
+title: "Trusted Shops"
+module_subtitle: "Um Bewertungen auf Trusted Shops bitten"
 slug: trustedshops_advanced
 # menu: Trustedshops Profi
 date: 04-06-2013
@@ -17,8 +18,9 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Um Bewertungen auf Trusted Shops bitten"]
 module:
+    plans_position: after_guide
     code: 'trustedshops_advanced'
     category: [mailbeez]
     compatiblity: [comp_osc,comp_cre,comp_digi,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio]
@@ -49,37 +51,31 @@ metadata:
 #  last_modified: true
 ---
 
-**Optimieren Sie Ihre Trustedshops Partnerschaft**
+Stell dir vor, du betreibst einen Kochgeschirr-Shop und einen separaten Shop für den Fachhandel. Ein Kunde bestellt eine gusseiserne Pfanne im Kochgeschirr-Shop. Öffnet er deine Einladung zu Trusted Shops, sollte er denselben Shopnamen sehen wie auf seiner Bestellbestätigung. Die hinterlegte Trusted-Shops-ID entscheidet, welchen Shop er bewertet.
 
-## Profi-Funktionen
+## Flow einrichten
 
-Im Vergleich zum kostenfreien Trustedshops Modul, welches bereits die Einladen von Kunden zur Abgabe von Bewertungen bietet, erlaubt die Profi-Version die Optimierung des Ablaufes zur Bewertungs-Aufforderung:
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → Um Bewertungen auf Trusted Shops bitten** und wähle **Optionen → Konfigurieren**.
 
-## Mehrere Bestell Status
+<span id="zeitpunkt-fuer-trusted-sh"></span>
+<span id="diese-einstellungen-sind-"></span>
 
-Haben Sie verschiedene Status, welche eine Bestellung als "ausgeliefert" kennzeichnet? Kein Problem, markieren Sie einfach alle relevanten Status.
+[doc-steps]
+[doc-step]
+**Die ID dem richtigen Shop zuordnen**
 
-## Berücksichtigung von Auslands-Bestellungen
+Trage unter **Ihre Trustedshops Händler ID** die ID des Kochgeschirr-Shops ein. Folge dem Bewertungslink aus einer Testmail. Vergleiche den Namen auf der Zielseite mit der Bestellbestätigung, bevor du echte Käufer einlädst.
+[/doc-step]
+[doc-step]
+**Die Wartezeit ab Versand planen**
 
-Der Versand ins Ausland nimmt typisch ein paar Tage länger in Anspruch. Definieren Sie eine Verzögerung für Auslandsbestellungen, damit die Einladungs-Email zur Bewertung nicht vor der Ware ankommt!
+Wähle unter **Bestell-Status für Bewertungen** deinen Versandstatus. Trifft die Pfanne üblicherweise innerhalb einer Woche ein, bieten sich unter **Wartezeit nach dem Statuswechsel** sieben Tage an. Setze **Höchstalter des Statuswechsels** höher und nutze **Zusätzliche Wartezeit bei Auslandslieferungen**, wenn grenzüberschreitende Lieferungen länger dauern.
+[/doc-step]
+[doc-step]
+**Den Zeitpunkt für eine weitere Einladung wählen**
 
-Das Modul wird dann eine Verzögerung für Bestellungen mit Lieferung an die Länder hinzufügen, welche von dem im Shop-System als Betreiber-Land konfigurierten Land abweichen.
+Lege **Mindestabstand zwischen Einladungen** mit Blick auf Stammkunden fest. Wer in der nächsten Woche noch einen Deckel bestellt, hat vielleicht schon eine Einladung zur Bestellung der Pfanne bekommen. Der Abstand verhindert, dass gleich eine zweite Bitte um Bewertung folgt.
+[/doc-step]
+[/doc-steps]
 
-## Stammkunden Erkennung
-
-Wollen Sie Ihre häufig bestellenden Stammkunden vor eine Bewertungseinladung nach jeder Bestellung beschützen? Definieren Sie einfach, wie viele Tage seit der letzten Einladungs-Email vergangen sein müssen, bevor eine erneute Einladung versendet werden soll.
-
-Das Modul wird dann automatisch prüfen, ob bereits eine neuen Einladung versendet werden kann oder nicht.
-
-### Wollen Sie Ihre wertvollen Bewertungen mit Shop und Email-Marketing integrieren?
-
-Mit der [Trustedshops Integration Suite](/dokumentation/configbeez/config_trustedshops_rss_importer/) können Sie schnell und einfach Trustedshops-Bewertungen serverseitig in Ihren Shop (positiver SEO Effekt durch "unique fresh content") und auch in alle von MailBeez generieren Email Marketing Emails integrieren
-
-> [!WARNING]
-> **ACHTUNG:** Aufgrund verschiedener gesetzlicher Regelungen weist Trustedshops darauf hin, dass dieses Modul nur an Kunden Aufforderungen zur Bewertung schicken darf, die ausdrücklich ihre Einwilligung dazu gegeben haben.
- 
- Dies kann über eine separate Checkbox oder aber den Newsletter-Abo geschehen:
-
-> Es ist möglich, die Einwilligung zum Erhalt einer Bewertungsaufforderung mit der Einwilligung zum Erhalt des Newsletters zu koppeln, dann muss jedoch in der Einwilligung bereits der (erweiterte) Umfang genau erkennbar sein. So müsste es etwa lauten “[  ]  Ich möchte den Newsletter erhalten und einmalig per E-Mail an die Abgabe einer Bewertung erinnert werden. Der Widerruf der Einwilligung ist jederzeit möglich.”.
-
-Jeder Shopbetreiber ist also selbst für den Einsatz dieses Modules verantwortlich. Falls die Einwilligung mit dem Newsletter-Abo gekoppelt werden soll, bitte MailBeez entsprechend konfigurieren. Im Bereich MailBeez > Konfiguration findet sich die Option nur an Kunden mit einem Newsletter-Abo zu verschicken.
+Das Rezept [Bewertungseinladung planen](/kochbuch/optimierter-ablauf-bitte-um-bewertung) zeigt dir, wie du eine Bestellung vom Versand bis zum Formular verfolgst.

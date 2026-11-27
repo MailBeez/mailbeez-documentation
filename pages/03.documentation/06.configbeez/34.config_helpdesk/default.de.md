@@ -2,7 +2,8 @@
 redirect: http://beezdesk.de
 
 # http://learn.getgrav.org/content/headers
-title: MailBeez eCommerce Helpdesk
+title: "MailBeez-Helpdesk"
+module_subtitle: "Den Helpdesk für einen Shop mit einer früheren MailBeez-Version finden"
 slug: config_helpdesk
 # menu: MailBeez eCommerce Helpdesk
 date: 22-03-2013
@@ -19,7 +20,7 @@ summary:
 taxonomy:
     migration_status: review
     category: [docs]
-    tag: []
+    tag: ["MailBeez eCommerce Helpdesk"]
 # added collection selector
 
 author:
@@ -38,22 +39,10 @@ metadata:
 #  last_modified: true
 ---
 
-# E-Commerce Kundenservice Helpdesk
+[doc-callout type="note" title="Frühere Moduleinstellungen"]
+Einstellungen in der aktuellen App findest du unter [System](/app-system). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-## Unterstütze Kommunikations-Kanäle
+<span id="e-commerce-kundenservice-"></span><span id="unterstuetze-kommunikatio"></span><span id="email"></span><span id="chat"></span><span id="formulare"></span><span id="facebook"></span><span id="twitter"></span><span id="forum"></span><span id="vorschlaege-feedback"></span><span id="knowledgebase"></span>Der frühere Helpdesk bündelte Kundenanfragen aus E-Mail, Chat, Formularen, Facebook, Twitter, Foren und Feedbackbereichen. Dazu gehörte eine Wissensdatenbank. Die Anleitung [BeezDesk CRM Integration](/configbeez/config_beezdesk) beschreibt Shopanbindung, Abteilungszuordnung und Nachrichtenabgleich.
 
-### Email
-
-### Chat
-
-### Formulare
-
-### Facebook
-
-### Twitter
-
-### Forum
-
-### Vorschläge (Feedback)
-
-### Knowledgebase
+Ermittle bei einer früheren Kundenanfrage zuerst den ursprünglichen Kanal und den Shop. Damit lässt sich der Gesprächsverlauf in einem gemeinsamen Helpdesk leichter finden.

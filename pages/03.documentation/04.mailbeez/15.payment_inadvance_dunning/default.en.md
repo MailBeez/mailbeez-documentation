@@ -1,5 +1,6 @@
 ---
-title: 'Payment: In advance Dunning'
+title: "Prepayment reminder"
+module_subtitle: "Remind buyers to pay in advance"
 slug: payment_inadvance_dunning
 date: 13-05-2011
 published: true
@@ -16,7 +17,9 @@ taxonomy:
         - docs
     tag:
         - pro
+        - "Remind buyers to pay in advance"
 module:
+    plans_position: after_guide
     code: payment_inadvance_dunning
     category:
         - mailbeez
@@ -43,24 +46,30 @@ metadata:
     author: admin
 ---
 
-**Awaiting payment from a customer? Take a chunk out of your admin time and automate staggered email reminders and see who has yet to pay with the Payment Dunning module from Mailbeez.**
+Your parts shop is holding a replacement pump while a customer arranges a bank transfer. Three days later the order is still awaiting payment. An email with the amount, account details and payment reference lets the customer finish the transfer without searching for their order confirmation.
 
-This advanced MailBeez multistep module automates the process of Dunning for orders that require payment in advance of despatch. In effect an intelligent and fully automated payment reminder system, the Payment in Advance Dunning module can be configured to send emails to all open, non despatched orders that are awaiting payment, with emails developing from friendly reminders, all the way through to debt collection.
+MailBeez relies on the outstanding payment status in the shop. Allow enough time to reconcile bank receipts. Once the order leaves the reminder statuses, the customer should no longer receive payment requests for it.
 
-**Easy configuration**
+## Set up the flow
 
-For each step you can easily configure the email template, (these are called .tpl files and will hopefully familiar to you from using other Mailbeez modules) and the delay between steps. Plus, for each step you can configure the Email template (.tpl file as you know them from other MailBeez modules) and the delay *after* the step before.
+Open **Campaigns → Automations → MailBeez Flows → Remind buyers to pay in advance**, then choose **Options → Configure**.
 
- 
+[doc-steps]
+[doc-step]
+**Identify orders awaiting a transfer**
 
-**Preparation**
+Choose the status that specifically means advance payment is outstanding under **Order Status for Advance Payment Due**. Check what happens to that status when your team records a transfer. A general “Processing” status shared by paid orders is too broad.
+[/doc-step]
+[doc-step]
+**Time the first request and any follow-up**
 
-To identify which orders require a payment in advance before processing you just need to configure your order status / payment modules as following:
+For the pump, set **First reminder: waiting period** to three days from the order reaching that status. If you send another request, **Wait before email 2** counts from the first email. Check the amount, payment reference and bank details against a test order.
+[/doc-step]
+[doc-step]
+**Review the cancellation stage**
 
-- You need to have an order status which identifies orders with a pending payment, e.g. “waiting for payment”
-- All “in advance” payment types need to have this order status as default when the order is created or approved. You can choose the default order status in the payment module setting
+If your process reaches cancellation, check **Cancellation: waiting period** and **Order Status for Cancellation**. That stage can change the order status and send a cancellation message. Follow a disposable order through your test shop before you rely on the sequence for stock you’ve reserved.
+[/doc-step]
+[/doc-steps]
 
-For automatic cancellation of orders you need to have an order status in your system like “canceled” for example.
-
-[plugin:content-inject](/content_blocks/pro_responsive_template)
-
+For goods already supplied on invoice, use [Follow up on unpaid invoices](/mailbeez/payment_invoice_dunning).

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: DSGVO Export System
+title: "DSGVO-Datenexport"
+module_subtitle: "Die Daten zu einer Kunden-E-Mail-Adresse exportieren"
 slug: config_gdpr_export
 # menu: Antispam Regeln
 date: 24-05-2018
@@ -35,12 +36,8 @@ metadata:
 #  last_modified: true
 ---
 
-Das MailBeez DSGVO Export System unterstützt die Anforderungen der DSGVO, Kunden auf Anfrage alle gespeicherten Daten zur Verfügung stellen zu können.
+Kläre vor dem Datenexport, wer die Auskunft anfragt und welche E-Mail-Adresse die Person in diesem Shop verwendet hat. Hat sie unter mehreren Adressen bestellt, stimme vor der Weitergabe der Datei ab, auf welche Adresse sich die Anfrage bezieht.
 
-Als Erweiterung zum [BeezDesk Kunden-Insight](/dokumentation/configbeez/config_customer_insight) können Sie hiermit schnell und einfach einen Export aller relevanten Daten im CSV-Format erstellen.
+Öffne **System → Konfiguration** und wähle **DSGVO-Datenexport**.
 
-![Screen_gdpr_export.de.png](Screen_gdpr_export.de.png)
-
-
-Das System ist modular aufgebaut und kann durch einen Programmierer leicht erweitert werden, um z.B. Daten aus einem externen System in den Export zu integrieren (weiter Informationen hierzu folgen).
-
+Prüfe, welche Daten der Export für diese E-Mail-Adresse enthält. Customer Insight liefert eine CSV-Datei. Angebundene Systeme können weitere Daten enthalten. Kontrolliere die Datei vor der Weitergabe. Dein Benutzerkonto braucht Zugriff auf den Export.

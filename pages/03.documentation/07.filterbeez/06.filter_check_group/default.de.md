@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Kundengruppen Filter
+title: "Kundengruppen"
+module_subtitle: "Versand auf Kundengruppen beschränken"
 slug: filter_check_group
 # menu: Kundengruppen Filter
 date: 27-05-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Versand auf Kundengruppen beschränken"]
 module:
     code: 'filter_check_group'
     category: [filterbeez]
@@ -49,23 +50,26 @@ metadata:
 #  last_modified: true
 ---
 
-**nur für xt:Commerce, xtc-Modified, Gambio GX, Zen Cart und CRE Loaded B2B**  
+Eine Rösterei beliefert Privathaushalte und Cafés zu Großhandelskonditionen. Der Gutschein für einen 500-g-Beutel passt zu den Privatkunden. Über die Kundengruppen deines Shops kannst du Großhandelskonten von genau diesem Flow ausnehmen. Ihre übrigen E-Mails bleiben davon unberührt.
 
-Mit diesem Modul steuern Sie, welche Kampagnen an die vorhanden Kunden / Preisgruppen versendet werden.
+## Die Kundengruppen je Flow auswählen
 
-Beispiel: Es gibt die Preisgruppen “Kunden” und “Händler”.
-Nur Mitglieder der Gruppen “Kunden” sollen eine Aufforderung zur Produktbewertung erhalten.
+Öffne **System → Erweiterungen → Zusatzmodule → Filter** und wähle **Versand auf Kundengruppen beschränken**.
 
-![Modified-Shop](Screen_xtcm.png)
-Konfiguration in Modified Shop
+[doc-steps]
 
-![zencart](Screen_zencart.png)
-Konfiguration in ZenCart
+[doc-step]
+**Gruppen einem Modul zuordnen**
 
- 
-> [!TIP]
-> Der Kundengruppen-Filter erweitert auch die Segmentierungs-Möglichkeiten z.B. im [Newsletter Profi](/dokumentation/mailbeez/newsletter) Modul!
+Öffne **Gruppen zuordnen**, suche den Nachbestell-Flow und wähle die Privatkundengruppe. Prüfe die Zuordnung auch nach der Installation eines weiteren Flows. Ist für ein Modul keine Gruppe freigegeben, schließt es Kunden mit zugehörigem Shopkonto aus.
+[/doc-step]
 
- 
+[doc-step]
+**Beide Fälle vergleichen**
 
-Sie habe eine eigene Lösung um Kundengruppen zu verwalten? Jetzt [ MailBeez kontaktieren](/about/contact/ "Kontakt").
+Wähle ein Privat- und ein Großhandelskonto mit ähnlichen Bestellungen. Nur das Privatkonto sollte diesen Filter für den Nachbestell-Flow passieren. Empfänger ohne zugehöriges Kundenkonto passieren den Filter ebenfalls. Sollen auch sie vom Angebot ausgenommen sein, grenze die Zielgruppe zusätzlich ein.
+[/doc-step]
+
+[/doc-steps]
+
+Dein Shop muss Kundengruppen bereitstellen. Für die frühere Modulversion sind Zen Cart, CRE Loaded B2B, xt:Commerce, xtc-Modified und Gambio GX dokumentiert.

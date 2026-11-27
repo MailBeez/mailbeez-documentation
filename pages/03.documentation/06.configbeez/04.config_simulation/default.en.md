@@ -1,5 +1,6 @@
 ---
-title: Simulation
+title: "Simulation Mode"
+module_subtitle: "Preview campaign recipients and messages in a test inbox"
 slug: config_simulation
 date: 28-09-2015
 published: true
@@ -19,22 +20,13 @@ metadata:
     author: admin
 ---
 
-MailBeez distinguishes between the follow modes:
+Suppose you want to test a birthday greeting before customers receive it. Pick a test profile with a birthday inside the flow’s sending window. A simulation lets you check whether that profile qualifies and which greeting and coupon MailBeez prepares.
 
-1. **Simulation**
-2. **Production**
+Open **System → Configuration → Simulation Mode**.
 
+1. Check the mode for the run you’re about to test. Scheduled runs use their own configured mode.
+2. To receive a copy, enable **Send copies during simulation** and check **Simulation recipient**. With copies off, an empty inbox is expected. Inspect the selected recipients in the simulation results.
+3. If you receive a copy, check the greeting, links and coupon against the test profile. Simulation emails and coupons carry a simulation marker. A simulated coupon can still be redeemable in the shop.
+4. Finish inspecting the results before restarting the simulation. Restarting clears its recorded data.
 
-### Simulation [SIM]
-
-In Simulation-Mode you can run any module - all emails are generated using real customer data, but they are sent only to the configured simulation email address.
-
-That allows you to test every module and check exactly what would be sent to your customers in production mode.
-
-Simulation emails and coupons are marked with [SIM]. 
-
-With restarting a simulation all recorded data will be deleted.
-
-### Production
-
-Once you are happy with the results of your simulation runs you can switch into "production" mode. When running a module in production mode alle emails are generated and sent to your customers.
+For a complete check using known orders, follow [Test a winback flow](/tutorials-and-recipes/test-winback).

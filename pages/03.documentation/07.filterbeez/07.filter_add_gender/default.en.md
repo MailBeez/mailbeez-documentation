@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Add Gender
+title: "Salutations"
+module_subtitle: "Personalize email greetings"
 slug: filter_add_gender
 # menu: Add Gender
 date: 08-04-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Personalize email greetings"]
 module:
     code: 'filter_add_gender'
     category: [filterbeez]
@@ -49,45 +50,12 @@ metadata:
 #  last_modified: true
 ---
 
- 
+A wine merchant writes a formal German invitation to a tasting. One customer has supplied the details for a personal greeting. Another registered with only a name and email address. Both should receive a first line you would be happy to write by hand.
 
-This module adds gender information to all of your MailBeez email modules. It allows you to email your customers based on gender, resulting in a higher degree of reader relevancy, in turn, making customers less likely to unsubscribe for receiving emails about products that don’t interest them.
+## Give the greeting a neutral fallback
 
-The module supports full gender recognition during testing & simulation to enable a full and complete test.
+Open **System → Extensions → Add-ons → Customer data and content** and select **Personalize email greetings**.
 
-Choose which gender you want to use when sendning test-emails:
+The add-on makes the gender value saved on the customer profile available to the template. Use a personal form of address when the stored value supports it. For an empty or unfamiliar value, a neutral “Guten Tag” works for this invitation. Keep the punctuation inside the matching greeting so there’s no stray comma or blank space.
 
-![](Screen_gender_choose.png)
-
-When you run an email module, recipients are displayed by gender:
-
-![](Screen_gender_list.png)
-
-
-In your email template you can use some logic to generate different output by gender:
-
-```
-{if $gender == "f"}
-   Dear Mrs. {$lastname}
-{elseif $gender == "m"}
-   Dear Mrs. {$lastname}
-{else}
-   Hello {$firstname} {$lastname}
-{/if}
-
-```
-
-in the visual editor use the following code to protect the tags from editing
-
-```
-[[if $gender == "f"]]
-   Dear Mrs. [[$lastname]]
-[[elseif $gender == "m"]]
-   Dear Mr. [[$lastname]]
-[[else]]
-   Hello [[$firstname]] [[$lastname]]
-[[/if]]
-
-```
-
-The gender specific personalisation is not limited to the salutation but you can even personalize content sections - even in the common main template - by gender.
+Preview the German template with one profile from each case using [Preview & Test Data](/configbeez/preview-test-data). For an English invitation, a greeting such as “Hello” may already suit both readers.

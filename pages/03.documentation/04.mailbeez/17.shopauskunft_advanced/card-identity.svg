@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="24" viewBox="0 0 48 24">
+<defs><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:serif="http://www.serif.com/" width="16" height="16" viewBox="0 0 106 73" version="1.1" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" id="module-art">
+    <g>
+        <path d="M59.583,0C44.902,0 33,11.902 33,26.583C33,41.265 44.902,53.167 59.583,53.167L60.943,53.166L78.693,53.178C78.829,53.178 78.959,53.168 79.096,53.168L89.706,64.043L89.706,50.737C98.79,46.52 105.14,37.262 105.14,26.59C105.14,11.967 93.236,0 78.692,0L59.583,0Z" style="fill:rgb(57,200,248);fill-rule:nonzero;"/>
+        <path d="M45.557,8C60.238,8 72.14,19.902 72.14,34.583C72.14,49.265 60.238,61.167 45.557,61.167L44.198,61.166L26.448,61.178C26.312,61.178 26.181,61.168 26.044,61.168L15.434,72.043L15.434,58.737C6.35,54.52 0,45.262 0,34.59C0,19.967 11.904,8 26.448,8L45.557,8Z" style="fill:rgb(26,124,230);fill-rule:nonzero;"/>
+        <path d="M36.16,40.898L29.453,44.423L30.734,36.956L25.308,31.666L32.807,30.577L36.16,23.783L39.513,30.577L47.011,31.667L41.586,36.956L42.866,44.423L36.16,40.898Z" style="fill:white;"/>
+    </g>
+</svg></defs>
+<g transform="translate(0 0)"><rect width="24" height="24" rx="6" fill="color-mix(in oklab, oklch(93.8% 0.127 124.321) 70%, transparent)"/><g><use xlink:href="#module-art" x="4" y="4" color="oklch(37% 0.013 285.805)" stroke="#fff"/></g></g>
+<g transform="translate(24 0)"><rect width="24" height="24" rx="6" fill="color-mix(in oklab, oklch(93.8% 0.127 124.321) 70%, transparent)"/><g><use xlink:href="#module-art" x="4" y="4" color="oklch(0.98 0.01 260)" stroke="#fff"/></g></g>
+</svg>

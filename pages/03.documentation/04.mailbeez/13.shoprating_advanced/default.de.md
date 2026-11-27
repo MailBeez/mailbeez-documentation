@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Bitte zur Shopbewertung Profi
+title: "Shopbewertungen"
+module_subtitle: "Um Bewertungen im eigenen Shop bitten"
 slug: shoprating_advanced
 routes:
     aliases: 
@@ -20,8 +21,9 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Um Bewertungen im eigenen Shop bitten"]
 module:
+    plans_position: after_guide
     code: 'shoprating_advanced'
     category: [mailbeez]
     compatiblity: [comp_osc,comp_cre,comp_digi,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio]
@@ -52,16 +54,30 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses Modul ist für den professionellen Einsatz der kostenfreien Erweiterung [Shopbewertungen](/dokumentation/configbeez/config_shopvoting/) entwickelt worden.
+Eine Kundin packt sechs Weingläser aus. Alle sind heil angekommen, und auf ihre Frage zur Lieferung hat der Shop noch am selben Nachmittag geantwortet. Diese Erfahrung interessiert andere, die zum ersten Mal bei dir bestellen möchten. Mit diesem Flow lädst du zur Shopbewertung auf deiner eigenen Website ein.
 
-Mit dem Shopbewertungs-Modul können Kunden eine Bewertung des Shops abgeben, diese Bewertungen sind dann in der Administrations zu bearbeiten und das Ergebnis kann in der Storefront angezeigt werden.
+Richte zuerst die [Shopbewertungen](/configbeez/config_shopvoting) ein, damit ein Formular für das Feedback bereitsteht. Sollen die Gläser selbst bewertet werden, nutze [Um Produktbewertungen bitten](/mailbeez/review_advanced).
 
-Mit diesem Modul können Shop-Betreiber ihre Kunden automatische zur Abgabe einer Bewertung auffordern.
+## Flow einrichten
 
-## viele Profi-Funktionen
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → Um Bewertungen im eigenen Shop bitten** und wähle **Optionen → Konfigurieren**.
 
-Im Vergleich zur kostenlosen Version bietet das Shopbewertung Profi Module eine Reihe von Funktionalitäten, die mehr Bewertungen ergeben wie z.B. Auto-Login und Stammkunden-Erkennung.
+[doc-steps]
+[doc-step]
+**Zeit für die Lieferung einplanen**
 
-Zudem können die Bewertungen auch in anderen Modulen (z.B. zur Kundenrückgewinnung) vorteilhaft integriert werden.
+Wähle unter **Bestell-Status** deinen Versandstatus. Plane unter **Wartezeit nach dem Statuswechsel** die Lieferzeit ein. Treffen die Pakete meist nach drei Tagen ein, hat die Kundin bei einer Einladung nach einer Woche Zeit zum Auspacken.
+[/doc-step]
+[doc-step]
+**Nach der Erfahrung mit dem Shop fragen**
 
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+Lege **Anzahl der E-Mails** und die Abstände für gewünschte Erinnerungen fest. Eine Frage wie „Wie sind deine Gläser angekommen?“ erleichtert den Einstieg. Bittest du auch um Produktbewertungen, lies beide Einladungen einmal so, wie sie im selben Postfach ankommen.
+[/doc-step]
+[doc-step]
+**Das Formular aus Kundensicht öffnen**
+
+Folge dem Bewertungslink einer Testeinladung auf dem Smartphone. Unter **Bewertungsformular ohne erneute Anmeldung öffnen** entscheidest du, ob eine erneute Anmeldung nötig ist. Prüfe, ob das Formular zu deinem Shop gehört und nach der Erfahrung mit der Bestellung fragt.
+[/doc-step]
+[/doc-steps]
+
+Das Rezept [Bewertungseinladung planen](/kochbuch/optimierter-ablauf-bitte-um-bewertung) begleitet eine Bestellung vom Statuswechsel bis zur Bewertungsseite.

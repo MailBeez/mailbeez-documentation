@@ -1,8 +1,9 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Email Tracking Report
+title: "Email tracking report"
+module_subtitle: "Review the tracking activity recorded for individual emails"
 slug: report_track
-menu: Tracking Report
+menu: "Email tracking report"
 date: 03-03-2011
 published: true
 publish_date: 03-03-2011
@@ -36,20 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
-> [!TIP]
-> you can open this report directly from your MailBeez Dashboard when clicking on the legend of the "Beez-O-Graph" widget - you will see the filtered data.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To compare sends, opens and clicks in V5, open [Email performance](/mailbeez-results/email-performance). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
+To find a message in the earlier tracking report, select the module and date, then look up the customer. A row marked `[SIM]` belongs to simulation. Look for `PROD` when investigating a live send. Selecting a legend item in [The Beez-O-Graph](/dashboardbeez/dashboard_beez_o_graph) opens the report with that filter applied.
 
-MailBeez tracks every email it sends out. This tracking data is used to cross-check a module’s email against the customers, thereby preventing the same customer from receiving the same email more than once.
-
-Delivered with the MailBeez framework software, this report helps you to understand which emails have been sent to which customers by displaying the data broken down by module.
-
-The report will even tell you which mode you were in when the email was sent:
-
-- **PROD**: MailBeez was executed in Production Mode
-- **[SIM]**: MailBeez was executed in Simulation Mode
-
-> [!NOTE]
-> Email tracking & reporting only works in simulation mode when configured properly. Please go to **Configuration tab > Simulation > ”Edit” > Enable Tracking in Simulation Mode** and set it to “True”.
-
-To delete the opt-out data collected while in simulation mode, click the Simulation “Restart” button.
+Use the time the email was expected and the customer’s address together. That helps distinguish two different messages the same module prepared for one customer.

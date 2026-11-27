@@ -1,5 +1,6 @@
 ---
-title: 'Service-Module: Repair Orders DB'
+title: "Order database repair"
+module_subtitle: "Correct inconsistent order status records in the shop database"
 slug: service_db_repair_order
 date: 07-02-2013
 published: true
@@ -16,6 +17,7 @@ taxonomy:
         - docs
     tag:
         - pro
+        - "Service-Module: Repair Orders DB"
 module:
     code: service_db_repair_order
     category:
@@ -43,21 +45,14 @@ metadata:
     author: admin
 ---
 
-## Problem:
+[doc-callout type="note" title="Earlier campaign module"]
+Choose a flow for a current shop under [Automations](/mailbeez). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-External order management solutions or custom addons can cause corrupted Order Database Tables.
+<span id="problem"></span><span id="symptom"></span>Use this historical service when an order shows different statuses in the order list and the order editor, or when a module cannot find an expected order after an external system updated it.
 
-## Symptom:
+For example, a colleague handling a delivery enquiry might read one status in the order list and another when opening the same order. Note which two records disagree before running the repair.
 
-The Order status in the order overview does not match with the Order Status in the Order-Edit View.  
- MailBeez modules can’t find any or not all orders / customers.
-
-## Solution:
-
-This module automatically repairs the corrupted Order Database Tables
-
-Features:
-
-- In Simulation mode only the corrupted Orders are listed, but not repaired
-- runs very efficiently before all other modules
-- You can choose, if you want to keep the Order Status or assign a new order status to repaired orders
+1. <span id="solution"></span>Run the service in simulation. It lists affected orders without changing them. Compare a listed order with the shop and the external order system.
+2. Decide whether repaired orders should retain their existing status or receive a specific replacement. Check which campaigns use that status.
+3. Run the repair only after checking the selection. The service runs before the other modules. Reopen an affected order and compare the status in both views.

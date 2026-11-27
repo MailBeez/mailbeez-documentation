@@ -36,79 +36,38 @@ metadata:
 #  last_modified: true
 ---
 
+[doc-callout type="note" title="Installation für frühere Shopversionen"]
+Prüfe die Versionsnummer in deiner Shopverwaltung. Für andere Versionen findest du die passende Anleitung unter [Installation](/grundlagen/installation) oder in der [Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-MailBeez arbeitet problemlos mit*Commerce:SEO v2.1.x CE*.
+Verwende das Installationspaket für Commerce:SEO 2.1.x CE. MailBeez legt eigene Tabellen an.
 
-Die Installation ist in wenigen Schritten erledigt:
-
-- Die neuen Dateien übertragen
-- Menü-Eintrag anlegen
-- Zugriffs-Rechte für den Admin vergeben (halb automatisch)
-- MailBeez per Button-Klick installieren
-
-MailBeez verwaltet eigene Tabellen - die vorhandenen Shop-Tabellen werden nicht verändert.
-
-
-## Schritt 1 - Die neuen Dateien übertragen
+Sichere das vorhandene Adminmenü, bevor du den Eintrag ergänzt. Fehlt er nach einem Shopupdate, kannst du die beiden Dateistände vergleichen.
 
 [plugin:content-inject](/content_blocks/download_installer)
 
-folgende Datei in das admin-Verzeichnis kopieren
+## Shopdateien übertragen
 
-```
-catalog/admin/mailbeez.php
+<span id="schritt-1-die-neuen-datei"></span>Kopiere `catalog/admin/mailbeez.php` ins Adminverzeichnis des Shops. Kopiere `catalog/mailhive/` und `catalog/mailhive.php` ins Shopverzeichnis neben die `index.php`.
 
-```
+## Eintrag im Adminmenü anlegen
 
-folgende Dateien und Ordner in den Shop-Root kopieren
+<span id="schritt-2-menue-eintrag-a"></span>Öffne `admin/includes/column_left.php` im Shopverzeichnis. Ein Shopupdate kann eine manuelle Menüänderung überschreiben.
 
-```
-catalog/mailhive (Ordner)  
-catalog/mailhive.php
+Suche in der vorhandenen Datei nach diesem Ausschnitt.
 
-```
-
-## Schritt 2 - Menü-Eintrag anlegen
-
-
--- nicht update-sicher --
-
-folgende Datei öffnen:
-
-```bash
-admin/includes/column\_left.php
-
+```text
+class="menuBoxContentLink">' . BOX_MODULE_NEWSLETTER . '';
 ```
 
+Füge unmittelbar nach dieser Zeile den folgenden Eintrag ein.
 
-finde
-
-```
- class="menuBoxContentLink">' . BOX_MODULE_NEWSLETTER . '';
-
-```
-
-und danach folgendes einfügen:
- 
-```html 
+```php
 if (($cs == '0') && ($aa['mailbeez'] == '1')) echo '<a '.($p == 'mailbeez'?'class="menu_link_aktiv"':'') . ' class="menuBoxContentLink" href="' . xtc_href_link('mailbeez.php') . '">MailBeez</a>';
-
 ```
 
+## Zugriff vergeben
 
-## Schritt 3 - Zugriffsrechte vergeben
-
-einmalig im Browser
-
-```bash
-
- (shop-url)/mailhive.php
-
-```
-
-aufrufen.
-
-Hierdurch werden die erforderlichen Admin-Rechten für den HAUPT-Admin vergeben.
-Falls erforderlich dann Zugriffs-Rechte im Admin System für weitere Admin-user vergeben
+<span id="schritt-3-zugriffsrechte-"></span>Rufe auf der Shopdomain einmal `/mailhive.php` auf. Dadurch erhält der Hauptadministrator Zugriff. Weitere Berechtigungen vergibst du einzeln in der Shopverwaltung.
 
 [plugin:content-inject](/content_blocks/run_installer)

@@ -1,5 +1,6 @@
 ---
-title: 'Template Selector'
+title: "Template Selector"
+module_subtitle: "Choose an email design for a single module in earlier versions"
 slug: config_template_selector
 routes:
     default: /documentation/configbeez/config_template_selector
@@ -28,10 +29,10 @@ metadata:
     author: kelly
 ---
 
-## What Does the Template Selector Do?
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To change the shared email layout in V5, open [Main Templates](/content/main-templates). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-The Template Selector is an internal service which allows you to select your preferred email template from within each individual module’s configuration panel.
+Choose the email design for a single older module. Its available designs depend on the installed template files. Check which campaign uses the module before selecting a different template.
 
-This added flexibility allows you to choose different email templates for different email modules – awesome!
-
-The Template Selector is delivered with all premium email modules except for the Newsletter – Beta module.
+If two campaigns need different branding, check the template selected for each module before editing a shared design that both campaigns may use.

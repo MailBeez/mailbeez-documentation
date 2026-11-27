@@ -36,65 +36,32 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez works with *DigiStore 4.0*, running on php 5.3+
+[doc-callout type="note" title="Installation for earlier shop releases"]
+Check the version in your shop admin. For a different release, look under [Installation](/basics/installation) or in the [legacy reference](/legacy).
+[/doc-callout]
 
-The installation is straight forward and can be done in a couple of minutes by following these two steps:
-
-- copy new files
-- modify existing files
-
-## Step 1 – copy new files
+Use the installer for DigiStore 4.0. The historical package specified PHP 5.3 or later.
 
 [plugin:content-inject](/content_blocks/download_installer)
 
+## Copy the shop files
 
-The “Quickstart Package” Zip-File contains several folders. The Folder “catalog” contains the files and folders you need to copy into your Shop Root.
+<span id="step-1-copy-new-files"></span>Copy `catalog/admin/mailbeez.php` into the shop’s admin directory. Copy `catalog/mailhive/` and `catalog/mailhive.php` into the shop root alongside `index.php`.
 
-Copy following file and folder to your Shop Root (where your index.php is located)
+## Add MailBeez to the email menu
 
-```bash
+<span id="step-2-modify-existing-fi"></span><span id="1-add-a-menu-entry"></span>Open `admin/advanced_menu.php` in the shop installation.
 
-catalog/admin/mailbeez.php -> admin/mailbeez.php  
-catalog/mailhive -> mailhive (folder)  
-catalog/mailhive.php -> mailhive.php
+Locate this fragment in the existing file.
 
-
+```text
+stm_aix("p7i3","p0i0",[0,"    <?php echo   BOX_CONFIGURATION_EMAIL_OPTIONS?>  ","","",-1,-1,0,"configuration.php?gID=12"]);
 ```
 
-## Step 2 – modify existing files
+Insert the following immediately after that line.
 
-### 1. Add a menu entry
-
-located and open the file
-
-```bash
-
-admin/advanced_menu.php
-
-
+```javascript
+stm_aix("p7i3","p0i0",[0,"    MailBeez   ","","",-1,-1,0,"mailbeez.php"]);
 ```
-
-find
-
-```bash
-
- stm_aix("p7i3","p0i0",[0,"    <?php echo   BOX_CONFIGURATION_EMAIL_OPTIONS?>  ","","",-1,-1,0,"configuration.php?gID=12"]);
-
-
-```
-
-add in a new line
-
-```bash
-
- stm_aix("p7i3","p0i0",[0,"    MailBeez   ","","",-1,-1,0,"mailbeez.php"]);
- 
-
-```
-
-this will add the menu-entry “MailBeez” to your Email-Menu item.
-
-Feel free to place this link whereever you want.
-
 
 [plugin:content-inject](/content_blocks/run_installer)

@@ -1,6 +1,6 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Commerce:SEO 2.0
+title: "Commerce:SEO 2.0"
 slug: basic-installation-commerceseo
 # menu: Commerce:SEO 2.0
 date: 30-08-2011
@@ -36,80 +36,36 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez arbeitet problemlos mit *Commerce:SEO v2.0.x CE*.
+[doc-callout type="note" title="Installation for earlier shop releases"]
+Check the version in your shop admin. For a different release, look under [Installation](/basics/installation) or in the [legacy reference](/legacy).
+[/doc-callout]
 
-Die Installation ist in wenigen Schritten erledigt:
-
-- Die neuen Dateien übertragen
-- Menü-Eintrag anlegen
-- Zugriffs-Rechte für den Admin vergeben (halb automatisch)
-- MailBeez per Button-Klick installieren
-
-MailBeez verwaltet eigene Tabellen - die vorhandenen Shop-Tabellen werden nicht verändert.
-
-
-## Schritt 1 - Die neuen Dateien übertragen
+Use the installer for Commerce:SEO 2.0.x CE. MailBeez creates its own tables.
 
 [plugin:content-inject](/content_blocks/download_installer)
 
+## Copy the shop files
 
-folgende Datei in das admin-Verzeichnis kopieren
+Copy `catalog/admin/mailbeez.php` into the shop’s admin directory. Copy `catalog/mailhive/` and `catalog/mailhive.php` into the shop root alongside `index.php`.
 
-```
-catalog/admin/mailbeez.php
+## Add the admin menu entry
 
-```
+Open `admin/includes/column_left.php` in the shop installation. A shop update can overwrite a manual menu edit.
 
-folgende Dateien und Ordner in den Shop-Root kopieren
+Locate this fragment in the existing file.
 
-```
-catalog/mailhive (Ordner)  
-catalog/mailhive.php
-
+```text
+'" class="menuBoxContentLink">Newsletter';
 ```
 
-## Schritt 2 - Menü-Eintrag anlegen
+Insert the following immediately after that line.
 
--- nicht update-sicher --
-
-folgende Datei öffnen:
-
-```bash
-admin/includes/column\_left.php
-
-```
-
-
-finde
-
-```
- '" class="menuBoxContentLink">Newsletter';
-
-```
-
-
-und danach folgendes einfügen:
- 
-```html 
+```php
 if (($cs == '0') && ($aa['mailbeez'] == '1')) echo '<a href="' . xtc_href_link('mailbeez.php') . '">MailBeez</a>';
- 
 ```
 
+## Grant access
 
-## Schritt 3 - Zugriffsrechte vergeben
-
-einmalig im Browser
-
-```bash
-
- (shop-url)/mailhive.php
-
-```
-
-aufrufen.
-
-Hierdurch werden die erforderlichen Admin-Rechten für den HAUPT-Admin vergeben.
-Falls erforderlich dann Zugriffs-Rechte im Admin System für weitere Admin-user vergeben
-
+Open `/mailhive.php` once on the shop domain to grant the primary administrator access. Grant additional administrators access separately in the shop administration.
 
 [plugin:content-inject](/content_blocks/run_installer)

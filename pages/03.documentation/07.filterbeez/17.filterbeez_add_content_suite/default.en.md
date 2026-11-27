@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: Content Integration Suite
+module_subtitle: "Insert product recommendations into campaign emails in the earlier development version"
 slug: filterbeez_add_content_suite
 # menu: Content Integration Suite
 date: 11-08-2011
@@ -42,13 +43,12 @@ metadata:
 #  last_modified: true
 ---
 
-**under development**
-    
+[doc-callout type="note" title="Earlier filter"]
+For the filters you can configure in V5, open [Add-ons](/extensions/addons). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-allows you to insert automatically generated content in any MailBeez Campaign email:
+This development version described inserting product recommendations into campaign emails. Examples included new products, special offers, featured products, cross-sells and products commonly bought together. The installed version determines which sources you can use.
 
-- Also Purchased Products
-- New Products
-- Specials
-- Featured Products
-- XSell Products
+When reading the prototype examples, match the product source to the purpose of the email. A new-arrivals list and accessories for a purchased item serve different readers.
+
+The development notes also listed bestsellers and highly rated products. See [Content Engine](/configbeez/common_services/config_content_engine).

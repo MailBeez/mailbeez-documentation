@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Idealo
+title: "idealo (Community)"
+module_subtitle: "Käufer zu einer Shopbewertung auf idealo einladen"
 slug: idealo
 routes:
     default: /dokumentation/mailbeez/idealo
@@ -19,7 +20,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [ce]
+    tag: [ce, "Idealo"]
 module:
     code: 'idealo'
     category: [mailbeez]
@@ -43,8 +44,14 @@ metadata:
 #  last_modified: true
 ---
 
-**mehr Bewertungen auf idealo**
+[doc-callout type="note" title="Früheres Kampagnenmodul"]
+Für einen aktuellen Shop wählst du den Flow unter [Automatisierung](/mailbeez). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Mit diesem einfachen, kostenlosen Modul können Sie Ihre Kunden automatisiert um die Abgabe einer Bewertung auf idealo.de bitten.
+Das frühere Community-Modul lädt Käufer zur Shopbewertung bei idealo ein. Verwende das Bewertungsziel deines Shops und öffne es aus einer Testeinladung, bevor du den automatischen Versand aktivierst.
 
-Die [Idealo Profi Version](/dokumentation/mailbeez/idealo_advanced/) erlaubt es Ihnen, u.A. mehrere Bestell-Status zu konfigurieren, mit Responsive Email-Vorlagen die Darstellung auf Mobilen Geräten zu verbessern und Stamm-Kunden zu erkennen.
+Hier geht es um die Bewertung des Händlers. Erwähne Einkauf oder Lieferung, damit Käufer wissen, welche Art von Rückmeldung bei idealo gefragt ist.
+
+Wähle den Bestellstatus für den Start der Wartezeit und plane genügend Zeit für die Lieferung ein.
+
+Den V5-Flow beschreibt [Um Bewertungen auf idealo bitten](/mailbeez/idealo_advanced).

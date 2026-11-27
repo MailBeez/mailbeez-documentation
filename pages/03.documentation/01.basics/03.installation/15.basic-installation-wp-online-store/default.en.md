@@ -36,4 +36,8 @@ metadata:
 #  last_modified: true
 ---
 
-WP Online Store is discontinued
+[doc-callout type="note" title="Installation for earlier shop releases"]
+Check the version in your shop admin. For a different release, look under [Installation](/basics/installation) or in the [legacy reference](/legacy).
+[/doc-callout]
+
+WP Online Store was discontinued. To identify an existing install, check the shop and package versions before following an archived procedure.

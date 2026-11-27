@@ -1,97 +1,67 @@
 ---
 title: 'Products API'
+module_subtitle: "Retrieve product reviews through the product API"
 template: docs
 taxonomy:
     category: [docs]
     tag: [pro]
     
 ---
-This API Module groups product related API calls.
 
+[doc-callout type="note" title="Earlier module settings"]
+For settings in the current app, start with [System](/app-system). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-##Product Reviews API
+Display reviews beside a product mentioned on another page of your shop. The private product-reviews endpoint can return review records or HTML rendered by a shop template. Call it from your server so the API key stays out of the page source.
 
-The Product Reviews API allows you to display your product reviews on any PHP based page on any other server.
+Choose HTML when the shop should control the review layout. Choose review records when the page calling the endpoint already has its own presentation for reviews.
 
+## Request
 
-### API Calls
+Send a GET request to `/mailhive.php/api/private/v1.0/product/reviews/` on your shop over HTTPS. Provide `apikey` and a positive integer `products_id`. Results are ordered by review ID, newest first. With no template, a valid product with no matching reviews returns an empty result list. A missing or zero product ID returns `null` in `result`.
 
+| Optional parameter | What it changes |
+| --- | --- |
+| `languages_id` | Return reviews for the selected language ID. |
+| `count` | Limit the number of reviews. |
+| `rating_min` | Set the minimum star rating. |
+| `template` | Render the selected Smarty template. Omit the parameter to receive review records. |
 
-GET `http://<myshop.com>/mailhive.php/api/private/v1.0/product/reviews/`
+## Embed the result
 
-#### Mandatory Parameters
+In a server-side PHP page with the cURL extension, set `MAILBEEZ_SHOP_URL` to the shop’s HTTPS base URL and `MAILBEEZ_API_KEY` to its private key in the server environment. The example requests up to three reviews of four stars or more for product 112. It uses the shop’s `productreviews` template.
 
-| Parameter    	| Type 	| Description                            	|
-|--------------	|------	|----------------------------------------	|
-| apikey       	| text 	| Your personal API-Key                  	|
-| products_id  	| int  	| Products-Id of Product to show reviews 	|
+```php
+$shopUrl = getenv('MAILBEEZ_SHOP_URL');
+$apiKey = getenv('MAILBEEZ_API_KEY');
+if (!$apiKey || !$shopUrl || parse_url($shopUrl, PHP_URL_SCHEME) !== 'https') {
+    throw new RuntimeException('Configure the HTTPS shop URL and API key.');
+}
 
+$query = http_build_query([
+    'apikey' => $apiKey,
+    'products_id' => 112,
+    'count' => 3,
+    'rating_min' => 4,
+    'template' => 'productreviews',
+]);
+$url = rtrim($shopUrl, '/') . '/mailhive.php/api/private/v1.0/product/reviews/?' . $query;
+$request = curl_init($url);
+curl_setopt_array($request, [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_TIMEOUT => 5,
+]);
+$response = curl_exec($request);
+$status = curl_getinfo($request, CURLINFO_HTTP_CODE);
+if ($status !== 200 || $response === false) {
+    throw new RuntimeException('Could not retrieve the product reviews.');
+}
 
-#### Optional Parameters
-
-
-| Parameter    	| Type 	| Description                            	|
-|--------------	|------	|----------------------------------------	|
-| languages_id 	| int  	| limit reviews to this language_id        	|
-| count        	| int  	| Number of reviews to show              	|
-| rating_min   	| int  	| minimum number of stars a rating must have to be shown e.g. 4            	|
-| template     	| text 	| the name of the custom template, e.g. mytemplate will look for the file mytemplate.tpl.html              	|
-
-
-
-####Return
-
-Html-Output of the product reviews formatted using the configured template
-
-####Example
-
-```
-http://<myshop.com>/mailhive.php/api/private/v1.0/product/reviews/?products_id=21&languages_id=0&count=2&rating_min=4&template=html.tpl.html&apikey=123
-```
-
-
-### API Client Library
-
-To use the Product Reviews API please copy the API client files as you can find them on your MailBeez Server:
-
-```
-/mailhive/configbeez/config_api_product/apibeez/api_private_product_reviews/_client
-```
-
-
-to the server where you want to integrate the product reviews into. This could be a blog-page around specific products.
-
-Edit the file `config.php`
-
-```
-define('MAILBEEZ_API_ENTRYPOINT', 'http://<myshop.com>/mailhive.php/api/');
-define('MAILBEEZ_API_KEY', '<your api key>');
+$data = json_decode($response, true);
+if (!isset($data['result']) || !is_string($data['result'])) {
+    throw new RuntimeException('Expected reviews rendered by the shop template.');
+}
+echo $data['result'];
 ```
 
-with the matching settings.
-
-Then you can use the API client as following on any PHP file
-```
-include_once('mailbeez_productreviews_client.php');
-$reviewsObj = new mailbeez_productreviews_client();
-$reviewsOutput = $reviewsObj->showReviews(array('products_id' => 112, 'languages_id' => null, 'count' => 3, 'rating_min' => 4, 'template' => 'productreviews' ));
-echo  $reviewsOutput['result'];
-```
-to include product reviews for - in this case - product with `products_id=112`.
-
-
-The html is generated using the smarty templates located in:
-```bash
-/mailhive/configbeez/config_api_product/apibeez/api_private_product_reviews/templates/
-```
- 
-
-The default template `default_productreviews.tpl.html` will be overwritten with updates, so you should not edit it.
-
-For customization make a copy of this template and rename it to e.g. `productreviews.tpl.html` and apply your customization.
-
-The API-Call
-```
-$reviewsOutput = $reviewsObj->showReviews(array('products_id' => 112, 'languages_id' => null, 'count' => 3, 'rating_min' => 4, 'template' => 'productreviews' ));
-```
-contains the parameters as listed above you can use to controll the output.
+For a custom layout, copy `default_productreviews.tpl.html` to `productreviews.tpl.html` in `mailhive/configbeez/config_api_product/apibeez/api_private_product_reviews/templates/`. Edit the copy so a module update can replace the default safely. The original example client is in the neighbouring `_client/` directory. That client disables TLS certificate checks. The example above uses cURL’s normal certificate verification.

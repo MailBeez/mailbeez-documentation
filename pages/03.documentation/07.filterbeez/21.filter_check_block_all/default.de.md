@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Komplett Opt-Out check
+title: "E-Mail-Sperren"
+module_subtitle: "E-Mail-Versand für einzelne Kunden sperren"
 slug: filter_check_block_all
 # menu: Block Customer Administration Check
 date: 16-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "E-Mail-Versand für einzelne Kunden sperren"]
 module:
     code: 'config_block_admin'
     category: [filterbeez]
@@ -41,4 +42,13 @@ metadata:
 #  cache_enable: false
 #  last_modified: true
 ---
-Dieses Module ist Bestandteil des [Erweitertes Opt-Out mit Admin](/dokumentation/configbeez/config_block_admin/) Modules und prüft je Kunden, ob dieser alle MailBeez Email abbestellt hat.
+
+Eine Kundin fragt, warum ihre Nachbestell-Erinnerung ausgeblieben ist. Die letzte Bestellung passt zum Flow, doch die Kundin hatte über einen Abmeldelink zuvor alle MailBeez-E-Mails abbestellt. Eine solche Sperre kann erklären, warum gleich mehrere Kampagnen ausbleiben.
+
+## Den Umfang einer Sperre prüfen
+
+Öffne **System → Erweiterungen → Zusatzmodule → Einwilligungen und Sperren** und wähle **E-Mail-Versand für einzelne Kunden sperren**.
+
+Suche unter [Auswertung → MailBeez → Kontakte](/mailbeez-results/contacts) in **Abmeldungen & Sperren** nach der E-Mail-Adresse der Bestellung. Gilt der Eintrag für alle Module oder für eine einzelne Kampagne? Module, die dein Shop ausdrücklich von der globalen Sperre ausnimmt, können weiterhin senden. Betrifft der Eintrag nur Bewertungseinladungen, prüfe die Nachbestell-Erinnerung gesondert.
+
+Findest du keine passende Sperre, kontrolliere den Bestellstatus und die Wartezeit des Flows. Suche die Adresse anschließend unter [Versand & Status](/sending-status). Eine Lücke im Versandverlauf allein belegt noch keine Abmeldung.

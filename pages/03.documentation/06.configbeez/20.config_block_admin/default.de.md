@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: Erweitertes Opt-out mit Admin
+module_subtitle: "Die Reichweite einer Abmeldung festlegen und Sperren im Shop-Admin prüfen"
 slug: config_block_admin
 # menu: Erweitertes Opt-out mit Admin
 date: 18-10-2011
@@ -49,32 +50,26 @@ metadata:
 #  last_modified: true
 ---
 
-**Früher oder später wird der Zeitpunkt kommen, an dem man gerne selbst bestimmen möchte, welche der Kunden eine von MailBeez generierte Email erhalten soll (oder eben nicht). Dann hilft dieses Modul schnell und einfach weiter.**
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Kontakte](/mailbeez-results/contacts) Abmeldungen und Sperren auswerten. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Dieses Modul erweitert die Opt-Out Funktion von MailBeez und bietet dem Administrator die Möglichkeit, “Opt-Outs” der Kunden manuel zu bearbeiten.
+<span id="erweitertes-opt-out"></span>Prüfe einen Eintrag in der früheren Abmeldeverwaltung, bevor du ihn änderst. Die Sperre kann ein Modul oder alle MailBeez-E-Mails betreffen. Kläre den gewünschten Geltungsbereich mit dem Empfänger, bevor du eine Sperre aufhebst.
 
-## Erweitertes Opt-Out
+Kläre zuerst, welche Nachricht der Empfänger abbestellen wollte. Wer keine Bewertungsanfragen mehr möchte, kann weiterhin an anderen abonnierten Nachrichten interessiert sein.
 
-Die Erweiterung der Opt-Out Funktion umfasst:
+## Links in eine Vorlage einfügen
 
-> [!TIP]
-> der folgende Code ist bereits in der aktuellen responsive Hauptvorlage integriert
+Prüfe zuerst, ob die responsive Hauptvorlage beide Links schon enthält. Der erste Platzhalter sperrt das aktuelle Modul, der zweite alle Module.
 
-**Opt-Out aller MailBeez Emails**
-
-Mit der Vorlagen-Variable `{$block_all_url}` kann ein zusätzlicher Link in die Fusszeile der Hauptvorlage eingefügt werden, mit dem der Kunde alle Emails abmelden kann:
-
-```html
+```smarty
 <a href="{$block_url}">keine weiteren Emails dieser Art</a> | 
 <a href="{$block_all_url}">generell keine weiteren Emails</a>
 ```
 
-**Opt-Out für bestimmte Module unterbinden**
+Bei einem Modul ohne Abmeldeoption kann die Vorlage vor der Anzeige der Links `$noblock` prüfen.
 
-Es gibt aber einige Module, welche Kunden nicht blockieren können sollen wie z.B. Zahlungserinnerungen, Hierzu kann per Mausklick eine Liste an Ausnahmen definiert werden.  
- Mit folgendem Code in der Fusszeile der Email Vorlage kann die Ausgabe der Opt-Out Links gesteuert werden. Natürlich sind die Opt-Out Links selbst auch inaktiv falls diese in der Email verbleiben sollen.
-
-```
+```smarty
 {if $noblock}
    Sie können diese Benachrichtigung nicht abbestellen
 {else}
@@ -83,19 +78,8 @@ Es gibt aber einige Module, welche Kunden nicht blockieren können sollen wie z.
 {/if}
 ```
 
-## Opt-Out Administration
+## Vorhandene Sperren verwalten
 
-Jede von MailBeez generierte Email stellt bereits einen Link “Keine weiteren Emails dieser Art” in der Fusszeile zur Verfügung. Hiermit können Kunden selbst entscheiden, ob Sie weitere Emails erhalten wollen oder nicht. Das “Kunden Opt-out Admin” Modul geht einen Schritt weiter und bietet die Möglichkeit manuell bestimmt Kunden für einzelne oder alle MailBeez Module zu blockieren.
-
-Ebenso gibt es aber auch die Situation, dass Kunden versehentlich oder aus Neugierde den Link “Keine weiteren Emails dieser Art” anklicken, dann aber doch weitere Angebote erhalten möchten und den Shopbetreiber dies bezüglich kontaktieren. Mit einer schnellen Suche mit Kundennummer, Email Adresse oder Namen ist der Vorgang in wenigen Sekunden erledigt.
+<span id="opt-out-administration"></span><span id="import-von-black-listen"></span>Suche über Kundennummer, E-Mail-Adresse oder Namen. Wähle die Modulsperre oder die globale Sperre. Für einen Import fügst du eine Adresse pro Zeile ein und wählst die betroffenen Module. Gesperrt werden die passenden Kundenkonten.
 
 [doc-video url="https://www.youtube.com/watch?v=3yYfw8--94s" /]
-
-
-## Import von Black-Listen
-
-Haben Sie Email-Adressen aus anderen Mail-Programmen und möchten Sie die dazugehörigen Kunden in MailBeez blockieren? Mit dieser neuen Funktion ist es in wenigen Schritten erledigt
-
-- Fügen Sie die zu verarbeitenden Email-Adressen in das Eingabe-Feld ein, je Zeile eine Email-Adresse
-- Wählen Sie die zu blockierenden Module
-- Die Email-Adressen werden automatisch verarbeitet und die dazugehörigen Kunden blockiert

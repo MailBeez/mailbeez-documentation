@@ -36,68 +36,35 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez workswith *DigiStore 4.1*, running on php 5.3+
+[doc-callout type="note" title="Installation for earlier shop releases"]
+Check the version in your shop admin. For a different release, look under [Installation](/basics/installation) or in the [legacy reference](/legacy).
+[/doc-callout]
 
-If MailBeez is not included in your DigiStore 4.1+ release please follow these instructions
+Use the installer for DigiStore 4.1. The historical package specified PHP 5.3 or later. Check whether your release already includes MailBeez before copying files.
 
-The installation is straight forward and can be done in a couple of minutes by following these two steps:
-
-- copy new files
-- modify existing files
-
-## Step 1 – copy new files
+If the admin area already has a MailBeez entry, open it before copying files. Its screen will help you identify where the existing setup stopped.
 
 [plugin:content-inject](/content_blocks/download_installer)
 
+## Copy the shop files
 
-The “Quickstart Package” Zip-File contains several folders. The Folder “catalog” contains the files and folders you need to copy into your Shop Root.
+<span id="step-1-copy-new-files"></span>Copy `catalog/admin/mailbeez.php` into the shop’s admin directory. Copy `catalog/mailhive/` and `catalog/mailhive.php` into the shop root alongside `index.php`.
 
-Copy following file and folder to your Shop Root (where your index.php is located)
+## Add MailBeez to the email menu
 
-```bash
+<span id="step-2-modify-existing-fi"></span><span id="1-add-a-menu-entry"></span>Open `admin/includes/boxes/email.php` in the shop installation.
 
-catalog/admin/mailbeez.php -> admin/mailbeez.php  
-catalog/mailhive -> mailhive (folder)  
-catalog/mailhive.php -> mailhive.php
+Locate this fragment in the existing file.
 
-```
-
-## Step 2 – modify existing files
-
-### 1. Add a menu entry
-
-located and open the file
-
-```bash
-
-admin/includes/boxes/email.php
-
-```
-
-find
-
-```bash
-
-
+```text
 '<a href="' . tep_href_link(FILENAME_CONFIGURATION, 'gID=12', 'NONSSL') . '" class="menuBoxContentLink">' . BOX_CONFIGURATION_EMAIL_OPTIONS . '</a>');
-
-
 ```
 
-replace with
+Replace the matching entry with the following.
 
-
-```bash
-
-
- '<a href="' . tep_href_link(FILENAME_CONFIGURATION, 'gID=12', 'NONSSL') . '" class="menuBoxContentLink">' . BOX_CONFIGURATION_EMAIL_OPTIONS . '</a>'.
+```php
+'<a href="' . tep_href_link(FILENAME_CONFIGURATION, 'gID=12', 'NONSSL') . '" class="menuBoxContentLink">' . BOX_CONFIGURATION_EMAIL_OPTIONS . '</a>'.
  '<a href="' . tep_href_link('mailbeez.php', '', 'NONSSL') . '" class="menuBoxContentLink">Mail Beez</a>');
-
 ```
-
-this will add the menu-entry “MailBeez” to your Email-Menu item.
-
-Feel free to place this link whereever you want.
-
 
 [plugin:content-inject](/content_blocks/run_installer)

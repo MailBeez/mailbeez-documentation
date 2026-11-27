@@ -1,5 +1,6 @@
 ---
-title: 'Trustedshops Advanced'
+title: "Trusted Shops"
+module_subtitle: "Ask for reviews on Trusted Shops"
 slug: trustedshops_advanced
 date: 04-06-2013
 published: true
@@ -16,7 +17,9 @@ taxonomy:
         - docs
     tag:
         - pro
+        - "Ask for reviews on Trusted Shops"
 module:
+    plans_position: after_guide
     code: trustedshops_advanced
     category:
         - mailbeez
@@ -43,26 +46,31 @@ metadata:
     author: admin
 ---
 
-**Get the most out of your Trustedshops subscription**
+Imagine you operate a cookware shop and a separate trade storefront. A buyer orders a cast-iron pan from the cookware shop. When they open your Trusted Shops invitation, they should recognise the same store name they saw at checkout. The configured Trusted Shops ID determines which store they review.
 
-## Advanced Features
+## Set up the flow
 
-This advanced module gives you a couple of settings to streamline and improve the process of inviting customers to provide a rating of your store on Trustedshops:
+Open **Campaigns → Automations → MailBeez Flows → Ask for reviews on Trusted Shops**, then choose **Options → Configure**.
 
-## Multiple order status
+<span id="schedule-trusted-shops-in"></span>
+<span id="settings-to-check"></span>
 
-Do you use different order status? No problem, you decide which order status you want the module to react on.
+[doc-steps]
+[doc-step]
+**Match the ID to the storefront**
 
-## Delay times for international orders
+Enter the cookware store’s ID under **Your Trustedshops Dealer ID**. Follow the review link in a sample email. Compare the name on the destination page with the order confirmation before using the invitation for real orders.
+[/doc-step]
+[doc-step]
+**Start the wait from dispatch**
 
-Shipping to international customers typically takes a couple days longer. To avoid sending a rating invite before delivery, you can define an additional delay for orders shipping to countries other than your own!
+Select your shipped status under **Set Order Status**. If the pan usually arrives within the week, try seven days under **Wait after the order status changes**. Set **Maximum age of the status change** above that wait and use **Additional delay for international deliveries** if cross-border delivery needs more time.
+[/doc-step]
+[doc-step]
+**Choose how soon to invite the buyer again**
 
-The module automatically applies this delay to all orders which are shipped to a country, which is different from the home country you configured in your shopping-cart system.
+Set **Minimum interval between invitations** with your repeat customers in mind. Someone who orders a lid the following week may already have received an invitation for the pan. A gap between invitations lets them review their experience without a second request straight away.
+[/doc-step]
+[/doc-steps]
 
-## Recognition of regular customers
-
-Don't want to bother your regular customers with an invite to rate on Trustpilot? Simply define a delay (e.g. 120 days) between two invites and you're done. The module will check when the last invite was sent and decide whether to wait or to send a new invite.
-
-### Want to integrate your valuable Trustedshop ratings with your marketing efforts?
-
-Using the [Trustedshops Integration Suite](/documentation/configbeez/config_trustedshops_rss_importer/) you can easily integrate your Trustedshops-Ratings with your shopping-cart - in a way that makes this "unique" and fresh content visible to search engines - and your MailBeez generated marketing emails!
+Use [Schedule a review invitation](/cookbook/optimized-review-invite-flow) to check one order from dispatch to the review form.

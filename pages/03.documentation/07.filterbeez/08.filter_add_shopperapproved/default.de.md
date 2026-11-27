@@ -1,8 +1,9 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: ShopperApproved Bewertungen in Emails einfügen
+title: "Bewertungen in E-Mails"
+module_subtitle: "Shopper Approved-Bewertungen in E-Mails anzeigen"
 slug: filter_add_shopperapproved
-menu: ShopperApproved Bewertungen einfügen
+menu: "Bewertungen in E-Mails"
 published: true
 template: docs
 # theme: false
@@ -14,7 +15,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Shopper Approved-Bewertungen in E-Mails anzeigen"]
 module:
     code: 'config_shopperapproved_integration'
     category: [filterbeez]
@@ -39,41 +40,24 @@ metadata:
 #  last_modified: true
 ---
 
-Fügen Sie Ihre wertvollen ShopperApproved Bewertungen automatisch in Ihre MailBeez Email Kampagnen ein – hervorragend geeignet, um z.B. die Emails zur [Kundenrückgewinnung](/dokumentation/mailbeez/winback_advanced) und [Kunden ohne Kauf](/dokumentation/mailbeez/nopurchase_advanced) aufzuwerten.
+Wer empfindliches Keramikgeschirr bestellt, möchte vielleicht wissen, wie gut frühere Lieferungen verpackt waren. In der E-Mail kannst du dazu einige Erfahrungsberichte von Shopper Approved zeigen. [Importiere zuerst die Bewertungen deines Shops](/configbeez/integrations/config_shopperapproved_integration), damit die Vorlage Kommentare zur Auswahl hat.
 
-Dieses Hilfsmodule ist Teil der [ShopperApproved Integration Suite](/dokumentation/configbeez/config_shopperapproved_integration/ "ShopperApproved Integration Suite").
+## Passende Bewertungen für die E-Mail auswählen
 
-### Installation
+Öffne **System → Erweiterungen → Zusatzmodule → Kundendaten und Inhalte** und wähle **Shopper Approved-Bewertungen in E-Mails anzeigen**.
 
-Modul installieren und aktivieren – vorher die [ShopperApproved Integration Suite](/dokumentation/configbeez/config_shopperapproved_integration/ "ShopperApproved Integration Suite") konfigurieren und testen.
+[doc-steps]
 
-Mit folgenden Platzhaltern können Sie die konfigurierte Anzahl an Bewertungen in von MailBeez generierten Emails einfügen. Die Platzhalter können an jeder beliebigen Stellen in den MailBeez Vorlagen eingefügt werden. Sollen die Bewertungen in allen Emails sichtbar sein, am besten die Platzhalter direkt in die Hauptvorlage einfügen
+[doc-step]
+**Die Auswahl eingrenzen**
 
-Platzhalter für die HTML-Version der Vorlage:
+Lege **Bewertungen pro E-Mail** und **Mindestbewertung** fest. Über **Mindestlänge des Kommentars (Zeichen)** kannst du knappe Einwortbewertungen auslassen, wenn du einen lesbaren Erfahrungsbericht zeigen möchtest.
+[/doc-step]
 
-```
-{$content.shopperapproved.html}
-```
+[doc-step]
+**Die Auswahl in der Nachricht prüfen**
 
-Platzhalter für die TXT-Version der Vorlage:
+Aktiviere **Bewertungen zufällig auswählen** für eine wechselnde Auswahl. Bleibt die Option aus, erscheinen die neuesten passenden Bewertungen. Öffne die Vorschau einer Vorlage mit Bewertungsblock. Ist der Block leer, prüfe, ob ein importierter Kommentar beide Mindestwerte erfüllt.
+[/doc-step]
 
-```
-{$content.shopperapproved.txt}
-```
-
-
-Fortgeschrittene Benutzter können auch das Daten-Object mit den Bewertungen direkt im Email Template verwenden:
-
-
-```
-{assign var=feed_feed value=$data.shopperapproved}
-{section name=item loop=$feed_feed}
-  {$feed_feed[item].stars_overall}
-  {$feed_feed[item].customers_textcomments}</br>
-  {$feed_feed[item].customers_fullurl}</br>
-  {$feed_feed[item].customers_displaydate|date_format}
-{/section}
-```
-
-
- 
+[/doc-steps]

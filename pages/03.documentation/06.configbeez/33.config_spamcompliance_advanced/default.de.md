@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Antispam Regeln Profi
+title: "Anti-Spam & Einwilligung"
+module_subtitle: "Abo-Voraussetzungen festlegen und die Reichweite einer Abmeldung prüfen"
 slug: config_spamcompliance_advanced
 # menu: Antispam Regeln Profi
 date: 20-04-2012
@@ -36,4 +37,6 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses Modul ist noch in der Planung - bitte kontaktieren Sie MailBeez bei Bedarf.
+Prüfe, was beim Klick auf einen Abmeldelink passiert. Öffne **System → Konfiguration → Anti-Spam & Einwilligung** und kontrolliere Abovoraussetzung und Reichweite einer Sperre. Teste eine Abmeldung für ein einzelnes Modul und prüfe, welche anderen Module die Testadresse noch erreichen können.
+
+Teste mit der tatsächlichen Einladungsnachricht. Am Text neben dem Abmeldelink erkennt der Empfänger, ob er eine Art von Nachricht oder alle E-Mails abbestellt.

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Kundenrückgewinnung Profi
+title: "Kunden zurückgewinnen"
+module_subtitle: "Inaktive Kunden zurückgewinnen"
 slug: winback_advanced
 routes:
     aliases:
@@ -22,8 +23,9 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro,coupon]
+    tag: [pro, coupon, "Kundenrückgewinnung", "Inaktive Kunden", "Inaktive Kunden zurückgewinnen"]
 module:
+    plans_position: after_guide
     code: 'winback_advanced'
     category: [mailbeez]
     compatiblity: [comp_cre,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio,comp_saas]
@@ -55,49 +57,50 @@ metadata:
 #  last_modified: true
 ---
 
-**Aktive Kundenrückgewinnung mit MailBeez**
+<span id="beispiel-kaffee-nachbeste"></span>
 
-Neue Kunden zu bekommen ist eine tolle Sache – es ist das Ergebnis langer und harter Arbeit und jede Bestellung ist die Belohnung. Wer sich aber zu sehr auf die Gewinnung neuer Kunden konzentriert, vergisst schnell die bestehenden Kunden – obwohl die doch auch mal die wichtigsten waren.
+Stell dir vor, du betreibst einen Onlineshop für Kaffee. Eine Stammkundin bestellt etwa alle zwei Monate ihre Lieblingsbohnen. Diesmal sind schon drei Monate vergangen. Mit einer kurzen E-Mail fragst du „Geht dein Kaffee zur Neige?“ und verlinkst direkt zu den Bohnen. Bestellt sie wieder, hat die Erinnerung ihren Zweck erfüllt. Andernfalls kannst du dich zwei Wochen später noch einmal melden, vielleicht mit einem Gutschein.
 
-**So macht es Mailbeez**
+Für solche Kaufpausen gibt es den fertigen MailBeez Flow **Inaktive Kunden zurückgewinnen**. Du kannst eine, zwei oder drei E-Mails verschicken oder danach regelmäßig erinnern. Wie viel Zeit zwischen den E-Mails vergeht, legst du selbst fest. Wer denselben Schritt erreicht, bekommt die dafür vorbereitete Nachricht.
 
-Um die ehemals guten Kunden nicht aus dem Auge zu verlieren, hat MailBeez ein mächtiges, voll automatisiertes Modul “Kundenrückgewinnung Profi” entwickelt. Dieses Modul ist ein Werkzeug, um Ihren Onlineshop den bestehenden Kunden, welche z.B. seit 6 Monaten (einstellbar) keine Bestellung abgegeben haben, wieder ins Gedächtnis zu rufen und gleichzeitig eine erneute Bestellung mit einem personalisierten Gutschein einfacher zu machen.
+<span id="wer-kommt-fuer-die-erste-"></span>
 
+## Wie weit soll der erste Lauf zurückblicken?
 
-> [!TIP]
-> Für ein optimales Zusammenspiel mit dem Modul [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) wird standardmässig auf einen leeren Warenkorb geprüft (konfigurierbar) - befinden sich Produkte im Warenkorb des Kunden, wird keine Kundenrückgewinnungs-Email versendet.
+Angenommen, du möchtest 90 Tage warten. Die Frist beginnt, sobald die letzte Bestellung den von dir gewählten Versandstatus erreicht. Wenn du den Flow einschaltest, warten manche Kunden schon länger. Mit einem Rückblick von 120 Tagen erfasst der erste Lauf auch Erinnerungen, die seit bis zu einem Monat fällig sind. Möchtest du mit weniger älteren Bestellungen starten, wähle zum Beispiel 100 Tage. Dann holst du nur die Erinnerungen der letzten zehn Tage nach.
 
+Danach wandert das Zeitfenster bei jedem Lauf mit. Weitere Kunden kommen für die erste E-Mail infrage, sobald die 90 Tage verstrichen sind. MailBeez merkt sich, wer die erste Erinnerung zu einer Bestellung schon bekommen hat. Wer morgen noch ins Zeitfenster fällt, erhält sie also kein zweites Mal.
 
-**Personalisierte Gutscheine für jeden Kunden**
+## Flow einrichten
 
-Wenn Sie einen inaktiven Alt-Kunden kontaktieren, kann ein Gutschein Wunder bewirken! Stellen Sie sich vor, Ihr letzter Einkauf bei einem Geschäft liegt schon längere Zeit zurück, wäre ein “Wir begrüssen Sie gerne bald wieder” Gutschein nicht eine nette Geste? Und – wen verwunderts – Ihre Kunden denken wahrscheinlich genaus so.
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → Inaktive Kunden zurückgewinnen** und wähle **Optionen → Konfigurieren**.
 
-Mit dem Modul “Kundenrückgewinnung Profi” können Sie nicht nur einmalige personalisierte Gutscheine an schon verloren geglaubte Kunden schicken, sondern mit Hilfe der Mehr-Schritt Architektur können Sie eine Serie von Emails definieren – Jeder der 3 fest definierten Schritte und nachfolgende die Endlos-Schleife ist einzeln konfiguriertbar (Gutschein, Verzögerung) so dass z.B. der Gutschein mit jedem Schritt einen grösseren Anreiz geben kann – bis der Alt-Kunde einfach nicht mehr widerstehen kann.
+[doc-steps]
+[doc-step]
+**Bestellungen und Zeitraum auswählen**
 
-**Die wichtigsten Funktionen**
+Wähle unter **Bestell-Status** den Status, den dein Shop beim Versand vergibt. Du kannst auch mehrere auswählen. Trage für das Kaffeebeispiel unter **Alter der letzten Bestellung (Status)** 90 Tage und unter **Höchst-Alter der Bestellung** 120 Tage ein.
+[/doc-step]
+[doc-step]
+**Anzahl und Abstand der E-Mails festlegen**
 
-- Voll automatisierter Kontakt zu verloren geglaubten Altkunden
-- Mehrstufiger Ablauf mit konfigurierbaren Intervallen und Gutscheinen
-- Locken Sie alte Kunden mit personalisierten Gutscheinen, welche z.B. mit jedem Schritt mehr Anreiz bieten kann.
-- Auflistung der zuletzt gekauften Produkt, um Ihren Shop wieder in Erinnerung zu rufen.
+Unter **Prozess-Ablauf - Anzahl an Aktivierungsversuchen (1-Loop)** stehen **1 Schritt**, **2 Schritten**, **3 Schritten** und **Loop** zur Wahl. Wähle für den Kaffeeshop die Option **2 Schritten** und trage unter **Verzögerung der Zweiten Aktivierung** 14 Tage ein. Die zwei Wochen beginnen mit dem Versand der ersten E-Mail. Bestellt der Kunde wieder, entfallen die weiteren Erinnerungen zur früheren Bestellung.
 
+Bei **3 Schritten** oder **Loop** legst du unter **Verzögerung der Dritten Aktivierung** fest, wie viele Tage nach der zweiten E-Mail die dritte folgt. Mit **Loop** kommt nach den ersten drei E-Mails eine wiederkehrende Erinnerung hinzu. **Verzögerung vor Start und Periode der Schleife** bestimmt sowohl die Wartezeit nach der dritten E-Mail als auch den Abstand zwischen den Wiederholungen.
+[/doc-step]
+[doc-step]
+**E-Mails schreiben und Gutschein auswählen**
 
+Verlinke in der ersten E-Mail direkt zu deinen Kaffeebohnen. Möchtest du in der zweiten einen Gutschein anbieten, wähle unter **Gutschein Vorlage - Zweite Aktivierung** eine Vorlage und lege die Gültigkeit fest.
 
+Mit **Live Content** im E-Mail-Editor kannst du im selben Text unterschiedliche Produkte zeigen. Bietet dein Shop eine Produktquelle auf Basis früherer Käufe, kannst du darüber passende Bohnen empfehlen. MailBeez stellt die Auswahl beim Versand für jeden Empfänger zusammen.
+[/doc-step]
+[/doc-steps]
 
+<span id="den-ersten-lauf-pruefen"></span>
 
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+Prüfe vor dem Einschalten den [ersten Lauf](/quickstart/step-3-set-forget#den-ersten-lauf-pruefen) oder [teste die Rückgewinnung mit zwei Bestellungen](/tutorials-und-rezepte/rueckgewinnung-testen). Verschickst du auch Warenkorberinnerungen, kannst du die Rückgewinnung mit **Auf leeren Warenkorb prüfen?** auf Kunden mit leerem Warenkorb beschränken. Prüfe bei Gastbestellungen die Folge-E-Mail separat. Für sie braucht MailBeez ein passendes Kundenkonto.
 
-Abhängig von Ihrer Shop-Konfiguration erfordern die Vorlagen eine Anpassung der Bildgrössen. Es ist natürlich auch möglich, eigene Vorlage anzulegen – diese stehen auch automatisch in der Vorlagen-Auswahl zur Verfügung.
+## Wann sich ein eigener Flow lohnt
 
-#### Weitere Starke Vorteile
-
-**Wirkungsvolle Kampagnen zur Kundenrückgewinnung**
- 
-[plugin:content-inject](/content_blocks/pro_coupon)
-
-[plugin:content-inject](/content_blocks/pro_common_advantage)
-
-
-#### Ergebnisse beobachten und Optimieren
-
-MailBeez kommt bereits mit einigen schönen Widgets, eines davon ist ist Winback-O-Meter, welches auf einen Blick verrät, wieviele der kontaktierten Kunden aufgrund der Kundenrückgewinnung eine Bestellung getätigt haben. Optimieren Sie Ihre Emails (Text, Gutscheine) anhand dieser Daten.
+Eine Kundin hat letzte Woche Bohnen bestellt. Trotzdem braucht sie vielleicht einen neuen Wasserfilter für die Maschine, die sie vor sechs Monaten gekauft hat. Für diese Erinnerung zählt der **Kauf der Maschine**. Unter [Eigene Flows](/mailbeez/eigene-flows) findest du Rezepte für Ersatzteile, Nachbestellungen und E-Mails, die Kunden den Einstieg mit ihrem neuen Produkt erleichtern.

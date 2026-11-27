@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: Spam Compliance
+module_subtitle: "Review consent requirements and the scope of unsubscribe links in earlier versions"
 slug: config_spamcompliance
 # menu: Antispam Regeln
 date: 20-04-2012
@@ -36,8 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
-Configure if you would only like to reach out to customers with a newsletter subscription or to everyone.
+[doc-callout type="note" title="Earlier module settings"]
+For settings in the current app, start with [System](/app-system). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-You can also configure, what happens if a customer clicks on an opt-out link:
+In this older configuration, first choose which recipients need a newsletter subscription to qualify. Then decide the scope of the unsubscribe link. A module-level block stops mail from that module. A global block applies across MailBeez modules. Check the choice using a test address before changing a live campaign.
 
-Should MailBeez block the current module for this customer or should the customer get blocked for all MailBeez emails?
+Think through what a customer expects after using an unsubscribe link on a review invitation. Your wording should match the scope of the preference the link actually saves.

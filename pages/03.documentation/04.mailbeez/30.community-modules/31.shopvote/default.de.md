@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: ShopVote.de
+title: "SHOPVOTE (Community)"
+module_subtitle: "Käufer zu einer Shopbewertung auf SHOPVOTE einladen"
 slug: shopvote
 routes:
     default: /dokumentation/mailbeez/shopvote
@@ -19,7 +20,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [ce]
+    tag: [ce, "ShopVote.de"]
 module:
     code: 'shopvote'
     category: [mailbeez]
@@ -43,8 +44,14 @@ metadata:
 #  last_modified: true
 ---
 
-**mehr Bewertungen auf ShopVote.de**
+[doc-callout type="note" title="Früheres Kampagnenmodul"]
+Für einen aktuellen Shop wählst du den Flow unter [Automatisierung](/mailbeez). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Mit diesem einfachen, kostenlosen Modul können Sie Ihre Kunden automatisiert um die Abgabe einer Bewertung auf ShopVote.de bitten.
+Das frühere Community-Modul lädt Käufer zur Shopbewertung bei SHOPVOTE ein. Verwende das Bewertungsziel deines Shops und öffne es aus einer Testeinladung, bevor du den automatischen Versand aktivierst.
 
-Die [ShopVote.de Profi Version](/dokumentation/mailbeez/shopvote_advanced/) erlaubt es Ihnen, u.A. mehrere Bestell-Status zu konfigurieren, mit Responsive Email-Vorlagen die Darstellung auf Mobilen Geräten zu verbessern und Stamm-Kunden zu erkennen.
+Lies Einladung und Bestellbestätigung nebeneinander. Steht in beiden derselbe Shopname, können Käufer die Bewertungsanfrage leichter ihrem Einkauf zuordnen.
+
+Wähle den Bestellstatus für den Start der Wartezeit und plane genügend Zeit für die Lieferung ein.
+
+Den V5-Flow beschreibt [Um Bewertungen auf SHOPVOTE bitten](/mailbeez/shopvote_advanced).

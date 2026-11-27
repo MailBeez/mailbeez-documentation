@@ -36,75 +36,43 @@ metadata:
 #  last_modified: true
 ---
 
-MailBeez works with osCommerce 2.3.1, running on php 5.3+
+[doc-callout type="note" title="Installation for earlier shop releases"]
+Check the version in your shop admin. For a different release, look under [Installation](/basics/installation) or in the [legacy reference](/legacy).
+[/doc-callout]
 
-The installation is straight forward and can be done in a couple of minutes by following these two steps:
+Use the installer for osCommerce 2.3.x (original procedure for 2.3.1). The historical package specified PHP 5.3 or later.
 
-- copy new files
-- add menu entry
-
-
-
-## Step 1 – copy new files
+Compare the example with your installed 2.3.x files before editing them. A customized admin menu can have extra entries that you will want to keep.
 
 [plugin:content-inject](/content_blocks/download_installer)
 
+## Copy the shop files
 
-copy following file to your admin-directory
+<span id="step-1-copy-new-files"></span>Copy `catalog/admin/mailbeez.php` into the shop’s admin directory. Copy `catalog/mailhive/` and `catalog/mailhive.php` into the shop root alongside `index.php`.
 
-```bash
-mailbeez.php
+## Choose the admin integration
+
+<span id="step-2-add-menu-entry"></span><span id="a-admin-plugin"></span>From 2.3.3, copy the admin plugin from the package to the matching shop path.
+
+```text
+extra_files/extras_osc_233x/admin/includes/boxes/customers_mailbeez.php → admin/includes/boxes/customers_mailbeez.php
 ```
 
+<span id="b-add-a-menu-entry"></span>For the manual 2.3.x menu entry, open `admin/includes/boxes/tools.php`.
 
-copy following file and folder to your catalog-directory (where your index.php is located)
+Locate this fragment in the existing file.
 
-```bash
-mailhive (folder)
-mailhive.php
-```
-
-
-## Step 2 – add menu entry
-
-depending on your version you can either use the admin plugin or manually add the menu entry:
-
-### A. Admin Plugin
-
-since oscommerce 2.3.3 a plugin system for adding admin entries is available. For this version please copy
-
-```bash
-extra_files/extras_osc_233x/admin/includes/boxes/customers_mailbeez.php
-```
-
-into your oscommerce system:
-
-```bash
-admin/includes/boxes/customers_mailbeez.php
-```
-
-
-### B. Add a menu entry
-
-located and open the file
-
-```bash
-admin/includes/boxes/tools.php
-```
-
-find
-
-```
-    array(
+```text
+array(
         'code' => FILENAME_WHOS_ONLINE,
         'title' => BOX_TOOLS_WHOS_ONLINE,
         'link' => tep_href_link(FILENAME_WHOS_ONLINE)
     )
 ```
 
-add
+Insert the following immediately after that line.
 
-```
+```php
 // mailbeez
      ,
      array(
@@ -114,12 +82,5 @@ add
      )
      // - mailbeez
 ```
-
-
-this will add the menu-entry “MailBeez” to your Tools-Box.
-
-Feel free to place this link whereever you want.
-
-Open the MailBeez System and start exploring!
 
 [plugin:content-inject](/content_blocks/run_installer)

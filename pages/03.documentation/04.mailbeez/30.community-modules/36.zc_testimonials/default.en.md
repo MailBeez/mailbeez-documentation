@@ -1,5 +1,6 @@
 ---
-title: 'ZC Testimonials Reminder Simple'
+title: "Zen Cart testimonials"
+module_subtitle: "Invite Zen Cart buyers to leave a testimonial"
 slug: zc_testimonials
 routes:
     default: /documentation/mailbeez/zc_testimonials
@@ -18,6 +19,7 @@ taxonomy:
         - docs
     tag:
         - ce
+        - "ZC Testimonials Reminder Simple"
 module:
     code: zc_testimonials
     category:
@@ -39,4 +41,10 @@ metadata:
     author: admin
 ---
 
-This module is designed to work with the [Zencart Testimonial Manager](http://www.zen-cart.com/downloads.php?do=file&id=299). It will automatically ask your customers to place a Testimonial in your System
+[doc-callout type="note" title="Earlier campaign module"]
+Choose a flow for a current shop under [Automations](/mailbeez). [Browse the legacy reference](/legacy).
+[/doc-callout]
+
+To invite a Zen Cart buyer to leave a testimonial, the older reminder needs the Zen Cart Testimonial Manager. Check that its form opens from the invitation before enabling reminders.
+
+Tell buyers what kind of testimonial you are asking for. A question about their experience with delivery or service gives them a starting point for describing the shop in their own words.

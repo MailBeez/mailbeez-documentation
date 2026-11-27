@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Rückstands-Benachrichtigung 
+title: "Lieferrückstand"
+module_subtitle: "Bei Lieferrückstand informieren"
 slug: notification_backorder
 date: 17-12-2013
 published: true
@@ -16,8 +17,9 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Bei Lieferrückstand informieren"]
 module:
+    plans_position: after_guide
     code: 'notification_backorder'
     category: [mailbeez]
     compatiblity: [comp_osc,comp_cre,comp_digi,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio]
@@ -48,64 +50,30 @@ metadata:
 #  last_modified: true
 ---
 
-*Der Kunde hat einen Artikel bestellt, der gerade oder noch nicht auf Lager ist. Dieser Artikel ist in Rückstand und der Kunde wartet darauf.*
+Ein Kunde bestellt ein Ersatzventil für seine Kaffeemaschine. Dein Lieferant erwartet das Teil erst in zwei Wochen. Eine kurze Nachricht mit Artikel, voraussichtlichem Termin und Kontaktmöglichkeit erspart dem Kunden eine Nachfrage.
 
-*Etwa alle 2 Tage fragt der Kunde jetzt nach, wann der Artikel lieferbar ist...*
+Der Flow kann den Rückstand melden, über einen geänderten Verfügbarkeitstermin informieren und regelmäßig schreiben, solange die Bestellung im Rückstand ist. Für den Termin in der E-Mail zählt das beim Artikel hinterlegte Datum.
 
-**Hört sich das bekannt an?**
+## Flow einrichten
 
-Dann sollten Sie sich das Modul "Benachrichtigung Bestell-Rückstand" genauer ansehen:
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → Bei Lieferrückstand informieren** und wähle **Optionen → Konfigurieren**.
 
-Basierend auf dem "Verfügbar ab" Datum (Datenbank-Feld products_date_available) ermittelt das Modul, ob eine Bestellung ein Produkt enthält, welches gerade oder noch nicht auf Lager ist.
+[doc-steps]
+[doc-step]
+**Festlegen, wer den Rückstand kennzeichnet**
 
-Und weil es das Verfügbarkeits-Datum protokolliert, kann es Änderungen erkennen und dann gleich eine Benachrichtigung senden.
+Wähle unter **Benachrichtigen bei** den Rückstandsstatus für Benachrichtigungen. Vergibt dein Team ihn von Hand, lass **Automatisch prüfen** leer. Für die automatische Prüfung wählst du die zu prüfenden Bestellstatus und unter **Bei Rückstand setzen** den Rückstandsstatus aus. Dieser muss auch unter **Benachrichtigen bei** ausgewählt sein.
+[/doc-step]
+[doc-step]
+**Zeitpunkte für Nachrichten wählen**
 
-Das Modul versendet folgende 3 Arten von Benachrichtigungs-Emails:
+Für das Ventil könntest du unter **Erste Nachricht nach** einen Tag ab dem Statuswechsel eintragen und unter **Weitere Nachrichten alle** sieben Tage. Erkläre in der ersten Nachricht den Rückstand. Verschiebt sich der Verfügbarkeitstermin, kann der Kunde ein Update mit dem neuen Datum erhalten.
+[/doc-step]
+[doc-step]
+**Artikel und Liefertermin prüfen**
 
-### 1. Email - Vorstellung des Benachrichtigungs-Services
+Nutze im Testshop eine Bestellung mit bekanntem Verfügbarkeitstermin. Vergleiche Artikel und Datum in der Nachricht mit den Produktdaten. Lies den Text auch für den Fall, dass noch kein Termin feststeht. Gib dem Kunden eine Möglichkeit, bei dir nachzufragen.
+[/doc-step]
+[/doc-steps]
 
-Ein bestelltes Produkt ist in Rückstand? Dann erhält der Kunde sofort eine erste Email gleich nach der Bestellung, in welcher Benachrichtigungs-Service vorgestellt wird:
-
-> Lieber Kunde,   
->   
->  mindestens einer der bestellten Artikel ist in Rückstand.   
->   
->  Wir werden Sie alle 2 Tage oder auch sofort bei Änderung des erwarteten Lieferdatums informieren.   
->   
->  Folgende Artikel sind in Rückstand:   
->   
->  (Liste der Artikel mit Verfügbarkeits-Datum)
-
-### 2. Email - Informieren Sie den Kunden laufend
-
-Diese 2. Email wird periodisch z.B. alle 3 Tage gesendet, um den Kunden laufend über die Artikel in Rückstand zu informieren. Ein toller Service, um die Wartezeit zu verkürzen und auch die Geduld des Kunden zu wertschätzen.
-
-> Lieber Kunde,   
->   
->  mindestens einer der bestellten Artikel ist in Rückstand.   
->   
->  Wir wissen, dass Sie auf diesen Artikel warten und freuen uns über Ihre Geduld. Sobald es Neuigkeiten gibt, werden wir Sie benachrichtigen!   
->   
->  Folgende Artikel sind in Rückstand:   
->   
->  (Liste der Artikel mit Verfügbarkeits-Datum)
-
-### 3. Email - Sofort den Kunden bei Änderung informieren
-
-Diese Email wird sofort versendet, wenn sich das Verfügbarkeits-Datum ändert!
-
-> Lieber Kunde,   
->   
->  Es tut sich was!   
->   
->  Das Verfügbarkeits-Datum der fehlenden Artikel hat sich wie folgt geändert:   
->   
->  (Liste der Artikel mit altem und neuem Verfügbarkeits-Datum)
-
-## Arbeitserleichterung bei voller Kontrolle
-
-Einmal eingerichtet wird dieses Modul auf Autopilot arbeiten (erfordert, dass MailBeez entsprechend automatisiert ist). Basierend auf einem oder mehr Bestellstatus kann konfiguriert werden, welche Bestellungen verarbeitet werden können.
-
-So viel Kontrolle wie nötig und so viel Automatisierung wie möglich!
-
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+Für eine einzelne Nachricht zu einem Bestellstatus wie „Abholbereit“ nutze [Über den Bestellstatus informieren](/mailbeez/notification_order_status).

@@ -1,13 +1,13 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Documentation
+title: "Documentation"
 slug: documentation
 # menu: Documentation
 date: 21-05-2010
 published: true
 publish_date: 21-05-2010
 # unpublish_date: 21-05-2010
-template: docs
+template: docs-home
 theme: mailbeez_learn
 visible: true
 summary:
@@ -34,16 +34,38 @@ metadata:
 #          image: http://ia.media-imdb.com/images/rock.jpg
 #  cache_enable: false
 #  last_modified: true
+home_heading: "What do you want to do in MailBeez?"
+navigation:
+    toc_position: hidden
 ---
 
-Find installation instructions, campaign guides, and reference material for MailBeez.
+<span id="where-to-start"></span>
+<span id="how-mailbeez-fits-into-yo"></span>
+
+## Prepare your first mailing
 
 [doc-grid columns="2"]
-[doc-link-card href="/guide-to-getting-started" title="Getting started" description="Take a guided tour of MailBeez." icon="tabler/book.svg" /]
-[doc-link-card href="/basics/installation" title="Installation" description="Find instructions for your shop system." icon="tabler/download.svg" /]
-[doc-link-card href="/mailbeez" title="Automations" description="Explore the modules that run your email campaigns." icon="tabler/bolt.svg" /]
-[doc-link-card href="/mailbeez/newsletter" title="Newsletter" description="Read the newsletter module guide." icon="tabler/mail.svg" /]
+[doc-link-card href="/tutorials-and-recipes/newsletter-learning-path" title="Prepare a newsletter" description="Choose the audience, test the email and schedule the mailing." icon="heroicons/outline/envelope.svg" new-tab="false" /]
+[doc-link-card href="/guide-to-getting-started" title="Set up an automated email" description="Choose a trigger, send a test email and check the first scheduled run." icon="heroicons/outline/bolt.svg" new-tab="false" /]
 [/doc-grid]
 
-> [!TIP]
-> Use the sidebar to browse by topic, or open Search to find a feature or module.
+## Browse by app area
+
+[doc-grid columns="2"]
+[doc-link-card href="/mailbeez" title="Automations" description="Choose and set up flows for recurring tasks." icon="heroicons/outline/paper-airplane.svg" new-tab="false" /]
+[doc-link-card href="/contacts" title="Contacts" description="Manage customers, prospects and recipient lists." icon="heroicons/outline/user-group.svg" new-tab="false" /]
+[doc-link-card href="/mailbeez-results" title="Reports" description="Review sends, clicks and campaign results." icon="heroicons/outline/chart-bar.svg" new-tab="false" /]
+[doc-link-card href="/app-system" title="System" description="Find configuration, extensions and sending status." icon="heroicons/outline/cog-6-tooth.svg" new-tab="false" /]
+[/doc-grid]
+
+<span id="learn-with-a-shop-example"></span>
+
+## Reference
+
+<ul class="mailbeez-home-resources">
+  <li><a href="/basics/what-is-mailbeez">What is MailBeez?</a></li>
+  <li><a href="/tutorials-and-recipes">Tutorials and recipes</a></li>
+  <li><a href="/sending-status">Sending &amp; status</a></li>
+  <li><a href="/compatibility">Compatibility</a></li>
+  <li><a href="/changelog">Changelog</a></li>
+</ul>

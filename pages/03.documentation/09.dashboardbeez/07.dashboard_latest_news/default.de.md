@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Das MailBeez News Feed Widget
+title: "MailBeez-Neuigkeiten"
+module_subtitle: "MailBeez-Neuigkeiten im früheren Dashboard anzeigen"
 slug: dashboard_latest_news
 # menu: The MailBeez News Feed Widget
 date: 17-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "Das MailBeez News Feed Widget"]
 # added collection selector
 
 author:
@@ -36,4 +37,8 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses Widget ist Bestandteil des MailBeez Grundsystemes und zeigt aktuelle Neuigkeiten von MailBeez an.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Änderungsprotokoll](/changelog) Versionshinweise nachschlagen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
+
+Auf dem früheren Dashboard zeigte das Widget Meldungen aus dem MailBeez-Newsfeed. Suchst du Änderungen einer bestimmten Version, wähle unter [Changelog](/changelog) das Veröffentlichungsjahr.

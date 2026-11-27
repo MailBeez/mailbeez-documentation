@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: The Version Check Widget
+title: "Version check"
+module_subtitle: "Look up installed modules and available updates in the earlier dashboard"
 slug: dashboard_versioncheck
 # menu: The Version Check Widget
 date: 17-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "The Version Check Widget"]
 # added collection selector
 
 author:
@@ -36,6 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
-Delivered with the free MailBeez framework software, this handy dashboard widget allows you to check your MailBeez framework software and all of your addon modules for updates and newer versions.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To look up release notes in V5, open [Changelog](/changelog). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-Just click the “Check for Updates” button and see the results displayed right there in the widget.
+Compare the installed framework and add-on versions with the versions in the older update widget. Before changing the framework, check [Updating the MailBeez Core System](/basics/updates) for that installation. For license and package details in V5, see [CloudLoader & licenses](/configbeez/config_cloudbeez).
+
+In a shop with several add-ons, write down the particular component named by the widget. The framework and an individual module can have different version numbers.

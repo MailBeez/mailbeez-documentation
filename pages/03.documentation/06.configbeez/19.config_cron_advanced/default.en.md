@@ -1,5 +1,6 @@
 ---
-title: 'Module Timing'
+title: "Sending windows"
+module_subtitle: "Schedule sending by module"
 published: true
 date: '02-12-2013 00:00'
 publish_date: '02-12-2013 00:00'
@@ -11,7 +12,7 @@ template: docs
 taxonomy:
     category:
         - docs
-    tag: [pro]
+    tag: [pro, "Schedule sending by module"]
 summary:
     enabled: true
     format: short
@@ -42,20 +43,24 @@ author:
     name: admin
 ---
 
-This module allows you to define the timing for running modules. Compared to the "Run MailBeez automatically" Module it adds the powerful time control.
+A parts supplier sends payment reminders on Tuesday mornings while its accounts team is available to answer replies. Give that module a Tuesday window from 8 to 9 a.m. A processing run at 8:30 can pick it up. A run at 9:30 is already outside the window.
 
-**Benefits**
+## Give a module a sending window
 
-- control per module at which week days and at which time to send out. E.g. sent Welcome Emails with providing quick support only during your business hours
-- reduce load for the sending process.  
+Open **System → Extensions → Add-ons → Sending and scheduling** and select **Schedule sending by module**.
 
+[doc-steps]
 
-Depending on the server setup, number of modules installed and configuration then sending process might require too many resources. By splitting up the processing you can reduce the load.
+[doc-step]
+**Choose the window**
 
+Open **Edit schedule**, find the payment reminder and select the weekday and hours you want it to run. Other flows can keep their own schedules.
+[/doc-step]
 
+[doc-step]
+**Make sure a run falls inside it**
 
-**Set-up:**
+Check what starts [automatic processing](/configbeez/automatic-processing). A time window permits a run. A server cron job or an eligible shop visit still has to start it. **Minimum interval between visit-triggered runs (minutes)** applies when shop visits start processing.
+[/doc-step]
 
-The "Module Timing" module includes the functionality of the basic "[Run MailBeez automatically](/documentation/configbeez/config_cron_simple)" module to utilise the traffic on the website to trigger the sending process. This happens asynchronous, which means the visitor will not see any delay in page load times.
-
-**For most reliable functoin please set up a traditional cronjob to call the MailBeez Cronjob-URL e.g. every 5 minutes and then configure very flexible and comfortable the timing for each module.**
+[/doc-steps]

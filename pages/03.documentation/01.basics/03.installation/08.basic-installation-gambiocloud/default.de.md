@@ -5,6 +5,7 @@ slug: basic-installation-gambiocloud
 date: 19-04-2017
 published: true
 template: docs
+installation_platform: comp_gambio
 # theme: false
 visible: true
 summary:
@@ -33,19 +34,8 @@ metadata:
 #  last_modified: true
 ---
 
+<span id="modul-aktivieren"></span>Bei GambioCloud ist MailBeez bereits enthalten. Öffne in der Shopverwaltung **Module → Modul-Center** und aktiviere **MailBeez**.
 
-MailBeez arbeitet problemlos mit *[Gambiocloud.de](https://gambiocloud.de)*.
-
-Dank der Vor-Integration mit Gambiocloud kann MailBeez mit wenigen Schritte aktiviert werden:
-
-
-## Modul aktivieren
-
-Im Modul-Center unter
-
-`Module > Modul-Center`
-
-bitte MailBeez aktivieren.
-
+Öffne anschließend den neuen MailBeez-Menüeintrag. Er startet den Installer direkt in deiner Shopverwaltung.
 
 [plugin:content-inject](/content_blocks/run_installer)

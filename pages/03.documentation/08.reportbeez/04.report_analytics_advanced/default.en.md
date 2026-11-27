@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: MailBeez Analytics Advanced
+module_subtitle: "Trace a change in the earlier reports to the email or module behind it"
 slug: report_analytics_advanced
 date: 22-11-2016
 published: true
@@ -26,47 +27,38 @@ author:
 
 ---
 
-You know you are sending a lot of emails, but you want to evaluate the success of your email campaigns and individual emails to understand what’s working and what’s not. Get detailed analytics for your MailBeez email sends with **MailBeez Analytics Advanced**.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To compare sends, opens and clicks in V5, open [Email performance](/mailbeez-results/email-performance). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-The new Analytics Advanced gathers data from all installed modules and consolidates it into easily readable graphs and lists. Using the familiar metrics found in the Beez-O-Graph dashboard,  Analytics Advanced tells you how your MailBeez email campaigns are really performing.
+Find the email or module behind a change in the historical report. Choose the dates first, then inspect a narrower selection. The chart shows orders attributed to email activity.
 
+An attributed order is an order the report linked to email activity. To compare two campaigns, use the same dates and the same interpretation of that link for both.
 
-MailBeez Advanced Analytics metrics include:
-- Emails sent, Open rate, Open rate mobile, Click rate, Order rate, and revenue subtotal.
-- Metrics for each installed module that sends emails.
-- Metrics for each email configured within a particular module
+## Date Picker
 
-####Beez-O-Graph
-The familiar Beez-O-Graph dashboard is a powerful widget with an intuitive graph display that provides you with a visual report of your daily MailBeez Analytics data, such as number of emails sent, number of emails opened, number of email links clicked, number of products ordered as a result of your emails, and number of customer opt-outs. 
-![image](analytics.dashboard.png?lightbox "analytics dashboard")
+Choose a preset or a custom period from a single day to all available records. Keep that period selected when comparing modules.
 
-Click in Beez-O-Graph to get detailed data for the selected module. Click on an entry to open Customer Insight for detailed analytics into individual customer orders, or to view the specifics of the email sent.
+![Date Picker](analytics.date.picker.png?lightbox)
 
-What can you do with Analytics Advanced? With MailBeez Analytics Advanced, you can answer questions like:
-- How are our email initiatives performing overall today?
-- Which email in a particular module is the most effective?
-- Which module is performing the best
+## Beez-O-Graph
 
-####Leaderboard
-![image](analytics.leaderboard.png?lightbox "analytics_leaderboard")
+Compare daily sends, recorded opens, clicks, linked orders and opt-outs. Select a module or message to narrow the chart. Open a matching entry in Customer Insight to inspect the message or order.
 
-Displays a ranking of the top content based on relevant parameters. The dashboard listings change to reflect the filtering that is applied.
+![Beez-O-Graph](analytics.dashboard.png?lightbox)
 
+## Leaderboard
 
-####Detail Reports - (filtering)
+Check which content ranks highest for the selected measure and filters. Changing the period or module can change the ranking.
 
-Lets you drill-down and analyze subsets of your email sends. This is a filtering of the data that appears in a given report view. Click on the segment to initiate the filter, click again to remove it. Filter by emails sent, open rate, open rate mobil, click rate, ordered and by email type and date.
+![Leaderboard](analytics.leaderboard.png?lightbox)
 
-![image](analytics.detail.reports.png?lightbox "analytics_detail_reports")
+## Detail Reports
 
-####Date Picker
-Select records to analyze between a range of dates.
-The Date Picker allows you to view report data by any timeframe desired, from 1 day to the entire period of time for which data exists, or any part thereof. The date range feature makes it easy to specify either a standard timeframe (such as a week, month, or year), or any custom timeframe. 
+<span id="detail-reports-filtering"></span>Select a chart segment to filter the report. Select it again to remove the filter. Compare sends, opens, mobile opens, clicks or orders for the email type and dates you need.
 
-![image](analytics.date.picker.png?lightbox "analytics_date_picker")
+![Detail Reports](analytics.detail.reports.png?lightbox)
 
+## Refresh
 
-####Refresh
-Use the refresh icons to manually refresh your MailBeez analytics data.  Refreshing the data updates the graph that’s being shown so that the most current information is displayed.  You can refresh data for individual graphs and dashboards independently.
-
-
+Refresh the individual graph or dashboard when you need its latest recorded figures.

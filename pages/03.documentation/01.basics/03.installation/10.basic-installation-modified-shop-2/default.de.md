@@ -7,6 +7,7 @@ published: true
 publish_date: 12-09-2010
 # unpublish_date: 12-09-2010
 template: docs
+installation_platform: comp_xtcm2
 # theme: false
 visible: true
 summary:
@@ -35,69 +36,31 @@ metadata:
 #  last_modified: true
 ---
 
+<span id="integrations-pakete"></span>Wähle das Paket für die installierte modified-shop-Version und Revision. Das Paket für 3.0.2 gehört beispielsweise zu Revision r15701 mit PHP 8.2. Vergleiche die Revision in deinem Shop, bevor du Dateien zusammenführst.
 
-##Integrations-Pakete
+Die Revision bezeichnet einen bestimmten Stand innerhalb einer Version. Prüfe sie vor dem Zusammenführen der Dateien, besonders wenn dein Shop Anpassungen an Bewertungen oder am Adminmenü enthält.
 
-Mit dem passenden Integrations-Paket fügt sich das MailBeez System unter Nutzung des Autoinclude Modulsystems nahtlos in Ihr Modified-Shop 2.0/3.0 ein.
+| Shopversion | Integrationspaket |
+| --- | --- |
+| <span id="modified-shop-v3"></span><span id="modified-shop-v3-0-2-php8"></span>3.0.2  · PHP 8.2 | [Download r15701](https://mailbeez-support.com/cloudfiles/modified-shop_3.0.2-r15701_delta.zip) |
+| <span id="modified-shop-v3-1-0-php8"></span>3.1.0  · PHP 8.3 | [Download r16069](https://mailbeez-support.com/cloudfiles/modified-shop_3.1.0-r16069_delta.zip) |
+| <span id="modified-shop-v2"></span><span id="modified-shop-v2-0-0"></span>2.0.0 | [Download r6510](https://mailbeez-support.com/cloudfiles/modified-shop-2.00r6510-delta.zip) |
+| <span id="modified-shop-v2-0-1"></span>2.0.1 | [Download r10403](https://mailbeez-support.com/cloudfiles/modified-shop_2.0.1.0-r10403-delta.zip) |
+| <span id="modified-shop-v2-0-2-1"></span>2.0.2.1 | [Download r10607](https://mailbeez-support.com/cloudfiles/modified-shop_2.0.2.1-r10607-delta.zip) |
+| <span id="modified-shop-v2-0-2-2"></span>2.0.2.2 | [Download r10690](https://mailbeez-support.com/cloudfiles/modified-shop_2.0.2.2-r10690-delta.zip) |
+| <span id="modified-shop-v2-0-3-0"></span>2.0.3.0 | [Download r10907](https://mailbeez-support.com/cloudfiles/modified-shop_2.0.3.0-r10907-delta.zip) |
+| <span id="modified-shop-v2-0-4-2"></span>2.0.4.2 | [Download r11374](https://mailbeez-support.com/cloudfiles/modified-shop_2.0.4.2-r11374-delta.zip) |
+| <span id="modified-shop-v2-0-5-x"></span>2.0.5.x | [Download r12487](https://mailbeez-support.com/cloudfiles/modified-shop_2.0.5.0-r12487-delta.zip) |
+| <span id="modified-shop-v2-0-6-x"></span>2.0.6.x | [Download r13500](https://mailbeez-support.com/cloudfiles/modified-shop_2.0.6.0-r13500-delta.zip) |
+| <span id="modified-shop-v2-0-7-x"></span>2.0.7.x | [Download r14473](https://mailbeez-support.com/cloudfiles/modified-shop_2.0.7.0-r14473-delta.zip) |
+| <span id="modified-shop-v2-0-7-2-ph"></span>2.0.7.2+  · PHP 8.1 | [Download r14622](https://mailbeez-support.com/cloudfiles/modified-shop_2.0.7.2-r14622-delta.zip) |
 
-### Modified-Shop V3
-####Modified-Shop V3.0.2 PHP8.2
-<https://mailbeez-support.com/cloudfiles/modified-shop_3.0.2-r15701_delta.zip>
+## Paket installieren
 
-####Modified-Shop V3.1.0 PHP8.3
-<https://mailbeez-support.com/cloudfiles/modified-shop_3.1.0-r16069_delta.zip>
-
-
-### Modified-Shop V2
-####Modified-Shop V2.0.0
-<https://mailbeez-support.com/cloudfiles/modified-shop-2.00r6510-delta.zip>
-
-####Modified-Shop V2.0.1
-<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.1.0-r10403-delta.zip>
-
-####Modified-Shop V2.0.2.1
-<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.2.1-r10607-delta.zip>
-
-####Modified-Shop V2.0.2.2
-<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.2.2-r10690-delta.zip>
-
-####Modified-Shop V2.0.3.0
-<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.3.0-r10907-delta.zip>
-
-#### Modified-Shop V2.0.4.2
-<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.4.2-r11374-delta.zip>
-
-#### Modified-Shop V2.0.5.x
-<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.5.0-r12487-delta.zip>
-
-#### Modified-Shop V2.0.6.x
-<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.6.0-r13500-delta.zip>
-
-#### Modified-Shop V2.0.7.x
-<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.7.0-r14473-delta.zip>
-
-#### Modified-Shop V2.0.7.2+ PHP8.1
-<https://mailbeez-support.com/cloudfiles/modified-shop_2.0.7.2-r14622-delta.zip>
-
-##Installation
-
-> [!NOTE]
-> Falls das `/admin` Verzeichnis umbenannt worden ist, die Dateien aus `admin/` in das umbenannte Verzeichnis verschieben
-
-Zur Installation von MailBeez bitte zunächst das passende Integrations-Paket downloaden und mit der Datei-Struktur von Modified-Shop zusammenführen.
-
-Folgende Dateien von Modified-Shop wurden geringfügig angepasst:
-
-    /products_reviews_write.php             // Auto-login für Produktbewertungen
-    /inc/csrf_token.inc.php                 // Integration mit CSFR-Schutz
-    /inc/xtc_update_whos_online.inc.php     // Ausschluss von mailhive.php Aufrufen
-
-Die Integrations-Pakete vor V2.0.3.0 erfordern eine kleine Anpassung an:
-
-    /admin/includes/column_left.php         // Menue-Punkt - nur vor V2.0.3.0
-
-
-Dann in der Modified-Shop `Administration > Partner Module > MailBeez` die Integration aktivieren und die Installation vom MailBeez System durchführen.
-
+1. <span id="installation"></span>Entpacke das Archiv. Hast du dein Adminverzeichnis umbenannt, übertrage die Dateien aus `admin/` in dieses Verzeichnis.
+2. Führe die Paketdateien mit den entsprechenden Shopverzeichnissen zusammen. Prüfe `products_reviews_write.php` für den Auto-Login zur Produktbewertung, `inc/csrf_token.inc.php` für den CSRF-Schutz und `inc/xtc_update_whos_online.inc.php` für den Ausschluss von MailBeez-Aufrufen. Pakete vor 2.0.3.0 ändern für den Menüeintrag zusätzlich `admin/includes/column_left.php`.
+3. Aktiviere die Anbindung unter **Administration → Partner Module → MailBeez** und schließe die MailBeez-Installation ab.
 
 [plugin:content-inject](/content_blocks/run_installer)
+
+[Ältere Versionen und Shopmodule](/legacy)

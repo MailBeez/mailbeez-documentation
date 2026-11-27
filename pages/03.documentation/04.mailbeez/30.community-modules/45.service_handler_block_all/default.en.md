@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: "Service: Block-All Handler"
+title: "Global unsubscribe handler"
+module_subtitle: "Process requests to unsubscribe from all MailBeez emails"
 slug: service_handler_block_all
 # menu: Service: Block-All Handler
 date: 16-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Service: Block-All Handler"]
 module:
     code: 'config_block_admin'
     category: [configbeez]
@@ -41,5 +42,10 @@ metadata:
 #  last_modified: true
 ---
 
-   
-This is an internal service for the [Advanced Opt-Out with Admin](/documentation/configbeez/config_block_admin/) module which comes delivered with the module.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To investigate an individual delivery in V5, open [Sending & status](/sending-status). [Browse the legacy reference](/legacy).
+[/doc-callout]
+
+When a customer blocks all MailBeez emails, this older internal service processes the request for the opt-out add-on. Check or manage the recorded preference in [Advanced Opt-Out with Admin](/configbeez/config_block_admin).
+
+A recipient who blocks all mail expects future campaigns to respect that choice. When tracing a complaint, check the address and the scope of its saved preference.

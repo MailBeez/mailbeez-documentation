@@ -1,5 +1,6 @@
 ---
-title: Simulation
+title: "Simulationsmodus"
+module_subtitle: "Empfänger und personalisierte Kampagnen-E-Mails im Testpostfach prüfen"
 slug: config_simulation
 date: 28-09-2015
 published: true
@@ -19,20 +20,13 @@ metadata:
     author: admin
 ---
 
-MailBeez unterscheidet grundsätzlich zwischen den Betriebsarten:
+Du möchtest einen Geburtstagsgruß testen, bevor echte Kunden ihn erhalten. Wähle ein Testprofil, dessen Geburtstag in den Versandzeitraum fällt. In der Simulation kannst du prüfen, ob das Profil ausgewählt wird und welchen Gruß und Gutschein MailBeez dafür vorbereitet.
 
-1. **Simulation**
-2. **Produktion**
+Öffne **System → Konfiguration → Simulationsmodus**.
 
+1. Prüfe den Modus für den Lauf, den du testen möchtest. Für geplante Läufe gilt der dort eingestellte Versandmodus.
+2. Möchtest du eine Kopie im Postfach erhalten, aktiviere **Kopien bei Simulationen versenden** und prüfe **Empfänger für Simulationen**. Sind Kopien ausgeschaltet, bleibt das Postfach leer. Die ausgewählten Empfänger findest du im Simulationsergebnis.
+3. Prüfe in der Kopie Anrede, Links und Gutschein anhand des Testprofils. Simulierte E-Mails und Gutscheine sind gekennzeichnet. Ein solcher Gutschein kann im Shop trotzdem einlösbar sein.
+4. Schließe die Prüfung ab, bevor du die Simulation neu startest. Beim Neustart werden ihre aufgezeichneten Daten gelöscht.
 
-### Simulation [SIM]
-
-Der Simulations-Modus ist gedacht, um - schwer zu erraten - die Funktion des MailBeez-Systemes anhand von Simulationen zu testen. Im Simulations-Modus arbeiten alle Module wie im Produktions-Modus, ABER: alle E-Mails werden nur an die hier hinterlegte E-Mail-Adresse versendet und NICHT an die Kunden!
-Zur Kennzeichnung von Simulations-E-Mails wird die Kennung [SIM] z.B. im E-Mail-Betreff und im Gutschein-Code verwendet.
-
-Beim Neustart einer Simulation werden alle Simulations-Daten gelöscht.
-
-
-### Produktion
-
-Wenn Sie mit den Ergebnissen der Simulations-Durchläufen zufrieden sind, können Sie beruhigt in die Betriebsart "Produktion" wechseln. Beim Ausführen der Module werden dann die E-Mails generiert und an die Kunden versendet.
+Eine vollständige Prüfung mit bekannten Bestellungen findest du unter [Rückgewinnung testen](/tutorials-und-rezepte/rueckgewinnung-testen).

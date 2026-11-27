@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: The Feedback Company
+title: "The Feedback Company"
+module_subtitle: "Käufer zu einer Shopbewertung auf The Feedback Company einladen"
 slug: feedbackcompany
 routes:
     default: /dokumentation/mailbeez/feedbackcompany
@@ -51,7 +52,12 @@ metadata:
 #  last_modified: true
 ---
 
-Mit diesem einfachen, kostenlosen Modul können Sie Ihre Kunden automatisiert um die Abgabe einer Bewertung auf dem holländischen Bewertungs-Portal [The Feedback Company](https://www.feedbackcompany.nl/) bitten.
+[doc-callout type="note" title="Früheres Kampagnenmodul"]
+Für einen aktuellen Shop wählst du den Flow unter [Automatisierung](/mailbeez). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
+Das frühere Community-Modul lädt Käufer zur Shopbewertung bei The Feedback Company ein. Verwende das Bewertungsziel deines Shops und öffne es aus einer Testeinladung, bevor du den automatischen Versand aktivierst.
 
+Öffne das Ziel aus einer Testnachricht, bevor du die alte Anbindung wieder nutzt. Käufer können nur antworten, wenn die Bewertungsseite des Anbieters noch erreichbar ist.
 
+Wähle den Bestellstatus für den Start der Wartezeit und plane genügend Zeit für die Lieferung ein.

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Brand Fans
+title: "Brand Fans"
+module_subtitle: "An earlier proposal for emailing customers who regularly buy from the same brand"
 slug: brand-fans
 # menu: Brand Fans
 date: 23-08-2011
@@ -36,27 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
-This module is in planing phase - please contact MailBeez if you are interested
-  
-  
-  
-  
- 
+[doc-callout type="note" title="Earlier module proposal"]
+Choose a flow for a current shop under [Automations](/mailbeez). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-**Telling the fans…**
+The Brand Fans proposal described emailing repeat buyers when a brand added products. It defined repeat buying by the number of different products or units purchased from that brand and proposed an interval between updates. The available material documents the design stage only.
 
-If you run an online retail store, you probably have some customers that clearly have a favourite brand, so much so that they are always coming back for the latest product. However, letting these ready-to-buy customers know about the latest arrivals from their favourite brand is far from simple. In fact, most times you probably have to resort to a ‘catch-all’ newsletter email that, whilst hitting your target audience, also pops up in the mailbox of every single customer you have, customers who probably have never bought from that brand, and perhaps never will.
-
-Luckily, the “Brand Fan” module from Mailbeez can make keeping these fans up-to date as easy as pie, emailing only regular buyers of a certain brand when that brand’s new products arrive in store. We call it The Brand Fans module, but you might call it a Life Saver.
-
-**Tweak and go**
-
-The Brand Fans module is a one drop installation into your existing Mailbeez framework, appearing alongside your other Mailbeez modules inside your store’s admin. To use the module, simply style the template email that the customers will receive, turn it to Production mode, and let it roll. Now all you have to do is add some new products, in fact, add them any time, now, in a week, a year, and the Brand Fans module will fire off emails to regular brand buyers automatically for life.
-
-**A clever fan**
-
-Brand Fans knows that emailing customers every day, even really great, loyal as they come customers is not a great idea. That’s why we have provided some easily configurable settings that allow you to set the regularity, and fan worthiness of the email. Only want customers to receive an update if they have bought ten different products, or twenty of the same item? No problem, just pop those settings in, and Brand Fans will stay true to your message for as long as you let the module run.
-
-**Say it is so**
-
-From apparel stores  keen to alert existing customers about new lines in stock from their favourite brand, right through to book retailers wanting to tell fans of a particular author that the long awaited sequel is now in stock, Brand Fans from Mailbeez has got it covered.
+The proposal makes a distinction between buying a brand once and showing repeated interest in it. Keep that distinction in mind when interpreting the older design notes.

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Kunden ohne Kauf Profi
+title: "Erstkauf fördern"
+module_subtitle: "Registrierte Kunden ohne Bestellung zum ersten Kauf einladen"
 slug: nopurchase_advanced
 routes:
     aliases:
@@ -20,8 +21,9 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro,coupon]
+    tag: [pro,coupon, "Zum ersten Kauf einladen"]
 module:
+    plans_position: after_guide
     mc_ready: true
     code: 'nopurchase_advanced'
     category: [mailbeez]
@@ -51,39 +53,30 @@ metadata:
 #  last_modified: true
 ---
 
-> [!WARNING]
-> Diese Emails halten nicht die Ausnahme-Regeln des Verbotes von Email-Werbung ein, da noch kein Kauf getätigt worden ist - bitte selbst abwägen, ob dieses Modul zum Einsatz kommen soll.
+Jemand legt in deinem Weinshop ein Konto an, entscheidet sich aber noch für keine Flasche. Ein paar Tage später kann eine kurze Vorstellung deiner Probierpakete bei der ersten Bestellung helfen. Bleibt der Kauf aus, kannst du in einer zweiten E-Mail einen Gutschein anbieten.
 
-Dieses Modul gibt Ihnen ein automatisierbares Werkzeug, um neue Kunden **mit Kunden-Konto aber bisher ohne Kauf** zu kontaktieren. In der Kontakt-Abfolge ist es möglich, personalisierte zeitlich begrenzte Gutschein zu versenden um den Kunden den Schritt zur ersten Bestellung einfacher zu machen.
+Für diesen Flow zählen das Datum der Registrierung und die Frage, ob der Kunde bereits bestellt hat. Wer schon ein Paket gekauft und danach länger nichts bestellt hat, passt zu [Inaktive Kunden zurückgewinnen](/mailbeez/winback_advanced).
 
-Bestehende Kunden mit zumindest einem Kauf (konfigurierbar - siehe Profi-Tipp) und offenen Warenkörben können mit dem Modul [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) kontaktiert werden.
+## Flow einrichten
 
-**Die wichtigsten Funktionen**
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → Zum ersten Kauf einladen** und wähle **Optionen → Konfigurieren**.
 
-- Findet und kontaktiert Kunden, welche ein Konto angeleget aber bisher nicht bestellt haben
-- Voll automatisierbarer Kundenkontakt – einstellen und vergessen
-- Zeitverzögerte, mehrstufige Email-Abfolge
-- Bieten Sie den potentiellen Kunden mit jedem Schritt einen höherwertigeren Gutschein.
-- Optional können Sie prüfen, ob der Kunde Produkte im Warenkorb hat und nur Kunde mit leerem Warenkorb kontaktieren.
+[doc-steps]
+[doc-step]
+**Den Zeitpunkt für die erste Einladung wählen**
 
-> [!TIP]
-> In Kombination mit [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) besteht die Möglichkeit, zwischen **Kunden ohne Kauf und leerem Warenkorb** und **Kunden ohne Kauf aber mit Produkten im Warenkorb** zu unterscheiden und somit verschiedene Emails und verschiedene Gutschein-Codes zu senden.
+Trage für die Vorstellung der Probierpakete unter **Erste E-Mail: Wartezeit** drei Tage ein. Mit **Höchstalter für den Einstieg** legst du fest, wie weit der erste Lauf bei den Registrierungen zurückblickt. Bei 14 Tagen kommen zum Beispiel auch Konten aus der Vorwoche infrage.
+[/doc-step]
+[doc-step]
+**Anzahl der E-Mails und Angebot festlegen**
 
- Hierzu die Option `Auf leeren Warenkorb prüfen?` aktivieren und im Modul [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) die Option `Auf vorherige Bestellungen prüfen?` deaktivieren.  
-  Das Modul "Kunden ohne Kauf Profi" wird dann nur potenzielle Neukunden mit leerem Warenkorb erreichen, während [Verlassene Warenkörbe Profi](/dokumentation/mailbeez/abandoned_cart_advanced) alle Kunden (mit oder ohne vorheriger Bestellung) mit Produkten im Warenkorb kontaktiert.
+Wähle unter **Anzahl der E-Mails** eine E-Mail für die Probierpakete oder zwei für die Kombination mit einem Gutschein. Setze **Wartezeit vor E-Mail 2** für die zweite E-Mail auf sieben Tage. Die Woche zählt ab dem Versand der ersten Nachricht. Für das Angebot wählst du **Gutschein Vorlage - Zweite Aktivierung**.
+[/doc-step]
+[doc-step]
+**Den Warenkorb berücksichtigen**
 
+Nutzt du bereits [Warenkorberinnerungen](/mailbeez/abandoned_cart_advanced), aktiviere hier **Leeren Warenkorb voraussetzen**. Wer schon Wein im Warenkorb hat, kann dann eine Erinnerung zur eigenen Auswahl erhalten.
+[/doc-step]
+[/doc-steps]
 
-
-#### Weitere Starke Vorteile
-
-**Wirkungsvolle Kampagnen zur Kundengewinnung**
-
-[plugin:content-inject](/content_blocks/pro_coupon)
-
-[plugin:content-inject](/content_blocks/pro_common_advantage)
-
-[plugin:content-inject](/content_blocks/pro_responsive_template)
-
-#### Ergebnisse beobachten und Optimieren
-
-MailBeez kommt bereits mit einigen schönen Widgets, eines davon ist ist Nopurchase-O-Meter, welches auf einen Blick verrät, wieviele der kontaktierten Noch-Nicht-Kunden nach dieser Kontakt-Email eine Bestellung getätigt haben. Optimieren Sie Ihre Emails (Text, Gutscheine) anhand dieser Daten.
+[Den ersten Lauf prüfen](/quickstart/step-3-set-forget#den-ersten-lauf-pruefen)

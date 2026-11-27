@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Template Selector
+title: "Template Selector"
+module_subtitle: "In früheren Versionen das E-Mail-Design eines einzelnen Moduls auswählen"
 slug: config_template_selector
 routes:
     default: /dokumentation/configbeez/config_template_selector
@@ -44,12 +45,10 @@ metadata:
 #  last_modified: true
 ---
 
-(English)
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Haupt-Vorlagen](/content/main-templates) den gemeinsamen E-Mail-Rahmen ändern. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-## What Does the Template Selector Do?
+Wähle das E-Mail-Design für ein einzelnes älteres Modul. Zur Auswahl stehen die dort installierten Vorlagen. Prüfe vor dem Wechsel, welche Kampagne dieses Modul verwendet.
 
-The Template Selector is an internal service which allows you to select your preferred email template from within each individual module’s configuration panel.
-
-This added flexibility allows you to choose different email templates for different email modules – awesome!
-
-The Template Selector is delivered with all premium email modules except for the Newsletter – Beta module.
+Brauchen zwei Kampagnen unterschiedliche Gestaltung, prüfe zuerst die Vorlagenauswahl beider Module. Sonst änderst du womöglich ein Design, das beide verwenden.

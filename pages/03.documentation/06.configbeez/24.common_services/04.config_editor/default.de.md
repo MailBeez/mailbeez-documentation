@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: Editor und Bildgenerator
+module_subtitle: "Bildquellen und Cache-Einstellungen des früheren visuellen Editors konfigurieren"
 slug: config_editor
 routes:
     default: /dokumentation/configbeez/config_editor
@@ -44,34 +45,17 @@ metadata:
 #  last_modified: true
 ---
 
-Das Modul "Visueller Editor" wird als Bestandteil verschiedener Module, z.B. dem Newsletter-Modul und der Vorlagen-Verwaltung mitgeliefert.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Haupt-Vorlagen](/content/main-templates) den gemeinsamen E-Mail-Rahmen ändern. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Es bietet folgende Konfigurations-Möglichkeiten:
+Lege fest, wo der frühere visuelle Editor Bilder sucht, wo der Bildgenerator Dateien zwischenspeichert und mit welchen Breiten du Vorlagen prüfst. Die Einstellungen gelten für die Module, die diesen Editor nutzen.
 
+Originalbild und erzeugte Vorschau erfüllen verschiedene Aufgaben. Kläre, wo die Quelldateien liegen, bevor du ein Verzeichnis für zwischengespeicherte Bilder änderst oder aufräumst.
 
-**Ausgangsverzeichnis für Bilderverwaltung**
-
-Hier kann ein zum Shop-Hauptverzeichnis relativer Pfad angegeben werden. Der Bild-Browser wird dann ausgehenden von diesem Verzeichnis geöffnet.
-
-Pfad-Angabe relativ zum Shop-Hauptverzeichnis  
- Bei leerem Pfad: Alle Unterverzeichnis im Shop sind zugänglich
-
-
-**Ausgangsverzeichnis für Bild-Cache**
-
-Hier kann ein zum Shop-Hauptverzeichnis relativer Pfad angegeben werden. Der MailBeez Bildgenerator schreibt Bild-Dateien in dieses Verzeichnis. Dieser Cache kann vollständig regeniert werden.
- 
-Bei Änderung des Cache-Pfades wird der Cache automatisch umgeschrieben, allerdings sollte der alte Pfad mit der darin enthaltenen .htaccess Datei erhalten bleiben, um das Generieren von Bildern in früher versendeten Emails zu ermöglichen.
-
-
-**Mobil-Editor Breitenangaben**
-
-Als Unterstützung für die Bearbeitung von responsive E-Mails kann der Editor in verschiedene Breiten eingerichtet werden.
-
-Bitte diese Angabe nur ändern wenn dies wirklich erforderlich ist
-
-**Mobil-Editor Breite 1**: Breite für Ansicht 1, z.B. 320px
-
-**Mobil-Editor Breite 2**: Breite für Ansicht 2, z.B. 480px
-
-**Mobil-Editor Breite 3**: Breite für Ansicht 3, z.B. 600px
+- **Ausgangsverzeichnis für Bilderverwaltung**<br>
+  Gib einen Pfad relativ zum Shopverzeichnis ein. Ohne Angabe sind die Unterverzeichnisse in der Bildauswahl zugänglich. Beschränke den Pfad bei Bedarf auf Kampagnenbilder.
+- **Ausgangsverzeichnis für Bild-Cache**<br>
+  Gib das Cache-Verzeichnis relativ zum Shopverzeichnis an. Der Bildgenerator kann den Cache neu erzeugen und verschiebt ihn bei einer Pfadänderung. Erhalte den alten Ordner samt `.htaccess`, damit Bilder in bereits versandten E-Mails erreichbar bleiben.
+- **Mobil-Editor Breitenangaben**<br>
+  Lege drei Vorschaubreiten fest, etwa 320, 480 und 600 Pixel. Wähle Breiten, die deine Vorlage unterstützt.

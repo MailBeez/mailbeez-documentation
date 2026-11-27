@@ -1,5 +1,6 @@
 ---
-title: 'Birthday Coupon'
+title: "Birthday wishes"
+module_subtitle: "Send birthday wishes"
 slug: coupon_birthday
 date: 26-10-2010
 published: true
@@ -17,7 +18,9 @@ taxonomy:
     tag:
         - pro
         - coupon
+        - "Send birthday wishes"
 module:
+    plans_position: after_guide
     mc_ready: true
     code: coupon_birthday
     category:
@@ -44,36 +47,30 @@ metadata:
     author: admin
 ---
 
-**When cake and party poppers time comes around for your customers, roll out the red carpet to your store, and offer a Happy Birthday coupon with the Mailbeez Birthday Coupon Module!**
+Imagine you run a chocolate shop. A birthday greeting with a gift towards a box of truffles lets a regular customer choose their own treat. You can send it on the birthday or give them a few days to order in advance.
 
-Fully automated, personalized and complete with configurable expiry dates, the Mailbeez Birthday Coupon module gives you the tools to let your customers know you are thinking about them during their special day.
+MailBeez uses the date of birth saved in the customer profile. A profile without a usable birthday can’t qualify by this rule. MailBeez records the greeting for the year so the next day’s run won’t send another one.
 
-**Auto-generated coupons**
+## Set up the flow
 
-[plugin:content-inject](/content_blocks/pro_coupon)
+Open **Campaigns → Automations → MailBeez Flows → Send birthday wishes**, then choose **Options → Configure**.
 
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+[doc-steps]
+[doc-step]
+**Decide when the gift should arrive**
 
-<!--
+Set **Send before the birthday** to 0 for a greeting on the day or 3 for an early greeting. With **Allow belated greetings**, choose whether a missed run may still send birthday wishes afterwards.
+[/doc-step]
+[doc-step]
+**Set the terms of the gift**
 
+Your shop needs coupon support. Choose the chocolate offer under **Coupon Template** and set **Coupon validity**. Fourteen days means fourteen days from sending, even for an early greeting. Include the actual expiry date so the customer knows when to order.
+[/doc-step]
+[doc-step]
+**Read the greeting with a birthday in mind**
 
-Just in case ‘Dave’ isn’t the name of every one of your customers, Mailbeez emails support dynamic placeholder data, so you can ensure that every email your store sends is fully personalized with the first name, full name, or a number of growing dynamic elements available from your store’s database, all through simple ‘drop in’ code snippets.
+Preview the email with a suitable test profile. If the wording says “Today is your birthday”, use a same-day window. For an early email, try “A little something for your birthday”. Check the code and its terms under [Coupons](/content/coupons).
+[/doc-step]
+[/doc-steps]
 
-**A second chance with every email**
-
-Like most internet users, your customers probably receive a lot of email, so there is of course a chance that the Mailbeez Birthday email will be overlooked in the hullabaloo of inbox emailing. In order to prevent this, or at least to maximize the chance that your email will be viewed and acted upon, the Birthday Coupon Module actively tracks which customers received a coupon, allowing you to follow up with a simple [coupon expiry reminder](http://localhost/wordpress_mailbeez_EOL/documentation/mailbeez/coupon-expiry-reminder/) in case the coupon is still unused after a set time.
-
-**Configuration options**
-
-The Birthday module offers some handy configuration options which are detailed below.
-
-- **Set days before:** Send greeting this many days before Birthday
-- **Set days to skip after:** Stop looking for Birthday greetings this many days after Birthday
-- **Choose Coupon as template:** Choose the coupon code you have configured in your store’s coupon system. This coupon will be used as template to generate a personalized, unique coupon for each recipient. For precise instructions on how to properly work with coupons, [view this blog post](http://www.mailbeez.com/blog/configuring-coupons-mailbeez-campaigns/ "Configuring coupons for Mailbeez Campaigns").
-- **Expires after days:** Number of days after which the coupon expires – calculated from the sending point of time
-- **Length of Coupon Code:** Sets the length of the automatically generated coupon code
-
-Questions? Ideas? Please [contact ](http://localhost/wordpress_mailbeez_EOL/about/contact/)me
-
-
--->
+To celebrate the date a customer joined your shop, use [Celebrate customer anniversaries](/mailbeez/coupon_anniversary).

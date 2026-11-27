@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Add Trustedshops Ratings
+title: "Trusted Shops ratings in emails"
+module_subtitle: "Insert imported Trusted Shops ratings in campaign emails"
 slug: filter_add_trustedshops_rss
 # menu: Add Trustedshops Ratings
 date: 03-05-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Add Trustedshops Ratings"]
 module:
     code: 'config_trustedshops_rss_importer'
     category: [filterbeez]
@@ -42,58 +43,45 @@ metadata:
 #  last_modified: true
 ---
 
-Automatically add your store’s Trustedshops reviews into any MailBeez email campaign with the Add Trust Pilot Filter, part of the [Trustedshops Integration Suite](/documentation/configbeez/config_trustedshops_rss_importer/ "Trustedshops Integration Suite"); perfect for spicing up the [Winback](/documentation/mailbeez/winback_advanced/ "Winback Advanced Module") and [No Purchase](/documentation/mailbeez/nopurchase/ "Mailbeez No Purchase Modules") Mailbeez modules.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To choose a review integration in V5, open [Integrations](/extensions/integrations). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
+Display Trusted Shops reviews in emails that use the earlier template system. Check that reviews from [Import reviews from Trusted Shops](/configbeez/integrations/config_trustedshops_rss_importer) are available first, then install and activate the display module.
 
-### Options:
+Compare one displayed review with the Trusted Shops profile connected to this installation. That separates a feed or shop assignment issue from a template display issue.
 
-**Number of ratings**  
- Number of ratings shown in emails (number)
+## Insert the review into a template
 
-**Minimum Stars**  
- Show only ratings with at least this number of stars (3-5)
+<span id="usage"></span>For one campaign, edit its content template. For all emails with the same design, edit the main template. Put this placeholder in the HTML version.
 
-**Shuffle Ratings**  
- Do you want to shuffle the ratings (True) or show only the latest ones (False)
-
-### Usage
-
-Install and activate this Module – you need to have the [Trustedshops Integration Suite](/documentation/configbeez/config_trustedshops_rss_importer/ "Trustedshops Integration Suite") configured.
-
-By adding the following tags into your MailBeez templates you will be able to show a configured number of Trustedshops ratings in your MailBeez generated emails. You can place the tags wherever you want, so for example if you place them within your main template the ratings will be shown in all emails, but if you place them only in your content template, you are able control exactly in which emails the ratings will be visible:
-
-Place this into the HTML-Version of your MailBeez template:
-
-```
+```smarty
 {$content.rss.trustedshops.html}
 ```
 
-Place his into the TXT-Version of your MailBeez template:
+Use its text counterpart in the plain-text version.
 
-```
+```smarty
 {$content.rss.trustedshops.txt}
 ```
 
-the template for displaying the ratings is taken from the RSS-Feed template files
+The display templates are in `mailhive/configbeez/config_trustedshops_rss_importer/templates`.
 
-```
+```text
 rss_email_html.tpl  
 rss_email_txt.tpl
 ```
-located in
 
-`mailhive\configbeez\config_trustedshops_rss_importer\templates`
+For a custom display, read the review fields in the template loop.
 
-More advanced users can also directly access the data object holding the ratings in the email template using following code example.
-
-
-```
+```smarty
 {assign var=feed_feed value=$data.feed.trustedshops}
 {section name=item loop=$feed_feed}
   {$feed_feed[item].rating_stars}
-  {$feed_feed[item].text}</br>
-  {$feed_feed[item].user_deeplink}</br>
+  {$feed_feed[item].text}<br>
+  {$feed_feed[item].user_deeplink}<br>
   {$feed_feed[item].date|date_format}
 {/section}
 ```
 
+<span id="display-options"></span>Set the number of ratings and the minimum rating (3–5 stars). Choose whether to show the latest matching reviews or shuffle them.

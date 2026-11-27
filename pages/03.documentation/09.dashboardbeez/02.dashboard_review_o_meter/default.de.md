@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Das Review-O-Meter
+title: "Review-O-Meter"
+module_subtitle: "Im Dashboard prüfen, wie sich der Fortschritt beim Produktbewertungsziel entwickelt"
 slug: dashboard_review_o_meter
 # menu: Review-O-Meter
 date: 02-08-2011
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [core]
+    tag: [core, "Das Review-O-Meter"]
 author:
     name: admin
 metadata:
@@ -34,16 +35,10 @@ metadata:
 #  last_modified: true
 ---
 
-Das Review-O-Meter zeigt auf einen Blick, wie viele Ihrer Kunden Produkt-Bewertungen abgeben, nachdem MailBeez eine Aufforderungs-Emails hierzu gesendet hat.
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Flows & Newsletter](/mailbeez-results/flows-newsletters) Ergebnisse verschiedener Kampagnen vergleichen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-**Konfiguration**
+Lege einen Zielwert für den Anteil der angeschriebenen Käufer fest, die anschließend ein Produkt bewerten. Vergleiche den angezeigten Anteil mit diesem Ziel. Den Zeitpunkt der Anfrage änderst du im Bewertungsmodul.
 
-In der Standard-Konfiguration werden die Daten der letzten 30 Tage ausgewertet, Sie können den Zeitrahmen aber in der Modul-Konfiguration anpassen.
-
-Zudem können Sie die Zielwerte konfigurieren - die typischen Bewertungsraten sind abhängig von einer Reihe von Parametern wie z.B. der Art der Produkte und dem Kundensegment.  
- Experimentieren Sie etwas mit der Einstellung, falls die Ihnen die Standartwerte nicht sinnvoll erscheinen.
-
-
-Die besten Ergebnisse können Sie mit dem [MailBeez Produktbewertung Profi mit Auto-Login](/dokumentation/mailbeez/review_advanced/ "Mailbeez Review Advanced Module") erwarten: 
-Dank der Integration mit dem Shopsystem können Kunden mit Klick auf den Bewertungs-Link in der Email sofort mit dem Schreiben beginnen, ohne sich zuerst einloggen zu müssen. Hierdurch wird typisch eine deutliche Steigerung der Bewertungsrate erreicht. 
-Der Auto-Login bezieht sich nur auf die Seite zur Abgabe einer Bewertung.
+Prüfe vor der Einordnung, wie viele Käufer eingeladen wurden. Bei wenigen Empfängern kann schon eine einzelne Bewertung die Anzeige deutlich verändern.

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: "Service-Modul: Repariere Bestell-Datenbank"
+title: "Bestelldatenbank reparieren"
+module_subtitle: "Widersprüchliche Bestellstatus in der Shopdatenbank korrigieren"
 slug: service_db_repair_order
 # menu: Service-Modul: Repariere Bestell-Datenbank
 date: 07-02-2013
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Service-Modul: Repariere Bestell-Datenbank"]
 module:
     code: 'service_db_repair_order'
     category: [mailbeez]
@@ -49,22 +50,14 @@ metadata:
 #  last_modified: true
 ---
 
-## Problem:
+[doc-callout type="note" title="Früheres Kampagnenmodul"]
+Für einen aktuellen Shop wählst du den Flow unter [Automatisierung](/mailbeez). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Externe Bestell-Verwaltungssysteme oder andere Addons können die Integrität der Bestell-Datenbank-Tabellen beschädigen.
+<span id="problem"></span><span id="symptome"></span>Nutze diesen früheren Dienst, wenn Übersicht und Bearbeitung einer Bestellung verschiedene Status zeigen oder ein Modul eine extern bearbeitete Bestellung nicht findet.
 
-## Symptome:
+Bei einer Lieferanfrage sieht ein Mitarbeiter vielleicht einen Status in der Bestellliste und einen anderen in der geöffneten Bestellung. Halte vor der Reparatur fest, welche beiden Angaben voneinander abweichen.
 
-Der Bestell-Status in der Auflistungen der Bestellungen stimmt nicht mit dem Status in der Bestell-Bearbeitungs-Ansicht überein.
-
-MailBeez kann keine oder nicht alle Bestellungen / zu kontaktierende Kunden finden.
-
-## Lösung:
-
-Dieses Modul repariert die beschädigte Bestell-Datenbank automatisch.
-
-Funktionen:
-
-- Im Simulationsmodus werden die beschädigten Bestellungen aufgelistet, aber nicht repariert
-- Sehr effizientes Modul, welches vor allen weiteren Modulen ausgeführt wird
-- Zwei Betriebsarten: Bestell-Status beibehalten oder den reparierten Bestellungen einen neuen Status zuweisen
+1. <span id="loesung"></span>Starte den Dienst in der Simulation. Sie listet die betroffenen Bestellungen auf, ohne sie zu ändern. Vergleiche einen Treffer mit den Daten im Shop und in der Warenwirtschaft.
+2. Lege fest, ob reparierte Bestellungen ihren bisherigen Status behalten oder einen bestimmten neuen Status erhalten. Prüfe, welche Kampagnen auf diesen Status reagieren.
+3. Starte die Reparatur nach der Kontrolle der Auswahl. Der Dienst läuft vor den übrigen Modulen. Öffne anschließend eine betroffene Bestellung und vergleiche den Status in beiden Ansichten.

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Update Prüfung
+title: "Update-Prüfung"
+module_subtitle: "Eine E-Mail erhalten, wenn der Updatedienst ein neues Modul oder eine neue Version erkennt"
 slug: mailbeez_check
 # menu: MailBeez check for update
 date: 09-06-2010
@@ -15,8 +16,9 @@ summary:
     format: short
     size: 128
 taxonomy:
-    migration_status: "done: [docs]"
-    tag: [core,depreciated]
+    migration_status: done
+    category: [docs]
+    tag: [core,depreciated, "Update Prüfung"]
 module:
     code: 'mailbeez_check'
     category: [depreciated]
@@ -39,4 +41,10 @@ metadata:
 
 ---
 
-Dieses integrierte Modul prüft in regelmässigen Abständen auf Updates und versendet eine Email an die konfigurierbare Email-Adresse.
+[doc-callout type="note" title="Früheres Kampagnenmodul"]
+Für einen aktuellen Shop wählst du den Flow unter [Automatisierung](/mailbeez). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
+
+Lass dich vom früheren Updatedienst über neue Module oder Versionen informieren. Bleibt eine erwartete Meldung aus, prüfe die regelmäßige Verarbeitung und das Postfach für Benachrichtigungen.
+
+Notiere beim Lesen des Updatehinweises die installierte Version. Mit dieser Angabe findest du in den Versionshinweisen die Änderungen, die deinen Shop betreffen.

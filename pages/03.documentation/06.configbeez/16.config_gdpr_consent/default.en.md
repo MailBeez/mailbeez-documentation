@@ -1,5 +1,6 @@
 ---
-title: GDPR Consent
+title: "Consent"
+module_subtitle: "Manage customer consent"
 slug: config_gdpr_consent
 # menu: Antispam Regeln
 date: 24-05-2018
@@ -20,7 +21,7 @@ taxonomy:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Manage customer consent"]
 module:
     code: 'config_gdpr_consent'
     category: [configbeez]
@@ -44,78 +45,24 @@ metadata:
 #  last_modified: true
 ---
 
+A tea shop offers news about seasonal blends and, separately, asks buyers to review their orders. A subscriber should be able to recognize which messages they agreed to receive. A consent type gives that choice a name that your forms and MailBeez modules can use.
 
-The GDPR Consent module allows you to comply with requirements for custom consents, which might be necessary in some regions.
+## Connect a consent type to its use
 
+Open **System → Extensions → Add-ons → Consent and blocking** and select **Manage customer consent**.
 
-All consent activites of customers are logged. The log-data can be accessed using the [GDPR Export System](/documentation/configbeez/config_gdpr_export).
+[doc-steps]
 
+[doc-step]
+**Name the choice**
 
-## Configuration of GDPR consent types
+Choose **Edit types**. Give the consent a name that matches the wording on your form and enter its translations. Creating the type makes it available to your forms. The shopper records their choice through the connected signup or consent process.
+[/doc-step]
 
-In `MailBeez > Configuration > GDPR Consent` you can edit the types of GDPR consents. By default you will find a consent for Store ratings and a consent for product ratings.
+[doc-step]
+**Check which module requires it**
 
-![Screen_gambio_consent_types.en.png](Screen_gambio_consent_types.en.png)
+Where available, open **Assign consents** and check which type the review invitation requires. Use a test address to complete the actual form and compare the recorded choice with the wording you accepted. For newsletter signup, see [Signup and confirmation](/contacts/signup-confirmation).
+[/doc-step]
 
-
-In `MailBeez > Filter & Helpers > GDPR Consent Check` you can configure for each module, which consent must be given in order to send an email.
-
-![Screen_gambio_consent_check.en.png](Screen_gambio_consent_check.en.png)
-
-
-### Consent form integration
-
-The order confirmation page is a great place to ask the customer for consent to follow up. You can place a button there, which links to the consent confirmation page.
-
-The following screenshot shows an example who to integrate the configuration page using an iframe into a lightbox popup:
-
-![Screen_gambio_configuration.en.png](Screen_gambio_configuration.en.png)
-
-The following code example shows how to generate the URL to the configuration page
-
-    include_once(<YOUR_PATH> . 'mailhive/configbeez/config_gdpr_consent/includes/inc.gdpr_consent.php');
-    
-    $template_cfg = 'myPage'; // /mailhive/configbeez/config_gdpr_consent/views/consent/templates/myPage.tpl.html
-    $tmpl_vars = array('mySetting' => 'Hey'); // can be used as {$mySetting} in myPage
-    $set_consent_type_id = 1; // with visiting the url this consent is automatically given and stored - use with care!
-
-    $url = mh_gdpr_render_configuration::get_consent_configuration_url(array(
-        'customer_id' => $customer_id,
-        'email_address' => $email_address,
-        'cfg_template' => $template_cfg,
-        'cfg_data' => $tmpl_vars,
-        'set_consent_type_id' => $set_consent_type_id));
-
-
-
-Check if consent is missing
-
-    if (mh_gdpr_consent::checkMissingConsent($customer_id)) {
-        // at least one consent is missing
-        // output button
-    }
-
-
-
-
-
-### Custom configuration page
-
-The default template file is located in
-
-    /mailhive/configbeez/config_gdpr_consent/views/consent/templates/default_consent_configuration.tpl.html
-
-This file will be overwritten (as with all `default_` files ) with any MailBeez update. For creating a custom template please copy this file and rename to `consent_configuration.tpl.html` by removing the `default_` prefix
-
-You find more information how to customize this template in the template code.
-
-
-
-### Email Template Placeholder
-
-The placeholder
-
-`[[$gdpr_configuration]]`
-
-returns the custom url linking to the configuration page of the current customer.
-
+[/doc-steps]

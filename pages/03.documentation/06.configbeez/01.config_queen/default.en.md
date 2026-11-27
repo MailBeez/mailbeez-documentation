@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Basic Configuration
+title: "Core Settings"
+module_subtitle: "Choose which order statuses count towards reported revenue"
 slug: config_queen
 routes:
     aliases:
@@ -40,16 +41,15 @@ metadata:
 #  last_modified: true
 ---
 
-This module represents the core of the MailBeez System.
+Choose which order statuses count towards reported revenue. If a cancelled order should drop out of the total, leave the cancelled status out of the selection. Two shops can report different revenue for the same orders if they count different statuses.
 
-Here you can configure the core functionality of MailBeez - have a look to see the options.
+Open **System → Configuration** and select **Core Settings**.
 
-#### Updating MailBeez
+Check the options for manual runs here as well.
 
-A new version of this module means: there is a new MailBeez Release!
+<span id="settings-to-check"></span>
 
-**Version 3+**: please click on the update notification and follow the instructions
+## Which orders count as revenue?
 
-**below Version 3**: please download the quickstart package and follow the included update instructions.
-
-
+- **Valid revenue order statuses**<br>
+  Choose at least one status for valid revenue orders. Include cancelled or refunded orders only if they should count. Partial refunds are not automatically deducted.

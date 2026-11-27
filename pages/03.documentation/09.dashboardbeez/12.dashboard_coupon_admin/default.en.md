@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: The Coupon Search Widget
+title: "Coupon search"
+module_subtitle: "Find a generated coupon in the earlier dashboard"
 slug: dashboard_coupon_admin
 # menu: The Coupon Search Widget
 date: 17-10-2012
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro,coupon]
+    tag: [pro,coupon, "The Coupon Search Widget"]
 # added collection selector
 
 author:
@@ -36,11 +37,10 @@ metadata:
 #  last_modified: true
 ---
 
-This widget is part of the [Coupon Engine](/documentation/configbeez/config_coupon_engine) and allows you to find coupons.
+[doc-callout type="note" title="Earlier MailBeez versions"]
+To look up a generated coupon code in V5, open [Coupons](/content/coupons). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-Just enter the Coupon Code you want to find and the system will show you all matching entries with a link to edit the connected coupon.
+Enter the issued coupon code in the older Coupon Engine widget and open its matching record. To look up a code in V5, open **Content → Coupons → Generated**. See [Coupons](/content/coupons) for templates and batches.
 
-
-With a search for `template_` you can easliy find all template coupons and edit them.
-
-
+Ask for the code the customer actually received. A template name identifies the offer, while the issued code lets you find that individual coupon.

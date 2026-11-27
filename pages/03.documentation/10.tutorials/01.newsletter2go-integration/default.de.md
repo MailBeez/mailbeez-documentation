@@ -2,6 +2,7 @@
 # http://learn.getgrav.org/content/headers
 title: Newsletter2Go Integration
 slug: newsletter2go-integration-mailbeez
+original_v4: true
 published: true
 template: tutorial
 
@@ -16,123 +17,58 @@ taxonomy:
     tag: [ce]
 ---
 
-[TOC]
+[doc-callout type="note" title="Frühere Integration"]
+Für Aussendungen aus V5 nutze die [Newsletter-Anleitung](/mailbeez/newsletter). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-## Funktionsumfang
-MailBeez enthält eine leistungsfähige Integration mit Newsletter2Go, welche dem Shopbetreiber alle Freiheiten für ein professionelles Email Marketing eröffnet.
+<span id="funktionsumfang"></span><span id="mgliche-szenarien"></span>Prüfe vor einer Änderung an Empfängern oder Inhalt, wo die frühere Aussendung erstellt wurde. Die bestehende Newsletter2Go-Anbindung konnte eine MailBeez-Aussendung zustellen oder Shopdaten für einen in Newsletter2Go erstellten Newsletter liefern.
 
+- <span id="aus-sicht-von-mail-beez"></span>**Aussendung in MailBeez vorbereitet**<br>
+  MailBeez erzeugte die E-Mail und übergab sie zum Versand an Newsletter2Go. Die Anbindung verarbeitete Rückläufermeldungen.
+- <span id="aus-sicht-von-newsletter2go"></span>**Aussendung in Newsletter2Go vorbereitet**<br>
+  Die Anbindung stellte Empfänger- und Produktdaten aus dem Shop bereit und übergab Abmeldungen an MailBeez. Beide Arbeitsweisen ließen sich kombinieren.
 
+## Shop verbinden
 
-###Aus Sicht von MailBeez
-Emails werden in MailBeez erstellt, generiert und dann zum Versand an Newsletter2Go übergeben:
-
-- **Email Versand**  
-  alle von MailBeez generierten Emails werden über eine Schnittstelle zum sofortigen Versand an Newsletter2Go übergeben. Hierdurch werden bestmögliche Zustellraten erzielt.
-- **Bounce-Handling**  
-  Rückläufer aufgrund ungültiger Email-Adressen werden vom Newsletter2Go-System verarbeitet und über eine Schnittstelle an MailBeez zurückgemeldet, so dass diese Email-Adressen in Zukunft ausgeschlossen werden.
-  
-  
-###Aus Sicht von Newsletter2Go
-Alle Email-Adressen aus dem Shop können nach Newsletter2Go importiert werden. Dort werden Newsletter erstellt und versendet:
-
-- **Empfänger-Import**  
-  Die Email-Adressen aller Kunden im Shop werden an Newsletter2Go übergeben
-- **Abmeldungen**  
-  Klick auf Abmelde-Links in Newsletter2Go Emails werden an MailBeez zurückgemeldet
-- **Produkt-Information**  
-  Der Produkt-Assistent im Newsletter2Go Editor kann alle Produkt-Informationen aus dem Shop einlesen.
-
-
-##Mögliche Szenarien
-
-1. **Newsletter in Newsletter2Go erstellen und versenden**  
-  Hierbei nutzt Newsletter2Go die Schnittstelle zum Empfänger-Import & Einlesen von Produkt-Informationen aus dem Shop-System heraus.
-1. **Automatik-Emails und Newsletter in MailBeez erstellen und über Newsletter2Go versenden**  
-  Hierbei übergibt MailBeez die generierten Emails an Newsletter2Go zum Versand mit bestmöglichen Zustellraten. Ungültige Email-Adressen werden in MailBeez markiert.
-1. **Kombination aus 1. & 2.**  
-   Traditionelle Newsletter werden in Newsletter2Go erstellt und versendet, während MailBeez z.B. Emails zur Bitte um Produktbewertung generiert.
-
-##Einrichtung der Integration
-
-### 1. MailBeez installieren
-Fall Sie noch nicht MailBeez installiert haben, bitte zunächst das kostenlose Grundsystem installieren.
-
-Folgen Sie hierzu der Installationsanleitung für Ihr Shopsystem.
-
-Die mit <b class='label label-integrated'></b> markierten Shop-Systeme haben **MailBeez bereits vorintegriert**, hier ist die Grundinstallation mit wenigen Klicks erledigt.
+1. <span id="einrichtung-der-integration"></span><span id="1-mail-beez-installieren"></span>Öffne die [Installationsanleitung für deine Shopversion](/grundlagen/installation). Bei einigen Gambio-Versionen war die Integration bereits enthalten.
+2. Öffne in der älteren MailBeez-Oberfläche **MailBeez → Konfiguration → Email System** und verbinde das Newsletter2Go-Konto. Die hier beschriebene Integration setzte mindestens den damaligen Standard-Tarif voraus.
+3. Erlaube die Verbindung im Anbieterkonto und kontrolliere dort den Integrationsstatus. Lade die MailBeez-Konfiguration erneut und prüfe auch den Status auf Shopseite.
 
 [doc-accordion independent=true open=none]
-[doc-accordion-item title="Gambio 3.x (integriert)"]
-Dank der Vorintegration von MailBeez in Gambio 3.x kann das kostenlose Grundsystem mit wenigen Klicks installiert werden. 
-
-Hierzu bitte unter `Module > Modul-Center` die Integration `MailBeez` aktivieren und dann über den neuen Menüpunkt `MailBeez` das Grundsystem installieren.
-
+[doc-accordion-item title="Gambio GX 3.x"]
+Die Aktivierung für diese Shopversion beschreibt [Gambio GX 3.x](/grundlagen/installation/basic-installation-gambio-gx-3).
 [/doc-accordion-item]
-[doc-accordion-item title="Gambio 2.5+ (integriert)"]
-
-Dank der Vorintegration von MailBeez in Gambio 2.5+ kann das kostenlose Grundsystem mit wenigen Klicks installiert werden. 
-
-Hierzu bitte unter `Module > Modul-Center` die Integration `MailBeez` aktivieren und dann über den neuen Menüpunkt `MailBeez` das Grundsystem installieren.
-
+[doc-accordion-item title="Gambio GX 2.5+"]
+Die Aktivierung für diese Shopversion beschreibt [Gambio GX 2.5+](/grundlagen/installation/basic-installation-gambio-gx-25).
 [/doc-accordion-item]
-[doc-accordion-item title="Gambio 2.3+ (integriert)"]
-Dank der Vorintegration von MailBeez in Gambio 2.3+ kann das kostenlose Grundsystem mit wenigen Klicks installiert werden. 
-
-Hierzu bitte in der Gambio Administration auf den Menüpunkt `MailBeez` klicken, um das Grundsystem zu installieren
-
+[doc-accordion-item title="Gambio GX 2.3+"]
+Die Aktivierung für diese Shopversion beschreibt [Gambio GX 2.3+](/grundlagen/installation/basic-installation-gambio-gx-23).
 [/doc-accordion-item]
-[doc-accordion-item title="Gambiocloud.de (integriert)"]
-Dank der Vorintegration von MailBeez in [Gambiocloud.de](https://gambiocloud.de) kann das kostenlose Grundsystem mit wenigen Klicks installiert werden. 
-
-Hierzu bitte unter `Module > Modul-Center` die Integration `MailBeez` aktivieren und dann über den neuen Menüpunkt `MailBeez` das Grundsystem installieren.
-
+[doc-accordion-item title="Gambiocloud.de"]
+Die Aktivierung für diese Shopversion beschreibt [Gambiocloud.de](/grundlagen/installation/basic-installation-gambiocloud).
 [/doc-accordion-item]
-[doc-accordion-item title="Gambio 2.x"]
-Bitte der Anleitung zur [Installation von MailBeez auf Gambio 2.x](/dokumentation/installation/basic-installation-gambio-gx-2) folgen.
-
+[doc-accordion-item title="Gambio GX 2.x"]
+Die Aktivierung für diese Shopversion beschreibt [Gambio GX 2.x](/grundlagen/installation/basic-installation-gambio-gx-2).
 [/doc-accordion-item]
-[doc-accordion-item title="Gambio 1.x"]
-Bitte der Anleitung zur [Installation von MailBeez auf Gambio 1.x](/dokumentation/installation/basic-installation-gambio) folgen.
-
+[doc-accordion-item title="Gambio GX 1.x"]
+Die Aktivierung für diese Shopversion beschreibt [Gambio GX 1.x](/grundlagen/installation/basic-installation-gambio).
 [/doc-accordion-item]
-[doc-accordion-item title="Modified-Shop 2.x"]
-Bitte der Anleitung zur [Installation von MailBeez auf Modified-Shop 2.x](/dokumentation/installation/basic-installation-modified-shop-2) mittels des passenden updatesicheren Integrations-Pakets folgen.
-
+[doc-accordion-item title="modified-shop 2.x/3.x"]
+Die Aktivierung für diese Shopversion beschreibt [modified-shop 2.x/3.x](/grundlagen/installation/basic-installation-modified-shop-2).
 [/doc-accordion-item]
-[doc-accordion-item title="Modified-Shop 1.x"]
-Bitte der Anleitung zur [Installation von MailBeez auf Modified-Shop 1.x](/dokumentation/installation/basic-installation-modified-shop) folgen.
-
+[doc-accordion-item title="modified-shop 1.0x"]
+Die Aktivierung für diese Shopversion beschreibt [modified-shop 1.0x](/grundlagen/installation/basic-installation-modified-shop).
 [/doc-accordion-item]
-[doc-accordion-item title="Zen-Cart-pro.at (integriert)"]
-Dank der Vorintegration von MailBeez in Zen-Cart-pro.at kann das kostenlose Grundsystem unter `Admin > Tools > MailBeez` per Button-Klick installiert werden.
-
+[doc-accordion-item title="Zen-Cart-pro.at"]
+Die Aktivierung für diese Shopversion beschreibt [Zen-Cart-pro.at](/grundlagen/installation/basic-installation-zen-cart-pro-at).
 [/doc-accordion-item]
-[doc-accordion-item title="ZenCart"]
-Bitte der Anleitung zur [Installation von MailBeez auf ZenCart](/dokumentation/installation/basic-installation-zen-cart-1-5-x) folgen.
-
+[doc-accordion-item title="Zen Cart 1.5.x"]
+Die Aktivierung für diese Shopversion beschreibt [Zen Cart 1.5.x](/grundlagen/installation/basic-installation-zen-cart-1-5-x).
 [/doc-accordion-item]
 [doc-accordion-item title="osCommerce 2.3.x"]
-Bitte der Anleitung zur [Installation von MailBeez auf osCommerce 2.3+](/dokumentation/installation/oscommerce-2-3-x) folgen.
-
+Die Aktivierung für diese Shopversion beschreibt [osCommerce 2.3.x](/grundlagen/installation/oscommerce-2-3-x).
 [/doc-accordion-item]
 [doc-accordion-item title="osCommerce 2.2"]
-Bitte der Anleitung zur [Installation von MailBeez auf osCommerce 2.2](/dokumentation/installation/basic-installation-oscommerce) folgen.
-
+Die Aktivierung für diese Shopversion beschreibt [osCommerce 2.2](/grundlagen/installation/basic-installation-oscommerce).
 [/doc-accordion-item]
 [/doc-accordion]
-
-### 2. Verbindung herstellen
-Im MailBeez System unter `MailBeez > Konfiguration > Email System` den Button zur Verbindung mit Newsletter2Go (mindestens Standard-Tarif) anklicken.
-
-Falls Sie bereits ein Konto bei Newsletter2Go haben, bitte einloggen und den Zugriff zulassen.
-
-Falls Sie noch nicht Newsletter2Go nutzen, bitte in dem Dialog die Registrierung vornehmen und den Standard-Tarif buchen.
-
-
-### 3. Fertig
-
-Herzlichen Glückwunsch, die Integration von Newsletter2Go und MailBeez ist abgeschlossen!
-
-Das Newsletter2Go System zeigt Ihnen jetzt den Status der Integration an. Wechseln Sie zurück ins MailBeez System, um dort nach erneutem Laden der Seite ebenfalls den Status der Integration zu prüfen.
-
-Falls wider Erwarten Fehler aufgetreten sind, wenden Sie sich bitte an den Support von Newsletter2Go.

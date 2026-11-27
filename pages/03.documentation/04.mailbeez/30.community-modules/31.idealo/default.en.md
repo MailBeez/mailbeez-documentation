@@ -1,5 +1,6 @@
 ---
-title: Idealo
+title: "idealo (Community)"
+module_subtitle: "Invite buyers to rate your store on idealo"
 slug: idealo
 routes:
     default: /documentation/mailbeez/idealo
@@ -18,6 +19,7 @@ taxonomy:
         - docs
     tag:
         - ce
+        - "Idealo"
 module:
     code: 'idealo'
     category: [mailbeez]
@@ -28,8 +30,14 @@ metadata:
     author: admin
 ---
 
-**Get more reviews on Idealo.**
+[doc-callout type="note" title="Earlier campaign module"]
+Choose a flow for a current shop under [Automations](/mailbeez). [Browse the legacy reference](/legacy).
+[/doc-callout]
 
-This simple, free module allows you to ask your customers for reviews on Idealo price comparison and shopping sites.
+The earlier Community module invites a buyer to rate your shop on idealo. Use the review destination for your own shop. Open it from a test invitation before enabling automated requests.
 
-The [Idealo Advanced Module](/documentation/mailbeez/idealo_advanced/) allows you to works smarter, e.g. configure multiple order status, responsive emails and recognition repeated orders.
+The buyer is being asked to rate the retailer. Mention the purchase or delivery experience so they know what kind of feedback belongs on idealo.
+
+Choose the order status that starts the wait and allow enough time for delivery.
+
+For the V5 flow, see [Ask for reviews on idealo](/mailbeez/idealo_advanced).

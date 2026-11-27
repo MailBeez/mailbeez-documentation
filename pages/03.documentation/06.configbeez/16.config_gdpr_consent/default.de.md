@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: DSGVO Einwilligungen
+title: "Einwilligungen"
+module_subtitle: "Einwilligungen verwalten"
 slug: config_gdpr_consent
 # menu: Antispam Regeln
 date: 24-05-2018
@@ -16,7 +17,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Einwilligungen verwalten"]
 module:
     code: 'config_gdpr_consent'
     category: [configbeez]
@@ -42,112 +43,24 @@ metadata:
 #  last_modified: true
 ---
 
+Ein Teeshop bietet Neuigkeiten zu saisonalen Mischungen an und bittet Käufer gelegentlich um eine Bewertung. Wer sich anmeldet, soll erkennen können, welchen E-Mails er zustimmt. Über die Einwilligungsart lässt sich diese Auswahl im Formular und im jeweiligen MailBeez-Modul wiederfinden.
 
-Mit dieser Erweiterung können Sie flexibel Ihre eigenen Anforderungen an die Einholung und Verwendung von DSGVO Einwilligungen umsetzen. Welche Einwilligungen Sie für erforderlich halten, hängt von der Interpretation der Gesetzgebung ab.
+## Eine Einwilligung ihrem Zweck zuordnen
 
+Öffne **System → Erweiterungen → Zusatzmodule → Einwilligungen und Sperren** und wähle **Einwilligungen verwalten**.
 
-Alle Einwilligungs-Aktionen des Kunden werden protokolliert und können über das [DSGVO Export System](/dokumentation/configbeez/config_gdpr_export) belegt werden.
+[doc-steps]
 
-## Konfiguration der DSGVO Einwilligungen
+[doc-step]
+**Die Auswahl benennen**
 
-Unter `MailBeez > Konfiguration > DSGVO Einwilligung` können Sie die Arten der Einwilligungen bearbeiten - standardmässig finden Sie dort bereits eine Einwilligung für Shop-Bewertungen und eine Einwilligung für Produkt-Bewertungen.
+Wähle **Arten bearbeiten**. Benenne die Einwilligung passend zum Wortlaut im Formular und ergänze die Übersetzungen. Damit steht die Art für deine Formulare bereit. Die Zustimmung einer Person wird erst über den angebundenen Anmelde- oder Einwilligungsprozess erfasst.
+[/doc-step]
 
-![Screen_gambio_consent_types.de.png](Screen_gambio_consent_types.de.png)
+[doc-step]
+**Die Zuordnung prüfen**
 
-Unter `MailBeez > Filter & Hilfsmodule > DSGVO Einwilligungs-Prüfung` können Sie dann je Email-Modul konfigurieren, welche DSGVO Einwilligung vorhanden sein muss:
+Öffne, sofern verfügbar, **Einwilligungen zuordnen** und prüfe, welche Einwilligung die Bewertungseinladung voraussetzt. Fülle das Formular mit einer Testadresse aus und vergleiche den Eintrag mit der Auswahl im Formular. Für Newsletter hilft dir die Anleitung zur [Anmeldung und Bestätigung](/contacts/signup-confirmation).
+[/doc-step]
 
-![Screen_gambio_consent_check.de.png](Screen_gambio_consent_check.de.png)
-
-
-## Integration der Abfrage zur Einwilligung
-
-### Gambio GX4
-
-In Gambio GX4 ist die Abfrage bereits vorintegriert.
-
-### Gambio GX3
-
-#### Installation des Overloads
-Die Integration zur Abfrage von Einwilligungen in die Checkout-Success Seite erfolgt mittels Update-sicherem Overload.
-
-Bitte die [Overload Datei downloaden](https://mailbeez-support.com/cloudfiles/integrations/GDPR/gambio/MailBeezGdprConsentCheckoutSuccessExtender.txt), die Endung von `.txt` nach `.php` ändern und im Gambio System per FTP unter
-
-    /system/overloads/CheckoutSuccessExtenderComponent/MailBeezGdprConsentCheckoutSuccessExtender.php
-
-hochladen.
-
-
-Unter `Toolbox > Cache > Cache für Modulinformationen leeren` ausführen - danach wird dann die Abfrage zur Einwilligung auf der Checkout-Success Seite eingebunden:
-
-![Screen_gambio_integration.de.png](Screen_gambio_integration.de.png)
-
-Die Abfrage wird nur eingebunden, falls der Kunde noch nicht alle Einwilligungen gegeben hat.
-
-
-Mit Klick auf den Button öffnet sich der Konfigurations-Dialog
-
-![Screen_gambio_configuration.de.png](Screen_gambio_configuration.de.png)
-
-
-
-#### Anpassung der Abfrage-Integration
-
-
-Die Standard-Vorlage für die Einbindung auf der CheckoutSuccess Seite finden Sie unter:
-
-    /mailhive/configbeez/config_gdpr_consent/views/shop_integration/templates/default_gambio_checkoutsuccess.tpl.html
-
-Diese Datei wird - wie alle `default_` Dateien im MailBeez System - bei Updates überschrieben. Um eine eigene Vorlage anzulegen, bitte die Datei kopieren und den Prefix `default_` entfernen. Im Quellcode der Datei finden Sie weitere Hinweise zur Anpassung.
-
-Um die Sprach-Konstanten anzupassen, bitte eine eigene Vorlage anlegen und den Pfad zu eigenen Sprach-Dateien ändern.
-
-
-### Anpassung der Konfigurations-Seite
-
-Die Standard-Vorlage für die Seite zur Konfiguration der Einwilligungen finden Sie unter:
-
-    /mailhive/configbeez/config_gdpr_consent/views/consent/templates/default_consent_configuration.tpl.html
-
-Diese Datei wird - wie alle `default_` Dateien im MailBeez System - bei Updates überschrieben. Um eine eigene Vorlage anzulegen, bitte die Datei kopieren und den Prefix `default_` entfernen. Im Quellcode der Datei finden Sie weitere Hinweise zur Anpassung.
-
-Um die Sprach-Konstanten anzupassen, bitte eine eigene Vorlage anlegen und den Pfad zu eigenen Sprach-Dateien ändern.
-
-
-
-### Link zur Einwilligungs-Seite in MailBeez Emails
-
-Sie können mit Hilfe des Platzhalters
-
-`[[$gdpr_configuration]]`
-
- einen Link zur DSGVO Konfigurations-Seite des jeweiligen Kunden in MailBeez Emails einbinden. Mit Klick auf den Link gelangt der Kunde dann direkt zur Konfigurations-Seite.
-
-
-
-### Eigene Einbindungen
-
-der URL zur Konfigurations-Seite kann wie folgt personalisiert im PHP Code generiert werden:
-
-    include_once(<YOUR_PATH> . 'mailhive/configbeez/config_gdpr_consent/includes/inc.gdpr_consent.php');
-
-    $template_cfg = 'myPage'; // /mailhive/configbeez/config_gdpr_consent/views/consent/templates/myPage.tpl.html
-    $tmpl_vars = array('mySetting' => 'Hey'); // can be used as {$mySetting} in myPage
-    $set_consent_type_id = 1; // with visiting the url this consent is automatically given and stored - use with care!
-
-    $url = mh_gdpr_render_configuration::get_consent_configuration_url(array(
-        'customer_id' => $customer_id,
-        'email_address' => $email_address,
-        'cfg_template' => $template_cfg,
-        'cfg_data' => $tmpl_vars,
-        'set_consent_type_id' => $set_consent_type_id));
-
-
-
-Mit folgender Logik können Sie prüfen, ob es nicht erteilte Einwilligungen gibt:
-
-    if (mh_gdpr_consent::checkMissingConsent($customer_id)) {
-        // at least one consent is missing
-        // output button
-    }
-
-
+[/doc-steps]

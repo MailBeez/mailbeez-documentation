@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: "Service: Datenbank Optimierung"
+title: "Datenbankoptimierung"
+module_subtitle: "Die Optimierung der vom Dienst verwalteten Datenbanktabellen planen"
 slug: service_db_optimize
 routes:
     default: /dokumentation/mailbeez/service_db_optimize
@@ -19,7 +20,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [ce]
+    tag: [ce, "Service: Datenbank Optimierung"]
 module:
     code: 'service_db_optimize'
     category: [mailbeez]
@@ -51,11 +52,10 @@ metadata:
 #  last_modified: true
 ---
 
-Dieses MailBeez Service Modul optimiert regelmässig die Shop-Datenbank und schickt Ihnen eine Email mit dem Ergebnis.
+[doc-callout type="note" title="Früheres Kampagnenmodul"]
+Für einen aktuellen Shop wählst du den Flow unter [Automatisierung](/mailbeez). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Wählbare Optimierungsintervalle sind
+Plane die Tabellenoptimierung des früheren Datenbankdienstes täglich, wöchentlich oder monatlich. Prüfe nach dem Lauf die E-Mail mit dem Ergebnis, bevor du das Intervall änderst.
 
-- täglich
-- wöchentlich
-- monatlich
-
+Wähle einen Zeitraum, in dem im Shop gewöhnlich wenig los ist. Kennt dein Team den Rhythmus, kann es reguläre Wartungsläufe im Protokoll leichter einordnen.

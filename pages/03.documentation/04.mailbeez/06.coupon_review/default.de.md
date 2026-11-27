@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: Gutschein für Bewertungen
+module_subtitle: "Eine erfasste Produktbewertung mit einem persönlichen Gutschein belohnen"
 slug: coupon_review
 routes:
     aliases:
@@ -52,13 +53,16 @@ metadata:
 #  last_modified: true
 ---
 
-**Bedanken Sie sich beim Kunden für das Abgeben von Produktbewertungen**
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Gutscheine](/content/coupons) einen erzeugten Gutscheincode nachschlagen. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Produktbewertungen sind für Online-Shops (nahezu) Gold wert! Statistiken zeigen, dass eine grosse Anzahl von Bewertungen den Umsatz steigern.
+Bedanke dich für eine erfasste Produktbewertung mit einem persönlichen Gutschein. Die Bewertung muss zuerst im Shop vorliegen, damit sie für die Prämie zählt.
 
-**Personaliserte Gutscheine schützen vor ungewünschter Verbreitung**
+1. Richte [Um Produktbewertungen bitten](/mailbeez/review_advanced) ein, damit die Bewertung erfasst wird.
+2. Lege fest, nach wie vielen Bewertungen ein Kunde einen Gutschein erhalten soll. Wähle das Angebot und prüfe den Gutscheinwert.
+3. Prüfe in der Vorschau, ob Angebot und persönlicher Code gemeinsam in der E-Mail erscheinen.
 
 [plugin:content-inject](/content_blocks/pro_coupon)
 
 [plugin:content-inject](/content_blocks/pro_responsive_template)
-

@@ -1,5 +1,6 @@
 ---
-title: 'Run MailBeez automatically'
+title: "Send on shop visits"
+module_subtitle: "Start sending when someone visits the store"
 slug: config_cron_simple
 date: 05-07-2011
 published: true
@@ -14,7 +15,7 @@ taxonomy:
     migration_status: done
     category:
         - docs
-    tag: [pro]
+    tag: [pro, "Start sending when someone visits the store"]
 module:
     code: config_cron_simple
     category:
@@ -42,122 +43,24 @@ metadata:
     author: admin
 ---
 
-> [!NOTE]
-> A "real" Cronjob is the most reliable way to automize MailBeez. This module is a simple alternative solution.
+Your yarn shop has a few visitors overnight. A knitting-kit review invitation becomes due at 7 a.m., but the first customer opens the shop at noon. If visits start processing, the invitation can wait until noon. This option suits a shop that can tolerate that variation.
 
- 
+## Decide how long a run can wait
 
-## About This Module
+Open **System → Extensions → Add-ons → Sending and scheduling** and select **Start sending when someone visits the store**.
 
-With this simple Mailbeez add-on, you can do away with the need to configure a cronjob to activate your Mailbeez installed modules. Instead, the plugin cleverly utilizes your store’s traffic to trigger Mailbeez as often as you have configured it to run. For site owners looking to get up and running quickly, or who do not wish to enter the server environment to setup a Cronjob, this is a very handy feature.
+[doc-steps]
 
-## Lightweight and fast
+[doc-step]
+**Set the minimum interval**
 
-Thanks to time stamp based caching technology, the additional load added to your store’s pages by the add-on is extremely small. In fact, with the aid of modern AJAX technology, visitors to your store will not feel or notice any difference, as the add-on only triggers MailBeez after a page has loaded completely.
+The storefront integration must be active. Set **Minimum interval between visit-triggered runs (hours)**. With a two-hour interval, another visit ten minutes after a run cannot start the next one.
+[/doc-step]
 
+[doc-step]
+**Compare the run time with the next visit**
 
-## Installation
+Once the interval has passed, an eligible visit can start processing. If a reminder needs to go out early even when the shop is quiet, set up a server cron job under [Automatic processing](/configbeez/automatic-processing).
+[/doc-step]
 
-> [!NOTE]
-> [content-inject path="/content_blocks/hint_preintegration" /]
-
-
-####osCommerce
-Edit `<store-root>/includes/footer.php` as follows: At the end of the file, but before the closing `?>` tag, insert the following code:
-
-```PHP
-// MailBeez
-if (defined('MAILBEEZ_CRON_SIMPLE_STATUS') && MAILBEEZ_CRON_SIMPLE_STATUS == 'True') {
-    require_once(DIR_FS_CATALOG . 'mailhive/configbeez/config_cron_simple/includes/cron_simple_inc.php');
-}
-// - MailBeez
-
-```
-To avoid "/mailhive.php?cron_simple=1" page calls in the 'who is online' table, edit `<store-root>/includes/functions/whos_online.php` as follows:
-
-
-find
-```php
-$wo_last_page_url = getenv('REQUEST_URI');
-```
-
-after the above code is located, insert this after it:
-
-```php
-// MailBeez
-// avoid /mailhive.php?cron_simple=1 in who is online table
-if (preg_match("/mailhive.php/", $wo_last_page_url)) {
-   return false;
-}
-// - MailBeez
-``` 
-
-
-####Zencart
-Edit `<store-root>/includes/modules/footer.php` as follows: At the end of the file, but before the closing `?>` tag, insert the following code:
-
-```PHP
-// MailBeez
-if (defined('MAILBEEZ_CRON_SIMPLE_STATUS') && MAILBEEZ_CRON_SIMPLE_STATUS == 'True') {
-    require_once(DIR_FS_CATALOG . 'mailhive/configbeez/config_cron_simple/includes/cron_simple_inc.php');
-}
-// - MailBeez
-
-```
-
-To avoid "/mailhive.php?cron_simple=1" page calls in the 'who is online' table, edit `<store-root>/includes/functions/whos_online.php` as follows:
-
-
-Find the line containing
-```php
-$wo_last_page_url = (...)');
-```
-
-after the above code is located, insert this after it:
-
-```php
-// MailBeez
-// avoid /mailhive.php?cron_simple=1 in who is online table
-if (preg_match("/mailhive.php/", $wo_last_page_url)) {
-   return false;
-}
-// - MailBeez
-``` 
-
-
-
-
-####Gambio 2.x, Modified-Shop 1.x
-
-Edit `includes/application_bottom.php` as follows: Find the line contain
-
-`echo '</body></html>';`
-
-and above this line insert following code:
-```php
-// MailBeez
-if (defined('MAILBEEZ_CRON_SIMPLE_STATUS') && MAILBEEZ_CRON_SIMPLE_STATUS == 'True') {
-    require_once(DIR_FS_CATALOG . 'mailhive/configbeez/config_cron_simple/includes/cron_simple_inc.php');
-}
-// - MailBeez
-```
-
-To avoid "/mailhive.php?cron_simple=1" page calls in the 'who is online' table, edit `inc/xtc_update_whos_online.inc.php` as follows:
-
-Find
-
-```php
-$wo_last_page_url = addslashes(getenv('REQUEST_URI'));
-```
-
-and insert after this line:
-
-```php
-// MailBeez
-// avoid /mailhive.php?cron_simple=1 in who is online table
-if (preg_match("/mailhive.php/", $wo_last_page_url)) {
-   return false;
-}
-// - MailBeez
-```
-
+[/doc-steps]

@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Ausgezeichnet.org
+title: "AUSGEZEICHNET.org (Community)"
+module_subtitle: "Käufer zu einer Shopbewertung auf AUSGEZEICHNET.org einladen"
 slug: ausgezeichnet
 routes:
     default: /dokumentation/mailbeez/ausgezeichnet
@@ -17,7 +18,7 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [ce]
+    tag: [ce, "Ausgezeichnet.org"]
 module:
     code: 'ausgezeichnet'
     category: [mailbeez]
@@ -32,8 +33,14 @@ metadata:
 
 ---
 
-**mehr Bewertungen auf Ausgezeichnet.org**
+[doc-callout type="note" title="Früheres Kampagnenmodul"]
+Für einen aktuellen Shop wählst du den Flow unter [Automatisierung](/mailbeez). [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
-Mit diesem einfachen, kostenlosen Modul können Sie Ihre Kunden automatisiert um die Abgabe einer Bewertung auf Ausgezeichnet.org bitten.
+Das frühere Community-Modul lädt Käufer zur Shopbewertung bei AUSGEZEICHNET.org ein. Verwende das Bewertungsziel deines Shops und öffne es aus einer Testeinladung, bevor du den automatischen Versand aktivierst.
 
-Die [Ausgezeichnet.org Profi Version](/dokumentation/mailbeez/ausgezeichnet_advanced/) erlaubt es Ihnen, u.A. mehrere Bestell-Status zu konfigurieren, mit Responsive Email-Vorlagen die Darstellung auf Mobilen Geräten zu verbessern und Stamm-Kunden zu erkennen.
+Teste den Link in einer zugestellten Nachricht. Käufer sollten die Bewertungsseite deines Shops auch dann erreichen, wenn sie im Shop abgemeldet sind.
+
+Wähle den Bestellstatus für den Start der Wartezeit und plane genügend Zeit für die Lieferung ein.
+
+Den V5-Flow beschreibt [Um Bewertungen auf AUSGEZEICHNET.org bitten](/mailbeez/ausgezeichnet_advanced).

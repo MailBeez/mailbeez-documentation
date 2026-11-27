@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="24" viewBox="0 0 48 24">
+<defs><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" id="module-art" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5a7.5 7.5 0 1115 0"/><path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0h3m-3 0h-3"/></svg></defs>
+<g transform="translate(0 0)"><rect width="24" height="24" rx="6" fill="color-mix(in oklab, oklch(71.8% 0.202 349.761) 70%, transparent)"/><g><use xlink:href="#module-art" x="4" y="4" color="#fff" stroke="none"/></g></g>
+<g transform="translate(24 0)"><rect width="24" height="24" rx="6" fill="color-mix(in oklab, oklch(71.8% 0.202 349.761) 70%, transparent)"/><g><use xlink:href="#module-art" x="4" y="4" color="#fff" stroke="none"/></g></g>
+</svg>

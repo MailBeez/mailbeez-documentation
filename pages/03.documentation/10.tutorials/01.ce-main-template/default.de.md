@@ -2,6 +2,7 @@
 # http://learn.getgrav.org/content/headers
 title: Anpassung der Hauptvorlage
 slug: ce-anpassung-der-hauptvorlage
+original_v4: true
 published: true
 template: docs
 visible: true
@@ -14,12 +15,15 @@ taxonomy:
     category: [docs]
     tag: [ce]
     
--------------
+---
 
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Haupt-Vorlagen](/content/main-templates) den gemeinsamen E-Mail-Rahmen ändern. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
+Für Kopfbereich, Fußzeile oder Logo im früheren Editor folge der Anleitung [Eine Haupt-Vorlage bearbeiten](/tutorials/anpassung-der-hauptvorlage).
 
-Als Nutzer der kostenfreien Grundversion können Sie im
-[Schnelleinstieg, Schritt 3](/dokumentation/grundlagen/schnelleinstieg#schritt-3-gestalten-sie-die-vorlagen-nach-ihren-wunschen) lesen, wie die gemeinsame Hauptvorlage angepasst werden kann.
+Nimm eine E-Mail mit dem gemeinsamen Kopfbereich als Beispiel. Prüfe nach der Änderung zusätzlich eine zweite Kampagne, die dieselbe Vorlage verwendet.
 
 > [!TIP]
 > [content-inject path="/content_blocks/pro_template_manager" /]

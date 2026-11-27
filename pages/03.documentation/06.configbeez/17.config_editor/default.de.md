@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
 title: Editor Konfiguration
+module_subtitle: "Den Editor für E-Mail-Vorlagen in früheren Versionen auswählen"
 slug: config_editor
 routes:
     aliases:
@@ -14,7 +15,7 @@ summary:
     size: 128
 taxonomy:
     migration_status: done
-    category: [configbeez]
+    category: [configbeez, docs]
     compatiblity: [comp_osc,comp_cre,comp_digi,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio,comp_saas]    
     tag: [pro]
 # added collection selector
@@ -25,15 +26,13 @@ metadata:
     author: admin
 ---
 
+[doc-callout type="note" title="Frühere MailBeez-Versionen"]
+In V5 kannst du unter [Haupt-Vorlagen](/content/main-templates) den gemeinsamen E-Mail-Rahmen ändern. [Zur Referenz für ältere Versionen](/legacy).
+[/doc-callout]
 
+Begrenze die Bildauswahl auf den Ordner, den du für E-Mails nutzt. Bei vielen Shopbildern kann die Auswahl dadurch schneller laden.
 
-In diesem Konfigurations-Modul können Sie das Verhalten des visuellen Editors an Ihre Bedürfnisse anpassen.
-
-**Ausgangsverzeichnis für Bilderverwaltung**
-
-Hier können Sie relativ zum Shop-Root den Ausgangs-Pfad für die Bilderverwaltung angeben. In Shops mit sehr vielen Bildern kann der Aufbau der Bilderverwaltung sehr langsam sein, so dass das Setzen eines eigenen Ausgangsverzeichnis sinnvoll sein kann.
-
-
-**Mobil-Editor Breiten**
-
-Diese Angaben nur Ändern, wenn Sie sich über alle Auswirkungen im klaren sind. Insbesondere muss die Email-Vorlage die Breiten-Angaben unterstützen können.
+- **Ausgangsverzeichnis für Bilderverwaltung**<br>
+  Gib einen Pfad relativ zum Shopverzeichnis ein. Öffne anschließend die Bildverwaltung und prüfe, ob die gewünschten Bilder erreichbar sind.
+- **Mobil-Editor Breiten**<br>
+  Lege die Breiten für die Vorschau fest. Wähle Werte, die deine Vorlage unterstützt. Eine andere Vorschaubreite allein passt ein starres Layout nicht an.

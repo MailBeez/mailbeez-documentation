@@ -1,6 +1,7 @@
 ---
 # http://learn.getgrav.org/content/headers
-title: Google Bewertungen Profi
+title: "Google-Bewertungen"
+module_subtitle: "Um Google-Bewertungen bitten"
 slug: googlereviews_advanced
 # menu: Googlereviews Profi
 date:  18-03-2021
@@ -17,9 +18,10 @@ summary:
 taxonomy:
     migration_status: done
     category: [docs]
-    tag: [pro]
+    tag: [pro, "Um Google-Bewertungen bitten"]
     
 module:
+    plans_position: after_guide
     code: 'googlereviews_advanced'
     category: [mailbeez]
     compatiblity: [comp_osc,comp_cre,comp_digi,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio,comp_saas]
@@ -50,29 +52,31 @@ metadata:
 #  last_modified: true
 ---
 
-**So bekommen Sie automatisch echte Bewertungen auf google**
+Eine Floristin liefert am Freitag einen Strauß aus. Am Montag kann die Kundin beurteilen, ob die Blumen pünktlich und frisch angekommen sind. Eine kurze Einladung verlinkt zur Google-Bewertungsseite des Geschäfts. Bei mehreren Filialen lohnt sich ein Blick darauf, welches Unternehmensprofil der Link öffnet.
 
-Voraussetzung: Sie müssen über einen bestätigen Eintrag bei "Google My Business" verfügen, dann können Sie dort Ihre Kurz-URL für Kundenrezensionen finden. Mehr dazu auf <https://support.google.com/business/answer/7035772?hl=de>
+## Flow einrichten
 
+Öffne **Kampagnen → Automatisierung → MailBeez Flows → Um Google-Bewertungen bitten** und wähle **Optionen → Konfigurieren**.
 
-## Profi-Funktionen
+<span id="zeitpunkt-fuer-die-google"></span>
+<span id="diese-einstellungen-sind-"></span>
 
-Die Profi-Version optimiert den Ablaufes zur Bewertungs-Aufforderung:
+[doc-steps]
+[doc-step]
+**Das Google-Profil auswählen**
 
-## Mehrere Bestell Status
+Kopiere den Bewertungslink des richtigen Google-Unternehmensprofils in **Ihre Google Reviews URL**. Öffne ihn auf dem Smartphone und kontrolliere Geschäftsname und Anschrift. Eine allgemeine Kartensuche nach dem Ort kann bei einem anderen Blumenladen landen.
+[/doc-step]
+[doc-step]
+**Die Einladung planen**
 
-Haben Sie verschiedene Status, welche eine Bestellung als "ausgeliefert" kennzeichnet? Kein Problem, markieren Sie einfach alle relevanten Status.
+Wähle unter **Bestell-Status für Bewertungen** den Status für abgeschlossene Zustellungen. Stehen unter **Wartezeit nach dem Statuswechsel** drei Tage, ist die Einladung bei einem Wechsel am Freitag ab Montag fällig. Wann sie verschickt wird, hängt vom nächsten geplanten Lauf ab. Setze **Höchstalter des Statuswechsels** höher als die Wartezeit.
+[/doc-step]
+[doc-step]
+**Regelmäßige Bestellungen berücksichtigen**
 
-## Berücksichtigung von Auslands-Bestellungen
+Lege unter **Mindestabstand zwischen Einladungen** einen Abstand für Kunden fest, die oft Blumen bestellen. **Zusätzliche Wartezeit bei Auslandslieferungen** ergänzt Tage bei Lieferungen ins Ausland. Bedeutet dein auslösender Status bereits „Zugestellt“, prüfe, ob diese zusätzliche Wartezeit nötig ist.
+[/doc-step]
+[/doc-steps]
 
-Der Versand ins Ausland nimmt typisch ein paar Tage länger in Anspruch. Definieren Sie eine Verzögerung für Auslandsbestellungen, damit die Einladungs-Email zur Bewertung nicht vor der Ware ankommt!
-
-Das Modul wird dann eine Verzögerung für Bestellungen mit Lieferung an die Länder hinzufügen, welche von dem im Shop-System als Betreiber-Land konfigurierten Land abweichen.
-
-## Stammkunden Erkennung
-
-Wollen Sie Ihre häufig bestellenden Stammkunden vor eine Bewertungseinladung nach jeder Bestellung beschützen? Definieren Sie einfach, wie viele Tage seit der letzten Einladungs-Email vergangen sein müssen, bevor eine erneute Einladung versendet werden soll.
-
-Das Modul wird dann automatisch prüfen, ob bereits eine neuen Einladung versendet werden kann oder nicht.
-
-[plugin:content-inject](/content_blocks/pro_responsive_template)
+Das Rezept [Bewertungseinladung planen](/kochbuch/optimierter-ablauf-bitte-um-bewertung) führt dich von der Testbestellung bis zur Bewertungsseite.
