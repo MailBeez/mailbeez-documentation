@@ -106,16 +106,12 @@ Erinnere an eine Nachbestellung oder lade Kunden nach einer längeren Kaufpause 
 
 ### Bewertungen & Feedback
 
-Bitte Käufer, ein Produkt oder ihren Einkauf in deinem Shop zu bewerten.
+<span id="bewertungsdienste"></span>Bitte Käufer um eine Produkt- oder Shopbewertung.
+Shopbewertungen kannst du selbst sammeln oder über einen Bewertungsdienst einholen.
 
 [doc-grid columns="2"]
 [doc-link-card href="/de/mailbeez/review_advanced" title="Produktbewertungen" new-tab="false" /]
 [doc-link-card href="/de/mailbeez/shoprating_advanced" title="Shopbewertungen" new-tab="false" /]
-[/doc-grid]
-
-#### Bewertungsdienste
-
-[doc-grid columns="2"]
 [doc-link-card href="/de/mailbeez/ausgezeichnet_advanced" title="AUSGEZEICHNET.org" new-tab="false" /]
 [doc-link-card href="/de/mailbeez/googlereviews_advanced" title="Google-Bewertungen" new-tab="false" /]
 [doc-link-card href="/de/mailbeez/idealo_advanced" title="idealo-Bewertungen" new-tab="false" /]

@@ -9,6 +9,8 @@ Edit the English and German Grav guides on the `V5` branch. Their shared source 
 3. Add the folder identity once under its parent in [navigation.v5.yaml](navigation.v5.yaml). Each entry has a `page` and can contain nested `items`. If the app orders siblings differently in one language, set `before` on the entry with that language code and the sibling’s folder identity. Its children move with it. Update the guide links on the parent page in both languages. A guide can appear under a different sidebar parent while keeping its published URL.
 4. Put cross-product material such as Compatibility and Changelog under Resources. Put installers and extensions without a verified V5 screen under Legacy reference. Keep the shop versions, prerequisites and original procedures with those guides. On a restored tutorial or recipe, set `original_v4: true` in a translation that has a matching V4 article. Helios uses the version catalog to show its original instructions when the archive is available.
 
+Place a ready-made flow in its app category under **Automation → MailBeez Flows**. The group’s `overview_anchor` links to the matching heading on the Automation page in each language. **Custom Flows** has its own guide directly under **Automation**.
+
 For an Automation flow, open with the customer situation, the trigger and the choices that affect the email. Follow with a realistic shop example before the setup steps. Use the exact app flow name in the guide title and instructions. The V5 app defines these names in its language files under `UI_TRIGGER_MODULE_TITLE_*`. Use a matching short label in the sidebar entry and overview card. Check both languages in Helios at desktop and mobile widths. Use `module.plans_position: after_guide` in each translation to show the plan table after the instructions.
 
 For a list of settings, put each exact app label in bold on its own line. Start the explanation on the next line. Use the same layout in both languages.
@@ -21,6 +23,9 @@ For a list of settings, put each exact app label in bold on its own line. Start 
 ## Update hosted platform compatibility
 
 Settings under **System → Configuration** apply to every supported shop system. Helios uses that sidebar branch to omit per-guide platform tables and to show hosted settings as managed by MailBeez Services in the Compatibility resource. Extensions with `/configbeez` URLs follow their own module compatibility data.
+
+To omit the platform table from an individual V5 module guide, set
+`module.show_compatibility: false` in both translations.
 
 Use the store names on the matrix and the module guides. Shopify, WooCommerce, JTL-Shop and Shopware share one hosted feature set. Their installation guides describe the quote, consultation and connector handoff. Confirm connector availability with MailBeez Services.
 
@@ -38,9 +43,26 @@ The exporter reads module artwork, the BeezUI configuration directory and its in
 
 ## Verify locally
 
+When merging a guide, keep its old language files as redirects.
+Set `published: true`, `visible: false`, and `routable: false`.
+Set `redirect` to the destination path and section in each language.
+Grav supplies the language prefix. Update the sidebar and links to the new section.
+
 From the standalone Helios checkout, run `./scripts/rebuild-routes.sh` after adding pages, translations or route changes. This refreshes the route catalog and legacy redirect map using the local Grav installation. Run `./scripts/redirect-preview.sh` to serve the map locally. Use `python3 scripts/verify.py --help` for the V5 crawl and redirect verification options.
 
 Check each language in Helios, including the sidebar, breadcrumb, language switch and links in the article. Check an old link on each legacy host when changing a route. Helios owns the shared navigation templates, the Changelog feed and the generated routing files.
+
+## Publish to guide.mailbeez.com
+
+**Push to GitHub `V5` only** when you edit guide text, translations, images stored in this repository, or sidebar entries that use existing navigation features. For example, moving a guide into an existing category is a documentation change. After checking the local preview, commit the files you want to publish and push `V5`. Every push to that branch asks Forge to deploy, including a README-only change.
+
+**Push GitLab `main` first** when the documentation depends on a change to the guide application, such as a Twig template, stylesheet, navigation renderer or build script. For example, a new type of sidebar group needs theme support before a guide can use it. Test the two changes together, push the application change to GitLab `main`, then push the documentation to GitHub `V5`. Forge builds the guide from both branches. [Guide application on GitLab](https://gitlab.com/cloudbeez/mailbeez-guide)
+
+### Verify the live update
+
+1. Open the **Deploy MailBeez guide** run for your `V5` commit. A green run means Forge accepted the deployment request. [GitHub Actions runs](https://github.com/MailBeez/mailbeez-documentation/actions/workflows/deploy-guide.yml?query=branch%3AV5)
+2. Open **Deployments** for the guide site and wait for the new deployment to succeed. The deployment log records the `V5` commit and the GitLab application commit (`Site`). Compare `V5` with the commit you pushed. If you also changed GitLab, compare `Site` as well. [Guide site in Forge](https://forge.laravel.com/cord/mailbeez/3524768)
+3. Open the edited article at its public URL and look for a specific changed sentence or image. Use the language switch to check the other translation. For a sidebar change, expand the affected category and follow its link to the guide. [English guide](https://guide.mailbeez.com/) · [German guide](https://guide.mailbeez.com/de)
 
 ## Test the guides with a merchant
 

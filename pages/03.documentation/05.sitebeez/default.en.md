@@ -33,6 +33,6 @@ metadata:
 #  last_modified: true
 ---
 
-Use the SiteBeez reference to identify a widget already embedded in an older storefront. To add or test the current newsletter form, use [Embed a signup form](/sitebeez/site_signup).
+Use the SiteBeez reference to identify a widget already embedded in an older storefront. To add or test the current newsletter form, use [Embed a signup form](/contacts/signup-confirmation#signup-form).
 
 Find the page where the widget appears, such as the footer of a category page. That gives you a concrete place to check after changing its configuration.

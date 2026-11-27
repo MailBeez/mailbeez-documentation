@@ -39,7 +39,7 @@ groups:
           - page: 01.basics/05.responsive-emails
             title: { en: "Responsive Emails", de: "Responsive E-Mails" }
           - page: 01.basics/06.email-design-elements
-            title: { en: "Design Elements", de: "E-Mail-Design" }
+            title: { en: "Design elements", de: "E-Mail-Design" }
       - page: 30.tutorials-recipes
         icon: heroicons/outline/academic-cap.svg
         items:
@@ -96,35 +96,35 @@ groups:
         include_unlisted_children: false
         items:
           - page: 04.mailbeez/60.custom-flows
-          - category: { en: "Conversion", de: "Konversion" }
+          - category: { en: "MailBeez Flows", de: "MailBeez Flows" }
+            overview_anchor: mailbeez-flows
             items:
-              - page: 04.mailbeez/05.nopurchase_advanced
-              - page: 04.mailbeez/05.abandoned_cart_advanced
-              - page: 04.mailbeez/08.coupon_expire
-          - category: { en: "Lifecycle", de: "Kundenlebenszyklus" }
-            items:
-              - page: 04.mailbeez/07.coupon_birthday
-              - page: 04.mailbeez/07.coupon_anniversary
-          - category: { en: "Notification", de: "Benachrichtigung" }
-            items:
-              - page: 04.mailbeez/15.payment_inadvance_dunning
-              - page: 04.mailbeez/12.notification_order_status
-              - page: 04.mailbeez/11.notification_backorder
-              - page: 04.mailbeez/14.payment_invoice_dunning
-          - category: { en: "Onboarding", de: "Einführung" }
-            items:
-              - page: 04.mailbeez/26.create_account
-          - category: { en: "Retention", de: "Kundenbindung" }
-            items:
-              - page: 04.mailbeez/04.winback_advanced
-              - page: 04.mailbeez/10.reorder_advanced
-          - category: { en: "Review Feedback", de: "Bewertungen & Feedback" }
-            items:
-              - page: 04.mailbeez/03.review_advanced
-              - page: 04.mailbeez/13.shoprating_advanced
-              - category: { en: "Review services", de: "Bewertungsdienste" }
-                collapsible: true
+              - category: { en: "Conversion", de: "Konversion" }
                 items:
+                  - page: 04.mailbeez/05.nopurchase_advanced
+                  - page: 04.mailbeez/05.abandoned_cart_advanced
+                  - page: 04.mailbeez/08.coupon_expire
+              - category: { en: "Lifecycle", de: "Kundenlebenszyklus" }
+                items:
+                  - page: 04.mailbeez/07.coupon_birthday
+                  - page: 04.mailbeez/07.coupon_anniversary
+              - category: { en: "Notification", de: "Benachrichtigung" }
+                items:
+                  - page: 04.mailbeez/15.payment_inadvance_dunning
+                  - page: 04.mailbeez/12.notification_order_status
+                  - page: 04.mailbeez/11.notification_backorder
+                  - page: 04.mailbeez/14.payment_invoice_dunning
+              - category: { en: "Onboarding", de: "Einführung" }
+                items:
+                  - page: 04.mailbeez/26.create_account
+              - category: { en: "Retention", de: "Kundenbindung" }
+                items:
+                  - page: 04.mailbeez/04.winback_advanced
+                  - page: 04.mailbeez/10.reorder_advanced
+              - category: { en: "Review Feedback", de: "Bewertungen & Feedback" }
+                items:
+                  - page: 04.mailbeez/03.review_advanced
+                  - page: 04.mailbeez/13.shoprating_advanced
                   - page: 04.mailbeez/20.ausgezeichnet_advanced
                   - page: 04.mailbeez/20.googlereviews_advanced
                   - page: 04.mailbeez/20.idealo_advanced
@@ -134,7 +134,7 @@ groups:
                   - page: 04.mailbeez/19.trustpilot_advanced
       - page: 04.mailbeez/21.newsletter
       - page: 23.calendar
-  - title: { en: "Contacts & Content", de: "Kontakte & Inhalte" }
+  - title: { en: "Contacts & content", de: "Kontakte & Inhalte" }
     id: contacts-content
     section: app
     icon: heroicons/outline/user-group.svg
@@ -146,8 +146,6 @@ groups:
           - page: 24.contacts/03.lists-segments
           - page: 24.contacts/04.topics
           - page: 24.contacts/05.signup-confirmation
-            items:
-              - page: 05.sitebeez/01.site_signup
       - page: 25.content
         items:
           - page: 25.content/01.main-templates
@@ -161,28 +159,38 @@ groups:
         items:
           - page: 06.configbeez
             items:
-              - page: 06.configbeez/01.config_queen
-              - page: 06.configbeez/35.automatic-processing
-              - page: 06.configbeez/36.appearance
-              - page: 06.configbeez/02.config_cloudbeez
-              - page: 06.configbeez/37.sender-addresses
-              - page: 06.configbeez/05.config_email_engine
-              - page: 06.configbeez/13.config_template_engine
-              - page: 06.configbeez/09.config_analytics
-              - page: 06.configbeez/38.tracking-codes
-                before: { de: 06.configbeez/09.config_analytics }
+              - category: { en: "General", de: "Allgemein" }
                 items:
-                  - page: 06.configbeez/09.config_analytics_econda
-                  - page: 06.configbeez/09.config_googleanalytics
-                  - page: 06.configbeez/09.config_analytics_piwik
-              - page: 06.configbeez/03.config_gdpr_export
-              - page: 06.configbeez/33.config_spamcompliance_advanced
-              - page: 06.configbeez/07.config_process_control
-              - page: 06.configbeez/04.config_simulation
-              - page: 06.configbeez/24.common_services/05.config_coupon_engine
-              - page: 06.configbeez/39.preview-test-data
-              - page: 06.configbeez/08.config_api
-              - page: 06.configbeez/40.language-assignment
+                  - page: 06.configbeez/01.config_queen
+                  - page: 06.configbeez/35.automatic-processing
+                  - page: 06.configbeez/36.appearance
+                  - page: 06.configbeez/02.config_cloudbeez
+              - category: { en: "Email Delivery", de: "E-Mail-Versand" }
+                items:
+                  - page: 06.configbeez/37.sender-addresses
+                  - page: 06.configbeez/05.config_email_engine
+                  - page: 06.configbeez/13.config_template_engine
+              - category: { en: "Analytics & Tracking", de: "Auswertung & Tracking" }
+                items:
+                  - page: 06.configbeez/09.config_analytics
+                  - page: 06.configbeez/38.tracking-codes
+                    before: { de: 06.configbeez/09.config_analytics }
+                    items:
+                      - page: 06.configbeez/09.config_analytics_econda
+                      - page: 06.configbeez/09.config_googleanalytics
+                      - page: 06.configbeez/09.config_analytics_piwik
+              - category: { en: "Compliance & Privacy", de: "Datenschutz & Compliance" }
+                items:
+                  - page: 06.configbeez/03.config_gdpr_export
+                  - page: 06.configbeez/33.config_spamcompliance_advanced
+              - category: { en: "System", de: "System" }
+                items:
+                  - page: 06.configbeez/07.config_process_control
+                  - page: 06.configbeez/04.config_simulation
+                  - page: 06.configbeez/24.common_services/05.config_coupon_engine
+                  - page: 06.configbeez/39.preview-test-data
+                  - page: 06.configbeez/08.config_api
+                  - page: 06.configbeez/40.language-assignment
           - page: 26.extensions
             items:
               - page: 26.extensions/01.addons

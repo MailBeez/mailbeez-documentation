@@ -10,18 +10,16 @@ taxonomy:
     tag: [pro, "Newsletter-Anmeldung per API"]
 ---
 
-[doc-callout type="note" title="Frühere Moduleinstellungen"]
-Für das Anmeldeformular im aktuellen Shop nutze [Anmeldeformular einbinden](/sitebeez/site_signup). [Zur Referenz für ältere Versionen](/legacy).
-[/doc-callout]
+Die Anleitung [Newsletter-Anmeldeformular anbinden](/tutorials/erstellen-eines-newsletter-anmeldeformulars) enthält ein vollständiges Beispiel mit HTML und JavaScript. Für das fertige Formular folge [Anmeldeformular einbinden](/contacts/signup-confirmation#anmeldeformular).
 
-Nutze die frühere Newsletter-API, wenn dein eigenes Shopformular eine Anmeldung mit Bestätigung starten soll. Das Formular übermittelt E-Mail-Adresse und Einwilligung. [Newsletter](/mailbeez/newsletter) stellt den persönlichen Bestätigungslink bereit.
+Nutze die öffentliche Newsletter-API, wenn dein eigenes Shopformular eine Anmeldung mit Bestätigung starten soll. Das Formular übermittelt E-Mail-Adresse und Einwilligung. [Newsletter](/mailbeez/newsletter) stellt den persönlichen Bestätigungslink bereit.
 
 Nutze für die erste Anmeldung ein erreichbares Testpostfach. So kannst du zwischen einer vom Formular angenommenen Adresse und einer tatsächlich bestätigten Anmeldung unterscheiden.
 
 ## Anmeldeformular anbinden
 
-1. Frage nach der E-Mail-Adresse und der Einwilligung zum Newsletter. Sende das Formular per HTTPS und POST an `/mailhive.php/api/public/v1.0/newsletter/add/` in deinem Shop. Übergib die Adresse in `email` und die Auswahl zur Einwilligung in `consent`. Fehlt das Feld, nimmt die ältere API eine Einwilligung an. Übergib den Wert deshalb ausdrücklich.
-2. Bietest du mehrere Themen an, übergib in `topic_ids` eine einzelne Themen-ID oder mehrere durch Kommas getrennte IDs. Die Shopsprache kannst du mit `language_id` angeben. Die optionalen Felder `firstname`, `lastname` und `gender` gelten für Interessenten. Bei bestehenden Kunden bleiben die Angaben im Kundenkonto erhalten.
+1. Frage nach der E-Mail-Adresse und der Einwilligung zum Newsletter. Sende das Formular per HTTPS und POST an `/mailhive.php/api/public/v1.0/newsletter/add/` in deinem Shop. Übergib die Adresse in `email` und die Auswahl zur Einwilligung in `consent`. Fehlt das Feld, nimmt die API eine Einwilligung an. Übergib den Wert deshalb ausdrücklich.
+2. Bietest du mehrere Themen an, übergib in `topic_ids` eine einzelne Themen-ID oder mehrere durch Kommas getrennte IDs. Die numerische ID der Shopsprache kannst du mit `lng_id` angeben. Die optionalen Felder `firstname`, `lastname` und `gender` gelten für Interessenten. Bei bestehenden Kunden bleiben die Angaben im Kundenkonto erhalten.
 3. Werte die JSON-Antwort aus, bevor du im Formular eine Meldung anzeigst.
 
 | Antwort | Meldung im Formular |
@@ -39,6 +37,6 @@ Kunden und Interessenten erhalten unterschiedliche Bestätigungslinks. Verwende 
 
 ## Interessentendaten oder Themen ändern
 
-Für bestehende Interessenten kannst du `firstname`, `lastname`, `gender` und `language_id` aktualisieren. Bei Erfolg antwortet die API mit `{"error":false}`. Hast du eine Weiterleitung angegeben, steht das Ergebnis im URL-Parameter `result` (bei Erfolg `OK`). Die Aktualisierung ändert die Kontaktdaten. Der Anmeldestatus bleibt erhalten.
+Für bestehende Interessenten kannst du `prospect_firstname` und `prospect_lastname` aktualisieren. Bei Erfolg antwortet die API mit `{"error":false}`. Hast du eine Weiterleitung angegeben, steht das Ergebnis im URL-Parameter `result` (bei Erfolg `OK`). Die Aktualisierung ändert die Kontaktdaten. Der Anmeldestatus bleibt erhalten.
 
 Bei `invalid_prospect` gibt es keinen Interessenteneintrag zu dieser Adresse. Bei `is_customer` gehört die Adresse zu einem Kundenkonto. Sollen Abonnenten ihre Themen selbst ändern, verwende den vom Modul bereitgestellten Link zur Themenauswahl. Er öffnet das entsprechende Formular.

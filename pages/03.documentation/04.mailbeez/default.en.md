@@ -106,16 +106,12 @@ Prompt a repeat order or invite customers back after a break.
 
 ### Review Feedback
 
-Invite buyers to review a product or their shopping experience in your store.
+<span id="review-services"></span>Invite buyers to review a product or rate your store.
+You can collect store reviews yourself or invite buyers to a review service you use.
 
 [doc-grid columns="2"]
 [doc-link-card href="/mailbeez/review_advanced" title="Product reviews" new-tab="false" /]
 [doc-link-card href="/mailbeez/shoprating_advanced" title="Store reviews" new-tab="false" /]
-[/doc-grid]
-
-#### Review services
-
-[doc-grid columns="2"]
 [doc-link-card href="/mailbeez/ausgezeichnet_advanced" title="AUSGEZEICHNET.org" new-tab="false" /]
 [doc-link-card href="/mailbeez/googlereviews_advanced" title="Google reviews" new-tab="false" /]
 [doc-link-card href="/mailbeez/idealo_advanced" title="idealo reviews" new-tab="false" /]

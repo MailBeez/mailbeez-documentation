@@ -33,6 +33,6 @@ metadata:
 #  last_modified: true
 ---
 
-Schlage in der SiteBeez-Referenz ein bereits im früheren Shop eingebundenes Widget nach. Das Einbinden und Testen des heutigen Newsletter-Formulars beschreibt [Anmeldeformular einbinden](/sitebeez/site_signup).
+Schlage in der SiteBeez-Referenz ein bereits im früheren Shop eingebundenes Widget nach. Das Einbinden und Testen des heutigen Newsletter-Formulars beschreibt [Anmeldeformular einbinden](/contacts/signup-confirmation#anmeldeformular).
 
 Suche die Stelle, an der das Widget eingebunden ist, etwa den Fußbereich einer Kategorieseite. Dort kannst du eine Konfigurationsänderung unmittelbar überprüfen.
