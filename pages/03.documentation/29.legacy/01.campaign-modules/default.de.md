@@ -24,7 +24,6 @@ Suche die Kampagne unter dem Namen aus deiner früheren Shopverwaltung. Prüfe d
 [doc-link-card href="/de/mailbeez/service_db_repair_order" title="Bestelldatenbank reparieren" new-tab="false" /]
 [doc-link-card href="/de/mailbeez/numinix_sc_review_reward" title="Numinix-Bewertungsguthaben" new-tab="false" /]
 [doc-link-card href="/de/mailbeez/numinix_sc_balance_reminder" title="Numinix-Guthabenerinnerung" new-tab="false" /]
-[doc-link-card href="/de/mailbeez/community-modules" title="Community-Module" new-tab="false" /]
 [doc-link-card href="/de/mailbeez/brand-fans" title="Marken Fans" new-tab="false" /]
 [doc-link-card href="/de/mailbeez/service_sync_newsletter_xtc" title="Newsletter-Abos abgleichen" new-tab="false" /]
 [doc-link-card href="/de/mailbeez/mailbeez_check" title="Update-Prüfung" new-tab="false" /]

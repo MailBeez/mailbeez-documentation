@@ -24,7 +24,6 @@ Find the campaign by the name in your older shop administration. Check the editi
 [doc-link-card href="/mailbeez/service_db_repair_order" title="Order database repair" new-tab="false" /]
 [doc-link-card href="/mailbeez/numinix_sc_review_reward" title="Numinix review rewards" new-tab="false" /]
 [doc-link-card href="/mailbeez/numinix-store-credit-balance-reminder" title="Numinix balance reminder" new-tab="false" /]
-[doc-link-card href="/mailbeez/community-modules" title="Community modules" new-tab="false" /]
 [doc-link-card href="/mailbeez/brand-fans" title="Brand Fans" new-tab="false" /]
 [doc-link-card href="/mailbeez/service_sync_newsletter_xtc" title="Newsletter subscription sync" new-tab="false" /]
 [doc-link-card href="/mailbeez/mailbeez_check" title="Update check" new-tab="false" /]

@@ -1,57 +1,8 @@
 ---
-# http://learn.getgrav.org/content/headers
 title: "SHOPVOTE (Community)"
-module_subtitle: "Käufer zu einer Shopbewertung auf SHOPVOTE einladen"
 slug: shopvote
-routes:
-    default: /dokumentation/mailbeez/shopvote
-# menu: Idealo
-date:  02-11-2015
 published: true
-publish_date:  02-11-2015
-# unpublish_date:  02-11-2015
-template: docs
-# theme: false
-visible: true
-summary:
-    enabled: true
-    format: short
-    size: 128
-taxonomy:
-    migration_status: done
-    category: [docs]
-    tag: [ce, "ShopVote.de"]
-module:
-    code: 'shopvote'
-    category: [mailbeez]
-    compatiblity: [comp_osc,comp_cre,comp_digi,comp_zencart,comp_xtc,comp_xtcm2,comp_gambio]
-       
-# added collection selector
-
-author:
-    name: admin
-metadata:
-    author: admin
-#      description: Your page description goes here
-#      keywords: HTML, CSS, XML, JavaScript
-#      robots: noindex, nofollow
-#      og:
-#          title: The Rock
-#          type: video.movie
-#          url: http://www.imdb.com/title/tt0117500/
-#          image: http://ia.media-imdb.com/images/rock.jpg
-#  cache_enable: false
-#  last_modified: true
+visible: false
+routable: false
+redirect: "/v4/mailbeez/community-modules/shopvote"
 ---
-
-[doc-callout type="note" title="Früheres Kampagnenmodul"]
-Für einen aktuellen Shop wählst du den Flow unter [Automatisierung](/mailbeez). [Zur Referenz für ältere Versionen](/legacy).
-[/doc-callout]
-
-Das frühere Community-Modul lädt Käufer zur Shopbewertung bei SHOPVOTE ein. Verwende das Bewertungsziel deines Shops und öffne es aus einer Testeinladung, bevor du den automatischen Versand aktivierst.
-
-Lies Einladung und Bestellbestätigung nebeneinander. Steht in beiden derselbe Shopname, können Käufer die Bewertungsanfrage leichter ihrem Einkauf zuordnen.
-
-Wähle den Bestellstatus für den Start der Wartezeit und plane genügend Zeit für die Lieferung ein.
-
-Den V5-Flow beschreibt [Um Bewertungen auf SHOPVOTE bitten](/mailbeez/shopvote_advanced).

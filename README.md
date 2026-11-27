@@ -48,6 +48,9 @@ Set `published: true`, `visible: false`, and `routable: false`.
 Set `redirect` to the destination path and section in each language.
 Grav supplies the language prefix. Update the sidebar and links to the new section.
 
+Community module guides live in the V4 archive. Their former V5 pages contain only redirects.
+Use the archived guide’s path in each language and remove its V5 navigation entry and overview card.
+
 From the standalone Helios checkout, run `./scripts/rebuild-routes.sh` after adding pages, translations or route changes. This refreshes the route catalog and legacy redirect map using the local Grav installation. Run `./scripts/redirect-preview.sh` to serve the map locally. Use `python3 scripts/verify.py --help` for the V5 crawl and redirect verification options.
 
 Check each language in Helios, including the sidebar, breadcrumb, language switch and links in the article. Check an old link on each legacy host when changing a route. Helios owns the shared navigation templates, the Changelog feed and the generated routing files.
