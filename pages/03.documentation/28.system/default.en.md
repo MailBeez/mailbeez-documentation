@@ -14,7 +14,7 @@ If several campaigns have stopped sending, check the shared sender and delivery 
 
 [doc-grid columns="2"]
 [doc-link-card href="/configbeez" title="Configuration" description="Before your first send, check the sender, delivery service and simulation settings." new-tab="false" /]
-[doc-link-card href="/extensions" title="Extensions" description="Find an addon or an external service and check its requirements for your shop." new-tab="false" /]
+[doc-link-card href="/extensions" title="Extensions" description="Choose Add-ons for filters and sending rules, or External services to connect a provider." new-tab="false" /]
 [doc-link-card href="/sending-status" title="Sending & status" description="Investigate a missing message using the recipient address and approximate send time." new-tab="false" /]
 [/doc-grid]
 

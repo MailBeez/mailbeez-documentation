@@ -44,7 +44,7 @@ metadata:
 ---
 
 [doc-callout type="note" title="Frühere MailBeez-Versionen"]
-In V5 kannst du unter [Integrationen](/extensions/integrationen) eine Bewertungsintegration auswählen. [Zur Referenz für ältere Versionen](/legacy).
+In V5 kannst du unter [Externe Dienste](/extensions/integrationen) eine Bewertungsintegration auswählen. [Zur Referenz für ältere Versionen](/legacy).
 [/doc-callout]
 
 Zeige Bewertungen aus der Integration [Bewertungen von Shopauskunft importieren](/configbeez/integrations/config_shopauskunft_integration) in E-Mails mit dem früheren Vorlagensystem. Prüfe zuerst, ob Bewertungen vorliegen. Installiere und aktiviere anschließend das Anzeigemodul.

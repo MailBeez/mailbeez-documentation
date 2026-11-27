@@ -93,29 +93,45 @@ groups:
     icon: heroicons/outline/paper-airplane.svg
     items:
       - page: 04.mailbeez
+        include_unlisted_children: false
         items:
-          - page: 04.mailbeez/03.review_advanced
-          - page: 04.mailbeez/04.winback_advanced
-          - page: 04.mailbeez/05.abandoned_cart_advanced
-          - page: 04.mailbeez/05.nopurchase_advanced
-          - page: 04.mailbeez/07.coupon_anniversary
-          - page: 04.mailbeez/07.coupon_birthday
-          - page: 04.mailbeez/08.coupon_expire
-          - page: 04.mailbeez/10.reorder_advanced
-          - page: 04.mailbeez/11.notification_backorder
-          - page: 04.mailbeez/12.notification_order_status
-          - page: 04.mailbeez/13.shoprating_advanced
-          - page: 04.mailbeez/14.payment_invoice_dunning
-          - page: 04.mailbeez/15.payment_inadvance_dunning
-          - page: 04.mailbeez/17.shopauskunft_advanced
-          - page: 04.mailbeez/19.trustpilot_advanced
-          - page: 04.mailbeez/20.ausgezeichnet_advanced
-          - page: 04.mailbeez/20.googlereviews_advanced
-          - page: 04.mailbeez/20.idealo_advanced
-          - page: 04.mailbeez/20.shopvote_advanced
-          - page: 04.mailbeez/21.trustedshops_advanced
-          - page: 04.mailbeez/26.create_account
           - page: 04.mailbeez/60.custom-flows
+          - category: { en: "Conversion", de: "Konversion" }
+            items:
+              - page: 04.mailbeez/05.nopurchase_advanced
+              - page: 04.mailbeez/05.abandoned_cart_advanced
+              - page: 04.mailbeez/08.coupon_expire
+          - category: { en: "Lifecycle", de: "Kundenlebenszyklus" }
+            items:
+              - page: 04.mailbeez/07.coupon_birthday
+              - page: 04.mailbeez/07.coupon_anniversary
+          - category: { en: "Notification", de: "Benachrichtigung" }
+            items:
+              - page: 04.mailbeez/15.payment_inadvance_dunning
+              - page: 04.mailbeez/12.notification_order_status
+              - page: 04.mailbeez/11.notification_backorder
+              - page: 04.mailbeez/14.payment_invoice_dunning
+          - category: { en: "Onboarding", de: "Einführung" }
+            items:
+              - page: 04.mailbeez/26.create_account
+          - category: { en: "Retention", de: "Kundenbindung" }
+            items:
+              - page: 04.mailbeez/04.winback_advanced
+              - page: 04.mailbeez/10.reorder_advanced
+          - category: { en: "Review Feedback", de: "Bewertungen & Feedback" }
+            items:
+              - page: 04.mailbeez/03.review_advanced
+              - page: 04.mailbeez/13.shoprating_advanced
+              - category: { en: "Review services", de: "Bewertungsdienste" }
+                collapsible: true
+                items:
+                  - page: 04.mailbeez/20.ausgezeichnet_advanced
+                  - page: 04.mailbeez/20.googlereviews_advanced
+                  - page: 04.mailbeez/20.idealo_advanced
+                  - page: 04.mailbeez/17.shopauskunft_advanced
+                  - page: 04.mailbeez/20.shopvote_advanced
+                  - page: 04.mailbeez/21.trustedshops_advanced
+                  - page: 04.mailbeez/19.trustpilot_advanced
       - page: 04.mailbeez/21.newsletter
       - page: 23.calendar
   - title: { en: "Contacts & Content", de: "Kontakte & Inhalte" }
@@ -170,36 +186,54 @@ groups:
           - page: 26.extensions
             items:
               - page: 26.extensions/01.addons
+                include_unlisted_children: false
                 items:
-                  - page: 06.configbeez/10.config_shopvoting
-                  - page: 06.configbeez/18.config_email_rate
-                  - page: 06.configbeez/16.config_gdpr_consent
-                  - page: 07.filterbeez/20.filter_add_block_all_url
-                  - page: 07.filterbeez/21.filter_check_block_all
-                  - page: 06.configbeez/19.config_cron_advanced
-                  - page: 06.configbeez/18.config_cron_simple
-                  - page: 06.configbeez/21.config_email_archive
-                  - page: 07.filterbeez/02.filter_do_limit
-                  - page: 07.filterbeez/01.filter_do_throttling_simple
-                  - page: 07.filterbeez/06.filter_check_group
-                  - page: 07.filterbeez/02.filter_check_pattern_blacklist
-                  - page: 07.filterbeez/02.filter_check_routing
-                  - page: 06.configbeez/23.config_account_aggregation
-                  - page: 06.configbeez/14.config_customer_insight
-                  - page: 07.filterbeez/03.filter_add_customer_information
-                  - page: 07.filterbeez/07.filter_add_gender
-                  - page: 07.filterbeez/23.filter_add_invoicenumber_xtcm
-                  - page: 07.filterbeez/08.filter_add_shopperapproved
+                  - category: { en: "Feedback and analytics", de: "Feedback und Auswertung" }
+                    items:
+                      - page: 06.configbeez/10.config_shopvoting
+                      - page: 06.configbeez/18.config_email_rate
+                  - category: { en: "Consent and blocking", de: "Einwilligungen und Sperren" }
+                    items:
+                      - page: 06.configbeez/16.config_gdpr_consent
+                      - page: 07.filterbeez/20.filter_add_block_all_url
+                      - page: 07.filterbeez/21.filter_check_block_all
+                  - category: { en: "Sending and scheduling", de: "Versand und Zeitplanung" }
+                    items:
+                      - page: 06.configbeez/19.config_cron_advanced
+                      - page: 06.configbeez/18.config_cron_simple
+                      - page: 06.configbeez/21.config_email_archive
+                      - page: 07.filterbeez/02.filter_do_limit
+                      - page: 07.filterbeez/01.filter_do_throttling_simple
+                  - category: { en: "Filters", de: "Filter" }
+                    items:
+                      - page: 07.filterbeez/06.filter_check_group
+                      - page: 07.filterbeez/02.filter_check_pattern_blacklist
+                      - page: 07.filterbeez/02.filter_check_routing
+                  - category: { en: "Customer data and content", de: "Kundendaten und Inhalte" }
+                    items:
+                      - page: 06.configbeez/23.config_account_aggregation
+                      - page: 06.configbeez/14.config_customer_insight
+                      - page: 07.filterbeez/07.filter_add_gender
+                      - page: 07.filterbeez/03.filter_add_customer_information
+                      - page: 07.filterbeez/23.filter_add_invoicenumber_xtcm
+                      - page: 07.filterbeez/08.filter_add_shopperapproved
               - page: 26.extensions/02.integrations
+                include_unlisted_children: false
                 items:
-                  - page: 06.configbeez/15.config_mouseflow
-                  - page: 06.configbeez/25.integrations/05.config_ecgcheck_integration
-                  - page: 26.extensions/02.integrations/01.sitezen
-                  - page: 06.configbeez/25.integrations/01.config_idealo_integration
-                  - page: 06.configbeez/25.integrations/02.config_shopauskunft_integration
-                  - page: 06.configbeez/25.integrations/04.config_shopperapproved_integration
-                  - page: 06.configbeez/25.integrations/03.config_trustedshops_rss_importer
-                  - page: 06.configbeez/25.integrations/04.config_trustpilot_rss_importer
+                  - category: { en: "Feedback and analytics", de: "Feedback und Auswertung" }
+                    items:
+                      - page: 06.configbeez/15.config_mouseflow
+                  - category: { en: "Integrations", de: "Integrationen" }
+                    items:
+                      - page: 06.configbeez/25.integrations/05.config_ecgcheck_integration
+                      - page: 26.extensions/02.integrations/01.sitezen
+                      - category: { en: "Review services", de: "Bewertungsdienste" }
+                        items:
+                          - page: 06.configbeez/25.integrations/01.config_idealo_integration
+                          - page: 06.configbeez/25.integrations/02.config_shopauskunft_integration
+                          - page: 06.configbeez/25.integrations/04.config_shopperapproved_integration
+                          - page: 06.configbeez/25.integrations/03.config_trustedshops_rss_importer
+                          - page: 06.configbeez/25.integrations/04.config_trustpilot_rss_importer
           - page: 27.sending-status
   - title: { en: "Archive", de: "Archiv" }
     id: legacy-reference

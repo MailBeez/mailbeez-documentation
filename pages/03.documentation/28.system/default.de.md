@@ -14,7 +14,7 @@ Wenn mehrere Kampagnen keine E-Mails mehr verschicken, prüfe unter **System** d
 
 [doc-grid columns="2"]
 [doc-link-card href="/de/configbeez" title="Konfiguration" description="Prüfe vor dem ersten Versand den Absender, den Versanddienst und die Simulationseinstellungen." new-tab="false" /]
-[doc-link-card href="/de/extensions" title="Erweiterungen" description="Finde ein Zusatzmodul oder einen externen Dienst und prüfe die Voraussetzungen für deinen Shop." new-tab="false" /]
+[doc-link-card href="/de/extensions" title="Erweiterungen" description="Unter Zusatzmodule findest du Filter und Versandregeln. Unter Externe Dienste verbindest du deinen Shop mit einem Anbieter." new-tab="false" /]
 [doc-link-card href="/de/sending-status" title="Versand & Status" description="Gehe einer fehlenden Nachricht anhand der Empfängeradresse und des ungefähren Versandzeitpunkts nach." new-tab="false" /]
 [/doc-grid]
 

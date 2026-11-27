@@ -36,25 +36,30 @@ metadata:
 #  last_modified: true
 ---
 
-Ein Kunde registriert sich heute, bekommt nächste Woche seine Mühle und braucht in einem Monat vielleicht neue Bohnen. Jeder dieser Anlässe passt zu einer anderen E-Mail. Unter **Kampagnen → Automatisierung → MailBeez Flows** findest du fertige Abläufe für Willkommensgrüße, Bewertungseinladungen und Nachbestellungen. Zeitpunkt, Auswahl und Text passt du an deinen Shop an.
-
-Hängt die Nachricht vom Kauf eines bestimmten Produkts ab, öffne [Eigene Flows](/mailbeez/eigene-flows). Ein Hinweis auf Ersatzmahlscheiben gehört zu den Besitzern der passenden Mühle. Mit einem [Newsletter](/mailbeez/newsletter) informierst du ausgewählte Abonnenten an einem gemeinsamen Termin, etwa wenn eine neue Röstung erscheint.
-
-## Automatisierung einrichten
-
-1. Öffne **Kampagnen → Automatisierung → MailBeez Flows** und wähle den installierten Flow für deinen Anlass. Unter **Automation hinzufügen** siehst du weitere verfügbare Module.
-2. Prüfe, wer die E-Mail erhalten soll, welches Ereignis den Flow startet und wie lange er bis zum Versand wartet. Prüfe bei mehreren E-Mails jeden Schritt.
-3. Kontrolliere den Inhalt und teste die E-Mail, bevor du den Flow für Kunden aktivierst.
-
 ## Anleitungen
 
-Wähle den Tab, den du unter **Automatisierung** verwendest.
+Unter **Kampagnen → Automatisierung** wählst du den Flow passend zum Anlass. Für einen Kaffeeshop können zwei ganz unterschiedliche Erinnerungen sinnvoll sein.
+
+- Mit [MailBeez Flows](#mailbeez-flows) erinnerst du zum Beispiel Kunden an deinen Shop, deren letzte Bestellung länger zurückliegt. Im fertigen Flow **Inaktive Kunden zurückgewinnen** legst du die Wartezeit fest und schreibst den Text.
+- Unter [Eigene Flows](/mailbeez/eigene-flows) wählst du die Käufer einer bestimmten Kaffeemaschine als Zielgruppe. So kannst du sie nach sechs Monaten an den nächsten Wasserfilter erinnern.
+
+Möchtest du eine neue Röstung an einem festen Termin ankündigen, nutze einen [Newsletter](/mailbeez/newsletter).
+
+## Eigene Flows
+
+Unter **Eigene Flows** kannst du auch den Inhalt einer Warenkorberinnerung auf bestimmte Artikel abstimmen. Das Tutorial [Warenkorberinnerungen nach Produkt gestalten](/tutorials-und-rezepte/warenkorberinnerungen-nach-produkt) zeigt dir, wie du die Zielgruppe auswählst.
+
+[doc-grid columns="2"]
+[doc-link-card href="/de/mailbeez/eigene-flows" title="Eigene Flows" new-tab="false" /]
+[/doc-grid]
 
 ## MailBeez Flows
 
-Wähle die Kategorie des installierten Flows. Welche Kategorien du siehst, hängt von den Modulen in deinem Shop ab.
+Welche Flows du im Shop siehst, hängt von den installierten Modulen ab.
 
 ### Konversion
+
+Hilf Kunden bei der ersten Bestellung, erinnere an einen offenen Warenkorb oder an einen Gutschein, der bald abläuft.
 
 [doc-grid columns="2"]
 [doc-link-card href="/de/mailbeez/nopurchase_advanced" title="Erstkauf fördern" new-tab="false" /]
@@ -64,12 +69,16 @@ Wähle die Kategorie des installierten Flows. Welche Kategorien du siehst, häng
 
 ### Kundenlebenszyklus
 
+Gratuliere zum Geburtstag oder zum Jahrestag der Registrierung in deinem Shop.
+
 [doc-grid columns="2"]
 [doc-link-card href="/de/mailbeez/coupon_birthday" title="Geburtstagsgruß" new-tab="false" /]
 [doc-link-card href="/de/mailbeez/coupon_anniversary" title="Kundenjubiläum" new-tab="false" /]
 [/doc-grid]
 
 ### Benachrichtigung
+
+Halte Käufer über ihre Bestellung auf dem Laufenden oder erinnere sie an eine offene Zahlung.
 
 [doc-grid columns="2"]
 [doc-link-card href="/de/mailbeez/payment_inadvance_dunning" title="Vorkasse-Erinnerung" new-tab="false" /]
@@ -80,11 +89,15 @@ Wähle die Kategorie des installierten Flows. Welche Kategorien du siehst, häng
 
 ### Einführung
 
+Begrüße neue Kunden nach der Registrierung.
+
 [doc-grid columns="2"]
 [doc-link-card href="/de/mailbeez/create_account" title="Willkommensmail" new-tab="false" /]
 [/doc-grid]
 
 ### Kundenbindung
+
+Erinnere an eine Nachbestellung oder lade Kunden nach einer längeren Kaufpause wieder ein.
 
 [doc-grid columns="2"]
 [doc-link-card href="/de/mailbeez/winback_advanced" title="Kunden zurückgewinnen" new-tab="false" /]
@@ -93,27 +106,30 @@ Wähle die Kategorie des installierten Flows. Welche Kategorien du siehst, häng
 
 ### Bewertungen & Feedback
 
+Bitte Käufer, ein Produkt oder ihren Einkauf in deinem Shop zu bewerten.
+
 [doc-grid columns="2"]
 [doc-link-card href="/de/mailbeez/review_advanced" title="Produktbewertungen" new-tab="false" /]
+[doc-link-card href="/de/mailbeez/shoprating_advanced" title="Shopbewertungen" new-tab="false" /]
+[/doc-grid]
+
+#### Bewertungsdienste
+
+[doc-grid columns="2"]
 [doc-link-card href="/de/mailbeez/ausgezeichnet_advanced" title="AUSGEZEICHNET.org" new-tab="false" /]
 [doc-link-card href="/de/mailbeez/googlereviews_advanced" title="Google-Bewertungen" new-tab="false" /]
 [doc-link-card href="/de/mailbeez/idealo_advanced" title="idealo-Bewertungen" new-tab="false" /]
-[doc-link-card href="/de/mailbeez/shopvote_advanced" title="SHOPVOTE" new-tab="false" /]
 [doc-link-card href="/de/mailbeez/shopauskunft_advanced" title="Shopauskunft" new-tab="false" /]
-[doc-link-card href="/de/mailbeez/shoprating_advanced" title="Shopbewertungen" new-tab="false" /]
+[doc-link-card href="/de/mailbeez/shopvote_advanced" title="SHOPVOTE" new-tab="false" /]
 [doc-link-card href="/de/mailbeez/trustedshops_advanced" title="Trusted Shops" new-tab="false" /]
 [doc-link-card href="/de/mailbeez/trustpilot_advanced" title="Trustpilot" new-tab="false" /]
 [/doc-grid]
 
-## Eigene Flows
+## Automatisierung einrichten
 
-Knüpfe eine E-Mail an den Kauf eines bestimmten Produkts. Erinnere etwa an die nächste Packung Bohnen oder begleite Käufer eines Handfilters mit einem kurzen Kaffeekurs.
-
-[doc-grid columns="2"]
-[doc-link-card href="/de/mailbeez/eigene-flows" title="Eigene Flows" description="Wähle eine Zielgruppe für Nachbestellungen, Ersatzteile oder eine Warenkorberinnerung zu einem bestimmten Produkt." new-tab="false" /]
-[/doc-grid]
-
-Für eine Aussendung zu einem festen Termin öffne [Newsletter](/mailbeez/newsletter).
+1. Öffne **Kampagnen → Automatisierung → MailBeez Flows** und wähle den installierten Flow für deinen Anlass. Unter **Automation hinzufügen** siehst du weitere verfügbare Module.
+2. Prüfe, wer die E-Mail erhalten soll, welches Ereignis den Flow startet und wie lange er bis zum Versand wartet. Prüfe bei mehreren E-Mails jeden Schritt.
+3. Kontrolliere den Inhalt und teste die E-Mail, bevor du den Flow für Kunden aktivierst.
 
 ## Passende Anleitung
 

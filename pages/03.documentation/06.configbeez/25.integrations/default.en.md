@@ -12,7 +12,7 @@ taxonomy:
         - docs
 ---
 
-Use this index for connections made by an older module. Identify the provider and the transfer method before changing credentials. For the current list in V5, see [Integrations](/extensions/integrations).
+Use this index for connections made by an older module. Identify the provider and the transfer method before changing credentials. For the current list in V5, see [External services](/extensions/integrations).
 
 The transfer method determines where to look for a missed review. A mailbox importer needs a message in the right folder, while a feed importer needs a reachable feed.
 

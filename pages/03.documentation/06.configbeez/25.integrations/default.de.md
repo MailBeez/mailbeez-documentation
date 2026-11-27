@@ -13,7 +13,7 @@ taxonomy:
         - docs
 ---
 
-Hier findest du Anbindungen früherer Module. Prüfe Anbieter und Übertragungsweg, bevor du Zugangsdaten änderst. Die aktuelle Auswahl in V5 findest du unter [Integrationen](/extensions/integrationen).
+Hier findest du Anbindungen früherer Module. Prüfe Anbieter und Übertragungsweg, bevor du Zugangsdaten änderst. Die aktuelle Auswahl in V5 findest du unter [Externe Dienste](/extensions/integrationen).
 
 Der Übertragungsweg bestimmt die Fehlersuche. Beim Postfachimport muss eine Nachricht im richtigen Ordner liegen, beim Feedimport muss der Feed erreichbar sein.
 

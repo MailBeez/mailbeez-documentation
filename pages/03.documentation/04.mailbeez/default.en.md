@@ -36,25 +36,30 @@ metadata:
 #  last_modified: true
 ---
 
-A buyer registers today, receives a grinder next week and may need more beans a month later. Each is a different occasion to write. Under **Campaigns → Automations**, choose **MailBeez Flows** for a ready-made welcome, review invitation or reorder reminder. You choose the timing, recipients and wording for the installed flow.
-
-For a message that depends on a particular purchase, open [Custom Flows](/mailbeez/custom-flows). A reminder about spare burrs belongs with owners of the matching grinder. A [newsletter](/mailbeez/newsletter) is useful when you want selected subscribers to hear something on the same day, such as the release of a new roast.
-
-## Set up an automation
-
-1. Open **Campaigns → Automations → MailBeez Flows** and choose the installed flow for the event. If you need another flow, use **Add Automation** to see the available modules.
-2. Check who qualifies, which event starts the flow and how long it waits before each email. For a multi-step flow, check each step.
-3. Review the email content and test it before enabling the flow for customers.
-
 ## Guides
 
-Choose the same tab you use in **Automations**.
+Under **Campaigns → Automations**, choose a flow based on what prompts the email. A coffee shop might send two different kinds of reminders.
+
+- Use [MailBeez Flows](#mailbeez-flows) to invite customers back when some time has passed since their last order. In **Win back inactive customers**, you choose how long to wait and what the email says.
+- Use [Custom Flows](/mailbeez/custom-flows) to reach buyers of a particular coffee machine when its water filter is due for replacement six months later. Choose an audience for that machine.
+
+To announce a new roast on a particular date, use a [newsletter](/mailbeez/newsletter).
+
+## Custom Flows
+
+You can also use **Custom Flows** to tailor a cart reminder to the products in the cart. The [cart reminder tutorial](/tutorials-and-recipes/cart-reminders-by-product) walks you through choosing the audience.
+
+[doc-grid columns="2"]
+[doc-link-card href="/mailbeez/custom-flows" title="Custom Flows" new-tab="false" /]
+[/doc-grid]
 
 ## MailBeez Flows
 
-Choose the category of the installed flow. The categories you see depend on the modules in your shop.
+The flows you see in your shop depend on the modules you have installed.
 
 ### Conversion
+
+Help customers place their first order, return to a cart or redeem a coupon before it expires.
 
 [doc-grid columns="2"]
 [doc-link-card href="/mailbeez/nopurchase_advanced" title="First order" new-tab="false" /]
@@ -64,12 +69,16 @@ Choose the category of the installed flow. The categories you see depend on the 
 
 ### Lifecycle
 
+Celebrate a birthday or the anniversary of a customer’s registration with your shop.
+
 [doc-grid columns="2"]
 [doc-link-card href="/mailbeez/coupon_birthday" title="Birthday wishes" new-tab="false" /]
 [doc-link-card href="/mailbeez/coupon_anniversary" title="Customer anniversary" new-tab="false" /]
 [/doc-grid]
 
 ### Notification
+
+Keep buyers up to date on an order or remind them about a payment.
 
 [doc-grid columns="2"]
 [doc-link-card href="/mailbeez/payment_inadvance_dunning" title="Prepayment reminder" new-tab="false" /]
@@ -80,11 +89,15 @@ Choose the category of the installed flow. The categories you see depend on the 
 
 ### Onboarding
 
+Welcome customers when they create an account.
+
 [doc-grid columns="2"]
 [doc-link-card href="/mailbeez/create_account" title="Welcome email" new-tab="false" /]
 [/doc-grid]
 
 ### Retention
+
+Prompt a repeat order or invite customers back after a break.
 
 [doc-grid columns="2"]
 [doc-link-card href="/mailbeez/winback_advanced" title="Win back customers" new-tab="false" /]
@@ -93,27 +106,30 @@ Choose the category of the installed flow. The categories you see depend on the 
 
 ### Review Feedback
 
+Invite buyers to review a product or their shopping experience in your store.
+
 [doc-grid columns="2"]
 [doc-link-card href="/mailbeez/review_advanced" title="Product reviews" new-tab="false" /]
+[doc-link-card href="/mailbeez/shoprating_advanced" title="Store reviews" new-tab="false" /]
+[/doc-grid]
+
+#### Review services
+
+[doc-grid columns="2"]
 [doc-link-card href="/mailbeez/ausgezeichnet_advanced" title="AUSGEZEICHNET.org" new-tab="false" /]
 [doc-link-card href="/mailbeez/googlereviews_advanced" title="Google reviews" new-tab="false" /]
 [doc-link-card href="/mailbeez/idealo_advanced" title="idealo reviews" new-tab="false" /]
-[doc-link-card href="/mailbeez/shopvote_advanced" title="SHOPVOTE" new-tab="false" /]
 [doc-link-card href="/mailbeez/shopauskunft_advanced" title="Shopauskunft" new-tab="false" /]
-[doc-link-card href="/mailbeez/shoprating_advanced" title="Store reviews" new-tab="false" /]
+[doc-link-card href="/mailbeez/shopvote_advanced" title="SHOPVOTE" new-tab="false" /]
 [doc-link-card href="/mailbeez/trustedshops_advanced" title="Trusted Shops" new-tab="false" /]
 [doc-link-card href="/mailbeez/trustpilot_advanced" title="Trustpilot" new-tab="false" /]
 [/doc-grid]
 
-## Custom Flows
+## Set up an automation
 
-Build a flow around a particular purchase, such as a refill reminder for coffee buyers or a short course for new brewer owners.
-
-[doc-grid columns="2"]
-[doc-link-card href="/mailbeez/custom-flows" title="Custom Flows" description="Choose an audience for a refill, a replacement part or a cart reminder tailored to a product." new-tab="false" /]
-[/doc-grid]
-
-For a mailing on a particular date, open [Newsletter](/mailbeez/newsletter).
+1. Open **Campaigns → Automations → MailBeez Flows** and choose the installed flow for the event. If you need another flow, use **Add Automation** to see the available modules.
+2. Check who qualifies, which event starts the flow and how long it waits before each email. For a multi-step flow, check each step.
+3. Review the email content and test it before enabling the flow for customers.
 
 ## Related guide
 

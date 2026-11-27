@@ -44,7 +44,7 @@ metadata:
 ---
 
 [doc-callout type="note" title="Earlier MailBeez versions"]
-To choose a review integration in V5, open [Integrations](/extensions/integrations). [Browse the legacy reference](/legacy).
+To choose a review integration in V5, open [External services](/extensions/integrations). [Browse the legacy reference](/legacy).
 [/doc-callout]
 
 Display Shopauskunft reviews in emails that use the earlier template system. Check that reviews from [Import reviews from Shopauskunft](/configbeez/integrations/config_shopauskunft_integration) are available first, then install and activate the display module.
